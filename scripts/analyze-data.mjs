@@ -83,15 +83,16 @@ function parseJsonContent(content) {
 
 function pointArray(value, field, allowedEvidence) {
   if (!Array.isArray(value)) throw new Error(`${field} must be an array`);
-  return value.slice(0, 4).map((point) => {
-    if (!point || typeof point.text !== "string" || !point.text.trim()) {
-      throw new Error(`${field} contains an invalid point`);
+  return value.slice(0, 4).flatMap((point) => {
+    if (typeof point === "string" && point.trim()) {
+      return [{ text: point.trim(), evidence: [] }];
     }
+    if (!point || typeof point.text !== "string" || !point.text.trim()) return [];
     const evidence = Array.isArray(point.evidence) ? [...new Set(point.evidence)] : [];
     if (evidence.some((id) => !allowedEvidence.has(id))) {
       throw new Error(`${field} references unknown evidence`);
     }
-    return { text: point.text.trim(), evidence };
+    return [{ text: point.text.trim(), evidence }];
   });
 }
 

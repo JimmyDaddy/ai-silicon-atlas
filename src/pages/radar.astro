@@ -53,7 +53,7 @@ const hasNewsChanges = deltaSnapshot.intelligence.new.length + deltaSnapshot.int
     <div class="shell">
       <div class={`health-banner ${healthSnapshot.overall}`}>
         <div><span>DATA HEALTH</span><strong>{healthStatusLabel[healthSnapshot.overall]}</strong></div>
-        <p>{healthSnapshot.companies.fresh} 家公司数据新鲜 · {healthSnapshot.companies.stale} 家使用上一版 · 权威情报独立来源占比 {(healthSnapshot.intelligence.independentShare * 100).toFixed(0)}%</p>
+        <p>{healthSnapshot.companies.fresh} 家公司数据新鲜 · {healthSnapshot.companies.stale} 家需刷新 · SEC 最近成功 {Math.round(healthSnapshot.freshness.secEdgar.ageHours ?? 0)} 小时前 · 权威情报独立来源占比 {(healthSnapshot.intelligence.independentShare * 100).toFixed(0)}%</p>
         <a href={sitePath("/updates/")}>查看详情 ↗</a>
       </div>
 

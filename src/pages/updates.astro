@@ -14,6 +14,7 @@ interface SourceStatus {
   companyCount?: number;
   url?: string;
   error?: string;
+  transport?: string;
 }
 
 const sources = Object.values(dataSnapshot.sources as Record<string, SourceStatus>);
@@ -55,12 +56,12 @@ const newsPipelineStatus = newsSourceStatuses.some((source) => source.status ===
     <div class="shell">
       <div class:list={["health-banner", `health-${healthSnapshot.overall}`]}>
         <div><span>PIPELINE HEALTH</span><strong>{healthStatusLabel[healthSnapshot.overall]}</strong></div>
-        <p>最近检查 {formatDate(healthSnapshot.generatedAt)} · {healthSnapshot.intelligence.configuredSources} 个情报来源 · 独立来源占比 {Math.round(healthSnapshot.intelligence.independentShare * 100)}%</p>
+        <p>最近检查 {formatDate(healthSnapshot.generatedAt)} · SEC 最近成功 {Math.round(healthSnapshot.freshness.secEdgar.ageHours ?? 0)} 小时前 · {healthSnapshot.intelligence.configuredSources} 个情报来源 · 独立来源占比 {Math.round(healthSnapshot.intelligence.independentShare * 100)}%</p>
         <a href={sitePath("/radar/")}>查看本轮变化 →</a>
       </div>
       <div class="status-summary">
         <div><strong>{healthSnapshot.companies.fresh}</strong><span>最新自动快照</span></div>
-        <div><strong>{healthSnapshot.companies.stale}</strong><span>回退到上版快照</span></div>
+        <div><strong>{healthSnapshot.companies.stale}</strong><span>需刷新或回退快照</span></div>
         <div><strong>{healthSnapshot.companies.statuses.manual ?? 0}</strong><span>人工维护</span></div>
         <div><strong>{healthSnapshot.companies.statuses.unconfigured ?? 0}</strong><span>等待配置</span></div>
       </div>
@@ -77,6 +78,7 @@ const newsPipelineStatus = newsSourceStatuses.some((source) => source.status ===
             <div class="source-head"><i></i><span>{source.status.toUpperCase()}</span></div>
             <h2>{source.provider}</h2>
             <p>{source.companyCount ?? 0} 家公司 · 完成于 {formatDate(source.completedAt)}</p>
+            {source.transport && <span class="manual-tag">传输：{source.transport}</span>}
             {source.url ? <a href={source.url} target="_blank" rel="noreferrer">打开数据源 ↗</a> : <span class="manual-tag">仓库内维护</span>}
           </article>
         ))}

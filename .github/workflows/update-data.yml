@@ -27,6 +27,9 @@ jobs:
       AI_MODEL: ${{ vars.AI_MODEL }}
       AI_MAX_COMPANIES: ${{ vars.AI_MAX_COMPANIES || '8' }}
       NEWS_AI_MAX_ARTICLES: ${{ vars.NEWS_AI_MAX_ARTICLES || '16' }}
+      SEC_TRANSPORT: reader
+      SEC_FACTS_MAX_AGE_HOURS: ${{ vars.SEC_FACTS_MAX_AGE_HOURS || '168' }}
+      JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -39,7 +42,7 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Fetch and normalize official data
+      - name: Refresh official company data
         run: npm run data:update
       - name: Generate evidence-grounded AI analysis
         run: npm run analysis:update

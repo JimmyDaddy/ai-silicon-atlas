@@ -2,7 +2,17 @@ import { fetchJson, wait } from "../lib/http.mjs";
 
 const SEC_ROOT = "https://data.sec.gov";
 const SEC_ARCHIVES = "https://www.sec.gov/Archives/edgar/data";
+const SEC_READER_ROOT = "https://r.jina.ai";
 const TRACKED_FORMS = new Set(["10-K", "10-K/A", "10-Q", "10-Q/A", "8-K", "20-F", "20-F/A", "6-K"]);
+const SEC_TRANSPORT = process.env.SEC_TRANSPORT === "reader" ? "reader" : "direct";
+const SEC_FACTS_MAX_AGE_HOURS = Number(process.env.SEC_FACTS_MAX_AGE_HOURS) > 0
+  ? Number(process.env.SEC_FACTS_MAX_AGE_HOURS)
+  : 168;
+const READER_INTERVAL_MS = Number(process.env.SEC_READER_INTERVAL_MS) > 0
+  ? Number(process.env.SEC_READER_INTERVAL_MS)
+  : process.env.JINA_API_KEY ? 250 : 3_100;
+let nextReaderRequestAt = 0;
+let readerQueue = Promise.resolve();
 
 const metricTags = {
   revenue: [
@@ -41,6 +51,52 @@ function secRequestOptions() {
     retryDelayMs: 1_200,
     retryStatuses: [403, 429],
   };
+}
+
+function readerHeaders() {
+  return {
+    Accept: "application/json",
+    ...(process.env.JINA_API_KEY ? { Authorization: `Bearer ${process.env.JINA_API_KEY}` } : {}),
+  };
+}
+
+async function reserveReaderSlot() {
+  const reservation = readerQueue.then(async () => {
+    const delay = Math.max(0, nextReaderRequestAt - Date.now());
+    if (delay) await wait(delay);
+    nextReaderRequestAt = Date.now() + READER_INTERVAL_MS;
+  });
+  readerQueue = reservation.catch(() => {});
+  await reservation;
+}
+
+async function fetchSecJson(url) {
+  if (SEC_TRANSPORT === "direct") return fetchJson(url, secRequestOptions());
+
+  await reserveReaderSlot();
+  const response = await fetchJson(`${SEC_READER_ROOT}/${url}`, {
+    headers: readerHeaders(),
+    retries: 1,
+    retryDelayMs: 3_500,
+    retryStatuses: [429],
+    timeoutMs: 25_000,
+  });
+  const content = response?.data?.content;
+  const upstreamStatus = response?.data?.httpStatus;
+  if (Number.isFinite(upstreamStatus) && upstreamStatus >= 400) {
+    const error = new Error(`SEC upstream returned HTTP ${upstreamStatus} for ${url}`);
+    error.status = upstreamStatus;
+    throw error;
+  }
+  if (typeof content !== "string" || !content.trim()) {
+    throw new Error(`SEC relay returned no JSON content for ${url}`);
+  }
+
+  try {
+    return JSON.parse(content);
+  } catch (error) {
+    throw new Error(`SEC relay returned invalid JSON for ${url}: ${error instanceof Error ? error.message : String(error)}`);
+  }
 }
 
 function cikKey(cik) {
@@ -226,7 +282,7 @@ function discardStaleMetrics(metrics, checkedAt, maxAgeDays = 730) {
   return { metrics: recent, warnings };
 }
 
-export async function updateSecCompanies(companyIdentifiers) {
+export async function updateSecCompanies(companyIdentifiers, previousCompanies = {}) {
   const startedAt = new Date().toISOString();
   const results = {};
   const tracked = Object.entries(companyIdentifiers).filter(([, identifiers]) => identifiers.secTicker);
@@ -234,11 +290,12 @@ export async function updateSecCompanies(companyIdentifiers) {
   let tickerMap = new Map();
   let tickerLookupError = null;
   let consecutiveAccessDenied = 0;
+  let consecutiveReaderFailures = 0;
   let circuitError = null;
 
   if (missingLocalCik.length) {
     try {
-      const rawTickers = await fetchJson("https://www.sec.gov/files/company_tickers.json", secRequestOptions());
+      const rawTickers = await fetchSecJson("https://www.sec.gov/files/company_tickers.json");
       tickerMap = resolveTickerMap(rawTickers);
     } catch (error) {
       tickerLookupError = error instanceof Error ? error.message : String(error);
@@ -284,12 +341,36 @@ export async function updateSecCompanies(companyIdentifiers) {
     }
 
     try {
-      const [submissions, companyFacts] = await Promise.all([
-        fetchJson(`${SEC_ROOT}/submissions/CIK${cik}.json`, secRequestOptions()),
-        fetchJson(`${SEC_ROOT}/api/xbrl/companyfacts/CIK${cik}.json`, secRequestOptions()),
-      ]);
-      const normalizedMetrics = discardStaleMetrics(extractMetrics(companyFacts), checkedAt);
+      if (SEC_TRANSPORT === "reader") console.log(`[SEC ${slug}] fetching submissions through Reader`);
+      const submissions = await fetchSecJson(`${SEC_ROOT}/submissions/CIK${cik}.json`);
       const filings = recentFilings(submissions);
+      const previous = previousCompanies[slug];
+      const metricsCheckedAt = previous?.metricsCheckedAt
+        ?? (Object.keys(previous?.metrics ?? {}).length ? previous?.checkedAt : null);
+      const metricsAgeHours = metricsCheckedAt
+        ? (Date.parse(checkedAt) - Date.parse(metricsCheckedAt)) / 3_600_000
+        : Number.POSITIVE_INFINITY;
+      const filingChanged = filings[0]?.accessionNumber !== previous?.latestFiling?.accessionNumber;
+      const needsMetricsRefresh = process.env.SEC_FORCE_FACTS === "1"
+        || previous?.status !== "ok"
+        || !Number.isFinite(metricsAgeHours)
+        || metricsAgeHours >= SEC_FACTS_MAX_AGE_HOURS
+        || filingChanged;
+
+      let metrics = previous?.metrics ?? {};
+      let metricHistory = previous?.metricHistory ?? {};
+      let nextMetricsCheckedAt = metricsCheckedAt ?? null;
+      let warnings = (previous?.warnings ?? []).filter((warning) => !warning.startsWith("Latest refresh failed;"));
+
+      if (needsMetricsRefresh) {
+        if (SEC_TRANSPORT === "reader") console.log(`[SEC ${slug}] refreshing Company Facts`);
+        const companyFacts = await fetchSecJson(`${SEC_ROOT}/api/xbrl/companyfacts/CIK${cik}.json`);
+        const normalizedMetrics = discardStaleMetrics(extractMetrics(companyFacts), checkedAt);
+        metrics = normalizedMetrics.metrics;
+        metricHistory = extractMetricHistory(companyFacts, metrics, checkedAt);
+        nextMetricsCheckedAt = checkedAt;
+        warnings = normalizedMetrics.warnings;
+      }
 
       results[slug] = {
         status: "ok",
@@ -299,13 +380,17 @@ export async function updateSecCompanies(companyIdentifiers) {
         entityName: submissions.name || match?.title || ticker,
         latestFiling: filings[0] ?? null,
         recentFilings: filings,
-        metrics: normalizedMetrics.metrics,
-        metricHistory: extractMetricHistory(companyFacts, normalizedMetrics.metrics, checkedAt),
-        warnings: normalizedMetrics.warnings,
+        metrics,
+        metricHistory,
+        metricsCheckedAt: nextMetricsCheckedAt,
+        warnings,
       };
       consecutiveAccessDenied = 0;
+      consecutiveReaderFailures = 0;
+      if (SEC_TRANSPORT === "reader") console.log(`[SEC ${slug}] complete`);
     } catch (error) {
       consecutiveAccessDenied = error?.status === 403 ? consecutiveAccessDenied + 1 : 0;
+      consecutiveReaderFailures = SEC_TRANSPORT === "reader" ? consecutiveReaderFailures + 1 : 0;
       results[slug] = {
         status: "error",
         provider: "SEC EDGAR",
@@ -319,7 +404,10 @@ export async function updateSecCompanies(companyIdentifiers) {
       };
       if (consecutiveAccessDenied >= 3) {
         circuitError = "SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot";
+      } else if (consecutiveReaderFailures >= 3) {
+        circuitError = "SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot";
       }
+      if (SEC_TRANSPORT === "reader") console.error(`[SEC ${slug}] failed: ${error instanceof Error ? error.message : String(error)}`);
     }
 
     await wait(250);
@@ -338,6 +426,8 @@ export async function updateSecCompanies(companyIdentifiers) {
       completedCount,
       failedCount,
       identifierMode: missingLocalCik.length ? "local-cik-with-ticker-fallback" : "local-cik",
+      transport: SEC_TRANSPORT === "reader" ? "Jina Reader relay" : "direct",
+      ...(SEC_TRANSPORT === "reader" ? { relayUrl: SEC_READER_ROOT } : {}),
       ...((circuitError || tickerLookupError) ? { error: circuitError || tickerLookupError } : {}),
     },
     results,

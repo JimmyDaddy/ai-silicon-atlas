@@ -20,6 +20,16 @@ function issue(severity, code, title, detail) {
   return { severity, code, title, detail };
 }
 
+function positiveNumber(value, fallback) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+function hoursSince(value, now) {
+  if (!value || Number.isNaN(Date.parse(value))) return null;
+  return Math.max(0, Number(((now - Date.parse(value)) / 3_600_000).toFixed(2)));
+}
+
 const [data, analysis, news] = await Promise.all([
   readJson("company-updates.json"),
   readJson("company-analysis.json"),
@@ -32,8 +42,11 @@ const analysisValues = Object.values(analysis.companies ?? {});
 const newsArticles = news.articles ?? [];
 const independentArticles = newsArticles.filter((article) => article.sourceType !== "公司观点");
 const failedNewsSources = (news.sources ?? []).filter((source) => source.status === "error");
-const staleCompanies = companyEntries.filter(([, company]) => company.stale);
 const pendingNews = newsArticles.filter((article) => article.analysis?.status !== "ok");
+const requestedNow = Date.parse(process.env.HEALTH_NOW || "");
+const generatedNow = Number.isNaN(requestedNow) ? Date.now() : requestedNow;
+const secWarningAfterHours = positiveNumber(process.env.SEC_STALE_WARNING_HOURS, 36);
+const secCriticalAfterHours = positiveNumber(process.env.SEC_STALE_CRITICAL_HOURS, 72);
 const providerStates = Object.fromEntries(Object.entries(data.sources ?? {}).map(([key, source]) => [key, {
   provider: source.provider,
   status: source.status,
@@ -42,19 +55,40 @@ const providerStates = Object.fromEntries(Object.entries(data.sources ?? {}).map
   completedCount: source.completedCount ?? null,
   failedCount: source.failedCount ?? null,
   error: source.error ?? null,
+  transport: source.transport ?? null,
+  relayUrl: source.relayUrl ?? null,
 }]));
 
 const issues = [];
 const secState = providerStates.secEdgar;
+const secAgeHours = hoursSince(secState?.completedAt, generatedNow);
+const explicitlyStaleCompanies = companyEntries.filter(([, company]) => company.stale);
+const agedSecCompanies = companyEntries.filter(([, company]) => (
+  company.provider === "SEC EDGAR"
+  && company.status === "ok"
+  && !company.stale
+  && (hoursSince(company.checkedAt, generatedNow) ?? Number.POSITIVE_INFINITY) > secWarningAfterHours
+));
+const staleCompanySlugs = new Set([
+  ...explicitlyStaleCompanies.map(([slug]) => slug),
+  ...agedSecCompanies.map(([slug]) => slug),
+]);
+const staleCompanies = companyEntries.filter(([slug]) => staleCompanySlugs.has(slug));
 if (secState?.status === "error") {
   issues.push(issue("critical", "sec-provider-down", "SEC EDGAR 本轮整体不可用", secState.error || "所有 SEC 公司均已回退到上一版快照。"));
 } else if (secState?.status === "degraded") {
   issues.push(issue("warning", "sec-provider-degraded", "SEC EDGAR 部分公司更新失败", `${secState.failedCount ?? "部分"} 家公司未完成本轮同步。`));
+} else if (secAgeHours === null) {
+  issues.push(issue("critical", "sec-freshness-unknown", "SEC EDGAR 缺少成功更新时间", "无法确认最近一次 SEC 官方快照何时生成。"));
+} else if (secAgeHours > secCriticalAfterHours) {
+  issues.push(issue("critical", "sec-snapshot-expired", `SEC 快照已 ${Math.floor(secAgeHours)} 小时未更新`, `超过 ${secCriticalAfterHours} 小时严重阈值，请检查 SEC 中继与 GitHub Actions。`));
+} else if (secAgeHours > secWarningAfterHours) {
+  issues.push(issue("warning", "sec-snapshot-aging", `SEC 快照已 ${Math.floor(secAgeHours)} 小时未更新`, `超过 ${secWarningAfterHours} 小时提醒阈值，下次托管任务会自动重试。`));
 }
 
-if (staleCompanies.length) {
-  const severity = staleCompanies.length >= Math.ceil(companyValues.length / 2) ? "critical" : "warning";
-  issues.push(issue(severity, "stale-company-snapshots", `${staleCompanies.length} 家公司正在使用上一版快照`, "远端失败时保留旧数据是预期保护机制，但应尽快恢复来源。"));
+if (explicitlyStaleCompanies.length) {
+  const severity = explicitlyStaleCompanies.length >= Math.ceil(companyValues.length / 2) ? "critical" : "warning";
+  issues.push(issue(severity, "stale-company-snapshots", `${explicitlyStaleCompanies.length} 家公司正在使用上一版快照`, "最近一次主动抓取失败；当前仍保留最后成功数据。"));
 }
 
 if (providerStates.openDart?.status === "unconfigured") {
@@ -83,10 +117,18 @@ const output = {
   generatedAt: [data.generatedAt, analysis.generatedAt, news.generatedAt].filter(Boolean).sort().at(-1),
   overall,
   schedule: { cadence: "daily", cronUtc: "17 2 * * *", timezone: "Asia/Shanghai", localTime: "10:17" },
+  freshness: {
+    secEdgar: {
+      lastSuccessfulAt: secState?.completedAt ?? null,
+      ageHours: secAgeHours,
+      warningAfterHours: secWarningAfterHours,
+      criticalAfterHours: secCriticalAfterHours,
+    },
+  },
   companies: {
     total: companyValues.length,
     statuses: countBy(companyValues.map((company) => company.status)),
-    fresh: companyValues.filter((company) => company.status === "ok" && !company.stale).length,
+    fresh: companyEntries.filter(([slug, company]) => company.status === "ok" && !staleCompanySlugs.has(slug)).length,
     stale: staleCompanies.length,
     withLatestFiling: companyValues.filter((company) => company.latestFiling).length,
     withMetrics: companyValues.filter((company) => Object.keys(company.metrics ?? {}).length).length,

@@ -13,6 +13,27 @@ if (!health.generatedAt || Number.isNaN(Date.parse(health.generatedAt))) errors.
 if (!Array.isArray(health.issues)) errors.push("health issues must be an array");
 if (health.companies?.total < 1) errors.push("health company total must be positive");
 if (health.intelligence?.total < 1) errors.push("health intelligence total must be positive");
+if (health.providers?.secEdgar?.status === "ok" && !new Set(["direct", "Jina Reader relay"]).has(health.providers.secEdgar.transport)) {
+  errors.push("health SEC provider transport is invalid");
+}
+
+const secFreshness = health.freshness?.secEdgar;
+if (!secFreshness) {
+  errors.push("health SEC freshness is missing");
+} else {
+  if (secFreshness.lastSuccessfulAt !== null && Number.isNaN(Date.parse(secFreshness.lastSuccessfulAt))) {
+    errors.push("health SEC lastSuccessfulAt must be an ISO timestamp or null");
+  }
+  if (secFreshness.ageHours !== null && (!Number.isFinite(secFreshness.ageHours) || secFreshness.ageHours < 0)) {
+    errors.push("health SEC ageHours must be a non-negative number or null");
+  }
+  if (!Number.isFinite(secFreshness.warningAfterHours) || secFreshness.warningAfterHours <= 0) {
+    errors.push("health SEC warning threshold must be positive");
+  }
+  if (!Number.isFinite(secFreshness.criticalAfterHours) || secFreshness.criticalAfterHours <= secFreshness.warningAfterHours) {
+    errors.push("health SEC critical threshold must be greater than warning threshold");
+  }
+}
 
 for (const item of health.issues ?? []) {
   if (!new Set(["info", "warning", "critical"]).has(item.severity)) errors.push(`invalid issue severity: ${item.severity}`);

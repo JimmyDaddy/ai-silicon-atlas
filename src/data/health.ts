@@ -15,6 +15,14 @@ export interface HealthSnapshot {
   generatedAt: string;
   overall: HealthStatus;
   schedule: { cadence: string; cronUtc: string; timezone: string; localTime: string };
+  freshness: {
+    secEdgar: {
+      lastSuccessfulAt: string | null;
+      ageHours: number | null;
+      warningAfterHours: number;
+      criticalAfterHours: number;
+    };
+  };
   companies: {
     total: number;
     statuses: Record<string, number>;
@@ -43,6 +51,8 @@ export interface HealthSnapshot {
     completedCount: number | null;
     failedCount: number | null;
     error: string | null;
+    transport: string | null;
+    relayUrl: string | null;
   }>;
   issues: HealthIssue[];
 }

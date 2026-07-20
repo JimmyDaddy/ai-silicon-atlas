@@ -4,8 +4,8 @@
 
 ## 更新流程
 
-1. `.github/workflows/update-data.yml` 每天 UTC 02:17 定时运行，也支持手动触发。
-2. `scripts/update-data.mjs` 调用各官方数据适配器。
+1. `.github/workflows/update-data.yml` 每天 UTC 02:17（北京时间 10:17）定时运行，也支持手动触发。
+2. `scripts/update-data.mjs` 调用各官方数据适配器；在 GitHub 托管 Runner 中，SEC 公开 JSON 通过只读中继传输。
 3. 适配器将不同市场的数据整理为统一的公司快照、最近披露列表和最多 8 个历史指标期。
 4. `scripts/analyze-data.mjs` 对比输入哈希，为发生变化的公司构造证据包并生成 AI 综合分析。
 5. `scripts/update-news.mjs` 拉取权威来源 RSS、合并重点文章清单、去重分类，并为新增情报生成 AI 摘要。
@@ -18,7 +18,7 @@
 
 定时任务使用的 `GITHUB_TOKEN` 所产生的普通 `push` 不会再次触发另一个工作流，因此定时数据工作流包含自己的部署 job，确保抓取、提交与上线闭环完成。
 
-如果一次远端请求失败，更新器会保留该公司的上一次成功快照并标记 `stale: true`，避免临时网络故障清空线上数据。
+如果一次远端请求失败，更新器会保留该公司的上一次成功快照并标记 `stale: true`，避免临时网络故障清空线上数据。健康快照还会按最近一次 SEC 成功时间主动老化：超过 36 小时降级，超过 72 小时进入严重状态，即使 GitHub 托管流程本身成功也不会把旧 SEC 数据误报为新鲜。
 
 ## 当前适配器
 
@@ -30,11 +30,16 @@
 - 从 Company Facts XBRL 中提取收入、净利润、资产、现金和资本开支，并保留最多 8 个历史期。
 - 请求包含可识别的 User-Agent，限制请求节奏，并对 403、429 和 5xx 做退避重试。
 - 连续出现 3 次 403 时触发本轮熔断，快速结束其余请求并保留上一版快照；健康报告会把来源降级或中断显式展示。
-- SEC 可能拒绝 GitHub 托管 Runner 的共享云出口；Linux 与 macOS 托管池均已实测会出现 403。此时工作流仍会更新情报与 AI 分析，但 SEC 快照会保留上一次成功版本并触发健康告警。若需要保证每日 SEC 刷新，应为该 job 配置具备稳定网络出口的自托管 Runner，或在可信服务上提供官方 SEC 请求代理。
+- SEC 可能拒绝 GitHub 托管 Runner 和常见云服务器的共享出口；Linux、macOS 托管池与备用云主机均已实测会出现 403。
+- GitHub Actions 设置 `SEC_TRANSPORT=reader`，通过 Jina Reader 读取原始 SEC JSON。中继只接触公开 URL，不接收站点密钥；输出仍按 SEC 数据结构解析，并保留原始 SEC 披露链接。
+- 来源快照会显式记录 `transport: "Jina Reader relay"` 和中继地址，避免把第三方传输误报为 SEC 直连。中继返回空内容、非 JSON、上游错误或结构校验失败时，本轮不会覆盖最后成功快照。
+- 匿名 Reader 限制为 20 RPM，因此更新器默认把请求起始时间间隔设为 3.1 秒。Company Facts 最多每 168 小时强制刷新一次；出现新披露时立即刷新，其余日期复用已校验的指标历史，只更新披露列表。
 
 建议在 GitHub 仓库变量中配置：
 
 - `DATA_CONTACT_EMAIL`：SEC 请求 User-Agent 的维护者联系邮箱。
+
+可选配置 `JINA_API_KEY` GitHub Secret 以提高 Reader 限额；当前 31 家公司的每日任务不依赖该密钥。`SEC_FACTS_MAX_AGE_HOURS` GitHub Variable 可覆盖 Company Facts 的强制刷新周期，默认 168 小时。
 
 ### OpenDART
 
@@ -99,6 +104,8 @@
 
 ```bash
 npm run data:update
+npm run data:update:sec
+npm run data:update:hosted
 npm run data:validate
 npm run analysis:update
 npm run analysis:validate

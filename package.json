@@ -9,6 +9,8 @@
     "preview": "astro preview",
     "check": "astro check",
     "data:update": "node scripts/update-data.mjs",
+    "data:update:hosted": "node scripts/update-data.mjs --skip-sec",
+    "data:update:sec": "node scripts/update-data.mjs --only-sec",
     "data:validate": "node scripts/validate-data.mjs",
     "analysis:update": "node scripts/analyze-data.mjs",
     "analysis:validate": "node scripts/validate-analysis.mjs",

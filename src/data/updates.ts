@@ -27,6 +27,7 @@ export interface CompanyUpdate {
   status: "ok" | "manual" | "unconfigured" | "error";
   provider: string;
   checkedAt: string;
+  metricsCheckedAt?: string | null;
   stale?: boolean;
   sourceUrl?: string;
   latestFiling?: FilingSnapshot | null;

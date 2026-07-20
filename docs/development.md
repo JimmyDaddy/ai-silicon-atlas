@@ -45,12 +45,31 @@ npm run health:update
 npm run health:validate
 ```
 
+数据更新有三个运行模式：
+
+| 命令 | 用途 |
+| --- | --- |
+| `npm run data:update` | 本地手动刷新全部已配置官方来源 |
+| `npm run data:update:sec` | 只刷新 SEC，保留 OpenDART 与人工维护快照 |
+| `npm run data:update:hosted` | 跳过 SEC，在中继故障排查时只刷新其余来源 |
+
+GitHub Actions 使用 `SEC_TRANSPORT=reader`，通过 Jina Reader 中继 SEC 公开 JSON；本地默认仍直接访问 SEC。需要在本地复现托管模式时执行：
+
+```bash
+SEC_TRANSPORT=reader npm run data:update:sec
+```
+
+匿名中继会自动限制在 20 RPM 以内。可选的 `JINA_API_KEY` 只用于提高中继限额；`SEC_FACTS_MAX_AGE_HOURS` 控制 Company Facts 的强制刷新周期，默认 168 小时。`SEC_FORCE_FACTS=1` 可在诊断时强制重拉全部指标，但会显著增加请求量和运行时间。
+
 常用环境变量：
 
 | 名称 | 类型 | 用途 |
 | --- | --- | --- |
 | `DATA_CONTACT_EMAIL` | GitHub Variable | SEC 请求使用的联系人邮箱 |
 | `DART_API_KEY` | GitHub Secret | 韩国 OpenDART 接口密钥 |
+| `JINA_API_KEY` | GitHub Secret | 可选，提高 SEC 只读中继的请求限额 |
+| `SEC_TRANSPORT` | 运行环境变量 | `reader` 使用中继；未设置时直接请求 SEC |
+| `SEC_FACTS_MAX_AGE_HOURS` | GitHub Variable | SEC Company Facts 强制刷新周期，默认 168 小时 |
 | `AI_BASE_URL` | GitHub Variable | 可选的 OpenAI 兼容接口地址 |
 | `AI_MODEL` | GitHub Variable | 可选的模型覆盖值 |
 | `AI_MAX_COMPANIES` | GitHub Variable | 每次最多分析公司数，默认 8 |
@@ -66,7 +85,7 @@ npm run health:validate
 仓库包含两个工作流：
 
 - `.github/workflows/deploy.yml`：`main` 更新时构建并部署静态站点。
-- `.github/workflows/update-data.yml`：每天 UTC 02:17 抓取数据、生成分析、校验、提交快照并部署。
+- `.github/workflows/update-data.yml`：每天 UTC 02:17 刷新官方数据、生成分析、校验、提交快照并部署。
 
 仓库 Pages 设置需要选择 **GitHub Actions** 作为部署来源。默认站点地址为 `https://silicon-atlas.timetombs.today`，`public/CNAME` 会包含在构建产物中。
 

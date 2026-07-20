@@ -7,6 +7,14 @@ import { updateDartCompanies } from "./providers/opendart.mjs";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const identifiersPath = path.join(root, "src/data/company-identifiers.json");
 const outputPath = path.join(root, "src/data/generated/company-updates.json");
+const onlySec = process.argv.includes("--only-sec");
+const skipSec = process.argv.includes("--skip-sec");
+
+if (onlySec && skipSec) {
+  throw new Error("--only-sec and --skip-sec cannot be used together");
+}
+
+const updateMode = onlySec ? "sec-only" : skipSec ? "hosted" : "all";
 
 async function readJson(filePath, fallback = null) {
   try {
@@ -99,9 +107,23 @@ if (!identifiers || typeof identifiers !== "object") {
   throw new Error("Company identifier registry is missing or invalid");
 }
 
+function preservedProvider(key, provider) {
+  return previous.sources?.[key] ?? {
+    status: "unconfigured",
+    provider,
+    completedAt: null,
+    companyCount: 0,
+    error: `No previous ${provider} snapshot is available`,
+  };
+}
+
 const [sec, dart] = await Promise.all([
-  updateSecCompanies(identifiers),
-  updateDartCompanies(identifiers),
+  skipSec
+    ? Promise.resolve({ source: preservedProvider("secEdgar", "SEC EDGAR"), results: {} })
+    : updateSecCompanies(identifiers, previous.companies),
+  onlySec
+    ? Promise.resolve({ source: preservedProvider("openDart", "OpenDART"), results: {} })
+    : updateDartCompanies(identifiers),
 ]);
 
 const sources = { secEdgar: sec.source, openDart: dart.source };
@@ -109,7 +131,16 @@ const sources = { secEdgar: sec.source, openDart: dart.source };
 const companies = {};
 for (const slug of Object.keys(identifiers).sort()) {
   const config = identifiers[slug];
-  const next = sec.results[slug] ?? dart.results[slug] ?? missingProviderEntry(config, sources, generatedAt);
+  let next;
+  if (config.secTicker && skipSec) {
+    next = previous.companies?.[slug] ?? missingProviderEntry(config, sources, generatedAt);
+  } else if (config.dartCorpCode && onlySec) {
+    next = previous.companies?.[slug] ?? missingProviderEntry(config, sources, generatedAt);
+  } else if (config.manualSource && onlySec) {
+    next = previous.companies?.[slug] ?? manualEntry(config, generatedAt);
+  } else {
+    next = sec.results[slug] ?? dart.results[slug] ?? missingProviderEntry(config, sources, generatedAt);
+  }
   companies[slug] = preserveLastGood(next, previous.companies?.[slug]);
 }
 
@@ -118,12 +149,14 @@ const output = {
   generatedAt,
   sources: {
     ...sources,
-    manual: {
-      status: "manual",
-      provider: "First-party IR",
-      completedAt: generatedAt,
-      companyCount: Object.values(identifiers).filter((item) => item.manualSource).length,
-    },
+    manual: onlySec
+      ? preservedProvider("manual", "First-party IR")
+      : {
+          status: "manual",
+          provider: "First-party IR",
+          completedAt: generatedAt,
+          companyCount: Object.values(identifiers).filter((item) => item.manualSource).length,
+        },
   },
   companies,
 };
@@ -138,5 +171,5 @@ const summary = Object.values(companies).reduce((counts, company) => {
   return counts;
 }, {});
 
-console.log(`Data snapshot updated at ${generatedAt}`);
+console.log(`Data snapshot updated at ${generatedAt} (${updateMode})`);
 console.log(JSON.stringify(summary));

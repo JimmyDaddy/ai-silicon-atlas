@@ -17,6 +17,16 @@ if (!snapshot.generatedAt || Number.isNaN(Date.parse(snapshot.generatedAt))) {
   if (ageDays > 14) errors.push(`snapshot is stale (${ageDays.toFixed(1)} days old)`);
 }
 
+const secSource = snapshot.sources?.secEdgar;
+if (secSource?.status === "ok") {
+  if (!secSource.completedAt || Number.isNaN(Date.parse(secSource.completedAt))) {
+    errors.push("SEC source completedAt must be an ISO timestamp");
+  }
+  if (!new Set(["direct", "Jina Reader relay"]).has(secSource.transport)) {
+    errors.push("SEC source transport must identify direct or relayed delivery");
+  }
+}
+
 for (const slug of Object.keys(identifiers)) {
   const company = snapshot.companies?.[slug];
   if (!company) {
@@ -45,6 +55,12 @@ for (const slug of Object.keys(identifiers)) {
     const history = company.metricHistory?.[metricName];
     if (!Array.isArray(history) || !history.length) errors.push(`${slug}.${metricName} has no history`);
     if (history?.[0]?.periodEnd !== metric.periodEnd) warnings.push(`${slug}.${metricName} latest history period differs from snapshot`);
+  }
+
+  if (company.provider === "SEC EDGAR" && company.status === "ok" && Object.keys(company.metrics ?? {}).length) {
+    if (!company.metricsCheckedAt || Number.isNaN(Date.parse(company.metricsCheckedAt))) {
+      errors.push(`${slug}.metricsCheckedAt must identify the Company Facts refresh time`);
+    }
   }
 
   for (const [metricName, periods] of Object.entries(company.metricHistory ?? {})) {

@@ -263,7 +263,7 @@ const completedCount = Object.values(companies).filter((entry) => entry.status =
 const output = {
   schemaVersion: 1,
   generatedAt: apiKey ? generatedAt : previous.generatedAt ?? null,
-  provider: apiKey ? (process.env.AI_API_KEY ? "custom-compatible-api" : "github-models") : "unconfigured",
+  provider: apiKey ? (process.env.AI_API_KEY ? "custom-compatible-api" : "github-models") : previous.provider ?? "unconfigured",
   model: apiKey ? model : previous.model ?? null,
   promptVersion,
   completedCount,

@@ -13,7 +13,11 @@
     "analysis:update": "node scripts/analyze-data.mjs",
     "analysis:validate": "node scripts/validate-analysis.mjs",
     "news:update": "node scripts/update-news.mjs",
-    "news:validate": "node scripts/validate-news.mjs"
+    "news:validate": "node scripts/validate-news.mjs",
+    "delta:update": "node scripts/generate-delta.mjs",
+    "delta:validate": "node scripts/validate-delta.mjs",
+    "health:update": "node scripts/generate-health.mjs",
+    "health:validate": "node scripts/validate-health.mjs"
   },
   "dependencies": {
     "astro": "^7.1.2"

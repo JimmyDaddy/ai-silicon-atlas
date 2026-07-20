@@ -31,7 +31,7 @@ const topicDefinitions = [
   {
     name: "模型与平台",
     stages: ["models-platforms"],
-    keywords: ["large language model", "foundation model", "generative ai", "genai", "agentic ai", "ai agent", "model training", "model inference", "cloud ai", "人工智能模型", "大模型", "生成式 ai", "智能体", "模型平台"],
+    keywords: ["large language model", "foundation model", "generative ai", "genai", "agentic ai", "ai agent", "model training", "model inference", "cloud ai", "ai safety", "ai standard", "人工智能模型", "大模型", "生成式 ai", "智能体", "模型平台"],
   },
   {
     name: "企业应用与生产力",
@@ -52,7 +52,7 @@ const topicDefinitions = [
 
 const broadKeywords = [
   "artificial intelligence", " ai ", " ai-", "ai infrastructure", "generative ai", "genai", "machine learning",
-  "semiconductor", "chip", "gpu", "hbm", "foundry", "wafer", "data center", "data centre", "hyperscaler",
+  "semiconductor", "microelectronics", "chip", "gpu", "hbm", "foundry", "wafer", "data center", "data centre", "hyperscaler",
   "private credit", "software firms", "financial stability", "capital expenditure", "capex", "cloud computing",
   "人工智能", "生成式ai", "生成式 ai", "芯片", "半导体", "算力", "数据中心", "私募信贷",
 ];
@@ -435,7 +435,7 @@ const configuredSourceCount = new Set([
 const output = {
   schemaVersion: 1,
   generatedAt: checkedAt,
-  provider: apiKey ? (process.env.AI_API_KEY ? "custom-compatible-api" : "github-models") : "unconfigured",
+  provider: apiKey ? (process.env.AI_API_KEY ? "custom-compatible-api" : "github-models") : previous.provider ?? "unconfigured",
   model: apiKey ? model : previous.model ?? null,
   promptVersion,
   completedCount,

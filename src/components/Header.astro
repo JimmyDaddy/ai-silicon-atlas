@@ -3,11 +3,12 @@ import Logo from "./Logo.astro";
 import { sitePath } from "../lib/paths";
 
 interface Props {
-  active?: "home" | "map" | "companies" | "news" | "research" | "updates" | "methodology";
+  active?: "home" | "radar" | "map" | "companies" | "news" | "research" | "updates" | "methodology";
 }
 
 const { active } = Astro.props;
 const navItems = [
+  { key: "radar", label: "变化雷达", href: "/radar/" },
   { key: "map", label: "产业地图", href: "/map/" },
   { key: "companies", label: "公司目录", href: "/companies/" },
   { key: "news", label: "权威情报", href: "/news/" },
@@ -30,7 +31,7 @@ const navItems = [
         </a>
       ))}
     </nav>
-    <a class="header-cta" href={sitePath("/companies/")}>开始探索 <span aria-hidden="true">↗</span></a>
+    <a class="header-cta" href={sitePath("/compare/")}>比较公司 <span aria-hidden="true">↗</span></a>
   </div>
 </header>
 

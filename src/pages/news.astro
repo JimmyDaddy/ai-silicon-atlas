@@ -114,6 +114,11 @@ const timelineGroups = Object.entries(
             <option value="all">全部来源</option>
             {newsSourceTypes.map((type) => <option value={type}>{type}</option>)}
           </select>
+          <select data-perspective-filter aria-label="按来源立场筛选">
+            <option value="all">全部立场</option>
+            <option value="independent">仅独立来源</option>
+            <option value="company">仅公司观点</option>
+          </select>
         </div>
       </div>
 
@@ -146,6 +151,7 @@ const timelineGroups = Object.entries(
     const search = document.querySelector<HTMLInputElement>("[data-news-search]");
     const topic = document.querySelector<HTMLSelectElement>("[data-topic-filter]");
     const source = document.querySelector<HTMLSelectElement>("[data-source-filter]");
+    const perspective = document.querySelector<HTMLSelectElement>("[data-perspective-filter]");
     const cards = [...document.querySelectorAll<HTMLElement>("[data-news-card]")];
     const groups = [...document.querySelectorAll<HTMLElement>("[data-timeline-group]")];
     const count = document.querySelector<HTMLElement>("[data-visible-count]");
@@ -155,12 +161,14 @@ const timelineGroups = Object.entries(
       const query = search?.value.trim().toLowerCase() ?? "";
       const selectedTopic = topic?.value ?? "all";
       const selectedSource = source?.value ?? "all";
+      const selectedPerspective = perspective?.value ?? "all";
       let visible = 0;
       cards.forEach((card) => {
         const matchesSearch = !query || (card.dataset.search ?? "").includes(query);
         const matchesTopic = selectedTopic === "all" || (card.dataset.topics ?? "").split("|").includes(selectedTopic);
         const matchesSource = selectedSource === "all" || card.dataset.sourceType === selectedSource;
-        const show = matchesSearch && matchesTopic && matchesSource;
+        const matchesPerspective = selectedPerspective === "all" || card.dataset.perspective === selectedPerspective;
+        const show = matchesSearch && matchesTopic && matchesSource && matchesPerspective;
         card.hidden = !show;
         if (show) visible += 1;
       });
@@ -178,6 +186,7 @@ const timelineGroups = Object.entries(
     search?.addEventListener("input", filterCards);
     topic?.addEventListener("change", filterCards);
     source?.addEventListener("change", filterCards);
+    perspective?.addEventListener("change", filterCards);
   </script>
 </BaseLayout>
 

@@ -31,7 +31,16 @@ const metricTags = {
 
 function secHeaders() {
   const contact = process.env.DATA_CONTACT_EMAIL || "maintainer@example.com";
-  return { "User-Agent": `investment-map/0.1 (${contact})` };
+  return { "User-Agent": `AI-Silicon-Atlas/1.0 ${contact}` };
+}
+
+function secRequestOptions() {
+  return {
+    headers: secHeaders(),
+    retries: 2,
+    retryDelayMs: 1_200,
+    retryStatuses: [403, 429],
+  };
 }
 
 function cikKey(cik) {
@@ -221,94 +230,116 @@ export async function updateSecCompanies(companyIdentifiers) {
   const startedAt = new Date().toISOString();
   const results = {};
   const tracked = Object.entries(companyIdentifiers).filter(([, identifiers]) => identifiers.secTicker);
+  const missingLocalCik = tracked.filter(([, identifiers]) => !identifiers.secCik);
+  let tickerMap = new Map();
+  let tickerLookupError = null;
+  let consecutiveAccessDenied = 0;
+  let circuitError = null;
 
-  try {
-    const rawTickers = await fetchJson("https://www.sec.gov/files/company_tickers.json", {
-      headers: secHeaders(),
-    });
-    const tickerMap = resolveTickerMap(rawTickers);
-
-    for (const [slug, identifiers] of tracked) {
-      const ticker = identifiers.secTicker.toUpperCase();
-      const match = tickerMap.get(ticker);
-      const checkedAt = new Date().toISOString();
-
-      if (!match) {
-        results[slug] = {
-          status: "error",
-          provider: "SEC EDGAR",
-          checkedAt,
-          identifiers: { ticker },
-          latestFiling: null,
-          recentFilings: [],
-          metrics: {},
-          metricHistory: {},
-          warnings: [`Ticker ${ticker} was not found in SEC company_tickers.json`],
-        };
-        continue;
-      }
-
-      try {
-        const cik = cikKey(match.cik_str);
-        const [submissions, companyFacts] = await Promise.all([
-          fetchJson(`${SEC_ROOT}/submissions/CIK${cik}.json`, { headers: secHeaders() }),
-          fetchJson(`${SEC_ROOT}/api/xbrl/companyfacts/CIK${cik}.json`, { headers: secHeaders() }),
-        ]);
-        const normalizedMetrics = discardStaleMetrics(extractMetrics(companyFacts), checkedAt);
-        const filings = recentFilings(submissions);
-
-        results[slug] = {
-          status: "ok",
-          provider: "SEC EDGAR",
-          checkedAt,
-          identifiers: { ticker, cik },
-          entityName: submissions.name || match.title,
-          latestFiling: filings[0] ?? null,
-          recentFilings: filings,
-          metrics: normalizedMetrics.metrics,
-          metricHistory: extractMetricHistory(companyFacts, normalizedMetrics.metrics, checkedAt),
-          warnings: normalizedMetrics.warnings,
-        };
-      } catch (error) {
-        results[slug] = {
-          status: "error",
-          provider: "SEC EDGAR",
-          checkedAt,
-          identifiers: { ticker, cik: cikKey(match.cik_str) },
-          latestFiling: null,
-          recentFilings: [],
-          metrics: {},
-          metricHistory: {},
-          warnings: [error instanceof Error ? error.message : String(error)],
-        };
-      }
-
-      await wait(140);
+  if (missingLocalCik.length) {
+    try {
+      const rawTickers = await fetchJson("https://www.sec.gov/files/company_tickers.json", secRequestOptions());
+      tickerMap = resolveTickerMap(rawTickers);
+    } catch (error) {
+      tickerLookupError = error instanceof Error ? error.message : String(error);
     }
+  }
 
-    return {
-      source: {
-        status: "ok",
-        provider: "SEC EDGAR",
-        url: "https://www.sec.gov/edgar/sec-api-documentation",
-        startedAt,
-        completedAt: new Date().toISOString(),
-        companyCount: tracked.length,
-      },
-      results,
-    };
-  } catch (error) {
-    return {
-      source: {
+  for (const [slug, identifiers] of tracked) {
+    const ticker = identifiers.secTicker.toUpperCase();
+    const match = tickerMap.get(ticker);
+    const cik = identifiers.secCik ? cikKey(identifiers.secCik) : match ? cikKey(match.cik_str) : null;
+    const checkedAt = new Date().toISOString();
+
+    if (circuitError) {
+      results[slug] = {
         status: "error",
         provider: "SEC EDGAR",
-        url: "https://www.sec.gov/edgar/sec-api-documentation",
-        startedAt,
-        completedAt: new Date().toISOString(),
-        companyCount: tracked.length,
-        error: error instanceof Error ? error.message : String(error),
-      },
-      results,
-    };
+        checkedAt,
+        identifiers: { ticker, ...(cik ? { cik } : {}) },
+        latestFiling: null,
+        recentFilings: [],
+        metrics: {},
+        metricHistory: {},
+        warnings: [circuitError],
+      };
+      continue;
+    }
+
+    if (!cik) {
+      results[slug] = {
+        status: "error",
+        provider: "SEC EDGAR",
+        checkedAt,
+        identifiers: { ticker },
+        latestFiling: null,
+        recentFilings: [],
+        metrics: {},
+        metricHistory: {},
+        warnings: [tickerLookupError
+          ? `CIK lookup failed: ${tickerLookupError}`
+          : `Ticker ${ticker} was not found in SEC company_tickers.json`],
+      };
+      continue;
+    }
+
+    try {
+      const [submissions, companyFacts] = await Promise.all([
+        fetchJson(`${SEC_ROOT}/submissions/CIK${cik}.json`, secRequestOptions()),
+        fetchJson(`${SEC_ROOT}/api/xbrl/companyfacts/CIK${cik}.json`, secRequestOptions()),
+      ]);
+      const normalizedMetrics = discardStaleMetrics(extractMetrics(companyFacts), checkedAt);
+      const filings = recentFilings(submissions);
+
+      results[slug] = {
+        status: "ok",
+        provider: "SEC EDGAR",
+        checkedAt,
+        identifiers: { ticker, cik },
+        entityName: submissions.name || match?.title || ticker,
+        latestFiling: filings[0] ?? null,
+        recentFilings: filings,
+        metrics: normalizedMetrics.metrics,
+        metricHistory: extractMetricHistory(companyFacts, normalizedMetrics.metrics, checkedAt),
+        warnings: normalizedMetrics.warnings,
+      };
+      consecutiveAccessDenied = 0;
+    } catch (error) {
+      consecutiveAccessDenied = error?.status === 403 ? consecutiveAccessDenied + 1 : 0;
+      results[slug] = {
+        status: "error",
+        provider: "SEC EDGAR",
+        checkedAt,
+        identifiers: { ticker, cik },
+        latestFiling: null,
+        recentFilings: [],
+        metrics: {},
+        metricHistory: {},
+        warnings: [error instanceof Error ? error.message : String(error)],
+      };
+      if (consecutiveAccessDenied >= 3) {
+        circuitError = "SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot";
+      }
+    }
+
+    await wait(250);
   }
+
+  const completedCount = Object.values(results).filter((company) => company.status === "ok").length;
+  const failedCount = tracked.length - completedCount;
+  return {
+    source: {
+      status: completedCount > 0 ? (failedCount > 0 ? "degraded" : "ok") : "error",
+      provider: "SEC EDGAR",
+      url: "https://www.sec.gov/edgar/sec-api-documentation",
+      startedAt,
+      completedAt: new Date().toISOString(),
+      companyCount: tracked.length,
+      completedCount,
+      failedCount,
+      identifierMode: missingLocalCik.length ? "local-cik-with-ticker-fallback" : "local-cik",
+      ...((circuitError || tickerLookupError) ? { error: circuitError || tickerLookupError } : {}),
+    },
+    results,
+  };
 }

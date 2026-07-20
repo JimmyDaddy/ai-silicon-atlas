@@ -44,11 +44,15 @@ import { stages } from "../../data/stages";
 
       <div class="directory-meta">
         <p>资料版本：2026.07 · 按产业链顺序排列</p>
-        <button type="button" data-reset-filters>重置筛选</button>
+        <div class="directory-actions">
+          <button type="button" data-watch-filter aria-pressed="false">只看关注 <b data-watch-count>0</b></button>
+          <a href="/compare/" data-compare-link>比较关注 <span>↗</span></a>
+          <button type="button" data-reset-filters>重置筛选</button>
+        </div>
       </div>
 
       <div class="company-grid" data-company-grid>
-        {companies.map((company) => <CompanyCard company={company} />)}
+        {companies.map((company) => <CompanyCard company={company} watchable />)}
       </div>
       <div class="empty-state" data-empty-state>
         没有找到匹配的公司。可以尝试更短的关键词，或重置筛选条件。
@@ -62,21 +66,57 @@ import { stages } from "../../data/stages";
   const stageSelect = document.querySelector<HTMLSelectElement>("[data-stage-select]");
   const marketSelect = document.querySelector<HTMLSelectElement>("[data-market-select]");
   const resetButton = document.querySelector<HTMLButtonElement>("[data-reset-filters]");
+  const watchFilter = document.querySelector<HTMLButtonElement>("[data-watch-filter]");
+  const watchCount = document.querySelector<HTMLElement>("[data-watch-count]");
+  const compareLink = document.querySelector<HTMLAnchorElement>("[data-compare-link]");
+  const watchButtons = [...document.querySelectorAll<HTMLButtonElement>("[data-watch-company]")];
   const cards = [...document.querySelectorAll<HTMLElement>("[data-company-card]")];
   const count = document.querySelector<HTMLElement>("[data-visible-count]");
   const emptyState = document.querySelector<HTMLElement>("[data-empty-state]");
+  const storageKey = "silicon-atlas-watchlist-v1";
+  let watchOnly = false;
+
+  function readWatchlist() {
+    try {
+      const value = JSON.parse(localStorage.getItem(storageKey) ?? "[]");
+      return new Set<string>(Array.isArray(value) ? value : []);
+    } catch { return new Set<string>(); }
+  }
+
+  function writeWatchlist(watchlist: Set<string>) {
+    localStorage.setItem(storageKey, JSON.stringify([...watchlist]));
+  }
+
+  function syncWatchlist() {
+    const watchlist = readWatchlist();
+    watchButtons.forEach((button) => {
+      const active = watchlist.has(button.dataset.watchCompany ?? "");
+      button.setAttribute("aria-pressed", String(active));
+      const companyName = button.closest<HTMLElement>("[data-company-card]")?.querySelector("h3")?.textContent?.trim() ?? "公司";
+      button.setAttribute("aria-label", `${active ? "取消关注" : "关注"}${companyName}`);
+      const label = button.querySelector("b");
+      if (label) label.textContent = active ? "已关注" : "关注";
+    });
+    if (watchCount) watchCount.textContent = String(watchlist.size);
+    if (compareLink) {
+      const selected = [...watchlist].slice(0, 4);
+      compareLink.href = selected.length ? `/compare/?companies=${selected.join(",")}` : "/compare/";
+    }
+  }
 
   function applyFilters() {
     const query = searchInput?.value.trim().toLowerCase() ?? "";
     const stage = stageSelect?.value ?? "all";
     const market = marketSelect?.value ?? "all";
+    const watchlist = readWatchlist();
     let visible = 0;
 
     cards.forEach((card) => {
       const searchMatches = !query || card.dataset.search?.includes(query);
       const stageMatches = stage === "all" || card.dataset.stage === stage;
       const marketMatches = market === "all" || card.dataset.market === market;
-      const matches = Boolean(searchMatches && stageMatches && marketMatches);
+      const watchMatches = !watchOnly || watchlist.has(card.dataset.company ?? "");
+      const matches = Boolean(searchMatches && stageMatches && marketMatches && watchMatches);
       card.hidden = !matches;
       if (matches) visible += 1;
     });
@@ -92,9 +132,31 @@ import { stages } from "../../data/stages";
     if (searchInput) searchInput.value = "";
     if (stageSelect) stageSelect.value = "all";
     if (marketSelect) marketSelect.value = "all";
+    watchOnly = false;
+    watchFilter?.setAttribute("aria-pressed", "false");
     applyFilters();
     searchInput?.focus();
   });
+
+  watchButtons.forEach((button) => button.addEventListener("click", () => {
+    const slug = button.dataset.watchCompany;
+    if (!slug) return;
+    const watchlist = readWatchlist();
+    if (watchlist.has(slug)) watchlist.delete(slug);
+    else watchlist.add(slug);
+    writeWatchlist(watchlist);
+    syncWatchlist();
+    applyFilters();
+  }));
+
+  watchFilter?.addEventListener("click", () => {
+    watchOnly = !watchOnly;
+    watchFilter.setAttribute("aria-pressed", String(watchOnly));
+    applyFilters();
+  });
+
+  window.addEventListener("storage", () => { syncWatchlist(); applyFilters(); });
+  syncWatchlist();
 </script>
 
 <style>
@@ -150,6 +212,11 @@ import { stages } from "../../data/stages";
     padding: 0.3rem 0;
   }
 
+  .directory-actions { align-items: center; display: flex; gap: 0.85rem; }
+  .directory-actions a { color: var(--text-muted); font-size: 0.72rem; text-decoration: none; }
+  .directory-actions a span, .directory-actions b { color: var(--mint); }
+  .directory-actions button[aria-pressed="true"] { color: var(--mint); }
+
   .directory-meta button:hover {
     color: var(--mint);
   }
@@ -174,5 +241,8 @@ import { stages } from "../../data/stages";
     .company-grid {
       grid-template-columns: 1fr;
     }
+
+    .directory-meta { align-items: flex-start; flex-direction: column; gap: 0.8rem; }
+    .directory-actions { flex-wrap: wrap; }
   }
 </style>

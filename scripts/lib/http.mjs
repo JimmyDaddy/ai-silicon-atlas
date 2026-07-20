@@ -4,6 +4,7 @@ export async function fetchJson(url, options = {}) {
   const {
     headers = {},
     retries = 3,
+    retryStatuses = [429],
     timeoutMs = DEFAULT_TIMEOUT_MS,
     retryDelayMs = 700,
   } = options;
@@ -24,7 +25,7 @@ export async function fetchJson(url, options = {}) {
       });
 
       if (!response.ok) {
-        const retryable = response.status === 429 || response.status >= 500;
+        const retryable = retryStatuses.includes(response.status) || response.status >= 500;
         const error = new Error(`HTTP ${response.status} for ${url}`);
         error.status = response.status;
         if (!retryable || attempt === retries) throw error;

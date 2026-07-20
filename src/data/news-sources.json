@@ -18,6 +18,30 @@
       "priority": 96
     },
     {
+      "id": "federal-reserve-working-papers",
+      "name": "美国联邦储备委员会研究",
+      "sourceType": "央行研究",
+      "url": "https://www.federalreserve.gov/feeds/working_papers.xml",
+      "homepage": "https://www.federalreserve.gov/econres.htm",
+      "priority": 95
+    },
+    {
+      "id": "federal-reserve-notes",
+      "name": "美国联邦储备委员会 FEDS Notes",
+      "sourceType": "央行研究",
+      "url": "https://www.federalreserve.gov/feeds/feds_notes.xml",
+      "homepage": "https://www.federalreserve.gov/econres/notes/feds-notes/default.htm",
+      "priority": 94
+    },
+    {
+      "id": "nist-news",
+      "name": "美国国家标准与技术研究院（NIST）",
+      "sourceType": "政府研究",
+      "url": "https://www.nist.gov/news-events/news/rss.xml",
+      "homepage": "https://www.nist.gov/artificial-intelligence",
+      "priority": 92
+    },
+    {
       "id": "nvidia-blog",
       "name": "NVIDIA 官方博客",
       "sourceType": "公司观点",

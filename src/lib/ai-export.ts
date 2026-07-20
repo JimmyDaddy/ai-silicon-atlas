@@ -2,6 +2,8 @@ import { analysisSnapshot, getCompanyAnalysis } from "../data/analysis";
 import { companies } from "../data/companies";
 import { companyProfiles } from "../data/company-profiles";
 import { industryMapEdges } from "../data/industry-map";
+import { deltaSnapshot } from "../data/delta";
+import { healthSnapshot } from "../data/health";
 import { newsArticles, newsDisplaySummary, newsDisplayTitle, newsSnapshot } from "../data/news";
 import { stages } from "../data/stages";
 import { themes } from "../data/themes";
@@ -11,7 +13,7 @@ const siteUrl = "https://silicon-atlas.timetombs.today";
 
 export function buildAiExport() {
   return {
-    schemaVersion: "1.0",
+    schemaVersion: "1.1",
     metadata: {
       name: "智芯图谱 · AI & Silicon Atlas",
       language: "zh-CN",
@@ -30,8 +32,11 @@ export function buildAiExport() {
         llmsTxt: `${siteUrl}/llms.txt`,
         json: `${siteUrl}/exports/atlas.json`,
         markdown: `${siteUrl}/exports/atlas.md`,
+        delta: `${siteUrl}/exports/delta.json`,
       },
     },
+    health: healthSnapshot,
+    latestDelta: deltaSnapshot,
     valueChain: {
       stages: stages.map((stage) => ({
         id: stage.key,
@@ -130,6 +135,24 @@ export function buildAiMarkdown() {
       `跟踪信号：${safeMarkdown(stage.trackingSignal)}`,
       "",
     ]),
+    "## 最新变化",
+    "",
+    `变化窗口：${data.latestDelta.period.from ?? "无基线"} → ${data.latestDelta.period.to}，共 ${data.latestDelta.summary.totalChanges} 项变化。`,
+    "",
+    `- 新增官方披露：${data.latestDelta.summary.newFilings}`,
+    `- 结构化指标变化：${data.latestDelta.summary.metricChanges}`,
+    `- 新增权威情报：${data.latestDelta.summary.newIntelligence}`,
+    `- 情报 AI 摘要刷新：${data.latestDelta.summary.intelligenceAnalysisRefreshes}`,
+    `- 数据健康状态：${data.health.overall}`,
+    "",
+    ...data.latestDelta.intelligence.new.slice(0, 20).flatMap((article) => [
+      `### ${safeMarkdown(article.title)}`,
+      "",
+      `- 来源：${safeMarkdown(article.source)}（${safeMarkdown(article.sourceType)}）`,
+      `- 摘要：${safeMarkdown(article.summary)}`,
+      `- 原文：${article.sourceUrl}`,
+      "",
+    ]),
     "## 研究主题",
     "",
     ...data.researchThemes.flatMap((theme) => [
@@ -178,11 +201,14 @@ export function buildLlmsTxt() {
 
 - [完整结构化 JSON](${siteUrl}/exports/atlas.json): 价值链、公司、研究主题、官方快照与权威情报的机器可读数据。
 - [上下文 Markdown](${siteUrl}/exports/atlas.md): 适合注入 LLM 上下文或导入知识库的文本摘要。
+- [最近变化 JSON](${siteUrl}/exports/delta.json): 只包含最近一次更新产生的公司、披露、指标和情报变化。
 
 ## Core pages
 
 - [产业地图](${siteUrl}/map/)
+- [变化雷达](${siteUrl}/radar/)
 - [公司目录](${siteUrl}/companies/)
+- [公司比较](${siteUrl}/compare/)
 - [权威情报时间线](${siteUrl}/news/)
 - [交互研究主题](${siteUrl}/research/)
 - [方法与来源](${siteUrl}/methodology/)
@@ -195,4 +221,3 @@ export function buildLlmsTxt() {
 - 请保留 sourceUrl、sourceType、analysisStatus 与 analysisBasis，并在高风险结论前核验原始来源。
 `;
 }
-

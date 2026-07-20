@@ -16,6 +16,7 @@ const { compact = false } = Astro.props;
   </div>
   <div class="export-actions">
     <a href={sitePath("/exports/atlas.json")} download="ai-silicon-atlas.json"><span>JSON</span><strong>完整结构化数据</strong><small>适合程序与 Agent</small><i>↓</i></a>
+    <a href={sitePath("/exports/delta.json")} download="ai-silicon-atlas-delta.json"><span>DELTA</span><strong>最近变化增量</strong><small>适合每日 Agent 消费</small><i>↓</i></a>
     <a href={sitePath("/exports/atlas.md")} download="ai-silicon-atlas.md"><span>MD</span><strong>上下文 Markdown</strong><small>适合知识库与对话</small><i>↓</i></a>
     <a href={sitePath("/llms.txt")}><span>TXT</span><strong>llms.txt</strong><small>让 AI 发现数据入口</small><i>↗</i></a>
   </div>
@@ -35,7 +36,7 @@ const { compact = false } = Astro.props;
   .export-intro > span { color: var(--mint); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; }
   .export-intro h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 500; letter-spacing: -0.035em; margin: 0.65rem 0 0; }
   .export-intro p { color: var(--text-muted); font-size: 0.86rem; line-height: 1.75; margin: 0.8rem 0 0; }
-  .export-actions { display: grid; gap: 0.65rem; grid-template-columns: repeat(3, 1fr); }
+  .export-actions { display: grid; gap: 0.65rem; grid-template-columns: repeat(4, 1fr); }
   .export-actions a { background: rgba(7, 16, 29, 0.48); border: 1px solid var(--line); border-radius: 0.8rem; color: var(--text-strong); display: grid; min-width: 0; padding: 0.9rem; position: relative; text-decoration: none; transition: border-color 160ms ease, transform 160ms ease; }
   .export-actions a:hover { border-color: rgba(99, 230, 190, 0.45); transform: translateY(-2px); }
   .export-actions a > span { color: var(--mint); font-family: var(--font-mono); font-size: 0.66rem; }
@@ -46,6 +47,7 @@ const { compact = false } = Astro.props;
 
   @media (max-width: 780px) {
     .ai-export-panel { grid-template-columns: 1fr; }
+    .export-actions { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 540px) {

@@ -23,11 +23,13 @@ const searchable = [article.title, article.titleZh, article.sourceName, ...artic
 ---
 
 <article
+  id={article.id}
   class:list={["news-card", { compact, analyzed: article.analysis.status === "ok" }]}
   data-news-card
   data-search={searchable}
   data-topics={article.topics.join("|")}
   data-source-type={article.sourceType}
+  data-perspective={article.sourceType === "公司观点" ? "company" : "independent"}
 >
   <div class="news-card-top">
     <span class="source-kind">{article.sourceType}</span>

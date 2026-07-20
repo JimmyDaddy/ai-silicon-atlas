@@ -9,10 +9,12 @@
 3. 适配器将不同市场的数据整理为统一的公司快照、最近披露列表和最多 8 个历史指标期。
 4. `scripts/analyze-data.mjs` 对比输入哈希，为发生变化的公司构造证据包并生成 AI 综合分析。
 5. `scripts/update-news.mjs` 拉取权威来源 RSS、合并重点文章清单、去重分类，并为新增情报生成 AI 摘要。
-6. 数据、公司分析与情报快照分别通过专用校验脚本。
-7. Astro 类型检查和静态构建必须通过。
-8. 快照发生变化时，由 `github-actions[bot]` 提交到 `main`。
-9. 数据更新工作流直接发布刚构建的 Pages artifact；普通的 `main` 提交仍由独立部署工作流处理。
+6. `scripts/generate-delta.mjs` 对比更新前的 Git 快照，生成只包含本轮变化的 `delta.json`。
+7. `scripts/generate-health.mjs` 汇总来源状态、数据新鲜度、AI 积压和独立来源占比，生成 `health.json`。
+8. 数据、公司分析、情报、增量与健康快照分别通过专用校验脚本；健康达到 `critical` 时在 CI 中生成告警注解和运行摘要，但保留部署旧快照的能力。
+9. Astro 类型检查和静态构建必须通过。
+10. 快照发生变化时，由 `github-actions[bot]` 提交到 `main`。
+11. 数据更新工作流直接发布刚构建的 Pages artifact；普通的 `main` 提交仍由独立部署工作流处理。
 
 定时任务使用的 `GITHUB_TOKEN` 所产生的普通 `push` 不会再次触发另一个工作流，因此定时数据工作流包含自己的部署 job，确保抓取、提交与上线闭环完成。
 
@@ -22,11 +24,12 @@
 
 ### SEC EDGAR
 
-- 自动解析 ticker → CIK。
+- 仓库登记 ticker → CIK，避免每轮同步依赖全量 ticker 清单；新增公司缺少 CIK 时才回退到官方清单解析。
 - 获取最新 10-K、10-Q、8-K、20-F 或 6-K。
 - 保留最近 8 条官方披露。
 - 从 Company Facts XBRL 中提取收入、净利润、资产、现金和资本开支，并保留最多 8 个历史期。
-- 请求包含可识别的 User-Agent，并限制请求节奏。
+- 请求包含可识别的 User-Agent，限制请求节奏，并对 403、429 和 5xx 做退避重试。
+- 连续出现 3 次 403 时触发本轮熔断，快速结束其余请求并保留上一版快照；健康报告会把来源降级或中断显式展示。
 
 建议在 GitHub 仓库变量中配置：
 
@@ -67,7 +70,7 @@
 
 `src/data/news-sources.json` 分成两类来源：
 
-- 可稳定定时抓取的官方 RSS，例如 BIS、ECB、NVIDIA、Microsoft、AWS 与 Intel。
+- 可稳定定时抓取的官方 RSS，例如 BIS、ECB、美国联邦储备系统研究、NIST、NVIDIA、Microsoft、AWS 与 Intel。
 - 由维护者核验的重点机构文章，例如 BIS Bulletin、IMF Notes、IEA 分析和 Blackstone 官方观点。重点清单只保存链接、元数据与短要点，不复制文章全文。
 
 更新器按 AI、半导体、数据中心、电力、模型平台、企业应用、资本市场和供应链关键词筛选，再关联到站内产业环节与公司。URL 去重后最多保留 120 篇，单个 Feed 每次检查最近 30 项；自动源失败时保留该来源的上一版内容。
@@ -78,10 +81,11 @@
 
 ## AI 消费导出
 
-每次 Astro 静态构建都会同步生成三个无需密钥的机器入口：
+每次 Astro 静态构建都会同步生成四个无需密钥的机器入口：
 
 - `/exports/atlas.json`：完整价值链、研究主题、公司、官方快照、AI 分析和权威情报。
 - `/exports/atlas.md`：适合直接注入长上下文或导入知识库的 Markdown 摘要。
+- `/exports/delta.json`：只包含最近一次更新产生的披露、指标、分析和情报变化，适合每日 Agent 增量消费。
 - `/llms.txt`：站点说明、核心页面和机器导出入口。
 
 导出不复制外部文章全文，只包含本站摘要、分析状态、依据类型和原始来源 URL。消费方应保留这些来源字段，并在高风险结论前回到原文核验。
@@ -99,6 +103,10 @@ npm run analysis:update
 npm run analysis:validate
 npm run news:update
 npm run news:validate
+npm run delta:update
+npm run delta:validate
+npm run health:update
+npm run health:validate
 npm run check
 npm run build
 ```

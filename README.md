@@ -10,17 +10,20 @@
 
 - **看产业关系**：通过交互式地图理解九个核心环节的上下游连接、价值流与需求反馈。
 - **研究关键公司**：浏览 31 家全球代表公司的商业模式、核心能力、竞争参照、上下游依赖与待验证问题。
+- **比较与关注公司**：在浏览器本地保存关注列表，并把最多 4 家公司放进同一视图横向比较，不上传个人选择。
+- **查看每日变化**：变化雷达只展示最近一轮新增披露、指标、AI 综合分析与权威情报，也可切换到自己的关注范围。
 - **跟踪官方披露**：查看 SEC EDGAR、OpenDART 及公司投资者关系入口，保留来源和报告期。
 - **阅读 AI 综合分析**：基于已抓取的结构化证据整理变化、经营信号、价值链影响与不确定性。
 - **浏览权威情报**：聚合国际机构、央行研究与公司一手文章，提供原文链接、产业链关联和有证据边界的中文 AI 摘要。
-- **导出给其他 AI**：通过 [`llms.txt`](https://silicon-atlas.timetombs.today/llms.txt)、[结构化 JSON](https://silicon-atlas.timetombs.today/exports/atlas.json) 或 [Markdown 上下文](https://silicon-atlas.timetombs.today/exports/atlas.md) 接入 Agent 与知识库。
+- **导出给其他 AI**：通过 [`llms.txt`](https://silicon-atlas.timetombs.today/llms.txt)、[完整 JSON](https://silicon-atlas.timetombs.today/exports/atlas.json)、[每日变化 JSON](https://silicon-atlas.timetombs.today/exports/delta.json) 或 [Markdown 上下文](https://silicon-atlas.timetombs.today/exports/atlas.md) 接入 Agent 与知识库。
 
 ## 推荐的浏览方式
 
 1. 从[产业地图](https://silicon-atlas.timetombs.today/map/)选择感兴趣的环节。
 2. 进入公司研究卡，先理解商业模式和产业位置，再查看历史指标与近期披露。
-3. 在[权威情报](https://silicon-atlas.timetombs.today/news/)中查看近期机构研究和产业观点，再沿来源链接回到原文。
-4. 把 AI 分析当作研究线索，沿证据链接回到官方原文独立核验。
+3. 在[公司目录](https://silicon-atlas.timetombs.today/companies/)加入关注，并用[公司比较](https://silicon-atlas.timetombs.today/compare/)建立自己的观察组。
+4. 打开[变化雷达](https://silicon-atlas.timetombs.today/radar/)查看最近一次更新，再到[权威情报](https://silicon-atlas.timetombs.today/news/)沿来源链接阅读原文。
+5. 把 AI 分析当作研究线索，沿证据链接回到官方原文独立核验。
 
 ## 我们如何处理信息
 

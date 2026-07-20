@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-20T16:45:31.414Z",
+  "overall": "degraded",
+  "schedule": {
+    "cadence": "daily",
+    "cronUtc": "17 2 * * *",
+    "timezone": "Asia/Shanghai",
+    "localTime": "10:17"
+  },
+  "companies": {
+    "total": 31,
+    "statuses": {
+      "ok": 25,
+      "manual": 4,
+      "unconfigured": 2
+    },
+    "fresh": 25,
+    "stale": 0,
+    "withLatestFiling": 25,
+    "withMetrics": 25
+  },
+  "companyAnalysis": {
+    "statuses": {
+      "ok": 25,
+      "unavailable": 6
+    },
+    "completed": 25,
+    "total": 31
+  },
+  "intelligence": {
+    "total": 55,
+    "completed": 36,
+    "pending": 19,
+    "independent": 20,
+    "companyViewpoint": 35,
+    "independentShare": 0.3636,
+    "configuredSources": 12,
+    "automaticSources": 9,
+    "failedSources": 0
+  },
+  "providers": {
+    "secEdgar": {
+      "provider": "SEC EDGAR",
+      "status": "ok",
+      "completedAt": "2026-07-20T16:45:17.167Z",
+      "companyCount": 25,
+      "completedCount": 25,
+      "failedCount": 0,
+      "error": null
+    },
+    "openDart": {
+      "provider": "OpenDART",
+      "status": "unconfigured",
+      "completedAt": "2026-07-20T16:44:51.302Z",
+      "companyCount": 2,
+      "completedCount": null,
+      "failedCount": null,
+      "error": null
+    },
+    "manual": {
+      "provider": "First-party IR",
+      "status": "manual",
+      "completedAt": "2026-07-20T16:44:51.279Z",
+      "companyCount": 4,
+      "completedCount": null,
+      "failedCount": null,
+      "error": null
+    }
+  },
+  "issues": [
+    {
+      "severity": "info",
+      "code": "dart-unconfigured",
+      "title": "OpenDART 等待 API Key",
+      "detail": "三星电子与 SK 海力士保持待配置状态，不影响其他来源更新。"
+    },
+    {
+      "severity": "warning",
+      "code": "news-analysis-backlog",
+      "title": "19 篇情报等待 AI 处理",
+      "detail": "后续批次会继续处理，页面暂时使用来源摘要或编辑要点。"
+    },
+    {
+      "severity": "info",
+      "code": "company-analysis-unavailable",
+      "title": "6 家公司当前证据不足",
+      "detail": "人工维护市场或待配置来源不会生成缺少证据的分析。"
+    }
+  ]
+}

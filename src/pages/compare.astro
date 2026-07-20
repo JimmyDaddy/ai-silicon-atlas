@@ -1,0 +1,298 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCompanyAnalysis } from "../data/analysis";
+import { companies } from "../data/companies";
+import { stageByKey } from "../data/stages";
+import { getCompanyUpdate, metricChange } from "../data/updates";
+import { sitePath } from "../lib/paths";
+
+const metricNames: Record<string, string> = { revenue: "收入", netIncome: "净利润", assets: "总资产", cash: "现金", capex: "资本开支" };
+const compareData = companies.map((company) => {
+  const update = getCompanyUpdate(company.slug);
+  const analysis = getCompanyAnalysis(company.slug);
+  return {
+    slug: company.slug,
+    name: company.name,
+    nameEn: company.nameEn,
+    ticker: company.ticker,
+    exchange: company.exchange,
+    country: company.country,
+    stage: { key: company.stage, name: stageByKey[company.stage].name, accent: stageByKey[company.stage].accent },
+    description: company.description,
+    focus: company.focus,
+    attention: company.attention,
+    risks: company.risks,
+    pageUrl: sitePath(`/companies/${company.slug}/`),
+    dataStatus: update ? { status: update.status, stale: Boolean(update.stale), checkedAt: update.checkedAt } : null,
+    latestFiling: update?.latestFiling ?? null,
+    metrics: Object.entries(update?.metrics ?? {}).map(([key, metric]) => ({
+      key,
+      name: metricNames[key] ?? metric.label ?? key,
+      value: metric.value,
+      unit: metric.unit,
+      periodEnd: metric.periodEnd,
+      change: metricChange(update?.metricHistory?.[key]),
+    })),
+    analysis: analysis ? {
+      status: analysis.status,
+      summary: analysis.summary ?? analysis.reason ?? "暂无可用综合分析。",
+      confidence: analysis.confidence ?? null,
+      generatedAt: analysis.generatedAt,
+    } : null,
+  };
+});
+const serializedCompareData = JSON.stringify(compareData).replace(/</g, "\\u003c");
+---
+
+<BaseLayout title="公司比较 · 智芯图谱" description="并排比较 AI 与半导体产业链公司的位置、财务快照、官方披露、研究重点和风险。" active="companies">
+  <section class="page-hero compare-hero">
+    <div class="shell page-hero-grid">
+      <div><span class="eyebrow">Company comparison</span><h1 class="display-title">少看孤立数字，<br />多做<em>横向比较</em></h1></div>
+      <div><p class="page-kicker">最多选择四家公司，并排比较产业位置、最新披露、结构化指标、AI 综合分析和待跟踪风险。</p><div class="page-meta"><span><i></i>{companies.length} 家可比较公司</span><span>浏览器本地关注列表</span></div></div>
+    </div>
+  </section>
+
+  <section class="compare-workspace section-rule">
+    <div class="shell">
+      <div class="picker-panel">
+        <div class="picker-head"><div><span class="eyebrow">Selection</span><h2>选择 2–4 家公司</h2></div><div class="picker-actions"><button type="button" data-use-watchlist>载入我的关注</button><button type="button" data-copy-link>复制比较链接</button></div></div>
+        <label class="compare-search"><span class="sr-only">搜索可比较公司</span><input type="search" data-compare-search placeholder="搜索公司、代码或产业环节" /></label>
+        <div class="company-picker" data-company-picker>
+          {companies.map((company) => <button type="button" data-compare-company={company.slug} data-search={`${company.name} ${company.nameEn} ${company.ticker} ${stageByKey[company.stage].name}`.toLowerCase()} aria-pressed="false"><span>{company.ticker}</span><strong>{company.name}</strong><small>{stageByKey[company.stage].name}</small></button>)}
+        </div>
+        <p class="picker-message" data-picker-message>最多同时比较四家公司。</p>
+      </div>
+
+      <div class="selection-summary"><div><span class="eyebrow">Selected set</span><p data-selection-label></p></div><a href={sitePath("/companies/")}>返回公司目录 ↗</a></div>
+      <div class="compare-scroll"><div class="compare-grid" data-compare-grid></div></div>
+      <div class="empty-state" data-compare-empty>至少选择一家公司后才能开始比较。</div>
+    </div>
+  </section>
+
+  <script is:inline type="application/json" id="compare-data" set:html={serializedCompareData}></script>
+  <script>
+    interface CompareCompany {
+      slug: string; name: string; nameEn: string; ticker: string; exchange: string; country: string;
+      stage: { key: string; name: string; accent: string }; description: string; focus: string[]; attention: string[]; risks: string[];
+      pageUrl: string; dataStatus: { status: string; stale: boolean; checkedAt: string } | null;
+      latestFiling: { form: string; filedAt: string; title: string; url: string } | null;
+      metrics: Array<{ key: string; name: string; value: number; unit: string; periodEnd: string; change: number | null }>;
+      analysis: { status: string; summary: string; confidence: string | null; generatedAt: string | null } | null;
+    }
+
+    const rawData = document.querySelector<HTMLScriptElement>("#compare-data")?.textContent ?? "[]";
+    const companyData = JSON.parse(rawData) as CompareCompany[];
+    const bySlug = new Map(companyData.map((company) => [company.slug, company]));
+    const pickerButtons = [...document.querySelectorAll<HTMLButtonElement>("[data-compare-company]")];
+    const search = document.querySelector<HTMLInputElement>("[data-compare-search]");
+    const grid = document.querySelector<HTMLElement>("[data-compare-grid]");
+    const empty = document.querySelector<HTMLElement>("[data-compare-empty]");
+    const message = document.querySelector<HTMLElement>("[data-picker-message]");
+    const selectionLabel = document.querySelector<HTMLElement>("[data-selection-label]");
+    const useWatchlist = document.querySelector<HTMLButtonElement>("[data-use-watchlist]");
+    const copyLink = document.querySelector<HTMLButtonElement>("[data-copy-link]");
+    const storageKey = "silicon-atlas-watchlist-v1";
+    const params = new URLSearchParams(location.search);
+    const fromQuery = (params.get("companies") ?? "").split(",").filter((slug) => bySlug.has(slug)).slice(0, 4);
+    let selected = fromQuery.length ? fromQuery : ["nvidia", "tsmc", "microsoft"];
+
+    const element = <K extends keyof HTMLElementTagNameMap>(tag: K, className = "", text = "") => {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text) node.textContent = text;
+      return node;
+    };
+
+    const formatValue = (value: number, unit: string) => {
+      const formatted = new Intl.NumberFormat("zh-CN", { notation: "compact", maximumFractionDigits: 2 }).format(value);
+      return unit === "USD" ? `US$${formatted}` : `${formatted} ${unit}`.trim();
+    };
+
+    const readWatchlist = () => {
+      try {
+        const value = JSON.parse(localStorage.getItem(storageKey) ?? "[]");
+        return Array.isArray(value) ? value.filter((slug) => bySlug.has(slug)) : [];
+      } catch { return []; }
+    };
+
+    const addList = (parent: HTMLElement, title: string, values: string[], tone = "") => {
+      const section = element("section", `compare-list ${tone}`);
+      section.append(element("span", "compare-label", title));
+      const list = element("ul");
+      values.forEach((value) => list.append(element("li", "", value)));
+      section.append(list);
+      parent.append(section);
+    };
+
+    const renderColumn = (company: CompareCompany) => {
+      const column = element("article", "compare-column");
+      column.style.setProperty("--compare-accent", company.stage.accent);
+      const head = element("header", "compare-column-head");
+      const meta = element("div", "compare-column-meta");
+      meta.append(element("span", "", company.ticker), element("small", "", company.stage.name));
+      head.append(meta, element("h2", "", company.name), element("p", "", `${company.nameEn} · ${company.exchange}`));
+      const dataStatus = company.dataStatus?.stale ? "上版快照" : company.dataStatus?.status === "ok" ? "数据最新" : company.dataStatus?.status === "manual" ? "人工维护" : "待配置";
+      head.append(element("small", "compare-data-status", dataStatus));
+      const remove = element("button", "remove-company", "移除");
+      remove.type = "button";
+      remove.setAttribute("aria-label", `从比较中移除${company.name}`);
+      remove.addEventListener("click", () => { selected = selected.filter((slug) => slug !== company.slug); render(); });
+      head.append(remove);
+      column.append(head);
+      const profile = element("section", "compare-profile");
+      profile.append(element("span", "compare-label", "POSITION"), element("p", "", company.description));
+      const tags = element("div", "compare-tags");
+      company.focus.forEach((tag) => tags.append(element("span", "", tag)));
+      profile.append(tags);
+      column.append(profile);
+
+      const metrics = element("section", "compare-metrics");
+      metrics.append(element("span", "compare-label", "LATEST METRICS"));
+      if (company.metrics.length) {
+        company.metrics.forEach((metric) => {
+          const row = element("div");
+          const label = element("span", "", metric.name);
+          const value = element("strong", "", formatValue(metric.value, metric.unit));
+          const date = element("small", "", metric.periodEnd);
+          if (metric.change !== null) {
+            const change = element("b", metric.change >= 0 ? "up" : "down", `${metric.change >= 0 ? "+" : ""}${metric.change.toFixed(1)}%`);
+            value.append(change);
+          }
+          row.append(label, value, date);
+          metrics.append(row);
+        });
+      } else metrics.append(element("p", "compare-muted", "当前市场暂无结构化指标。"));
+      column.append(metrics);
+
+      const filing = element("section", "compare-filing");
+      filing.append(element("span", "compare-label", "LATEST FILING"));
+      if (company.latestFiling) {
+        const link = element("a");
+        link.href = company.latestFiling.url;
+        link.target = "_blank";
+        link.rel = "noreferrer";
+        link.append(element("strong", "", company.latestFiling.form), element("p", "", company.latestFiling.title), element("small", "", `${company.latestFiling.filedAt} ↗`));
+        filing.append(link);
+      } else filing.append(element("p", "compare-muted", "当前没有自动化官方披露。"));
+      column.append(filing);
+
+      const synthesis = element("section", "compare-analysis");
+      synthesis.append(element("span", "compare-label", `AI SYNTHESIS · ${company.analysis?.confidence ?? "N/A"}`), element("p", "", company.analysis?.summary ?? "等待证据。"));
+      column.append(synthesis);
+      addList(column, "WHAT TO WATCH", company.attention);
+      addList(column, "RISKS", company.risks, "risk");
+      const detail = element("a", "compare-detail", "打开完整研究卡 →");
+      detail.href = company.pageUrl;
+      column.append(detail);
+      return column;
+    };
+
+    const render = () => {
+      pickerButtons.forEach((button) => button.setAttribute("aria-pressed", String(selected.includes(button.dataset.compareCompany ?? ""))));
+      if (selectionLabel) selectionLabel.textContent = `${selected.length} / 4 · ${selected.map((slug) => bySlug.get(slug)?.name).filter(Boolean).join("、")}`;
+      if (grid) {
+        grid.replaceChildren(...selected.map((slug) => bySlug.get(slug)).filter((company): company is CompareCompany => Boolean(company)).map(renderColumn));
+        grid.style.gridTemplateColumns = `repeat(${Math.max(selected.length, 1)}, minmax(17rem, 1fr))`;
+      }
+      empty?.classList.toggle("visible", selected.length === 0);
+      const next = new URL(location.href);
+      if (selected.length) next.searchParams.set("companies", selected.join(","));
+      else next.searchParams.delete("companies");
+      history.replaceState({}, "", next);
+    };
+
+    pickerButtons.forEach((button) => button.addEventListener("click", () => {
+      const slug = button.dataset.compareCompany;
+      if (!slug) return;
+      if (selected.includes(slug)) selected = selected.filter((value) => value !== slug);
+      else if (selected.length < 4) selected = [...selected, slug];
+      else {
+        if (message) message.textContent = "已选择四家公司，请先移除一家再添加。";
+        return;
+      }
+      if (message) message.textContent = "最多同时比较四家公司。";
+      render();
+    }));
+
+    search?.addEventListener("input", () => {
+      const query = search.value.trim().toLowerCase();
+      pickerButtons.forEach((button) => { button.hidden = Boolean(query) && !(button.dataset.search ?? "").includes(query); });
+    });
+
+    useWatchlist?.addEventListener("click", () => {
+      const watched = readWatchlist().slice(0, 4);
+      if (watched.length) selected = watched;
+      if (message) message.textContent = watched.length ? `已载入 ${watched.length} 家关注公司。` : "关注列表为空，请先在公司目录添加。";
+      render();
+    });
+
+    copyLink?.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(location.href);
+        copyLink.textContent = "已复制";
+        setTimeout(() => { copyLink.textContent = "复制比较链接"; }, 1500);
+      } catch { copyLink.textContent = "请复制地址栏链接"; }
+    });
+    render();
+  </script>
+</BaseLayout>
+
+<style>
+  .compare-hero { background: radial-gradient(circle at 76% 54%, rgba(167, 139, 250, 0.11), transparent 25rem); }
+  .compare-workspace { padding: 2rem 0 6rem; }
+  .picker-panel { background: rgba(10, 22, 38, 0.78); border: 1px solid var(--line); border-radius: 1rem; padding: 1rem; }
+  .picker-head, .selection-summary { align-items: center; display: flex; gap: 2rem; justify-content: space-between; }
+  .picker-head h2 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 500; margin: 0.4rem 0 0; }
+  .picker-actions { display: flex; gap: 0.5rem; }
+  .picker-actions button { background: transparent; border: 1px solid var(--line); border-radius: 999px; color: var(--text-muted); font-size: 0.76rem; padding: 0.5rem 0.7rem; }
+  .compare-search { display: block; margin: 1rem 0 0.7rem; }
+  .compare-search input { background: var(--surface-soft); border: 1px solid var(--line); border-radius: 0.7rem; color: var(--text-strong); outline: 0; padding: 0.75rem; width: 100%; }
+  .company-picker { display: flex; gap: 0.45rem; overflow-x: auto; padding-bottom: 0.4rem; scrollbar-width: thin; }
+  .company-picker button { background: transparent; border: 1px solid var(--line); border-radius: 0.65rem; color: var(--text-muted); display: grid; flex: 0 0 9.5rem; gap: 0.2rem; justify-items: start; padding: 0.65rem; text-align: left; }
+  .company-picker button[hidden] { display: none; }
+  .company-picker button[aria-pressed="true"] { background: rgba(99, 230, 190, 0.09); border-color: rgba(99, 230, 190, 0.42); }
+  .company-picker span, .company-picker small { color: var(--text-dim); font-family: var(--font-mono); font-size: 0.62rem; }
+  .company-picker strong { color: var(--text-strong); font-size: 0.8rem; }
+  .picker-message { color: var(--text-dim); font-size: 0.72rem; margin: 0.5rem 0 0; }
+  .selection-summary { border-bottom: 1px solid var(--line); padding: 1.5rem 0 1rem; }
+  .selection-summary p { color: var(--text-muted); font-size: 0.82rem; margin: 0.4rem 0 0; }
+  .selection-summary a { color: var(--text-muted); font-size: 0.76rem; text-decoration: none; }
+  .compare-scroll { overflow-x: auto; padding: 1rem 0; }
+  .compare-grid { display: grid; gap: 0.75rem; min-width: min-content; }
+  .compare-column { --compare-accent: var(--mint); background: linear-gradient(145deg, rgba(15, 31, 51, 0.8), rgba(8, 18, 31, 0.95)); border: 1px solid var(--line); border-radius: 0.9rem; display: flex; flex-direction: column; min-width: 17rem; overflow: hidden; }
+  .compare-column-head, .compare-profile, .compare-metrics, .compare-filing, .compare-analysis, .compare-list { border-bottom: 1px solid var(--line); padding: 1rem; }
+  .compare-column-head { min-height: 10.5rem; position: relative; }
+  .compare-column-meta { align-items: center; display: flex; justify-content: space-between; }
+  .compare-column-meta span { color: var(--compare-accent); font-family: var(--font-mono); }
+  .compare-column-meta small { color: var(--text-dim); }
+  .compare-column-head h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 500; margin: 2rem 0 0.3rem; }
+  .compare-column-head p { color: var(--text-dim); font-size: 0.72rem; margin: 0; }
+  .compare-data-status { color: var(--mint); display: block; font-family: var(--font-mono); font-size: 0.62rem; margin-top: 0.5rem; }
+  .remove-company { background: transparent; border: 0; bottom: 0.8rem; color: var(--text-dim); font-size: 0.68rem; position: absolute; right: 0.8rem; }
+  .compare-label { color: var(--compare-accent); display: block; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.08em; margin-bottom: 0.8rem; }
+  .compare-profile { min-height: 12.5rem; }
+  .compare-profile > p, .compare-analysis p { color: var(--text-muted); font-size: 0.8rem; line-height: 1.7; margin: 0; }
+  .compare-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; }
+  .compare-tags span { background: rgba(255, 255, 255, 0.04); border-radius: 999px; color: var(--text-dim); font-size: 0.64rem; padding: 0.3rem 0.45rem; }
+  .compare-metrics { min-height: 24rem; }
+  .compare-metrics > div { border-top: 1px solid var(--line); display: grid; gap: 0.2rem; grid-template-columns: 1fr auto; padding: 0.65rem 0; }
+  .compare-metrics > div > span { color: var(--text-muted); font-size: 0.74rem; }
+  .compare-metrics strong { color: var(--text-strong); font-size: 0.78rem; }
+  .compare-metrics strong b { font-size: 0.62rem; margin-left: 0.35rem; }
+  .compare-metrics b.up { color: var(--mint); } .compare-metrics b.down { color: var(--rose); }
+  .compare-metrics small { color: var(--text-dim); font-size: 0.62rem; grid-column: 1 / -1; }
+  .compare-filing { min-height: 10.5rem; }
+  .compare-filing a { color: var(--text-muted); text-decoration: none; }
+  .compare-filing strong { color: var(--compare-accent); font-family: var(--font-mono); }
+  .compare-filing p { font-size: 0.76rem; line-height: 1.5; margin: 0.6rem 0; }
+  .compare-filing small { color: var(--text-dim); }
+  .compare-analysis { min-height: 16rem; }
+  .compare-list { min-height: 14rem; }
+  .compare-list ul { list-style: none; margin: 0; padding: 0; }
+  .compare-list li { border-top: 1px solid var(--line); color: var(--text-muted); font-size: 0.76rem; line-height: 1.55; padding: 0.6rem 0; }
+  .compare-list.risk .compare-label { color: var(--rose); }
+  .compare-detail { color: var(--text-muted); font-size: 0.76rem; margin-top: auto; padding: 1rem; text-decoration: none; }
+  .compare-muted { color: var(--text-dim); font-size: 0.76rem; }
+  .sr-only { clip: rect(0, 0, 0, 0); clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px; }
+  @media (max-width: 680px) { .picker-head, .selection-summary { align-items: flex-start; flex-direction: column; } .picker-actions { flex-wrap: wrap; } .compare-column { min-width: 16rem; } }
+</style>

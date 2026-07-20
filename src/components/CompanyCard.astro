@@ -6,22 +6,24 @@ import { sitePath } from "../lib/paths";
 interface Props {
   company: Company;
   compact?: boolean;
+  watchable?: boolean;
 }
 
-const { company, compact = false } = Astro.props;
+const { company, compact = false, watchable = false } = Astro.props;
 const stage = stageByKey[company.stage];
 ---
 
-<a
+<article
   class:list={["company-card", { compact }]}
-  href={sitePath(`/companies/${company.slug}/`)}
-  aria-label={`查看${company.name}研究卡`}
   style={`--company-accent: ${stage.accent}`}
   data-company-card
+  data-company={company.slug}
   data-stage={company.stage}
   data-market={company.exchange}
   data-search={`${company.name} ${company.nameEn} ${company.ticker} ${company.focus.join(" ")}`.toLowerCase()}
 >
+  <a class="company-card-hit" href={sitePath(`/companies/${company.slug}/`)} aria-label={`查看${company.name}研究卡`}></a>
+  {watchable && <button class="watch-toggle" type="button" data-watch-company={company.slug} aria-label={`关注${company.name}`} aria-pressed="false"><span aria-hidden="true">＋</span><b>关注</b></button>}
   <div class="company-card-top">
     <span class="ticker">{company.ticker}</span>
     <span class="stage-dot"><i></i>{stage.name}</span>
@@ -37,7 +39,7 @@ const stage = stageByKey[company.stage];
   <span class="card-link">
     查看研究卡 <span aria-hidden="true">↗</span>
   </span>
-</a>
+</article>
 
 <style>
   .company-card {
@@ -53,6 +55,39 @@ const stage = stageByKey[company.stage];
     text-decoration: none;
     transition: border-color 220ms ease, transform 220ms ease, background 220ms ease, box-shadow 220ms ease;
   }
+
+  .company-card-hit {
+    border-radius: inherit;
+    inset: 0;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .company-card-hit:focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--company-accent) 55%, transparent);
+    outline-offset: -3px;
+  }
+
+  .watch-toggle {
+    align-items: center;
+    background: rgba(7, 16, 29, 0.86);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    bottom: 1rem;
+    color: var(--text-muted);
+    display: inline-flex;
+    font-size: 0.7rem;
+    gap: 0.35rem;
+    padding: 0.38rem 0.55rem;
+    position: absolute;
+    right: 1rem;
+    z-index: 3;
+  }
+
+  .watch-toggle b { font-weight: 500; }
+  .watch-toggle span { color: var(--mint); }
+  .watch-toggle[aria-pressed="true"] { background: rgba(99, 230, 190, 0.12); border-color: rgba(99, 230, 190, 0.42); color: var(--text-strong); }
+  .watch-toggle[aria-pressed="true"] span { transform: rotate(45deg); }
 
   .company-card[hidden] {
     display: none;
@@ -89,12 +124,6 @@ const stage = stageByKey[company.stage];
   .company-card:hover::after,
   .company-card:focus-visible::after {
     transform: translateX(115%);
-  }
-
-  .company-card:focus-visible {
-    border-color: var(--company-accent);
-    outline: 2px solid color-mix(in srgb, var(--company-accent) 42%, transparent);
-    outline-offset: 3px;
   }
 
   .company-card.compact {
@@ -181,6 +210,8 @@ const stage = stageByKey[company.stage];
     padding-top: 1rem;
     text-decoration: none;
   }
+
+  .company-card:has(.watch-toggle) .card-link { padding-right: 5rem; }
 
   .card-link span {
     color: var(--company-accent);

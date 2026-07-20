@@ -13,9 +13,7 @@ concurrency:
 
 jobs:
   refresh:
-    # SEC EDGAR routinely rejects shared Azure/Linux runner egress with HTTP 403.
-    # Public repositories can use the GitHub-hosted macOS pool without consuming paid minutes.
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
       contents: write

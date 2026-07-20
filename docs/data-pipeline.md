@@ -5,7 +5,6 @@
 ## 更新流程
 
 1. `.github/workflows/update-data.yml` 每天 UTC 02:17 定时运行，也支持手动触发。
-   抓取任务使用 GitHub 托管的 macOS Runner，以避开 SEC 对部分共享 Linux 云出口的持续 403；Pages 部署仍使用 Ubuntu Runner。
 2. `scripts/update-data.mjs` 调用各官方数据适配器。
 3. 适配器将不同市场的数据整理为统一的公司快照、最近披露列表和最多 8 个历史指标期。
 4. `scripts/analyze-data.mjs` 对比输入哈希，为发生变化的公司构造证据包并生成 AI 综合分析。
@@ -31,6 +30,7 @@
 - 从 Company Facts XBRL 中提取收入、净利润、资产、现金和资本开支，并保留最多 8 个历史期。
 - 请求包含可识别的 User-Agent，限制请求节奏，并对 403、429 和 5xx 做退避重试。
 - 连续出现 3 次 403 时触发本轮熔断，快速结束其余请求并保留上一版快照；健康报告会把来源降级或中断显式展示。
+- SEC 可能拒绝 GitHub 托管 Runner 的共享云出口；Linux 与 macOS 托管池均已实测会出现 403。此时工作流仍会更新情报与 AI 分析，但 SEC 快照会保留上一次成功版本并触发健康告警。若需要保证每日 SEC 刷新，应为该 job 配置具备稳定网络出口的自托管 Runner，或在可信服务上提供官方 SEC 请求代理。
 
 建议在 GitHub 仓库变量中配置：
 

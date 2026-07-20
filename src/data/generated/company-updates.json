@@ -1,31 +1,30 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T17:00:35.852Z",
+  "generatedAt": "2026-07-20T17:03:43.313Z",
   "sources": {
     "secEdgar": {
-      "status": "error",
+      "status": "ok",
       "provider": "SEC EDGAR",
       "url": "https://www.sec.gov/edgar/sec-api-documentation",
-      "startedAt": "2026-07-20T17:00:35.856Z",
-      "completedAt": "2026-07-20T17:00:47.723Z",
+      "startedAt": "2026-07-20T17:03:43.314Z",
+      "completedAt": "2026-07-20T17:04:10.877Z",
       "companyCount": 25,
-      "completedCount": 0,
-      "failedCount": 25,
-      "identifierMode": "local-cik",
-      "error": "SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
+      "completedCount": 25,
+      "failedCount": 0,
+      "identifierMode": "local-cik"
     },
     "openDart": {
       "status": "unconfigured",
       "provider": "OpenDART",
       "url": "https://engopendart.fss.or.kr/",
-      "startedAt": "2026-07-20T17:00:35.906Z",
-      "completedAt": "2026-07-20T17:00:35.906Z",
+      "startedAt": "2026-07-20T17:03:43.336Z",
+      "completedAt": "2026-07-20T17:03:43.336Z",
       "companyCount": 2
     },
     "manual": {
       "status": "manual",
       "provider": "First-party IR",
-      "completedAt": "2026-07-20T17:00:35.852Z",
+      "completedAt": "2026-07-20T17:03:43.313Z",
       "companyCount": 4
     }
   },
@@ -33,7 +32,7 @@
     "adobe": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:14.063Z",
+      "checkedAt": "2026-07-20T17:04:07.949Z",
       "identifiers": {
         "ticker": "ADBE",
         "cik": "0000796343"
@@ -595,16 +594,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.723Z"
+      "warnings": []
     },
     "alphabet": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:10.382Z",
+      "checkedAt": "2026-07-20T17:04:04.043Z",
       "identifiers": {
         "ticker": "GOOGL",
         "cik": "0001652044"
@@ -1127,16 +1122,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.723Z"
+      "warnings": []
     },
     "amazon": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:11.325Z",
+      "checkedAt": "2026-07-20T17:04:05.012Z",
       "identifiers": {
         "ticker": "AMZN",
         "cik": "0001018724"
@@ -1619,16 +1610,13 @@
         ]
       },
       "warnings": [
-        "Ignored stale capex metric ending 2017-03-31",
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.723Z"
+        "Ignored stale capex metric ending 2017-03-31"
+      ]
     },
     "amd": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:44:56.896Z",
+      "checkedAt": "2026-07-20T17:03:49.571Z",
       "identifiers": {
         "ticker": "AMD",
         "cik": "0000002488"
@@ -2190,16 +2178,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.722Z"
+      "warnings": []
     },
     "amkor": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:04.727Z",
+      "checkedAt": "2026-07-20T17:03:57.869Z",
       "identifiers": {
         "ticker": "AMKR",
         "cik": "0001047127"
@@ -2761,16 +2745,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.722Z"
+      "warnings": []
     },
     "applied-materials": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:44:59.927Z",
+      "checkedAt": "2026-07-20T17:03:52.507Z",
       "identifiers": {
         "ticker": "AMAT",
         "cik": "0000006951"
@@ -3332,16 +3312,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.722Z"
+      "warnings": []
     },
     "arista-networks": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:05.707Z",
+      "checkedAt": "2026-07-20T17:03:59.036Z",
       "identifiers": {
         "ticker": "ANET",
         "cik": "0001596532"
@@ -3903,16 +3879,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.723Z"
+      "warnings": []
     },
     "arm": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:44:54.955Z",
+      "checkedAt": "2026-07-20T17:03:47.672Z",
       "identifiers": {
         "ticker": "ARM",
         "cik": "0001973239"
@@ -4474,16 +4446,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://data.sec.gov/api/xbrl/companyfacts/CIK0001973239.json"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:43.818Z"
+      "warnings": []
     },
     "ase-technology": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:03.870Z",
+      "checkedAt": "2026-07-20T17:03:57.007Z",
       "identifiers": {
         "ticker": "ASX",
         "cik": "0001122411"
@@ -4887,16 +4855,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.722Z"
+      "warnings": []
     },
     "asml": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:44:58.988Z",
+      "checkedAt": "2026-07-20T17:03:51.540Z",
       "identifiers": {
         "ticker": "ASML",
         "cik": "0000937966"
@@ -5380,16 +5344,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.722Z"
+      "warnings": []
     },
     "broadcom": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:44:57.983Z",
+      "checkedAt": "2026-07-20T17:03:50.568Z",
       "identifiers": {
         "ticker": "AVGO",
         "cik": "0001730168"
@@ -5925,16 +5885,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.722Z"
+      "warnings": []
     },
     "cadence": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:44:53.887Z",
+      "checkedAt": "2026-07-20T17:03:46.639Z",
       "identifiers": {
         "ticker": "CDNS",
         "cik": "0000813672"
@@ -6496,16 +6452,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://data.sec.gov/submissions/CIK0000813672.json"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:39.912Z"
+      "warnings": []
     },
     "equinix": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:08.399Z",
+      "checkedAt": "2026-07-20T17:04:01.932Z",
       "identifiers": {
         "ticker": "EQIX",
         "cik": "0001101239"
@@ -6988,16 +6940,13 @@
         ]
       },
       "warnings": [
-        "Ignored stale capex metric ending 2018-09-30",
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.723Z"
+        "Ignored stale capex metric ending 2018-09-30"
+      ]
     },
     "jcet": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-07-20T17:00:35.852Z",
+      "checkedAt": "2026-07-20T17:03:43.313Z",
       "identifiers": {},
       "sourceUrl": "https://www.jcetglobal.com/",
       "latestFiling": null,
@@ -7011,7 +6960,7 @@
     "kla": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:01.045Z",
+      "checkedAt": "2026-07-20T17:03:53.630Z",
       "identifiers": {
         "ticker": "KLAC",
         "cik": "0000319201"
@@ -7612,16 +7561,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.722Z"
+      "warnings": []
     },
     "mediatek": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-07-20T17:00:35.852Z",
+      "checkedAt": "2026-07-20T17:03:43.313Z",
       "identifiers": {},
       "sourceUrl": "https://corp.mediatek.com/investor-relations",
       "latestFiling": null,
@@ -7635,7 +7580,7 @@
     "meta-platforms": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:12.345Z",
+      "checkedAt": "2026-07-20T17:04:06.101Z",
       "identifiers": {
         "ticker": "META",
         "cik": "0001326801"
@@ -8197,16 +8142,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.723Z"
+      "warnings": []
     },
     "micron": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:02.940Z",
+      "checkedAt": "2026-07-20T17:03:55.906Z",
       "identifiers": {
         "ticker": "MU",
         "cik": "0000723125"
@@ -8807,16 +8748,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.722Z"
+      "warnings": []
     },
     "microsoft": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:09.394Z",
+      "checkedAt": "2026-07-20T17:04:02.921Z",
       "identifiers": {
         "ticker": "MSFT",
         "cik": "0000789019"
@@ -9378,16 +9315,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.723Z"
+      "warnings": []
     },
     "nvidia": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:44:55.783Z",
+      "checkedAt": "2026-07-20T17:03:48.506Z",
       "identifiers": {
         "ticker": "NVDA",
         "cik": "0001045810"
@@ -9870,16 +9803,13 @@
         ]
       },
       "warnings": [
-        "Ignored stale capex metric ending 2020-07-26",
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.722Z"
+        "Ignored stale capex metric ending 2020-07-26"
+      ]
     },
     "palantir": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:13.223Z",
+      "checkedAt": "2026-07-20T17:04:06.985Z",
       "identifiers": {
         "ticker": "PLTR",
         "cik": "0001321655"
@@ -10441,16 +10371,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.723Z"
+      "warnings": []
     },
     "salesforce": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:15.145Z",
+      "checkedAt": "2026-07-20T17:04:08.892Z",
       "identifiers": {
         "ticker": "CRM",
         "cik": "0001108524"
@@ -11012,16 +10938,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.723Z"
+      "warnings": []
     },
     "samsung-electronics": {
       "status": "unconfigured",
       "provider": "OpenDART",
-      "checkedAt": "2026-07-20T17:00:35.906Z",
+      "checkedAt": "2026-07-20T17:03:43.336Z",
       "identifiers": {
         "corpCode": "00126380"
       },
@@ -11036,7 +10958,7 @@
     "servicenow": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:16.259Z",
+      "checkedAt": "2026-07-20T17:04:09.964Z",
       "identifiers": {
         "ticker": "NOW",
         "cik": "0001373715"
@@ -11598,16 +11520,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.723Z"
+      "warnings": []
     },
     "sk-hynix": {
       "status": "unconfigured",
       "provider": "OpenDART",
-      "checkedAt": "2026-07-20T17:00:35.906Z",
+      "checkedAt": "2026-07-20T17:03:43.336Z",
       "identifiers": {
         "corpCode": "00164779"
       },
@@ -11622,7 +11540,7 @@
     "smic": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-07-20T17:00:35.852Z",
+      "checkedAt": "2026-07-20T17:03:43.313Z",
       "identifiers": {},
       "sourceUrl": "https://www.smics.com/en/site/company",
       "latestFiling": null,
@@ -11636,7 +11554,7 @@
     "supermicro": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:07.441Z",
+      "checkedAt": "2026-07-20T17:04:00.899Z",
       "identifiers": {
         "ticker": "SMCI",
         "cik": "0001375365"
@@ -12198,16 +12116,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.723Z"
+      "warnings": []
     },
     "synopsys": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:44:51.279Z",
+      "checkedAt": "2026-07-20T17:03:43.314Z",
       "identifiers": {
         "ticker": "SNPS",
         "cik": "0000883241"
@@ -12769,16 +12683,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://data.sec.gov/submissions/CIK0000883241.json"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:35.856Z"
+      "warnings": []
     },
     "tokyo-electron": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-07-20T17:00:35.852Z",
+      "checkedAt": "2026-07-20T17:03:43.313Z",
       "identifiers": {},
       "sourceUrl": "https://www.tel.com/ir/",
       "latestFiling": null,
@@ -12792,7 +12702,7 @@
     "tsmc": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:02.112Z",
+      "checkedAt": "2026-07-20T17:03:54.815Z",
       "identifiers": {
         "ticker": "TSM",
         "cik": "0001046179"
@@ -13144,16 +13054,12 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.722Z"
+      "warnings": []
     },
     "vertiv": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-07-20T16:45:06.607Z",
+      "checkedAt": "2026-07-20T17:04:00.019Z",
       "identifiers": {
         "ticker": "VRT",
         "cik": "0001674101"
@@ -13715,11 +13621,7 @@
           }
         ]
       },
-      "warnings": [
-        "Latest refresh failed; preserved last good snapshot: SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
-      ],
-      "stale": true,
-      "lastAttemptAt": "2026-07-20T17:00:47.723Z"
+      "warnings": []
     }
   }
 }

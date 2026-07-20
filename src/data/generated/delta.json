@@ -1,61 +1,343 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T17:00:48.361Z",
+  "generatedAt": "2026-07-20T17:03:43.313Z",
   "period": {
-    "from": "2026-07-20T16:55:11.068Z",
-    "to": "2026-07-20T17:00:48.361Z",
+    "from": "2026-07-20T17:00:48.361Z",
+    "to": "2026-07-20T17:03:43.313Z",
     "baseRef": "HEAD"
   },
   "summary": {
     "newFilings": 0,
     "metricChanges": 0,
-    "companyStatusChanges": 0,
+    "companyStatusChanges": 25,
     "companyAnalysisRefreshes": 0,
     "newIntelligence": 0,
-    "intelligenceAnalysisRefreshes": 3,
-    "totalChanges": 3
+    "intelligenceAnalysisRefreshes": 0,
+    "totalChanges": 25
   },
   "affected": {
     "stages": {
-      "models-platforms": 1
+      "ai-applications": 4,
+      "models-platforms": 4,
+      "design": 3,
+      "packaging": 2,
+      "equipment-materials": 3,
+      "ai-infrastructure": 4,
+      "eda-ip": 3,
+      "memory": 1,
+      "manufacturing": 1
     },
     "topics": {}
   },
   "companies": {
     "filings": [],
     "metrics": [],
-    "statuses": [],
+    "statuses": [
+      {
+        "company": "adobe",
+        "stage": "ai-applications",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "alphabet",
+        "stage": "models-platforms",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "amazon",
+        "stage": "models-platforms",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "amd",
+        "stage": "design",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "amkor",
+        "stage": "packaging",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "applied-materials",
+        "stage": "equipment-materials",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "arista-networks",
+        "stage": "ai-infrastructure",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "arm",
+        "stage": "eda-ip",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "ase-technology",
+        "stage": "packaging",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "asml",
+        "stage": "equipment-materials",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "broadcom",
+        "stage": "design",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "cadence",
+        "stage": "eda-ip",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "kla",
+        "stage": "equipment-materials",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "meta-platforms",
+        "stage": "models-platforms",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "micron",
+        "stage": "memory",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "nvidia",
+        "stage": "design",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "palantir",
+        "stage": "ai-applications",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "salesforce",
+        "stage": "ai-applications",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "servicenow",
+        "stage": "ai-applications",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "supermicro",
+        "stage": "ai-infrastructure",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "synopsys",
+        "stage": "eda-ip",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "tsmc",
+        "stage": "manufacturing",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "from": {
+          "status": "ok",
+          "stale": true
+        },
+        "to": {
+          "status": "ok",
+          "stale": false
+        }
+      }
+    ],
     "analysis": []
   },
   "intelligence": {
     "new": [],
-    "analysisRefreshed": [
-      {
-        "id": "nist-news-e28a2a44050f",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "title": "美国国家标准与技术研究院发布关于保障AI代理系统安全的信息征集",
-        "relatedCompanies": [],
-        "relatedStages": [
-          "models-platforms"
-        ],
-        "generatedAt": "2026-07-20T17:00:54.534Z"
-      },
-      {
-        "id": "nist-news-7ecf131aeb75",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "title": "美国国家标准与技术研究院（NIST）启动制造与关键基础设施人工智能中心",
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "generatedAt": "2026-07-20T17:00:58.995Z"
-      },
-      {
-        "id": "nist-news-6307e87c7b63",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "title": "NIST发布草案指南，重新思考AI时代的网络安全",
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "generatedAt": "2026-07-20T17:01:03.906Z"
-      }
-    ]
+    "analysisRefreshed": []
   }
 }

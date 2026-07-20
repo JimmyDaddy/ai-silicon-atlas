@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T16:55:11.068Z",
+  "generatedAt": "2026-07-20T17:00:48.361Z",
   "overall": "critical",
   "schedule": {
     "cadence": "daily",
@@ -30,8 +30,8 @@
   },
   "intelligence": {
     "total": 55,
-    "completed": 52,
-    "pending": 3,
+    "completed": 55,
+    "pending": 0,
     "independent": 20,
     "companyViewpoint": 35,
     "independentShare": 0.3636,
@@ -43,7 +43,7 @@
     "secEdgar": {
       "provider": "SEC EDGAR",
       "status": "error",
-      "completedAt": "2026-07-20T16:55:10.734Z",
+      "completedAt": "2026-07-20T17:00:47.723Z",
       "companyCount": 25,
       "completedCount": 0,
       "failedCount": 25,
@@ -52,7 +52,7 @@
     "openDart": {
       "provider": "OpenDART",
       "status": "unconfigured",
-      "completedAt": "2026-07-20T16:54:58.965Z",
+      "completedAt": "2026-07-20T17:00:35.906Z",
       "companyCount": 2,
       "completedCount": null,
       "failedCount": null,
@@ -61,7 +61,7 @@
     "manual": {
       "provider": "First-party IR",
       "status": "manual",
-      "completedAt": "2026-07-20T16:54:58.922Z",
+      "completedAt": "2026-07-20T17:00:35.852Z",
       "companyCount": 4,
       "completedCount": null,
       "failedCount": null,
@@ -86,12 +86,6 @@
       "code": "dart-unconfigured",
       "title": "OpenDART 等待 API Key",
       "detail": "三星电子与 SK 海力士保持待配置状态，不影响其他来源更新。"
-    },
-    {
-      "severity": "warning",
-      "code": "news-analysis-backlog",
-      "title": "3 篇情报等待 AI 处理",
-      "detail": "后续批次会继续处理，页面暂时使用来源摘要或编辑要点。"
     },
     {
       "severity": "info",

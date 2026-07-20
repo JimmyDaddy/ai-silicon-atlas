@@ -1,532 +1,60 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T16:55:11.068Z",
+  "generatedAt": "2026-07-20T17:00:48.361Z",
   "period": {
-    "from": "2026-07-20T16:45:31.414Z",
-    "to": "2026-07-20T16:55:11.068Z",
+    "from": "2026-07-20T16:55:11.068Z",
+    "to": "2026-07-20T17:00:48.361Z",
     "baseRef": "HEAD"
   },
   "summary": {
     "newFilings": 0,
     "metricChanges": 0,
-    "companyStatusChanges": 25,
+    "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
     "newIntelligence": 0,
-    "intelligenceAnalysisRefreshes": 16,
-    "totalChanges": 41
+    "intelligenceAnalysisRefreshes": 3,
+    "totalChanges": 3
   },
   "affected": {
     "stages": {
-      "ai-applications": 8,
-      "models-platforms": 9,
-      "design": 6,
-      "packaging": 9,
-      "equipment-materials": 8,
-      "ai-infrastructure": 8,
-      "eda-ip": 3,
-      "memory": 8,
-      "manufacturing": 5
+      "models-platforms": 1
     },
     "topics": {}
   },
   "companies": {
     "filings": [],
     "metrics": [],
-    "statuses": [
-      {
-        "company": "adobe",
-        "stage": "ai-applications",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "amd",
-        "stage": "design",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "amkor",
-        "stage": "packaging",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "applied-materials",
-        "stage": "equipment-materials",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "arm",
-        "stage": "eda-ip",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "ase-technology",
-        "stage": "packaging",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "asml",
-        "stage": "equipment-materials",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "broadcom",
-        "stage": "design",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "cadence",
-        "stage": "eda-ip",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "equinix",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "kla",
-        "stage": "equipment-materials",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "meta-platforms",
-        "stage": "models-platforms",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "micron",
-        "stage": "memory",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "microsoft",
-        "stage": "models-platforms",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "nvidia",
-        "stage": "design",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "palantir",
-        "stage": "ai-applications",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "salesforce",
-        "stage": "ai-applications",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "servicenow",
-        "stage": "ai-applications",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "synopsys",
-        "stage": "eda-ip",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      },
-      {
-        "company": "vertiv",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": false
-        },
-        "to": {
-          "status": "ok",
-          "stale": true
-        }
-      }
-    ],
+    "statuses": [],
     "analysis": []
   },
   "intelligence": {
     "new": [],
     "analysisRefreshed": [
       {
-        "id": "federal-reserve-notes-61783e5249ba",
-        "source": "美国联邦储备委员会 FEDS Notes",
-        "title": "FEDS报告：利用公开数据评估生成式AI建设及其对经济的影响",
-        "relatedCompanies": [],
-        "relatedStages": [
-          "models-platforms",
-          "ai-applications"
-        ],
-        "generatedAt": "2026-07-20T16:55:21.860Z"
-      },
-      {
-        "id": "federal-reserve-notes-e16019c2b761",
-        "source": "美国联邦储备委员会 FEDS Notes",
-        "title": "FEDS Note：技术冲击、人工智能热潮与美国经常账户",
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "generatedAt": "2026-07-20T16:55:26.718Z"
-      },
-      {
-        "id": "federal-reserve-working-papers-8ac0993c13ca",
-        "source": "美国联邦储备委员会研究",
-        "title": "美联储研究：利用机器学习方法捕捉隐含波动率的异质性预测",
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "generatedAt": "2026-07-20T16:55:32.910Z"
-      },
-      {
-        "id": "aws-blog-578e9bc432aa",
-        "source": "AWS 官方博客",
-        "title": "AWS 推出 AWS Transform 持续现代化预览版，实现技术债务的自动检测与修复",
-        "relatedCompanies": [
-          "amazon"
-        ],
-        "relatedStages": [
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "generatedAt": "2026-07-20T16:55:49.287Z"
-      },
-      {
-        "id": "intel-newsroom-170af8c59864",
-        "source": "Intel Newsroom",
-        "title": "英特尔发布2025-2026企业责任报告，推动负责任商业实践与AI驱动增长",
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "generatedAt": "2026-07-20T16:55:53.383Z"
-      },
-      {
-        "id": "intel-newsroom-cabc5fa7a607",
-        "source": "Intel Newsroom",
-        "title": "英特尔代工在VLSI研讨会上详述工艺里程碑及未来创新",
-        "relatedCompanies": [],
-        "relatedStages": [
-          "equipment-materials",
-          "manufacturing",
-          "memory",
-          "packaging"
-        ],
-        "generatedAt": "2026-07-20T16:55:59.372Z"
-      },
-      {
-        "id": "microsoft-blog-1a2eed32f806",
-        "source": "Microsoft 官方博客",
-        "title": "微软：实现AI成功的关键是智能与信任",
-        "relatedCompanies": [
-          "microsoft"
-        ],
-        "relatedStages": [
-          "equipment-materials",
-          "manufacturing",
-          "memory",
-          "packaging",
-          "ai-applications"
-        ],
-        "generatedAt": "2026-07-20T16:56:05.779Z"
-      },
-      {
-        "id": "nist-news-a407d520b6d1",
+        "id": "nist-news-e28a2a44050f",
         "source": "美国国家标准与技术研究院（NIST）",
-        "title": "NIST数学证明支持AI系统向持续监控与更新安全模型转变",
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "generatedAt": "2026-07-20T16:56:09.348Z"
-      },
-      {
-        "id": "nist-news-4356b0d9ab7d",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "title": "美国国家标准与技术研究院发布新AI模型，实现火灾安全逐步疏散路径识别",
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "generatedAt": "2026-07-20T16:56:14.147Z"
-      },
-      {
-        "id": "microsoft-blog-3ee1cab83814",
-        "source": "Microsoft 官方博客",
-        "title": "微软：AI本身无法改变企业，关键在于运行AI的系统",
-        "relatedCompanies": [
-          "microsoft"
-        ],
-        "relatedStages": [
-          "equipment-materials",
-          "manufacturing",
-          "memory",
-          "packaging",
-          "ai-applications"
-        ],
-        "generatedAt": "2026-07-20T16:56:21.345Z"
-      },
-      {
-        "id": "microsoft-blog-9b1f990896ab",
-        "source": "Microsoft 官方博客",
-        "title": "微软Build 2026：赋能开发者构建多模型智能平台",
-        "relatedCompanies": [
-          "nvidia",
-          "microsoft"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "equipment-materials"
-        ],
-        "generatedAt": "2026-07-20T16:56:30.830Z"
-      },
-      {
-        "id": "nist-news-7cdc0188c578",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "title": "美国国家标准与技术研究院（NIST）扩大人工智能联盟范围，呼吁新成员加入",
-        "relatedCompanies": [],
-        "relatedStages": [
-          "models-platforms",
-          "ai-applications"
-        ],
-        "generatedAt": "2026-07-20T16:56:34.677Z"
-      },
-      {
-        "id": "microsoft-blog-d086087d104d",
-        "source": "Microsoft 官方博客",
-        "title": "从AI试点到企业影响：为何执行力成为新的差异化因素",
-        "relatedCompanies": [
-          "microsoft"
-        ],
-        "relatedStages": [
-          "equipment-materials",
-          "manufacturing",
-          "memory",
-          "packaging",
-          "models-platforms"
-        ],
-        "generatedAt": "2026-07-20T16:56:41.496Z"
-      },
-      {
-        "id": "nist-news-b104cac390f5",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "title": "美国国家标准与技术研究院开发可承受极端环境的光子芯片封装技术",
-        "relatedCompanies": [],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure"
-        ],
-        "generatedAt": "2026-07-20T16:56:46.650Z"
-      },
-      {
-        "id": "nist-news-f8fd13e7bc70",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "title": "宣布“AI代理标准倡议”，推动互操作性与安全创新",
+        "title": "美国国家标准与技术研究院发布关于保障AI代理系统安全的信息征集",
         "relatedCompanies": [],
         "relatedStages": [
           "models-platforms"
         ],
-        "generatedAt": "2026-07-20T16:56:50.736Z"
+        "generatedAt": "2026-07-20T17:00:54.534Z"
       },
       {
-        "id": "nist-news-257e0f319be3",
+        "id": "nist-news-7ecf131aeb75",
         "source": "美国国家标准与技术研究院（NIST）",
-        "title": "美国国家标准与技术研究院（NIST）向小型企业拨款超300万美元，推动人工智能、生物技术、半导体、量子技术等领域发展",
+        "title": "美国国家标准与技术研究院（NIST）启动制造与关键基础设施人工智能中心",
         "relatedCompanies": [],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure"
-        ],
-        "generatedAt": "2026-07-20T16:56:54.762Z"
+        "relatedStages": [],
+        "generatedAt": "2026-07-20T17:00:58.995Z"
+      },
+      {
+        "id": "nist-news-6307e87c7b63",
+        "source": "美国国家标准与技术研究院（NIST）",
+        "title": "NIST发布草案指南，重新思考AI时代的网络安全",
+        "relatedCompanies": [],
+        "relatedStages": [],
+        "generatedAt": "2026-07-20T17:01:03.906Z"
       }
     ]
   }

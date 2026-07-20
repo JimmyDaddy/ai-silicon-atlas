@@ -8,7 +8,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const snapshotPath = path.join(root, "src/data/generated/company-updates.json");
 const contextPath = path.join(root, "src/data/analysis-context.json");
 const outputPath = path.join(root, "src/data/generated/company-analysis.json");
-const promptVersion = "company-synthesis-v1";
+const promptVersion = "company-synthesis-v2";
+const unsupportedAbsencePattern = /(?:无重大.{0,20}(?:披露|事项|变动|变化|风险)|(?:未显示|未披露|没有|不存在).{0,20}(?:事项|变化|变动|风险)|(?:披露|报告|公告|8-K|6-K|10-[KQ]).{0,20}(?:未显示|未披露|没有|不存在|无重大))/i;
 
 async function readJson(filePath, fallback = null) {
   try {
@@ -68,6 +69,10 @@ function evidencePacket(slug, context, company) {
     metrics: company.metrics ?? {},
     metricDeltas: metricDeltas(company.metricHistory),
     evidenceSources: sources,
+    evidenceLimitations: [
+      "recentFilings 只包含表单类型、日期和标题等元数据，不包含申报文件正文。",
+      "不得根据披露元数据断言公告未披露、未显示或不存在某类事项。",
+    ],
   };
 }
 
@@ -106,6 +111,15 @@ function validateModelOutput(raw, packet) {
     ? raw.questionsToWatch.filter((item) => typeof item === "string" && item.trim()).slice(0, 4)
     : [];
 
+  const allClaims = [
+    raw.summary,
+    ...["whatChanged", "operatingSignals", "valueChainImpact", "uncertainties"]
+      .flatMap((field) => Array.isArray(raw[field]) ? raw[field].map((point) => point?.text) : []),
+  ].filter((claim) => typeof claim === "string");
+  if (allClaims.some((claim) => unsupportedAbsencePattern.test(claim))) {
+    throw new Error("AI response infers the absence of events from filing metadata");
+  }
+
   return {
     summary: raw.summary.trim(),
     summaryEvidence,
@@ -121,7 +135,7 @@ function validateModelOutput(raw, packet) {
 async function callModel(packet, configuration) {
   const endpoint = `${configuration.baseUrl.replace(/\/$/, "")}/chat/completions`;
   const evidenceIds = packet.evidenceSources.map((source) => source.id);
-  const system = `你是 AI 与半导体产业情报分析器。只能依据用户提供的结构化证据，不得补写公告正文中没有出现的事实，不得给出买入、卖出、目标价或收益预测。\n
+  const system = `你是 AI 与半导体产业情报分析器。只能依据用户提供的结构化证据，不得补写公告正文中没有出现的事实，不得给出买入、卖出、目标价或收益预测。recentFilings 只有披露元数据，没有文件正文；绝对不能据此声称公告“未显示”“未披露”“没有”或“不存在”某类事项。需要谈及正文时，必须表述为“当前证据包不含披露正文，无法判断具体事项”。\n
 输出单个 JSON 对象，字段必须是：summary、summaryEvidence、whatChanged、operatingSignals、valueChainImpact、uncertainties、questionsToWatch、confidence。\n
 whatChanged、operatingSignals、valueChainImpact、uncertainties 都是对象数组，每项格式 {"text":"...","evidence":["证据ID"]}。questionsToWatch 是字符串数组。confidence 只能是 low、medium、high。\n
 证据不足时明确写入 uncertainties，不要用常识填空。使用简洁中文。`;

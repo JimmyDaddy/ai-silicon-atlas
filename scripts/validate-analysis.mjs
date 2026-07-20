@@ -9,7 +9,7 @@ const errors = [];
 const statuses = new Set(["ok", "pending", "unavailable", "error"]);
 
 if (snapshot.schemaVersion !== 1) errors.push("analysis schemaVersion must be 1");
-if (snapshot.promptVersion !== "company-synthesis-v1") errors.push("unexpected analysis promptVersion");
+if (snapshot.promptVersion !== "company-synthesis-v2") errors.push("unexpected analysis promptVersion");
 
 for (const slug of Object.keys(contexts)) {
   const analysis = snapshot.companies?.[slug];
@@ -43,4 +43,3 @@ if (errors.length) {
 }
 
 console.log(`Validated ${Object.keys(contexts).length} company analysis entries`);
-

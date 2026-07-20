@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T15:37:24.644Z",
+  "generatedAt": "2026-07-20T15:42:51.019Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "authority-news-synthesis-v1",
-  "completedCount": 28,
+  "completedCount": 36,
   "sourceCount": 9,
   "sources": [
     {
@@ -15,7 +15,7 @@
       "homepage": "https://www.bis.org/",
       "priority": 100,
       "status": "ok",
-      "checkedAt": "2026-07-20T15:37:24.644Z",
+      "checkedAt": "2026-07-20T15:42:51.019Z",
       "itemCount": 25,
       "matchedCount": 3
     },
@@ -27,7 +27,7 @@
       "homepage": "https://www.ecb.europa.eu/",
       "priority": 96,
       "status": "ok",
-      "checkedAt": "2026-07-20T15:37:24.644Z",
+      "checkedAt": "2026-07-20T15:42:51.019Z",
       "itemCount": 15,
       "matchedCount": 1
     },
@@ -39,7 +39,7 @@
       "homepage": "https://blogs.nvidia.com/",
       "priority": 86,
       "status": "ok",
-      "checkedAt": "2026-07-20T15:37:24.644Z",
+      "checkedAt": "2026-07-20T15:42:51.019Z",
       "itemCount": 18,
       "matchedCount": 12
     },
@@ -51,7 +51,7 @@
       "homepage": "https://blogs.microsoft.com/",
       "priority": 84,
       "status": "ok",
-      "checkedAt": "2026-07-20T15:37:24.644Z",
+      "checkedAt": "2026-07-20T15:42:51.019Z",
       "itemCount": 10,
       "matchedCount": 8
     },
@@ -63,7 +63,7 @@
       "homepage": "https://aws.amazon.com/blogs/aws/",
       "priority": 82,
       "status": "ok",
-      "checkedAt": "2026-07-20T15:37:24.644Z",
+      "checkedAt": "2026-07-20T15:42:51.019Z",
       "itemCount": 20,
       "matchedCount": 10
     },
@@ -75,7 +75,7 @@
       "homepage": "https://newsroom.intel.com/",
       "priority": 80,
       "status": "ok",
-      "checkedAt": "2026-07-20T15:37:24.644Z",
+      "checkedAt": "2026-07-20T15:42:51.019Z",
       "itemCount": 10,
       "matchedCount": 5
     }
@@ -92,7 +92,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/siggraph-news-2026/",
       "publishedAt": "2026-07-20T15:00:53.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -152,7 +152,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
       "publishedAt": "2026-07-20T13:00:02.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力",
@@ -211,7 +211,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/bristol-myers-squibb-building-life-science-industrys-most-advanced-ai-factory-on-nvidia-vera-rubin/",
       "publishedAt": "2026-07-20T10:59:23.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片"
       ],
@@ -264,7 +264,7 @@
       "titleZh": null,
       "url": "https://www.bis.org/publ/bisbull129.htm",
       "publishedAt": "2026-07-20T06:49:00.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "模型与平台"
       ],
@@ -310,7 +310,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/nvidia-vera-rubin-post-training-intelligence-per-dollar/",
       "publishedAt": "2026-07-17T15:00:14.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -365,7 +365,7 @@
       "titleZh": null,
       "url": "https://newsroom.intel.com/artificial-intelligence/intel-google-cloud-announce-collaboration-to-accelerate-intel-ai-enabled-enterprise-transformation",
       "publishedAt": "2026-07-16T16:00:53.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "模型与平台",
         "企业应用与生产力"
@@ -415,7 +415,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/",
       "publishedAt": "2026-07-15T23:00:54.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -472,7 +472,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/japan-ecosystem-2026/",
       "publishedAt": "2026-07-15T10:51:37.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -530,7 +530,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/nemotron-open-models-ai-trust-control-customize/",
       "publishedAt": "2026-07-14T16:45:13.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -587,7 +587,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/performance-per-watt-ai-infrastructure-efficiency/",
       "publishedAt": "2026-07-14T15:00:20.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力",
@@ -643,7 +643,7 @@
       "titleZh": null,
       "url": "https://www.bis.org/publ/work1367.htm",
       "publishedAt": "2026-07-14T09:32:00.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "资本市场与金融稳定"
       ],
@@ -691,7 +691,7 @@
       "titleZh": "AI 冲击下的私募信贷：BDC 对软件公司的风险暴露",
       "url": "https://www.bis.org/publ/bisbull128.htm",
       "publishedAt": "2026-07-14T00:00:00.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "资本市场与金融稳定",
         "企业应用与生产力"
@@ -740,7 +740,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/",
       "publishedAt": "2026-07-13T16:18:20.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -795,10 +795,10 @@
       "sourceHomepage": "https://blogs.nvidia.com/",
       "sourcePriority": 86,
       "title": "AI Innovators Adopt NVIDIA Vera — Why Max Single-Threaded CPU at Scale Matters",
-      "titleZh": "NVIDIA Vera：面向智能代理时代的极致单线程CPU性能",
+      "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/nvidia-vera-max-single-threaded-cpu-at-scale/",
       "publishedAt": "2026-07-07T15:00:52.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -852,10 +852,10 @@
       "sourceHomepage": "https://www.ecb.europa.eu/",
       "sourcePriority": 96,
       "title": "Philip R. Lane: AI and monetary policy",
-      "titleZh": "菲利普·R·莱恩：人工智能与货币政策",
+      "titleZh": null,
       "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260706~b81aa4e329.en.html",
       "publishedAt": "2026-07-06T18:30:00.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "模型与平台"
       ],
@@ -896,10 +896,10 @@
       "sourceHomepage": "https://blogs.nvidia.com/",
       "sourcePriority": 86,
       "title": "How Open Models Are Driving AI Research",
-      "titleZh": "开放模型如何推动人工智能研究",
+      "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/open-models-icml-2026/",
       "publishedAt": "2026-07-06T16:00:00.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -953,10 +953,10 @@
       "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
       "sourcePriority": 82,
       "title": "AWS Weekly Roundup: Claude Sonnet 5 on AWS, Amazon WorkSpaces for AI agents, AWS service availability updates, and more (July 6, 2026)",
-      "titleZh": "AWS每周汇总：Claude Sonnet 5上线、Amazon WorkSpaces支持AI代理、AWS服务可用性更新等（2026年7月6日）",
+      "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/",
       "publishedAt": "2026-07-06T15:46:43.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -1008,10 +1008,10 @@
       "sourceHomepage": "https://blogs.nvidia.com/",
       "sourcePriority": 86,
       "title": "How Nations Are Deploying AI for Strategic Priorities",
-      "titleZh": "各国如何部署 AI 以实现战略优先事项",
+      "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/nations-deploy-ai-strategic-priorities/",
       "publishedAt": "2026-07-06T15:00:25.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力",
@@ -1066,10 +1066,10 @@
       "sourceHomepage": "https://blogs.microsoft.com/",
       "sourcePriority": 84,
       "title": "Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence",
-      "titleZh": "微软 Frontier Company：放大并保护您的智能的 AI 工程",
+      "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/",
       "publishedAt": "2026-07-02T12:59:05.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "模型与平台"
       ],
@@ -1117,10 +1117,10 @@
       "sourceHomepage": "https://blogs.nvidia.com/",
       "sourcePriority": 86,
       "title": "NVIDIA Unlocks AI Compute at Scale, Inviting Partners to Power the AI Infrastructure Buildout",
-      "titleZh": "英伟达开放大规模 AI 计算能力，携手合作伙伴共建 AI 基础设施",
+      "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/nvidia-unlocks-ai-compute-at-scale-capital-partners-to-power-ai-infrastructure-buildout/",
       "publishedAt": "2026-07-02T03:34:48.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -1172,10 +1172,10 @@
       "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
       "sourcePriority": 82,
       "title": "Amazon EC2 C9g and C9gd instances powered by AWS Graviton5 processors are now available",
-      "titleZh": "亚马逊推出基于AWS Graviton5处理器的EC2 C9g和C9gd实例",
+      "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/amazon-ec2-c9g-and-c9gd-instances-powered-by-aws-graviton5-processors-are-now-available/",
       "publishedAt": "2026-06-30T20:56:44.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力",
@@ -1228,10 +1228,10 @@
       "sourceHomepage": "https://blogs.nvidia.com/",
       "sourcePriority": 86,
       "title": "NVIDIA BioNeMo Agent Toolkit Brings Accelerated AI to Life Sciences Researchers in Claude Science",
-      "titleZh": "NVIDIA BioNeMo Agent 工具包助力生命科学研究者加速 AI 应用于 Claude Science",
+      "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/claude-science-bionemo-agent-toolkit/",
       "publishedAt": "2026-06-30T17:00:38.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -1286,7 +1286,7 @@
       "titleZh": "Blackstone 2026 年中展望：AI 基建资本周期",
       "url": "https://www.blackstone.com/insights/article/2026-mid-year-investment-perspectives/",
       "publishedAt": "2026-06-30T00:00:00.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "数据中心与电力",
         "AI 算力与芯片",
@@ -1336,10 +1336,10 @@
       "sourceHomepage": "https://newsroom.intel.com/",
       "sourcePriority": 80,
       "title": "America 250: At a Pivotal Moment for the Nation, Intel is Advancing U.S. Innovation, AI, and Manufacturing",
-      "titleZh": null,
+      "titleZh": "美国250周年关键时刻：英特尔推动美国创新、人工智能与制造业发展",
       "url": "https://newsroom.intel.com/corporate/america-250-intel-is-advancing-us-innovation",
       "publishedAt": "2026-06-29T13:29:31.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "企业应用与生产力"
@@ -1358,12 +1358,27 @@
       "excerpt": "NEWS HIGHLIGHTS: The U.S. is at an inflection point. Artificial intelligence is reshaping global competition and increasing the need for secure, domestic semiconductor production. U.S. leadership in the AI era will be defined by innovation, domestic manufacturing, and workforce readiness. Strong semiconductor leadership is essential to economic growth, national security, and long-term global competitiveness. For … Th",
       "editorialSummary": null,
       "analysis": {
-        "status": "error",
+        "status": "ok",
         "inputHash": "2ec81236fc2e6852545ce1bec00b4cb1083103aad989eadf098625a99d7be08e",
-        "generatedAt": null,
-        "model": null,
-        "reason": "AI endpoint returned 429: Too many requests. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).\n",
-        "lastAttemptAt": "2026-07-20T15:38:59.969Z"
+        "generatedAt": "2026-07-20T15:42:58.214Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "美国250周年关键时刻：英特尔推动美国创新、人工智能与制造业发展",
+        "summary": "英特尔指出，美国正处于关键转折点，人工智能正在重塑全球竞争格局，推动对安全且本土半导体生产的需求。美国在人工智能时代的领导力将依赖于创新能力、本土制造和劳动力准备。强大的半导体领导力对经济增长、国家安全及全球竞争力至关重要。",
+        "whyItMatters": "半导体产业是国家经济和安全的核心，人工智能的发展加剧了对高性能芯片的需求。英特尔强调加强本土制造和创新能力，有助于提升美国在全球科技竞争中的地位，保障供应链安全和技术自主。",
+        "valueChainImpact": [
+          "设计阶段：推动创新设计以满足AI算力需求",
+          "存储阶段：加强内存技术支持AI应用",
+          "封装阶段：提升芯片集成与性能",
+          "AI基础设施：增强硬件支持AI训练与推理"
+        ],
+        "uncertainties": [
+          "具体实施细节和时间表未披露",
+          "对其他国家半导体政策的影响未明确",
+          "技术突破和市场反应存在不确定性"
+        ],
+        "confidence": "medium"
       }
     },
     {
@@ -1374,10 +1389,10 @@
       "sourceHomepage": null,
       "sourcePriority": 110,
       "title": "Progress and peril",
-      "titleZh": "进展与风险",
+      "titleZh": "BIS 年度经济报告：AI 乐观情绪、投资与下行风险",
       "url": "https://www.bis.org/publ/arpdf/ar2026e1.htm",
       "publishedAt": "2026-06-28T00:00:00.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "资本市场与金融稳定",
         "企业应用与生产力"
@@ -1424,10 +1439,10 @@
       "sourceHomepage": "https://blogs.microsoft.com/",
       "sourcePriority": 84,
       "title": "Inside Microsoft’s two-decade push to cut water intensity while scaling for growth",
-      "titleZh": "微软二十年降低数据中心用水强度的持续努力",
+      "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/",
       "publishedAt": "2026-06-24T12:01:13.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力"
@@ -1479,10 +1494,10 @@
       "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
       "sourcePriority": 82,
       "title": "AWS Weekly Roundup: NY Summit recap, Local Zone in Hanoi, Grok 4.3 in Bedrock, price reductions, and more (June 22, 2026)",
-      "titleZh": null,
+      "titleZh": "AWS 2026年6月22日周报：纽约峰会回顾、河内本地区域、Grok 4.3上线、降价等",
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/",
       "publishedAt": "2026-06-22T14:46:17.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -1504,11 +1519,28 @@
       "excerpt": "Last week AWS Summit New York City brought together thousands of customers, partners, and builders for a free, one-day event showcasing the latest in cloud and AI innovation. Dr. Swami Sivasubramanian, VP of Agentic AI at AWS unveiled a stack of AI launches in his keynote , all built around one thesis: agents that compound value over time. Agents for working – You can launch autonomous agents and access a smarter act",
       "editorialSummary": null,
       "analysis": {
-        "status": "pending",
+        "status": "ok",
         "inputHash": "8713ff5f687d08a9a2be4162f6b7989a2e74f95939f9182b3bb6bb5d4d4af27d",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Waiting for the next AI news batch"
+        "generatedAt": "2026-07-20T15:43:07.675Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "AWS 2026年6月22日周报：纽约峰会回顾、河内本地区域、Grok 4.3上线、降价等",
+        "summary": "AWS在纽约峰会上发布多项AI相关产品和服务，重点推出基于代理（agent）理念的AI堆栈，涵盖工作自动化、安全防护和代码构建等场景。新增越南河内本地区域支持本地数据存储和备份。发布开源TypeScript框架AWS Blocks，支持本地开发无须AWS账号。Amazon Bedrock平台上线Grok 4.3模型，提升生成式AI应用性能。Amazon S3支持附加丰富可查询注释，优化AI数据管理。ECS服务自动扩缩容响应速度提升。EC2 G7实例首次搭载NVIDIA RTX PRO 4500 Blackwell GPU，显著提升AI推理和图形性能。推出多项安全、管理和市场服务新功能。多项产品价格下调，降低AI向量查询和游戏服务器网络成本，优化AWS Marketplace专业服务费用。",
+        "whyItMatters": "AWS持续强化AI基础设施和平台能力，推动代理型AI应用普及，提升开发效率和安全防护水平。新增本地区域满足数据合规需求，助力亚太市场扩展。引入高性能GPU实例和优化自动扩缩容，提升AI算力和云资源利用效率。价格调整降低客户使用门槛，促进AI和游戏等行业云端应用增长。整体体现AWS在AI算力、模型平台及云服务生态的综合竞争力提升。",
+        "valueChainImpact": [
+          "设计阶段：支持多步代理AI应用开发，提升开发效率",
+          "内存与存储：S3新增注释功能，优化AI数据管理",
+          "封装与硬件：EC2 G7实例搭载NVIDIA新GPU，提升AI推理性能",
+          "AI基础设施：新增本地区域，提升数据合规和低延迟访问"
+        ],
+        "uncertainties": [
+          "具体Grok 4.3模型性能提升细节和应用场景未详述",
+          "AWS Blocks框架的市场接受度和生态建设情况未知",
+          "部分新功能（如Strands Agents）实际应用效果和用户反馈尚不明确",
+          "价格调整对整体客户成本结构和市场竞争影响需进一步观察"
+        ],
+        "confidence": "high"
       }
     },
     {
@@ -1519,10 +1551,10 @@
       "sourceHomepage": "https://blogs.microsoft.com/",
       "sourcePriority": 84,
       "title": "Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos",
-      "titleZh": null,
+      "titleZh": "微软在德州佩科斯建设新数据中心，扩展AI与云服务容量",
       "url": "https://blogs.microsoft.com/blog/2026/06/22/powering-the-next-wave-of-ai-expanding-capacity-with-our-new-datacenter-in-pecos/",
       "publishedAt": "2026-06-22T12:06:39.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "数据中心与电力",
         "企业应用与生产力"
@@ -1541,11 +1573,28 @@
       "excerpt": "Today, Microsoft is announcing one of the largest single capacity additions in our history. In Pecos, Texas, we will build a new datacenter campus, expanding our global datacenter capacity by approximately 2 gigawatts (GW) to meet strong and sustained customer demand for AI and cloud services across industries and regions. Beyond the technology, this is a major investment in West Texas. We expect to support over 6,00",
       "editorialSummary": null,
       "analysis": {
-        "status": "pending",
+        "status": "ok",
         "inputHash": "6e41d9f8658ae90d1979bb5b3cce6df38e6e536bbbbf4d5796c15b9f0b1fa7e6",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Waiting for the next AI news batch"
+        "generatedAt": "2026-07-20T15:43:14.946Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "微软在德州佩科斯建设新数据中心，扩展AI与云服务容量",
+        "summary": "微软宣布将在德州佩科斯建设一个新的数据中心园区，新增约2GW的全球数据中心容量，以满足各行业对AI和云服务的强劲需求。该项目预计在建设高峰期支持6000多个建筑岗位，并创造数百个永久运营岗位，推动当地经济发展。微软强调以社区为先，承诺与当地居民和领导保持透明沟通，推动本地人才培养和小企业支持。数据中心将配备现场专用能源设施，初期采用“表内”天然气发电，未来计划接入更广泛电网，致力于环境可持续性，包括高效节能和水资源管理。该投资体现微软长期战略，旨在为AI时代提供可靠、可扩展的基础设施，同时促进西德州社区的经济和社会发展。",
+        "whyItMatters": "随着AI和云服务需求快速增长，微软通过大规模扩容数据中心基础设施，保障服务的稳定性和扩展性，推动AI技术的广泛应用。项目不仅满足技术需求，还注重社区合作和可持续发展，体现了企业社会责任和长期投资视角，对行业基础设施建设和区域经济均有示范意义。",
+        "valueChainImpact": [
+          "AI基础设施扩容，提升计算能力和服务稳定性",
+          "推动数据中心建设及运营相关产业链发展",
+          "促进本地就业和人才培养，支持AI生态系统建设",
+          "推动能源供应创新与环境可持续技术应用"
+        ],
+        "uncertainties": [
+          "具体建设完成时间和分阶段投产计划未详述",
+          "未来能源结构调整及与区域电网整合的具体方案和时间表不明确",
+          "项目对当地环境和社区长期影响的具体评估数据有限",
+          "实际运营中对水资源使用和节能效果的持续监测结果未知"
+        ],
+        "confidence": "high"
       }
     },
     {
@@ -1556,10 +1605,10 @@
       "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
       "sourcePriority": 82,
       "title": "Announcing Amazon EC2 G7 instances accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs",
-      "titleZh": null,
+      "titleZh": "亚马逊发布搭载NVIDIA RTX PRO 4500 Blackwell GPU的EC2 G7实例",
       "url": "https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/",
       "publishedAt": "2026-06-18T21:22:10.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力",
@@ -1582,11 +1631,27 @@
       "excerpt": "Today, we’re announcing the general availability of Amazon Elastic Compute Cloud (Amazon EC2) G7 instances, delivering high performance GPU acceleration for AI inference, graphics, and data analytics workloads. AWS is the first major cloud provider to support NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs. G7 instances are accelerated by these GPUs with custom sixth-generation Intel Xeon Scalable processors, deliv",
       "editorialSummary": null,
       "analysis": {
-        "status": "pending",
+        "status": "ok",
         "inputHash": "40bfb0be99d890b78ab01b535e1a05df415cde37ce49a09cecf4b84e440843d1",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Waiting for the next AI news batch"
+        "generatedAt": "2026-07-20T15:43:22.650Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "亚马逊发布搭载NVIDIA RTX PRO 4500 Blackwell GPU的EC2 G7实例",
+        "summary": "亚马逊AWS宣布推出EC2 G7实例，首次支持NVIDIA RTX PRO 4500 Blackwell Server Edition GPU，配备定制第六代Intel Xeon可扩展处理器。G7实例在AI推理、图形渲染和数据分析等GPU加速工作负载上性能显著提升，GPU内存容量和带宽分别提升至G6的1.33倍和2.45倍，网络带宽达700 Gbps，支持高性能存储和先进视频编码解码。实例规格涵盖1至8块GPU，支持多操作系统和多种购买选项，现已在美国部分区域上线。",
+        "whyItMatters": "G7实例显著提升了云端AI推理和图形处理能力，满足日益增长的高性能计算需求，推动AI基础设施和企业应用的升级。作为首个支持NVIDIA RTX PRO 4500 Blackwell GPU的主流云服务，AWS强化了其在AI算力市场的竞争力，促进半导体GPU技术与云计算深度融合。",
+        "valueChainImpact": [
+          "设计阶段：推动GPU与定制CPU协同优化设计",
+          "内存技术：提升GPU内存容量与带宽需求",
+          "封装工艺：支持高性能多GPU集成与散热",
+          "AI基础设施：增强云端AI推理和图形渲染能力"
+        ],
+        "uncertainties": [
+          "具体性能提升幅度是否适用于所有AI和图形工作负载",
+          "未来区域扩展计划及市场接受度",
+          "与其他云服务商类似产品的竞争态势"
+        ],
+        "confidence": "high"
       }
     },
     {
@@ -1597,10 +1662,10 @@
       "sourceHomepage": "https://newsroom.intel.com/",
       "sourcePriority": 80,
       "title": "Intel Announces Leadership Appointment at Intel Foundry to Accelerate Development and Manufacturing",
-      "titleZh": null,
+      "titleZh": "英特尔宣布任命新领导加速代工发展与制造",
       "url": "https://newsroom.intel.com/corporate/intel-announces-leadership-appointment-at-intel-foundry-to-accelerate-development-and-manufacturing",
       "publishedAt": "2026-06-18T20:31:38.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "半导体制造"
       ],
@@ -1617,11 +1682,26 @@
       "excerpt": "SANTA CLARA, Calif., June 18, 2026 — Intel Corporation today announced the appointment of Seok-Hee Lee as executive vice president of Intel Foundry, reporting directly to CEO Lip-Bu Tan. In this role, Lee will lead all advanced packaging, system integration, back-end technology development, and back-end manufacturing, strengthening Intel’s ability to deliver differentiated, system-level innovation for … The post Inte",
       "editorialSummary": null,
       "analysis": {
-        "status": "pending",
+        "status": "ok",
         "inputHash": "fe36f0cada94e12eb6fd6f408f095e378f8f1328dd363a823ebf1c6907b27aa7",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Waiting for the next AI news batch"
+        "generatedAt": "2026-07-20T15:43:32.520Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "英特尔宣布任命新领导加速代工发展与制造",
+        "summary": "英特尔任命Seok-Hee Lee为Intel Foundry执行副总裁，直接向CEO汇报。Lee将负责先进封装、系统集成、后端技术开发及制造，旨在强化英特尔在系统级创新和制造能力上的竞争力。",
+        "whyItMatters": "此举显示英特尔加大对代工业务的重视，强化后端制造与封装技术，有助提升其在半导体制造领域的整体竞争力和市场地位。",
+        "valueChainImpact": [
+          "设备与材料：先进封装技术推动相关设备需求增长",
+          "制造：后端制造能力提升，优化生产效率",
+          "封装：系统集成和先进封装技术发展加速",
+          "存储：系统级创新可能影响存储器集成方案"
+        ],
+        "uncertainties": [
+          "具体技术路线和产品规划未披露",
+          "任命对市场份额和竞争格局的具体影响尚不明确"
+        ],
+        "confidence": "high"
       }
     },
     {
@@ -1632,10 +1712,10 @@
       "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
       "sourcePriority": 82,
       "title": "Top announcements of the AWS Summit in New York, 2026",
-      "titleZh": null,
+      "titleZh": "2026年纽约AWS峰会主要公告汇总",
       "url": "https://aws.amazon.com/blogs/aws/top-announcements-of-the-aws-summit-in-new-york-2026/",
       "publishedAt": "2026-06-17T16:36:08.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -1657,11 +1737,27 @@
       "excerpt": "Today at the AWS Summit in New York City , Swami Sivasubramanian, AWS VP of Agentic AI, provided the day’s keynote. Here’s our roundup of the biggest announcements from the event: New in agents customers create We’re introducing new capabilities on Amazon Bedrock AgentCore: connecting AI agents to organizational, web, and paid knowledge, helping teams find and fix what’s going wrong in production, and enforcing contr",
       "editorialSummary": null,
       "analysis": {
-        "status": "pending",
+        "status": "ok",
         "inputHash": "12e49a0e4a04d5c88277fc3df59c505a2cf4a4db59b215a2922a6d075f89334c",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Waiting for the next AI news batch"
+        "generatedAt": "2026-07-20T15:43:40.088Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "2026年纽约AWS峰会主要公告汇总",
+        "summary": "AWS在2026年纽约峰会上发布多项AI代理和平台新功能，包括Amazon Bedrock AgentCore的新能力，如连接组织和网络知识库、自动多格式数据解析及复杂查询检索；推出Web搜索功能以确保AI代理基于最新网络知识回答；AWS WAF新增AI流量货币化功能，支持内容提供者向AI机器人收费；Amazon Bedrock AgentCore正式发布，简化生产级AI代理构建；即将推出AWS Context服务，实现数据关系图谱和智能搜索；安全方面发布AWS Continuum，支持代码漏洞优先级管理和自动修复；推出Kiro iOS原生应用，支持移动端开发工作；AWS DevOps Agent新增发布管理和自动测试功能；AWS Transform实现代码库持续现代化；Amazon Quick发布自主代理和整合活动流；其他重要更新包括Amazon S3支持对象注释，ECS服务自动扩展加速，EC2 G7实例搭载NVIDIA RTX PRO 4500 Blackwell GPU提升AI推理性能，以及Strands Agents工具包功能增强。",
+        "whyItMatters": "这些更新显著提升了AWS在AI算力、模型平台和安全自动化领域的能力，帮助企业更快构建、管理和优化智能代理及AI应用，降低开发和运维复杂度，推动AI技术在生产环境的广泛应用和商业化落地。",
+        "valueChainImpact": [
+          "设计阶段：支持更复杂的AI代理设计与多数据源集成",
+          "内存与存储：Amazon S3对象注释提升数据管理与查询效率",
+          "封装与硬件：EC2 G7实例搭载新一代NVIDIA GPU提升AI推理性能",
+          "AI基础设施：Bedrock AgentCore和AWS Context增强AI代理构建与数据访问能力"
+        ],
+        "uncertainties": [
+          "部分新功能如AWS Continuum处于预览阶段，具体性能和适用范围尚不明确",
+          "AWS Context服务尚未正式发布，具体实现细节和集成效果未知",
+          "部分第三方支付和计费机制的实际应用效果及用户接受度未详述"
+        ],
+        "confidence": "high"
       }
     },
     {
@@ -1672,10 +1768,10 @@
       "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
       "sourcePriority": 82,
       "title": "Introducing Amazon Bedrock Managed Knowledge Base for faster, more accurate enterprise AI applications",
-      "titleZh": null,
+      "titleZh": "亚马逊推出Bedrock托管知识库，加速企业级生成式AI应用开发",
       "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-managed-knowledge-base-for-faster-more-accurate-enterprise-ai-applications/",
       "publishedAt": "2026-06-17T15:09:20.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "模型与平台",
         "资本市场与金融稳定"
@@ -1694,11 +1790,28 @@
       "excerpt": "Today, we’re announcing Amazon Bedrock Managed Knowledge Base , a new set of capabilities that enables developers to build enterprise-grade generative AI applications with their proprietary data in minutes. Organizations building agentic AI applications need secure, reliable, and up-to-date access to enterprise-wide data to deliver accurate, fast, and trusted outcomes. Managed Knowledge Base abstracts away the comple",
       "editorialSummary": null,
       "analysis": {
-        "status": "pending",
+        "status": "ok",
         "inputHash": "2ec1ce6cc31e17aaaf24960133af893faaef32bf84a426cd667a118823f2f5ea",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Waiting for the next AI news batch"
+        "generatedAt": "2026-07-20T15:43:46.985Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "亚马逊推出Bedrock托管知识库，加速企业级生成式AI应用开发",
+        "summary": "亚马逊宣布推出Amazon Bedrock托管知识库服务，帮助开发者快速构建基于企业专有数据的生成式AI应用。该服务简化了检索增强生成（RAG）管道的搭建和管理，提供六种预置数据连接器，自动处理多样化数据解析，并支持复杂多轮、多跳查询。通过与Bedrock AgentCore Gateway集成，实现权限自动管理和监控。用户可灵活选择基础模型、嵌入和重排序模型，优化准确率和成本效益，且兼容现有Bedrock知识库API，方便迁移。",
+        "whyItMatters": "该服务解决了企业在构建知识库时面临的数据连接复杂性、检索准确性和大规模基础设施管理难题，显著降低开发门槛和维护成本，提升生成式AI应用的响应速度和准确性。灵活的模型选择和无锁定策略增强了企业适应快速变化AI模型生态的能力，推动生成式AI在企业级应用的广泛落地。",
+        "valueChainImpact": [
+          "模型与平台：提供托管的RAG基础设施和多模型支持，促进生成式AI平台能力提升",
+          "数据管理：支持多种企业数据源的无缝接入和智能解析，提升数据利用效率",
+          "AI应用开发：简化复杂查询处理，提升企业AI应用的开发效率和用户体验",
+          "安全与权限管理：自动生成和管理IAM权限，保障企业数据安全"
+        ],
+        "uncertainties": [
+          "具体性能指标和准确率提升幅度未详述",
+          "支持的数据源和区域范围未来是否会扩展尚不明确",
+          "定价细节和成本效益在不同规模应用中的表现未知",
+          "与其他云厂商类似服务的对比优势未明确"
+        ],
+        "confidence": "high"
       }
     },
     {
@@ -1709,10 +1822,10 @@
       "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
       "sourcePriority": 82,
       "title": "Announcing Web Search on Amazon Bedrock AgentCore: Ground your AI agents in current, accurate web knowledge",
-      "titleZh": null,
+      "titleZh": "亚马逊宣布Amazon Bedrock AgentCore支持基于网络搜索的AI智能体",
       "url": "https://aws.amazon.com/blogs/aws/announcing-web-search-on-amazon-bedrock-agentcore-ground-your-ai-agents-in-current-accurate-web-knowledge/",
       "publishedAt": "2026-06-17T15:00:11.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "模型与平台"
       ],
@@ -1728,11 +1841,27 @@
       "excerpt": "Today, we’re announcing the general availability of Web Search on Amazon Bedrock AgentCore , a fully managed tool that enables agents to ground responses in current, cited web knowledge with zero data egress from customer’s secured AWS environment. Web Search uses a built-in connector target on Bedrock AgentCore Gateway using the Model Context Protocol (MCP). Your agent sends a natural-language query, and Web Search ",
       "editorialSummary": null,
       "analysis": {
-        "status": "pending",
+        "status": "ok",
         "inputHash": "514a4b92dd8f607a6388b5565aee71b6a31d248c01d8ad132e34b9a861a123b5",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Waiting for the next AI news batch"
+        "generatedAt": "2026-07-20T15:43:53.097Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "亚马逊宣布Amazon Bedrock AgentCore支持基于网络搜索的AI智能体",
+        "summary": "亚马逊发布了Amazon Bedrock AgentCore的网络搜索功能，允许AI智能体基于当前且准确的网络知识生成响应，且数据完全留在客户的AWS安全环境内。该功能通过Bedrock AgentCore Gateway的内置连接器和模型上下文协议实现，结合亚马逊的网络索引和知识图谱，提升了响应的相关性和准确性。用户无需自行搭建和维护搜索基础设施，即可让智能体检索最新事实并执行相应操作，满足企业治理要求。该功能已在美国东部（弗吉尼亚北部）区域上线，按查询次数计费，支持多种API和开发工具调用。",
+        "whyItMatters": "该功能使AI智能体能够实时访问最新的网络信息和验证事实，突破了传统模型仅依赖训练数据的限制，提升了智能体的实用性和可信度。同时，数据安全和合规性得到保障，适合企业级应用，推动AI智能体在科研、网络安全等领域的落地。",
+        "valueChainImpact": [
+          "模型与平台：增强AI模型的实时信息获取能力",
+          "云服务：提升AWS在AI智能体市场的竞争力",
+          "企业应用：支持科学研究和网络安全等行业的智能化升级",
+          "开发工具：提供丰富API和调试工具，降低开发门槛"
+        ],
+        "uncertainties": [
+          "目前仅在美国东部区域上线，其他区域的可用性和性能未知",
+          "实际应用中对不同类型查询的响应质量和速度尚需验证",
+          "定价策略对大规模使用的成本影响需进一步观察"
+        ],
+        "confidence": "high"
       }
     },
     {
@@ -1746,7 +1875,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/proactively-reduce-tech-debt-autonomously-with-aws-transform-continuous-modernization-preview/",
       "publishedAt": "2026-06-17T14:58:00.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "数据中心与电力"
       ],
@@ -1781,7 +1910,7 @@
       "titleZh": null,
       "url": "https://newsroom.intel.com/corporate/intel-advances-growth-in-ai-era-2025-2026-csr-report",
       "publishedAt": "2026-06-17T14:00:20.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "模型与平台"
       ],
@@ -1811,7 +1940,7 @@
       "titleZh": null,
       "url": "https://newsroom.intel.com/intel-foundry/intel-foundry-details-process-milestones-future-innovation-at-vlsi-symposium",
       "publishedAt": "2026-06-16T21:00:23.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "半导体制造"
       ],
@@ -1846,7 +1975,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/06/16/achieving-success-with-ai/",
       "publishedAt": "2026-06-16T15:00:02.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "半导体制造",
         "企业应用与生产力"
@@ -1885,7 +2014,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/aws-waf-adds-ai-traffic-monetization-capability-to-help-content-owners-charge-ai-bots-for-content-access/",
       "publishedAt": "2026-06-15T20:42:13.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "模型与平台"
       ],
@@ -1919,7 +2048,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/",
       "publishedAt": "2026-06-02T19:00:13.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "半导体制造",
         "企业应用与生产力",
@@ -1959,7 +2088,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/",
       "publishedAt": "2026-06-02T18:54:13.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -2002,7 +2131,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/05/21/from-ai-pilots-to-enterprise-impact-why-execution-is-the-new-differentiator/",
       "publishedAt": "2026-05-21T11:02:33.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "半导体制造",
         "模型与平台",
@@ -2039,10 +2168,10 @@
       "sourceHomepage": null,
       "sourcePriority": 110,
       "title": "Financial stability in the age of artificial intelligence: the role of algorithmic architecture",
-      "titleZh": "人工智能时代的金融稳定性：算法架构的作用",
+      "titleZh": "AI 时代的金融稳定：算法架构为何会改变风险形态",
       "url": "https://www.ecb.europa.eu/press/research-publications/resbull/2026/html/ecb.rb260521~4d8b12940b.en.html",
       "publishedAt": "2026-05-21T00:00:00.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "资本市场与金融稳定",
         "模型与平台"
@@ -2089,10 +2218,10 @@
       "sourceHomepage": null,
       "sourcePriority": 110,
       "title": "Data centre electricity use surged in 2025, even with tightening bottlenecks driving a scramble for solutions",
-      "titleZh": "国际能源署：2025年数据中心电力使用激增，瓶颈加剧推动解决方案竞赛",
+      "titleZh": "IEA：数据中心用电激增，电力瓶颈正在成为 AI 扩张约束",
       "url": "https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions",
       "publishedAt": "2026-04-16T00:00:00.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "数据中心与电力",
         "AI 算力与芯片"
@@ -2140,10 +2269,10 @@
       "sourceHomepage": null,
       "sourcePriority": 110,
       "title": "Global Economic and Financial Implications of Artificial Intelligence: Lessons from a Scenario Planning Exercise",
-      "titleZh": "人工智能的全球经济与金融影响：情景规划练习的启示",
+      "titleZh": "IMF 情景研究：AI 的全球经济与金融影响",
       "url": "https://www.imf.org/en/publications/imf-notes/issues/2026/04/03/global-economic-and-financial-implications-of-artificial-intelligence-lessons-from-a-574924",
       "publishedAt": "2026-04-03T00:00:00.000Z",
-      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "discoveredAt": "2026-07-20T15:42:51.019Z",
       "topics": [
         "企业应用与生产力",
         "资本市场与金融稳定",

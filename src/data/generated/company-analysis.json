@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T14:16:02.204Z",
-  "provider": "unconfigured",
+  "generatedAt": "2026-07-20T14:19:43.900Z",
+  "provider": "github-models",
   "model": "openai/gpt-4.1",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 0,
+  "completedCount": 8,
   "companies": {
     "synopsys": {
       "status": "pending",
@@ -28,11 +28,109 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "nvidia": {
-      "status": "pending",
+      "status": "ok",
       "inputHash": "23d83bd437c92503d1a8373f1757dcd9c01949337f0c979448e1bae7f7bede93",
-      "generatedAt": null,
-      "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "generatedAt": "2026-07-20T14:22:10.541Z",
+      "model": "openai/gpt-4.1",
+      "promptVersion": "company-synthesis-v2",
+      "basis": "structured-official-data",
+      "evidenceSources": [
+        {
+          "id": "filing:0001045810-26-000060",
+          "label": "8-K · 2026-07-02",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000060/nvda-20260628.htm"
+        },
+        {
+          "id": "filing:0001045810-26-000056",
+          "label": "8-K · 2026-06-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000056/nvda-20260624.htm"
+        },
+        {
+          "id": "filing:0001193125-26-275783",
+          "label": "8-K · 2026-06-18",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119312526275783/d48176d8k.htm"
+        },
+        {
+          "id": "filing:0001045810-26-000052",
+          "label": "10-Q · 2026-05-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm"
+        },
+        {
+          "id": "company-facts",
+          "label": "SEC Company Facts",
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json"
+        }
+      ],
+      "summary": "英伟达2027财年Q1（截至2026年4月26日）收入同比增长85.23%，净利润同比增长210.63%，资产和现金均显著提升。近期多份8-K公告已提交，但当前证据包不含披露正文，无法判断具体事项。",
+      "summaryEvidence": [
+        "company-facts",
+        "filing:0001045810-26-000052"
+      ],
+      "whatChanged": [
+        {
+          "text": "收入同比增长85.23%，净利润同比增长210.63%，资产和现金均较上一期显著提升。",
+          "evidence": [
+            "company-facts",
+            "filing:0001045810-26-000052"
+          ]
+        },
+        {
+          "text": "2026年6月至7月期间，英伟达连续提交多份8-K公告，显示近期有重要事项披露，但具体内容无法判断。",
+          "evidence": [
+            "filing:0001045810-26-000060",
+            "filing:0001045810-26-000056",
+            "filing:0001193125-26-275783"
+          ]
+        }
+      ],
+      "operatingSignals": [
+        {
+          "text": "收入和净利润大幅增长，显示公司运营表现强劲。",
+          "evidence": [
+            "company-facts",
+            "filing:0001045810-26-000052"
+          ]
+        },
+        {
+          "text": "资产和现金储备增加，反映财务状况稳健。",
+          "evidence": [
+            "company-facts",
+            "filing:0001045810-26-000052"
+          ]
+        }
+      ],
+      "valueChainImpact": [
+        {
+          "text": "业绩大幅提升可能带动上游供应链需求增加，强化英伟达在AI与半导体设计环节的主导地位。",
+          "evidence": [
+            "company-facts",
+            "filing:0001045810-26-000052"
+          ]
+        }
+      ],
+      "uncertainties": [
+        {
+          "text": "近期8-K公告具体内容未知，无法判断是否涉及重大经营、财务或战略变化。",
+          "evidence": [
+            "filing:0001045810-26-000060",
+            "filing:0001045810-26-000056",
+            "filing:0001193125-26-275783"
+          ]
+        },
+        {
+          "text": "无法确认业绩增长的具体驱动因素（如产品、市场、客户结构等）。",
+          "evidence": [
+            "company-facts",
+            "filing:0001045810-26-000052"
+          ]
+        }
+      ],
+      "questionsToWatch": [
+        "近期8-K公告是否涉及重大并购、管理层变动或战略调整？",
+        "业绩增长是否可持续，主要驱动力是什么？",
+        "下游客户需求和上游供应链是否出现结构性变化？"
+      ],
+      "confidence": "medium"
     },
     "amd": {
       "status": "pending",
@@ -42,11 +140,127 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "broadcom": {
-      "status": "pending",
+      "status": "ok",
       "inputHash": "9d9e70f66b9ae52c3ea9dfd2d1cd2ec3a6cceaddaa4cb0d6fa8e25cff36a7a84",
-      "generatedAt": null,
-      "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "generatedAt": "2026-07-20T14:22:00.921Z",
+      "model": "openai/gpt-4.1",
+      "promptVersion": "company-synthesis-v2",
+      "basis": "structured-official-data",
+      "evidenceSources": [
+        {
+          "id": "filing:0001193125-26-295589",
+          "label": "8-K · 2026-07-06",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526295589/d84378d8k.htm"
+        },
+        {
+          "id": "filing:0001193125-26-275077",
+          "label": "8-K · 2026-06-18",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526275077/d149683d8k.htm"
+        },
+        {
+          "id": "filing:0001193125-26-266777",
+          "label": "8-K · 2026-06-11",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526266777/d152717d8k.htm"
+        },
+        {
+          "id": "filing:0001730168-26-000054",
+          "label": "10-Q · 2026-06-09",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
+        },
+        {
+          "id": "company-facts",
+          "label": "SEC Company Facts",
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001730168.json"
+        }
+      ],
+      "summary": "博通2026年Q2财报显示，公司收入同比大幅增长47.87%，资产和现金均实现环比提升，资本开支大幅增加，但净利润同比大幅下降。近期多份8-K披露，但当前证据包不含披露正文，无法判断具体事项。",
+      "summaryEvidence": [
+        "filing:0001730168-26-000054",
+        "company-facts"
+      ],
+      "whatChanged": [
+        {
+          "text": "2026年Q2收入同比增长47.87%，达到221.87亿美元。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "2026年Q2资产环比增长5.45%，至1791.58亿美元。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "2026年Q2现金及等价物环比增长38.48%，至196.28亿美元。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "2026年Q2资本开支同比增长97.13%，至4.81亿美元。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "operatingSignals": [
+        {
+          "text": "收入和现金流大幅提升，显示业务扩张或市场需求增长。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "资本开支大幅增加，可能反映产能扩张或新项目投入。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "净利润大幅下滑，需关注成本结构或一次性事项影响。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "valueChainImpact": [
+        {
+          "text": "资本开支增加可能带动上游设备、材料供应链需求。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "收入增长有望提升下游客户信心及合作意愿。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "uncertainties": [
+        {
+          "text": "近期8-K公告内容不明，无法判断是否涉及重大事项或风险。",
+          "evidence": [
+            "filing:0001193125-26-295589",
+            "filing:0001193125-26-275077",
+            "filing:0001193125-26-266777"
+          ]
+        },
+        {
+          "text": "净利润大幅下滑的具体原因不明，可能涉及成本、费用、一次性事项等。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "questionsToWatch": [
+        "近期8-K公告是否披露重大交易、诉讼或管理层变动？",
+        "净利润下滑的具体原因及后续影响如何？",
+        "资本开支增加对应的产能扩张或新业务进展如何？",
+        "收入增长是否具有可持续性？"
+      ],
+      "confidence": "medium"
     },
     "mediatek": {
       "status": "unavailable",
@@ -56,11 +270,103 @@
       "reason": "Source status: manual"
     },
     "asml": {
-      "status": "pending",
+      "status": "ok",
       "inputHash": "22b8c0edf60d86f8bb0e4c959130ee5c19bddb92ba16923d52d9ff4b63812da7",
-      "generatedAt": null,
-      "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "generatedAt": "2026-07-20T14:20:27.373Z",
+      "model": "openai/gpt-4.1",
+      "promptVersion": "company-synthesis-v2",
+      "basis": "structured-official-data",
+      "evidenceSources": [
+        {
+          "id": "filing:0001628280-26-048235",
+          "label": "6-K · 2026-07-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026048235/form6-kquarterlyfilings.htm"
+        },
+        {
+          "id": "filing:0001628280-26-026703",
+          "label": "6-K · 2026-04-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026026703/form6-kagmdisclosureofagmr.htm"
+        },
+        {
+          "id": "filing:0001628280-26-025147",
+          "label": "6-K · 2026-04-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026025147/form6-kquarterlyfilings.htm"
+        },
+        {
+          "id": "filing:0001628280-26-016671",
+          "label": "6-K · 2026-03-11",
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026016671/form6-kagm.htm"
+        },
+        {
+          "id": "company-facts",
+          "label": "SEC Company Facts",
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000937966.json"
+        }
+      ],
+      "summary": "阿斯麦2025年财务表现显著提升，收入和净利润均实现两位数增长，资产规模扩大，现金流稳定，但资本支出同比下降。近期公告仅有元数据，无法判断具体运营或战略事项。",
+      "summaryEvidence": [
+        "company-facts"
+      ],
+      "whatChanged": [
+        {
+          "text": "2025年收入同比增长15.58%，净利润同比增长26.91%，资产同比增长4.07%，现金同比增长1.41%，资本支出同比下降23.88%。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "operatingSignals": [
+        {
+          "text": "收入和净利润大幅提升，显示核心业务需求强劲。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "资本支出减少，可能反映扩产节奏调整或投资结构变化。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "valueChainImpact": [
+        {
+          "text": "阿斯麦业绩增长有望带动下游晶圆厂扩产及上游材料、零部件需求提升。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "资本支出下降或影响供应链设备订单节奏。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "uncertainties": [
+        {
+          "text": "近期公告仅有元数据，无法判断具体运营、订单、技术进展或地缘政策影响。",
+          "evidence": [
+            "filing:0001628280-26-048235",
+            "filing:0001628280-26-026703",
+            "filing:0001628280-26-025147",
+            "filing:0001628280-26-016671"
+          ]
+        },
+        {
+          "text": "资本支出下降背后原因及对未来产能和技术布局影响不明。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "questionsToWatch": [
+        "资本支出下降是否影响未来产能扩张和技术升级？",
+        "近期公告中是否有重大运营、订单或政策变化？",
+        "下游客户需求是否持续强劲？",
+        "地缘政治因素对阿斯麦业务有无新影响？"
+      ],
+      "confidence": "medium"
     },
     "applied-materials": {
       "status": "pending",
@@ -84,11 +390,88 @@
       "reason": "Source status: manual"
     },
     "tsmc": {
-      "status": "pending",
+      "status": "ok",
       "inputHash": "22e08f9e53976b28abd5dff6a2816b1ea37f1a3a628782231fe0593dcbae1ea2",
-      "generatedAt": null,
-      "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "generatedAt": "2026-07-20T14:20:19.263Z",
+      "model": "openai/gpt-4.1",
+      "promptVersion": "company-synthesis-v2",
+      "basis": "structured-official-data",
+      "evidenceSources": [
+        {
+          "id": "filing:0001046179-26-000451",
+          "label": "6-K · 2026-07-16",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000451/tsm-20260716x6k.htm"
+        },
+        {
+          "id": "filing:0001046179-26-000447",
+          "label": "6-K · 2026-07-13",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000447/tsm-revenue20260713.htm"
+        },
+        {
+          "id": "filing:0001046179-26-000381",
+          "label": "6-K · 2026-07-02",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000381/a20260702changeofaztreasur.htm"
+        },
+        {
+          "id": "filing:0001046179-26-000377",
+          "label": "6-K · 2026-06-25",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000377/tsm-monthend6kx20260625.htm"
+        },
+        {
+          "id": "company-facts",
+          "label": "SEC Company Facts",
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001046179.json"
+        }
+      ],
+      "summary": "台积电2024年度营收、净利润、资产和现金均实现显著增长。当前证据包仅含财务数据和公告元数据，无法判断最新公告具体内容。",
+      "summaryEvidence": [
+        "company-facts",
+        "filing:0001046179-26-000451",
+        "filing:0001046179-26-000447",
+        "filing:0001046179-26-000381",
+        "filing:0001046179-26-000377"
+      ],
+      "whatChanged": [
+        {
+          "text": "2024年营收同比增长25.03%，净利润同比增长27.01%，资产同比增长12.96%，现金同比增长45.19%。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "operatingSignals": [
+        {
+          "text": "财务表现强劲，显示台积电运营能力提升。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "valueChainImpact": [
+        {
+          "text": "台积电业绩增长可能带动上游材料、设备供应商需求增加，并增强下游客户供应保障。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "uncertainties": [
+        {
+          "text": "当前证据包不含披露正文，无法判断最新公告具体事项、业务进展、风险或战略调整。",
+          "evidence": [
+            "filing:0001046179-26-000451",
+            "filing:0001046179-26-000447",
+            "filing:0001046179-26-000381",
+            "filing:0001046179-26-000377"
+          ]
+        }
+      ],
+      "questionsToWatch": [
+        "最新公告是否涉及重大投资、产能扩张或战略调整？",
+        "是否有新技术节点量产或客户结构变化？",
+        "近期是否披露风险因素或行业挑战？"
+      ],
+      "confidence": "medium"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -119,11 +502,88 @@
       "reason": "Source status: unconfigured"
     },
     "ase-technology": {
-      "status": "pending",
+      "status": "ok",
       "inputHash": "057d7ee276529fbca4d06e2ad39f400e7fcafc4af5f0890ea2674d36a0ec461b",
-      "generatedAt": null,
-      "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "generatedAt": "2026-07-20T14:21:15.407Z",
+      "model": "openai/gpt-4.1",
+      "promptVersion": "company-synthesis-v2",
+      "basis": "structured-official-data",
+      "evidenceSources": [
+        {
+          "id": "filing:0000950103-26-010427",
+          "label": "6-K · 2026-07-09",
+          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326010427/dp249884_6k.htm"
+        },
+        {
+          "id": "filing:0000950103-26-008681",
+          "label": "6-K · 2026-06-09",
+          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326008681/dp248155_6k.htm"
+        },
+        {
+          "id": "filing:0000950103-26-006979",
+          "label": "6-K · 2026-05-08",
+          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326006979/dp246487_6k.htm"
+        },
+        {
+          "id": "filing:0000950103-26-006340",
+          "label": "6-K · 2026-04-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326006340/dp245879_6k.htm"
+        },
+        {
+          "id": "company-facts",
+          "label": "SEC Company Facts",
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001122411.json"
+        }
+      ],
+      "summary": "日月光投控2025年度营收、净利润、资产和现金均实现显著增长。最新披露的多份6-K文件仅提供元数据，无法判断具体运营或重大事项。公司在半导体封装领域表现出较强增长势头。",
+      "summaryEvidence": [
+        "company-facts",
+        "filing:0000950103-26-010427",
+        "filing:0000950103-26-008681",
+        "filing:0000950103-26-006979",
+        "filing:0000950103-26-006340"
+      ],
+      "whatChanged": [
+        {
+          "text": "2025年营收同比增长13.3%，净利润同比增长27.34%，资产同比增长25.46%，现金同比增长20.89%。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "operatingSignals": [
+        {
+          "text": "公司财务指标持续向好，显示经营状况稳健。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "valueChainImpact": [
+        {
+          "text": "封装环节业绩提升，可能带动上游材料、设备需求及下游客户供应能力增强。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "uncertainties": [
+        {
+          "text": "当前证据包不含披露正文，无法判断最新6-K文件具体涉及的运营、战略或重大事项。",
+          "evidence": [
+            "filing:0000950103-26-010427",
+            "filing:0000950103-26-008681",
+            "filing:0000950103-26-006979",
+            "filing:0000950103-26-006340"
+          ]
+        }
+      ],
+      "questionsToWatch": [
+        "最新6-K文件是否披露重大投资、并购或业务调整？",
+        "公司2026年业绩能否延续增长势头？",
+        "封装业务扩张对供应链及客户结构有何影响？"
+      ],
+      "confidence": "medium"
     },
     "amkor": {
       "status": "pending",
@@ -161,11 +621,109 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "equinix": {
-      "status": "pending",
+      "status": "ok",
       "inputHash": "e80ff1063f9d034cebedf89d001ad4988181d47da4385e12bfa7ec73f0a2cc33",
-      "generatedAt": null,
-      "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "generatedAt": "2026-07-20T14:20:48.782Z",
+      "model": "openai/gpt-4.1",
+      "promptVersion": "company-synthesis-v2",
+      "basis": "structured-official-data",
+      "evidenceSources": [
+        {
+          "id": "filing:0001101239-26-000131",
+          "label": "8-K · 2026-07-14",
+          "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000131/eqix-20260708.htm"
+        },
+        {
+          "id": "filing:0001101239-26-000109",
+          "label": "8-K · 2026-05-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000109/eqix-20260513.htm"
+        },
+        {
+          "id": "filing:0001101239-26-000095",
+          "label": "8-K · 2026-05-11",
+          "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000095/eqix-20260505.htm"
+        },
+        {
+          "id": "filing:0001104659-26-057167",
+          "label": "8-K · 2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110465926057167/tm2613784d1_8k.htm"
+        },
+        {
+          "id": "company-facts",
+          "label": "SEC Company Facts",
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001101239.json"
+        }
+      ],
+      "summary": "Equinix近期财务表现稳健，2026年Q1收入同比增长9.84%，净利润同比增长20.99%，资产小幅提升，现金储备有所下降。近期多份8-K公告披露，但当前证据包不含公告正文，无法判断具体事项。公司处于AI基础设施赛道，财务数据显示业务扩张和盈利能力增强。",
+      "summaryEvidence": [
+        "company-facts",
+        "filing:0001101239-26-000131",
+        "filing:0001101239-26-000109",
+        "filing:0001101239-26-000095",
+        "filing:0001104659-26-057167"
+      ],
+      "whatChanged": [
+        {
+          "text": "2026年Q1收入较去年同期增长9.84%，净利润增长20.99%，资产增加1.89%，现金储备下降21.13%。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "2026年5月至7月期间，公司连续披露多份8-K公告，显示近期有重要事项发生，但具体内容无法判断。",
+          "evidence": [
+            "filing:0001101239-26-000131",
+            "filing:0001101239-26-000109",
+            "filing:0001101239-26-000095",
+            "filing:0001104659-26-057167"
+          ]
+        }
+      ],
+      "operatingSignals": [
+        {
+          "text": "收入和净利润持续增长，显示业务扩张和盈利能力提升。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "现金储备下降，可能反映资本支出或其他运营资金需求增加。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "valueChainImpact": [
+        {
+          "text": "作为AI基础设施企业，Equinix的业务扩张可能带动数据中心、半导体、网络设备等上下游需求。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "uncertainties": [
+        {
+          "text": "近期8-K公告具体内容未知，无法判断是否涉及重大交易、管理变动或其他影响事项。",
+          "evidence": [
+            "filing:0001101239-26-000131",
+            "filing:0001101239-26-000109",
+            "filing:0001101239-26-000095",
+            "filing:0001104659-26-057167"
+          ]
+        },
+        {
+          "text": "现金储备下降原因不明，可能涉及投资、偿债或其他运营事项。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "questionsToWatch": [
+        "近期8-K公告是否涉及重大交易、管理层变动或战略调整？",
+        "现金储备下降是否影响公司未来运营和扩张？",
+        "AI基础设施业务扩张是否持续带动上下游产业链？"
+      ],
+      "confidence": "medium"
     },
     "microsoft": {
       "status": "pending",
@@ -182,11 +740,104 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "amazon": {
-      "status": "pending",
+      "status": "ok",
       "inputHash": "38fb8849a978858c63875a8a93f87c7df2acf925efc47e5363f08ec34705da46",
-      "generatedAt": null,
-      "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "generatedAt": "2026-07-20T14:21:44.762Z",
+      "model": "openai/gpt-4.1",
+      "promptVersion": "company-synthesis-v2",
+      "basis": "structured-official-data",
+      "evidenceSources": [
+        {
+          "id": "filing:0001104659-26-082293",
+          "label": "8-K · 2026-07-09",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926082293/tm2619352d4_8k.htm"
+        },
+        {
+          "id": "filing:0001104659-26-073562",
+          "label": "8-K · 2026-06-12",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926073562/tm2613616d5_8k.htm"
+        },
+        {
+          "id": "filing:0001104659-26-072140",
+          "label": "8-K · 2026-06-10",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926072140/tm2613616d4_8k.htm"
+        },
+        {
+          "id": "filing:0001104659-26-065717",
+          "label": "8-K · 2026-05-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926065717/tm2614288d1_8k.htm"
+        },
+        {
+          "id": "company-facts",
+          "label": "SEC Company Facts",
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json"
+        }
+      ],
+      "summary": "亚马逊2026年Q1财务表现显著提升，收入、净利润、资产和现金均实现两位数增长。近期有多份8-K公告，但当前证据包仅含元数据，无法判断具体运营或战略事项。",
+      "summaryEvidence": [
+        "company-facts",
+        "filing:0001104659-26-082293",
+        "filing:0001104659-26-073562",
+        "filing:0001104659-26-072140",
+        "filing:0001104659-26-065717"
+      ],
+      "whatChanged": [
+        {
+          "text": "2026年Q1收入同比增长16.61%，净利润同比增长76.65%，资产同比增长12.05%，现金同比增长17.29%。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "2026年5月至7月期间新增多份8-K公告，显示公司近期有重要披露。",
+          "evidence": [
+            "filing:0001104659-26-082293",
+            "filing:0001104659-26-073562",
+            "filing:0001104659-26-072140",
+            "filing:0001104659-26-065717"
+          ]
+        }
+      ],
+      "operatingSignals": [
+        {
+          "text": "收入与净利润大幅提升，显示主营业务表现强劲。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "资产与现金增加，表明公司财务状况稳健。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "valueChainImpact": [
+        {
+          "text": "业绩增长可能带动云服务、物流、平台生态等上下游需求扩张。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "uncertainties": [
+        {
+          "text": "8-K公告仅有元数据，无法判断具体运营、战略、风险或重大事项内容。",
+          "evidence": [
+            "filing:0001104659-26-082293",
+            "filing:0001104659-26-073562",
+            "filing:0001104659-26-072140",
+            "filing:0001104659-26-065717"
+          ]
+        }
+      ],
+      "questionsToWatch": [
+        "近期8-K公告具体披露了哪些重大事项？",
+        "业绩增长主要驱动力是什么？",
+        "是否有新的战略调整或风险提示？",
+        "对AI与半导体产业链有何影响？"
+      ],
+      "confidence": "medium"
     },
     "meta-platforms": {
       "status": "pending",
@@ -203,11 +854,114 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "adobe": {
-      "status": "pending",
+      "status": "ok",
       "inputHash": "bcca94ee9d60d91d9225e29004753be7bb68bf5223f45a00216248f076c984c0",
-      "generatedAt": null,
-      "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "generatedAt": "2026-07-20T14:20:09.235Z",
+      "model": "openai/gpt-4.1",
+      "promptVersion": "company-synthesis-v2",
+      "basis": "structured-official-data",
+      "evidenceSources": [
+        {
+          "id": "filing:0000796343-26-000120",
+          "label": "8-K · 2026-07-17",
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000120/adbe-20260714.htm"
+        },
+        {
+          "id": "filing:0000796343-26-000112",
+          "label": "10-Q · 2026-06-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000112/adbe-20260529.htm"
+        },
+        {
+          "id": "filing:0000796343-26-000109",
+          "label": "8-K · 2026-06-11",
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000109/adbe-20260608.htm"
+        },
+        {
+          "id": "filing:0000796343-26-000101",
+          "label": "8-K · 2026-04-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000101/adbe-20260415.htm"
+        },
+        {
+          "id": "company-facts",
+          "label": "SEC Company Facts",
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000796343.json"
+        }
+      ],
+      "summary": "奥多比2026年Q2收入同比增长12.69%，净利润同比增长1.24%，资产小幅提升，现金储备下降22.32%，资本支出同比增加30.14%。最新8-K公告已披露，但当前证据包不含公告正文，无法判断具体事项。",
+      "summaryEvidence": [
+        "company-facts",
+        "filing:0000796343-26-000112",
+        "filing:0000796343-26-000120"
+      ],
+      "whatChanged": [
+        {
+          "text": "2026年Q2收入同比增长12.69%，显示业务扩张。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "净利润同比增长1.24%，盈利能力略有提升。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "现金储备较上一季度下降22.32%，可能反映投资或运营支出增加。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "资本支出同比增加30.14%，表明公司加大投资力度。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "operatingSignals": [
+        {
+          "text": "收入和资本支出增长，显示公司积极扩展业务和投资。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "现金储备下降，需关注资金流动性和未来投资能力。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "valueChainImpact": [
+        {
+          "text": "资本支出增加可能带动IT基础设施、云服务及相关半导体需求增长。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "uncertainties": [
+        {
+          "text": "最新8-K公告内容不明，无法判断是否有重大事件或战略调整。",
+          "evidence": [
+            "filing:0000796343-26-000120"
+          ]
+        },
+        {
+          "text": "现金储备下降的具体原因及后续影响未披露。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "questionsToWatch": [
+        "最新8-K公告是否涉及重大业务变动或战略调整？",
+        "现金储备下降是否影响公司未来投资与运营？",
+        "资本支出增加主要用于哪些领域？",
+        "收入增长是否可持续？"
+      ],
+      "confidence": "medium"
     },
     "salesforce": {
       "status": "pending",

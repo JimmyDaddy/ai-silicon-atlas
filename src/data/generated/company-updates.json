@@ -1,27 +1,28 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T14:13:17.521Z",
+  "generatedAt": "2026-07-20T14:15:57.499Z",
   "sources": {
     "secEdgar": {
-      "status": "ok",
+      "status": "error",
       "provider": "SEC EDGAR",
       "url": "https://www.sec.gov/edgar/sec-api-documentation",
-      "startedAt": "2026-07-20T14:13:17.522Z",
-      "completedAt": "2026-07-20T14:13:37.779Z",
-      "companyCount": 25
+      "startedAt": "2026-07-20T14:15:57.500Z",
+      "completedAt": "2026-07-20T14:16:02.034Z",
+      "companyCount": 25,
+      "error": "HTTP 403 for https://www.sec.gov/files/company_tickers.json"
     },
     "openDart": {
       "status": "unconfigured",
       "provider": "OpenDART",
       "url": "https://engopendart.fss.or.kr/",
-      "startedAt": "2026-07-20T14:13:17.554Z",
-      "completedAt": "2026-07-20T14:13:17.554Z",
+      "startedAt": "2026-07-20T14:15:57.544Z",
+      "completedAt": "2026-07-20T14:15:57.544Z",
       "companyCount": 2
     },
     "manual": {
       "status": "manual",
       "provider": "First-party IR",
-      "completedAt": "2026-07-20T14:13:17.521Z",
+      "completedAt": "2026-07-20T14:15:57.499Z",
       "companyCount": 4
     }
   },
@@ -591,7 +592,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "alphabet": {
       "status": "ok",
@@ -1119,7 +1124,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "amazon": {
       "status": "ok",
@@ -1607,8 +1616,11 @@
         ]
       },
       "warnings": [
-        "Ignored stale capex metric ending 2017-03-31"
-      ]
+        "Ignored stale capex metric ending 2017-03-31",
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "amd": {
       "status": "ok",
@@ -2175,7 +2187,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "amkor": {
       "status": "ok",
@@ -2742,7 +2758,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "applied-materials": {
       "status": "ok",
@@ -3309,7 +3329,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "arista-networks": {
       "status": "ok",
@@ -3876,7 +3900,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "arm": {
       "status": "ok",
@@ -4443,7 +4471,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "ase-technology": {
       "status": "ok",
@@ -4852,7 +4884,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "asml": {
       "status": "ok",
@@ -5341,7 +5377,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "broadcom": {
       "status": "ok",
@@ -5882,7 +5922,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "cadence": {
       "status": "ok",
@@ -6449,7 +6493,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "equinix": {
       "status": "ok",
@@ -6937,13 +6985,16 @@
         ]
       },
       "warnings": [
-        "Ignored stale capex metric ending 2018-09-30"
-      ]
+        "Ignored stale capex metric ending 2018-09-30",
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "jcet": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-07-20T14:13:17.521Z",
+      "checkedAt": "2026-07-20T14:15:57.499Z",
       "identifiers": {},
       "sourceUrl": "https://www.jcetglobal.com/",
       "latestFiling": null,
@@ -7558,12 +7609,16 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "mediatek": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-07-20T14:13:17.521Z",
+      "checkedAt": "2026-07-20T14:15:57.499Z",
       "identifiers": {},
       "sourceUrl": "https://corp.mediatek.com/investor-relations",
       "latestFiling": null,
@@ -8139,7 +8194,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "micron": {
       "status": "ok",
@@ -8745,7 +8804,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "microsoft": {
       "status": "ok",
@@ -9312,7 +9375,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "nvidia": {
       "status": "ok",
@@ -9800,8 +9867,11 @@
         ]
       },
       "warnings": [
-        "Ignored stale capex metric ending 2020-07-26"
-      ]
+        "Ignored stale capex metric ending 2020-07-26",
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "palantir": {
       "status": "ok",
@@ -10368,7 +10438,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "salesforce": {
       "status": "ok",
@@ -10935,12 +11009,16 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "samsung-electronics": {
       "status": "unconfigured",
       "provider": "OpenDART",
-      "checkedAt": "2026-07-20T14:13:17.554Z",
+      "checkedAt": "2026-07-20T14:15:57.544Z",
       "identifiers": {
         "corpCode": "00126380"
       },
@@ -11517,12 +11595,16 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "sk-hynix": {
       "status": "unconfigured",
       "provider": "OpenDART",
-      "checkedAt": "2026-07-20T14:13:17.554Z",
+      "checkedAt": "2026-07-20T14:15:57.544Z",
       "identifiers": {
         "corpCode": "00164779"
       },
@@ -11537,7 +11619,7 @@
     "smic": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-07-20T14:13:17.521Z",
+      "checkedAt": "2026-07-20T14:15:57.499Z",
       "identifiers": {},
       "sourceUrl": "https://www.smics.com/en/site/company",
       "latestFiling": null,
@@ -12113,7 +12195,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "synopsys": {
       "status": "ok",
@@ -12680,12 +12766,16 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "tokyo-electron": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-07-20T14:13:17.521Z",
+      "checkedAt": "2026-07-20T14:15:57.499Z",
       "identifiers": {},
       "sourceUrl": "https://www.tel.com/ir/",
       "latestFiling": null,
@@ -13051,7 +13141,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     },
     "vertiv": {
       "status": "ok",
@@ -13618,7 +13712,11 @@
           }
         ]
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T14:15:57.499Z"
     }
   }
 }

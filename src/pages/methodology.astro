@@ -23,7 +23,7 @@ import { sitePath } from "../lib/paths";
         <article><span>01</span><h2>第一方优先</h2><p>优先使用监管披露、公司投资者关系页面和官方开放接口。二手内容仅作为发现线索。</p></article>
         <article><span>02</span><h2>时间明确</h2><p>每个指标记录报告期、披露日期与抓取时间，避免把历史关系或数据误认为当前状态。</p></article>
         <article><span>03</span><h2>失败可见</h2><p>接口失败不会静默生成空数据。系统保留上次成功快照，并明确标记过期与异常状态。</p></article>
-        <article><span>04</span><h2>事实与判断分离</h2><p>官方数据、研究关注点和风险项分别展示，不用摘要替代原始披露，不输出自动评级。</p></article>
+        <article><span>04</span><h2>事实与推断分离</h2><p>AI 分析必须引用证据 ID，明确不确定性，不用摘要替代原始披露，也不输出自动评级。</p></article>
       </div>
     </div>
   </section>
@@ -35,6 +35,7 @@ import { sitePath } from "../lib/paths";
         <a href="#sources">数据来源</a>
         <a href="#pipeline">更新流程</a>
         <a href="#metrics">指标口径</a>
+        <a href="#ai-analysis">AI 分析边界</a>
         <a href="#boundaries">内容边界</a>
       </div>
       <div class="method-body">
@@ -53,9 +54,9 @@ import { sitePath } from "../lib/paths";
         <section id="pipeline">
           <span class="section-number">02 / PIPELINE</span>
           <h2>更新流程</h2>
-          <p>定时任务运行在 GitHub Actions 中，网页端不会接触 API 密钥。抓取结果经过归一、校验和静态构建后，只有发生变化的快照才会提交。</p>
+          <p>定时任务运行在 GitHub Actions 中，网页端不会接触 API 密钥。抓取结果经过归一和历史对比后形成证据包，AI 只分析发生变化的输入；数据与分析都必须通过校验才能进入静态构建。</p>
           <div class="pipeline-flow">
-            <span>官方 API</span><i>→</i><span>标识归一</span><i>→</i><span>指标抽取</span><i>→</i><span>数据校验</span><i>→</i><span>Pages 构建</span>
+            <span>官方 API</span><i>→</i><span>标识归一</span><i>→</i><span>历史对比</span><i>→</i><span>AI 综合分析</span><i>→</i><span>证据校验</span><i>→</i><span>Pages 构建</span>
           </div>
           <a class="button" href={sitePath("/updates/")}>查看当前更新状态 <span class="arrow">→</span></a>
         </section>
@@ -63,12 +64,19 @@ import { sitePath } from "../lib/paths";
         <section id="metrics">
           <span class="section-number">03 / METRICS</span>
           <h2>指标口径</h2>
-          <p>财务快照从 XBRL 中按候选标签提取最近披露值。收入、净利润、资产、现金和资本开支可能对应不同报告期，因此页面始终同时显示报告期和表单类型。</p>
+          <p>财务快照从 XBRL 中按候选标签提取最近披露值，并保留最多 8 个历史报告期。收入、净利润、资产、现金和资本开支可能对应不同报告期，因此页面始终同时显示报告期和表单类型。</p>
           <div class="note-box"><strong>不可直接横向比较：</strong>不同公司会计准则、币种、财政年度和披露标签可能不同。本站不对自动提取值进行年化或汇率转换。</div>
         </section>
 
+        <section id="ai-analysis">
+          <span class="section-number">04 / AI ANALYSIS</span>
+          <h2>AI 分析边界</h2>
+          <p>AI 层只接收结构化官方披露、指标历史和可点击的证据来源。输出包括变化摘要、经营信号、价值链影响、不确定性和待跟踪问题，不包含买卖建议、评级、目标价或收益预测。</p>
+          <div class="note-box"><strong>可审计：</strong>每个分析点必须引用证据包中的有效 ID；模型名称、Prompt 版本、输入哈希和生成时间随结果保存。输入没有变化时不会重复生成，失败时保留上一次成功结果。</div>
+        </section>
+
         <section id="boundaries">
-          <span class="section-number">04 / BOUNDARIES</span>
+          <span class="section-number">05 / BOUNDARIES</span>
           <h2>内容与授权边界</h2>
           <p>本站不会未经授权复制付费研报、新闻全文或行情数据。公开展示实时或延迟行情通常需要供应商与交易所授权，因此默认版本不包含行情。</p>
           <div class="disclaimer">

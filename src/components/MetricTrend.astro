@@ -1,0 +1,131 @@
+---
+import { formatMetric, metricChange, type MetricSnapshot } from "../data/updates";
+
+interface Props {
+  label: string;
+  metric: MetricSnapshot;
+  history?: MetricSnapshot[];
+  accent: string;
+}
+
+const { label, metric, history = [], accent } = Astro.props;
+const chronological = [...history].reverse();
+const values = chronological.map((item) => item.value);
+const minimum = Math.min(...values);
+const maximum = Math.max(...values);
+const range = maximum - minimum || 1;
+const width = 240;
+const height = 62;
+const points = chronological.map((item, index) => {
+  const x = chronological.length === 1 ? width / 2 : (index / (chronological.length - 1)) * width;
+  const y = height - ((item.value - minimum) / range) * (height - 12) - 6;
+  return `${x.toFixed(1)},${y.toFixed(1)}`;
+}).join(" ");
+const change = metricChange(history);
+const direction = change === null ? "flat" : change > 0 ? "up" : change < 0 ? "down" : "flat";
+---
+
+<article class="metric-trend" style={`--metric-accent: ${accent}`}>
+  <div class="metric-heading">
+    <span>{label}</span>
+    {change !== null && <small class={direction}>{change > 0 ? "+" : ""}{change.toFixed(1)}%</small>}
+  </div>
+  <strong>{formatMetric(metric)}</strong>
+  <p>{metric.periodEnd} · {metric.form}{metric.fiscalPeriod ? ` · ${metric.fiscalPeriod}` : ""}</p>
+  {chronological.length > 1 && (
+    <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${label}最近 ${chronological.length} 个披露期趋势`}>
+      <line x1="0" y1={height - 6} x2={width} y2={height - 6}></line>
+      <polyline points={points}></polyline>
+      {chronological.map((item, index) => {
+        const [x, y] = points.split(" ")[index].split(",");
+        return <circle cx={x} cy={y} r="2.4"><title>{item.periodEnd} · {formatMetric(item)}</title></circle>;
+      })}
+    </svg>
+  )}
+</article>
+
+<style>
+  .metric-trend {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    display: grid;
+    min-height: 12rem;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .metric-trend::before {
+    background: var(--metric-accent);
+    content: "";
+    height: 1px;
+    left: 1rem;
+    opacity: 0.7;
+    position: absolute;
+    right: 72%;
+    top: 0;
+  }
+
+  .metric-heading {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .metric-heading > span,
+  .metric-trend > p {
+    color: var(--text-dim);
+    font-size: 0.58rem;
+  }
+
+  .metric-heading small {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    padding: 0.18rem 0.35rem;
+  }
+
+  .metric-heading small.up { color: var(--mint); }
+  .metric-heading small.down { color: var(--rose); }
+
+  .metric-trend > strong {
+    align-self: center;
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 500;
+    margin-top: 0.8rem;
+  }
+
+  .metric-trend > p {
+    margin: 0.25rem 0 0.8rem;
+  }
+
+  svg {
+    height: 3.9rem;
+    margin-top: auto;
+    overflow: visible;
+    width: 100%;
+  }
+
+  line {
+    stroke: var(--line);
+    stroke-width: 1;
+  }
+
+  polyline {
+    fill: none;
+    stroke: var(--metric-accent);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+  }
+
+  circle {
+    fill: var(--surface);
+    stroke: var(--metric-accent);
+    stroke-width: 1.4;
+  }
+</style>
+

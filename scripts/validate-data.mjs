@@ -34,9 +34,27 @@ for (const slug of Object.keys(identifiers)) {
     }
   }
 
+  if (!Array.isArray(company.recentFilings)) errors.push(`${slug}.recentFilings must be an array`);
+  if (company.latestFiling && company.recentFilings?.[0]?.accessionNumber !== company.latestFiling.accessionNumber) {
+    errors.push(`${slug}.latestFiling does not match recentFilings[0]`);
+  }
+
   for (const [metricName, metric] of Object.entries(company.metrics ?? {})) {
     if (typeof metric.value !== "number") errors.push(`${slug}.${metricName} is not numeric`);
     if (!metric.periodEnd) errors.push(`${slug}.${metricName} has no periodEnd`);
+    const history = company.metricHistory?.[metricName];
+    if (!Array.isArray(history) || !history.length) errors.push(`${slug}.${metricName} has no history`);
+    if (history?.[0]?.periodEnd !== metric.periodEnd) warnings.push(`${slug}.${metricName} latest history period differs from snapshot`);
+  }
+
+  for (const [metricName, periods] of Object.entries(company.metricHistory ?? {})) {
+    if (!Array.isArray(periods) || periods.length > 8) errors.push(`${slug}.${metricName} has invalid history length`);
+    for (let index = 0; index < periods.length; index += 1) {
+      if (typeof periods[index].value !== "number") errors.push(`${slug}.${metricName}[${index}] is not numeric`);
+      if (index > 0 && periods[index - 1].periodEnd < periods[index].periodEnd) {
+        errors.push(`${slug}.${metricName} history is not newest-first`);
+      }
+    }
   }
 }
 

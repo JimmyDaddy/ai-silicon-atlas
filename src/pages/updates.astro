@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { analysisSnapshot, analysisStatusLabel, getCompanyAnalysis } from "../data/analysis";
 import { companies } from "../data/companies";
 import { dataSnapshot, formatDate, getCompanyUpdate } from "../data/updates";
 import { sitePath } from "../lib/paths";
@@ -14,13 +15,18 @@ interface SourceStatus {
 }
 
 const sources = Object.values(dataSnapshot.sources as Record<string, SourceStatus>);
-const companyUpdates = companies.map((company) => ({ company, update: getCompanyUpdate(company.slug) }));
+const companyUpdates = companies.map((company) => ({ company, update: getCompanyUpdate(company.slug), analysis: getCompanyAnalysis(company.slug) }));
 const recentFilings = companyUpdates
   .filter((item) => item.update?.latestFiling)
   .sort((left, right) => (right.update?.latestFiling?.filedAt ?? "").localeCompare(left.update?.latestFiling?.filedAt ?? ""))
   .slice(0, 12);
 const statusCounts = companyUpdates.reduce<Record<string, number>>((counts, item) => {
   const status = item.update?.status ?? "pending";
+  counts[status] = (counts[status] ?? 0) + 1;
+  return counts;
+}, {});
+const analysisCounts = companyUpdates.reduce<Record<string, number>>((counts, item) => {
+  const status = item.analysis?.status ?? "pending";
   counts[status] = (counts[status] ?? 0) + 1;
   return counts;
 }, {});
@@ -34,7 +40,7 @@ const statusCounts = companyUpdates.reduce<Record<string, number>>((counts, item
         <h1 class="display-title">数据如何<br /><em>保持更新</em></h1>
       </div>
       <div>
-        <p class="page-kicker">GitHub Actions 每天拉取官方披露，完成标识归一、指标抽取、数据校验和静态站点重建。</p>
+        <p class="page-kicker">GitHub Actions 每天拉取官方披露，完成标识归一、指标抽取、AI 综合分析、证据校验和静态站点重建。</p>
         <div class="page-meta">
           <span><i></i>最新快照 {formatDate(dataSnapshot.generatedAt)}</span>
           <span>Schema v{dataSnapshot.schemaVersion}</span>
@@ -60,6 +66,16 @@ const statusCounts = companyUpdates.reduce<Record<string, number>>((counts, item
             {source.url ? <a href={source.url} target="_blank" rel="noreferrer">打开数据源 ↗</a> : <span class="manual-tag">仓库内维护</span>}
           </article>
         ))}
+        <article class={`source-status status-${analysisSnapshot.completedCount > 0 ? "ok" : "unconfigured"}`}>
+          <div class="source-head"><i></i><span>{analysisSnapshot.provider.toUpperCase()}</span></div>
+          <h2>AI Synthesis</h2>
+          <p>{analysisSnapshot.completedCount} 家公司已生成 · 模型 {analysisSnapshot.model ?? "等待首次运行"}</p>
+          <span class="manual-tag">Prompt {analysisSnapshot.promptVersion}</span>
+        </article>
+      </div>
+      <div class="analysis-coverage">
+        <div><span>AI 分析覆盖</span><strong>{analysisCounts.ok ?? 0}<small> / {companies.length}</small></strong></div>
+        <p>只有证据包发生变化时才重新调用模型；结果必须通过结构和证据引用校验，失败时保留上一次成功分析。</p>
       </div>
     </div>
   </section>
@@ -94,9 +110,10 @@ const statusCounts = companyUpdates.reduce<Record<string, number>>((counts, item
         <ol>
           <li><span>01</span><div><strong>Fetch</strong><small>请求官方 API 与披露</small></div></li>
           <li><span>02</span><div><strong>Normalize</strong><small>统一公司标识和字段</small></div></li>
-          <li><span>03</span><div><strong>Validate</strong><small>检查时间、指标和链接</small></div></li>
-          <li><span>04</span><div><strong>Commit</strong><small>只提交发生变化的快照</small></div></li>
-          <li><span>05</span><div><strong>Deploy</strong><small>重新构建 GitHub Pages</small></div></li>
+          <li><span>03</span><div><strong>Synthesize</strong><small>基于变化证据生成 AI 综合分析</small></div></li>
+          <li><span>04</span><div><strong>Validate</strong><small>检查时间、指标、链接和证据引用</small></div></li>
+          <li><span>05</span><div><strong>Commit</strong><small>提交数据与分析快照</small></div></li>
+          <li><span>06</span><div><strong>Deploy</strong><small>重新构建 GitHub Pages</small></div></li>
         </ol>
         <div class="note-box"><strong>失败保护：</strong>远端接口临时失败时保留上一次成功快照并标记为过期，避免线上数据被清空。</div>
         <a class="button" href={sitePath("/methodology/")}>查看数据方法 <span class="arrow">→</span></a>
@@ -114,9 +131,9 @@ const statusCounts = companyUpdates.reduce<Record<string, number>>((counts, item
       </div>
       <div class="registry-table">
         <div class="registry-row registry-head"><span>公司</span><span>市场</span><span>方式</span><span>最后检查</span></div>
-        {companyUpdates.map(({ company, update }) => (
+        {companyUpdates.map(({ company, update, analysis }) => (
           <a class="registry-row" href={sitePath(`/companies/${company.slug}/`)}>
-            <span><strong>{company.name}</strong><small>{company.ticker}</small></span>
+            <span><strong>{company.name}</strong><small>{company.ticker} · {analysis ? analysisStatusLabel(analysis.status) : "等待 AI 分析"}</small></span>
             <span>{company.exchange}</span>
             <span class={`registry-status status-${update?.status ?? "pending"}`}><i></i>{update?.provider ?? "待生成"}</span>
             <span>{formatDate(update?.checkedAt)}</span>
@@ -157,7 +174,7 @@ const statusCounts = companyUpdates.reduce<Record<string, number>>((counts, item
   .source-grid {
     display: grid;
     gap: 0.75rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .source-status {
@@ -177,6 +194,39 @@ const statusCounts = companyUpdates.reduce<Record<string, number>>((counts, item
   .source-status p { color: var(--text-dim); font-size: 0.62rem; margin: 0; }
   .source-status a,
   .manual-tag { align-self: end; color: var(--text-muted); font-size: 0.65rem; margin-top: 1rem; text-decoration: none; }
+
+  .analysis-coverage {
+    align-items: center;
+    background: linear-gradient(110deg, rgba(99, 230, 190, 0.05), rgba(167, 139, 250, 0.04));
+    border: 1px solid var(--line);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 12rem 1fr;
+    margin-top: 0.75rem;
+    padding: 1rem 1.2rem;
+  }
+
+  .analysis-coverage > div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .analysis-coverage span,
+  .analysis-coverage p {
+    color: var(--text-dim);
+    font-size: 0.62rem;
+  }
+
+  .analysis-coverage strong {
+    color: var(--mint);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .analysis-coverage strong small { color: var(--text-dim); font-size: 0.7rem; }
+  .analysis-coverage p { line-height: 1.65; margin: 0; }
 
   .update-grid {
     display: grid;
@@ -221,12 +271,14 @@ const statusCounts = companyUpdates.reduce<Record<string, number>>((counts, item
   @media (max-width: 820px) {
     .update-grid { grid-template-columns: 1fr; }
     aside { position: static; }
+    .source-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 600px) {
     .status-summary { grid-template-columns: repeat(2, 1fr); }
     .status-summary div:nth-child(2) { border-right: 0; }
-    .source-grid { grid-template-columns: 1fr; }
+    .source-grid,
+    .analysis-coverage { grid-template-columns: 1fr; }
     .filing-row { grid-template-columns: 1.5rem 1fr 1rem; }
     .filing-meta { display: none; }
     .registry-row { grid-template-columns: 1fr 0.7fr; }

@@ -44,26 +44,30 @@ function resolveTickerMap(rawTickers) {
   );
 }
 
-function latestFiling(submissions) {
+function recentFilings(submissions, limit = 8) {
   const recent = submissions?.filings?.recent;
-  if (!recent?.form) return null;
+  if (!recent?.form) return [];
+
+  const filings = [];
 
   for (let index = 0; index < recent.form.length; index += 1) {
     if (!TRACKED_FORMS.has(recent.form[index])) continue;
     const accessionNumber = recent.accessionNumber[index];
     const primaryDocument = recent.primaryDocument[index];
     const cik = String(submissions.cik).replace(/^0+/, "");
-    return {
+    filings.push({
       form: recent.form[index],
       filedAt: recent.filingDate[index],
       reportDate: recent.reportDate[index] || null,
       accessionNumber,
       title: recent.primaryDocDescription[index] || `${recent.form[index]} filing`,
       url: `${SEC_ARCHIVES}/${cik}/${accessionNumber.replaceAll("-", "")}/${primaryDocument}`,
-    };
+    });
+
+    if (filings.length >= limit) break;
   }
 
-  return null;
+  return filings;
 }
 
 function extractMetric(companyFacts, candidates) {
@@ -139,6 +143,64 @@ function extractMetrics(companyFacts) {
   );
 }
 
+function extractMetricHistory(companyFacts, metrics, checkedAt, limit = 8) {
+  const cutoff = Date.parse(checkedAt) - 5 * 365 * 86_400_000;
+  const history = {};
+
+  for (const [name, selectedMetric] of Object.entries(metrics)) {
+    const fact = companyFacts?.facts?.[selectedMetric.taxonomy]?.[selectedMetric.tag];
+    const values = fact?.units?.[selectedMetric.unit] ?? [];
+    const selectedDuration = selectedMetric.periodStart
+      ? Date.parse(selectedMetric.periodEnd) - Date.parse(selectedMetric.periodStart)
+      : null;
+    const candidates = values
+      .filter((entry) => TRACKED_FORMS.has(entry.form) && entry.filed && entry.end)
+      .filter((entry) => Date.parse(entry.end) >= cutoff)
+      .filter((entry) => {
+        if (selectedDuration === null) return !entry.start;
+        if (!entry.start) return false;
+
+        const entryDuration = Date.parse(entry.end) - Date.parse(entry.start);
+        const sameFiscalPeriod = selectedMetric.fiscalPeriod
+          ? entry.fp === selectedMetric.fiscalPeriod
+          : true;
+        const comparableDuration = Math.abs(entryDuration - selectedDuration) <= 35 * 86_400_000;
+        return sameFiscalPeriod && comparableDuration;
+      })
+      .sort((left, right) => {
+        const periodOrder = right.end.localeCompare(left.end);
+        if (periodOrder) return periodOrder;
+
+        const leftDuration = left.start ? Date.parse(left.end) - Date.parse(left.start) : Number.POSITIVE_INFINITY;
+        const rightDuration = right.start ? Date.parse(right.end) - Date.parse(right.start) : Number.POSITIVE_INFINITY;
+        return leftDuration - rightDuration || right.filed.localeCompare(left.filed);
+      });
+
+    const periods = new Map();
+    for (const entry of candidates) {
+      if (periods.has(entry.end)) continue;
+      periods.set(entry.end, {
+        label: fact.label,
+        value: entry.val,
+        unit: selectedMetric.unit,
+        periodStart: entry.start ?? null,
+        periodEnd: entry.end,
+        filedAt: entry.filed,
+        form: entry.form,
+        fiscalYear: entry.fy ?? null,
+        fiscalPeriod: entry.fp ?? null,
+        taxonomy: selectedMetric.taxonomy,
+        tag: selectedMetric.tag,
+      });
+      if (periods.size >= limit) break;
+    }
+
+    history[name] = [...periods.values()];
+  }
+
+  return history;
+}
+
 function discardStaleMetrics(metrics, checkedAt, maxAgeDays = 730) {
   const cutoff = Date.parse(checkedAt) - maxAgeDays * 86_400_000;
   const recent = {};
@@ -177,6 +239,10 @@ export async function updateSecCompanies(companyIdentifiers) {
           provider: "SEC EDGAR",
           checkedAt,
           identifiers: { ticker },
+          latestFiling: null,
+          recentFilings: [],
+          metrics: {},
+          metricHistory: {},
           warnings: [`Ticker ${ticker} was not found in SEC company_tickers.json`],
         };
         continue;
@@ -189,6 +255,7 @@ export async function updateSecCompanies(companyIdentifiers) {
           fetchJson(`${SEC_ROOT}/api/xbrl/companyfacts/CIK${cik}.json`, { headers: secHeaders() }),
         ]);
         const normalizedMetrics = discardStaleMetrics(extractMetrics(companyFacts), checkedAt);
+        const filings = recentFilings(submissions);
 
         results[slug] = {
           status: "ok",
@@ -196,8 +263,10 @@ export async function updateSecCompanies(companyIdentifiers) {
           checkedAt,
           identifiers: { ticker, cik },
           entityName: submissions.name || match.title,
-          latestFiling: latestFiling(submissions),
+          latestFiling: filings[0] ?? null,
+          recentFilings: filings,
           metrics: normalizedMetrics.metrics,
+          metricHistory: extractMetricHistory(companyFacts, normalizedMetrics.metrics, checkedAt),
           warnings: normalizedMetrics.warnings,
         };
       } catch (error) {
@@ -206,6 +275,10 @@ export async function updateSecCompanies(companyIdentifiers) {
           provider: "SEC EDGAR",
           checkedAt,
           identifiers: { ticker, cik: cikKey(match.cik_str) },
+          latestFiling: null,
+          recentFilings: [],
+          metrics: {},
+          metricHistory: {},
           warnings: [error instanceof Error ? error.message : String(error)],
         };
       }

@@ -19,6 +19,8 @@ export interface MetricSnapshot {
   form: string;
   fiscalYear: number | null;
   fiscalPeriod: string | null;
+  taxonomy?: string;
+  tag?: string;
 }
 
 export interface CompanyUpdate {
@@ -28,7 +30,9 @@ export interface CompanyUpdate {
   stale?: boolean;
   sourceUrl?: string;
   latestFiling?: FilingSnapshot | null;
+  recentFilings?: FilingSnapshot[];
   metrics?: Record<string, MetricSnapshot>;
+  metricHistory?: Record<string, MetricSnapshot[]>;
   warnings?: string[];
 }
 
@@ -53,4 +57,9 @@ export function formatDate(value: string | null | undefined) {
     month: "2-digit",
     day: "2-digit",
   }).format(new Date(value));
+}
+
+export function metricChange(history: MetricSnapshot[] | undefined) {
+  if (!history || history.length < 2 || !history[1].value) return null;
+  return ((history[0].value - history[1].value) / Math.abs(history[1].value)) * 100;
 }

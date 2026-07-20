@@ -1,9 +1,12 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CompanyCard from "../../components/CompanyCard.astro";
+import MetricTrend from "../../components/MetricTrend.astro";
+import { analysisStatusLabel, getCompanyAnalysis } from "../../data/analysis";
 import { companies, type Company } from "../../data/companies";
+import { getCompanyProfile } from "../../data/company-profiles";
 import { stageByKey } from "../../data/stages";
-import { formatDate, formatMetric, getCompanyUpdate, type MetricSnapshot } from "../../data/updates";
+import { formatDate, getCompanyUpdate, type MetricSnapshot } from "../../data/updates";
 import { sitePath } from "../../lib/paths";
 
 export function getStaticPaths() {
@@ -12,8 +15,12 @@ export function getStaticPaths() {
 
 const { company } = Astro.props as { company: Company };
 const stage = stageByKey[company.stage];
+const profile = getCompanyProfile(company.slug);
 const update = getCompanyUpdate(company.slug);
+const analysis = getCompanyAnalysis(company.slug);
 const metrics = Object.entries(update?.metrics ?? {}) as [string, MetricSnapshot][];
+const metricHistory = update?.metricHistory ?? {};
+const recentFilings = (update?.recentFilings ?? []).slice(0, 6);
 const relatedCompanies = companies
   .filter((candidate) => candidate.stage === company.stage && candidate.slug !== company.slug)
   .slice(0, 3);
@@ -30,6 +37,13 @@ const statusCopy = {
   unconfigured: "官方接口待配置",
   error: "本次同步异常",
 };
+const analysisSections = analysis?.status === "ok" ? [
+  { key: "whatChanged", label: "发生了什么变化", points: analysis.whatChanged ?? [] },
+  { key: "operatingSignals", label: "经营与财务信号", points: analysis.operatingSignals ?? [] },
+  { key: "valueChainImpact", label: "价值链影响", points: analysis.valueChainImpact ?? [] },
+  { key: "uncertainties", label: "不确定性与边界", points: analysis.uncertainties ?? [] },
+] : [];
+const evidenceById = Object.fromEntries((analysis?.evidenceSources ?? []).map((source) => [source.id, source]));
 ---
 
 <BaseLayout title={`${company.name}（${company.ticker}）· 智芯图谱`} description={`${company.name}所属${stage.name}环节的公司研究卡、关注变量与第一方资料。`} active="companies">
@@ -75,7 +89,7 @@ const statusCopy = {
     </div>
   </section>
 
-  <section class="section company-content">
+  <section class="section company-content" style={`--company-accent: ${stage.accent}`}>
     <div class="shell">
       {metrics.length > 0 && (
         <div class="metrics-section">
@@ -88,15 +102,92 @@ const statusCopy = {
           </div>
           <div class="metrics-grid">
             {metrics.map(([key, metric]) => (
-              <article>
-                <span>{metricLabels[key] ?? metric.label}</span>
-                <strong>{formatMetric(metric)}</strong>
-                <small>{metric.periodEnd} · {metric.form}</small>
-              </article>
+              <MetricTrend
+                label={metricLabels[key] ?? metric.label ?? key}
+                metric={metric}
+                history={metricHistory[key]}
+                accent={stage.accent}
+              />
             ))}
           </div>
         </div>
       )}
+
+      <section class:list={["ai-analysis", { ready: analysis?.status === "ok" }]} style={`--analysis-accent: ${stage.accent}`}>
+        <div class="ai-analysis-head">
+          <div>
+            <span class="eyebrow">Evidence-grounded synthesis</span>
+            <h2 class="section-title">AI 综合分析</h2>
+            <p class="section-copy">仅基于结构化官方披露和历史指标，区分事实证据、产业影响与不确定性，不生成买卖建议。</p>
+          </div>
+          <div class="analysis-status">
+            <span class={`status-${analysis?.status ?? "pending"}`}><i></i>{analysis ? analysisStatusLabel(analysis.status) : "等待分析数据"}</span>
+            {analysis?.status === "ok" && <small>{analysis.model} · {analysis.confidence?.toUpperCase()} CONFIDENCE</small>}
+          </div>
+        </div>
+
+        {analysis?.status === "ok" ? (
+          <div class="analysis-body">
+            <div class="analysis-summary">
+              <span>EXECUTIVE SYNTHESIS</span>
+              <p>{analysis.summary}</p>
+              <small>生成于 {formatDate(analysis.generatedAt)} · Prompt {analysis.promptVersion}</small>
+            </div>
+            <div class="analysis-grid">
+              {analysisSections.map((section, index) => (
+                <article>
+                  <div><span>{String(index + 1).padStart(2, "0")}</span><small>{section.key.toUpperCase()}</small></div>
+                  <h3>{section.label}</h3>
+                  <ul>
+                    {section.points.map((point) => (
+                      <li>
+                        <p>{point.text}</p>
+                        {point.evidence.length > 0 && <div>{point.evidence.map((id) => evidenceById[id] ? <a href={evidenceById[id].url} target="_blank" rel="noreferrer">{evidenceById[id].label} ↗</a> : null)}</div>}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+            {(analysis.questionsToWatch?.length ?? 0) > 0 && (
+              <div class="analysis-questions">
+                <span>NEXT QUESTIONS</span>
+                <div>{analysis.questionsToWatch!.map((question, index) => <p><i>{String(index + 1).padStart(2, "0")}</i>{question}</p>)}</div>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div class="analysis-pending">
+            <span>AI LAYER / {analysis?.status?.toUpperCase() ?? "PENDING"}</span>
+            <h3>分析流水线已经就绪</h3>
+            <p>{analysis?.reason ?? "该公司会在后续分析批次中，基于最新结构化证据生成综合摘要。"}</p>
+          </div>
+        )}
+      </section>
+
+      <section class="profile-section">
+        <div class="section-head compact-head">
+          <div>
+            <span class="eyebrow">Company research profile</span>
+            <h2 class="section-title">公司研究档案</h2>
+            <p class="section-copy">把公司放回商业模式、竞争位置和上下游依赖中理解。</p>
+          </div>
+        </div>
+        <div class="profile-lead">
+          <span>BUSINESS MODEL</span>
+          <p>{profile.businessModel}</p>
+        </div>
+        <div class="profile-grid">
+          <article><span>核心能力</span><ul>{profile.moat.map((item) => <li>{item}</li>)}</ul></article>
+          <article><span>主要终端市场</span><ul>{profile.endMarkets.map((item) => <li>{item}</li>)}</ul></article>
+          <article><span>竞争参照</span><ul>{profile.competitors.map((item) => <li>{item}</li>)}</ul></article>
+          <article><span>关键依赖</span><ul>{profile.dependencies.map((item) => <li>{item}</li>)}</ul></article>
+        </div>
+        <div class="profile-questions">
+          <span>QUESTIONS TO VERIFY</span>
+          <div>{profile.questions.map((question, index) => <p><i>{String(index + 1).padStart(2, "0")}</i>{question}</p>)}</div>
+        </div>
+      </section>
 
       <div class="research-grid">
         <div class="research-main">
@@ -140,6 +231,27 @@ const statusCopy = {
           </section>
         </aside>
       </div>
+
+      {recentFilings.length > 1 && (
+        <section class="filing-timeline">
+          <div class="section-head compact-head">
+            <div>
+              <span class="eyebrow">Disclosure timeline</span>
+              <h2 class="section-title">最近官方披露</h2>
+            </div>
+          </div>
+          <div class="timeline-list">
+            {recentFilings.map((filing, index) => (
+              <a href={filing.url} target="_blank" rel="noreferrer">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div><strong>{filing.title}</strong><small>{filing.accessionNumber}</small></div>
+                <div><b>{filing.form}</b><small>{filing.filedAt}</small></div>
+                <i>↗</i>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   </section>
 
@@ -369,6 +481,353 @@ const statusCopy = {
     font-weight: 500;
   }
 
+  .ai-analysis {
+    background: linear-gradient(135deg, rgba(99, 230, 190, 0.04), rgba(167, 139, 250, 0.035));
+    border: 1px solid var(--line-strong);
+    margin-bottom: 4rem;
+    overflow: hidden;
+    padding: 1.5rem;
+    position: relative;
+  }
+
+  .ai-analysis::before {
+    background: linear-gradient(90deg, var(--analysis-accent), transparent);
+    content: "";
+    height: 1px;
+    left: 1.5rem;
+    position: absolute;
+    right: 65%;
+    top: 0;
+  }
+
+  .ai-analysis-head {
+    align-items: start;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .ai-analysis-head .section-title {
+    font-size: 2.5rem;
+    margin-top: 0.55rem;
+  }
+
+  .analysis-status {
+    align-items: flex-end;
+    display: grid;
+    gap: 0.45rem;
+    justify-items: end;
+  }
+
+  .analysis-status > span {
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--text-muted);
+    display: flex;
+    font-size: 0.62rem;
+    gap: 0.45rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .analysis-status i {
+    background: var(--amber);
+    border-radius: 50%;
+    height: 0.35rem;
+    width: 0.35rem;
+  }
+
+  .analysis-status .status-ok i {
+    background: var(--mint);
+    box-shadow: 0 0 10px rgba(99, 230, 190, 0.7);
+  }
+
+  .analysis-status .status-error i { background: var(--rose); }
+
+  .analysis-status small {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.48rem;
+  }
+
+  .analysis-body {
+    margin-top: 2rem;
+  }
+
+  .analysis-summary {
+    border-left: 1px solid var(--analysis-accent);
+    max-width: 56rem;
+    padding: 0.2rem 0 0.2rem 1.1rem;
+  }
+
+  .analysis-summary > span,
+  .analysis-questions > span,
+  .profile-lead > span,
+  .profile-questions > span {
+    color: var(--analysis-accent, var(--company-accent));
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .analysis-summary p {
+    color: var(--text-strong);
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.55;
+    margin: 0.7rem 0;
+  }
+
+  .analysis-summary small {
+    color: var(--text-dim);
+    font-size: 0.55rem;
+  }
+
+  .analysis-grid {
+    border-left: 1px solid var(--line);
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+  }
+
+  .analysis-grid > article {
+    border-bottom: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    min-height: 17rem;
+    padding: 1.1rem;
+  }
+
+  .analysis-grid article > div:first-child {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .analysis-grid article > div:first-child span {
+    color: var(--analysis-accent);
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+  }
+
+  .analysis-grid article > div:first-child small {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.46rem;
+  }
+
+  .analysis-grid h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 2rem 0 1rem;
+  }
+
+  .analysis-grid ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .analysis-grid li {
+    border-top: 1px solid var(--line);
+    padding: 0.75rem 0;
+  }
+
+  .analysis-grid li p {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .analysis-grid li > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.5rem;
+  }
+
+  .analysis-grid li a {
+    color: var(--analysis-accent);
+    font-size: 0.5rem;
+    text-decoration: none;
+  }
+
+  .analysis-questions,
+  .profile-questions {
+    border-top: 1px solid var(--line);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .analysis-questions > div,
+  .profile-questions > div {
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 0.8rem;
+  }
+
+  .analysis-questions p,
+  .profile-questions p {
+    align-items: start;
+    color: var(--text-muted);
+    display: grid;
+    font-size: 0.68rem;
+    gap: 0.55rem;
+    grid-template-columns: 1.5rem 1fr;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .analysis-questions p i,
+  .profile-questions p i {
+    color: var(--analysis-accent, var(--company-accent));
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    font-style: normal;
+  }
+
+  .analysis-pending {
+    border: 1px dashed var(--line-strong);
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+
+  .analysis-pending > span {
+    color: var(--amber);
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+  }
+
+  .analysis-pending h3 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 1rem 0 0.6rem;
+  }
+
+  .analysis-pending p {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin: 0;
+  }
+
+  .profile-section {
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .profile-lead {
+    border-left: 1px solid var(--company-accent);
+    max-width: 52rem;
+    padding-left: 1rem;
+  }
+
+  .profile-lead p {
+    color: var(--text-strong);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    line-height: 1.55;
+    margin: 0.7rem 0 0;
+  }
+
+  .profile-grid {
+    border-left: 1px solid var(--line);
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2rem;
+  }
+
+  .profile-grid article {
+    border-bottom: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    min-height: 13rem;
+    padding: 1rem;
+  }
+
+  .profile-grid article > span {
+    color: var(--company-accent);
+    font-size: 0.65rem;
+  }
+
+  .profile-grid ul {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+  }
+
+  .profile-grid li {
+    border-top: 1px solid var(--line);
+    color: var(--text-muted);
+    font-size: 0.67rem;
+    line-height: 1.5;
+    padding: 0.65rem 0;
+  }
+
+  .filing-timeline {
+    border-top: 1px solid var(--line);
+    margin-top: 4rem;
+    padding-top: 4rem;
+  }
+
+  .timeline-list {
+    border-top: 1px solid var(--line);
+  }
+
+  .timeline-list > a {
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-muted);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 2rem 1fr auto 1rem;
+    padding: 0.9rem 0;
+    text-decoration: none;
+  }
+
+  .timeline-list > a:hover {
+    color: var(--text-strong);
+  }
+
+  .timeline-list > a > span,
+  .timeline-list > a > i {
+    color: var(--company-accent);
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    font-style: normal;
+  }
+
+  .timeline-list div {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .timeline-list div:nth-child(3) {
+    justify-items: end;
+  }
+
+  .timeline-list strong {
+    color: var(--text-strong);
+    font-size: 0.72rem;
+  }
+
+  .timeline-list b {
+    color: var(--company-accent);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 500;
+  }
+
+  .timeline-list small {
+    color: var(--text-dim);
+    font-size: 0.55rem;
+  }
+
   .research-grid {
     display: grid;
     gap: 4rem;
@@ -532,6 +991,10 @@ const statusCopy = {
     aside {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .profile-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (max-width: 700px) {
@@ -545,6 +1008,10 @@ const statusCopy = {
     }
 
     .metrics-grid,
+    .analysis-grid,
+    .analysis-questions > div,
+    .profile-grid,
+    .profile-questions > div,
     .research-main,
     .related-grid,
     aside {
@@ -553,6 +1020,23 @@ const statusCopy = {
 
     .metrics-grid article {
       min-height: 7rem;
+    }
+
+    .ai-analysis-head {
+      flex-direction: column;
+    }
+
+    .analysis-status {
+      align-items: flex-start;
+      justify-items: start;
+    }
+
+    .timeline-list > a {
+      grid-template-columns: 1.5rem 1fr 1rem;
+    }
+
+    .timeline-list div:nth-child(3) {
+      display: none;
     }
   }
 </style>

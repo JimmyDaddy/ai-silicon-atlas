@@ -25,7 +25,9 @@ function manualEntry(identifiers, checkedAt) {
     identifiers: {},
     sourceUrl: identifiers.manualSource,
     latestFiling: null,
+    recentFilings: [],
     metrics: {},
+    metricHistory: {},
     warnings: ["No automated official adapter is configured for this market yet"],
   };
 }
@@ -52,6 +54,10 @@ function missingProviderEntry(config, sources, checkedAt) {
       provider: "SEC EDGAR",
       checkedAt,
       identifiers: { ticker: config.secTicker },
+      latestFiling: null,
+      recentFilings: [],
+      metrics: {},
+      metricHistory: {},
       warnings: [sources.secEdgar.error || "SEC EDGAR returned no company result"],
     };
   }
@@ -62,6 +68,10 @@ function missingProviderEntry(config, sources, checkedAt) {
       provider: "OpenDART",
       checkedAt,
       identifiers: { corpCode: config.dartCorpCode },
+      latestFiling: null,
+      recentFilings: [],
+      metrics: {},
+      metricHistory: {},
       warnings: [sources.openDart.error || "OpenDART returned no company result"],
     };
   }
@@ -73,6 +83,10 @@ function missingProviderEntry(config, sources, checkedAt) {
     provider: "Unknown",
     checkedAt,
     identifiers: {},
+    latestFiling: null,
+    recentFilings: [],
+    metrics: {},
+    metricHistory: {},
     warnings: ["No data provider is configured for this company"],
   };
 }

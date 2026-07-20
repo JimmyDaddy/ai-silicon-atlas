@@ -17,9 +17,15 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: write
+      models: read
     env:
       DATA_CONTACT_EMAIL: ${{ vars.DATA_CONTACT_EMAIL }}
       DART_API_KEY: ${{ secrets.DART_API_KEY }}
+      GITHUB_TOKEN: ${{ github.token }}
+      AI_API_KEY: ${{ secrets.AI_API_KEY }}
+      AI_BASE_URL: ${{ vars.AI_BASE_URL }}
+      AI_MODEL: ${{ vars.AI_MODEL }}
+      AI_MAX_COMPANIES: ${{ vars.AI_MAX_COMPANIES || '8' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -34,8 +40,12 @@ jobs:
         run: npm ci
       - name: Fetch and normalize official data
         run: npm run data:update
-      - name: Validate generated snapshot
-        run: npm run data:validate
+      - name: Generate evidence-grounded AI analysis
+        run: npm run analysis:update
+      - name: Validate generated snapshots
+        run: |
+          npm run data:validate
+          npm run analysis:validate
       - name: Verify site
         run: |
           npm run check
@@ -46,14 +56,14 @@ jobs:
           path: dist
       - name: Commit refreshed snapshot
         run: |
-          if git diff --quiet -- src/data/generated/company-updates.json; then
+          if git diff --quiet -- src/data/generated/company-updates.json src/data/generated/company-analysis.json; then
             echo "No generated data changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/generated/company-updates.json
-          git commit -m "chore(data): refresh official company data"
+          git add src/data/generated/company-updates.json src/data/generated/company-analysis.json
+          git commit -m "chore(data): refresh company intelligence"
           git push
 
   deploy:

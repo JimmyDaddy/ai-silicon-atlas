@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": null,
+  "provider": "unconfigured",
+  "model": null,
+  "promptVersion": "company-synthesis-v1",
+  "completedCount": 0,
+  "companies": {
+    "synopsys": {
+      "status": "pending",
+      "inputHash": "89f6e7456884d078e8b208cae4045ddd95cf3725bb02b4edf4c78e06e792889a",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "cadence": {
+      "status": "pending",
+      "inputHash": "087d6660aebbb83fcc34f1d78b227f66994e7ad957e0f9a3e6f532d5d52ea9d7",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "arm": {
+      "status": "pending",
+      "inputHash": "f4f62ad151574382e7c230498ea7d83a7be446f4b545782c27986d06ae6aa584",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "nvidia": {
+      "status": "pending",
+      "inputHash": "a0f2896e0a4ad37983705ec785ba74e40af083697ff8d242523c6c6d1b64d51d",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "amd": {
+      "status": "pending",
+      "inputHash": "4f869e8f9212f04c8faf96b631126029e3cf118004cccad73da1bb2e869226bb",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "broadcom": {
+      "status": "pending",
+      "inputHash": "b67a49cc809f5be47f4bee4fcf7614bfec6362e221e0484428924da62863640d",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "mediatek": {
+      "status": "unavailable",
+      "inputHash": "e16ff592676ffbf0b38dd58ed122a56affb5cbfb246717a669394c96b1a1d82b",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Source status: manual"
+    },
+    "asml": {
+      "status": "pending",
+      "inputHash": "d95c0fc8a92c763edb72538a83094b55e26cd440fc10f9a4e26bfc6caccfc51f",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "applied-materials": {
+      "status": "pending",
+      "inputHash": "2e30f62eb65cdc1c80f21d85e78b75d0498bf773e8776b5d7b0c4c2acfc9a42d",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "kla": {
+      "status": "pending",
+      "inputHash": "18339baa259f0bd531c87b103687297bda87b8be96fd065a95c67fda494ca793",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "tokyo-electron": {
+      "status": "unavailable",
+      "inputHash": "e9626a94963821279fef97c52f3cce26dba665c83c994c7df53ea448c4d98958",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Source status: manual"
+    },
+    "tsmc": {
+      "status": "pending",
+      "inputHash": "069d20ad6e84b5f3dd12a8dea92e505be79e3d0521610b8436c155d5714ac50f",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "samsung-electronics": {
+      "status": "unavailable",
+      "inputHash": "8bbb1421d58c5a6235d8dd525646a2474ae7c9191c9e8229d25f7e3d179f77aa",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Source status: unconfigured"
+    },
+    "smic": {
+      "status": "unavailable",
+      "inputHash": "ea74d272d216c50049e8de20bf448bfbd0c552367c7032c3fd06e53c0e59599a",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Source status: manual"
+    },
+    "micron": {
+      "status": "pending",
+      "inputHash": "ae68367fed260b833595f45e50c2686ea1826c27c113fa917a6ed0d79aeb6f23",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "sk-hynix": {
+      "status": "unavailable",
+      "inputHash": "873dda3f1390275f1d3d727f27f25535476bd05c883e3485636b8bca869c7222",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Source status: unconfigured"
+    },
+    "ase-technology": {
+      "status": "pending",
+      "inputHash": "90cdf1d0093bf09c72d7969c197943c10e6d11f745770537821f5b297fc681e8",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "amkor": {
+      "status": "pending",
+      "inputHash": "7d3fe938deab47366766b15ff626a0bc095ea10d3a0fbbfc4f77c8ca035911b5",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "jcet": {
+      "status": "unavailable",
+      "inputHash": "862d5c5c479f3395c4653b14443c57802ca423931216aa4aef65320244420e20",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Source status: manual"
+    },
+    "arista-networks": {
+      "status": "pending",
+      "inputHash": "96a71a99d2a76cf60e64fee908856d396b73502da0b15b898dc550c612dafb72",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "vertiv": {
+      "status": "pending",
+      "inputHash": "0209156fbe0b61f59461fb0d8811671604c7b01985cbad86c6bcce007ef39546",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "supermicro": {
+      "status": "pending",
+      "inputHash": "0245661be6fab572c71233d93f01370bed9b738d54852d5c8c44336a43549f31",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "equinix": {
+      "status": "pending",
+      "inputHash": "525fbe03fa561226c8f50a05d496f5d79ccb73f839c48f828b6102256cf3d6f3",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "microsoft": {
+      "status": "pending",
+      "inputHash": "e59a8e5b3c2e8404d6a88ba45a6cb2ad02420eb5ae6dcf31039a81fdc862e745",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "alphabet": {
+      "status": "pending",
+      "inputHash": "abe4b7299df1711f9d3aa6de8479dbba7497e46b8c799f41064d6ca59caa5bcd",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "amazon": {
+      "status": "pending",
+      "inputHash": "f1c8a637923054ad2399643174c901d67ecccf81056aa823f5c227843eb56f23",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "meta-platforms": {
+      "status": "pending",
+      "inputHash": "5c1074252a927ca6fa7e11205650756c54b77403b3a2bc22f6a5c394353d0fb8",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "palantir": {
+      "status": "pending",
+      "inputHash": "c9e84268838847c1126f78c60b86adb6bbacb3087cccf668be078ebe9594566a",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "adobe": {
+      "status": "pending",
+      "inputHash": "2f3cd0197d7315f02a50a94e10fc9c42935f160e20f6c9745e5272646d558372",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "salesforce": {
+      "status": "pending",
+      "inputHash": "bfa4f96a5a4a3652445736f0b2721fa08f219ac92d9dd25d4707f6b69155352f",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    },
+    "servicenow": {
+      "status": "pending",
+      "inputHash": "bfddb2f188ec4fb8db00d377fccb18efa2c00cead51e7a005c618c9cbc98251e",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
+    }
+  }
+}

@@ -19,6 +19,10 @@ export async function updateDartCompanies(companyIdentifiers) {
         provider: "OpenDART",
         checkedAt: startedAt,
         identifiers: { corpCode: identifiers.dartCorpCode },
+        latestFiling: null,
+        recentFilings: [],
+        metrics: {},
+        metricHistory: {},
         warnings: ["DART_API_KEY is not configured"],
       };
     }
@@ -55,24 +59,24 @@ export async function updateDartCompanies(companyIdentifiers) {
       if (payload.status !== "000") {
         throw new Error(`OpenDART ${payload.status}: ${payload.message}`);
       }
-      const filing = payload.list?.[0] ?? null;
+      const recentFilings = (payload.list ?? []).slice(0, 8).map((item) => ({
+        form: item.report_nm,
+        filedAt: item.rcept_dt.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3"),
+        reportDate: null,
+        accessionNumber: item.rcept_no,
+        title: item.report_nm,
+        url: `https://dart.fss.or.kr/dsaf001/main.do?rcpNo=${item.rcept_no}`,
+      }));
       results[slug] = {
         status: "ok",
         provider: "OpenDART",
         checkedAt,
         identifiers: { corpCode: identifiers.dartCorpCode },
         entityName: filing?.corp_name ?? null,
-        latestFiling: filing
-          ? {
-              form: filing.report_nm,
-              filedAt: filing.rcept_dt.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3"),
-              reportDate: null,
-              accessionNumber: filing.rcept_no,
-              title: filing.report_nm,
-              url: `https://dart.fss.or.kr/dsaf001/main.do?rcpNo=${filing.rcept_no}`,
-            }
-          : null,
+        latestFiling: recentFilings[0] ?? null,
+        recentFilings,
         metrics: {},
+        metricHistory: {},
         warnings: [],
       };
     } catch (error) {
@@ -81,6 +85,10 @@ export async function updateDartCompanies(companyIdentifiers) {
         provider: "OpenDART",
         checkedAt,
         identifiers: { corpCode: identifiers.dartCorpCode },
+        latestFiling: null,
+        recentFilings: [],
+        metrics: {},
+        metricHistory: {},
         warnings: [error instanceof Error ? error.message : String(error)],
       };
     }

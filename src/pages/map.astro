@@ -2,8 +2,21 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CompanyCard from "../components/CompanyCard.astro";
 import { companies } from "../data/companies";
-import { stages } from "../data/stages";
+import { industryMapEdges, industryMapNodes, mapZones } from "../data/industry-map";
+import { stageByKey, stages } from "../data/stages";
 import { sitePath } from "../lib/paths";
+
+const nodeByStage = Object.fromEntries(industryMapNodes.map((node) => [node.stage, node]));
+const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof nodeByStage) => {
+  const source = nodeByStage[sourceKey];
+  const target = nodeByStage[targetKey];
+  const sourceX = source.x * 10;
+  const sourceY = source.y * 6;
+  const targetX = target.x * 10;
+  const targetY = target.y * 6;
+  const bend = (targetX - sourceX) * 0.46;
+  return `M ${sourceX} ${sourceY} C ${sourceX + bend} ${sourceY}, ${targetX - bend} ${targetY}, ${targetX} ${targetY}`;
+};
 ---
 
 <BaseLayout title="产业地图 · 智芯图谱" description="沿 AI 与半导体价值链查看芯片、基础设施、模型平台与应用环节。" active="map">
@@ -23,7 +36,108 @@ import { sitePath } from "../lib/paths";
     </div>
   </section>
 
-  <section class="map-overview section-rule">
+  <section class="map-mode-section section-rule">
+    <div class="shell">
+      <div class="map-mode-head">
+        <div>
+          <span class="eyebrow">Two ways to read the chain</span>
+          <h2>切换地图视角</h2>
+        </div>
+        <div class="map-mode-switch" role="toolbar" aria-label="产业地图视图" data-map-mode-switch>
+          <button type="button" class="active" data-map-mode="topology" aria-pressed="true">关系地图</button>
+          <button type="button" data-map-mode="directory" aria-pressed="false">环节目录</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="topology-section" data-map-view-panel="topology">
+    <div class="shell topology-layout">
+      <div class="topology-main">
+        <div class="topology-toolbar">
+          <div><i></i><span>点击节点查看上下游关系</span></div>
+          <div class="topology-legend"><span><i class="primary"></i>价值流</span><span><i class="feedback"></i>需求反馈</span></div>
+        </div>
+        <div class="topology-scroll">
+          <div class="topology-canvas" data-topology-map>
+            {mapZones.map((zone) => (
+              <div class={`map-zone zone-${zone.key}`}>
+                <span>{zone.label}</span><small>{zone.description}</small>
+              </div>
+            ))}
+            <svg class="edge-layer" viewBox="0 0 1000 600" aria-hidden="true">
+              <defs>
+                <marker id="map-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z"></path>
+                </marker>
+              </defs>
+              {industryMapEdges.map((edge) => {
+                const source = nodeByStage[edge.source];
+                const target = nodeByStage[edge.target];
+                return (
+                  <g class={`edge-group ${edge.strength}`} data-map-edge data-source={edge.source} data-target={edge.target}>
+                    <path class="edge-hit" d={mapPath(edge.source, edge.target)}></path>
+                    <path class="map-edge" d={mapPath(edge.source, edge.target)} marker-end="url(#map-arrow)"></path>
+                    {edge.strength === "primary" && (
+                      <text x={(source.x + target.x) * 5} y={(source.y + target.y) * 3 - 7}>{edge.label}</text>
+                    )}
+                  </g>
+                );
+              })}
+            </svg>
+            {industryMapNodes.map((node) => {
+              const stage = stageByKey[node.stage];
+              const count = companies.filter((company) => company.stage === node.stage).length;
+              return (
+                <button
+                  type="button"
+                  class="topology-node"
+                  style={`--node-x: ${node.x}%; --node-y: ${node.y}%; --node-accent: ${stage.accent}`}
+                  data-map-node={node.stage}
+                  aria-pressed="false"
+                >
+                  <span>{stage.index}</span>
+                  <strong>{stage.name}</strong>
+                  <small>{count} COMPANIES</small>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <aside class="topology-detail" aria-live="polite">
+        {stages.map((stage) => {
+          const stageCompanies = companies.filter((company) => company.stage === stage.key);
+          const connections = industryMapEdges.filter((edge) => edge.source === stage.key || edge.target === stage.key);
+          return (
+            <article data-map-detail={stage.key} hidden style={`--detail-accent: ${stage.accent}`}>
+              <div class="detail-index"><span>{stage.index}</span><small>{stage.nameEn}</small></div>
+              <h2>{stage.name}</h2>
+              <p>{stage.description}</p>
+              <div class="detail-signal"><small>TRACKING SIGNAL</small><strong>{stage.signal}</strong></div>
+              <div class="connection-list">
+                <small>CONNECTED FLOWS</small>
+                {connections.map((edge) => (
+                  <div>
+                    <i class={edge.strength}></i>
+                    <span>{edge.label}</span>
+                    <small>{edge.source === stage.key ? "流向下游" : "来自上游"}</small>
+                  </div>
+                ))}
+              </div>
+              <div class="detail-companies">
+                <small>REPRESENTATIVE COMPANIES</small>
+                <div>{stageCompanies.map((company) => <a href={sitePath(`/companies/${company.slug}/`)}>{company.name}<span>↗</span></a>)}</div>
+              </div>
+            </article>
+          );
+        })}
+      </aside>
+    </div>
+  </section>
+
+  <section class="map-overview section-rule" data-map-view-panel="directory" hidden>
     <div class="shell">
       <div class="flow-labels">
         <span>上游 · 芯片与制造</span>
@@ -101,6 +215,42 @@ import { sitePath } from "../lib/paths";
 </BaseLayout>
 
 <script>
+  const mapModeButtons = [...document.querySelectorAll<HTMLButtonElement>("[data-map-mode]")];
+  const mapViewPanels = [...document.querySelectorAll<HTMLElement>("[data-map-view-panel]")];
+  const topologyNodes = [...document.querySelectorAll<HTMLButtonElement>("[data-map-node]")];
+  const topologyDetails = [...document.querySelectorAll<HTMLElement>("[data-map-detail]")];
+  const topologyEdges = [...document.querySelectorAll<SVGGElement>("[data-map-edge]")];
+
+  function selectMapMode(mode: string) {
+    mapModeButtons.forEach((button) => {
+      const active = button.dataset.mapMode === mode;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+    mapViewPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.mapViewPanel !== mode;
+    });
+  }
+
+  function selectTopologyStage(stage: string) {
+    topologyNodes.forEach((node) => {
+      const active = node.dataset.mapNode === stage;
+      node.classList.toggle("active", active);
+      node.setAttribute("aria-pressed", String(active));
+    });
+    topologyDetails.forEach((detail) => {
+      detail.hidden = detail.dataset.mapDetail !== stage;
+    });
+    topologyEdges.forEach((edge) => {
+      edge.classList.toggle("active", edge.dataset.source === stage || edge.dataset.target === stage);
+      edge.classList.toggle("outgoing", edge.dataset.source === stage);
+    });
+  }
+
+  mapModeButtons.forEach((button) => button.addEventListener("click", () => selectMapMode(button.dataset.mapMode ?? "topology")));
+  topologyNodes.forEach((node) => node.addEventListener("click", () => selectTopologyStage(node.dataset.mapNode ?? "ai-infrastructure")));
+  selectTopologyStage("ai-infrastructure");
+
   const filterButtons = [...document.querySelectorAll<HTMLButtonElement>("[data-stage-filter]")];
   const stagePanels = [...document.querySelectorAll<HTMLElement>("[data-stage-panel]")];
 
@@ -141,6 +291,368 @@ import { sitePath } from "../lib/paths";
   .map-overview {
     padding: 3rem 0 4rem;
   }
+
+  [data-map-view-panel][hidden] {
+    display: none;
+  }
+
+  .map-mode-section {
+    padding: 2.2rem 0;
+  }
+
+  .map-mode-head {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .map-mode-head h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0.45rem 0 0;
+  }
+
+  .map-mode-switch {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    display: flex;
+    padding: 0.25rem;
+  }
+
+  .map-mode-switch button {
+    background: transparent;
+    border: 0;
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    padding: 0.58rem 0.9rem;
+  }
+
+  .map-mode-switch button.active {
+    background: var(--mint);
+    color: #07101d;
+  }
+
+  .topology-section {
+    padding: 2rem 0 5rem;
+  }
+
+  .topology-layout {
+    align-items: start;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr) 20rem;
+  }
+
+  .topology-main,
+  .topology-detail {
+    background: rgba(7, 16, 29, 0.62);
+    border: 1px solid var(--line);
+  }
+
+  .topology-toolbar {
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-dim);
+    display: flex;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    justify-content: space-between;
+    letter-spacing: 0.06em;
+    padding: 0.8rem 1rem;
+  }
+
+  .topology-toolbar > div,
+  .topology-legend span {
+    align-items: center;
+    display: flex;
+    gap: 0.45rem;
+  }
+
+  .topology-toolbar > div > i,
+  .topology-legend i {
+    background: var(--mint);
+    border-radius: 50%;
+    height: 0.3rem;
+    width: 0.3rem;
+  }
+
+  .topology-legend {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .topology-legend i.feedback {
+    background: var(--violet);
+  }
+
+  .topology-scroll {
+    overflow-x: auto;
+  }
+
+  .topology-canvas {
+    background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 3rem 3rem;
+    height: 37rem;
+    min-width: 62rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .topology-canvas::after {
+    background: radial-gradient(circle at 55% 45%, transparent, rgba(7, 16, 29, 0.6) 78%);
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .map-zone {
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    display: grid;
+    padding: 0.75rem;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .map-zone span {
+    color: rgba(255, 255, 255, 0.18);
+    font-family: var(--font-mono);
+    font-size: 0.54rem;
+    letter-spacing: 0.15em;
+  }
+
+  .map-zone small {
+    align-self: end;
+    color: rgba(255, 255, 255, 0.12);
+    font-size: 0.55rem;
+  }
+
+  .zone-silicon { inset: 5% 58% 6% 2%; }
+  .zone-systems { inset: 5% 20% 6% 43%; }
+  .zone-intelligence { inset: 5% 2% 6% 81%; }
+
+  .edge-layer {
+    inset: 0;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .edge-layer defs path {
+    fill: var(--text-dim);
+  }
+
+  .map-edge,
+  .edge-hit {
+    fill: none;
+  }
+
+  .map-edge {
+    opacity: 0.38;
+    stroke: var(--text-dim);
+    stroke-width: 1.4;
+    transition: opacity 160ms ease, stroke 160ms ease, stroke-width 160ms ease;
+  }
+
+  .edge-group.feedback .map-edge {
+    stroke: var(--violet);
+    stroke-dasharray: 5 6;
+  }
+
+  .edge-group.secondary .map-edge {
+    stroke-dasharray: 2 5;
+  }
+
+  .edge-group.active .map-edge {
+    opacity: 0.95;
+    stroke: var(--mint);
+    stroke-width: 2.4;
+  }
+
+  .edge-group.active.feedback .map-edge {
+    stroke: var(--violet);
+  }
+
+  .edge-hit {
+    stroke: transparent;
+    stroke-width: 14;
+  }
+
+  .edge-layer text {
+    fill: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 8px;
+    opacity: 0.55;
+    text-anchor: middle;
+  }
+
+  .edge-group.active text {
+    fill: var(--mint);
+    opacity: 1;
+  }
+
+  .topology-node {
+    background: #0b192a;
+    border: 1px solid color-mix(in srgb, var(--node-accent) 42%, var(--line));
+    border-radius: 0.75rem;
+    color: var(--text-strong);
+    display: grid;
+    left: var(--node-x);
+    min-width: 7.2rem;
+    padding: 0.7rem 0.8rem;
+    position: absolute;
+    text-align: left;
+    top: var(--node-y);
+    transform: translate(-50%, -50%);
+    transition: box-shadow 160ms ease, transform 160ms ease, background 160ms ease;
+    z-index: 5;
+  }
+
+  .topology-node::before {
+    background: var(--node-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--node-accent);
+    content: "";
+    height: 0.38rem;
+    position: absolute;
+    right: 0.7rem;
+    top: 0.7rem;
+    width: 0.38rem;
+  }
+
+  .topology-node > span,
+  .topology-node small {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.46rem;
+    letter-spacing: 0.07em;
+  }
+
+  .topology-node strong {
+    font-size: 0.78rem;
+    margin: 0.55rem 0 0.3rem;
+  }
+
+  .topology-node:hover,
+  .topology-node.active {
+    background: color-mix(in srgb, var(--node-accent) 12%, #0b192a);
+    box-shadow: 0 0 2rem color-mix(in srgb, var(--node-accent) 20%, transparent);
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+
+  .topology-detail {
+    min-height: 41.3rem;
+    padding: 1.25rem;
+    position: sticky;
+    top: 5.5rem;
+  }
+
+  .topology-detail article[hidden] {
+    display: none;
+  }
+
+  .detail-index {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .detail-index span {
+    color: var(--detail-accent);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+  }
+
+  .detail-index small,
+  .connection-list > small,
+  .detail-companies > small,
+  .detail-signal small {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.48rem;
+    letter-spacing: 0.08em;
+  }
+
+  .topology-detail h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 2.8rem 0 0.8rem;
+  }
+
+  .topology-detail article > p {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    line-height: 1.75;
+  }
+
+  .detail-signal {
+    border-left: 1px solid var(--detail-accent);
+    display: grid;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    padding-left: 0.8rem;
+  }
+
+  .detail-signal strong {
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    font-weight: 500;
+    line-height: 1.55;
+  }
+
+  .connection-list {
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+  }
+
+  .connection-list > div {
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 0.4rem 1fr auto;
+    padding: 0.65rem 0;
+  }
+
+  .connection-list i {
+    background: var(--mint);
+    border-radius: 50%;
+    height: 0.3rem;
+    width: 0.3rem;
+  }
+
+  .connection-list i.feedback { background: var(--violet); }
+  .connection-list span { color: var(--text-muted); font-size: 0.62rem; }
+  .connection-list div small { color: var(--text-dim); font-size: 0.5rem; }
+
+  .detail-companies {
+    margin-top: 1.4rem;
+  }
+
+  .detail-companies > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.7rem;
+  }
+
+  .detail-companies a {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-size: 0.55rem;
+    padding: 0.35rem 0.5rem;
+    text-decoration: none;
+  }
+
+  .detail-companies a span { color: var(--detail-accent); }
 
   .flow-labels {
     color: var(--text-dim);
@@ -362,6 +874,15 @@ import { sitePath } from "../lib/paths";
   }
 
   @media (max-width: 900px) {
+    .topology-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .topology-detail {
+      min-height: 0;
+      position: static;
+    }
+
     .stage-panel > header {
       grid-template-columns: 1fr 1fr;
     }
@@ -376,6 +897,17 @@ import { sitePath } from "../lib/paths";
   }
 
   @media (max-width: 600px) {
+    .map-mode-head {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .topology-toolbar {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
     .stage-panel > header,
     .stage-company-grid {
       grid-template-columns: 1fr;

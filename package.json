@@ -9,7 +9,9 @@
     "preview": "astro preview",
     "check": "astro check",
     "data:update": "node scripts/update-data.mjs",
-    "data:validate": "node scripts/validate-data.mjs"
+    "data:validate": "node scripts/validate-data.mjs",
+    "analysis:update": "node scripts/analyze-data.mjs",
+    "analysis:validate": "node scripts/validate-analysis.mjs"
   },
   "dependencies": {
     "astro": "^7.1.2"

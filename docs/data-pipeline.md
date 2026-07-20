@@ -46,7 +46,7 @@
 
 ## AI 综合分析
 
-默认通过 GitHub Models 的 Chat Completions 接口运行，使用 Actions 自动提供的 `GITHUB_TOKEN` 和 `models: read` 权限，默认模型为 `openai/gpt-4.1`。也可以通过 `AI_BASE_URL`、`AI_MODEL` 和 `AI_API_KEY` 切换到兼容服务。
+默认通过 GitHub Models 的 Chat Completions 接口运行，使用 Actions 自动提供的 `GITHUB_TOKEN` 和 `models: read` 权限，默认模型为低速率限制等级的 `openai/gpt-4.1-mini`。也可以通过 `AI_BASE_URL`、`AI_MODEL` 和 `AI_API_KEY` 切换到兼容服务。
 
 分析输入不包含抓取时间等易变字段，只包含公司标识、最新与最近披露、指标快照、历史变化和证据 URL。输入哈希未变化时不会再次调用模型。
 

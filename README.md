@@ -31,7 +31,7 @@ npm run analysis:validate
 
 `.github/workflows/update-data.yml` 每天定时运行数据管线，校验并构建网站，生成结果发生变化时提交数据与 AI 分析快照。SEC 建议通过仓库变量 `DATA_CONTACT_EMAIL` 配置请求联系人邮箱，OpenDART 密钥放入同名仓库 Secret。
 
-AI 默认使用 GitHub Models 和 Actions 自带的 `GITHUB_TOKEN`，工作流只需要 `models: read` 权限，不需要额外密钥。默认模型为 `openai/gpt-4.1`；如需切换兼容服务，可配置：
+AI 默认使用 GitHub Models 和 Actions 自带的 `GITHUB_TOKEN`，工作流只需要 `models: read` 权限，不需要额外密钥。默认模型为低延迟、免费额度更适合定时批处理的 `openai/gpt-4.1-mini`；如需切换兼容服务，可配置：
 
 - 仓库变量 `AI_BASE_URL`
 - 仓库变量 `AI_MODEL`

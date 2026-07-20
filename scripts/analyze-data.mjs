@@ -189,7 +189,7 @@ const previous = await readJson(outputPath, { companies: {} });
 if (!snapshot || !contexts) throw new Error("Analysis input files are missing");
 
 const apiKey = process.env.AI_API_KEY || process.env.GITHUB_TOKEN;
-const model = process.env.AI_MODEL || "openai/gpt-4.1";
+const model = process.env.AI_MODEL || "openai/gpt-4.1-mini";
 const baseUrl = process.env.AI_BASE_URL || "https://models.github.ai/inference";
 const maxCompanies = Number.parseInt(process.env.AI_MAX_COMPANIES || "8", 10);
 const generatedAt = new Date().toISOString();

@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T14:26:31.432Z",
+  "generatedAt": "2026-07-20T14:30:53.274Z",
   "provider": "github-models",
-  "model": "openai/gpt-4.1",
+  "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 21,
+  "completedCount": 23,
   "companies": {
     "synopsys": {
       "status": "ok",
@@ -130,11 +130,115 @@
       "confidence": "medium"
     },
     "cadence": {
-      "status": "pending",
+      "status": "ok",
       "inputHash": "bd81295f7728560c36c0acbc468b3f6b695d7a6d9523a3fa91a56df7ff03cf3f",
-      "generatedAt": null,
-      "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "generatedAt": "2026-07-20T14:32:54.434Z",
+      "model": "openai/gpt-4.1-mini",
+      "promptVersion": "company-synthesis-v2",
+      "basis": "structured-official-data",
+      "evidenceSources": [
+        {
+          "id": "filing:0000813672-26-000067",
+          "label": "8-K · 2026-05-12",
+          "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000067/cdns-20260507.htm"
+        },
+        {
+          "id": "filing:0000813672-26-000047",
+          "label": "10-Q · 2026-05-01",
+          "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000047/cdns-20260331.htm"
+        },
+        {
+          "id": "filing:0000813672-26-000044",
+          "label": "8-K · 2026-04-27",
+          "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000044/cdns-20260427.htm"
+        },
+        {
+          "id": "filing:0000813672-26-000019",
+          "label": "8-K · 2026-02-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000019/cdns-20260223.htm"
+        },
+        {
+          "id": "company-facts",
+          "label": "SEC Company Facts",
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000813672.json"
+        }
+      ],
+      "summary": "铿腾电子（Cadence Design Systems Inc）2026财年第一季度财报显示，公司实现营业收入约14.74亿美元，同比增长18.66%；净利润约3.36亿美元，同比增长22.69%。资产总额约120.98亿美元，较去年底增长19.16%。现金及现金等价物约14.07亿美元，同比下降53.13%。资本支出约4882万美元，同比增加111.7%。近期披露的多份8-K文件未含正文，无法判断具体事项。",
+      "summaryEvidence": [
+        "filing:0000813672-26-000047",
+        "company-facts"
+      ],
+      "whatChanged": [
+        {
+          "text": "2026年第一季度营业收入同比增长18.66%，达到14.74亿美元。",
+          "evidence": [
+            "filing:0000813672-26-000047"
+          ]
+        },
+        {
+          "text": "净利润同比增长22.69%，达到3.36亿美元。",
+          "evidence": [
+            "filing:0000813672-26-000047"
+          ]
+        },
+        {
+          "text": "资产总额较去年底增长19.16%，达到120.98亿美元。",
+          "evidence": [
+            "filing:0000813672-26-000047"
+          ]
+        },
+        {
+          "text": "现金及现金等价物同比下降53.13%，降至14.07亿美元。",
+          "evidence": [
+            "filing:0000813672-26-000047"
+          ]
+        }
+      ],
+      "operatingSignals": [
+        {
+          "text": "收入和净利润的显著增长表明公司业务运营表现强劲。",
+          "evidence": [
+            "filing:0000813672-26-000047"
+          ]
+        },
+        {
+          "text": "资本支出大幅增加，可能反映公司对未来增长的投资力度加大。",
+          "evidence": [
+            "filing:0000813672-26-000047"
+          ]
+        }
+      ],
+      "valueChainImpact": [
+        {
+          "text": "公司作为EDA和IP领域的重要企业，业绩增长可能推动相关设计软件和半导体IP供应链需求提升。",
+          "evidence": [
+            "company-facts",
+            "filing:0000813672-26-000047"
+          ]
+        }
+      ],
+      "uncertainties": [
+        {
+          "text": "近期多份8-K文件仅含元数据，缺少正文，无法判断是否存在重大事项或事件影响。",
+          "evidence": [
+            "filing:0000813672-26-000067",
+            "filing:0000813672-26-000044",
+            "filing:0000813672-26-000019"
+          ]
+        },
+        {
+          "text": "现金及现金等价物大幅下降的具体原因和影响尚不明确。",
+          "evidence": [
+            "filing:0000813672-26-000047"
+          ]
+        }
+      ],
+      "questionsToWatch": [
+        "近期8-K公告是否披露了对公司经营或财务状况有重大影响的事项？",
+        "现金及现金等价物大幅下降的具体原因是什么？是否影响公司短期流动性？",
+        "资本支出增加的具体用途及其对未来业绩的潜在影响如何？"
+      ],
+      "confidence": "high"
     },
     "arm": {
       "status": "ok",
@@ -1248,12 +1352,113 @@
       "confidence": "medium"
     },
     "amkor": {
-      "status": "error",
+      "status": "ok",
       "inputHash": "e35ccc81c1112be9e1c3728ee59d99ff5a88e6128162e46dd56eeca95a7119e5",
-      "generatedAt": null,
-      "model": null,
-      "reason": "AI endpoint returned 429: Too many requests. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).\n",
-      "lastAttemptAt": "2026-07-20T14:28:13.644Z"
+      "generatedAt": "2026-07-20T14:32:37.110Z",
+      "model": "openai/gpt-4.1-mini",
+      "promptVersion": "company-synthesis-v2",
+      "basis": "structured-official-data",
+      "evidenceSources": [
+        {
+          "id": "filing:0001047127-26-000036",
+          "label": "8-K · 2026-05-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000036/amkr-20260521.htm"
+        },
+        {
+          "id": "filing:0001047127-26-000033",
+          "label": "8-K · 2026-05-19",
+          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000033/amkr-20260513.htm"
+        },
+        {
+          "id": "filing:0001047127-26-000029",
+          "label": "8-K · 2026-05-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000029/amkr-20260430.htm"
+        },
+        {
+          "id": "filing:0001047127-26-000026",
+          "label": "8-K · 2026-05-01",
+          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000026/amkr-20260430.htm"
+        },
+        {
+          "id": "company-facts",
+          "label": "SEC Company Facts",
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001047127.json"
+        }
+      ],
+      "summary": "安靠科技（Amkor Technology, Inc.）作为封装阶段的半导体公司，2026年第一季度实现营收约16.85亿美元，同比增长27.48%；净利润约8335万美元，同比增长294.5%。资产总额约82.99亿美元，较去年底增长2%。现金及现金等价物约11.21亿美元，较去年底下降18.66%。资本支出显著增加至约2.25亿美元，同比增长181.12%。近期披露了多份8-K文件，但当前证据包不含披露正文，无法判断具体事项。",
+      "summaryEvidence": [
+        "company-facts",
+        "filing:0001047127-26-000036",
+        "filing:0001047127-26-000033",
+        "filing:0001047127-26-000029",
+        "filing:0001047127-26-000026"
+      ],
+      "whatChanged": [
+        {
+          "text": "2026年第一季度营收同比增长27.48%，达到16.85亿美元。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "净利润同比大幅增长294.5%，达到8335万美元。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "资本支出同比增长181.12%，达到2.25亿美元。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "现金及现金等价物较去年底下降18.66%，至11.21亿美元。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "operatingSignals": [
+        {
+          "text": "资本支出大幅增加，可能反映公司扩产或技术升级投资。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "净利润显著提升，显示盈利能力增强。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "valueChainImpact": [
+        {
+          "text": "作为封装环节企业，营收和利润增长可能带动供应链相关环节需求提升。",
+          "evidence": [
+            "company-facts"
+          ]
+        }
+      ],
+      "uncertainties": [
+        {
+          "text": "近期多份8-K文件披露具体内容未知，无法判断是否涉及重大事项或业务调整。",
+          "evidence": [
+            "filing:0001047127-26-000036",
+            "filing:0001047127-26-000033",
+            "filing:0001047127-26-000029",
+            "filing:0001047127-26-000026"
+          ]
+        }
+      ],
+      "questionsToWatch": [
+        "近期8-K文件具体披露了哪些事项？是否涉及战略调整或重大投资？",
+        "资本支出增加的具体用途是什么？是否有新产能或技术升级计划？",
+        "未来季度营收和利润增长趋势如何？",
+        "现金流下降是否会影响公司运营或投资计划？"
+      ],
+      "confidence": "high"
     },
     "jcet": {
       "status": "unavailable",
@@ -2011,8 +2216,8 @@
       "inputHash": "12a61ab00538026f35c1980f0419efe320a2f547af121cbd005ab191afc58843",
       "generatedAt": null,
       "model": null,
-      "reason": "AI response infers the absence of events from filing metadata",
-      "lastAttemptAt": "2026-07-20T14:27:35.508Z"
+      "reason": "uncertainties contains an invalid point",
+      "lastAttemptAt": "2026-07-20T14:31:36.008Z"
     },
     "palantir": {
       "status": "ok",
@@ -2353,8 +2558,8 @@
       "inputHash": "2c92fc585ee067c9c10f501db9a06b9e259636098fde20b2534ebb33f8109d0f",
       "generatedAt": null,
       "model": null,
-      "reason": "AI endpoint returned 429: Too many requests. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).\n",
-      "lastAttemptAt": "2026-07-20T14:27:59.729Z"
+      "reason": "uncertainties contains an invalid point",
+      "lastAttemptAt": "2026-07-20T14:32:22.018Z"
     }
   }
 }

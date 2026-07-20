@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import AiExportPanel from "../components/AiExportPanel.astro";
 import NewsCard from "../components/NewsCard.astro";
 import { newsArticles, newsSnapshot, newsSourceStatuses, newsSourceTypes, newsTopics, newsDisplaySummary, newsDisplayTitle } from "../data/news";
 import { formatDate } from "../data/updates";
@@ -8,6 +9,29 @@ const featured = newsArticles.find((article) => article.id === "bis-bulletin-128
 const relatedPerspective = newsArticles.find((article) => article.id === "blackstone-2026-mid-year");
 const articleCount = newsArticles.length;
 const healthySources = newsSourceStatuses.filter((source) => source.status === "ok").length;
+const timelineDateKey = new Intl.DateTimeFormat("en-CA", {
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  timeZone: "Asia/Shanghai",
+});
+const timelineGroups = Object.entries(
+  newsArticles.reduce<Record<string, typeof newsArticles>>((groups, article) => {
+    const key = timelineDateKey.format(new Date(article.publishedAt));
+    (groups[key] ??= []).push(article);
+    return groups;
+  }, {}),
+).sort(([left], [right]) => right.localeCompare(left)).map(([date, articles]) => {
+  const value = new Date(`${date}T00:00:00+08:00`);
+  return {
+    date,
+    articles: [...articles].sort((left, right) => right.publishedAt.localeCompare(left.publishedAt)),
+    day: new Intl.DateTimeFormat("zh-CN", { day: "2-digit", timeZone: "Asia/Shanghai" }).format(value),
+    month: new Intl.DateTimeFormat("zh-CN", { month: "short", timeZone: "Asia/Shanghai" }).format(value),
+    year: Number(date.slice(0, 4)),
+    weekday: new Intl.DateTimeFormat("zh-CN", { weekday: "short", timeZone: "Asia/Shanghai" }).format(value),
+  };
+});
 ---
 
 <BaseLayout
@@ -93,8 +117,20 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
         </div>
       </div>
 
-      <div class="news-grid" data-news-grid>
-        {newsArticles.map((article) => <NewsCard article={article} />)}
+      <div class="news-timeline" data-news-timeline>
+        {timelineGroups.map((group) => (
+          <section class="timeline-group" data-timeline-group>
+            <header class="timeline-date">
+              <span>{group.day}</span>
+              <div><strong>{group.month}</strong><small>{group.year} · {group.weekday}</small></div>
+              <i></i>
+            </header>
+            <div class="timeline-items">
+              <div class="date-summary"><span>{group.date}</span><small data-group-count>{group.articles.length} ARTICLES</small></div>
+              {group.articles.map((article) => <NewsCard article={article} />)}
+            </div>
+          </section>
+        ))}
       </div>
       <div class="empty-state" data-news-empty>没有找到匹配的权威情报，请调整关键词或筛选条件。</div>
 
@@ -102,6 +138,7 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
         <span>COLLECTION BOUNDARY</span>
         <p>“全网”在这里指可持续维护的权威来源覆盖，不抓取匿名转载或把搜索结果直接当事实。当前自动源以官方 RSS 为主，重点机构文章由维护清单补充；AI 只处理标题、官方摘要或已核验要点，不读取不到的正文。</p>
       </aside>
+      <div class="news-export"><AiExportPanel compact /></div>
     </div>
   </section>
 
@@ -110,6 +147,7 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
     const topic = document.querySelector<HTMLSelectElement>("[data-topic-filter]");
     const source = document.querySelector<HTMLSelectElement>("[data-source-filter]");
     const cards = [...document.querySelectorAll<HTMLElement>("[data-news-card]")];
+    const groups = [...document.querySelectorAll<HTMLElement>("[data-timeline-group]")];
     const count = document.querySelector<HTMLElement>("[data-visible-count]");
     const empty = document.querySelector<HTMLElement>("[data-news-empty]");
 
@@ -125,6 +163,13 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
         const show = matchesSearch && matchesTopic && matchesSource;
         card.hidden = !show;
         if (show) visible += 1;
+      });
+      groups.forEach((group) => {
+        const groupCards = [...group.querySelectorAll<HTMLElement>("[data-news-card]")];
+        const groupVisible = groupCards.filter((card) => !card.hidden).length;
+        group.hidden = groupVisible === 0;
+        const groupCount = group.querySelector<HTMLElement>("[data-group-count]");
+        if (groupCount) groupCount.textContent = `${groupVisible} ${groupVisible === 1 ? "ARTICLE" : "ARTICLES"}`;
       });
       if (count) count.textContent = String(visible);
       empty?.classList.toggle("visible", visible === 0);
@@ -155,7 +200,7 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
   .visible-count {
     color: var(--text-dim);
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: 0.68rem;
   }
 
   .pipeline-health {
@@ -210,7 +255,7 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
     display: flex;
     flex-wrap: wrap;
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: 0.68rem;
     gap: 0.8rem;
   }
 
@@ -267,7 +312,7 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
 
   .signal-flow span {
     color: var(--text-muted);
-    font-size: 0.68rem;
+    font-size: 0.76rem;
   }
 
   .signal-flow i {
@@ -287,13 +332,13 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
 
   .spotlight-foot small {
     color: var(--text-dim);
-    font-size: 0.62rem;
+    font-size: 0.68rem;
   }
 
   .spotlight-foot a,
   .perspective-card a {
     color: var(--text-strong);
-    font-size: 0.7rem;
+    font-size: 0.78rem;
     text-decoration: none;
   }
 
@@ -323,7 +368,7 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
 
   .perspective-card > p {
     color: var(--text-muted);
-    font-size: 0.76rem;
+    font-size: 0.84rem;
     line-height: 1.75;
     margin: 0.9rem 0 0;
   }
@@ -333,7 +378,7 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
     border: 1px solid rgba(245, 185, 113, 0.18);
     border-radius: 0.7rem;
     color: var(--amber);
-    font-size: 0.65rem;
+    font-size: 0.74rem;
     line-height: 1.6;
     margin: 1.2rem 0;
     padding: 0.7rem;
@@ -348,10 +393,71 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
     font-size: 1rem;
   }
 
-  .news-grid {
+  .news-timeline {
+    position: relative;
+  }
+
+  .news-timeline::before {
+    background: linear-gradient(var(--mint), var(--line) 8rem, var(--line) calc(100% - 8rem), transparent);
+    bottom: 0;
+    content: "";
+    left: 7.4rem;
+    position: absolute;
+    top: 0;
+    width: 1px;
+  }
+
+  .timeline-group {
+    display: grid;
+    gap: 2.2rem;
+    grid-template-columns: 6.3rem minmax(0, 1fr);
+    padding-bottom: 3rem;
+    position: relative;
+  }
+
+  .timeline-group[hidden] { display: none; }
+
+  .timeline-date {
+    align-items: flex-start;
+    display: flex;
+    gap: 0.65rem;
+    padding-top: 0.8rem;
+    position: sticky;
+    top: 6.5rem;
+  }
+
+  .timeline-date > span {
+    color: var(--text-strong);
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .timeline-date > div { display: grid; gap: 0.2rem; }
+  .timeline-date strong { color: var(--mint); font-family: var(--font-mono); font-size: 0.68rem; font-weight: 500; }
+  .timeline-date small { color: var(--text-dim); font-family: var(--font-mono); font-size: 0.62rem; white-space: nowrap; }
+  .timeline-date i { background: var(--bg); border: 2px solid var(--mint); border-radius: 50%; box-shadow: 0 0 1rem rgba(99, 230, 190, 0.35); height: 0.7rem; position: absolute; right: -1.47rem; top: 1.05rem; width: 0.7rem; z-index: 2; }
+
+  .timeline-items {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
+    min-width: 0;
+  }
+
+  .date-summary {
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-dim);
+    display: flex;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+  }
+
+  .date-summary small { color: var(--mint); font-size: 0.62rem; }
   }
 
   .method-note {
@@ -360,16 +466,18 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
     padding: 0.25rem 0 0.25rem 1rem;
   }
 
+  .news-export { margin-top: 3rem; }
+
   .method-note span {
     color: var(--amber);
     font-family: var(--font-mono);
-    font-size: 0.58rem;
+    font-size: 0.64rem;
     letter-spacing: 0.1em;
   }
 
   .method-note p {
     color: var(--text-dim);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1.7;
     margin: 0.45rem 0 0;
     max-width: 52rem;
@@ -392,10 +500,6 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
   }
 
   @media (max-width: 720px) {
-    .news-grid {
-      grid-template-columns: 1fr;
-    }
-
     .news-filters {
       grid-template-columns: 1fr;
     }
@@ -404,6 +508,12 @@ const healthySources = newsSourceStatuses.filter((source) => source.status === "
     .news-filters select {
       width: 100%;
     }
+
+    .news-timeline::before { left: 0.35rem; }
+    .timeline-group { gap: 1rem; grid-template-columns: 1fr; padding-left: 1.5rem; }
+    .timeline-date { align-items: center; position: relative; top: auto; }
+    .timeline-date i { left: -1.48rem; right: auto; top: 1.1rem; }
+    .timeline-items { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 520px) {

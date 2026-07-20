@@ -84,6 +84,8 @@ SITE_URL=https://example.com BASE_PATH=/preview/ npm run build
 | 自动生成 AI 分析 | `src/data/generated/company-analysis.json` |
 | 权威情报源与重点文章 | `src/data/news-sources.json` |
 | 自动生成综合情报 | `src/data/generated/news.json` |
+| AI 消费导出构建器 | `src/lib/ai-export.ts` |
+| JSON / Markdown / llms.txt 端点 | `src/pages/exports/`、`src/pages/llms.txt.ts` |
 | 页面 | `src/pages/` |
 | 全局样式 | `src/styles/global.css` |
 

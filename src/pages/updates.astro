@@ -176,7 +176,7 @@ const analysisCounts = companyUpdates.reduce<Record<string, number>>((counts, it
 
   .status-summary div:last-child { border-right: 0; }
   .status-summary strong { font-family: var(--font-display); font-size: 1.8rem; font-weight: 500; }
-  .status-summary span { color: var(--text-dim); font-size: 0.62rem; }
+  .status-summary span { color: var(--text-dim); font-size: 0.68rem; }
 
   .source-grid {
     display: grid;
@@ -192,15 +192,15 @@ const analysisCounts = companyUpdates.reduce<Record<string, number>>((counts, it
     padding: 1.1rem;
   }
 
-  .source-head { align-items: center; color: var(--text-dim); display: flex; font-family: var(--font-mono); font-size: 0.52rem; gap: 0.45rem; }
+  .source-head { align-items: center; color: var(--text-dim); display: flex; font-family: var(--font-mono); font-size: 0.64rem; gap: 0.45rem; }
   .source-head i { background: var(--mint); border-radius: 50%; height: 0.35rem; width: 0.35rem; }
   .status-unconfigured .source-head i,
   .status-manual .source-head i { background: var(--amber); }
   .status-error .source-head i { background: var(--rose); }
   .source-status h2 { align-self: end; font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; margin: 1.5rem 0 0.35rem; }
-  .source-status p { color: var(--text-dim); font-size: 0.62rem; margin: 0; }
+  .source-status p { color: var(--text-dim); font-size: 0.74rem; margin: 0; }
   .source-status a,
-  .manual-tag { align-self: end; color: var(--text-muted); font-size: 0.65rem; margin-top: 1rem; text-decoration: none; }
+  .manual-tag { align-self: end; color: var(--text-muted); font-size: 0.74rem; margin-top: 1rem; text-decoration: none; }
 
   .analysis-coverage {
     align-items: center;
@@ -222,7 +222,7 @@ const analysisCounts = companyUpdates.reduce<Record<string, number>>((counts, it
   .analysis-coverage span,
   .analysis-coverage p {
     color: var(--text-dim);
-    font-size: 0.62rem;
+    font-size: 0.78rem;
   }
 
   .analysis-coverage strong {
@@ -245,13 +245,13 @@ const analysisCounts = companyUpdates.reduce<Record<string, number>>((counts, it
   .filing-row { align-items: center; border-bottom: 1px solid var(--line); color: var(--text-muted); display: grid; gap: 1rem; grid-template-columns: 2rem 1fr auto 1rem; padding: 1rem 0; text-decoration: none; }
   .filing-row:hover { color: var(--text-strong); }
   .filing-index { color: var(--text-dim); font-family: var(--font-mono); font-size: 0.55rem; }
-  .filing-row strong { color: var(--text-strong); font-size: 0.78rem; }
-  .filing-row p { color: var(--text-dim); font-size: 0.68rem; margin: 0.25rem 0 0; }
+  .filing-row strong { color: var(--text-strong); font-size: 0.82rem; }
+  .filing-row p { color: var(--text-dim); font-size: 0.76rem; margin: 0.25rem 0 0; }
   .filing-meta { display: grid; gap: 0.25rem; justify-items: end; }
   .filing-meta span { color: var(--mint); font-family: var(--font-mono); font-size: 0.62rem; }
-  .filing-meta small { color: var(--text-dim); font-size: 0.58rem; }
+  .filing-meta small { color: var(--text-dim); font-size: 0.66rem; }
   .filing-row > i { color: var(--mint); font-style: normal; }
-  .pending-box { border: 1px dashed var(--line-strong); color: var(--text-muted); font-size: 0.75rem; padding: 2rem; }
+  .pending-box { border: 1px dashed var(--line-strong); color: var(--text-muted); font-size: 0.84rem; padding: 2rem; }
 
   aside { position: sticky; top: 6rem; }
   aside > h2 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 500; margin: 0.7rem 0 1.5rem; }
@@ -259,16 +259,16 @@ const analysisCounts = companyUpdates.reduce<Record<string, number>>((counts, it
   aside li { align-items: center; border-bottom: 1px solid var(--line); display: grid; gap: 0.8rem; grid-template-columns: 2rem 1fr; padding: 0.75rem 0; }
   aside li > span { color: var(--mint); font-family: var(--font-mono); font-size: 0.55rem; }
   aside li div { display: grid; gap: 0.2rem; }
-  aside li strong { font-size: 0.72rem; }
-  aside li small { color: var(--text-dim); font-size: 0.6rem; }
+  aside li strong { font-size: 0.78rem; }
+  aside li small { color: var(--text-dim); font-size: 0.7rem; }
   aside .button { margin-top: 1rem; }
 
   .registry-table { border-top: 1px solid var(--line); }
-  .registry-row { align-items: center; border-bottom: 1px solid var(--line); color: var(--text-muted); display: grid; font-size: 0.7rem; gap: 1rem; grid-template-columns: 1.2fr 0.5fr 1fr 0.6fr; padding: 0.85rem; text-decoration: none; }
+  .registry-row { align-items: center; border-bottom: 1px solid var(--line); color: var(--text-muted); display: grid; font-size: 0.76rem; gap: 1rem; grid-template-columns: 1.2fr 0.5fr 1fr 0.6fr; padding: 0.85rem; text-decoration: none; }
   .registry-row:not(.registry-head):hover { background: var(--surface-soft); color: var(--text-strong); }
   .registry-head { color: var(--text-dim); font-family: var(--font-mono); font-size: 0.52rem; letter-spacing: 0.08em; }
   .registry-row > span:first-child { display: grid; gap: 0.2rem; }
-  .registry-row small { color: var(--text-dim); font-family: var(--font-mono); font-size: 0.52rem; }
+  .registry-row small { color: var(--text-dim); font-family: var(--font-mono); font-size: 0.62rem; }
   .registry-status { align-items: center; display: flex; gap: 0.45rem; }
   .registry-status i { background: var(--mint); border-radius: 50%; height: 0.35rem; width: 0.35rem; }
   .registry-status.status-manual i,

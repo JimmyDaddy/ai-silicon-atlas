@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import AiExportPanel from "../components/AiExportPanel.astro";
 import { sitePath } from "../lib/paths";
 ---
 
@@ -34,6 +35,7 @@ import { sitePath } from "../lib/paths";
         <span class="eyebrow">Contents</span>
         <a href="#sources">数据来源</a>
         <a href="#pipeline">更新流程</a>
+        <a href="#ai-export">AI 数据导出</a>
         <a href="#metrics">指标口径</a>
         <a href="#authority-news">权威情报</a>
         <a href="#ai-analysis">AI 分析边界</a>
@@ -64,29 +66,36 @@ import { sitePath } from "../lib/paths";
           <a class="button" href={sitePath("/updates/")}>查看当前更新状态 <span class="arrow">→</span></a>
         </section>
 
+        <section id="ai-export">
+          <span class="section-number">03 / AI EXPORT</span>
+          <h2>供其他 AI 消费</h2>
+          <p>静态导出会随站点构建自动更新，不需要 API Key。JSON 保留完整字段与来源关系；Markdown 适合直接加入对话上下文或知识库；根目录的 llms.txt 用于让 AI 工具发现这些入口。</p>
+          <AiExportPanel compact />
+        </section>
+
         <section id="metrics">
-          <span class="section-number">03 / METRICS</span>
+          <span class="section-number">04 / METRICS</span>
           <h2>指标口径</h2>
           <p>财务快照从 XBRL 中按候选标签提取最近披露值，并保留最多 8 个历史报告期。收入、净利润、资产、现金和资本开支可能对应不同报告期，因此页面始终同时显示报告期和表单类型。</p>
           <div class="note-box"><strong>不可直接横向比较：</strong>不同公司会计准则、币种、财政年度和披露标签可能不同。本站不对自动提取值进行年化或汇率转换。</div>
         </section>
 
         <section id="authority-news">
-          <span class="section-number">04 / AUTHORITY NEWS</span>
+          <span class="section-number">05 / AUTHORITY NEWS</span>
           <h2>权威情报边界</h2>
           <p>综合情报优先抓取国际机构、央行、监管方和公司官方 Feed，并用核验清单补充没有稳定 Feed 的重点文章。公司自身观点会单独标注，不与独立机构研究混为一谈；匿名转载、付费研报全文和来源不明的聚合内容不会进入快照。</p>
           <div class="note-box"><strong>摘要依据可见：</strong>AI 只接收官方标题、Feed 摘要或人工核验后的短要点。无法获得正文时不会声称“已阅读全文”，页面始终保留原文链接。</div>
         </section>
 
         <section id="ai-analysis">
-          <span class="section-number">05 / AI ANALYSIS</span>
+          <span class="section-number">06 / AI ANALYSIS</span>
           <h2>AI 分析边界</h2>
           <p>公司分析只接收结构化官方披露和指标历史；新闻分析只接收官方摘要或核验要点。输出包括变化摘要、经营信号、价值链影响、不确定性和待跟踪问题，不包含买卖建议、评级、目标价或收益预测。</p>
           <div class="note-box"><strong>可审计：</strong>每个分析点必须引用证据包中的有效 ID；模型名称、Prompt 版本、输入哈希和生成时间随结果保存。输入没有变化时不会重复生成，失败时保留上一次成功结果。</div>
         </section>
 
         <section id="boundaries">
-          <span class="section-number">06 / BOUNDARIES</span>
+          <span class="section-number">07 / BOUNDARIES</span>
           <h2>内容与授权边界</h2>
           <p>本站不会未经授权复制付费研报、新闻全文或行情数据。公开展示实时或延迟行情通常需要供应商与交易所授权，因此默认版本不包含行情。</p>
           <div class="disclaimer">
@@ -106,27 +115,27 @@ import { sitePath } from "../lib/paths";
   .principle-grid article { border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); min-height: 16rem; padding: 1.2rem; }
   .principle-grid span { color: var(--mint); font-family: var(--font-mono); font-size: 0.58rem; }
   .principle-grid h2 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; margin: 3.2rem 0 0.8rem; }
-  .principle-grid p { color: var(--text-muted); font-size: 0.73rem; line-height: 1.75; margin: 0; }
+  .principle-grid p { color: var(--text-muted); font-size: 0.83rem; line-height: 1.75; margin: 0; }
   .method-layout { align-items: start; display: grid; gap: 6rem; grid-template-columns: 12rem minmax(0, 1fr); }
   .method-nav { display: grid; gap: 0.7rem; position: sticky; top: 7rem; }
   .method-nav .eyebrow { margin-bottom: 0.8rem; }
-  .method-nav a { border-bottom: 1px solid var(--line); color: var(--text-muted); font-size: 0.72rem; padding: 0.65rem 0; text-decoration: none; }
+  .method-nav a { border-bottom: 1px solid var(--line); color: var(--text-muted); font-size: 0.78rem; padding: 0.65rem 0; text-decoration: none; }
   .method-nav a:hover { color: var(--mint); }
   .method-body > section { border-top: 1px solid var(--line); padding: 1.5rem 0 5rem; scroll-margin-top: 6rem; }
   .section-number { color: var(--mint); font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.1em; }
   .method-body h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 500; letter-spacing: -0.04em; margin: 1.1rem 0; }
-  .method-body section > p { color: var(--text-muted); font-size: 0.84rem; line-height: 1.9; max-width: 45rem; }
+  .method-body section > p { color: var(--text-muted); font-size: 0.94rem; line-height: 1.9; max-width: 45rem; }
   .source-list { border-top: 1px solid var(--line); margin-top: 2rem; }
-  .source-list a { align-items: center; border-bottom: 1px solid var(--line); color: var(--text-muted); display: grid; font-size: 0.7rem; gap: 1rem; grid-template-columns: 10rem 1fr auto; padding: 0.9rem 0; text-decoration: none; }
+  .source-list a { align-items: center; border-bottom: 1px solid var(--line); color: var(--text-muted); display: grid; font-size: 0.78rem; gap: 1rem; grid-template-columns: 10rem 1fr auto; padding: 0.9rem 0; text-decoration: none; }
   .source-list a:hover { color: var(--text-strong); }
-  .source-list strong { color: var(--text-strong); font-size: 0.76rem; }
+  .source-list strong { color: var(--text-strong); font-size: 0.82rem; }
   .source-list i { color: var(--mint); font-style: normal; }
   .pipeline-flow { align-items: center; border: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 2rem 0; padding: 1rem; }
-  .pipeline-flow span { color: var(--text-muted); font-size: 0.67rem; }
+  .pipeline-flow span { color: var(--text-muted); font-size: 0.74rem; }
   .pipeline-flow i { color: var(--mint); font-style: normal; }
   .disclaimer { background: rgba(251, 113, 133, 0.05); border: 1px solid rgba(251, 113, 133, 0.2); margin-top: 2rem; padding: 1.2rem; }
-  .disclaimer strong { color: var(--rose); font-size: 0.72rem; }
-  .disclaimer p { color: var(--text-muted); font-size: 0.74rem; line-height: 1.75; margin: 0.7rem 0 0; }
+  .disclaimer strong { color: var(--rose); font-size: 0.78rem; }
+  .disclaimer p { color: var(--text-muted); font-size: 0.84rem; line-height: 1.75; margin: 0.7rem 0 0; }
 
   @media (max-width: 850px) {
     .principle-grid { grid-template-columns: repeat(2, 1fr); }

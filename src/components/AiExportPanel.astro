@@ -1,0 +1,55 @@
+---
+import { sitePath } from "../lib/paths";
+
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+<section class:list={["ai-export-panel", { compact }]}>
+  <div class="export-intro">
+    <span>AI-READABLE EXPORT</span>
+    <h2>{compact ? "给其他 AI 使用本站内容" : "把图谱交给其他 AI"}</h2>
+    <p>无需密钥。导出保留结构、来源、生成时间和分析边界，适合导入知识库、研究 Agent 或长上下文。</p>
+  </div>
+  <div class="export-actions">
+    <a href={sitePath("/exports/atlas.json")} download="ai-silicon-atlas.json"><span>JSON</span><strong>完整结构化数据</strong><small>适合程序与 Agent</small><i>↓</i></a>
+    <a href={sitePath("/exports/atlas.md")} download="ai-silicon-atlas.md"><span>MD</span><strong>上下文 Markdown</strong><small>适合知识库与对话</small><i>↓</i></a>
+    <a href={sitePath("/llms.txt")}><span>TXT</span><strong>llms.txt</strong><small>让 AI 发现数据入口</small><i>↗</i></a>
+  </div>
+</section>
+
+<style>
+  .ai-export-panel {
+    background: linear-gradient(125deg, rgba(99, 230, 190, 0.07), rgba(83, 213, 245, 0.025) 45%, rgba(167, 139, 250, 0.05));
+    border: 1px solid rgba(99, 230, 190, 0.22);
+    border-radius: 1.1rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: minmax(15rem, 0.65fr) minmax(0, 1.35fr);
+    padding: clamp(1.3rem, 3vw, 2rem);
+  }
+
+  .export-intro > span { color: var(--mint); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; }
+  .export-intro h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 500; letter-spacing: -0.035em; margin: 0.65rem 0 0; }
+  .export-intro p { color: var(--text-muted); font-size: 0.86rem; line-height: 1.75; margin: 0.8rem 0 0; }
+  .export-actions { display: grid; gap: 0.65rem; grid-template-columns: repeat(3, 1fr); }
+  .export-actions a { background: rgba(7, 16, 29, 0.48); border: 1px solid var(--line); border-radius: 0.8rem; color: var(--text-strong); display: grid; min-width: 0; padding: 0.9rem; position: relative; text-decoration: none; transition: border-color 160ms ease, transform 160ms ease; }
+  .export-actions a:hover { border-color: rgba(99, 230, 190, 0.45); transform: translateY(-2px); }
+  .export-actions a > span { color: var(--mint); font-family: var(--font-mono); font-size: 0.66rem; }
+  .export-actions strong { font-size: 0.82rem; margin-top: 1.8rem; }
+  .export-actions small { color: var(--text-dim); font-size: 0.78rem; margin-top: 0.35rem; }
+  .export-actions i { color: var(--mint); font-style: normal; position: absolute; right: 0.8rem; top: 0.75rem; }
+  .compact { grid-template-columns: 1fr; }
+
+  @media (max-width: 780px) {
+    .ai-export-panel { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 540px) {
+    .export-actions { grid-template-columns: 1fr; }
+    .export-actions strong { margin-top: 1rem; }
+  }
+</style>

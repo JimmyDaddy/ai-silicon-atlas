@@ -13,6 +13,7 @@
 - **跟踪官方披露**：查看 SEC EDGAR、OpenDART 及公司投资者关系入口，保留来源和报告期。
 - **阅读 AI 综合分析**：基于已抓取的结构化证据整理变化、经营信号、价值链影响与不确定性。
 - **浏览权威情报**：聚合国际机构、央行研究与公司一手文章，提供原文链接、产业链关联和有证据边界的中文 AI 摘要。
+- **导出给其他 AI**：通过 [`llms.txt`](https://silicon-atlas.timetombs.today/llms.txt)、[结构化 JSON](https://silicon-atlas.timetombs.today/exports/atlas.json) 或 [Markdown 上下文](https://silicon-atlas.timetombs.today/exports/atlas.md) 接入 Agent 与知识库。
 
 ## 推荐的浏览方式
 

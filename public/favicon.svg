@@ -1,5 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="15" fill="#08111f"/>
-  <path d="M17 18h30v28H17z" fill="none" stroke="#63e6be" stroke-width="4"/>
-  <path d="M25 27h14v10H25zM11 25h6M11 39h6M47 25h6M47 39h6M25 12v6M39 12v6M25 46v6M39 46v6" fill="none" stroke="#f5b971" stroke-width="3" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="智芯图谱">
+  <defs>
+    <linearGradient id="frame" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#63e6be" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#53d5f5" stop-opacity=".28"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#07101d"/>
+  <rect x="7.5" y="7.5" width="49" height="49" rx="11" fill="#63e6be" fill-opacity=".045" stroke="url(#frame)"/>
+  <path d="M14 17.5h36M14 46.5h36" stroke="#63e6be" stroke-opacity=".68" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M8 25h8m32 0h8M8 39h8m32 0h8" stroke="#53d5f5" stroke-opacity=".42" stroke-width="1.5" stroke-linecap="round"/>
+  <g transform="rotate(45 32 32)" filter="url(#glow)">
+    <rect x="21" y="21" width="22" height="22" rx="2" fill="#0b192a" stroke="#f5b971" stroke-width="1.8"/>
+    <rect x="26" y="26" width="12" height="12" rx="1" fill="none" stroke="#63e6be" stroke-opacity=".78"/>
+  </g>
+  <circle cx="14" cy="17.5" r="1.5" fill="#63e6be"/>
+  <circle cx="50" cy="46.5" r="1.5" fill="#53d5f5"/>
 </svg>

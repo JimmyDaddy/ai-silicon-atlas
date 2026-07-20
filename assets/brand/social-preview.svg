@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="veil" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#07101d" stop-opacity=".98"/>
+      <stop offset=".48" stop-color="#07101d" stop-opacity=".82"/>
+      <stop offset=".76" stop-color="#07101d" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#07101d" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="bottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset=".5" stop-color="#07101d" stop-opacity="0"/>
+      <stop offset="1" stop-color="#07101d" stop-opacity=".8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#07101d"/>
+  <image href="social-preview-bg.png" width="1200" height="630" preserveAspectRatio="xMidYMid slice"/>
+  <rect width="1200" height="630" fill="url(#veil)"/>
+  <rect width="1200" height="630" fill="url(#bottom)"/>
+
+  <image href="../../public/favicon.svg" x="76" y="66" width="58" height="58"/>
+  <text x="154" y="91" fill="#f4f7f7" font-family="PingFang SC, Helvetica Neue, sans-serif" font-size="26" font-weight="600" letter-spacing="5">智芯图谱</text>
+  <text x="155" y="116" fill="#73869a" font-family="SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="3">AI &amp; SILICON ATLAS</text>
+
+  <path d="M76 184h36" stroke="#63e6be" stroke-width="2"/>
+  <text x="126" y="190" fill="#63e6be" font-family="SFMono-Regular, Menlo, monospace" font-size="13" letter-spacing="3">INDUSTRY INTELLIGENCE</text>
+
+  <text x="76" y="288" fill="#f4f7f7" font-family="Songti SC, STSong, Georgia, serif" font-size="68" font-weight="500" letter-spacing="-2">从半导体到 AI</text>
+  <text x="76" y="365" fill="#f4f7f7" font-family="Songti SC, STSong, Georgia, serif" font-size="68" font-weight="500" letter-spacing="-2">看清完整价值链</text>
+  <text x="78" y="418" fill="#a7b5c4" font-family="PingFang SC, Helvetica Neue, sans-serif" font-size="20" letter-spacing="1">产业地图 · 官方披露 · 公司研究档案 · AI 综合分析</text>
+
+  <g transform="translate(76 505)" font-family="SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="1.5">
+    <rect width="146" height="42" rx="21" fill="#ffffff" fill-opacity=".045" stroke="#ffffff" stroke-opacity=".14"/>
+    <circle cx="21" cy="21" r="4" fill="#63e6be"/>
+    <text x="37" y="26" fill="#b6c4d1">31 COMPANIES</text>
+  </g>
+  <g transform="translate(236 505)" font-family="SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="1.5">
+    <rect width="126" height="42" rx="21" fill="#ffffff" fill-opacity=".045" stroke="#ffffff" stroke-opacity=".14"/>
+    <circle cx="21" cy="21" r="4" fill="#53d5f5"/>
+    <text x="37" y="26" fill="#b6c4d1">9 LAYERS</text>
+  </g>
+  <g transform="translate(376 505)" font-family="SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="1.5">
+    <rect width="184" height="42" rx="21" fill="#ffffff" fill-opacity=".045" stroke="#ffffff" stroke-opacity=".14"/>
+    <circle cx="21" cy="21" r="4" fill="#f5b971"/>
+    <text x="37" y="26" fill="#b6c4d1">SOURCE FIRST</text>
+  </g>
+
+  <text x="1124" y="577" fill="#63e6be" font-family="SFMono-Regular, Menlo, monospace" font-size="13" text-anchor="end">silicon-atlas.timetombs.today ↗</text>
+  <rect x="1" y="1" width="1198" height="628" fill="none" stroke="#63e6be" stroke-opacity=".12" stroke-width="2"/>
+</svg>

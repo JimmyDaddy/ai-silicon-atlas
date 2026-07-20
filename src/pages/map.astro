@@ -52,7 +52,7 @@ const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof no
   </section>
 
   <section class="topology-section" data-map-view-panel="topology">
-    <div class="shell topology-layout">
+    <div class="topology-shell topology-layout">
       <div class="topology-main">
         <div class="topology-toolbar">
           <div><i></i><span>点击节点查看上下游关系</span></div>
@@ -296,6 +296,15 @@ const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof no
     display: none;
   }
 
+  [data-map-view-panel]:not([hidden]) {
+    animation: map-view-in 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes map-view-in {
+    from { opacity: 0; transform: translateY(0.7rem); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   .map-mode-section {
     padding: 2.2rem 0;
   }
@@ -339,11 +348,18 @@ const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof no
     padding: 2rem 0 5rem;
   }
 
+  .topology-shell {
+    margin-inline: auto;
+    max-width: 96rem;
+    padding-inline: 1.5rem;
+    width: 100%;
+  }
+
   .topology-layout {
     align-items: start;
     display: grid;
     gap: 1rem;
-    grid-template-columns: minmax(0, 1fr) 20rem;
+    grid-template-columns: minmax(0, 1fr) clamp(18rem, 22vw, 22rem);
   }
 
   .topology-main,
@@ -389,16 +405,36 @@ const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof no
   }
 
   .topology-scroll {
-    overflow-x: auto;
+    overflow: hidden;
   }
 
   .topology-canvas {
+    aspect-ratio: 5 / 3;
     background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
     background-size: 3rem 3rem;
-    height: 37rem;
-    min-width: 62rem;
+    min-height: 30rem;
     overflow: hidden;
     position: relative;
+    width: 100%;
+  }
+
+  .topology-canvas::before {
+    animation: map-scan 8s linear infinite;
+    background: linear-gradient(90deg, transparent, rgba(99, 230, 190, 0.34), transparent);
+    content: "";
+    height: 1px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 4;
+  }
+
+  @keyframes map-scan {
+    from { opacity: 0; transform: translateY(0); }
+    12%, 88% { opacity: 0.72; }
+    to { opacity: 0; transform: translateY(36rem); }
   }
 
   .topology-canvas::after {
@@ -464,6 +500,15 @@ const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof no
     stroke-dasharray: 5 6;
   }
 
+  .edge-group.feedback.active .map-edge,
+  .edge-group.secondary.active .map-edge {
+    animation: edge-flow 1.4s linear infinite;
+  }
+
+  @keyframes edge-flow {
+    to { stroke-dashoffset: -22; }
+  }
+
   .edge-group.secondary .map-edge {
     stroke-dasharray: 2 5;
   }
@@ -514,6 +559,7 @@ const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof no
   }
 
   .topology-node::before {
+    animation: node-signal 2.6s ease-in-out infinite;
     background: var(--node-accent);
     border-radius: 50%;
     box-shadow: 0 0 12px var(--node-accent);
@@ -523,6 +569,11 @@ const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof no
     right: 0.7rem;
     top: 0.7rem;
     width: 0.38rem;
+  }
+
+  @keyframes node-signal {
+    0%, 100% { opacity: 0.65; transform: scale(0.86); }
+    50% { opacity: 1; transform: scale(1.22); }
   }
 
   .topology-node > span,
@@ -554,6 +605,15 @@ const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof no
 
   .topology-detail article[hidden] {
     display: none;
+  }
+
+  .topology-detail article:not([hidden]) {
+    animation: detail-in 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes detail-in {
+    from { opacity: 0; transform: translateX(0.7rem); }
+    to { opacity: 1; transform: translateX(0); }
   }
 
   .detail-index {
@@ -873,7 +933,7 @@ const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof no
     margin: 0.5rem 0 0;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1120px) {
     .topology-layout {
       grid-template-columns: 1fr;
     }
@@ -881,6 +941,28 @@ const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof no
     .topology-detail {
       min-height: 0;
       position: static;
+    }
+
+    .topology-detail article:not([hidden]) {
+      display: grid;
+      gap: 0 1.5rem;
+      grid-template-columns: minmax(12rem, 0.85fr) minmax(17rem, 1.15fr);
+    }
+
+    .detail-index,
+    .topology-detail article > h2,
+    .topology-detail article > p,
+    .detail-signal {
+      grid-column: 1;
+    }
+
+    .connection-list,
+    .detail-companies {
+      grid-column: 2;
+    }
+
+    .connection-list {
+      grid-row: 1 / span 3;
     }
 
     .stage-panel > header {
@@ -897,6 +979,10 @@ const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof no
   }
 
   @media (max-width: 600px) {
+    .topology-shell {
+      padding-inline: 1rem;
+    }
+
     .map-mode-head {
       align-items: flex-start;
       flex-direction: column;
@@ -906,6 +992,40 @@ const mapPath = (sourceKey: keyof typeof nodeByStage, targetKey: keyof typeof no
       align-items: flex-start;
       flex-direction: column;
       gap: 0.75rem;
+    }
+
+    .topology-canvas {
+      aspect-ratio: auto;
+      display: grid;
+      gap: 0.65rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      min-height: 0;
+      padding: 1rem;
+    }
+
+    .topology-canvas::before,
+    .topology-canvas::after,
+    .edge-layer,
+    .map-zone {
+      display: none;
+    }
+
+    .topology-node {
+      left: auto;
+      min-width: 0;
+      position: relative;
+      top: auto;
+      transform: none;
+      width: 100%;
+    }
+
+    .topology-node:hover,
+    .topology-node.active {
+      transform: translateY(-2px);
+    }
+
+    .topology-detail article:not([hidden]) {
+      display: block;
     }
 
     .stage-panel > header,

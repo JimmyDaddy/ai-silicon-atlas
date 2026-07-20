@@ -12,23 +12,32 @@ const { company, compact = false } = Astro.props;
 const stage = stageByKey[company.stage];
 ---
 
-<article class:list={["company-card", { compact }]} style={`--company-accent: ${stage.accent}`} data-company-card data-stage={company.stage} data-market={company.exchange} data-search={`${company.name} ${company.nameEn} ${company.ticker} ${company.focus.join(" ")}`.toLowerCase()}>
+<a
+  class:list={["company-card", { compact }]}
+  href={sitePath(`/companies/${company.slug}/`)}
+  aria-label={`查看${company.name}研究卡`}
+  style={`--company-accent: ${stage.accent}`}
+  data-company-card
+  data-stage={company.stage}
+  data-market={company.exchange}
+  data-search={`${company.name} ${company.nameEn} ${company.ticker} ${company.focus.join(" ")}`.toLowerCase()}
+>
   <div class="company-card-top">
     <span class="ticker">{company.ticker}</span>
     <span class="stage-dot"><i></i>{stage.name}</span>
   </div>
   <div>
-    <h3><a href={sitePath(`/companies/${company.slug}/`)}>{company.name}</a></h3>
+    <h3>{company.name}</h3>
     <p class="company-en">{company.nameEn} · {company.exchange}</p>
   </div>
   {!compact && <p class="company-description">{company.description}</p>}
   <div class="tag-list">
     {company.focus.slice(0, compact ? 2 : 3).map((tag) => <span>{tag}</span>)}
   </div>
-  <a class="card-link" href={sitePath(`/companies/${company.slug}/`)} aria-label={`查看${company.name}详情`}>
+  <span class="card-link">
     查看研究卡 <span aria-hidden="true">↗</span>
-  </a>
-</article>
+  </span>
+</a>
 
 <style>
   .company-card {
@@ -41,7 +50,12 @@ const stage = stageByKey[company.stage];
     overflow: hidden;
     padding: 1.35rem;
     position: relative;
-    transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+    text-decoration: none;
+    transition: border-color 220ms ease, transform 220ms ease, background 220ms ease, box-shadow 220ms ease;
+  }
+
+  .company-card[hidden] {
+    display: none;
   }
 
   .company-card::before {
@@ -55,10 +69,32 @@ const stage = stageByKey[company.stage];
     top: 0;
   }
 
+  .company-card::after {
+    background: linear-gradient(110deg, transparent 28%, color-mix(in srgb, var(--company-accent) 13%, transparent) 48%, transparent 68%);
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-115%);
+    transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
   .company-card:hover {
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018));
     border-color: var(--line-strong);
-    transform: translateY(-3px);
+    box-shadow: 0 1.4rem 3.5rem color-mix(in srgb, var(--company-accent) 10%, transparent);
+    transform: translateY(-5px);
+  }
+
+  .company-card:hover::after,
+  .company-card:focus-visible::after {
+    transform: translateX(115%);
+  }
+
+  .company-card:focus-visible {
+    border-color: var(--company-accent);
+    outline: 2px solid color-mix(in srgb, var(--company-accent) 42%, transparent);
+    outline-offset: 3px;
   }
 
   .company-card.compact {
@@ -102,11 +138,6 @@ const stage = stageByKey[company.stage];
   h3 {
     font-size: 1.35rem;
     margin: 0;
-  }
-
-  h3 a {
-    color: var(--text-strong);
-    text-decoration: none;
   }
 
   .company-en {
@@ -153,9 +184,15 @@ const stage = stageByKey[company.stage];
 
   .card-link span {
     color: var(--company-accent);
+    transition: transform 180ms ease;
   }
 
   .company-card:hover .card-link {
     color: var(--text-strong);
+  }
+
+  .company-card:hover .card-link span,
+  .company-card:focus-visible .card-link span {
+    transform: translate(0.16rem, -0.12rem);
   }
 </style>

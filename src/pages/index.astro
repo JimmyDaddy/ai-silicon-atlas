@@ -164,6 +164,7 @@ const homepageFeatured = homepageFeaturedSlugs
   }
 
   .hero-glow {
+    animation: hero-glow-drift 9s ease-in-out infinite alternate;
     background: radial-gradient(circle, rgba(83, 213, 245, 0.12), transparent 65%);
     filter: blur(2px);
     height: 40rem;
@@ -172,6 +173,11 @@ const homepageFeatured = homepageFeaturedSlugs
     right: -9rem;
     top: -7rem;
     width: 46rem;
+  }
+
+  @keyframes hero-glow-drift {
+    from { opacity: 0.7; transform: translate3d(-2rem, -1rem, 0) scale(0.94); }
+    to { opacity: 1; transform: translate3d(1.5rem, 1rem, 0) scale(1.06); }
   }
 
   .hero-grid {
@@ -193,11 +199,17 @@ const homepageFeatured = homepageFeaturedSlugs
   }
 
   .status-pulse {
+    animation: status-pulse 2.2s ease-in-out infinite;
     background: var(--mint);
     border-radius: 50%;
     box-shadow: 0 0 12px rgba(99, 230, 190, 0.75);
     height: 0.42rem;
     width: 0.42rem;
+  }
+
+  @keyframes status-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(99, 230, 190, 0.34), 0 0 12px rgba(99, 230, 190, 0.75); }
+    50% { box-shadow: 0 0 0 0.38rem rgba(99, 230, 190, 0), 0 0 18px rgba(99, 230, 190, 0.9); }
   }
 
   h1 {
@@ -241,6 +253,26 @@ const homepageFeatured = homepageFeaturedSlugs
     border-radius: 1.2rem;
     box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.25);
     overflow: hidden;
+    position: relative;
+  }
+
+  .signal-panel::after {
+    animation: panel-scan 6.5s linear infinite;
+    background: linear-gradient(90deg, transparent, rgba(99, 230, 190, 0.16), transparent);
+    content: "";
+    height: 1px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 8;
+  }
+
+  @keyframes panel-scan {
+    from { opacity: 0; transform: translateY(0); }
+    12%, 88% { opacity: 1; }
+    to { opacity: 0; transform: translateY(31rem); }
   }
 
   .panel-head,
@@ -290,6 +322,7 @@ const homepageFeatured = homepageFeaturedSlugs
   }
 
   .chip-core {
+    animation: core-breathe 4.8s ease-in-out infinite;
     align-items: center;
     background: #0c1c30;
     border: 1px solid rgba(99, 230, 190, 0.6);
@@ -304,6 +337,11 @@ const homepageFeatured = homepageFeaturedSlugs
     transform: translate(-50%, -50%) rotate(45deg);
     width: 7.5rem;
     z-index: 4;
+  }
+
+  @keyframes core-breathe {
+    0%, 100% { box-shadow: 0 0 3rem rgba(99, 230, 190, 0.12), inset 0 0 1.3rem rgba(99, 230, 190, 0.06); }
+    50% { box-shadow: 0 0 5.5rem rgba(99, 230, 190, 0.25), inset 0 0 1.8rem rgba(99, 230, 190, 0.12); }
   }
 
   .chip-core::before,
@@ -340,6 +378,7 @@ const homepageFeatured = homepageFeaturedSlugs
   }
 
   .orbit {
+    animation: orbit-turn 18s linear infinite;
     border: 1px solid var(--line);
     border-radius: 50%;
     left: 50%;
@@ -349,9 +388,27 @@ const homepageFeatured = homepageFeaturedSlugs
   }
 
   .orbit-a { height: 15rem; width: 15rem; }
-  .orbit-b { height: 22rem; width: 22rem; }
+  .orbit-b { animation-direction: reverse; animation-duration: 27s; height: 22rem; width: 22rem; }
+
+  .orbit::after {
+    background: var(--mint);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--mint);
+    content: "";
+    height: 0.3rem;
+    left: 50%;
+    position: absolute;
+    top: -0.16rem;
+    width: 0.3rem;
+  }
+
+  @keyframes orbit-turn {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
 
   .diagram-node {
+    animation: diagram-float 4s ease-in-out infinite;
     align-items: center;
     color: var(--text-dim);
     display: grid;
@@ -362,6 +419,14 @@ const homepageFeatured = homepageFeaturedSlugs
     letter-spacing: 0.04em;
     position: absolute;
     z-index: 5;
+  }
+
+  .diagram-node:nth-of-type(3n) { animation-delay: -1.4s; }
+  .diagram-node:nth-of-type(3n + 1) { animation-delay: -2.7s; }
+
+  @keyframes diagram-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-0.28rem); }
   }
 
   .diagram-node i {
@@ -456,6 +521,13 @@ const homepageFeatured = homepageFeaturedSlugs
     overflow: hidden;
     padding: 1.5rem;
     position: relative;
+    transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+  }
+
+  .theme-card:hover {
+    border-color: color-mix(in srgb, var(--card-color) 38%, var(--line));
+    box-shadow: 0 1.5rem 4rem color-mix(in srgb, var(--card-color) 8%, transparent);
+    transform: translateY(-0.35rem);
   }
 
   .theme-card::before {

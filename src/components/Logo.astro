@@ -3,9 +3,7 @@ import { sitePath } from "../lib/paths";
 ---
 
 <a class="brand" href={sitePath("/")} aria-label="智芯图谱首页">
-  <span class="brand-mark" aria-hidden="true">
-    <span class="brand-chip"></span>
-  </span>
+  <img class="brand-mark" src={sitePath("/favicon.svg")} alt="" width="34" height="34" />
   <span class="brand-copy">
     <strong>智芯图谱</strong>
     <small>AI & Silicon Atlas</small>
@@ -22,43 +20,15 @@ import { sitePath } from "../lib/paths";
   }
 
   .brand-mark {
-    align-items: center;
-    background: rgba(99, 230, 190, 0.1);
-    border: 1px solid rgba(99, 230, 190, 0.32);
-    border-radius: 0.65rem;
-    display: inline-flex;
     height: 2.1rem;
-    justify-content: center;
-    position: relative;
+    transition: filter 240ms ease, transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
     width: 2.1rem;
   }
 
-  .brand-mark::before,
-  .brand-mark::after {
-    background: var(--mint);
-    content: "";
-    height: 1px;
-    left: 0.25rem;
-    opacity: 0.65;
-    position: absolute;
-    right: 0.25rem;
-  }
-
-  .brand-mark::before {
-    top: 0.42rem;
-  }
-
-  .brand-mark::after {
-    bottom: 0.42rem;
-  }
-
-  .brand-chip {
-    border: 1px solid var(--amber);
-    display: block;
-    height: 0.78rem;
-    position: relative;
-    transform: rotate(45deg);
-    width: 0.78rem;
+  .brand:hover .brand-mark,
+  .brand:focus-visible .brand-mark {
+    filter: drop-shadow(0 0 0.7rem rgba(99, 230, 190, 0.34));
+    transform: rotate(8deg) scale(1.06);
   }
 
   .brand-copy {

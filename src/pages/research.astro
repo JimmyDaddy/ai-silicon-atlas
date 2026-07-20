@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { themes } from "../data/themes";
+import { stageByKey } from "../data/stages";
+import { companies } from "../data/companies";
+import { sitePath } from "../lib/paths";
+---
+
+<BaseLayout title="研究主题 · 智芯图谱" description="以关键问题组织 AI 与半导体产业链的研究变量。" active="research">
+  <section class="page-hero research-hero">
+    <div class="shell page-hero-grid">
+      <div>
+        <span class="eyebrow">Research lenses</span>
+        <h1 class="display-title">少追新闻，<br />多看<em>传导机制</em></h1>
+      </div>
+      <div>
+        <p class="page-kicker">每个主题都从一个可验证的问题开始，再连接需要跟踪的信号、产业环节和代表公司。</p>
+        <div class="page-meta"><span><i></i>{themes.length} 个研究主题</span><span>持续扩展</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section themes-list">
+    <div class="shell">
+      {themes.map((theme, index) => {
+        const relatedCompanies = companies.filter((company) => theme.stages.includes(company.stage)).slice(0, 5);
+        return (
+          <article id={theme.slug} class={`theme-row ${theme.tone}`}>
+            <div class="theme-index">{String(index + 1).padStart(2, "0")}</div>
+            <div class="theme-main">
+              <span class="theme-eyebrow">{theme.eyebrow}</span>
+              <h2>{theme.title}</h2>
+              <p>{theme.summary}</p>
+              <blockquote>{theme.question}</blockquote>
+            </div>
+            <div class="theme-details">
+              <div>
+                <small>TRACKING SIGNALS</small>
+                <ul>{theme.signals.map((signal) => <li>{signal}</li>)}</ul>
+              </div>
+              <div>
+                <small>VALUE CHAIN</small>
+                <div class="stage-list">{theme.stages.map((key) => <a href={sitePath(`/map/#${key}`)}>{stageByKey[key].name}</a>)}</div>
+              </div>
+              <div>
+                <small>REPRESENTATIVE COMPANIES</small>
+                <div class="company-list">{relatedCompanies.map((company) => <a href={sitePath(`/companies/${company.slug}/`)}>{company.name}<span>{company.ticker}</span></a>)}</div>
+              </div>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .research-hero { background: radial-gradient(circle at 76% 62%, rgba(245, 185, 113, 0.075), transparent 23rem); }
+  .themes-list { padding-top: 3rem; }
+  .theme-row { --theme-color: var(--cyan); border-top: 1px solid var(--line); display: grid; gap: 2rem; grid-template-columns: 3rem 1fr 0.9fr; padding: 4rem 0; scroll-margin-top: 6rem; }
+  .theme-row.amber { --theme-color: var(--amber); }
+  .theme-row.violet { --theme-color: var(--violet); }
+  .theme-index { color: var(--theme-color); font-family: var(--font-mono); font-size: 0.6rem; padding-top: 0.5rem; }
+  .theme-eyebrow { color: var(--theme-color); font-size: 0.68rem; }
+  .theme-main h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.4rem); font-weight: 500; letter-spacing: -0.04em; line-height: 1.1; margin: 0.6rem 0 1rem; }
+  .theme-main > p { color: var(--text-muted); font-size: 0.83rem; line-height: 1.8; max-width: 38rem; }
+  .theme-main blockquote { border-left: 1px solid var(--theme-color); color: var(--text-strong); font-family: var(--font-display); font-size: 1.1rem; line-height: 1.55; margin: 1.8rem 0 0; padding-left: 1rem; }
+  .theme-details { border-left: 1px solid var(--line); display: grid; gap: 1.6rem; padding-left: 1.5rem; }
+  .theme-details small { color: var(--theme-color); font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.1em; }
+  .theme-details ul { color: var(--text-muted); display: grid; font-size: 0.7rem; gap: 0.45rem; list-style: none; margin: 0.7rem 0 0; padding: 0; }
+  .theme-details li::before { color: var(--theme-color); content: "—"; margin-right: 0.45rem; }
+  .stage-list { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.7rem; }
+  .stage-list a { border: 1px solid var(--line); border-radius: 999px; color: var(--text-muted); font-size: 0.6rem; padding: 0.35rem 0.5rem; text-decoration: none; }
+  .company-list { border-top: 1px solid var(--line); margin-top: 0.7rem; }
+  .company-list a { border-bottom: 1px solid var(--line); color: var(--text-muted); display: flex; font-size: 0.68rem; justify-content: space-between; padding: 0.55rem 0; text-decoration: none; }
+  .company-list a:hover { color: var(--text-strong); }
+  .company-list span { color: var(--text-dim); font-family: var(--font-mono); font-size: 0.55rem; }
+
+  @media (max-width: 800px) {
+    .theme-row { grid-template-columns: 2rem 1fr; }
+    .theme-details { grid-column: 2; }
+  }
+
+  @media (max-width: 540px) {
+    .theme-row { gap: 1rem; grid-template-columns: 1fr; }
+    .theme-index { padding: 0; }
+    .theme-details { border-left: 0; border-top: 1px solid var(--line); grid-column: auto; padding: 1.5rem 0 0; }
+  }
+</style>

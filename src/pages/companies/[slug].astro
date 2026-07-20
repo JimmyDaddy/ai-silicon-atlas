@@ -1,0 +1,558 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CompanyCard from "../../components/CompanyCard.astro";
+import { companies, type Company } from "../../data/companies";
+import { stageByKey } from "../../data/stages";
+import { formatDate, formatMetric, getCompanyUpdate, type MetricSnapshot } from "../../data/updates";
+import { sitePath } from "../../lib/paths";
+
+export function getStaticPaths() {
+  return companies.map((company) => ({ params: { slug: company.slug }, props: { company } }));
+}
+
+const { company } = Astro.props as { company: Company };
+const stage = stageByKey[company.stage];
+const update = getCompanyUpdate(company.slug);
+const metrics = Object.entries(update?.metrics ?? {}) as [string, MetricSnapshot][];
+const relatedCompanies = companies
+  .filter((candidate) => candidate.stage === company.stage && candidate.slug !== company.slug)
+  .slice(0, 3);
+const metricLabels: Record<string, string> = {
+  revenue: "最新披露收入",
+  netIncome: "最新披露净利润",
+  assets: "总资产",
+  cash: "现金及等价物",
+  capex: "资本开支",
+};
+const statusCopy = {
+  ok: "官方数据已同步",
+  manual: "第一方资料人工维护",
+  unconfigured: "官方接口待配置",
+  error: "本次同步异常",
+};
+---
+
+<BaseLayout title={`${company.name}（${company.ticker}）· 智芯图谱`} description={`${company.name}所属${stage.name}环节的公司研究卡、关注变量与第一方资料。`} active="companies">
+  <section class="company-hero" style={`--company-accent: ${stage.accent}`}>
+    <div class="shell">
+      <nav class="breadcrumbs" aria-label="面包屑">
+        <a href={sitePath("/companies/")}>公司目录</a><span>/</span><a href={sitePath(`/map/#${stage.key}`)}>{stage.name}</a><span>/</span><strong>{company.ticker}</strong>
+      </nav>
+      <div class="company-heading">
+        <div>
+          <div class="company-label"><i></i>{stage.nameEn} · {company.country}</div>
+          <h1>{company.name}</h1>
+          <p>{company.nameEn}</p>
+        </div>
+        <div class="security-card">
+          <span>LISTED SECURITY</span>
+          <strong>{company.ticker}</strong>
+          <small>{company.exchange}</small>
+        </div>
+      </div>
+      <p class="company-lead">{company.description}</p>
+      <div class="focus-tags">
+        {company.focus.map((item) => <span>{item}</span>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="snapshot-bar section-rule">
+    <div class="shell snapshot-inner">
+      <div>
+        <small>DATA STATUS</small>
+        <strong class:list={[{ warning: update?.status !== "ok" }]}><i></i>{update ? statusCopy[update.status] : "数据快照尚未生成"}</strong>
+      </div>
+      <div>
+        <small>PROVIDER</small>
+        <strong>{update?.provider ?? "—"}</strong>
+      </div>
+      <div>
+        <small>LAST CHECK</small>
+        <strong>{formatDate(update?.checkedAt)}</strong>
+      </div>
+      <a href={sitePath("/updates/")}>查看更新状态 ↗</a>
+    </div>
+  </section>
+
+  <section class="section company-content">
+    <div class="shell">
+      {metrics.length > 0 && (
+        <div class="metrics-section">
+          <div class="section-head compact-head">
+            <div>
+              <span class="eyebrow">Official snapshot</span>
+              <h2 class="section-title">最新官方披露快照</h2>
+              <p class="section-copy">不同指标可能来自不同报告期，请以指标下方的日期和原始披露为准。</p>
+            </div>
+          </div>
+          <div class="metrics-grid">
+            {metrics.map(([key, metric]) => (
+              <article>
+                <span>{metricLabels[key] ?? metric.label}</span>
+                <strong>{formatMetric(metric)}</strong>
+                <small>{metric.periodEnd} · {metric.form}</small>
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div class="research-grid">
+        <div class="research-main">
+          <section class="research-block attention-block">
+            <div class="block-label"><span>01</span><small>WHAT TO WATCH</small></div>
+            <h2>研究关注点</h2>
+            <ul>
+              {company.attention.map((item) => <li><i></i><span>{item}</span></li>)}
+            </ul>
+          </section>
+          <section class="research-block risk-block">
+            <div class="block-label"><span>02</span><small>RISK BOUNDARIES</small></div>
+            <h2>风险与反证</h2>
+            <ul>
+              {company.risks.map((item) => <li><i></i><span>{item}</span></li>)}
+            </ul>
+          </section>
+        </div>
+
+        <aside>
+          {update?.latestFiling && (
+            <section class="filing-card">
+              <span class="card-kicker">LATEST OFFICIAL FILING</span>
+              <div class="filing-form">{update.latestFiling.form}</div>
+              <h2>{update.latestFiling.title}</h2>
+              <p>披露日期 {update.latestFiling.filedAt}</p>
+              <a href={update.latestFiling.url} target="_blank" rel="noreferrer">打开官方原文 <span>↗</span></a>
+            </section>
+          )}
+          <section class="source-card">
+            <span class="card-kicker">PRIMARY SOURCES</span>
+            <h2>第一方资料</h2>
+            <div class="source-links">
+              {company.sources.map((source) => (
+                <a href={source.url} target="_blank" rel="noreferrer">
+                  <span>{source.label}</span><i>↗</i>
+                </a>
+              ))}
+            </div>
+            <p>本站只整理研究入口与结构化快照，结论应回到原始披露独立核验。</p>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  {relatedCompanies.length > 0 && (
+    <section class="section section-rule related-section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Same layer</span>
+            <h2 class="section-title">同环节公司</h2>
+          </div>
+          <a class="text-link" href={sitePath(`/map/#${stage.key}`)}>返回{stage.name}地图 <span>→</span></a>
+        </div>
+        <div class="related-grid">
+          {relatedCompanies.map((related) => <CompanyCard company={related} compact />)}
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .company-hero {
+    background: radial-gradient(circle at 75% 35%, color-mix(in srgb, var(--company-accent) 10%, transparent), transparent 28rem);
+    padding: 3rem 0 4rem;
+  }
+
+  .breadcrumbs {
+    align-items: center;
+    color: var(--text-dim);
+    display: flex;
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    gap: 0.6rem;
+    margin-bottom: 4rem;
+  }
+
+  .breadcrumbs a {
+    color: var(--text-dim);
+    text-decoration: none;
+  }
+
+  .breadcrumbs a:hover {
+    color: var(--company-accent);
+  }
+
+  .breadcrumbs strong {
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  .company-heading {
+    align-items: end;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+  }
+
+  .company-label {
+    align-items: center;
+    color: var(--company-accent);
+    display: flex;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    gap: 0.55rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .company-label i {
+    background: var(--company-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--company-accent);
+    height: 0.38rem;
+    width: 0.38rem;
+  }
+
+  .company-heading h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3.4rem, 8vw, 7rem);
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    line-height: 0.95;
+    margin: 0;
+  }
+
+  .company-heading p {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin: 0.8rem 0 0;
+  }
+
+  .security-card {
+    border: 1px solid var(--line-strong);
+    display: grid;
+    min-width: 10rem;
+    padding: 1rem;
+  }
+
+  .security-card span,
+  .security-card small {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .security-card strong {
+    color: var(--company-accent);
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    margin: 1.2rem 0 0.2rem;
+  }
+
+  .company-lead {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.85;
+    margin: 2.3rem 0 1.3rem;
+    max-width: 42rem;
+  }
+
+  .focus-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .focus-tags span {
+    background: color-mix(in srgb, var(--company-accent) 7%, transparent);
+    border: 1px solid color-mix(in srgb, var(--company-accent) 24%, transparent);
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-size: 0.64rem;
+    padding: 0.4rem 0.65rem;
+  }
+
+  .snapshot-bar {
+    background: rgba(5, 11, 20, 0.42);
+    padding: 1.25rem 0;
+  }
+
+  .snapshot-inner {
+    align-items: center;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr) auto;
+  }
+
+  .snapshot-inner > div {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .snapshot-inner small {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.48rem;
+    letter-spacing: 0.1em;
+  }
+
+  .snapshot-inner strong {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    font-size: 0.7rem;
+    font-weight: 500;
+    gap: 0.45rem;
+  }
+
+  .snapshot-inner strong i {
+    background: var(--mint);
+    border-radius: 50%;
+    height: 0.35rem;
+    width: 0.35rem;
+  }
+
+  .snapshot-inner strong.warning i {
+    background: var(--amber);
+  }
+
+  .snapshot-inner > a {
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    text-decoration: none;
+  }
+
+  .metrics-section {
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .compact-head {
+    margin-bottom: 1.8rem;
+  }
+
+  .compact-head .section-title {
+    font-size: 2.4rem;
+  }
+
+  .metrics-grid {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .metrics-grid article {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    display: grid;
+    min-height: 8.5rem;
+    padding: 1rem;
+  }
+
+  .metrics-grid span,
+  .metrics-grid small {
+    color: var(--text-dim);
+    font-size: 0.58rem;
+  }
+
+  .metrics-grid strong {
+    align-self: center;
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 500;
+  }
+
+  .research-grid {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 20rem;
+  }
+
+  .research-main {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .research-block {
+    border: 1px solid var(--line);
+    min-height: 25rem;
+    padding: 1.5rem;
+  }
+
+  .block-label {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .block-label span {
+    color: var(--company-accent);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+  }
+
+  .block-label small,
+  .card-kicker {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .research-block h2,
+  aside h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 3.2rem 0 1.6rem;
+  }
+
+  .research-block ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .research-block li {
+    align-items: start;
+    border-top: 1px solid var(--line);
+    color: var(--text-muted);
+    display: flex;
+    font-size: 0.78rem;
+    gap: 0.7rem;
+    line-height: 1.6;
+    padding: 1rem 0;
+  }
+
+  .research-block li i {
+    background: var(--company-accent);
+    height: 1px;
+    margin-top: 0.65rem;
+    width: 0.8rem;
+  }
+
+  .risk-block li i {
+    background: var(--rose);
+  }
+
+  aside {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .filing-card,
+  .source-card {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    padding: 1.25rem;
+  }
+
+  .filing-form {
+    color: var(--company-accent);
+    font-family: var(--font-mono);
+    font-size: 2.6rem;
+    margin-top: 2.2rem;
+  }
+
+  .filing-card h2 {
+    font-family: var(--font-sans);
+    font-size: 0.86rem;
+    line-height: 1.5;
+    margin: 0.8rem 0;
+  }
+
+  .filing-card p,
+  .source-card p {
+    color: var(--text-dim);
+    font-size: 0.65rem;
+    line-height: 1.65;
+  }
+
+  .filing-card > a {
+    border-top: 1px solid var(--line);
+    color: var(--text-muted);
+    display: flex;
+    font-size: 0.68rem;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+    padding-top: 0.9rem;
+    text-decoration: none;
+  }
+
+  .filing-card > a span {
+    color: var(--company-accent);
+  }
+
+  .source-card h2 {
+    margin-top: 2rem;
+  }
+
+  .source-links {
+    border-top: 1px solid var(--line);
+  }
+
+  .source-links a {
+    border-bottom: 1px solid var(--line);
+    color: var(--text-muted);
+    display: flex;
+    font-size: 0.7rem;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    text-decoration: none;
+  }
+
+  .source-links i {
+    color: var(--company-accent);
+    font-style: normal;
+  }
+
+  .related-grid {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 980px) {
+    .metrics-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .research-grid {
+      grid-template-columns: 1fr;
+    }
+
+    aside {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 700px) {
+    .company-heading {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .snapshot-inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .metrics-grid,
+    .research-main,
+    .related-grid,
+    aside {
+      grid-template-columns: 1fr;
+    }
+
+    .metrics-grid article {
+      min-height: 7rem;
+    }
+  }
+</style>

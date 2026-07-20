@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { sitePath } from "../lib/paths";
+---
+
+<BaseLayout title="页面未找到 · 智芯图谱">
+  <section class="not-found shell">
+    <span>404 / SIGNAL LOST</span>
+    <h1>这条链路<br />暂时没有数据</h1>
+    <p>页面可能已移动，或链接尚未加入当前版本。</p>
+    <a class="button primary" href={sitePath("/")}>返回首页 <span class="arrow">→</span></a>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found { padding-bottom: 8rem; padding-top: 8rem; }
+  .not-found > span { color: var(--mint); font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; }
+  .not-found h1 { font-family: var(--font-display); font-size: clamp(3rem, 8vw, 7rem); font-weight: 500; letter-spacing: -0.06em; line-height: 1; margin: 1.3rem 0; }
+  .not-found p { color: var(--text-muted); margin: 0 0 2rem; }
+</style>

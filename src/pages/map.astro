@@ -1,0 +1,393 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CompanyCard from "../components/CompanyCard.astro";
+import { companies } from "../data/companies";
+import { stages } from "../data/stages";
+import { sitePath } from "../lib/paths";
+---
+
+<BaseLayout title="产业地图 · 智芯图谱" description="沿 AI 与半导体价值链查看芯片、基础设施、模型平台与应用环节。" active="map">
+  <section class="page-hero map-hero">
+    <div class="shell page-hero-grid">
+      <div>
+        <span class="eyebrow">Industry map</span>
+        <h1 class="display-title">一张图，理解<br /><em>AI 完整价值链</em></h1>
+      </div>
+      <div>
+        <p class="page-kicker">从芯片设计与制造走向算力基础设施、模型平台和应用。选择一个环节，查看商业逻辑、跟踪信号和代表公司。</p>
+        <div class="page-meta">
+          <span><i></i>{stages.length} 个核心环节</span>
+          <span>{companies.length} 家代表公司</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-overview section-rule">
+    <div class="shell">
+      <div class="flow-labels">
+        <span>上游 · 芯片与制造</span>
+        <span>下游 · 算力、模型与应用</span>
+      </div>
+      <div class="value-flow" aria-label="半导体产业链流程">
+        {stages.map((stage, index) => (
+          <a href={`#${stage.key}`} class="flow-node" style={`--node-accent: ${stage.accent}`}>
+            <span>{stage.index}</span>
+            <i aria-hidden="true"></i>
+            <strong>{stage.name}</strong>
+            <small>{stage.nameEn}</small>
+            {index < stages.length - 1 && <b aria-hidden="true">→</b>}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section map-browser">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Explore layers</span>
+          <h2 class="section-title">按环节探索</h2>
+        </div>
+        <span class="soft-label"><i></i> 点击切换视图</span>
+      </div>
+
+      <div class="stage-tabs" role="toolbar" aria-label="筛选产业环节" data-stage-tabs>
+        <button type="button" class="active" data-stage-filter="all" aria-pressed="true">全部环节</button>
+        {stages.map((stage) => (
+          <button type="button" data-stage-filter={stage.key} aria-pressed="false" style={`--tab-accent: ${stage.accent}`}>
+            <i></i>{stage.name}
+          </button>
+        ))}
+      </div>
+
+      <div class="stage-panels" data-stage-panels>
+        {stages.map((stage) => {
+          const stageCompanies = companies.filter((company) => company.stage === stage.key);
+          return (
+            <section class="stage-panel" id={stage.key} data-stage-panel={stage.key} style={`--stage-accent: ${stage.accent}`}>
+              <header>
+                <div class="stage-title-block">
+                  <span>{stage.index}</span>
+                  <div>
+                    <p>{stage.nameEn}</p>
+                    <h2>{stage.name}</h2>
+                  </div>
+                </div>
+                <p class="stage-description">{stage.description}</p>
+                <div class="signal-box">
+                  <small>TRACKING SIGNALS</small>
+                  <strong>{stage.signal}</strong>
+                </div>
+              </header>
+              <div class="stage-company-grid">
+                {stageCompanies.map((company) => <CompanyCard company={company} compact />)}
+              </div>
+            </section>
+          );
+        })}
+      </div>
+
+      <div class="map-next">
+        <div>
+          <span class="eyebrow">Continue</span>
+          <h2>从产业位置进入公司研究</h2>
+        </div>
+        <a class="button primary" href={sitePath("/companies/")}>打开公司目录 <span class="arrow">↗</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const filterButtons = [...document.querySelectorAll<HTMLButtonElement>("[data-stage-filter]")];
+  const stagePanels = [...document.querySelectorAll<HTMLElement>("[data-stage-panel]")];
+
+  function selectStage(key: string, updateHash = false) {
+    filterButtons.forEach((button) => {
+      const active = button.dataset.stageFilter === key;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+
+    stagePanels.forEach((panel) => {
+      panel.hidden = key !== "all" && panel.dataset.stagePanel !== key;
+    });
+
+    if (updateHash) {
+      history.replaceState(null, "", key === "all" ? location.pathname : `#${key}`);
+    }
+  }
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const key = button.dataset.stageFilter ?? "all";
+      selectStage(key, true);
+    });
+  });
+
+  const initialStage = location.hash.slice(1);
+  if (stagePanels.some((panel) => panel.dataset.stagePanel === initialStage)) {
+    selectStage(initialStage);
+  }
+</script>
+
+<style>
+  .map-hero {
+    background: radial-gradient(circle at 82% 65%, rgba(83, 213, 245, 0.08), transparent 23rem);
+  }
+
+  .map-overview {
+    padding: 3rem 0 4rem;
+  }
+
+  .flow-labels {
+    color: var(--text-dim);
+    display: flex;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    justify-content: space-between;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .value-flow {
+    border: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    min-width: 84rem;
+  }
+
+  .map-overview .shell {
+    overflow-x: auto;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+
+  .flow-node {
+    border-right: 1px solid var(--line);
+    color: var(--text-muted);
+    display: grid;
+    min-height: 10rem;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition: background 160ms ease;
+  }
+
+  .flow-node:last-child {
+    border-right: 0;
+  }
+
+  .flow-node:hover {
+    background: color-mix(in srgb, var(--node-accent) 7%, transparent);
+  }
+
+  .flow-node > span {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+  }
+
+  .flow-node i {
+    background: var(--node-accent);
+    box-shadow: 0 0 16px var(--node-accent);
+    height: 1px;
+    margin: 1.4rem 0 1.1rem;
+    opacity: 0.75;
+    width: 2.1rem;
+  }
+
+  .flow-node strong {
+    color: var(--text-strong);
+    font-size: 0.9rem;
+  }
+
+  .flow-node small {
+    align-self: end;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.48rem;
+    letter-spacing: 0.08em;
+    margin-top: 0.35rem;
+    text-transform: uppercase;
+  }
+
+  .flow-node b {
+    color: var(--node-accent);
+    font-weight: 400;
+    position: absolute;
+    right: -0.38rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .stage-tabs {
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 3rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .stage-tabs button {
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--text-muted);
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-size: 0.7rem;
+    gap: 0.45rem;
+    padding: 0.58rem 0.8rem;
+  }
+
+  .stage-tabs button i {
+    background: var(--tab-accent, var(--mint));
+    border-radius: 50%;
+    height: 0.3rem;
+    opacity: 0.65;
+    width: 0.3rem;
+  }
+
+  .stage-tabs button:hover,
+  .stage-tabs button.active {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--line-strong);
+    color: var(--text-strong);
+  }
+
+  .stage-panel {
+    border-top: 1px solid var(--line);
+    padding: 3.5rem 0 5rem;
+    scroll-margin-top: 6rem;
+  }
+
+  .stage-panel[hidden] {
+    display: none;
+  }
+
+  .stage-panel > header {
+    align-items: start;
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    margin-bottom: 2.5rem;
+  }
+
+  .stage-title-block {
+    align-items: start;
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  .stage-title-block > span {
+    color: var(--stage-accent);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    margin-top: 0.4rem;
+  }
+
+  .stage-title-block p {
+    color: var(--stage-accent);
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    margin: 0 0 0.45rem;
+    text-transform: uppercase;
+  }
+
+  .stage-title-block h2 {
+    font-family: var(--font-display);
+    font-size: 2.1rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .stage-description {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .signal-box {
+    border-left: 1px solid var(--stage-accent);
+    display: grid;
+    gap: 0.55rem;
+    padding-left: 1rem;
+  }
+
+  .signal-box small {
+    color: var(--stage-accent);
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .signal-box strong {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 500;
+    line-height: 1.65;
+  }
+
+  .stage-company-grid {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .map-next {
+    align-items: center;
+    background: linear-gradient(120deg, rgba(99, 230, 190, 0.06), rgba(83, 213, 245, 0.03));
+    border: 1px solid var(--line-strong);
+    border-radius: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+
+  .map-next h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0.5rem 0 0;
+  }
+
+  @media (max-width: 900px) {
+    .stage-panel > header {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .signal-box {
+      grid-column: 2;
+    }
+
+    .stage-company-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .stage-panel > header,
+    .stage-company-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .signal-box {
+      grid-column: auto;
+    }
+
+    .map-next {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

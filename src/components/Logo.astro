@@ -1,0 +1,81 @@
+---
+import { sitePath } from "../lib/paths";
+---
+
+<a class="brand" href={sitePath("/")} aria-label="智芯图谱首页">
+  <span class="brand-mark" aria-hidden="true">
+    <span class="brand-chip"></span>
+  </span>
+  <span class="brand-copy">
+    <strong>智芯图谱</strong>
+    <small>AI & Silicon Atlas</small>
+  </span>
+</a>
+
+<style>
+  .brand {
+    align-items: center;
+    color: var(--text-strong);
+    display: inline-flex;
+    gap: 0.7rem;
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    align-items: center;
+    background: rgba(99, 230, 190, 0.1);
+    border: 1px solid rgba(99, 230, 190, 0.32);
+    border-radius: 0.65rem;
+    display: inline-flex;
+    height: 2.1rem;
+    justify-content: center;
+    position: relative;
+    width: 2.1rem;
+  }
+
+  .brand-mark::before,
+  .brand-mark::after {
+    background: var(--mint);
+    content: "";
+    height: 1px;
+    left: 0.25rem;
+    opacity: 0.65;
+    position: absolute;
+    right: 0.25rem;
+  }
+
+  .brand-mark::before {
+    top: 0.42rem;
+  }
+
+  .brand-mark::after {
+    bottom: 0.42rem;
+  }
+
+  .brand-chip {
+    border: 1px solid var(--amber);
+    display: block;
+    height: 0.78rem;
+    position: relative;
+    transform: rotate(45deg);
+    width: 0.78rem;
+  }
+
+  .brand-copy {
+    display: grid;
+    line-height: 1;
+  }
+
+  .brand-copy strong {
+    font-size: 1rem;
+    letter-spacing: 0.16em;
+  }
+
+  .brand-copy small {
+    color: var(--text-dim);
+    font-size: 0.55rem;
+    letter-spacing: 0.14em;
+    margin-top: 0.28rem;
+    text-transform: uppercase;
+  }
+</style>

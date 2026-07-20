@@ -1,0 +1,113 @@
+---
+import Logo from "./Logo.astro";
+import { sitePath } from "../lib/paths";
+---
+
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div class="footer-intro">
+      <Logo />
+      <p>沿着算力与价值链理解 AI 产业，用可追溯信息辅助独立判断。</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <strong>浏览</strong>
+        <a href={sitePath("/map/")}>产业地图</a>
+        <a href={sitePath("/companies/")}>公司目录</a>
+        <a href={sitePath("/research/")}>研究主题</a>
+        <a href={sitePath("/updates/")}>数据更新</a>
+      </div>
+      <div>
+        <strong>关于</strong>
+        <a href={sitePath("/methodology/")}>方法与来源</a>
+        <a href={sitePath("/updates/")}>数据管线</a>
+      </div>
+    </div>
+  </div>
+  <div class="shell footer-bottom">
+    <p>本站内容仅用于信息整理与学习，不构成投资建议。市场有风险，决策需独立。</p>
+    <span>© 2026 智芯图谱 AI & Silicon Atlas</span>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--line);
+    margin-top: 7rem;
+    padding: 3.5rem 0 2rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr auto;
+  }
+
+  .footer-intro p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin: 1.3rem 0 0;
+    max-width: 24rem;
+  }
+
+  .footer-links {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(2, minmax(7rem, 1fr));
+  }
+
+  .footer-links div {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .footer-links strong {
+    color: var(--text-dim);
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+  }
+
+  .footer-links a {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    text-decoration: none;
+  }
+
+  .footer-links a:hover {
+    color: var(--mint);
+  }
+
+  .footer-bottom {
+    align-items: center;
+    border-top: 1px solid var(--line);
+    color: var(--text-dim);
+    display: flex;
+    font-size: 0.68rem;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+  }
+
+  @media (max-width: 680px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+      gap: 2rem;
+    }
+
+    .footer-bottom {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  }
+</style>

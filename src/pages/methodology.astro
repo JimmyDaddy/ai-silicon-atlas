@@ -1,0 +1,124 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { sitePath } from "../lib/paths";
+---
+
+<BaseLayout title="方法与来源 · 智芯图谱" description="智芯图谱的数据来源、更新方法、内容边界与免责声明。" active="methodology">
+  <section class="page-hero method-hero">
+    <div class="shell page-hero-grid">
+      <div>
+        <span class="eyebrow">Methodology</span>
+        <h1 class="display-title">信息有出处，<br />判断有<em>边界</em></h1>
+      </div>
+      <div>
+        <p class="page-kicker">本站提供产业研究索引，不提供买卖建议。自动生成的数据必须能回到官方来源，并显示报告期与更新时间。</p>
+        <div class="page-meta"><span><i></i>Source first</span><span>Static & auditable</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section principles-section">
+    <div class="shell">
+      <div class="principle-grid">
+        <article><span>01</span><h2>第一方优先</h2><p>优先使用监管披露、公司投资者关系页面和官方开放接口。二手内容仅作为发现线索。</p></article>
+        <article><span>02</span><h2>时间明确</h2><p>每个指标记录报告期、披露日期与抓取时间，避免把历史关系或数据误认为当前状态。</p></article>
+        <article><span>03</span><h2>失败可见</h2><p>接口失败不会静默生成空数据。系统保留上次成功快照，并明确标记过期与异常状态。</p></article>
+        <article><span>04</span><h2>事实与判断分离</h2><p>官方数据、研究关注点和风险项分别展示，不用摘要替代原始披露，不输出自动评级。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-rule">
+    <div class="shell method-layout">
+      <div class="method-nav">
+        <span class="eyebrow">Contents</span>
+        <a href="#sources">数据来源</a>
+        <a href="#pipeline">更新流程</a>
+        <a href="#metrics">指标口径</a>
+        <a href="#boundaries">内容边界</a>
+      </div>
+      <div class="method-body">
+        <section id="sources">
+          <span class="section-number">01 / SOURCES</span>
+          <h2>数据来源</h2>
+          <p>自动化部分目前以官方披露接口为核心。美国及在美披露公司使用 SEC EDGAR；韩国公司支持 OpenDART。其他市场暂时连接第一方投资者关系页面，后续按官方接口和授权条件增加适配器。</p>
+          <div class="source-list">
+            <a href="https://www.sec.gov/edgar/sec-api-documentation" target="_blank" rel="noreferrer"><strong>SEC EDGAR</strong><span>公司申报与 XBRL Company Facts</span><i>↗</i></a>
+            <a href="https://engopendart.fss.or.kr/" target="_blank" rel="noreferrer"><strong>OpenDART</strong><span>韩国上市公司官方披露</span><i>↗</i></a>
+            <a href="https://www.cninfo.com.cn/" target="_blank" rel="noreferrer"><strong>巨潮资讯</strong><span>中国上市公司法定信息披露</span><i>↗</i></a>
+            <a href="https://openapi.twse.com.tw/" target="_blank" rel="noreferrer"><strong>TWSE OpenAPI</strong><span>台湾证券交易所开放数据</span><i>↗</i></a>
+          </div>
+        </section>
+
+        <section id="pipeline">
+          <span class="section-number">02 / PIPELINE</span>
+          <h2>更新流程</h2>
+          <p>定时任务运行在 GitHub Actions 中，网页端不会接触 API 密钥。抓取结果经过归一、校验和静态构建后，只有发生变化的快照才会提交。</p>
+          <div class="pipeline-flow">
+            <span>官方 API</span><i>→</i><span>标识归一</span><i>→</i><span>指标抽取</span><i>→</i><span>数据校验</span><i>→</i><span>Pages 构建</span>
+          </div>
+          <a class="button" href={sitePath("/updates/")}>查看当前更新状态 <span class="arrow">→</span></a>
+        </section>
+
+        <section id="metrics">
+          <span class="section-number">03 / METRICS</span>
+          <h2>指标口径</h2>
+          <p>财务快照从 XBRL 中按候选标签提取最近披露值。收入、净利润、资产、现金和资本开支可能对应不同报告期，因此页面始终同时显示报告期和表单类型。</p>
+          <div class="note-box"><strong>不可直接横向比较：</strong>不同公司会计准则、币种、财政年度和披露标签可能不同。本站不对自动提取值进行年化或汇率转换。</div>
+        </section>
+
+        <section id="boundaries">
+          <span class="section-number">04 / BOUNDARIES</span>
+          <h2>内容与授权边界</h2>
+          <p>本站不会未经授权复制付费研报、新闻全文或行情数据。公开展示实时或延迟行情通常需要供应商与交易所授权，因此默认版本不包含行情。</p>
+          <div class="disclaimer">
+            <strong>免责声明</strong>
+            <p>本站内容仅用于信息整理、学习和一般性产业研究，不构成证券研究报告、投资顾问服务、投资建议或收益承诺。任何投资决策应由使用者独立作出并承担相应风险。</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .method-hero { background: radial-gradient(circle at 78% 62%, rgba(244, 114, 182, 0.065), transparent 24rem); }
+  .principles-section { padding: 4rem 0; }
+  .principle-grid { border-left: 1px solid var(--line); border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); }
+  .principle-grid article { border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); min-height: 16rem; padding: 1.2rem; }
+  .principle-grid span { color: var(--mint); font-family: var(--font-mono); font-size: 0.58rem; }
+  .principle-grid h2 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; margin: 3.2rem 0 0.8rem; }
+  .principle-grid p { color: var(--text-muted); font-size: 0.73rem; line-height: 1.75; margin: 0; }
+  .method-layout { align-items: start; display: grid; gap: 6rem; grid-template-columns: 12rem minmax(0, 1fr); }
+  .method-nav { display: grid; gap: 0.7rem; position: sticky; top: 7rem; }
+  .method-nav .eyebrow { margin-bottom: 0.8rem; }
+  .method-nav a { border-bottom: 1px solid var(--line); color: var(--text-muted); font-size: 0.72rem; padding: 0.65rem 0; text-decoration: none; }
+  .method-nav a:hover { color: var(--mint); }
+  .method-body > section { border-top: 1px solid var(--line); padding: 1.5rem 0 5rem; scroll-margin-top: 6rem; }
+  .section-number { color: var(--mint); font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.1em; }
+  .method-body h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 500; letter-spacing: -0.04em; margin: 1.1rem 0; }
+  .method-body section > p { color: var(--text-muted); font-size: 0.84rem; line-height: 1.9; max-width: 45rem; }
+  .source-list { border-top: 1px solid var(--line); margin-top: 2rem; }
+  .source-list a { align-items: center; border-bottom: 1px solid var(--line); color: var(--text-muted); display: grid; font-size: 0.7rem; gap: 1rem; grid-template-columns: 10rem 1fr auto; padding: 0.9rem 0; text-decoration: none; }
+  .source-list a:hover { color: var(--text-strong); }
+  .source-list strong { color: var(--text-strong); font-size: 0.76rem; }
+  .source-list i { color: var(--mint); font-style: normal; }
+  .pipeline-flow { align-items: center; border: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 2rem 0; padding: 1rem; }
+  .pipeline-flow span { color: var(--text-muted); font-size: 0.67rem; }
+  .pipeline-flow i { color: var(--mint); font-style: normal; }
+  .disclaimer { background: rgba(251, 113, 133, 0.05); border: 1px solid rgba(251, 113, 133, 0.2); margin-top: 2rem; padding: 1.2rem; }
+  .disclaimer strong { color: var(--rose); font-size: 0.72rem; }
+  .disclaimer p { color: var(--text-muted); font-size: 0.74rem; line-height: 1.75; margin: 0.7rem 0 0; }
+
+  @media (max-width: 850px) {
+    .principle-grid { grid-template-columns: repeat(2, 1fr); }
+    .method-layout { gap: 3rem; grid-template-columns: 1fr; }
+    .method-nav { display: none; }
+  }
+
+  @media (max-width: 520px) {
+    .principle-grid { grid-template-columns: 1fr; }
+    .source-list a { grid-template-columns: 1fr auto; }
+    .source-list a span { grid-column: 1 / -1; grid-row: 2; }
+  }
+</style>

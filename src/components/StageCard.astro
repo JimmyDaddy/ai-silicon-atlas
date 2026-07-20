@@ -1,0 +1,108 @@
+---
+import type { IndustryStage } from "../data/stages";
+import { companies } from "../data/companies";
+import { sitePath } from "../lib/paths";
+
+interface Props {
+  stage: IndustryStage;
+}
+
+const { stage } = Astro.props;
+const count = companies.filter((company) => company.stage === stage.key).length;
+---
+
+<article class="stage-card" style={`--stage-accent: ${stage.accent}`}>
+  <div class="stage-index">{stage.index}</div>
+  <div class="stage-icon" aria-hidden="true"><i></i><i></i><i></i></div>
+  <p class="stage-en">{stage.nameEn}</p>
+  <h3>{stage.name}</h3>
+  <p>{stage.shortDescription}</p>
+  <a href={sitePath(`/map/#${stage.key}`)}>{count} 家代表公司 <span aria-hidden="true">→</span></a>
+</article>
+
+<style>
+  .stage-card {
+    border-left: 1px solid var(--line);
+    min-height: 18rem;
+    padding: 1.4rem;
+    position: relative;
+  }
+
+  .stage-card::after {
+    background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--stage-accent) 7%, transparent));
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 180ms ease;
+  }
+
+  .stage-card:hover::after {
+    opacity: 1;
+  }
+
+  .stage-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .stage-index {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+  }
+
+  .stage-icon {
+    align-items: center;
+    display: flex;
+    gap: 0.2rem;
+    height: 4rem;
+    margin: 1.5rem 0 0.85rem;
+  }
+
+  .stage-icon i {
+    background: var(--stage-accent);
+    display: block;
+    opacity: 0.55;
+    width: 0.34rem;
+  }
+
+  .stage-icon i:nth-child(1) { height: 1.25rem; }
+  .stage-icon i:nth-child(2) { height: 2.4rem; opacity: 0.8; }
+  .stage-icon i:nth-child(3) { height: 1.7rem; }
+
+  .stage-en {
+    color: var(--stage-accent) !important;
+    font-family: var(--font-mono);
+    font-size: 0.59rem !important;
+    letter-spacing: 0.11em;
+    margin: 0 0 0.45rem !important;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    margin: 0;
+  }
+
+  p {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    line-height: 1.7;
+    margin: 0.8rem 0 1.4rem;
+  }
+
+  a {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    text-decoration: none;
+  }
+
+  a span {
+    color: var(--stage-accent);
+    margin-left: 0.35rem;
+  }
+</style>

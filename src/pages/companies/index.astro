@@ -1,0 +1,178 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CompanyCard from "../../components/CompanyCard.astro";
+import { companies, markets } from "../../data/companies";
+import { stages } from "../../data/stages";
+---
+
+<BaseLayout title="公司目录 · 智芯图谱" description="浏览 AI 与半导体产业链代表性上市公司研究卡。" active="companies">
+  <section class="page-hero directory-hero">
+    <div class="shell page-hero-grid">
+      <div>
+        <span class="eyebrow">Company directory</span>
+        <h1 class="display-title">沿着价值链<br />找到<em>关键公司</em></h1>
+      </div>
+      <div>
+        <p class="page-kicker">目录覆盖芯片、算力基础设施、模型平台与 AI 应用。使用名称、代码、环节或市场快速筛选。</p>
+        <div class="page-meta">
+          <span><i></i><b data-visible-count>{companies.length}</b> 家公司</span>
+          <span>{markets.length} 个市场</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="directory-section">
+    <div class="shell">
+      <div class="filter-panel">
+        <label class="search-field">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor"/><path d="m16 16 5 5" stroke="currentColor"/></svg>
+          <span class="sr-only">搜索公司</span>
+          <input type="search" placeholder="搜索公司、股票代码或关键词…" data-company-search />
+        </label>
+        <div class="filter-selects">
+          <select aria-label="按产业环节筛选" data-stage-select>
+            <option value="all">全部产业环节</option>
+            {stages.map((stage) => <option value={stage.key}>{stage.name}</option>)}
+          </select>
+          <select aria-label="按交易市场筛选" data-market-select>
+            <option value="all">全部市场</option>
+            {markets.map((market) => <option value={market}>{market}</option>)}
+          </select>
+        </div>
+      </div>
+
+      <div class="directory-meta">
+        <p>资料版本：2026.07 · 按产业链顺序排列</p>
+        <button type="button" data-reset-filters>重置筛选</button>
+      </div>
+
+      <div class="company-grid" data-company-grid>
+        {companies.map((company) => <CompanyCard company={company} />)}
+      </div>
+      <div class="empty-state" data-empty-state>
+        没有找到匹配的公司。可以尝试更短的关键词，或重置筛选条件。
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const searchInput = document.querySelector<HTMLInputElement>("[data-company-search]");
+  const stageSelect = document.querySelector<HTMLSelectElement>("[data-stage-select]");
+  const marketSelect = document.querySelector<HTMLSelectElement>("[data-market-select]");
+  const resetButton = document.querySelector<HTMLButtonElement>("[data-reset-filters]");
+  const cards = [...document.querySelectorAll<HTMLElement>("[data-company-card]")];
+  const count = document.querySelector<HTMLElement>("[data-visible-count]");
+  const emptyState = document.querySelector<HTMLElement>("[data-empty-state]");
+
+  function applyFilters() {
+    const query = searchInput?.value.trim().toLowerCase() ?? "";
+    const stage = stageSelect?.value ?? "all";
+    const market = marketSelect?.value ?? "all";
+    let visible = 0;
+
+    cards.forEach((card) => {
+      const searchMatches = !query || card.dataset.search?.includes(query);
+      const stageMatches = stage === "all" || card.dataset.stage === stage;
+      const marketMatches = market === "all" || card.dataset.market === market;
+      const matches = Boolean(searchMatches && stageMatches && marketMatches);
+      card.hidden = !matches;
+      if (matches) visible += 1;
+    });
+
+    if (count) count.textContent = String(visible);
+    emptyState?.classList.toggle("visible", visible === 0);
+  }
+
+  searchInput?.addEventListener("input", applyFilters);
+  stageSelect?.addEventListener("change", applyFilters);
+  marketSelect?.addEventListener("change", applyFilters);
+  resetButton?.addEventListener("click", () => {
+    if (searchInput) searchInput.value = "";
+    if (stageSelect) stageSelect.value = "all";
+    if (marketSelect) marketSelect.value = "all";
+    applyFilters();
+    searchInput?.focus();
+  });
+</script>
+
+<style>
+  .sr-only {
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .directory-hero {
+    background: radial-gradient(circle at 70% 70%, rgba(167, 139, 250, 0.075), transparent 22rem);
+  }
+
+  .page-meta b {
+    color: var(--text-strong);
+    font-weight: 500;
+  }
+
+  .directory-section {
+    padding: 2rem 0 6rem;
+  }
+
+  .filter-panel {
+    position: sticky;
+    top: 5.3rem;
+    z-index: 20;
+  }
+
+  .directory-meta {
+    align-items: center;
+    color: var(--text-dim);
+    display: flex;
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    justify-content: space-between;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.4rem;
+  }
+
+  .directory-meta p {
+    margin: 0;
+  }
+
+  .directory-meta button {
+    background: transparent;
+    border: 0;
+    color: var(--text-muted);
+    font-size: 0.65rem;
+    padding: 0.3rem 0;
+  }
+
+  .directory-meta button:hover {
+    color: var(--mint);
+  }
+
+  .company-grid {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    .company-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .filter-panel {
+      position: static;
+    }
+
+    .company-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

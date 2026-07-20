@@ -1,0 +1,161 @@
+---
+import type { Company } from "../data/companies";
+import { stageByKey } from "../data/stages";
+import { sitePath } from "../lib/paths";
+
+interface Props {
+  company: Company;
+  compact?: boolean;
+}
+
+const { company, compact = false } = Astro.props;
+const stage = stageByKey[company.stage];
+---
+
+<article class:list={["company-card", { compact }]} style={`--company-accent: ${stage.accent}`} data-company-card data-stage={company.stage} data-market={company.exchange} data-search={`${company.name} ${company.nameEn} ${company.ticker} ${company.focus.join(" ")}`.toLowerCase()}>
+  <div class="company-card-top">
+    <span class="ticker">{company.ticker}</span>
+    <span class="stage-dot"><i></i>{stage.name}</span>
+  </div>
+  <div>
+    <h3><a href={sitePath(`/companies/${company.slug}/`)}>{company.name}</a></h3>
+    <p class="company-en">{company.nameEn} · {company.exchange}</p>
+  </div>
+  {!compact && <p class="company-description">{company.description}</p>}
+  <div class="tag-list">
+    {company.focus.slice(0, compact ? 2 : 3).map((tag) => <span>{tag}</span>)}
+  </div>
+  <a class="card-link" href={sitePath(`/companies/${company.slug}/`)} aria-label={`查看${company.name}详情`}>
+    查看研究卡 <span aria-hidden="true">↗</span>
+  </a>
+</article>
+
+<style>
+  .company-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
+    border: 1px solid var(--line);
+    border-radius: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 20rem;
+    overflow: hidden;
+    padding: 1.35rem;
+    position: relative;
+    transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+  }
+
+  .company-card::before {
+    background: var(--company-accent);
+    content: "";
+    height: 1px;
+    left: 1.35rem;
+    opacity: 0.75;
+    position: absolute;
+    right: 72%;
+    top: 0;
+  }
+
+  .company-card:hover {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018));
+    border-color: var(--line-strong);
+    transform: translateY(-3px);
+  }
+
+  .company-card.compact {
+    min-height: 16.5rem;
+  }
+
+  .company-card-top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.2rem;
+  }
+
+  .ticker {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--text-strong);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    padding: 0.35rem 0.55rem;
+  }
+
+  .stage-dot {
+    align-items: center;
+    color: var(--text-dim);
+    display: inline-flex;
+    font-size: 0.66rem;
+    gap: 0.4rem;
+  }
+
+  .stage-dot i {
+    background: var(--company-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--company-accent);
+    display: inline-block;
+    height: 0.38rem;
+    width: 0.38rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+    margin: 0;
+  }
+
+  h3 a {
+    color: var(--text-strong);
+    text-decoration: none;
+  }
+
+  .company-en {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    margin: 0.4rem 0 0;
+  }
+
+  .company-description {
+    color: var(--text-muted);
+    font-size: 0.83rem;
+    line-height: 1.75;
+    margin: 1.2rem 0;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding-top: 1.2rem;
+  }
+
+  .tag-list span {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 0.4rem;
+    color: var(--text-muted);
+    font-size: 0.64rem;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .card-link {
+    align-items: center;
+    border-top: 1px solid var(--line);
+    color: var(--text-muted);
+    display: flex;
+    font-size: 0.72rem;
+    justify-content: space-between;
+    margin-top: 1.15rem;
+    padding-top: 1rem;
+    text-decoration: none;
+  }
+
+  .card-link span {
+    color: var(--company-accent);
+  }
+
+  .company-card:hover .card-link {
+    color: var(--text-strong);
+  }
+</style>

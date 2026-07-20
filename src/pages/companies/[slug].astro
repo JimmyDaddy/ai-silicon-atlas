@@ -113,7 +113,10 @@ const analysisFallback = (() => {
         <small>LAST CHECK</small>
         <strong>{formatDate(update?.checkedAt)}</strong>
       </div>
-      <a href={sitePath("/updates/")}>查看更新状态 ↗</a>
+      <div class="snapshot-actions">
+        <a href={sitePath(`/compare/?companies=${company.slug}`)}>加入公司比较 ↗</a>
+        <a href={sitePath("/updates/")}>查看更新状态 ↗</a>
+      </div>
     </div>
   </section>
 
@@ -462,11 +465,20 @@ const analysisFallback = (() => {
     background: var(--amber);
   }
 
-  .snapshot-inner > a {
+  .snapshot-actions {
+    align-items: flex-end;
+    display: grid;
+    gap: 0.45rem;
+    justify-items: end;
+  }
+
+  .snapshot-actions a {
     color: var(--text-muted);
     font-size: 0.74rem;
     text-decoration: none;
   }
+
+  .snapshot-actions a:first-child { color: var(--company-accent); }
 
   .metrics-section {
     border-bottom: 1px solid var(--line);
@@ -1034,6 +1046,8 @@ const analysisFallback = (() => {
     .snapshot-inner {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .snapshot-actions { align-items: start; justify-items: start; }
 
     .metrics-grid,
     .analysis-grid,

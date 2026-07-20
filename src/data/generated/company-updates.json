@@ -1,27 +1,28 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T12:59:23.853Z",
+  "generatedAt": "2026-07-20T13:15:53.979Z",
   "sources": {
     "secEdgar": {
-      "status": "ok",
+      "status": "error",
       "provider": "SEC EDGAR",
       "url": "https://www.sec.gov/edgar/sec-api-documentation",
-      "startedAt": "2026-07-20T12:59:23.853Z",
-      "completedAt": "2026-07-20T12:59:44.930Z",
-      "companyCount": 25
+      "startedAt": "2026-07-20T13:15:53.980Z",
+      "completedAt": "2026-07-20T13:15:58.369Z",
+      "companyCount": 25,
+      "error": "HTTP 403 for https://www.sec.gov/files/company_tickers.json"
     },
     "openDart": {
       "status": "unconfigured",
       "provider": "OpenDART",
       "url": "https://engopendart.fss.or.kr/",
-      "startedAt": "2026-07-20T12:59:23.885Z",
-      "completedAt": "2026-07-20T12:59:23.885Z",
+      "startedAt": "2026-07-20T13:15:54.036Z",
+      "completedAt": "2026-07-20T13:15:54.036Z",
       "companyCount": 2
     },
     "manual": {
       "status": "manual",
       "provider": "First-party IR",
-      "completedAt": "2026-07-20T12:59:23.853Z",
+      "completedAt": "2026-07-20T13:15:53.979Z",
       "companyCount": 4
     }
   },
@@ -110,7 +111,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "alphabet": {
       "status": "ok",
@@ -196,7 +201,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "amazon": {
       "status": "ok",
@@ -270,8 +279,11 @@
         }
       },
       "warnings": [
-        "Ignored stale capex metric ending 2017-03-31"
-      ]
+        "Ignored stale capex metric ending 2017-03-31",
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "amd": {
       "status": "ok",
@@ -357,7 +369,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "amkor": {
       "status": "ok",
@@ -443,7 +459,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "applied-materials": {
       "status": "ok",
@@ -529,7 +549,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "arista-networks": {
       "status": "ok",
@@ -615,7 +639,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "arm": {
       "status": "ok",
@@ -701,7 +729,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "ase-technology": {
       "status": "ok",
@@ -774,7 +806,11 @@
           "tag": "CashAndCashEquivalents"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "asml": {
       "status": "ok",
@@ -860,7 +896,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "broadcom": {
       "status": "ok",
@@ -946,7 +986,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "cadence": {
       "status": "ok",
@@ -1032,7 +1076,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "equinix": {
       "status": "ok",
@@ -1106,13 +1154,16 @@
         }
       },
       "warnings": [
-        "Ignored stale capex metric ending 2018-09-30"
-      ]
+        "Ignored stale capex metric ending 2018-09-30",
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "jcet": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-07-20T12:59:23.853Z",
+      "checkedAt": "2026-07-20T13:15:53.979Z",
       "identifiers": {},
       "sourceUrl": "https://www.jcetglobal.com/",
       "latestFiling": null,
@@ -1205,12 +1256,16 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "mediatek": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-07-20T12:59:23.853Z",
+      "checkedAt": "2026-07-20T13:15:53.979Z",
       "identifiers": {},
       "sourceUrl": "https://corp.mediatek.com/investor-relations",
       "latestFiling": null,
@@ -1303,7 +1358,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "micron": {
       "status": "ok",
@@ -1389,7 +1448,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "microsoft": {
       "status": "ok",
@@ -1475,7 +1538,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "nvidia": {
       "status": "ok",
@@ -1549,8 +1616,11 @@
         }
       },
       "warnings": [
-        "Ignored stale capex metric ending 2020-07-26"
-      ]
+        "Ignored stale capex metric ending 2020-07-26",
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "palantir": {
       "status": "ok",
@@ -1636,7 +1706,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "salesforce": {
       "status": "ok",
@@ -1722,12 +1796,16 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "samsung-electronics": {
       "status": "unconfigured",
       "provider": "OpenDART",
-      "checkedAt": "2026-07-20T12:59:23.885Z",
+      "checkedAt": "2026-07-20T13:15:54.036Z",
       "identifiers": {
         "corpCode": "00126380"
       },
@@ -1819,12 +1897,16 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "sk-hynix": {
       "status": "unconfigured",
       "provider": "OpenDART",
-      "checkedAt": "2026-07-20T12:59:23.885Z",
+      "checkedAt": "2026-07-20T13:15:54.036Z",
       "identifiers": {
         "corpCode": "00164779"
       },
@@ -1835,7 +1917,7 @@
     "smic": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-07-20T12:59:23.853Z",
+      "checkedAt": "2026-07-20T13:15:53.979Z",
       "identifiers": {},
       "sourceUrl": "https://www.smics.com/en/site/company",
       "latestFiling": null,
@@ -1928,7 +2010,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "synopsys": {
       "status": "ok",
@@ -2014,12 +2100,16 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "tokyo-electron": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-07-20T12:59:23.853Z",
+      "checkedAt": "2026-07-20T13:15:53.979Z",
       "identifiers": {},
       "sourceUrl": "https://www.tel.com/ir/",
       "latestFiling": null,
@@ -2099,7 +2189,11 @@
           "tag": "CashAndCashEquivalents"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     },
     "vertiv": {
       "status": "ok",
@@ -2185,7 +2279,11 @@
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
       },
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 403 for https://www.sec.gov/files/company_tickers.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-07-20T13:15:53.979Z"
     }
   }
 }

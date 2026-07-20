@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T16:45:31.414Z",
-  "overall": "degraded",
+  "generatedAt": "2026-07-20T16:55:11.068Z",
+  "overall": "critical",
   "schedule": {
     "cadence": "daily",
     "cronUtc": "17 2 * * *",
@@ -15,8 +15,8 @@
       "manual": 4,
       "unconfigured": 2
     },
-    "fresh": 25,
-    "stale": 0,
+    "fresh": 0,
+    "stale": 25,
     "withLatestFiling": 25,
     "withMetrics": 25
   },
@@ -30,8 +30,8 @@
   },
   "intelligence": {
     "total": 55,
-    "completed": 36,
-    "pending": 19,
+    "completed": 52,
+    "pending": 3,
     "independent": 20,
     "companyViewpoint": 35,
     "independentShare": 0.3636,
@@ -42,17 +42,17 @@
   "providers": {
     "secEdgar": {
       "provider": "SEC EDGAR",
-      "status": "ok",
-      "completedAt": "2026-07-20T16:45:17.167Z",
+      "status": "error",
+      "completedAt": "2026-07-20T16:55:10.734Z",
       "companyCount": 25,
-      "completedCount": 25,
-      "failedCount": 0,
-      "error": null
+      "completedCount": 0,
+      "failedCount": 25,
+      "error": "SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
     },
     "openDart": {
       "provider": "OpenDART",
       "status": "unconfigured",
-      "completedAt": "2026-07-20T16:44:51.302Z",
+      "completedAt": "2026-07-20T16:54:58.965Z",
       "companyCount": 2,
       "completedCount": null,
       "failedCount": null,
@@ -61,7 +61,7 @@
     "manual": {
       "provider": "First-party IR",
       "status": "manual",
-      "completedAt": "2026-07-20T16:44:51.279Z",
+      "completedAt": "2026-07-20T16:54:58.922Z",
       "companyCount": 4,
       "completedCount": null,
       "failedCount": null,
@@ -69,6 +69,18 @@
     }
   },
   "issues": [
+    {
+      "severity": "critical",
+      "code": "sec-provider-down",
+      "title": "SEC EDGAR 本轮整体不可用",
+      "detail": "SEC access circuit opened after three consecutive HTTP 403 responses; remaining companies kept their last good snapshot"
+    },
+    {
+      "severity": "critical",
+      "code": "stale-company-snapshots",
+      "title": "25 家公司正在使用上一版快照",
+      "detail": "远端失败时保留旧数据是预期保护机制，但应尽快恢复来源。"
+    },
     {
       "severity": "info",
       "code": "dart-unconfigured",
@@ -78,7 +90,7 @@
     {
       "severity": "warning",
       "code": "news-analysis-backlog",
-      "title": "19 篇情报等待 AI 处理",
+      "title": "3 篇情报等待 AI 处理",
       "detail": "后续批次会继续处理，页面暂时使用来源摘要或编辑要点。"
     },
     {

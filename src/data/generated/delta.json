@@ -1,38 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T16:45:31.414Z",
+  "generatedAt": "2026-07-20T16:55:11.068Z",
   "period": {
-    "from": "2026-07-20T15:37:24.644Z",
-    "to": "2026-07-20T16:45:31.414Z",
-    "baseRef": "4332d78"
+    "from": "2026-07-20T16:45:31.414Z",
+    "to": "2026-07-20T16:55:11.068Z",
+    "baseRef": "HEAD"
   },
   "summary": {
     "newFilings": 0,
     "metricChanges": 0,
     "companyStatusChanges": 25,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 12,
-    "intelligenceAnalysisRefreshes": 8,
-    "totalChanges": 45
+    "newIntelligence": 0,
+    "intelligenceAnalysisRefreshes": 16,
+    "totalChanges": 41
   },
   "affected": {
     "stages": {
-      "ai-applications": 10,
-      "models-platforms": 13,
-      "design": 9,
+      "ai-applications": 8,
+      "models-platforms": 9,
+      "design": 6,
       "packaging": 9,
-      "equipment-materials": 4,
-      "ai-infrastructure": 11,
+      "equipment-materials": 8,
+      "ai-infrastructure": 8,
       "eda-ip": 3,
       "memory": 8,
-      "manufacturing": 2
+      "manufacturing": 5
     },
-    "topics": {
-      "模型与平台": 9,
-      "企业应用与生产力": 1,
-      "资本市场与金融稳定": 1,
-      "AI 算力与芯片": 2
-    }
+    "topics": {}
   },
   "companies": {
     "filings": [],
@@ -43,11 +38,11 @@
         "stage": "ai-applications",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -55,11 +50,11 @@
         "stage": "models-platforms",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -67,11 +62,11 @@
         "stage": "models-platforms",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -79,11 +74,11 @@
         "stage": "design",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -91,11 +86,11 @@
         "stage": "packaging",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -103,11 +98,11 @@
         "stage": "equipment-materials",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -115,11 +110,11 @@
         "stage": "ai-infrastructure",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -127,11 +122,11 @@
         "stage": "eda-ip",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -139,11 +134,11 @@
         "stage": "packaging",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -151,11 +146,11 @@
         "stage": "equipment-materials",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -163,11 +158,11 @@
         "stage": "design",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -175,11 +170,11 @@
         "stage": "eda-ip",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -187,11 +182,11 @@
         "stage": "ai-infrastructure",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -199,11 +194,11 @@
         "stage": "equipment-materials",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -211,11 +206,11 @@
         "stage": "models-platforms",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -223,11 +218,11 @@
         "stage": "memory",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -235,11 +230,11 @@
         "stage": "models-platforms",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -247,11 +242,11 @@
         "stage": "design",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -259,11 +254,11 @@
         "stage": "ai-applications",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -271,11 +266,11 @@
         "stage": "ai-applications",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -283,11 +278,11 @@
         "stage": "ai-applications",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -295,11 +290,11 @@
         "stage": "ai-infrastructure",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -307,11 +302,11 @@
         "stage": "eda-ip",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -319,11 +314,11 @@
         "stage": "manufacturing",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       },
       {
@@ -331,287 +326,71 @@
         "stage": "ai-infrastructure",
         "from": {
           "status": "ok",
-          "stale": true
+          "stale": false
         },
         "to": {
           "status": "ok",
-          "stale": false
+          "stale": true
         }
       }
     ],
     "analysis": []
   },
   "intelligence": {
-    "new": [
+    "new": [],
+    "analysisRefreshed": [
       {
         "id": "federal-reserve-notes-61783e5249ba",
-        "publishedAt": "2026-07-17T18:30:00.000Z",
         "source": "美国联邦储备委员会 FEDS Notes",
-        "sourceType": "央行研究",
-        "title": "FEDS Note: The AI Buildout and the Economy: Publicly Available Data to Assess AI's Impact",
-        "summary": "Paul E. Soto , Mason Thieu, and Jeffrey S. Allen This note presents publicly available indicators that can help researchers and policymakers track the evolution of the generative AI buildout and its potential impact on the economy on a timely basis. We organize the indicators into three categories: capabilities and costs; firm investment and adoption; and productivity and labor.",
-        "topics": [
-          "模型与平台",
-          "企业应用与生产力"
-        ],
+        "title": "FEDS报告：利用公开数据评估生成式AI建设及其对经济的影响",
         "relatedCompanies": [],
         "relatedStages": [
           "models-platforms",
           "ai-applications"
         ],
-        "analysisStatus": "pending",
-        "sourceUrl": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html"
+        "generatedAt": "2026-07-20T16:55:21.860Z"
       },
       {
         "id": "federal-reserve-notes-e16019c2b761",
-        "publishedAt": "2026-07-14T14:05:00.000Z",
         "source": "美国联邦储备委员会 FEDS Notes",
-        "sourceType": "央行研究",
-        "title": "FEDS Note: Technology Shocks, the AI Boom, and the U.S. Current Account",
-        "summary": "Giuseppe Fiori , Colleen Lipa, and Erik Nuenninghoff The current artificial intelligence (AI) investment boom in the United States provides a powerful boost to imports of high-technology capital goods. The AI buildout bears the hallmarks of an investment-specific technology shock—a process in which rapid technological progress makes each new generation of capital equipment significantly cheaper and more powerful than",
-        "topics": [
-          "模型与平台"
-        ],
+        "title": "FEDS Note：技术冲击、人工智能热潮与美国经常账户",
         "relatedCompanies": [],
         "relatedStages": [],
-        "analysisStatus": "pending",
-        "sourceUrl": "https://www.federalreserve.gov/econres/notes/feds-notes/technology-shocks-the-ai-boomandthe-u-s-current-account-20260714.html"
+        "generatedAt": "2026-07-20T16:55:26.718Z"
       },
       {
         "id": "federal-reserve-working-papers-8ac0993c13ca",
-        "publishedAt": "2026-07-07T13:15:00.000Z",
         "source": "美国联邦储备委员会研究",
-        "sourceType": "央行研究",
-        "title": "FEDS Paper: Capturing Heterogeneity: Machine Learning Approaches to Implied Volatility Forecasting",
-        "summary": "Hyung Joo Kim and Dong Hwan Oh Despite documented heterogeneity in volatility dynamics across the option surface, standard implied volatility forecasting models apply homogeneous parameters throughout. We introduce a machine-learning framework that uses regression trees to partition the surface along both moneyness and maturity dimensions, identifying data-driven regions where distinct forecasting models perform best",
-        "topics": [
-          "模型与平台"
-        ],
+        "title": "美联储研究：利用机器学习方法捕捉隐含波动率的异质性预测",
         "relatedCompanies": [],
         "relatedStages": [],
-        "analysisStatus": "pending",
-        "sourceUrl": "https://www.federalreserve.gov/econres/feds/capturing-heterogeneity-machine-learning-approaches-to-implied-volatility-forecasting.htm"
+        "generatedAt": "2026-07-20T16:55:32.910Z"
       },
       {
-        "id": "nist-news-a407d520b6d1",
-        "publishedAt": "2026-06-09T12:00:00.000Z",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "sourceType": "政府研究",
-        "title": "NIST Mathematical Proof Supports Transition to a Continuous-Monitor-and-Update Security Model for AI Systems",
-        "summary": "The proof extends to AI the logic used by famed mathematician Kurt Gödel, whose incompleteness theorems have had a profound effect on math for nearly a century.",
-        "topics": [
-          "模型与平台"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "analysisStatus": "pending",
-        "sourceUrl": "https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update"
-      },
-      {
-        "id": "nist-news-4356b0d9ab7d",
-        "publishedAt": "2026-06-04T12:00:00.000Z",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "sourceType": "政府研究",
-        "title": "New AI Model Shows How to Evacuate for Fires One Safe Step at a Time",
-        "summary": "A NIST-led team has created a new AI model that can identify safe evacuation routes in a single-story floor plan during a fire, with a multilevel version in the works.",
-        "topics": [
-          "模型与平台"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "analysisStatus": "pending",
-        "sourceUrl": "https://www.nist.gov/news-events/news/2026/06/new-ai-model-shows-how-evacuate-fires-one-safe-step-time"
-      },
-      {
-        "id": "nist-news-7cdc0188c578",
-        "publishedAt": "2026-05-29T12:00:00.000Z",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "sourceType": "政府研究",
-        "title": "NIST Expands AI Consortium’s Scope, Calls for New Members",
-        "summary": "The consortium will focus on AI innovation and adoption, with six task groups concentrating on different aspects of AI measurement science and evaluation.",
-        "topics": [
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "models-platforms",
-          "ai-applications"
-        ],
-        "analysisStatus": "pending",
-        "sourceUrl": "https://www.nist.gov/news-events/news/2026/05/nist-expands-ai-consortiums-scope-calls-new-members"
-      },
-      {
-        "id": "nist-news-b104cac390f5",
-        "publishedAt": "2026-03-30T12:00:00.000Z",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "sourceType": "政府研究",
-        "title": "NIST Researchers Develop Photonic Chip Packaging That Can Withstand Extreme Environments",
-        "summary": "The advance could allow these technologies to operate in deep-space probes, inside nuclear reactors, in ultrahigh vacuum systems, and at temperatures both near absolute zero and in scorchingly hot industrial settings.",
-        "topics": [
-          "AI 算力与芯片"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure"
-        ],
-        "analysisStatus": "pending",
-        "sourceUrl": "https://www.nist.gov/news-events/news/2026/03/nist-researchers-develop-photonic-chip-packaging-can-withstand-extreme"
-      },
-      {
-        "id": "nist-news-f8fd13e7bc70",
-        "publishedAt": "2026-02-17T12:00:00.000Z",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "sourceType": "政府研究",
-        "title": "Announcing the \"AI Agent Standards Initiative\" for Interoperable and Secure Innovation",
-        "summary": "The Initiative will ensure that the next generation of AI is widely adopted with confidence, can function securely on behalf of its users, and can interoperate smoothly across the digital ecosystem.",
-        "topics": [
-          "模型与平台"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "models-platforms"
-        ],
-        "analysisStatus": "pending",
-        "sourceUrl": "https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure"
-      },
-      {
-        "id": "nist-news-257e0f319be3",
-        "publishedAt": "2026-02-10T12:00:00.000Z",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "sourceType": "政府研究",
-        "title": "NIST Allocates Over $3 Million to Small Businesses Advancing AI, Biotechnology, Semiconductors, Quantum and More",
-        "summary": "NIST is allocating funding to eight small businesses in seven states under the Small Business Innovation Research (SBIR) program.",
-        "topics": [
-          "AI 算力与芯片"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure"
-        ],
-        "analysisStatus": "pending",
-        "sourceUrl": "https://www.nist.gov/news-events/news/2026/02/nist-allocates-over-3-million-small-businesses-advancing-ai-biotechnology"
-      },
-      {
-        "id": "nist-news-e28a2a44050f",
-        "publishedAt": "2026-01-12T12:00:00.000Z",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "sourceType": "政府研究",
-        "title": "CAISI Issues Request for Information About Securing AI Agent Systems",
-        "summary": "The Center for AI Standards and Innovation (CAISI) at the U.S. Department of Commerce’s National Institute of Standards and Technology (NIST) has published a Request for Information (RFI) seeking insights from industry, academia, and the security",
-        "topics": [
-          "模型与平台"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "models-platforms"
-        ],
-        "analysisStatus": "pending",
-        "sourceUrl": "https://www.nist.gov/news-events/news/2026/01/caisi-issues-request-information-about-securing-ai-agent-systems"
-      },
-      {
-        "id": "nist-news-7ecf131aeb75",
-        "publishedAt": "2025-12-22T12:00:00.000Z",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "sourceType": "政府研究",
-        "title": "NIST Launches Centers for AI in Manufacturing and Critical Infrastructure",
-        "summary": "NIST has expanded its collaboration with the nonprofit MITRE Corporation as part of its efforts to ensure U.S. leadership in artificial intelligence.",
-        "topics": [
-          "模型与平台"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "analysisStatus": "pending",
-        "sourceUrl": "https://www.nist.gov/news-events/news/2025/12/nist-launches-centers-ai-manufacturing-and-critical-infrastructure"
-      },
-      {
-        "id": "nist-news-6307e87c7b63",
-        "publishedAt": "2025-12-16T12:00:00.000Z",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "sourceType": "政府研究",
-        "title": "Draft NIST Guidelines Rethink Cybersecurity for the AI Era",
-        "summary": "New guidelines can help an organization determine ways to incorporate AI into its operations while mitigating cybersecurity risks.",
-        "topics": [
-          "模型与平台"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "analysisStatus": "pending",
-        "sourceUrl": "https://www.nist.gov/news-events/news/2025/12/draft-nist-guidelines-rethink-cybersecurity-ai-era"
-      }
-    ],
-    "analysisRefreshed": [
-      {
-        "id": "intel-newsroom-3b1450237817",
-        "source": "Intel Newsroom",
-        "title": "美国250周年关键时刻：英特尔推动美国创新、人工智能与制造业发展",
-        "relatedCompanies": [],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "ai-applications"
-        ],
-        "generatedAt": "2026-07-20T15:42:58.214Z"
-      },
-      {
-        "id": "aws-blog-b55f6aafdb01",
+        "id": "aws-blog-578e9bc432aa",
         "source": "AWS 官方博客",
-        "title": "AWS 2026年6月22日周报：纽约峰会回顾、河内本地区域、Grok 4.3上线、降价等",
+        "title": "AWS 推出 AWS Transform 持续现代化预览版，实现技术债务的自动检测与修复",
         "relatedCompanies": [
-          "nvidia",
           "amazon"
         ],
         "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
           "ai-infrastructure",
           "models-platforms"
         ],
-        "generatedAt": "2026-07-20T15:43:07.675Z"
+        "generatedAt": "2026-07-20T16:55:49.287Z"
       },
       {
-        "id": "microsoft-blog-d69585e94d8c",
-        "source": "Microsoft 官方博客",
-        "title": "微软在德州佩科斯建设新数据中心，扩展AI与云服务容量",
-        "relatedCompanies": [
-          "microsoft"
-        ],
-        "relatedStages": [
-          "ai-infrastructure",
-          "ai-applications",
-          "models-platforms"
-        ],
-        "generatedAt": "2026-07-20T15:43:14.946Z"
-      },
-      {
-        "id": "aws-blog-430502eb760b",
-        "source": "AWS 官方博客",
-        "title": "亚马逊发布搭载NVIDIA RTX PRO 4500 Blackwell GPU的EC2 G7实例",
-        "relatedCompanies": [
-          "nvidia",
-          "amazon"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "ai-applications"
-        ],
-        "generatedAt": "2026-07-20T15:43:22.650Z"
-      },
-      {
-        "id": "intel-newsroom-f40faef1a1b0",
+        "id": "intel-newsroom-170af8c59864",
         "source": "Intel Newsroom",
-        "title": "英特尔宣布任命新领导加速代工发展与制造",
+        "title": "英特尔发布2025-2026企业责任报告，推动负责任商业实践与AI驱动增长",
+        "relatedCompanies": [],
+        "relatedStages": [],
+        "generatedAt": "2026-07-20T16:55:53.383Z"
+      },
+      {
+        "id": "intel-newsroom-cabc5fa7a607",
+        "source": "Intel Newsroom",
+        "title": "英特尔代工在VLSI研讨会上详述工艺里程碑及未来创新",
         "relatedCompanies": [],
         "relatedStages": [
           "equipment-materials",
@@ -619,50 +398,135 @@
           "memory",
           "packaging"
         ],
-        "generatedAt": "2026-07-20T15:43:32.520Z"
+        "generatedAt": "2026-07-20T16:55:59.372Z"
       },
       {
-        "id": "aws-blog-b8ee967c4a0c",
-        "source": "AWS 官方博客",
-        "title": "2026年纽约AWS峰会主要公告汇总",
+        "id": "microsoft-blog-1a2eed32f806",
+        "source": "Microsoft 官方博客",
+        "title": "微软：实现AI成功的关键是智能与信任",
+        "relatedCompanies": [
+          "microsoft"
+        ],
+        "relatedStages": [
+          "equipment-materials",
+          "manufacturing",
+          "memory",
+          "packaging",
+          "ai-applications"
+        ],
+        "generatedAt": "2026-07-20T16:56:05.779Z"
+      },
+      {
+        "id": "nist-news-a407d520b6d1",
+        "source": "美国国家标准与技术研究院（NIST）",
+        "title": "NIST数学证明支持AI系统向持续监控与更新安全模型转变",
+        "relatedCompanies": [],
+        "relatedStages": [],
+        "generatedAt": "2026-07-20T16:56:09.348Z"
+      },
+      {
+        "id": "nist-news-4356b0d9ab7d",
+        "source": "美国国家标准与技术研究院（NIST）",
+        "title": "美国国家标准与技术研究院发布新AI模型，实现火灾安全逐步疏散路径识别",
+        "relatedCompanies": [],
+        "relatedStages": [],
+        "generatedAt": "2026-07-20T16:56:14.147Z"
+      },
+      {
+        "id": "microsoft-blog-3ee1cab83814",
+        "source": "Microsoft 官方博客",
+        "title": "微软：AI本身无法改变企业，关键在于运行AI的系统",
+        "relatedCompanies": [
+          "microsoft"
+        ],
+        "relatedStages": [
+          "equipment-materials",
+          "manufacturing",
+          "memory",
+          "packaging",
+          "ai-applications"
+        ],
+        "generatedAt": "2026-07-20T16:56:21.345Z"
+      },
+      {
+        "id": "microsoft-blog-9b1f990896ab",
+        "source": "Microsoft 官方博客",
+        "title": "微软Build 2026：赋能开发者构建多模型智能平台",
         "relatedCompanies": [
           "nvidia",
-          "amazon"
+          "microsoft"
         ],
         "relatedStages": [
           "design",
           "memory",
           "packaging",
           "ai-infrastructure",
-          "models-platforms"
+          "equipment-materials"
         ],
-        "generatedAt": "2026-07-20T15:43:40.088Z"
+        "generatedAt": "2026-07-20T16:56:30.830Z"
       },
       {
-        "id": "aws-blog-eab54b0985c0",
-        "source": "AWS 官方博客",
-        "title": "亚马逊推出Bedrock托管知识库，加速企业级生成式AI应用开发",
-        "relatedCompanies": [
-          "alphabet",
-          "amazon"
-        ],
+        "id": "nist-news-7cdc0188c578",
+        "source": "美国国家标准与技术研究院（NIST）",
+        "title": "美国国家标准与技术研究院（NIST）扩大人工智能联盟范围，呼吁新成员加入",
+        "relatedCompanies": [],
         "relatedStages": [
           "models-platforms",
           "ai-applications"
         ],
-        "generatedAt": "2026-07-20T15:43:46.985Z"
+        "generatedAt": "2026-07-20T16:56:34.677Z"
       },
       {
-        "id": "aws-blog-02bc5318c022",
-        "source": "AWS 官方博客",
-        "title": "亚马逊宣布Amazon Bedrock AgentCore支持基于网络搜索的AI智能体",
+        "id": "microsoft-blog-d086087d104d",
+        "source": "Microsoft 官方博客",
+        "title": "从AI试点到企业影响：为何执行力成为新的差异化因素",
         "relatedCompanies": [
-          "amazon"
+          "microsoft"
         ],
+        "relatedStages": [
+          "equipment-materials",
+          "manufacturing",
+          "memory",
+          "packaging",
+          "models-platforms"
+        ],
+        "generatedAt": "2026-07-20T16:56:41.496Z"
+      },
+      {
+        "id": "nist-news-b104cac390f5",
+        "source": "美国国家标准与技术研究院（NIST）",
+        "title": "美国国家标准与技术研究院开发可承受极端环境的光子芯片封装技术",
+        "relatedCompanies": [],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure"
+        ],
+        "generatedAt": "2026-07-20T16:56:46.650Z"
+      },
+      {
+        "id": "nist-news-f8fd13e7bc70",
+        "source": "美国国家标准与技术研究院（NIST）",
+        "title": "宣布“AI代理标准倡议”，推动互操作性与安全创新",
+        "relatedCompanies": [],
         "relatedStages": [
           "models-platforms"
         ],
-        "generatedAt": "2026-07-20T15:43:53.097Z"
+        "generatedAt": "2026-07-20T16:56:50.736Z"
+      },
+      {
+        "id": "nist-news-257e0f319be3",
+        "source": "美国国家标准与技术研究院（NIST）",
+        "title": "美国国家标准与技术研究院（NIST）向小型企业拨款超300万美元，推动人工智能、生物技术、半导体、量子技术等领域发展",
+        "relatedCompanies": [],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure"
+        ],
+        "generatedAt": "2026-07-20T16:56:54.762Z"
       }
     ]
   }

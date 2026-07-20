@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T14:30:53.274Z",
+  "generatedAt": "2026-07-20T14:34:47.633Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 23,
+  "completedCount": 25,
   "companies": {
     "synopsys": {
       "status": "ok",
@@ -2212,12 +2212,108 @@
       "confidence": "medium"
     },
     "meta-platforms": {
-      "status": "error",
+      "status": "ok",
       "inputHash": "12a61ab00538026f35c1980f0419efe320a2f547af121cbd005ab191afc58843",
-      "generatedAt": null,
-      "model": null,
-      "reason": "uncertainties contains an invalid point",
-      "lastAttemptAt": "2026-07-20T14:31:36.008Z"
+      "generatedAt": "2026-07-20T14:34:58.219Z",
+      "model": "openai/gpt-4.1-mini",
+      "promptVersion": "company-synthesis-v2",
+      "basis": "structured-official-data",
+      "evidenceSources": [
+        {
+          "id": "filing:0001628280-26-039193",
+          "label": "8-K · 2026-05-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026039193/meta-20260527.htm"
+        },
+        {
+          "id": "filing:0001193125-26-204128",
+          "label": "8-K · 2026-05-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526204128/d134616d8k.htm"
+        },
+        {
+          "id": "filing:0001628280-26-028526",
+          "label": "10-Q · 2026-04-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/meta-20260331.htm"
+        },
+        {
+          "id": "filing:0001628280-26-028364",
+          "label": "8-K · 2026-04-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-20260429.htm"
+        },
+        {
+          "id": "company-facts",
+          "label": "SEC Company Facts",
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001326801.json"
+        }
+      ],
+      "summary": "Meta Platforms 2026年第一季度财报显示，公司实现营收563.11亿美元，同比增长33.08%；净利润达267.73亿美元，同比增长60.86%。资产总额为3952.5亿美元，较上季度增长7.99%。现金及现金等价物为234.26亿美元，较上季度下降34.7%。资本支出为189.97亿美元，同比增长46.8%。近期披露的8-K文件未包含正文，无法判断具体事项。",
+      "summaryEvidence": [
+        "filing:0001628280-26-028526",
+        "company-facts"
+      ],
+      "whatChanged": [
+        {
+          "text": "2026年第一季度营收同比增长33.08%，达到563.11亿美元。",
+          "evidence": [
+            "filing:0001628280-26-028526"
+          ]
+        },
+        {
+          "text": "净利润同比增长60.86%，达到267.73亿美元。",
+          "evidence": [
+            "filing:0001628280-26-028526"
+          ]
+        },
+        {
+          "text": "资产总额较上季度增长7.99%，达到3952.5亿美元。",
+          "evidence": [
+            "filing:0001628280-26-028526"
+          ]
+        },
+        {
+          "text": "现金及现金等价物较上季度下降34.7%，为234.26亿美元。",
+          "evidence": [
+            "filing:0001628280-26-028526"
+          ]
+        }
+      ],
+      "operatingSignals": [
+        {
+          "text": "资本支出大幅增加，可能反映公司在基础设施或技术平台上的扩张投资。",
+          "evidence": [
+            "filing:0001628280-26-028526"
+          ]
+        },
+        {
+          "text": "净利润大幅增长，显示公司盈利能力显著提升。",
+          "evidence": [
+            "filing:0001628280-26-028526"
+          ]
+        }
+      ],
+      "valueChainImpact": [
+        {
+          "text": "营收和利润增长可能带动供应链需求增加，尤其是半导体和数据中心相关设备。",
+          "evidence": [
+            "filing:0001628280-26-028526"
+          ]
+        }
+      ],
+      "uncertainties": [
+        {
+          "text": "近期8-K文件仅含元数据，缺少正文，无法判断是否有重大事项披露。",
+          "evidence": []
+        },
+        {
+          "text": "现金及现金等价物大幅下降的具体原因和影响未披露。",
+          "evidence": []
+        }
+      ],
+      "questionsToWatch": [
+        "未来资本支出是否持续增长及其具体用途？",
+        "现金流减少是否影响公司运营或投资计划？",
+        "后续8-K文件是否披露新的重大业务或财务事项？"
+      ],
+      "confidence": "high"
     },
     "palantir": {
       "status": "ok",
@@ -2554,12 +2650,115 @@
       "confidence": "medium"
     },
     "servicenow": {
-      "status": "error",
+      "status": "ok",
       "inputHash": "2c92fc585ee067c9c10f501db9a06b9e259636098fde20b2534ebb33f8109d0f",
-      "generatedAt": null,
-      "model": null,
-      "reason": "uncertainties contains an invalid point",
-      "lastAttemptAt": "2026-07-20T14:32:22.018Z"
+      "generatedAt": "2026-07-20T14:35:11.108Z",
+      "model": "openai/gpt-4.1-mini",
+      "promptVersion": "company-synthesis-v2",
+      "basis": "structured-official-data",
+      "evidenceSources": [
+        {
+          "id": "filing:0001373715-26-000065",
+          "label": "8-K · 2026-05-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000065/now-20260521.htm"
+        },
+        {
+          "id": "filing:0001193125-26-226644",
+          "label": "8-K · 2026-05-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000119312526226644/d60522d8k.htm"
+        },
+        {
+          "id": "filing:0001373715-26-000056",
+          "label": "10-Q · 2026-04-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000056/now-20260331.htm"
+        },
+        {
+          "id": "filing:0001373715-26-000054",
+          "label": "8-K · 2026-04-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000054/now-20260417.htm"
+        },
+        {
+          "id": "company-facts",
+          "label": "SEC Company Facts",
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001373715.json"
+        }
+      ],
+      "summary": "ServiceNow 2026财年第一季度实现收入37.7亿美元，同比增长22.09%；净利润4.69亿美元，同比增长1.96%。资产较2025年底减少6.36%，现金及现金等价物减少27.48%，资本支出减少31.22%。近期多份8-K文件披露，具体事项正文未包含在证据包中，无法判断详细内容。",
+      "summaryEvidence": [
+        "filing:0001373715-26-000056",
+        "filing:0001373715-26-000065",
+        "filing:0001373715-26-000054",
+        "filing:0001193125-26-226644",
+        "company-facts"
+      ],
+      "whatChanged": [
+        {
+          "text": "2026年第一季度收入同比增长22.09%，达到37.7亿美元。",
+          "evidence": [
+            "filing:0001373715-26-000056"
+          ]
+        },
+        {
+          "text": "净利润同比增长1.96%，达到4.69亿美元。",
+          "evidence": [
+            "filing:0001373715-26-000056"
+          ]
+        },
+        {
+          "text": "资产较2025年底减少6.36%，现金及现金等价物减少27.48%。",
+          "evidence": [
+            "filing:0001373715-26-000056"
+          ]
+        },
+        {
+          "text": "资本支出较去年同期减少31.22%。",
+          "evidence": [
+            "filing:0001373715-26-000056"
+          ]
+        }
+      ],
+      "operatingSignals": [
+        {
+          "text": "收入和净利润均实现增长，显示业务持续扩张和盈利能力提升。",
+          "evidence": [
+            "filing:0001373715-26-000056"
+          ]
+        },
+        {
+          "text": "现金及现金等价物大幅减少，可能反映资金使用增加或投资活动加大。",
+          "evidence": [
+            "filing:0001373715-26-000056"
+          ]
+        }
+      ],
+      "valueChainImpact": [
+        {
+          "text": "收入增长可能带动供应链需求增加，尤其是与AI应用相关的技术和服务。",
+          "evidence": [
+            "filing:0001373715-26-000056"
+          ]
+        }
+      ],
+      "uncertainties": [
+        {
+          "text": "近期多份8-K文件正文未包含在证据包中，无法判断具体披露事项及其对公司运营的影响。",
+          "evidence": []
+        },
+        {
+          "text": "现金及现金等价物大幅减少的具体原因和未来资金状况不明。",
+          "evidence": []
+        },
+        {
+          "text": "资本支出减少是否反映战略调整或其他因素尚不明确。",
+          "evidence": []
+        }
+      ],
+      "questionsToWatch": [
+        "近期8-K文件具体披露了哪些重大事项？",
+        "未来季度现金流和资本支出趋势如何？",
+        "收入增长的主要驱动力和可持续性如何？"
+      ],
+      "confidence": "high"
     }
   }
 }

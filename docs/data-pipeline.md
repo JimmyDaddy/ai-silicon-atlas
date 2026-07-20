@@ -5,6 +5,7 @@
 ## 更新流程
 
 1. `.github/workflows/update-data.yml` 每天 UTC 02:17 定时运行，也支持手动触发。
+   抓取任务使用 GitHub 托管的 macOS Runner，以避开 SEC 对部分共享 Linux 云出口的持续 403；Pages 部署仍使用 Ubuntu Runner。
 2. `scripts/update-data.mjs` 调用各官方数据适配器。
 3. 适配器将不同市场的数据整理为统一的公司快照、最近披露列表和最多 8 个历史指标期。
 4. `scripts/analyze-data.mjs` 对比输入哈希，为发生变化的公司构造证据包并生成 AI 综合分析。

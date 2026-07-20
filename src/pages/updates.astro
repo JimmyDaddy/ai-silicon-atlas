@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { analysisSnapshot, analysisStatusLabel, getCompanyAnalysis } from "../data/analysis";
 import { companies } from "../data/companies";
+import { newsArticles, newsSnapshot, newsSourceStatuses } from "../data/news";
 import { dataSnapshot, formatDate, getCompanyUpdate } from "../data/updates";
 import { sitePath } from "../lib/paths";
 
@@ -72,10 +73,16 @@ const analysisCounts = companyUpdates.reduce<Record<string, number>>((counts, it
           <p>{analysisSnapshot.completedCount} 家公司已生成 · 模型 {analysisSnapshot.model ?? "等待首次运行"}</p>
           <span class="manual-tag">Prompt {analysisSnapshot.promptVersion}</span>
         </article>
+        <article class={`source-status status-${newsSourceStatuses.some((source) => source.status === "error") ? "error" : "ok"}`}>
+          <div class="source-head"><i></i><span>{newsSnapshot.provider.toUpperCase()}</span></div>
+          <h2>Authority News</h2>
+          <p>{newsArticles.length} 篇情报 · {newsSnapshot.completedCount} 篇 AI 摘要</p>
+          <a href={sitePath("/news/")}>查看综合情报 ↗</a>
+        </article>
       </div>
       <div class="analysis-coverage">
         <div><span>AI 分析覆盖</span><strong>{analysisCounts.ok ?? 0}<small> / {companies.length}</small></strong></div>
-        <p>只有证据包发生变化时才重新调用模型；结果必须通过结构和证据引用校验，失败时保留上一次成功分析。</p>
+        <p>公司证据包或情报摘录发生变化时才重新调用模型；结果必须通过结构校验，失败时保留上一次成功分析。</p>
       </div>
     </div>
   </section>
@@ -156,7 +163,7 @@ const analysisCounts = companyUpdates.reduce<Record<string, number>>((counts, it
   .status-summary {
     border: 1px solid var(--line);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     margin-bottom: 1rem;
   }
 

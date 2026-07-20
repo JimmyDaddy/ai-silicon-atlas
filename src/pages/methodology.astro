@@ -35,6 +35,7 @@ import { sitePath } from "../lib/paths";
         <a href="#sources">数据来源</a>
         <a href="#pipeline">更新流程</a>
         <a href="#metrics">指标口径</a>
+        <a href="#authority-news">权威情报</a>
         <a href="#ai-analysis">AI 分析边界</a>
         <a href="#boundaries">内容边界</a>
       </div>
@@ -48,6 +49,8 @@ import { sitePath } from "../lib/paths";
             <a href="https://engopendart.fss.or.kr/" target="_blank" rel="noreferrer"><strong>OpenDART</strong><span>韩国上市公司官方披露</span><i>↗</i></a>
             <a href="https://www.cninfo.com.cn/" target="_blank" rel="noreferrer"><strong>巨潮资讯</strong><span>中国上市公司法定信息披露</span><i>↗</i></a>
             <a href="https://openapi.twse.com.tw/" target="_blank" rel="noreferrer"><strong>TWSE OpenAPI</strong><span>台湾证券交易所开放数据</span><i>↗</i></a>
+            <a href="https://www.bis.org/rss/index.htm" target="_blank" rel="noreferrer"><strong>BIS RSS</strong><span>国际清算银行研究与发布</span><i>↗</i></a>
+            <a href="https://www.ecb.europa.eu/rss/press.html" target="_blank" rel="noreferrer"><strong>ECB RSS</strong><span>欧洲央行研究与政策发布</span><i>↗</i></a>
           </div>
         </section>
 
@@ -68,15 +71,22 @@ import { sitePath } from "../lib/paths";
           <div class="note-box"><strong>不可直接横向比较：</strong>不同公司会计准则、币种、财政年度和披露标签可能不同。本站不对自动提取值进行年化或汇率转换。</div>
         </section>
 
+        <section id="authority-news">
+          <span class="section-number">04 / AUTHORITY NEWS</span>
+          <h2>权威情报边界</h2>
+          <p>综合情报优先抓取国际机构、央行、监管方和公司官方 Feed，并用核验清单补充没有稳定 Feed 的重点文章。公司自身观点会单独标注，不与独立机构研究混为一谈；匿名转载、付费研报全文和来源不明的聚合内容不会进入快照。</p>
+          <div class="note-box"><strong>摘要依据可见：</strong>AI 只接收官方标题、Feed 摘要或人工核验后的短要点。无法获得正文时不会声称“已阅读全文”，页面始终保留原文链接。</div>
+        </section>
+
         <section id="ai-analysis">
-          <span class="section-number">04 / AI ANALYSIS</span>
+          <span class="section-number">05 / AI ANALYSIS</span>
           <h2>AI 分析边界</h2>
-          <p>AI 层只接收结构化官方披露、指标历史和可点击的证据来源。输出包括变化摘要、经营信号、价值链影响、不确定性和待跟踪问题，不包含买卖建议、评级、目标价或收益预测。</p>
+          <p>公司分析只接收结构化官方披露和指标历史；新闻分析只接收官方摘要或核验要点。输出包括变化摘要、经营信号、价值链影响、不确定性和待跟踪问题，不包含买卖建议、评级、目标价或收益预测。</p>
           <div class="note-box"><strong>可审计：</strong>每个分析点必须引用证据包中的有效 ID；模型名称、Prompt 版本、输入哈希和生成时间随结果保存。输入没有变化时不会重复生成，失败时保留上一次成功结果。</div>
         </section>
 
         <section id="boundaries">
-          <span class="section-number">05 / BOUNDARIES</span>
+          <span class="section-number">06 / BOUNDARIES</span>
           <h2>内容与授权边界</h2>
           <p>本站不会未经授权复制付费研报、新闻全文或行情数据。公开展示实时或延迟行情通常需要供应商与交易所授权，因此默认版本不包含行情。</p>
           <div class="disclaimer">

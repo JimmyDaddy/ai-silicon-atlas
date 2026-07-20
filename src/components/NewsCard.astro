@@ -1,0 +1,287 @@
+---
+import { companies } from "../data/companies";
+import { newsAnalysisLabel, newsDisplaySummary, newsDisplayTitle, type NewsArticle } from "../data/news";
+import { stageByKey, type StageKey } from "../data/stages";
+import { formatDate } from "../data/updates";
+import { sitePath } from "../lib/paths";
+
+interface Props {
+  article: NewsArticle;
+  compact?: boolean;
+}
+
+const { article, compact = false } = Astro.props;
+const relatedCompanies = article.relatedCompanies
+  .map((slug) => companies.find((company) => company.slug === slug))
+  .filter((company) => company !== undefined)
+  .slice(0, compact ? 2 : 4);
+const stages = article.relatedStages
+  .map((stage) => stageByKey[stage as StageKey])
+  .filter((stage) => stage !== undefined)
+  .slice(0, compact ? 2 : 3);
+const searchable = [article.title, article.titleZh, article.sourceName, ...article.topics, ...article.entities, ...relatedCompanies.map((company) => `${company.name} ${company.nameEn}`)].filter(Boolean).join(" ").toLowerCase();
+---
+
+<article
+  class:list={["news-card", { compact, analyzed: article.analysis.status === "ok" }]}
+  data-news-card
+  data-search={searchable}
+  data-topics={article.topics.join("|")}
+  data-source-type={article.sourceType}
+>
+  <div class="news-card-top">
+    <span class="source-kind">{article.sourceType}</span>
+    <span class:list={["analysis-kind", { ready: article.analysis.status === "ok" }]}><i></i>{newsAnalysisLabel(article)}</span>
+  </div>
+  <div class="news-meta"><strong>{article.sourceName}</strong><span>{formatDate(article.publishedAt)}</span></div>
+  <h3><a href={article.url} target="_blank" rel="noreferrer">{newsDisplayTitle(article)}<span aria-hidden="true">↗</span></a></h3>
+  {newsDisplayTitle(article) !== article.title && <p class="original-title">{article.title}</p>}
+  <p class="news-summary">{newsDisplaySummary(article)}</p>
+
+  {!compact && article.analysis.status === "ok" && article.analysis.whyItMatters && (
+    <div class="why-it-matters">
+      <span>WHY IT MATTERS</span>
+      <p>{article.analysis.whyItMatters}</p>
+    </div>
+  )}
+
+  <div class="news-tags">
+    {article.topics.slice(0, compact ? 2 : 3).map((topic) => <span>{topic}</span>)}
+  </div>
+
+  <div class="news-card-bottom">
+    <div class="relation-list">
+      {relatedCompanies.map((company) => <a href={sitePath(`/companies/${company.slug}/`)}>{company.name}</a>)}
+      {relatedCompanies.length === 0 && stages.map((stage) => <a href={sitePath(`/map/#${stage.key}`)}>{stage.name}</a>)}
+    </div>
+    <a class="source-link" href={article.url} target="_blank" rel="noreferrer">阅读原文 <span>↗</span></a>
+  </div>
+</article>
+
+<style>
+  .news-card {
+    background: linear-gradient(145deg, rgba(15, 31, 51, 0.88), rgba(8, 18, 31, 0.96));
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+    padding: 1.25rem;
+    position: relative;
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  }
+
+  .news-card::before {
+    background: linear-gradient(90deg, transparent, rgba(83, 213, 245, 0.7), transparent);
+    content: "";
+    height: 1px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(-45%);
+    transition: opacity 180ms ease, transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .news-card.analyzed::before {
+    background: linear-gradient(90deg, transparent, var(--mint), transparent);
+    opacity: 0.55;
+  }
+
+  .news-card:hover {
+    border-color: rgba(99, 230, 190, 0.32);
+    box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+  }
+
+  .news-card:hover::before {
+    opacity: 1;
+    transform: translateX(45%);
+  }
+
+  .news-card-top,
+  .news-meta,
+  .news-card-bottom {
+    align-items: center;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: space-between;
+  }
+
+  .source-kind,
+  .analysis-kind {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.04em;
+    padding: 0.32rem 0.48rem;
+  }
+
+  .analysis-kind {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.35rem;
+  }
+
+  .analysis-kind i {
+    background: var(--amber);
+    border-radius: 50%;
+    height: 0.3rem;
+    width: 0.3rem;
+  }
+
+  .analysis-kind.ready {
+    color: var(--mint);
+  }
+
+  .analysis-kind.ready i {
+    background: var(--mint);
+    box-shadow: 0 0 8px rgba(99, 230, 190, 0.65);
+  }
+
+  .news-meta {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    margin-top: 1.15rem;
+  }
+
+  .news-meta strong {
+    color: var(--cyan);
+    font-weight: 500;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.38rem, 2.1vw, 1.85rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.28;
+    margin: 0.9rem 0 0;
+  }
+
+  h3 a {
+    color: var(--text-strong);
+    text-decoration: none;
+  }
+
+  h3 span {
+    color: var(--mint);
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    margin-left: 0.35rem;
+    transition: transform 160ms ease;
+  }
+
+  h3 a:hover span {
+    transform: translate(0.15rem, -0.15rem);
+  }
+
+  .original-title {
+    color: var(--text-dim);
+    font-size: 0.66rem;
+    line-height: 1.5;
+    margin: 0.45rem 0 0;
+  }
+
+  .news-summary {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    line-height: 1.75;
+    margin: 0.9rem 0 0;
+  }
+
+  .why-it-matters {
+    border-left: 1px solid var(--mint);
+    margin-top: 1rem;
+    padding-left: 0.9rem;
+  }
+
+  .why-it-matters span {
+    color: var(--mint);
+    font-family: var(--font-mono);
+    font-size: 0.54rem;
+    letter-spacing: 0.08em;
+  }
+
+  .why-it-matters p {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    line-height: 1.65;
+    margin: 0.35rem 0 0;
+  }
+
+  .news-tags,
+  .relation-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .news-tags {
+    margin-top: 1.1rem;
+  }
+
+  .news-tags span,
+  .relation-list a {
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-size: 0.59rem;
+    padding: 0.32rem 0.5rem;
+    text-decoration: none;
+  }
+
+  .relation-list a:hover {
+    border-color: rgba(99, 230, 190, 0.35);
+    color: var(--mint);
+  }
+
+  .news-card-bottom {
+    border-top: 1px solid var(--line);
+    margin-top: auto;
+    padding-top: 1rem;
+    transform: translateY(1rem);
+  }
+
+  .source-link {
+    color: var(--text-muted);
+    flex: 0 0 auto;
+    font-size: 0.66rem;
+    text-decoration: none;
+  }
+
+  .source-link span {
+    color: var(--mint);
+  }
+
+  .compact {
+    min-height: 26rem;
+  }
+
+  .compact .news-summary {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  @media (max-width: 520px) {
+    .news-card-top {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .news-card-bottom {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>
+

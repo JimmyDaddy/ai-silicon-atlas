@@ -8,10 +8,11 @@
 2. `scripts/update-data.mjs` 调用各官方数据适配器。
 3. 适配器将不同市场的数据整理为统一的公司快照、最近披露列表和最多 8 个历史指标期。
 4. `scripts/analyze-data.mjs` 对比输入哈希，为发生变化的公司构造证据包并生成 AI 综合分析。
-5. `scripts/validate-data.mjs` 和 `scripts/validate-analysis.mjs` 校验数据、历史顺序、分析结构和证据引用。
-6. Astro 类型检查和静态构建必须通过。
-7. 快照发生变化时，由 `github-actions[bot]` 提交到 `main`。
-8. 数据更新工作流直接发布刚构建的 Pages artifact；普通的 `main` 提交仍由独立部署工作流处理。
+5. `scripts/update-news.mjs` 拉取权威来源 RSS、合并重点文章清单、去重分类，并为新增情报生成 AI 摘要。
+6. 数据、公司分析与情报快照分别通过专用校验脚本。
+7. Astro 类型检查和静态构建必须通过。
+8. 快照发生变化时，由 `github-actions[bot]` 提交到 `main`。
+9. 数据更新工作流直接发布刚构建的 Pages artifact；普通的 `main` 提交仍由独立部署工作流处理。
 
 定时任务使用的 `GITHUB_TOKEN` 所产生的普通 `push` 不会再次触发另一个工作流，因此定时数据工作流包含自己的部署 job，确保抓取、提交与上线闭环完成。
 
@@ -62,6 +63,19 @@
 
 `scripts/validate-analysis.mjs` 会拒绝未知证据引用或不完整输出。模型调用失败时保留上一次成功结果并标记为过期；模型未配置或公司缺少结构化证据时，页面显示对应状态而不会伪造分析。
 
+## 权威情报聚合
+
+`src/data/news-sources.json` 分成两类来源：
+
+- 可稳定定时抓取的官方 RSS，例如 BIS、ECB、NVIDIA、Microsoft、AWS 与 Intel。
+- 由维护者核验的重点机构文章，例如 BIS Bulletin、IMF Notes、IEA 分析和 Blackstone 官方观点。重点清单只保存链接、元数据与短要点，不复制文章全文。
+
+更新器按 AI、半导体、数据中心、电力、模型平台、企业应用、资本市场和供应链关键词筛选，再关联到站内产业环节与公司。URL 去重后最多保留 120 篇，单个 Feed 每次检查最近 30 项；自动源失败时保留该来源的上一版内容。
+
+新闻 AI 输入只包含标题、来源类型、官方 Feed 摘要或人工核验后的短要点。输出包括中文标题、综合摘要、重要性、价值链影响、不确定性和置信度。没有成功模型输出时，页面明确显示“AI 待处理”并退回来源摘要；不会把编辑要点冒充 AI 结果。
+
+“全网覆盖”表示对可持续维护的权威来源进行扩展，不表示抓取所有转载站、社交媒体或付费研报。新增来源时优先使用官方 RSS，并在 `news-sources.json` 标注来源类型与优先级。
+
 ## 行情数据边界
 
 公开展示或再分发行情通常需要商业授权。仓库不默认接入个人用途或许可不明的数据源。取得供应商授权后，应在 `scripts/providers/` 新增服务端 CI 适配器，并将密钥放入 GitHub Actions secrets。
@@ -73,6 +87,8 @@ npm run data:update
 npm run data:validate
 npm run analysis:update
 npm run analysis:validate
+npm run news:update
+npm run news:validate
 npm run check
 npm run build
 ```

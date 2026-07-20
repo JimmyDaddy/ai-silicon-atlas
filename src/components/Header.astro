@@ -3,13 +3,14 @@ import Logo from "./Logo.astro";
 import { sitePath } from "../lib/paths";
 
 interface Props {
-  active?: "home" | "map" | "companies" | "research" | "updates" | "methodology";
+  active?: "home" | "map" | "companies" | "news" | "research" | "updates" | "methodology";
 }
 
 const { active } = Astro.props;
 const navItems = [
   { key: "map", label: "产业地图", href: "/map/" },
   { key: "companies", label: "公司目录", href: "/companies/" },
+  { key: "news", label: "权威情报", href: "/news/" },
   { key: "research", label: "研究主题", href: "/research/" },
   { key: "updates", label: "数据更新", href: "/updates/" },
   { key: "methodology", label: "方法与来源", href: "/methodology/" },

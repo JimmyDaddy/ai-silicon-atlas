@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "feeds": [
+    {
+      "id": "bis",
+      "name": "国际清算银行（BIS）",
+      "sourceType": "国际机构",
+      "url": "https://www.bis.org/doclist/rss_all_categories.rss",
+      "homepage": "https://www.bis.org/",
+      "priority": 100
+    },
+    {
+      "id": "ecb",
+      "name": "欧洲中央银行（ECB）",
+      "sourceType": "央行研究",
+      "url": "https://www.ecb.europa.eu/rss/press.html",
+      "homepage": "https://www.ecb.europa.eu/",
+      "priority": 96
+    },
+    {
+      "id": "nvidia-blog",
+      "name": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "url": "https://blogs.nvidia.com/feed/",
+      "homepage": "https://blogs.nvidia.com/",
+      "priority": 86
+    },
+    {
+      "id": "microsoft-blog",
+      "name": "Microsoft 官方博客",
+      "sourceType": "公司观点",
+      "url": "https://blogs.microsoft.com/feed/",
+      "homepage": "https://blogs.microsoft.com/",
+      "priority": 84
+    },
+    {
+      "id": "aws-blog",
+      "name": "AWS 官方博客",
+      "sourceType": "公司观点",
+      "url": "https://aws.amazon.com/blogs/aws/feed/",
+      "homepage": "https://aws.amazon.com/blogs/aws/",
+      "priority": 82
+    },
+    {
+      "id": "intel-newsroom",
+      "name": "Intel Newsroom",
+      "sourceType": "公司观点",
+      "url": "https://newsroom.intel.com/feed",
+      "homepage": "https://newsroom.intel.com/",
+      "priority": 80
+    }
+  ],
+  "curated": [
+    {
+      "id": "bis-bulletin-128",
+      "sourceId": "bis",
+      "sourceName": "国际清算银行（BIS）",
+      "sourceType": "国际机构",
+      "title": "AI disruption in private credit: exposure to software firms in BDCs",
+      "titleZh": "AI 冲击下的私募信贷：BDC 对软件公司的风险暴露",
+      "url": "https://www.bis.org/publ/bisbull128.htm",
+      "publishedAt": "2026-07-14T00:00:00.000Z",
+      "topics": ["资本市场与金融稳定", "企业应用与生产力"],
+      "relatedStages": ["ai-applications", "models-platforms"],
+      "entities": ["Business Development Companies", "软件公司"],
+      "evidenceText": "BIS Bulletin 128 估算 BDC 向软件公司提供约 1150 亿美元贷款，约占全部 BDC 贷款的五分之一。报告指出生成式 AI 带来的收入不确定性尚未明显反映在贷款或股权定价中；信用利差收窄与大型 BDC 的共同借款人暴露值得跟踪，但低杠杆和担保贷款结构可能限制外溢。文中观点属于作者，不必然代表 BIS。",
+      "editorialSummary": "BIS 把 AI 对软件行业的扰动连接到了私募信贷资产负债表：核心问题不只是软件估值，而是收入不确定性何时传导到贷款定价、信用利差和共同借款人风险。"
+    },
+    {
+      "id": "blackstone-2026-mid-year",
+      "sourceId": "blackstone",
+      "sourceName": "Blackstone",
+      "sourceType": "公司观点",
+      "title": "2026 Investment Perspectives: Mid-Year Update",
+      "titleZh": "Blackstone 2026 年中展望：AI 基建资本周期",
+      "url": "https://www.blackstone.com/insights/article/2026-mid-year-investment-perspectives/",
+      "publishedAt": "2026-06-30T00:00:00.000Z",
+      "topics": ["数据中心与电力", "AI 算力与芯片", "资本市场与金融稳定"],
+      "relatedStages": ["design", "ai-infrastructure", "models-platforms"],
+      "entities": ["Blackstone", "QTS", "Hyperscalers"],
+      "evidenceText": "Blackstone 的年中观点认为 AI 正推动数据中心、电力、散热、设备、模型和 neocloud 的多年资本开支周期，并强调算力、电力与数据中心同时是增长支柱和供给约束。文章使用其投资组合数据阐述私募资本在填补大规模基础设施融资缺口中的角色。这是资产管理机构的自身观点，应与独立机构研究分开阅读。",
+      "editorialSummary": "Blackstone 从资产所有者和资本提供方角度判断 AI 基建仍处于长期扩张阶段，价值可能更多流向掌握稀缺电力、土地、数据中心容量和工程执行能力的参与者。"
+    },
+    {
+      "id": "bis-progress-peril-2026",
+      "sourceId": "bis",
+      "sourceName": "国际清算银行（BIS）",
+      "sourceType": "国际机构",
+      "title": "Progress and peril",
+      "titleZh": "BIS 年度经济报告：AI 乐观情绪、投资与下行风险",
+      "url": "https://www.bis.org/publ/arpdf/ar2026e1.htm",
+      "publishedAt": "2026-06-28T00:00:00.000Z",
+      "topics": ["资本市场与金融稳定", "企业应用与生产力"],
+      "relatedStages": ["models-platforms", "ai-applications"],
+      "entities": ["全球金融市场", "AI 投资"],
+      "evidenceText": "BIS 2026 年度经济报告讨论 AI 乐观预期如何推动投资和风险资产表现，同时提醒估值、融资条件和生产率兑现之间可能出现错配。报告从宏观金融稳定角度评估技术进步的收益与下行情景。",
+      "editorialSummary": "AI 投资能够提高生产率，但金融市场可能先于真实收益定价。需要同时跟踪资本开支兑现、融资条件和估值对预期落空的敏感度。"
+    },
+    {
+      "id": "ecb-ai-financial-stability-2026",
+      "sourceId": "ecb",
+      "sourceName": "欧洲中央银行（ECB）",
+      "sourceType": "央行研究",
+      "title": "Financial stability in the age of artificial intelligence: the role of algorithmic architecture",
+      "titleZh": "AI 时代的金融稳定：算法架构为何会改变风险形态",
+      "url": "https://www.ecb.europa.eu/press/research-publications/resbull/2026/html/ecb.rb260521~4d8b12940b.en.html",
+      "publishedAt": "2026-05-21T00:00:00.000Z",
+      "topics": ["资本市场与金融稳定", "模型与平台"],
+      "relatedStages": ["models-platforms", "ai-applications"],
+      "entities": ["欧洲中央银行", "金融机构"],
+      "evidenceText": "ECB 研究通过模拟比较 Q-learning 与大语言模型在金融决策中的行为。研究发现强化学习算法可能形成高度协调但更容易出现类似银行挤兑的极端动态，而大语言模型行为更异质、更难预测，说明算法架构本身可能成为金融稳定风险来源。",
+      "editorialSummary": "金融系统采用哪类 AI，并不只是效率问题：同样目标和环境下，不同算法可能产生完全不同的群体行为与尾部风险。"
+    },
+    {
+      "id": "imf-ai-scenario-2026",
+      "sourceId": "imf",
+      "sourceName": "国际货币基金组织（IMF）",
+      "sourceType": "国际机构",
+      "title": "Global Economic and Financial Implications of Artificial Intelligence: Lessons from a Scenario Planning Exercise",
+      "titleZh": "IMF 情景研究：AI 的全球经济与金融影响",
+      "url": "https://www.imf.org/en/publications/imf-notes/issues/2026/04/03/global-economic-and-financial-implications-of-artificial-intelligence-lessons-from-a-574924",
+      "publishedAt": "2026-04-03T00:00:00.000Z",
+      "topics": ["企业应用与生产力", "资本市场与金融稳定", "模型与平台"],
+      "relatedStages": ["models-platforms", "ai-applications"],
+      "entities": ["国际货币基金组织", "全球经济"],
+      "evidenceText": "IMF Notes 2026/002 汇总情景规划讨论，主张把 AI 视为宏观关键转型，而非普通技术冲击。宏观路径不仅由前沿能力决定，也取决于扩散速度、采用广度以及制度与基础设施吸收能力。",
+      "editorialSummary": "对产业链而言，模型能力只是起点；基础设施、组织采用和制度准备度决定技术进步能否转化为广泛生产率与可持续需求。"
+    },
+    {
+      "id": "iea-data-centres-2026",
+      "sourceId": "iea",
+      "sourceName": "国际能源署（IEA）",
+      "sourceType": "国际机构",
+      "title": "Data centre electricity use surged in 2025, even with tightening bottlenecks driving a scramble for solutions",
+      "titleZh": "IEA：数据中心用电激增，电力瓶颈正在成为 AI 扩张约束",
+      "url": "https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions",
+      "publishedAt": "2026-04-16T00:00:00.000Z",
+      "topics": ["数据中心与电力", "AI 算力与芯片"],
+      "relatedStages": ["design", "ai-infrastructure"],
+      "entities": ["国际能源署", "Hyperscalers", "数据中心"],
+      "evidenceText": "IEA 的 2026 更新研究跟踪数据中心电力需求、供给瓶颈和 AI 资本开支。其新闻稿指出五家大型科技公司的资本开支在 2025 年超过 4000 亿美元，并预计 2026 年继续显著增长；电网接入、发电与设备供应成为扩张节奏的重要约束。",
+      "editorialSummary": "AI 基建需求不再只由 GPU 供给决定，电网接入、发电结构、冷却和建设周期正共同决定算力何时能够真正上线。"
+    }
+  ],
+  "companyAliases": {
+    "nvidia": ["nvidia", "英伟达"],
+    "amd": ["amd", "advanced micro devices", "超威"],
+    "tsmc": ["tsmc", "台积电"],
+    "asml": ["asml", "阿斯麦"],
+    "micron": ["micron", "美光"],
+    "sk-hynix": ["sk hynix", "sk海力士", "海力士"],
+    "samsung-electronics": ["samsung electronics", "三星电子"],
+    "microsoft": ["microsoft", "azure", "微软"],
+    "alphabet": ["alphabet", "google", "谷歌"],
+    "amazon": ["amazon", "aws", "亚马逊"],
+    "meta-platforms": ["meta platforms", "meta ai"],
+    "arista-networks": ["arista networks", "arista"],
+    "vertiv": ["vertiv", "维谛"],
+    "supermicro": ["supermicro", "super micro", "超微电脑"],
+    "equinix": ["equinix"],
+    "synopsys": ["synopsys", "新思科技"],
+    "cadence": ["cadence", "铿腾"],
+    "arm": ["arm holdings", "arm architecture", "安谋"],
+    "broadcom": ["broadcom", "博通"],
+    "palantir": ["palantir"],
+    "salesforce": ["salesforce", "赛富时"],
+    "servicenow": ["servicenow"],
+    "adobe": ["adobe", "奥多比"]
+  }
+}

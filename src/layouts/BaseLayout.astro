@@ -7,7 +7,7 @@ import "../styles/global.css";
 interface Props {
   title?: string;
   description?: string;
-  active?: "home" | "map" | "companies" | "research" | "updates" | "methodology";
+  active?: "home" | "map" | "companies" | "news" | "research" | "updates" | "methodology";
 }
 
 const {
@@ -55,7 +55,7 @@ const socialImageUrl = new URL(sitePath("/social-preview.png"), Astro.site);
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (!reduceMotion && "IntersectionObserver" in window) {
         const motionTargets = [...document.querySelectorAll<HTMLElement>(
-          ".page-hero-grid > *, .section-head > *, .company-card, .stage-card, .theme-card, .stage-panel, .analysis-section, .research-profile, .filing-timeline, [data-reveal]",
+          ".page-hero-grid > *, .section-head > *, .company-card, .news-card, .stage-card, .theme-card, .stage-panel, .analysis-section, .research-profile, .filing-timeline, [data-reveal]",
         )];
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {

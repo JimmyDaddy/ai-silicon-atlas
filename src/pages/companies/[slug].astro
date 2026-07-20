@@ -44,6 +44,34 @@ const analysisSections = analysis?.status === "ok" ? [
   { key: "uncertainties", label: "不确定性与边界", points: analysis.uncertainties ?? [] },
 ] : [];
 const evidenceById = Object.fromEntries((analysis?.evidenceSources ?? []).map((source) => [source.id, source]));
+const analysisFallback = (() => {
+  if (analysis?.status === "error") {
+    return {
+      eyebrow: "AI LAYER / RETRY",
+      title: "本次分析失败，等待自动重试",
+      description: "数据更新任务会保留已有结果，并在下一批次重新尝试生成；失败不会被包装成分析结论。",
+    };
+  }
+  if (analysis?.status === "unavailable" && update?.status === "unconfigured") {
+    return {
+      eyebrow: "AI LAYER / SOURCE CONFIG",
+      title: "需要先配置官方数据接口",
+      description: `${company.name} 当前的官方结构化数据源尚未启用。完成 OpenDART 等接口配置后，才会进入 AI 证据分析队列。`,
+    };
+  }
+  if (analysis?.status === "unavailable") {
+    return {
+      eyebrow: "AI LAYER / SOURCE COVERAGE",
+      title: "尚未接入结构化数据源",
+      description: `${company.name} 目前以第一方资料入口人工维护。由于证据包还不完整，系统不会生成看似确定的 AI 分析。`,
+    };
+  }
+  return {
+    eyebrow: "AI LAYER / QUEUED",
+    title: "等待下一批 AI 分析",
+    description: "结构化证据已经准备完成，将按最新披露日期进入后续分析批次。",
+  };
+})();
 ---
 
 <BaseLayout title={`${company.name}（${company.ticker}）· 智芯图谱`} description={`${company.name}所属${stage.name}环节的公司研究卡、关注变量与第一方资料。`} active="companies">
@@ -158,9 +186,9 @@ const evidenceById = Object.fromEntries((analysis?.evidenceSources ?? []).map((s
           </div>
         ) : (
           <div class="analysis-pending">
-            <span>AI LAYER / {analysis?.status?.toUpperCase() ?? "PENDING"}</span>
-            <h3>分析流水线已经就绪</h3>
-            <p>{analysis?.reason ?? "该公司会在后续分析批次中，基于最新结构化证据生成综合摘要。"}</p>
+            <span>{analysisFallback.eyebrow}</span>
+            <h3>{analysisFallback.title}</h3>
+            <p>{analysisFallback.description}</p>
           </div>
         )}
       </section>

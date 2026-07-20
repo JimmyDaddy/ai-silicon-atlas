@@ -1,4 +1,4 @@
-name: Refresh official company data
+name: Refresh intelligence data
 
 on:
   schedule:
@@ -8,7 +8,7 @@ on:
 permissions: {}
 
 concurrency:
-  group: company-data-refresh
+  group: intelligence-data-refresh
   cancel-in-progress: false
 
 jobs:
@@ -26,6 +26,7 @@ jobs:
       AI_BASE_URL: ${{ vars.AI_BASE_URL }}
       AI_MODEL: ${{ vars.AI_MODEL }}
       AI_MAX_COMPANIES: ${{ vars.AI_MAX_COMPANIES || '8' }}
+      NEWS_AI_MAX_ARTICLES: ${{ vars.NEWS_AI_MAX_ARTICLES || '8' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -42,10 +43,13 @@ jobs:
         run: npm run data:update
       - name: Generate evidence-grounded AI analysis
         run: npm run analysis:update
+      - name: Fetch and synthesize authoritative intelligence
+        run: npm run news:update
       - name: Validate generated snapshots
         run: |
           npm run data:validate
           npm run analysis:validate
+          npm run news:validate
       - name: Verify site
         run: |
           npm run check
@@ -56,14 +60,14 @@ jobs:
           path: dist
       - name: Commit refreshed snapshot
         run: |
-          if git diff --quiet -- src/data/generated/company-updates.json src/data/generated/company-analysis.json; then
+          if git diff --quiet -- src/data/generated/company-updates.json src/data/generated/company-analysis.json src/data/generated/news.json; then
             echo "No generated data changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/generated/company-updates.json src/data/generated/company-analysis.json
-          git commit -m "chore(data): refresh company intelligence"
+          git add src/data/generated/company-updates.json src/data/generated/company-analysis.json src/data/generated/news.json
+          git commit -m "chore(data): refresh intelligence snapshots"
           git push
 
   deploy:

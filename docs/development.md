@@ -23,6 +23,7 @@ npm run dev
 ```bash
 npm run data:validate
 npm run analysis:validate
+npm run news:validate
 npm run check
 npm run build
 ```
@@ -34,6 +35,8 @@ npm run data:update
 npm run data:validate
 npm run analysis:update
 npm run analysis:validate
+npm run news:update
+npm run news:validate
 ```
 
 常用环境变量：
@@ -45,6 +48,7 @@ npm run analysis:validate
 | `AI_BASE_URL` | GitHub Variable | 可选的 OpenAI 兼容接口地址 |
 | `AI_MODEL` | GitHub Variable | 可选的模型覆盖值 |
 | `AI_MAX_COMPANIES` | GitHub Variable | 每次最多分析公司数，默认 8 |
+| `NEWS_AI_MAX_ARTICLES` | GitHub Variable | 每次最多分析新增情报数，默认 8 |
 | `AI_API_KEY` | GitHub Secret | 使用自定义 AI 服务时的密钥 |
 
 未配置自定义 AI 服务时，GitHub Actions 使用自带的 `GITHUB_TOKEN`、`models: read` 权限和 `openai/gpt-4.1-mini`。本地未配置令牌时，脚本只更新分析状态，不会伪造模型输出。
@@ -78,6 +82,8 @@ SITE_URL=https://example.com BASE_PATH=/preview/ npm run build
 | 数据适配器 | `scripts/providers/` |
 | 自动生成数据 | `src/data/generated/company-updates.json` |
 | 自动生成 AI 分析 | `src/data/generated/company-analysis.json` |
+| 权威情报源与重点文章 | `src/data/news-sources.json` |
+| 自动生成综合情报 | `src/data/generated/news.json` |
 | 页面 | `src/pages/` |
 | 全局样式 | `src/styles/global.css` |
 

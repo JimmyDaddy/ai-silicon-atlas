@@ -1,0 +1,2187 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-20T15:37:24.644Z",
+  "provider": "github-models",
+  "model": "openai/gpt-4.1-mini",
+  "promptVersion": "authority-news-synthesis-v1",
+  "completedCount": 28,
+  "sourceCount": 9,
+  "sources": [
+    {
+      "id": "bis",
+      "name": "国际清算银行（BIS）",
+      "sourceType": "国际机构",
+      "url": "https://www.bis.org/doclist/rss_all_categories.rss",
+      "homepage": "https://www.bis.org/",
+      "priority": 100,
+      "status": "ok",
+      "checkedAt": "2026-07-20T15:37:24.644Z",
+      "itemCount": 25,
+      "matchedCount": 3
+    },
+    {
+      "id": "ecb",
+      "name": "欧洲中央银行（ECB）",
+      "sourceType": "央行研究",
+      "url": "https://www.ecb.europa.eu/rss/press.html",
+      "homepage": "https://www.ecb.europa.eu/",
+      "priority": 96,
+      "status": "ok",
+      "checkedAt": "2026-07-20T15:37:24.644Z",
+      "itemCount": 15,
+      "matchedCount": 1
+    },
+    {
+      "id": "nvidia-blog",
+      "name": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "url": "https://blogs.nvidia.com/feed/",
+      "homepage": "https://blogs.nvidia.com/",
+      "priority": 86,
+      "status": "ok",
+      "checkedAt": "2026-07-20T15:37:24.644Z",
+      "itemCount": 18,
+      "matchedCount": 12
+    },
+    {
+      "id": "microsoft-blog",
+      "name": "Microsoft 官方博客",
+      "sourceType": "公司观点",
+      "url": "https://blogs.microsoft.com/feed/",
+      "homepage": "https://blogs.microsoft.com/",
+      "priority": 84,
+      "status": "ok",
+      "checkedAt": "2026-07-20T15:37:24.644Z",
+      "itemCount": 10,
+      "matchedCount": 8
+    },
+    {
+      "id": "aws-blog",
+      "name": "AWS 官方博客",
+      "sourceType": "公司观点",
+      "url": "https://aws.amazon.com/blogs/aws/feed/",
+      "homepage": "https://aws.amazon.com/blogs/aws/",
+      "priority": 82,
+      "status": "ok",
+      "checkedAt": "2026-07-20T15:37:24.644Z",
+      "itemCount": 20,
+      "matchedCount": 10
+    },
+    {
+      "id": "intel-newsroom",
+      "name": "Intel Newsroom",
+      "sourceType": "公司观点",
+      "url": "https://newsroom.intel.com/feed",
+      "homepage": "https://newsroom.intel.com/",
+      "priority": 80,
+      "status": "ok",
+      "checkedAt": "2026-07-20T15:37:24.644Z",
+      "itemCount": 10,
+      "matchedCount": 5
+    }
+  ],
+  "articles": [
+    {
+      "id": "nvidia-blog-286358f33346",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "At SIGGRAPH, NVIDIA Advances Graphics and Simulation With Agentic and Physical AI",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/siggraph-news-2026/",
+      "publishedAt": "2026-07-20T15:00:53.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "半导体制造",
+        "数据中心与电力",
+        "模型与平台",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "supermicro",
+        "adobe"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "equipment-materials"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "At this year’s SIGGRAPH conference, running through Thursday, July 23, in Los Angeles, attendees can discover how leading graphics research, neural rendering, simulation and AI are transforming how worlds are created and understood by people and machines. The NVIDIA keynote , taking place today, July 20, at 3:45 p.m. PT, will feature NVIDIA AI research and engineering leaders Neil Ashton, Edward Liu and Ming-Yu Liu d",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "d6b60a63d0368b8ae839cd6b22d6a2e81b7d1de0381e743788db15430b8137ef",
+        "generatedAt": "2026-07-20T15:27:50.085Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "NVIDIA在SIGGRAPH大会上推进图形与仿真技术，发布多项Agentic与物理AI创新",
+        "summary": "NVIDIA在2026年SIGGRAPH大会上展示了其在图形渲染、神经渲染、仿真和AI领域的最新进展，重点介绍了Model Context Protocol（MCP）连接实现的agentic AI内容创作能力，以及面向边缘设备的物理AI世界模型Cosmos 3 Edge。NVIDIA还发布了Synthetic Video Detector NIM微服务，助力媒体行业检测合成视频，提升新闻视频的真实性验证。多家合作伙伴如Adobe、Affinity、Blender、Foundry、SideFX和Epic Games等已集成MCP，推动创意工具的智能化和自动化。Cosmos 3 Edge支持在Jetson、RTX PRO和DGX系统上高效部署，助力机器人、自动驾驶和智能基础设施的实时物理环境感知与决策。",
+        "whyItMatters": "NVIDIA通过开放的MCP协议和强大的AI平台，将AI代理直接嵌入创意工具，极大提升内容创作效率和质量，同时保持创作者对创意的控制权。Synthetic Video Detector为媒体行业提供了新的合成视频检测手段，增强了视频内容的可信度。Cosmos 3 Edge则推动了边缘物理AI的实用化，支持机器人和自动驾驶等领域的实时智能决策，促进AI技术在半导体设计、制造及应用端的深度融合。",
+        "valueChainImpact": [
+          "设计阶段：推动AI模型与仿真技术集成，提升设计效率和精度",
+          "内存与封装：优化模型部署，支持高效边缘计算",
+          "AI基础设施：增强本地AI推理能力，减少对云端依赖",
+          "设备与材料：推动高性能GPU和边缘设备应用"
+        ],
+        "uncertainties": [
+          "具体性能指标和部署效果在不同应用场景的表现尚需进一步验证",
+          "合作伙伴集成的深度和广度及其对市场的实际影响尚不明确",
+          "Cosmos 3 Edge在自动驾驶和智能基础设施等复杂环境中的长期稳定性和安全性有待观察"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "microsoft-blog-ac0adb934fca",
+      "sourceId": "microsoft-blog",
+      "sourceName": "Microsoft 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.microsoft.com/",
+      "sourcePriority": 84,
+      "title": "Microsoft expands Azure AI and HPC infrastructure with AMD",
+      "titleZh": null,
+      "url": "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+      "publishedAt": "2026-07-20T13:00:02.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "模型与平台",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "amd",
+        "microsoft",
+        "synopsys"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "Microsoft 官方博客"
+      ],
+      "excerpt": "AI workloads are scaling faster than any single infrastructure approach can support — with more models, new agent-driven workloads and surging compute demand driving the need for greater specialization across the stack. To meet this need, Microsoft continues to evolve Azure’s infrastructure, including expanding its AI fleet with AMD’s most advanced AI and high-performance computing (HPC) solutions. Our approach to AI",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "ad9ac70cc5df10f36b9828487fd5c2b1e15f37707749546c26adeaa3692a4259",
+        "generatedAt": "2026-07-20T15:28:57.300Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "微软携手AMD扩展Azure AI与高性能计算基础设施",
+        "summary": "微软宣布与AMD深化合作，利用AMD最新Helios AI平台和第六代EPYC数据中心处理器，扩展Azure AI和高性能计算（HPC）基础设施。新推出的HDv2虚拟机针对AI数据系统，提供高密度、高效能CPU计算资源，支持大规模AI训练和代理任务。HXv2虚拟机优化芯片设计和技术计算，采用3D V-cache技术，提升单线程性能和内存容量，适合EDA和科学模拟等复杂工作负载。ND MI455X v7虚拟机基于AMD Helios架构，面向大规模AI推理，提升推理性能和能效。微软强调开放异构平台策略，满足多样化AI工作负载需求，并与AMD及Synopsys等行业伙伴紧密协作推动AI基础设施创新。",
+        "whyItMatters": "AI算力需求快速增长，单一基础设施难以满足多样化和复杂的AI工作负载。微软与AMD合作推出多款针对不同AI场景优化的虚拟机，提升计算性能和能效，支持从数据处理、芯片设计到推理的全链路AI应用，增强Azure在AI基础设施领域的竞争力和客户选择灵活性。",
+        "valueChainImpact": [
+          "设计阶段：HXv2虚拟机优化芯片设计和EDA工作负载，助力半导体设计效率提升",
+          "内存与存储：HDv2虚拟机配备大容量RAM和高速NVMe存储，满足AI数据系统需求",
+          "封装与系统集成：AMD Helios平台支持高密度计算资源集成，提升系统性能",
+          "AI基础设施：多样化虚拟机产品线满足不同AI训练和推理需求，推动云端AI算力发展"
+        ],
+        "uncertainties": [
+          "具体性能提升幅度和能效数据未详述",
+          "新虚拟机产品的市场接受度和客户部署规模尚不明确",
+          "未来合作细节及技术迭代节奏存在不确定性"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "nvidia-blog-c1d126a13f15",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "Bristol Myers Squibb Building Life Science Industry’s Most Advanced AI Factory on NVIDIA Vera Rubin",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/bristol-myers-squibb-building-life-science-industrys-most-advanced-ai-factory-on-nvidia-vera-rubin/",
+      "publishedAt": "2026-07-20T10:59:23.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Erin Davis calls it the “SuperDuperPOD.” That’s two things in one name: pharmaceutical giant Bristol Myers Squibb (BMS) already runs one of the largest AI clusters in life sciences, with serious results to show for it. And they’re doubling down. BMS announced today it is deploying its second NVIDIA DGX SuperPOD , this one built on eight DGX Vera Rubin NVL72 systems — the most powerful and energy-efficient AI cluster ",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "b43b7b0f8dd412df1d8e6e81ff979cfcf1eaf8858f1578f2d16e13d324cc4bee",
+        "generatedAt": "2026-07-20T15:29:03.488Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "百时美施贵宝基于NVIDIA Vera Rubin打造生命科学领域最先进的AI工厂",
+        "summary": "百时美施贵宝（BMS）宣布部署第二个基于NVIDIA DGX Vera Rubin NVL72系统的超级AI集群SuperDuperPOD，提升生命科学领域AI算力，支持药物发现全流程。该系统性能和能效提升显著，开放给所有科学家使用，推动AI在靶点识别、化合物库扩展和先导化合物优化等环节的应用，实现更快的研发周期和更大化学空间探索。BMS通过统一平台和AI原生工具降低使用门槛，促进全球协同和知识积累，推动AI辅助药物研发的实际影响。",
+        "whyItMatters": "该项目展示了AI算力与药物研发深度融合的趋势，体现了AI基础设施对加速新药发现和优化研发流程的关键作用。通过大规模、高效能的AI集群，BMS能够释放科学家潜力，提升研发效率和创新能力，推动生命科学领域的技术进步和产业升级。",
+        "valueChainImpact": [
+          "设计阶段：AI辅助分子设计和预测",
+          "存储阶段：支持大规模数据处理和模型训练",
+          "封装阶段：提升计算资源整合效率",
+          "AI基础设施：构建高性能、能效优异的AI计算平台"
+        ],
+        "uncertainties": [
+          "具体性能提升倍数和能效数据是否适用于所有应用场景",
+          "新系统对整体药物研发周期缩短的具体量化影响",
+          "AI模型在不同药物研发阶段的实际应用效果和限制"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "bis-205b6096ca8d",
+      "sourceId": "bis",
+      "sourceName": "国际清算银行（BIS）",
+      "sourceType": "国际机构",
+      "sourceHomepage": "https://www.bis.org/",
+      "sourcePriority": 100,
+      "title": "A Mythos moment? Frontier AI and cyber risk",
+      "titleZh": null,
+      "url": "https://www.bis.org/publ/bisbull129.htm",
+      "publishedAt": "2026-07-20T06:49:00.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "模型与平台"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [],
+      "entities": [
+        "国际清算银行（BIS）"
+      ],
+      "excerpt": "by Iñaki Aldasoro, Raphael Auer, Jon Frost, Fernando Perez-Cruz Frontier artificial intelligence (AI) models increase the speed, scale and complexity of cyber attacks, and they also strengthen cyber defence. But the costs are asymmetric and may favour attackers. The medium-term impact on systemic cyber risk depends on the various actors' access to the most advanced tools, on compute power to run the tools and on econ",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "363fbf6e63755fb5afd7b181d79ce89315329b81b7968b1b35911f386caa0362",
+        "generatedAt": "2026-07-20T15:29:08.129Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "前沿人工智能与网络风险：神话时刻？",
+        "summary": "国际清算银行指出，前沿人工智能模型加速了网络攻击的速度、规模和复杂性，同时也增强了网络防御能力。但成本分布不均，可能更有利于攻击者。中期来看，系统性网络风险的影响取决于各方对先进工具的获取、计算能力以及经济激励。鉴于技术发展迅速，需快速采用前沿AI模型审查代码并修复漏洞，国际协调有助于支持监管机构应对相关挑战。",
+        "whyItMatters": "前沿AI技术在网络安全领域的双刃剑效应可能改变网络风险格局，影响全球金融和信息基础设施安全，及时应对和国际合作对防范系统性风险至关重要。",
+        "valueChainImpact": [
+          "AI模型开发与应用环节需加强安全审查",
+          "网络安全防护技术需求提升",
+          "计算资源供应商角色增强",
+          "监管机构和国际组织合作加深"
+        ],
+        "uncertainties": [
+          "不同主体对先进AI工具的获取能力存在差异",
+          "经济激励机制如何影响网络攻防态势尚不明确",
+          "前沿AI技术未来发展速度和应用范围存在不确定性"
+        ],
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "nvidia-blog-3cc85d0a4ad9",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA Vera Rubin Maximizes Intelligence per Dollar for Post-Training Workloads — a Key Metric for Agentic AI",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/nvidia-vera-rubin-post-training-intelligence-per-dollar/",
+      "publishedAt": "2026-07-17T15:00:14.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Think of a professional athlete. What separates elite performers is what happens between games: continuous refinement, adjusting to new opponents and sharpening skills based on what the last game exposed. Agentic AI works the same way. A model is no longer asked for an answer. It’s given a goal and has to keep adapting as environments shift, edge cases emerge and tools change. Unlike a generative model responding to ",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "b1cd1d287e7d68c7b31c1b6da35149bd720ecb3e8643e0ecd9d5c762cbc1aad5",
+        "generatedAt": "2026-07-20T15:29:17.089Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "NVIDIA Vera Rubin 平台提升后训练阶段智能性成本效益——智能体 AI 关键指标",
+        "summary": "NVIDIA 介绍了智能体 AI（agentic AI）中后训练阶段的重要性，该阶段通过持续强化学习不断适应环境变化，提升模型智能。后训练不同于传统一次性训练，而是一个持续循环，涉及大量计算资源。NVIDIA Vera Rubin 平台专为此设计，显著降低所需 GPU 数量，提高智能性每美元的产出。NVIDIA Nemotron 3 Ultra 模型和 NeMo RL 工具链支持这一流程，推动后训练成为智能体时代的核心工作负载。多家公司已基于 NVIDIA 平台优化后训练和推理，提升效率和性能。",
+        "whyItMatters": "智能体 AI 需要持续适应复杂多变的环境，后训练成为提升模型智能的关键环节。NVIDIA Vera Rubin 平台通过降低计算成本和提升效率，使得频繁的后训练经济可行，推动智能体 AI 实际应用。智能性每美元指标帮助衡量投资回报，指导 AI 基础设施优化，促进 AI 模型能力和商业价值的提升。",
+        "valueChainImpact": [
+          "设计阶段：优化硬件架构以支持高效后训练计算",
+          "内存与包装：提升数据传输和存储效率，满足大规模模型需求",
+          "AI 基础设施：提供高吞吐量、低延迟的训练与推理平台",
+          "模型与平台：支持持续强化学习和多环境并行训练的工具链"
+        ],
+        "uncertainties": [
+          "具体性能提升数据基于内部测试，外部验证情况未知",
+          "后训练成本与智能性提升的具体量化关系在不同应用场景可能存在差异",
+          "智能体 AI 在实际大规模部署中的长期稳定性和经济性尚需观察"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "intel-newsroom-ca792395c789",
+      "sourceId": "intel-newsroom",
+      "sourceName": "Intel Newsroom",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://newsroom.intel.com/",
+      "sourcePriority": 80,
+      "title": "Intel and Google Cloud Announce Collaboration to Accelerate Intel’s AI-Enabled Enterprise Transformation",
+      "titleZh": null,
+      "url": "https://newsroom.intel.com/artificial-intelligence/intel-google-cloud-announce-collaboration-to-accelerate-intel-ai-enabled-enterprise-transformation",
+      "publishedAt": "2026-07-16T16:00:53.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "模型与平台",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "alphabet"
+      ],
+      "relatedStages": [
+        "models-platforms",
+        "ai-applications"
+      ],
+      "entities": [
+        "Intel Newsroom"
+      ],
+      "excerpt": "SANTA CLARA, Calif., and SUNNYVALE, Calif. – July 16, 2026 – Intel and Google Cloud today announced an expansion of their previously announced multi-year strategic collaboration, which would accelerate Intel’s enterprise-wide digital evolution through the deployment of Gemini Enterprise and Google Cloud.Intel will integrate advanced, Gemini-powered generative AI across its global workforce, helping to scale capabilit",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "8c17698fc39674d5619281c4c380caa79fa06d50f5a4e8991b14078a88161d97",
+        "generatedAt": "2026-07-20T15:29:34.337Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "英特尔与谷歌云宣布合作 加速英特尔AI驱动的企业转型",
+        "summary": "英特尔与谷歌云宣布扩大多年的战略合作，计划通过部署Gemini Enterprise和谷歌云，加速英特尔的企业数字化转型。英特尔将整合基于Gemini的先进生成式AI技术，提升全球员工的能力和生产力。",
+        "whyItMatters": "该合作表明大型芯片制造商正积极利用云端先进AI平台推动自身数字化转型，体现了AI技术在企业应用中的重要性和广泛潜力。",
+        "valueChainImpact": [
+          "模型与平台：推动Gemini Enterprise生成式AI平台的应用与优化",
+          "企业应用与生产力：提升企业内部AI应用能力，促进数字化转型",
+          "云服务与基础设施：加强云端AI服务的集成与协同"
+        ],
+        "uncertainties": [
+          "具体合作细节和技术集成方案未详述",
+          "合作对英特尔整体业务和市场表现的具体影响尚不明确"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "nvidia-blog-dc5abc6a592c",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA Introduces New Jetson Thor Computers to Advance Mainstream Robotics and Edge AI",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/",
+      "publishedAt": "2026-07-15T23:00:54.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "amazon"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "General-purpose robots and autonomous machines are moving from research labs to real-world mass-market deployment, creating demand for compact, power-efficient AI supercomputers capable of running foundation models at the edge. To meet that need, NVIDIA today introduced the T3000 and T2000, new modules based on the NVIDIA Thor architecture that enable mass-market robotics and edge AI applications at scale. Jetson AGX",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "7b8c9d0bf41c214f21985449b454d73d16aaa8691a1c038b49af3b58449ebf45",
+        "generatedAt": "2026-07-20T15:29:43.669Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "英伟达推出新款Jetson Thor计算模块，推动主流机器人和边缘AI发展",
+        "summary": "英伟达发布基于Thor架构的Jetson T3000和T2000模块，面向大规模机器人和边缘AI应用。T3000模块性能接近上一代T5000，体积和功耗减半，配备Blackwell GPU和Neoverse Arm CPU，支持多模态大模型推理。T2000则为视觉AI代理和工业机器人等提供入门级算力。新推出的Jetson智能代理技能自动优化内存和系统配置，显著降低内存需求和系统成本。英伟达还扩展了Cosmos 3边缘基础模型，支持实时视觉分析和机器人策略推理。开发者可通过统一架构和软件栈的开发套件及仿真模式提前开发，模块预计2027年Q1上市。",
+        "whyItMatters": "随着通用机器人和自主机器从实验室走向市场，紧凑高效的边缘AI超级计算机需求激增。英伟达新模块满足了大规模部署对算力、功耗和成本的平衡需求，推动机器人和边缘AI应用普及。自动化内存优化提升开发效率，降低硬件门槛，有助产业链快速迭代和规模化落地。Cosmos 3边缘模型强化了机器人感知和决策能力，促进物理AI向主流应用转变。",
+        "valueChainImpact": [
+          "设计阶段：采用Blackwell GPU和Neoverse Arm CPU的新架构提升性能与能效",
+          "存储环节：LPDDR5X内存和高带宽设计支持大模型推理",
+          "封装环节：模块体积减半，适合紧凑型机器人设备",
+          "AI基础设施：统一软件栈和开发套件简化开发流程"
+        ],
+        "uncertainties": [
+          "具体性能指标和功耗数据基于官方摘要，完整技术细节待后续发布确认",
+          "市场接受度和实际部署规模尚未明朗",
+          "部分软件功能和仿真模式发布时间存在不确定性"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "nvidia-blog-0b816fffcc50",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA and Japan Bring Full-Stack AI and Robotics to Every Industry",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/japan-ecosystem-2026/",
+      "publishedAt": "2026-07-15T10:51:37.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台",
+        "企业应用与生产力",
+        "供应链与地缘政策"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Home to leading manufacturers, robotics pioneers, infrastructure builders and iconic gaming companies, of course, Japan is one of the world’s centers of AI — building across the full stack with NVIDIA technologies. This week NVIDIA and its partners in Japan are showcasing the AI ecosystem’s latest advancements. Check back here for updates. This week, NVIDIA founder and CEO Jensen Huang met with Japan’s AI leaders and",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "feba5e6f935714717c7497c40302c4da3ebb25abe54dbbb105a7239946836222",
+        "generatedAt": "2026-07-20T15:29:52.951Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "NVIDIA携手日本推动全栈AI与机器人技术应用于各行业",
+        "summary": "NVIDIA与日本合作，利用其全栈AI技术推动机器人和智能制造发展。日本凭借其制造业优势，结合NVIDIA的AI平台，推动物理AI在制造业、医疗和生命科学等领域的应用。日本政府启动了物理AI国家计划，聚合产业链上下游资源，发展开放多模态基础模型。NVIDIA CEO黄仁勋与日本多家龙头企业和政府官员会面，强调AI与机器人结合将提升生产力，缓解劳动力短缺。软银与NVIDIA合作推进AI原生网络，医疗领域则通过NVIDIA技术加速药物发现和智能医疗设备研发。",
+        "whyItMatters": "日本作为全球制造和机器人技术强国，结合NVIDIA的AI全栈技术，有望打造新的经济增长引擎，推动智能制造升级和产业数字化转型。政府支持和产业链协同为AI技术落地提供保障，医疗和生命科学领域的突破也将提升国家竞争力和民生福祉。",
+        "valueChainImpact": [
+          "设计阶段：推动AI模型与平台开发，支持多模态基础模型建设",
+          "存储与芯片制造：强化半导体设备和存储器企业参与AI硬件生态",
+          "封装与制造：机器人和智能制造企业采用AI技术提升生产效率",
+          "AI基础设施：构建AI超级计算平台，支持企业级AI应用"
+        ],
+        "uncertainties": [
+          "具体技术细节和商业模式尚未完全公开",
+          "各企业合作深度和时间节点存在不确定性",
+          "政府政策支持力度和持续性需观察",
+          "AI技术在实际制造和医疗场景的广泛应用效果尚待验证"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "nvidia-blog-9d5925e11f31",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "Nemotron Labs: How Open Models Give Enterprises and Nations AI They Can Trust, Control and Customize",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/nemotron-open-models-ai-trust-control-customize/",
+      "publishedAt": "2026-07-14T16:45:13.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台",
+        "企业应用与生产力",
+        "资本市场与金融稳定"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Editor’s note: This post is part of the Nemotron Labs blog series, which explores how the latest open models, datasets and training techniques help businesses build specialized AI systems and applications on NVIDIA platforms. Each post highlights practical ways to use an open stack to deliver real value in production — from transparent research copilots to scalable AI agents. Enterprises have plenty of powerful model",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "1883717697f2c6bcc958085adad23788642799a403ff88f0bd17279eb0537cdd",
+        "generatedAt": "2026-07-20T15:29:59.410Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "Nemotron Labs：开放模型如何赋能企业和国家构建可信、可控且可定制的AI",
+        "summary": "NVIDIA Nemotron开放模型支持企业和国家基于开放模型、数据集和训练技术，构建专门化AI系统和应用。开放模型允许企业完全控制和定制AI，提升业务流程、利用领域知识并超越准确性和可信度标准。Nemotron模型可与领先封闭模型协同，优化推理成本和任务准确率。多行业客户已通过后训练定制Nemotron模型，实现高准确率和显著成本优势。NVIDIA NeMo工具套件和合作伙伴生态促进模型定制和规模化部署。Nemotron联盟推动开放模型生态建设，促进共享数据和行业经验，加速AI从采用向自主拥有转变。",
+        "whyItMatters": "开放模型打破封闭模型的控制限制，使企业能够根据自身业务需求定制和优化AI，提升准确性和可信度，尤其适用于对准确性要求高的医疗和法律等行业。成本显著降低促进更广泛的AI实验和部署，加速AI技术普及和创新。生态合作推动模型持续改进和行业应用落地，助力AI自主可控发展。",
+        "valueChainImpact": [
+          "设计阶段：开放模型促进模型架构和训练方法创新",
+          "内存与计算：优化推理成本，提升计算资源利用效率",
+          "封装与部署：支持定制化AI应用的规模化部署",
+          "AI基础设施：提供定制训练和评估工具，支持后训练流程"
+        ],
+        "uncertainties": [
+          "具体性能指标和成本优势基于部分客户案例，普适性待验证",
+          "开放模型与封闭模型协同效果在不同应用场景的表现差异",
+          "生态系统发展速度及合作伙伴参与度的持续性"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "nvidia-blog-43be431cc445",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "Why Performance per Watt Is the Ultimate Metric for AI Infrastructure Efficiency",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/performance-per-watt-ai-infrastructure-efficiency/",
+      "publishedAt": "2026-07-14T15:00:20.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Power is AI infrastructure’s inescapable constraint. How many tokens an AI factory can generate within a fixed power budget determines its revenue and profitability. Because of this, performance per watt — a metric that can’t be gamed, only earned through real-world results — is the foundation for AI factories. As agentic AI drives token demand higher, the infrastructure decisions organizations make today will determ",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "42aa4558aad55757ec75e51816934b5868f50871ee5b2aba08f0646a9b789451",
+        "generatedAt": "2026-07-20T15:30:06.452Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "为何每瓦性能是AI基础设施效率的终极指标",
+        "summary": "NVIDIA官方指出，电力是AI基础设施的核心限制，衡量AI工厂效率的关键指标是每瓦性能（performance per watt），该指标直接影响收入和利润。随着代理型AI推动令牌需求增长，基础设施的设计需在功耗受限的环境下实现规模化。当前主流前沿AI模型采用专家混合（MoE）架构，服务大规模模型需更大GPU域，NVIDIA Blackwell NVL72平台支持72 GPU域，实现最高每瓦性能和最低令牌成本。相比上一代Hopper平台，Blackwell在多种模型上实现了10至25倍的每瓦性能提升。NVIDIA通过全栈协同设计（从硅片到软件）优化系统性能，包括专用的NVLink交换机和多种软件优化技术。软件性能持续提升，且通过DSX MaxLPS软件提升电力利用率，支持更多GPU在同一功率预算下运行。实际生产环境验证了Blackwell平台的可靠性和经济性，多个领先AI实验室和服务商已采用该平台部署推理任务。NVIDIA Vera Rubin平台基于此经验进一步提升机架级能效。",
+        "whyItMatters": "AI算力需求持续增长，电力成本和效率成为限制因素。每瓦性能作为不可造假的指标，直接关联AI工厂的盈利能力和规模扩展能力。NVIDIA的全栈协同设计和软硬件优化为行业提供了提升能效的路径，推动AI基础设施向更大规模和更高效能发展，影响AI模型部署和服务的成本结构。",
+        "valueChainImpact": [
+          "设计阶段：推动更大规模GPU域和专用互联设计",
+          "存储与封装：支持高效散热和功率管理",
+          "AI基础设施：提升机架级能效和系统可靠性",
+          "模型与平台：优化推理性能和成本效率"
+        ],
+        "uncertainties": [
+          "具体性能提升数据基于NVIDIA官方测试，独立验证情况未知",
+          "不同工作负载对性能与功耗的权衡细节未完全披露",
+          "未来技术迭代对现有平台性能影响尚不明确"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "bis-2845e7504925",
+      "sourceId": "bis",
+      "sourceName": "国际清算银行（BIS）",
+      "sourceType": "国际机构",
+      "sourceHomepage": "https://www.bis.org/",
+      "sourcePriority": 100,
+      "title": "The AI investment race",
+      "titleZh": null,
+      "url": "https://www.bis.org/publ/work1367.htm",
+      "publishedAt": "2026-07-14T09:32:00.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "资本市场与金融稳定"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [
+        "models-platforms",
+        "ai-applications"
+      ],
+      "entities": [
+        "国际清算银行（BIS）"
+      ],
+      "excerpt": "by Phurichai Rungcharoenkitkul The AI build-out ranks among the largest technology-driven investment booms in US history. Its scale, reliance on debt and circular equity ties raise questions about the boom's sustainability and financial stability. We study a dynamic contest in which firms competing for a few dominant positions over-commit resources. The over-investment leaves the sector exposed to revenue disappointm",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "c2482e82561afe642b5679e0caf49428b8d2939b2bfca3b40991864be2d057d3",
+        "generatedAt": "2026-07-20T15:30:12.850Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "人工智能投资竞赛",
+        "summary": "国际清算银行研究指出，美国人工智能建设投资规模巨大，属于历史上最大规模的技术驱动投资热潮之一。该投资热潮高度依赖债务融资和循环股权关系，导致行业存在过度投资现象，投资规模约为有效水平的1.5倍，需求弹性较低时甚至达到3倍。过度投资增加了收入不及预期的风险，可能引发从繁荣到衰退的转变。此外，企业间复杂的财务关联使得单一企业的财务压力可能通过链条传导，影响整个行业的金融稳定。",
+        "whyItMatters": "该研究揭示了人工智能领域投资过热带来的金融稳定风险，强调了债务和循环融资结构可能加剧行业波动，提醒监管机构和市场参与者关注潜在的系统性风险，防范投资泡沫破裂对资本市场和经济的冲击。",
+        "valueChainImpact": [
+          "模型与平台阶段面临资金链断裂风险",
+          "人工智能应用开发可能因投资回报不及预期受挫",
+          "金融机构需加强对AI相关企业的风险监控"
+        ],
+        "uncertainties": [
+          "具体投资过度的行业细分和企业规模未详",
+          "需求弹性变化对投资过度程度的具体影响存在不确定性",
+          "模型假设与现实市场动态的匹配程度未知"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "bis-bulletin-128",
+      "sourceId": "bis",
+      "sourceName": "国际清算银行（BIS）",
+      "sourceType": "国际机构",
+      "sourceHomepage": null,
+      "sourcePriority": 110,
+      "title": "AI disruption in private credit: exposure to software firms in BDCs",
+      "titleZh": "AI 冲击下的私募信贷：BDC 对软件公司的风险暴露",
+      "url": "https://www.bis.org/publ/bisbull128.htm",
+      "publishedAt": "2026-07-14T00:00:00.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "资本市场与金融稳定",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [
+        "ai-applications",
+        "models-platforms"
+      ],
+      "entities": [
+        "Business Development Companies",
+        "软件公司"
+      ],
+      "excerpt": "BIS Bulletin 128 估算 BDC 向软件公司提供约 1150 亿美元贷款，约占全部 BDC 贷款的五分之一。报告指出生成式 AI 带来的收入不确定性尚未明显反映在贷款或股权定价中；信用利差收窄与大型 BDC 的共同借款人暴露值得跟踪，但低杠杆和担保贷款结构可能限制外溢。文中观点属于作者，不必然代表 BIS。",
+      "editorialSummary": "BIS 把 AI 对软件行业的扰动连接到了私募信贷资产负债表：核心问题不只是软件估值，而是收入不确定性何时传导到贷款定价、信用利差和共同借款人风险。",
+      "analysis": {
+        "status": "ok",
+        "inputHash": "ffd2fb5b402a9436557c84f463e58402c52306da176e3e31ac56aabfab5ecc06",
+        "generatedAt": "2026-07-20T15:30:20.774Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "curated-official-key-points",
+        "titleZh": "私募信贷中的AI冲击：BDC对软件公司的风险敞口",
+        "summary": "国际清算银行（BIS）报告估算，商业发展公司（BDC）向软件公司提供约1150亿美元贷款，约占BDC贷款总额的五分之一。报告指出，生成式AI带来的收入不确定性尚未明显反映在贷款或股权定价中。信用利差收窄及大型BDC对共同借款人的风险敞口值得关注，但BDC普遍采用低杠杆和担保贷款结构，可能限制风险外溢。文中观点为作者个人观点，不代表BIS官方立场。",
+        "whyItMatters": "生成式AI带来的收入波动可能影响软件企业的偿债能力，进而影响BDC贷款质量和资本市场稳定。理解BDC对软件行业的风险敞口，有助于监管机构和市场参与者评估潜在金融风险和制定应对策略。",
+        "valueChainImpact": [
+          "AI应用层面：生成式AI技术带来的收入不确定性影响软件企业财务表现",
+          "资本市场与金融稳定：BDC贷款结构和风险敞口对金融市场稳定性构成潜在影响"
+        ],
+        "uncertainties": [
+          "生成式AI收入不确定性具体对贷款违约率的影响程度尚不明确",
+          "BDC贷款和股权定价未来是否会反映AI相关风险存在不确定性",
+          "信用利差收窄是否会引发更广泛的金融风险尚需进一步观察"
+        ],
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "aws-blog-c074392b3115",
+      "sourceId": "aws-blog",
+      "sourceName": "AWS 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
+      "sourcePriority": 82,
+      "title": "AWS Weekly Roundup: AWS Builder Center at 1 year, Network Scanning in Security Hub, Loom for AWS, and more (July 13, 2026)",
+      "titleZh": null,
+      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/",
+      "publishedAt": "2026-07-13T16:18:20.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台",
+        "企业应用与生产力",
+        "资本市场与金融稳定"
+      ],
+      "relatedCompanies": [
+        "microsoft",
+        "amazon"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "AWS 官方博客"
+      ],
+      "excerpt": "AWS Builder Center turned one year old last week. Launched on July 9, 2025, the platform has grown from a community hub with Wishlist voting, community profiles, and a toolbox into a full ecosystem with sandbox environments, workshops, Spaces, and a Builders’ Library. To mark the anniversary, Rick Suttles published a full feature timeline covering everything shipped over the past year: AWS Capabilities by Region (1,5",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "e4e57d8d93677df0e5b7431c132ce73749a0d6c16a5eaa3774ce3330b8ed1305",
+        "generatedAt": "2026-07-20T15:30:29.121Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "AWS Builder Center 一周年及多项新功能发布",
+        "summary": "AWS Builder Center 自2025年7月9日上线以来，已发展为包含沙箱环境、工作坊、社区空间和图书馆的完整生态系统，累计发布文章超过6400篇，浏览量超1040万。近期新增沙箱环境，用户可免费使用预配置AWS账户完成练习，无需个人账户或信用卡。AWS Security Hub 推出网络扫描功能，支持跨AWS和Azure环境识别公网可达资源，提升安全态势感知。SageMaker Studio与Hugging Face集成，实现一键模型部署和定制。EKS Auto Mode和ECS Managed Instances降低GPU管理费最高60%。Aurora DSQL CDC功能正式发布，支持变更数据流式传输。AWS还推出开源企业级AI代理平台Loom、Claude应用网关及OAuth支持等多项新工具和治理功能。此外，AWS宣布多场线下峰会和社区活动。",
+        "whyItMatters": "AWS持续丰富开发者生态和安全能力，降低AI算力和云资源使用门槛，促进跨云安全管理和AI模型快速部署，提升企业应用效率和安全防护水平。新功能和工具支持多云环境和复杂AI工作负载，推动云基础设施与AI平台深度融合，助力开发者和企业加速创新。",
+        "valueChainImpact": [
+          "设计阶段：支持模型定制与部署流程优化",
+          "AI基础设施：GPU管理费降低，提升算力利用效率",
+          "模型与平台：SageMaker与Hugging Face集成简化模型应用",
+          "企业应用与生产力：安全态势感知增强，跨云统一管理"
+        ],
+        "uncertainties": [
+          "具体用户采用率和市场反馈尚未披露",
+          "部分新功能的性能和安全效果需进一步验证",
+          "跨云安全管理在不同客户环境中的适用性存在差异"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "nvidia-blog-90857c29ae6e",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "AI Innovators Adopt NVIDIA Vera — Why Max Single-Threaded CPU at Scale Matters",
+      "titleZh": "NVIDIA Vera：面向智能代理时代的极致单线程CPU性能",
+      "url": "https://blogs.nvidia.com/blog/nvidia-vera-max-single-threaded-cpu-at-scale/",
+      "publishedAt": "2026-07-07T15:00:52.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "半导体制造",
+        "数据中心与电力",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "equipment-materials"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Max single-threaded CPUs at scale are a new category of CPUs built for the agentic AI era. A cross the creation and deployment of an agentic system, the CPU is on the critical path for reasoning, response time and learning. CPUs are the processor which executes the work the AI model commands: the tool calling, code execution, data processing, KV-cache and result analysis. For agents in AI factories, speed matters. Th",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "74b44557851e67719928753528eb778356337689edc917edd8e84cbe1c783b12",
+        "generatedAt": "2026-07-20T15:37:55.896Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "NVIDIA Vera：面向智能代理时代的极致单线程CPU性能",
+        "summary": "NVIDIA官方介绍了其新型CPU——Vera，专为智能代理（agentic AI）设计，强调在大规模环境下实现最大单线程性能的重要性。智能代理的工作模式是持续且并行的循环，每一步依赖前一步结果，单核性能决定循环速度。传统数据中心CPU为降低成本而增加核心数，牺牲了单核性能和内存带宽，导致性能瓶颈。Vera采用定制Olympus核心，单核指令执行效率提升50%，配备高达1.2TB/s的LPDDR5X内存带宽和3.4TB/s的核心间带宽，支持88核全速运行无瓶颈。实测显示，Vera在智能代理相关任务中性能显著优于主流x86服务器CPU，提升了AI工厂的GPU利用率和整体效率。NVIDIA还计划推出下一代Rigel核心，进一步提升单核性能。",
+        "whyItMatters": "智能代理AI的核心计算需求与传统CPU设计不同，强调单线程性能和内存带宽的平衡。Vera的设计理念和性能提升有助于解决当前数据中心CPU在智能代理任务中的瓶颈，提升AI工厂的整体效率和收益能力。随着智能代理数量激增，具备高效单核性能的CPU将成为AI基础设施的关键组成部分。",
+        "valueChainImpact": [
+          "设计阶段：推动CPU核心设计向高单线程性能优化转变",
+          "内存技术：提升内存带宽和功耗效率以满足高性能需求",
+          "封装技术：支持高带宽核心间通信，减少延迟",
+          "AI基础设施：提升数据中心CPU性能，优化GPU利用率"
+        ],
+        "uncertainties": [
+          "Vera CPU的具体市场部署规模和普及速度尚不明确",
+          "与其他CPU架构在不同AI任务中的性能对比细节有限",
+          "未来Rigel核心的具体性能指标和发布时间未详述"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "ecb-be285096d5f4",
+      "sourceId": "ecb",
+      "sourceName": "欧洲中央银行（ECB）",
+      "sourceType": "央行研究",
+      "sourceHomepage": "https://www.ecb.europa.eu/",
+      "sourcePriority": 96,
+      "title": "Philip R. Lane: AI and monetary policy",
+      "titleZh": "菲利普·R·莱恩：人工智能与货币政策",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260706~b81aa4e329.en.html",
+      "publishedAt": "2026-07-06T18:30:00.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "模型与平台"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [],
+      "entities": [
+        "欧洲中央银行（ECB）"
+      ],
+      "excerpt": "",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "dec5e867463a8cd143ef06a6c629a30d082945a78441a27f3f8b44fb86399e37",
+        "generatedAt": "2026-07-20T15:37:59.306Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "菲利普·R·莱恩：人工智能与货币政策",
+        "summary": "欧洲中央银行研究了人工智能技术对货币政策制定的潜在影响，探讨了AI在经济模型优化和政策执行中的应用可能性。",
+        "whyItMatters": "人工智能技术可能改变货币政策的分析和实施方式，提高政策响应的效率和精准度，影响宏观经济稳定与金融市场发展。",
+        "valueChainImpact": [
+          "经济模型开发",
+          "货币政策分析",
+          "金融市场监测"
+        ],
+        "uncertainties": [
+          "具体AI技术应用细节未披露",
+          "对货币政策效果的实际影响尚不明确"
+        ],
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "nvidia-blog-0c57e47a6db2",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "How Open Models Are Driving AI Research",
+      "titleZh": "开放模型如何推动人工智能研究",
+      "url": "https://blogs.nvidia.com/blog/open-models-icml-2026/",
+      "publishedAt": "2026-07-06T16:00:00.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "amd"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Every year, the International Conference on Machine Learning (ICML) reveals where thousands of AI researchers have decided to put their work. This year’s accepted papers reveal a clear direction: open frontier models and open AI infrastructure have become foundational to how modern AI science gets done. NVIDIA had 74 papers accepted at ICML 2026. Approximately 2,000 accepted papers cite NVIDIA GPUs, and 145 cite NVID",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "e0de041d76c6e19da6eebf1090f21d7dda884fa954e270f2c2d61b02788c4620",
+        "generatedAt": "2026-07-20T15:38:06.827Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "开放模型如何推动人工智能研究",
+        "summary": "NVIDIA官方博客介绍了2026年国际机器学习大会（ICML）上开放前沿模型和开放AI基础设施成为现代AI科学研究的基础。NVIDIA的Nemotron、Cosmos、Isaac GR00T和BioNeMo等开放模型家族广泛应用于视觉生成、强化学习、机器人、自动驾驶和生命科学等领域。开放模型不仅提供了开放权重、数据集和训练方案，还通过合成数据生成工具提升训练效率。生态系统中多家公司基于NVIDIA开放模型推动各自领域的研发和应用，体现了开放模型对AI研究和产业的深远影响。",
+        "whyItMatters": "开放模型和开放基础设施降低了AI研究门槛，加速了跨领域创新，推动了机器人、自动驾驶和生命科学等关键应用的发展，促进了AI技术的普及和产业化。",
+        "valueChainImpact": [
+          "设计阶段：开放模型为芯片设计和AI算法优化提供基础",
+          "存储与内存：大规模训练和推理对存储性能提出更高要求",
+          "封装阶段：支持高性能AI芯片的集成与散热设计",
+          "AI基础设施：开放模型推动云端和边缘计算平台发展"
+        ],
+        "uncertainties": [
+          "具体开放模型的性能指标和适用范围未详述",
+          "生态系统中各合作方的具体贡献和商业模式未明确",
+          "未来开放模型技术的演进路径和潜在风险尚不确定"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "aws-blog-0fdb89758c72",
+      "sourceId": "aws-blog",
+      "sourceName": "AWS 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
+      "sourcePriority": 82,
+      "title": "AWS Weekly Roundup: Claude Sonnet 5 on AWS, Amazon WorkSpaces for AI agents, AWS service availability updates, and more (July 6, 2026)",
+      "titleZh": "AWS每周汇总：Claude Sonnet 5上线、Amazon WorkSpaces支持AI代理、AWS服务可用性更新等（2026年7月6日）",
+      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/",
+      "publishedAt": "2026-07-06T15:46:43.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "amazon"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "AWS 官方博客"
+      ],
+      "excerpt": "A couple of editions ago I wrote about what I find so energizing about working with startups. Last week I got a fresh dose of it: I spent a few days with the AWS Startups team, listening to stories of founders talking about the problems they’re actually solving. One story that stayed with me came from Marco Negreiros, founder of EyeCare Health , a Brazilian healthtech expanding access to eye care. He shared a strikin",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "3a392cd29d51c226a4550ee1dbb6b01360da4cf9d6c04ee2e9cc12933f966e4c",
+        "generatedAt": "2026-07-20T15:38:16.270Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "AWS每周汇总：Claude Sonnet 5上线、Amazon WorkSpaces支持AI代理、AWS服务可用性更新等（2026年7月6日）",
+        "summary": "AWS近期推出多项新服务和功能，包括基于Graviton5处理器的EC2 C9g/C9gd实例，提升计算性能和内存速度；CloudFormation Express模式加速基础设施部署；Amazon EKS支持Kubernetes版本回滚保障升级安全；Certificate Manager支持ACME协议实现TLS证书自动化；Anthropic的Claude Sonnet 5模型上线AWS，提升代码处理和AI代理能力；Amazon WorkSpaces正式支持AI代理安全访问桌面应用；OpenSearch优化日志分析引擎，提升性价比；SageMaker AI推理加速容器镜像缓存功能；CloudWatch支持基于日志查询创建告警。此外，AWS公布多项服务生命周期变更，部分服务进入维护或终止支持阶段。AWS还宣布了下半年多场线上线下社区和开发者活动。",
+        "whyItMatters": "这些更新体现AWS在AI算力、模型平台和云基础设施领域的持续创新，提升了AI应用开发和部署效率，增强了云服务的安全性和稳定性。服务生命周期调整提醒用户及时迁移，避免业务中断。社区活动促进生态建设和技术交流，推动产业链协同发展。",
+        "valueChainImpact": [
+          "设计阶段：Graviton5处理器提升计算性能，支持更复杂AI模型设计",
+          "内存与存储：更大缓存和本地NVMe存储提升数据处理速度",
+          "AI基础设施：CloudFormation Express模式和EKS版本回滚提升部署和运维效率",
+          "模型与平台：Claude Sonnet 5和SageMaker推理加速提升AI模型能力和响应速度"
+        ],
+        "uncertainties": [
+          "具体新功能在不同区域的可用性和性能表现",
+          "部分服务生命周期变更对现有用户迁移成本和影响程度",
+          "Claude Sonnet 5在实际应用场景中的表现和用户反馈"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "nvidia-blog-678333367e3e",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "How Nations Are Deploying AI for Strategic Priorities",
+      "titleZh": "各国如何部署 AI 以实现战略优先事项",
+      "url": "https://blogs.nvidia.com/blog/nations-deploy-ai-strategic-priorities/",
+      "publishedAt": "2026-07-06T15:00:25.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "模型与平台",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "amazon"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Nations have long invested in domestic infrastructure to advance their economies, protect and use their data, and take advantage of technology opportunities in areas such as transportation, communications, commerce, entertainment and healthcare. AI, the most important technology of our time, is turbocharging innovation across every facet of society. Countries are investing in AI capabilities so they can design, train",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "494890506bbdc2acd3a1b7dd006f5b068c9ec00170c8355b86cd5a7c2655ae88",
+        "generatedAt": "2026-07-20T15:38:25.352Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "各国如何部署 AI 以实现战略优先事项",
+        "summary": "各国正投资建设本土 AI 基础设施，利用本地数据和人才开发定制化的 AI 模型与应用，推动经济增长、国家安全和文化保护。AI 工厂作为新型数据中心，成为支持高强度计算任务的关键设施。国家 AI 战略包含五大要素：AI 紧迫性、AI 人才队伍、模型与数据、本地 AI 生态系统及 AI 工厂。全球多个国家已通过公私合作模式建设 AI 能力，促进社会和环境效益。",
+        "whyItMatters": "AI 正在重塑产业和社会各领域，国家级 AI 能力建设有助于提升经济竞争力、保障数据主权和文化多样性，同时支持应对气候变化和网络安全等全球挑战。AI 工厂作为基础设施，将成为现代经济的基石，推动创新和产业升级。",
+        "valueChainImpact": [
+          "设计阶段：推动本地化 AI 模型设计与训练",
+          "存储与内存：支持大规模本地数据集的存储与管理",
+          "封装：保障 AI 硬件的高效集成与性能",
+          "AI 基础设施：建设 AI 工厂，提供加速计算能力"
+        ],
+        "uncertainties": [
+          "具体国家 AI 战略实施细节和进展程度未详述",
+          "AI 工厂的技术标准和运营模式存在多样性",
+          "不同国家在数据治理和法规上的差异可能影响 AI 应用效果"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "microsoft-blog-074793d8eedd",
+      "sourceId": "microsoft-blog",
+      "sourceName": "Microsoft 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.microsoft.com/",
+      "sourcePriority": 84,
+      "title": "Microsoft Frontier Company: AI engineering that amplifies and protects your intelligence",
+      "titleZh": "微软 Frontier Company：放大并保护您的智能的 AI 工程",
+      "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/",
+      "publishedAt": "2026-07-02T12:59:05.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "microsoft"
+      ],
+      "relatedStages": [
+        "models-platforms"
+      ],
+      "entities": [
+        "Microsoft 官方博客"
+      ],
+      "excerpt": "The pace of AI adoption is moving incredibly fast. Customers have moved well beyond experimentation and understand the importance of adopting AI to transform their business. They are now concentrating on delivering measurable business outcomes and demonstrating a return on their AI investments, while ensuring their intelligence is amplified and their IP is protected. Today we are introducing Microsoft Frontier Compan",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "baab29f422dc8e7f5fd1b57a5bdb0fbea5296136171b05cc103ff947ed20f2d6",
+        "generatedAt": "2026-07-20T15:38:32.113Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "微软 Frontier Company：放大并保护您的智能的 AI 工程",
+        "summary": "微软推出 Frontier Company，作为专注于通过 AI 实现前沿转型的新业务部门。该部门结合深厚的行业知识、变革管理和企业级 AI 工程能力，致力于与客户共同设计、创新、部署和持续改进 AI 系统，实现可衡量的业务成果。微软投入 25 亿美元，派驻 6000 名行业与工程专家，确保客户的专有数据和知识产权得到保护，避免被用于训练通用模型。平台支持多模型、多供应商，赋予客户灵活选择权。已与伦敦证券交易所集团等多家客户合作，取得初步成效。该组织由 Rodrigo Kede Lima 领导，强调智能与信任是 AI 解决方案的核心。",
+        "whyItMatters": "随着 AI 应用从试验阶段进入业务转型和投资回报阶段，微软通过 Frontier Company 提供端到端的企业级 AI 工程服务，帮助客户实现智能资产的持续增值和保护，避免智能产权被稀释，推动 AI 在行业中的深度落地和规模化应用。",
+        "valueChainImpact": [
+          "推动 AI 工程服务向行业深度定制和持续优化发展",
+          "强化企业对 AI 智能资产和知识产权的保护需求",
+          "促进多模型、多供应商 AI 平台生态建设",
+          "加速 AI 技术与业务流程的融合，提升业务价值实现效率"
+        ],
+        "uncertainties": [
+          "具体业务成果和投资回报的量化数据未披露",
+          "Frontier Company 在不同地区和行业的推广效果尚不明确",
+          "多模型平台的技术兼容性和客户采纳度存在不确定性",
+          "长期保护客户智能资产的具体机制和效果需进一步观察"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "nvidia-blog-73c7c83796be",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA Unlocks AI Compute at Scale, Inviting Partners to Power the AI Infrastructure Buildout",
+      "titleZh": "英伟达开放大规模 AI 计算能力，携手合作伙伴共建 AI 基础设施",
+      "url": "https://blogs.nvidia.com/blog/nvidia-unlocks-ai-compute-at-scale-capital-partners-to-power-ai-infrastructure-buildout/",
+      "publishedAt": "2026-07-02T03:34:48.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "As AI moves from model development to production inference, compute demand is accelerating and shifting toward continuously operating AI factories that generate tokens at scale. This shift requires access to large‑scale, multi‑tenant accelerated computing that can come online quickly, stay highly utilized and support the economics of token‑scale AI services. Emerging AI companies historically have had limited access ",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "a1dd4474572d775174ef30d985d5447ffe26b354ca3c3bbc272b87a31b0eca0d",
+        "generatedAt": "2026-07-20T15:38:39.982Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "英伟达开放大规模 AI 计算能力，携手合作伙伴共建 AI 基础设施",
+        "summary": "随着 AI 从模型开发向生产推理转变，计算需求快速增长并趋向持续运行的大规模 AI 工厂。英伟达推出新商业模式，向初创企业、模型构建者、企业和区域 AI 参与者开放其加速计算基础设施，采用收入分成和信用支持的经济模式，促进 AI 云服务商采购英伟达平台。该模式加速英伟达平台在 AI 原生领域的普及，带来基于使用的持续收入。首批合作伙伴包括 Sharon AI 和 Firmus，分别在不同地区建设大规模 DSX AI 工厂，满足快速增长的算力需求。AI 原生公司如 Baseten、Fireworks AI 和 Together AI 也体现了对即时大规模云算力的需求，强调商业灵活性和可靠性。",
+        "whyItMatters": "英伟达的新模式降低了 AI 计算基础设施的准入门槛，解决了资本密集型算力融资难题，推动 AI 产业链上下游快速扩展和商业化落地。通过合作伙伴共建 AI 工厂，英伟达不仅增强了自身平台的市场渗透力，也为 AI 原生企业提供了更灵活高效的算力支持，助力 AI 应用规模化发展。",
+        "valueChainImpact": [
+          "设计阶段：推动 AI 芯片设计需求增长",
+          "存储阶段：加速大规模数据存储与访问需求",
+          "封装阶段：提升高性能计算硬件集成需求",
+          "AI 基础设施：促进云端 AI 工厂建设与运营"
+        ],
+        "uncertainties": [
+          "具体合作模式的财务细节和风险分担未详述",
+          "新商业模式对传统硬件采购和部署的长期影响尚不明确",
+          "合作伙伴的规模和地域分布是否能覆盖全球主要 AI 市场存在不确定性"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "aws-blog-8471c84a3b54",
+      "sourceId": "aws-blog",
+      "sourceName": "AWS 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
+      "sourcePriority": 82,
+      "title": "Amazon EC2 C9g and C9gd instances powered by AWS Graviton5 processors are now available",
+      "titleZh": "亚马逊推出基于AWS Graviton5处理器的EC2 C9g和C9gd实例",
+      "url": "https://aws.amazon.com/blogs/aws/amazon-ec2-c9g-and-c9gd-instances-powered-by-aws-graviton5-processors-are-now-available/",
+      "publishedAt": "2026-06-30T20:56:44.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "amazon"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "AWS 官方博客"
+      ],
+      "excerpt": "When you run compute-intensive workloads like real-time analytics, batch processing, video encoding, scientific modeling, or CPU-based machine learning inference, every percentage point of performance matters. You need instances that deliver higher throughput per vCPU, faster memory access, and more network bandwidth, all while keeping your costs in check. Today I am happy to announce the general availability of Amaz",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "14c0c06897eb16729b125ca9783efe8020a457c39901bbf86e34737c186876f2",
+        "generatedAt": "2026-07-20T15:38:48.305Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "亚马逊推出基于AWS Graviton5处理器的EC2 C9g和C9gd实例",
+        "summary": "亚马逊宣布其Amazon EC2 C9g和C9gd实例正式上线，采用AWS Graviton5处理器，针对计算密集型工作负载优化。C9g实例相比上一代C8g性能提升25%，配备DDR5 8800MT/s内存和5倍L3缓存，网络和存储带宽均有提升。C9gd实例在此基础上增加高速低延迟本地NVMe SSD存储，适合需要快速本地存储的应用。两者支持多种实例规格，适用高性能计算、批处理、视频编码、科学建模、分布式分析及基于CPU的机器学习推理等场景。新增Nitro Isolation Engine提升虚拟机隔离安全性，支持详细I/O性能监控和灵活带宽配置，现已在多个区域上线。",
+        "whyItMatters": "随着AI应用从简单问答向多步骤任务执行转变，CPU计算需求增长，Graviton5基实例通过提升单核性能、内存速度和缓存容量，满足更高效的推理和实时分析需求。新增本地NVMe存储和安全隔离技术增强了实例的性能和安全保障，推动云端AI基础设施能力升级。",
+        "valueChainImpact": [
+          "设计阶段：采用最新Graviton5处理器和DDR5高速内存设计",
+          "内存：引入DDR5 8800MT/s内存，提升数据访问速度",
+          "封装：支持多规格实例及裸金属选项，满足不同应用需求",
+          "AI基础设施：优化CPU推理性能，支持agentic AI多任务执行"
+        ],
+        "uncertainties": [
+          "具体性能提升在不同实际应用场景中的表现差异",
+          "未来区域和实例规格的扩展计划",
+          "Nitro Isolation Engine的安全隔离效果在复杂多租户环境中的实际表现"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "nvidia-blog-794f6d14cbc1",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA BioNeMo Agent Toolkit Brings Accelerated AI to Life Sciences Researchers in Claude Science",
+      "titleZh": "NVIDIA BioNeMo Agent 工具包助力生命科学研究者加速 AI 应用于 Claude Science",
+      "url": "https://blogs.nvidia.com/blog/claude-science-bionemo-agent-toolkit/",
+      "publishedAt": "2026-06-30T17:00:38.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Life sciences has entered an era of computational scale, and for more than a decade, NVIDIA has built the full GPU-accelerated computing stack — spanning hardware, frameworks, libraries, models, microservices and domain-specific tools — to help researchers run more sophisticated workflows and iterate faster. This week, Anthropic announced Claude Science , an AI workbench for science research that lets scientists conv",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "380045ed59183b0e71fc321a2def2d1cc430199f9fd9f538159d25af6fc87bad",
+        "generatedAt": "2026-07-20T15:38:55.418Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "NVIDIA BioNeMo Agent 工具包助力生命科学研究者加速 AI 应用于 Claude Science",
+        "summary": "NVIDIA 发布 BioNeMo Agent 工具包，集成于 Anthropic 的 Claude Science AI 工作台，支持生命科学研究者通过自然语言与 AI 代理交互，自动调用加速的科学计算工具和模型，提升基因组学、蛋白质组学、药物设计等领域的研究效率。该工具包包含多种加速库和微服务，支持跨平台调用，已被全球主要制药企业广泛采用。",
+        "whyItMatters": "生命科学进入计算规模时代，NVIDIA 通过 BioNeMo Agent 工具包将其 GPU 加速计算栈与 AI 代理结合，简化复杂科研流程，提升研究迭代速度和效率，推动 AI 在药物发现和分子设计等关键领域的应用，促进科学发现的自动化和智能化。",
+        "valueChainImpact": [
+          "设计阶段：提供加速的生物分子模型和计算工具，支持复杂科研任务",
+          "内存与计算基础设施：利用 NVIDIA GPU 加速基因组分析、化学信息学等计算密集型任务",
+          "封装与部署：通过容器化微服务实现高性能推理和跨平台调用",
+          "AI 基础设施：集成多种加速库和模型，支持 AI 代理自动化科研流程"
+        ],
+        "uncertainties": [
+          "具体性能提升幅度和实际应用效果需进一步验证",
+          "Claude Science 与 BioNeMo Agent 工具包的集成细节和用户体验尚未全面公开",
+          "未来支持的领域和工具扩展计划存在不确定性"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "blackstone-2026-mid-year",
+      "sourceId": "blackstone",
+      "sourceName": "Blackstone",
+      "sourceType": "公司观点",
+      "sourceHomepage": null,
+      "sourcePriority": 110,
+      "title": "2026 Investment Perspectives: Mid-Year Update",
+      "titleZh": "Blackstone 2026 年中展望：AI 基建资本周期",
+      "url": "https://www.blackstone.com/insights/article/2026-mid-year-investment-perspectives/",
+      "publishedAt": "2026-06-30T00:00:00.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "数据中心与电力",
+        "AI 算力与芯片",
+        "资本市场与金融稳定"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [
+        "design",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "Blackstone",
+        "QTS",
+        "Hyperscalers"
+      ],
+      "excerpt": "Blackstone 的年中观点认为 AI 正推动数据中心、电力、散热、设备、模型和 neocloud 的多年资本开支周期，并强调算力、电力与数据中心同时是增长支柱和供给约束。文章使用其投资组合数据阐述私募资本在填补大规模基础设施融资缺口中的角色。这是资产管理机构的自身观点，应与独立机构研究分开阅读。",
+      "editorialSummary": "Blackstone 从资产所有者和资本提供方角度判断 AI 基建仍处于长期扩张阶段，价值可能更多流向掌握稀缺电力、土地、数据中心容量和工程执行能力的参与者。",
+      "analysis": {
+        "status": "ok",
+        "inputHash": "97a9fac08b4c37d8512b055e051e3e30a19df0e4b6fe19f20833c60b2b87956c",
+        "generatedAt": "2026-07-20T15:30:58.340Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "curated-official-key-points",
+        "titleZh": "2026年中期投资展望更新",
+        "summary": "Blackstone认为AI推动了数据中心、电力、散热、设备、模型和新型云计算的长期资本开支周期，算力、电力和数据中心既是增长驱动力也是供给瓶颈。私募资本在弥补大规模基础设施融资缺口中发挥重要作用。",
+        "whyItMatters": "揭示了AI相关基础设施投资的资本需求与供给限制，强调私募资本在支持关键基础设施建设中的战略地位，对产业链资金流和发展节奏有重要影响。",
+        "valueChainImpact": [
+          "设计阶段：AI算力需求推动芯片设计创新",
+          "AI基础设施：数据中心和电力设施扩建加速",
+          "模型与平台：算力提升支持更复杂AI模型运行"
+        ],
+        "uncertainties": [
+          "具体资本开支规模和增长速度未详述",
+          "私募资本融资缺口的具体量化数据缺失",
+          "对未来政策和市场环境变化的影响未明确"
+        ],
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "intel-newsroom-3b1450237817",
+      "sourceId": "intel-newsroom",
+      "sourceName": "Intel Newsroom",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://newsroom.intel.com/",
+      "sourcePriority": 80,
+      "title": "America 250: At a Pivotal Moment for the Nation, Intel is Advancing U.S. Innovation, AI, and Manufacturing",
+      "titleZh": null,
+      "url": "https://newsroom.intel.com/corporate/america-250-intel-is-advancing-us-innovation",
+      "publishedAt": "2026-06-29T13:29:31.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "ai-applications"
+      ],
+      "entities": [
+        "Intel Newsroom"
+      ],
+      "excerpt": "NEWS HIGHLIGHTS: The U.S. is at an inflection point. Artificial intelligence is reshaping global competition and increasing the need for secure, domestic semiconductor production. U.S. leadership in the AI era will be defined by innovation, domestic manufacturing, and workforce readiness. Strong semiconductor leadership is essential to economic growth, national security, and long-term global competitiveness. For … Th",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "2ec81236fc2e6852545ce1bec00b4cb1083103aad989eadf098625a99d7be08e",
+        "generatedAt": null,
+        "model": null,
+        "reason": "AI endpoint returned 429: Too many requests. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).\n",
+        "lastAttemptAt": "2026-07-20T15:38:59.969Z"
+      }
+    },
+    {
+      "id": "bis-progress-peril-2026",
+      "sourceId": "bis",
+      "sourceName": "国际清算银行（BIS）",
+      "sourceType": "国际机构",
+      "sourceHomepage": null,
+      "sourcePriority": 110,
+      "title": "Progress and peril",
+      "titleZh": "进展与风险",
+      "url": "https://www.bis.org/publ/arpdf/ar2026e1.htm",
+      "publishedAt": "2026-06-28T00:00:00.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "资本市场与金融稳定",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [
+        "models-platforms",
+        "ai-applications"
+      ],
+      "entities": [
+        "全球金融市场",
+        "AI 投资"
+      ],
+      "excerpt": "BIS 2026 年度经济报告讨论 AI 乐观预期如何推动投资和风险资产表现，同时提醒估值、融资条件和生产率兑现之间可能出现错配。报告从宏观金融稳定角度评估技术进步的收益与下行情景。",
+      "editorialSummary": "AI 投资能够提高生产率，但金融市场可能先于真实收益定价。需要同时跟踪资本开支兑现、融资条件和估值对预期落空的敏感度。",
+      "analysis": {
+        "status": "ok",
+        "inputHash": "1896f395a518bb1348d9e5b7e886949701fc03567cd47fcb48a1a964163ea721",
+        "generatedAt": "2026-07-20T15:37:32.653Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "curated-official-key-points",
+        "titleZh": "进展与风险",
+        "summary": "国际清算银行（BIS）2026年度经济报告分析了人工智能带来的乐观预期如何推动投资和风险资产表现，同时警示估值、融资条件与生产率兑现之间可能存在错配风险。报告从宏观金融稳定角度评估技术进步的潜在收益与下行情景。",
+        "whyItMatters": "该报告提醒投资者和监管机构关注人工智能技术进步带来的金融市场波动风险，强调需平衡技术创新带来的经济增长与潜在的金融不稳定因素。",
+        "valueChainImpact": [
+          "模型与平台开发阶段可能吸引更多投资",
+          "人工智能应用阶段的生产率提升预期影响资本市场",
+          "金融市场对AI相关资产估值的波动可能影响融资环境"
+        ],
+        "uncertainties": [
+          "具体估值错配的规模和持续时间尚不明确",
+          "技术进步对生产率的实际兑现速度存在不确定性",
+          "下行情景的触发条件和影响范围未详细说明"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "microsoft-blog-6239e85473e1",
+      "sourceId": "microsoft-blog",
+      "sourceName": "Microsoft 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.microsoft.com/",
+      "sourcePriority": 84,
+      "title": "Inside Microsoft’s two-decade push to cut water intensity while scaling for growth",
+      "titleZh": "微软二十年降低数据中心用水强度的持续努力",
+      "url": "https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/",
+      "publishedAt": "2026-06-24T12:01:13.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力"
+      ],
+      "relatedCompanies": [
+        "microsoft"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "Microsoft 官方博客"
+      ],
+      "excerpt": "As demand for cloud and AI services continues to grow, datacenters are becoming more essential than ever. Communities also want to better understand how this infrastructure affects local resources, particularly water. At Microsoft, water stewardship has been a priority since our first datacenter builds in the early 2000s and remains a core part of our strategy today and into the future. It underpins both our Communit",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "ok",
+        "inputHash": "fa8ad12795bddbb6d78b93c08635cbf521cbca8aba229fbbec9faf39a6729e01",
+        "generatedAt": "2026-07-20T15:39:12.213Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "official-feed-excerpt",
+        "titleZh": "微软二十年降低数据中心用水强度的持续努力",
+        "summary": "微软自2000年代初建设首批数据中心以来，一直将水资源管理作为核心战略。通过创新冷却技术和运营优化，微软已将数据中心的用水效率提升近90%，并致力于2030年实现用水正向（补水量超过用水量）。微软采用高效节水冷却设计，如直接空气冷却和零水冷却的芯片级冷却系统，显著降低水消耗。同时，微软积极利用再生水、非饮用水和雨水收集，减少对淡水的依赖。公司还投资社区水务基础设施，推动区域水资源韧性。2025财年，微软全球运营实现补水量超过用水量，标志着其水资源管理的重要里程碑。未来，微软将继续推进零水冷却设计、分区冷却架构及社区合作，确保数字增长与水资源可持续管理并行。",
+        "whyItMatters": "随着云计算和AI服务需求激增，数据中心对水资源的影响日益受到关注。微软的经验表明，通过技术创新和社区合作，数据中心可以在满足增长需求的同时大幅降低水资源消耗，推动数字经济与环境可持续发展协调共进。这为行业树立了水资源管理的标杆，促进绿色数据中心建设。",
+        "valueChainImpact": [
+          "设计阶段：采用高效节水冷却技术和零水芯片级冷却设计",
+          "内存与包装：支持AI负载的高效散热方案",
+          "AI基础设施：优化冷却系统以降低水强度",
+          "模型与平台：通过分区冷却提升硬件运行效率"
+        ],
+        "uncertainties": [
+          "具体节水技术的商业化推广范围和成本效益",
+          "未来水资源政策和区域水资源状况变化对策略的影响",
+          "零水冷却技术在不同气候条件下的适用性和性能表现"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "aws-blog-b55f6aafdb01",
+      "sourceId": "aws-blog",
+      "sourceName": "AWS 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
+      "sourcePriority": 82,
+      "title": "AWS Weekly Roundup: NY Summit recap, Local Zone in Hanoi, Grok 4.3 in Bedrock, price reductions, and more (June 22, 2026)",
+      "titleZh": null,
+      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/",
+      "publishedAt": "2026-06-22T14:46:17.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "amazon"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "AWS 官方博客"
+      ],
+      "excerpt": "Last week AWS Summit New York City brought together thousands of customers, partners, and builders for a free, one-day event showcasing the latest in cloud and AI innovation. Dr. Swami Sivasubramanian, VP of Agentic AI at AWS unveiled a stack of AI launches in his keynote , all built around one thesis: agents that compound value over time. Agents for working – You can launch autonomous agents and access a smarter act",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "8713ff5f687d08a9a2be4162f6b7989a2e74f95939f9182b3bb6bb5d4d4af27d",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "microsoft-blog-d69585e94d8c",
+      "sourceId": "microsoft-blog",
+      "sourceName": "Microsoft 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.microsoft.com/",
+      "sourcePriority": 84,
+      "title": "Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos",
+      "titleZh": null,
+      "url": "https://blogs.microsoft.com/blog/2026/06/22/powering-the-next-wave-of-ai-expanding-capacity-with-our-new-datacenter-in-pecos/",
+      "publishedAt": "2026-06-22T12:06:39.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "数据中心与电力",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "microsoft"
+      ],
+      "relatedStages": [
+        "ai-infrastructure",
+        "ai-applications",
+        "models-platforms"
+      ],
+      "entities": [
+        "Microsoft 官方博客"
+      ],
+      "excerpt": "Today, Microsoft is announcing one of the largest single capacity additions in our history. In Pecos, Texas, we will build a new datacenter campus, expanding our global datacenter capacity by approximately 2 gigawatts (GW) to meet strong and sustained customer demand for AI and cloud services across industries and regions. Beyond the technology, this is a major investment in West Texas. We expect to support over 6,00",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "6e41d9f8658ae90d1979bb5b3cce6df38e6e536bbbbf4d5796c15b9f0b1fa7e6",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "aws-blog-430502eb760b",
+      "sourceId": "aws-blog",
+      "sourceName": "AWS 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
+      "sourcePriority": 82,
+      "title": "Announcing Amazon EC2 G7 instances accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs",
+      "titleZh": null,
+      "url": "https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/",
+      "publishedAt": "2026-06-18T21:22:10.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "amazon"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "ai-applications"
+      ],
+      "entities": [
+        "AWS 官方博客"
+      ],
+      "excerpt": "Today, we’re announcing the general availability of Amazon Elastic Compute Cloud (Amazon EC2) G7 instances, delivering high performance GPU acceleration for AI inference, graphics, and data analytics workloads. AWS is the first major cloud provider to support NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs. G7 instances are accelerated by these GPUs with custom sixth-generation Intel Xeon Scalable processors, deliv",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "40bfb0be99d890b78ab01b535e1a05df415cde37ce49a09cecf4b84e440843d1",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "intel-newsroom-f40faef1a1b0",
+      "sourceId": "intel-newsroom",
+      "sourceName": "Intel Newsroom",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://newsroom.intel.com/",
+      "sourcePriority": 80,
+      "title": "Intel Announces Leadership Appointment at Intel Foundry to Accelerate Development and Manufacturing",
+      "titleZh": null,
+      "url": "https://newsroom.intel.com/corporate/intel-announces-leadership-appointment-at-intel-foundry-to-accelerate-development-and-manufacturing",
+      "publishedAt": "2026-06-18T20:31:38.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "半导体制造"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [
+        "equipment-materials",
+        "manufacturing",
+        "memory",
+        "packaging"
+      ],
+      "entities": [
+        "Intel Newsroom"
+      ],
+      "excerpt": "SANTA CLARA, Calif., June 18, 2026 — Intel Corporation today announced the appointment of Seok-Hee Lee as executive vice president of Intel Foundry, reporting directly to CEO Lip-Bu Tan. In this role, Lee will lead all advanced packaging, system integration, back-end technology development, and back-end manufacturing, strengthening Intel’s ability to deliver differentiated, system-level innovation for … The post Inte",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "fe36f0cada94e12eb6fd6f408f095e378f8f1328dd363a823ebf1c6907b27aa7",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "aws-blog-b8ee967c4a0c",
+      "sourceId": "aws-blog",
+      "sourceName": "AWS 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
+      "sourcePriority": 82,
+      "title": "Top announcements of the AWS Summit in New York, 2026",
+      "titleZh": null,
+      "url": "https://aws.amazon.com/blogs/aws/top-announcements-of-the-aws-summit-in-new-york-2026/",
+      "publishedAt": "2026-06-17T16:36:08.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "amazon"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "AWS 官方博客"
+      ],
+      "excerpt": "Today at the AWS Summit in New York City , Swami Sivasubramanian, AWS VP of Agentic AI, provided the day’s keynote. Here’s our roundup of the biggest announcements from the event: New in agents customers create We’re introducing new capabilities on Amazon Bedrock AgentCore: connecting AI agents to organizational, web, and paid knowledge, helping teams find and fix what’s going wrong in production, and enforcing contr",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "12e49a0e4a04d5c88277fc3df59c505a2cf4a4db59b215a2922a6d075f89334c",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "aws-blog-eab54b0985c0",
+      "sourceId": "aws-blog",
+      "sourceName": "AWS 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
+      "sourcePriority": 82,
+      "title": "Introducing Amazon Bedrock Managed Knowledge Base for faster, more accurate enterprise AI applications",
+      "titleZh": null,
+      "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-managed-knowledge-base-for-faster-more-accurate-enterprise-ai-applications/",
+      "publishedAt": "2026-06-17T15:09:20.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "模型与平台",
+        "资本市场与金融稳定"
+      ],
+      "relatedCompanies": [
+        "alphabet",
+        "amazon"
+      ],
+      "relatedStages": [
+        "models-platforms",
+        "ai-applications"
+      ],
+      "entities": [
+        "AWS 官方博客"
+      ],
+      "excerpt": "Today, we’re announcing Amazon Bedrock Managed Knowledge Base , a new set of capabilities that enables developers to build enterprise-grade generative AI applications with their proprietary data in minutes. Organizations building agentic AI applications need secure, reliable, and up-to-date access to enterprise-wide data to deliver accurate, fast, and trusted outcomes. Managed Knowledge Base abstracts away the comple",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "2ec1ce6cc31e17aaaf24960133af893faaef32bf84a426cd667a118823f2f5ea",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "aws-blog-02bc5318c022",
+      "sourceId": "aws-blog",
+      "sourceName": "AWS 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
+      "sourcePriority": 82,
+      "title": "Announcing Web Search on Amazon Bedrock AgentCore: Ground your AI agents in current, accurate web knowledge",
+      "titleZh": null,
+      "url": "https://aws.amazon.com/blogs/aws/announcing-web-search-on-amazon-bedrock-agentcore-ground-your-ai-agents-in-current-accurate-web-knowledge/",
+      "publishedAt": "2026-06-17T15:00:11.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "amazon"
+      ],
+      "relatedStages": [
+        "models-platforms"
+      ],
+      "entities": [
+        "AWS 官方博客"
+      ],
+      "excerpt": "Today, we’re announcing the general availability of Web Search on Amazon Bedrock AgentCore , a fully managed tool that enables agents to ground responses in current, cited web knowledge with zero data egress from customer’s secured AWS environment. Web Search uses a built-in connector target on Bedrock AgentCore Gateway using the Model Context Protocol (MCP). Your agent sends a natural-language query, and Web Search ",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "514a4b92dd8f607a6388b5565aee71b6a31d248c01d8ad132e34b9a861a123b5",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "aws-blog-578e9bc432aa",
+      "sourceId": "aws-blog",
+      "sourceName": "AWS 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
+      "sourcePriority": 82,
+      "title": "Proactively reduce tech debt autonomously with AWS Transform – continuous modernization (preview)",
+      "titleZh": null,
+      "url": "https://aws.amazon.com/blogs/aws/proactively-reduce-tech-debt-autonomously-with-aws-transform-continuous-modernization-preview/",
+      "publishedAt": "2026-06-17T14:58:00.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "数据中心与电力"
+      ],
+      "relatedCompanies": [
+        "amazon"
+      ],
+      "relatedStages": [
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "AWS 官方博客"
+      ],
+      "excerpt": "Today, we’re announcing AWS Transform – continuous modernization (preview) , a new capability of AWS Transform for continuous, autonomous tech debt analysis and remediation at scale. AWS Transform already helps enterprises migrate out of data centers, modernize mainframe and Windows applications, and handle the undifferentiated work of software maintenance: upgrading Java versions, swapping deprecated frameworks, and",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "17973b591c484deab0074ba82d1f24836db526173565e0f1fa37bfeaca108355",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "intel-newsroom-170af8c59864",
+      "sourceId": "intel-newsroom",
+      "sourceName": "Intel Newsroom",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://newsroom.intel.com/",
+      "sourcePriority": 80,
+      "title": "Intel Advances Responsible Business Practices and AI-Driven Growth in 2025–2026 Corporate Responsibility Report",
+      "titleZh": null,
+      "url": "https://newsroom.intel.com/corporate/intel-advances-growth-in-ai-era-2025-2026-csr-report",
+      "publishedAt": "2026-06-17T14:00:20.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "模型与平台"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [],
+      "entities": [
+        "Intel Newsroom"
+      ],
+      "excerpt": "Intel today released its 2025–2026 Corporate Responsibility Report, providing an update on performance, priorities, and progress across its operations and value chain as demand for AI-driven computing increases.The report highlights Intel’s continued focus on three priority areas: people, sustainability, and technology, and how these efforts are shaping operational performance and long-term execution.More: 2025-26 In",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "56e0770159fe52c5d91e3632b77ba5fb98b06ba939438efe6c7d971d6c948caa",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "intel-newsroom-cabc5fa7a607",
+      "sourceId": "intel-newsroom",
+      "sourceName": "Intel Newsroom",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://newsroom.intel.com/",
+      "sourcePriority": 80,
+      "title": "Intel Foundry Details Process Milestones and Future Innovation at VLSI Symposium",
+      "titleZh": null,
+      "url": "https://newsroom.intel.com/intel-foundry/intel-foundry-details-process-milestones-future-innovation-at-vlsi-symposium",
+      "publishedAt": "2026-06-16T21:00:23.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "半导体制造"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [
+        "equipment-materials",
+        "manufacturing",
+        "memory",
+        "packaging"
+      ],
+      "entities": [
+        "Intel Newsroom"
+      ],
+      "excerpt": "Santa Clara, California, June 16, 2026 – At the 2026 VLSI Symposium, Intel Foundry provided an update on its process roadmap and long-term innovation investments. It shared that Intel 18A‑P, the first performance enhancement in the Intel 18A family, has entered risk production, meeting the timeline first shared with customers and partners last year.“Our updates … The post Intel Foundry Details Process Milestones and ",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "5dc6a6ea9e232b50d240f98eba892ddb5fb855e42688d15c5e4689beb30841af",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "microsoft-blog-1a2eed32f806",
+      "sourceId": "microsoft-blog",
+      "sourceName": "Microsoft 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.microsoft.com/",
+      "sourcePriority": 84,
+      "title": "Achieving success with AI",
+      "titleZh": null,
+      "url": "https://blogs.microsoft.com/blog/2026/06/16/achieving-success-with-ai/",
+      "publishedAt": "2026-06-16T15:00:02.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "半导体制造",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "microsoft"
+      ],
+      "relatedStages": [
+        "equipment-materials",
+        "manufacturing",
+        "memory",
+        "packaging",
+        "ai-applications"
+      ],
+      "entities": [
+        "Microsoft 官方博客"
+      ],
+      "excerpt": "The two most important elements in any AI solution are Intelligence + Trust. I first made this statement in November at our Ignite conference and my conviction is strengthened by every conversation I have with customers. Through my travels, three consistent topics are being raised when considering the adoption of AI solutions: Will AI amplify the intelligence of my organization and the attributes that make my company",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "9204e139c4f7f4f4aed099443b8ffe792e9cde2426903d8d7cabddabc61723f2",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "aws-blog-011672a488e4",
+      "sourceId": "aws-blog",
+      "sourceName": "AWS 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://aws.amazon.com/blogs/aws/",
+      "sourcePriority": 82,
+      "title": "AWS WAF adds AI traffic monetization capability to help content owners charge AI bots for content access",
+      "titleZh": null,
+      "url": "https://aws.amazon.com/blogs/aws/aws-waf-adds-ai-traffic-monetization-capability-to-help-content-owners-charge-ai-bots-for-content-access/",
+      "publishedAt": "2026-06-15T20:42:13.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "amazon"
+      ],
+      "relatedStages": [
+        "models-platforms"
+      ],
+      "entities": [
+        "AWS 官方博客"
+      ],
+      "excerpt": "AWS WAF now includes AI traffic monetization capability that gives digital content owners and publishers a way to charge AI bots and agents for access to protected web content directly at the network edge. The capability helps content owners and publishers set per-request pricing by content path, bot category, or verification tier without modifying their origin infrastructure or writing application code. Content owne",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "1cd1a3c8b5fb00c225b2349172e5c8fc79f0911acb3e187d5da4613ce7aa8649",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "microsoft-blog-3ee1cab83814",
+      "sourceId": "microsoft-blog",
+      "sourceName": "Microsoft 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.microsoft.com/",
+      "sourcePriority": 84,
+      "title": "AI alone won’t change your business. The system running it will.",
+      "titleZh": null,
+      "url": "https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/",
+      "publishedAt": "2026-06-02T19:00:13.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "半导体制造",
+        "企业应用与生产力",
+        "资本市场与金融稳定"
+      ],
+      "relatedCompanies": [
+        "microsoft"
+      ],
+      "relatedStages": [
+        "equipment-materials",
+        "manufacturing",
+        "memory",
+        "packaging",
+        "ai-applications"
+      ],
+      "entities": [
+        "Microsoft 官方博客"
+      ],
+      "excerpt": "AI has arrived in the enterprise, and the shift is happening all at once. Every function, every role, every workflow is being reshaped. At the same time, a new class of organizations is emerging, one that will look fundamentally different from the companies that defined the last era of business. The winners won’t be those with the most demos, but those that turn AI into a governed, continuously improving system for r",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "f1f87bb96e173227f1213331f1c470d62b2ce669794876c434c3800802b49c5c",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "microsoft-blog-9b1f990896ab",
+      "sourceId": "microsoft-blog",
+      "sourceName": "Microsoft 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.microsoft.com/",
+      "sourcePriority": 84,
+      "title": "Microsoft Build 2026: Be yourself at work",
+      "titleZh": null,
+      "url": "https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/",
+      "publishedAt": "2026-06-02T18:54:13.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "AI 算力与芯片",
+        "半导体制造",
+        "模型与平台",
+        "企业应用与生产力",
+        "资本市场与金融稳定"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "microsoft"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "equipment-materials"
+      ],
+      "entities": [
+        "Microsoft 官方博客"
+      ],
+      "excerpt": "Platforms shift when developers build. We explore, choose tools, dream, create. This platform shift comes with more information than ever, ready at your fingertips. This shift, it’s about building fast AND THEN: it’s about building, operating, optimizing and observing. Securing your infrastructure, applications and agents in a seamless way that doesn’t slow you down from the moment you open your laptop to the moment ",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "a4bf60fb4fe07c13a374d757c47462b0a36dd61ebc7206dded30527dc7edf09f",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "microsoft-blog-d086087d104d",
+      "sourceId": "microsoft-blog",
+      "sourceName": "Microsoft 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.microsoft.com/",
+      "sourcePriority": 84,
+      "title": "From AI pilots to enterprise impact: Why execution is the new differentiator",
+      "titleZh": null,
+      "url": "https://blogs.microsoft.com/blog/2026/05/21/from-ai-pilots-to-enterprise-impact-why-execution-is-the-new-differentiator/",
+      "publishedAt": "2026-05-21T11:02:33.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "半导体制造",
+        "模型与平台",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "microsoft"
+      ],
+      "relatedStages": [
+        "equipment-materials",
+        "manufacturing",
+        "memory",
+        "packaging",
+        "models-platforms"
+      ],
+      "entities": [
+        "Microsoft 官方博客"
+      ],
+      "excerpt": "As the pace of change accelerates, organizations are moving quickly from AI experimentation to enterprise-scale transformation. Leaders are prioritizing measurable outcomes, faster time to value and repeatability across the business. But many are encountering the same reality: the challenge is no longer deciding whether to invest in AI — it’s scaling adoption and delivering consistent, enterprise-wide impact. Over th",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "pending",
+        "inputHash": "f57e4b106f94d89d3f12ffd5ecc7b76d52eaf0372a3825a8c08542959d01e537",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Waiting for the next AI news batch"
+      }
+    },
+    {
+      "id": "ecb-ai-financial-stability-2026",
+      "sourceId": "ecb",
+      "sourceName": "欧洲中央银行（ECB）",
+      "sourceType": "央行研究",
+      "sourceHomepage": null,
+      "sourcePriority": 110,
+      "title": "Financial stability in the age of artificial intelligence: the role of algorithmic architecture",
+      "titleZh": "人工智能时代的金融稳定性：算法架构的作用",
+      "url": "https://www.ecb.europa.eu/press/research-publications/resbull/2026/html/ecb.rb260521~4d8b12940b.en.html",
+      "publishedAt": "2026-05-21T00:00:00.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "资本市场与金融稳定",
+        "模型与平台"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [
+        "models-platforms",
+        "ai-applications"
+      ],
+      "entities": [
+        "欧洲中央银行",
+        "金融机构"
+      ],
+      "excerpt": "ECB 研究通过模拟比较 Q-learning 与大语言模型在金融决策中的行为。研究发现强化学习算法可能形成高度协调但更容易出现类似银行挤兑的极端动态，而大语言模型行为更异质、更难预测，说明算法架构本身可能成为金融稳定风险来源。",
+      "editorialSummary": "金融系统采用哪类 AI，并不只是效率问题：同样目标和环境下，不同算法可能产生完全不同的群体行为与尾部风险。",
+      "analysis": {
+        "status": "ok",
+        "inputHash": "2cc17eb65826048260d41286b21377ea5a3331c2197d6c4bc7d56ac10b8d6de8",
+        "generatedAt": "2026-07-20T15:37:37.834Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "curated-official-key-points",
+        "titleZh": "人工智能时代的金融稳定性：算法架构的作用",
+        "summary": "欧洲中央银行研究通过模拟比较强化学习算法（Q-learning）与大语言模型在金融决策中的行为，发现强化学习算法可能导致高度协调但更易出现类似银行挤兑的极端动态，而大语言模型行为更异质且难以预测，表明算法架构本身可能成为金融稳定风险的来源。",
+        "whyItMatters": "随着人工智能算法在金融领域的广泛应用，算法架构对金融市场稳定性的影响日益显著，理解不同算法可能引发的风险有助于监管机构制定更有效的风险防范措施。",
+        "valueChainImpact": [
+          "模型开发阶段需考虑算法架构对市场稳定性的潜在影响",
+          "金融平台需评估所用AI模型的风险特征",
+          "监管机构需关注算法驱动的系统性风险"
+        ],
+        "uncertainties": [
+          "具体算法在实际金融市场中的表现与模拟结果是否完全一致",
+          "不同市场环境下算法行为的差异",
+          "如何有效监管和缓解算法引发的金融稳定风险"
+        ],
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "iea-data-centres-2026",
+      "sourceId": "iea",
+      "sourceName": "国际能源署（IEA）",
+      "sourceType": "国际机构",
+      "sourceHomepage": null,
+      "sourcePriority": 110,
+      "title": "Data centre electricity use surged in 2025, even with tightening bottlenecks driving a scramble for solutions",
+      "titleZh": "国际能源署：2025年数据中心电力使用激增，瓶颈加剧推动解决方案竞赛",
+      "url": "https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions",
+      "publishedAt": "2026-04-16T00:00:00.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "数据中心与电力",
+        "AI 算力与芯片"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [
+        "design",
+        "ai-infrastructure"
+      ],
+      "entities": [
+        "国际能源署",
+        "Hyperscalers",
+        "数据中心"
+      ],
+      "excerpt": "IEA 的 2026 更新研究跟踪数据中心电力需求、供给瓶颈和 AI 资本开支。其新闻稿指出五家大型科技公司的资本开支在 2025 年超过 4000 亿美元，并预计 2026 年继续显著增长；电网接入、发电与设备供应成为扩张节奏的重要约束。",
+      "editorialSummary": "AI 基建需求不再只由 GPU 供给决定，电网接入、发电结构、冷却和建设周期正共同决定算力何时能够真正上线。",
+      "analysis": {
+        "status": "ok",
+        "inputHash": "58dfc6b4fc47fb87d713b2f191181b89432788def3b50ee757a1afc71635a4e4",
+        "generatedAt": "2026-07-20T15:37:43.580Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "curated-official-key-points",
+        "titleZh": "国际能源署：2025年数据中心电力使用激增，瓶颈加剧推动解决方案竞赛",
+        "summary": "国际能源署（IEA）2026年更新研究显示，2025年数据中心电力需求大幅增长，五家大型科技公司资本开支超过4000亿美元，预计2026年继续显著增长。电网接入、发电能力和设备供应成为限制数据中心扩张的关键瓶颈。",
+        "whyItMatters": "数据中心作为AI算力基础设施的核心，其电力需求激增反映了AI及数字经济快速发展带来的能源压力。瓶颈问题若不解决，将影响AI基础设施设计和部署效率，进而影响整个半导体产业链的需求和供应。",
+        "valueChainImpact": [
+          "设计阶段需考虑能效优化以应对电力限制",
+          "AI基础设施扩展受电网和设备供应瓶颈制约",
+          "芯片制造和供应链可能因资本开支增加而受益"
+        ],
+        "uncertainties": [
+          "具体电力需求增长的区域分布和细节未详述",
+          "五家大型科技公司具体名单及资本开支构成不明确",
+          "未来瓶颈缓解措施的具体方案和效果尚不确定"
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "imf-ai-scenario-2026",
+      "sourceId": "imf",
+      "sourceName": "国际货币基金组织（IMF）",
+      "sourceType": "国际机构",
+      "sourceHomepage": null,
+      "sourcePriority": 110,
+      "title": "Global Economic and Financial Implications of Artificial Intelligence: Lessons from a Scenario Planning Exercise",
+      "titleZh": "人工智能的全球经济与金融影响：情景规划练习的启示",
+      "url": "https://www.imf.org/en/publications/imf-notes/issues/2026/04/03/global-economic-and-financial-implications-of-artificial-intelligence-lessons-from-a-574924",
+      "publishedAt": "2026-04-03T00:00:00.000Z",
+      "discoveredAt": "2026-07-20T15:37:24.644Z",
+      "topics": [
+        "企业应用与生产力",
+        "资本市场与金融稳定",
+        "模型与平台"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [
+        "models-platforms",
+        "ai-applications"
+      ],
+      "entities": [
+        "国际货币基金组织",
+        "全球经济"
+      ],
+      "excerpt": "IMF Notes 2026/002 汇总情景规划讨论，主张把 AI 视为宏观关键转型，而非普通技术冲击。宏观路径不仅由前沿能力决定，也取决于扩散速度、采用广度以及制度与基础设施吸收能力。",
+      "editorialSummary": "对产业链而言，模型能力只是起点；基础设施、组织采用和制度准备度决定技术进步能否转化为广泛生产率与可持续需求。",
+      "analysis": {
+        "status": "ok",
+        "inputHash": "f4ff0856b21a3c17115113326ffc72f50eeb5fb348f6ee14d45bfd2d394eb962",
+        "generatedAt": "2026-07-20T15:37:48.817Z",
+        "model": "openai/gpt-4.1-mini",
+        "promptVersion": "authority-news-synthesis-v1",
+        "basis": "curated-official-key-points",
+        "titleZh": "人工智能的全球经济与金融影响：情景规划练习的启示",
+        "summary": "国际货币基金组织（IMF）在2026年发布的报告强调，应将人工智能视为宏观经济的关键转型因素，而非普通技术冲击。人工智能对经济和金融的影响不仅取决于其前沿技术能力，还受到其扩散速度、采用广度以及制度和基础设施吸收能力的影响。",
+        "whyItMatters": "这一观点提示政策制定者和产业界，人工智能的影响深远且复杂，需从宏观层面统筹规划，强化制度建设和基础设施支持，以充分发挥人工智能带来的经济与金融潜力，避免潜在风险。",
+        "valueChainImpact": [
+          "模型与平台：前沿AI能力的发展是影响宏观路径的关键因素",
+          "企业应用与生产力：AI的采用广度和扩散速度决定其对生产力的提升效果",
+          "资本市场与金融稳定：制度和基础设施的吸收能力影响金融体系对AI冲击的适应性"
+        ],
+        "uncertainties": [
+          "具体的扩散速度和采用广度在不同国家和行业的差异",
+          "制度和基础设施的具体吸收能力如何量化和提升",
+          "报告中未详细说明不同情景下的具体经济和金融指标变化"
+        ],
+        "confidence": "high"
+      }
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T23:17:33.980Z",
+  "generatedAt": "2026-07-21T05:32:20.313Z",
   "period": {
-    "from": "2026-07-20T23:11:38.896Z",
-    "to": "2026-07-20T23:17:33.980Z",
+    "from": "2026-07-20T23:17:33.980Z",
+    "to": "2026-07-21T05:32:20.313Z",
     "baseRef": "HEAD"
   },
   "summary": {
@@ -12,15 +12,15 @@
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
     "newIntelligence": 0,
-    "intelligenceAnalysisRefreshes": 2,
-    "totalChanges": 2
+    "intelligenceAnalysisRefreshes": 1,
+    "totalChanges": 1
   },
   "affected": {
     "stages": {
-      "design": 2,
-      "memory": 2,
-      "packaging": 2,
-      "ai-infrastructure": 2,
+      "design": 1,
+      "memory": 1,
+      "packaging": 1,
+      "ai-infrastructure": 1,
       "equipment-materials": 1
     },
     "topics": {}
@@ -37,7 +37,7 @@
       {
         "id": "nvidia-blog-286358f33346",
         "source": "NVIDIA 官方博客",
-        "title": "NVIDIA在SIGGRAPH大会上推进图形与仿真技术，聚焦Agentic与物理AI",
+        "title": "NVIDIA在SIGGRAPH大会上推进图形与物理AI技术",
         "relatedCompanies": [
           "nvidia",
           "supermicro",
@@ -50,22 +50,7 @@
           "ai-infrastructure",
           "equipment-materials"
         ],
-        "generatedAt": "2026-07-20T23:17:41.853Z"
-      },
-      {
-        "id": "nvidia-blog-c1d126a13f15",
-        "source": "NVIDIA 官方博客",
-        "title": "百时美施贵宝基于NVIDIA Vera Rubin打造生命科学最先进的AI工厂",
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure"
-        ],
-        "generatedAt": "2026-07-20T23:17:48.704Z"
+        "generatedAt": "2026-07-21T05:32:30.392Z"
       }
     ]
   }

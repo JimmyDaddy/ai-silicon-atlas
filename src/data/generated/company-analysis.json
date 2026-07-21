@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T05:32:20.143Z",
+  "generatedAt": "2026-07-21T12:05:41.899Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -1136,7 +1136,7 @@
       "inputHash": "d37a65804ca918959237870354cc58632abfa27642d7fd0b8116ff1511c68c5d",
       "generatedAt": null,
       "model": null,
-      "reason": "Source status: unconfigured"
+      "reason": "Source status: error"
     },
     "smic": {
       "status": "unavailable",
@@ -1265,7 +1265,7 @@
       "inputHash": "102e4518b89448b514b74f0ed9765a967c65626ee8462a26cbf66cdb2be04dfe",
       "generatedAt": null,
       "model": null,
-      "reason": "Source status: unconfigured"
+      "reason": "Source status: error"
     },
     "ase-technology": {
       "status": "ok",

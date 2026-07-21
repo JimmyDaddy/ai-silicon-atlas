@@ -1,57 +1,60 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T05:32:20.313Z",
+  "generatedAt": "2026-07-21T12:05:42.070Z",
   "period": {
-    "from": "2026-07-20T23:17:33.980Z",
-    "to": "2026-07-21T05:32:20.313Z",
+    "from": "2026-07-21T05:32:20.313Z",
+    "to": "2026-07-21T12:05:42.070Z",
     "baseRef": "HEAD"
   },
   "summary": {
     "newFilings": 0,
     "metricChanges": 0,
-    "companyStatusChanges": 0,
+    "companyStatusChanges": 2,
     "companyAnalysisRefreshes": 0,
     "newIntelligence": 0,
-    "intelligenceAnalysisRefreshes": 1,
-    "totalChanges": 1
+    "intelligenceAnalysisRefreshes": 0,
+    "totalChanges": 2
   },
   "affected": {
     "stages": {
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1,
-      "equipment-materials": 1
+      "manufacturing": 1,
+      "memory": 1
     },
     "topics": {}
   },
   "companies": {
     "filings": [],
     "metrics": [],
-    "statuses": [],
+    "statuses": [
+      {
+        "company": "samsung-electronics",
+        "stage": "manufacturing",
+        "from": {
+          "status": "unconfigured",
+          "stale": false
+        },
+        "to": {
+          "status": "error",
+          "stale": false
+        }
+      },
+      {
+        "company": "sk-hynix",
+        "stage": "memory",
+        "from": {
+          "status": "unconfigured",
+          "stale": false
+        },
+        "to": {
+          "status": "error",
+          "stale": false
+        }
+      }
+    ],
     "analysis": []
   },
   "intelligence": {
     "new": [],
-    "analysisRefreshed": [
-      {
-        "id": "nvidia-blog-286358f33346",
-        "source": "NVIDIA 官方博客",
-        "title": "NVIDIA在SIGGRAPH大会上推进图形与物理AI技术",
-        "relatedCompanies": [
-          "nvidia",
-          "supermicro",
-          "adobe"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "equipment-materials"
-        ],
-        "generatedAt": "2026-07-21T05:32:30.392Z"
-      }
-    ]
+    "analysisRefreshed": []
   }
 }

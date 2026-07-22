@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T12:05:41.899Z",
+  "generatedAt": "2026-07-22T05:31:52.635Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -1685,12 +1685,17 @@
     },
     "supermicro": {
       "status": "ok",
-      "inputHash": "f157b00561bb133c1ea044f5c6faa7a68ae3b8cfd34926cf322c58d455155167",
-      "generatedAt": "2026-07-20T14:24:25.462Z",
-      "model": "openai/gpt-4.1",
+      "inputHash": "2311d69ea55426bb1265921d3c1ceb4e33a53dc88283696c346d426de54fe293",
+      "generatedAt": "2026-07-22T05:32:04.425Z",
+      "model": "openai/gpt-4.1-mini",
       "promptVersion": "company-synthesis-v2",
       "basis": "structured-official-data",
       "evidenceSources": [
+        {
+          "id": "filing:0001375365-26-000019",
+          "label": "8-K · 2026-07-21",
+          "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000019/smci-20260721.htm"
+        },
         {
           "id": "filing:0001193125-26-270430",
           "label": "8-K · 2026-06-15",
@@ -1707,62 +1712,57 @@
           "url": "https://www.sec.gov/Archives/edgar/data/1375365/000119312526263942/d47444d8k.htm"
         },
         {
-          "id": "filing:0001375365-26-000015",
-          "label": "8-K · 2026-05-18",
-          "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000015/smci-20260512.htm"
-        },
-        {
           "id": "company-facts",
           "label": "SEC Company Facts",
           "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001375365.json"
         }
       ],
-      "summary": "超微电脑（Super Micro Computer, Inc.）近期财报显示2026年Q3收入和净利润同比大幅增长，但资产和现金余额环比下降。近期多份8-K公告已披露，但当前证据包不含公告正文，无法判断具体事项内容。",
+      "summary": "超微电脑（Super Micro Computer, Inc.）2026财年第三季度（截至2026年3月31日）实现营业收入约102.43亿美元，同比增长122.68%；净利润约4.83亿美元，同比增长344.38%。资产总额约234.52亿美元，较上一季度下降16.25%；现金及现金等价物约12.9亿美元，较上一季度下降68.46%。同期资本支出约1.34亿美元，同比增长27.96%。近期披露的8-K文件仅含元数据，正文内容未包含在当前证据包中，无法判断具体事项。",
       "summaryEvidence": [
         "company-facts",
-        "filing:0001193125-26-270430",
-        "filing:0001193125-26-269703",
-        "filing:0001193125-26-263942",
-        "filing:0001375365-26-000015"
+        "filing:0001375365-26-000019"
       ],
       "whatChanged": [
         {
-          "text": "2026年Q3收入同比增长122.68%，净利润同比增长344.38%。",
+          "text": "2026财年第三季度营业收入同比增长122.68%，达到约102.43亿美元。",
           "evidence": [
             "company-facts"
           ]
         },
         {
-          "text": "资产环比下降16.25%，现金及等价物环比下降68.46%。",
+          "text": "净利润同比增长344.38%，达到约4.83亿美元。",
           "evidence": [
             "company-facts"
           ]
         },
         {
-          "text": "资本开支同比增长27.96%。",
+          "text": "资产总额较上一季度下降16.25%，降至约234.52亿美元。",
           "evidence": [
             "company-facts"
           ]
         },
         {
-          "text": "2026年6月9日至6月15日期间连续披露多份8-K公告，但正文内容未知。",
+          "text": "现金及现金等价物较上一季度下降68.46%，降至约12.9亿美元。",
           "evidence": [
-            "filing:0001193125-26-270430",
-            "filing:0001193125-26-269703",
-            "filing:0001193125-26-263942",
-            "filing:0001375365-26-000015"
+            "company-facts"
           ]
         }
       ],
       "operatingSignals": [
         {
-          "text": "收入和净利润大幅提升，显示主营业务增长强劲。",
+          "text": "营业收入和净利润大幅增长，显示公司经营业绩显著改善。",
           "evidence": [
             "company-facts"
           ]
         },
         {
-          "text": "现金流出较大，现金余额大幅下降，需关注资金流动性。",
+          "text": "资产和现金余额下降，可能反映资金使用或资产调整情况。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "资本支出增加，表明公司在固定资产或产能方面有投入。",
           "evidence": [
             "company-facts"
           ]
@@ -1770,13 +1770,7 @@
       ],
       "valueChainImpact": [
         {
-          "text": "资本开支增加，可能带动上游设备、零部件供应链需求。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "主营业务增长或提升对下游AI基础设施市场的影响力。",
+          "text": "资本支出的增加可能推动供应链相关设备和材料需求增长。",
           "evidence": [
             "company-facts"
           ]
@@ -1784,28 +1778,20 @@
       ],
       "uncertainties": [
         {
-          "text": "近期8-K公告具体内容不明，无法判断是否涉及重大事项、管理层变动或其他影响。",
-          "evidence": [
-            "filing:0001193125-26-270430",
-            "filing:0001193125-26-269703",
-            "filing:0001193125-26-263942",
-            "filing:0001375365-26-000015"
-          ]
+          "text": "近期8-K文件仅包含元数据，当前证据包不含披露正文，无法判断具体事项及其对公司业务的影响。",
+          "evidence": []
         },
         {
-          "text": "资产和现金大幅下降的具体原因不明，需关注是否存在一次性支出、投资或其他财务事项。",
-          "evidence": [
-            "company-facts"
-          ]
+          "text": "资产和现金大幅下降的具体原因及其对公司运营的潜在影响尚不明确。",
+          "evidence": []
         }
       ],
       "questionsToWatch": [
-        "近期8-K公告是否涉及重大交易、管理层变动或诉讼等事项？",
-        "资产和现金大幅下降的具体原因是什么？是否影响公司运营稳定性？",
-        "收入和利润高增长是否可持续？主要驱动因素有哪些？",
-        "资本开支增加将如何影响未来产能和市场份额？"
+        "未来季度公司资产和现金流状况是否会改善？",
+        "资本支出增加是否带来产能扩张或新产品推出？",
+        "近期8-K公告正文内容是否披露了重要业务变动或风险事项？"
       ],
-      "confidence": "medium"
+      "confidence": "high"
     },
     "equinix": {
       "status": "ok",

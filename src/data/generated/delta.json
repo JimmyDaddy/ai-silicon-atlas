@@ -1,60 +1,151 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T12:05:42.070Z",
+  "generatedAt": "2026-07-22T05:32:05.035Z",
   "period": {
-    "from": "2026-07-21T05:32:20.313Z",
-    "to": "2026-07-21T12:05:42.070Z",
+    "from": "2026-07-21T12:05:42.070Z",
+    "to": "2026-07-22T05:32:05.035Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 1,
     "metricChanges": 0,
-    "companyStatusChanges": 2,
-    "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "companyStatusChanges": 0,
+    "companyAnalysisRefreshes": 1,
+    "newIntelligence": 3,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 2
+    "totalChanges": 5
   },
   "affected": {
     "stages": {
-      "manufacturing": 1,
-      "memory": 1
+      "ai-infrastructure": 5,
+      "design": 3,
+      "memory": 3,
+      "packaging": 3,
+      "equipment-materials": 3
     },
-    "topics": {}
+    "topics": {
+      "AI 算力与芯片": 3,
+      "数据中心与电力": 3,
+      "供应链与地缘政策": 2,
+      "半导体制造": 2,
+      "模型与平台": 2,
+      "企业应用与生产力": 1,
+      "资本市场与金融稳定": 1
+    }
   },
   "companies": {
-    "filings": [],
-    "metrics": [],
-    "statuses": [
+    "filings": [
       {
-        "company": "samsung-electronics",
-        "stage": "manufacturing",
-        "from": {
-          "status": "unconfigured",
-          "stale": false
-        },
-        "to": {
-          "status": "error",
-          "stale": false
-        }
-      },
-      {
-        "company": "sk-hynix",
-        "stage": "memory",
-        "from": {
-          "status": "unconfigured",
-          "stale": false
-        },
-        "to": {
-          "status": "error",
-          "stale": false
-        }
+        "company": "supermicro",
+        "stage": "ai-infrastructure",
+        "form": "8-K",
+        "filedAt": "2026-07-21",
+        "reportDate": "2026-07-21",
+        "accessionNumber": "0001375365-26-000019",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000019/smci-20260721.htm"
       }
     ],
-    "analysis": []
+    "metrics": [],
+    "statuses": [],
+    "analysis": [
+      {
+        "company": "supermicro",
+        "stage": "ai-infrastructure",
+        "generatedAt": "2026-07-22T05:32:04.425Z",
+        "model": "openai/gpt-4.1-mini",
+        "confidence": "high",
+        "summary": "超微电脑（Super Micro Computer, Inc.）2026财年第三季度（截至2026年3月31日）实现营业收入约102.43亿美元，同比增长122.68%；净利润约4.83亿美元，同比增长344.38%。资产总额约234.52亿美元，较上一季度下降16.25%；现金及现金等价物约12.9亿美元，较上一季度下降68.46%。同期资本支出约1.34亿美元，同比增长27.96%。近期披露的8-K文件仅含元数据，正文内容未包含在当前证据包中，无法判断具体事项。"
+      }
+    ]
   },
   "intelligence": {
-    "new": [],
+    "new": [
+      {
+        "id": "nvidia-blog-ce1cab87367b",
+        "publishedAt": "2026-07-21T22:35:45.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "纬创在沃斯堡开设先进制造工厂生产NVIDIA AI系统",
+        "summary": "纬创在美国德克萨斯州沃斯堡开设首个制造工厂，专注生产NVIDIA的先进AI超级芯片和系统。该厂占地32.4万平方英尺，现有两条生产线，分别制造NVIDIA GB300 Grace Blackwell Ultra超级芯片和Vera Rubin超级芯片，计划今年扩大产能至每月数万块。工厂建设投资7亿美元，已创造500多个就业岗位，年底目标增至1000个。工厂设计采用NVIDIA数字孪生平台进行全流程虚拟仿真，优化生产和培训。NVIDIA承诺在美国制造高达5000亿美元的先进AI平台，沃斯堡工厂是实现该目标的重要项目。NVIDIA强调AI时代需要从芯片到系统再到制造工厂的全链条竞争力，视AI工厂为未来社会基础设施。",
+        "topics": [
+          "AI 算力与芯片",
+          "数据中心与电力",
+          "供应链与地缘政策"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "ok",
+        "sourceUrl": "https://blogs.nvidia.com/blog/wistron-manufacturing-texas/"
+      },
+      {
+        "id": "nvidia-blog-46165e640060",
+        "publishedAt": "2026-07-21T15:36:43.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "NVIDIA Vera Rubin：全球合作伙伴最低能耗成本的AI算力平台",
+        "summary": "NVIDIA发布了Vera Rubin NVL72平台，采用极致协同设计，将七颗芯片和五个机架托盘整合为一体，提供业界领先的每瓦性能和最低的token成本。该平台已在CoreWeave、Google Cloud、Microsoft Azure和Oracle Cloud等合作伙伴处规模部署，支持大规模AI训练和推理。Vera Rubin CPU核心性能提升显著，网络采用第六代NVLink和Spectrum-X以满足大规模GPU通信需求。系统设计实现无风扇、无电缆、无软管，支持高温液冷，节水显著。该平台助力欧洲AI基础设施建设，支持主权云和开放模型，满足数据治理和合规需求。多家云服务商和AI企业已开始基于Vera Rubin构建AI工厂，显著提升能效和成本效益。",
+        "topics": [
+          "AI 算力与芯片",
+          "半导体制造",
+          "数据中心与电力",
+          "模型与平台",
+          "企业应用与生产力",
+          "资本市场与金融稳定",
+          "供应链与地缘政策"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "microsoft",
+          "alphabet",
+          "amazon"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "ok",
+        "sourceUrl": "https://blogs.nvidia.com/blog/vera-rubin/"
+      },
+      {
+        "id": "nvidia-blog-a2118bad79e4",
+        "publishedAt": "2026-07-21T15:00:20.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "NVIDIA Spectrum-6助力千亿级AI工厂，开启AI网络新时代",
+        "summary": "NVIDIA发布了基于Vera Rubin平台的Spectrum-6以太网交换机系统，具备102.4Tbps带宽，是前代产品容量的两倍，专为千亿级AI工厂设计。Spectrum-6与ConnectX-9 SuperNIC等组件协同构成Spectrum-X以太网平台，支持液冷和多种光模块形态，优化AI大规模训练和推理中的集体通信和东-西向流量。CoreWeave、Microsoft、Nebius等领先AI基础设施建设者率先部署，提升GPU协同效率和网络弹性，实现更快训练速度和更优经济性。该平台兼容开放网络操作系统和标准协议，体现NVIDIA软硬件协同设计的垂直整合与水平开放策略。",
+        "topics": [
+          "AI 算力与芯片",
+          "半导体制造",
+          "数据中心与电力",
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "microsoft"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "ok",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-spectrum-six-arrives-in-gigascale-ai-factories/"
+      }
+    ],
     "analysisRefreshed": []
   }
 }

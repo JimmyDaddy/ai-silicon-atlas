@@ -1,77 +1,121 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T05:32:05.035Z",
+  "generatedAt": "2026-07-23T05:37:32.123Z",
   "period": {
-    "from": "2026-07-21T12:05:42.070Z",
-    "to": "2026-07-22T05:32:05.035Z",
+    "from": "2026-07-22T05:32:05.035Z",
+    "to": "2026-07-23T05:37:32.123Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
+    "newFilings": 2,
     "metricChanges": 0,
     "companyStatusChanges": 0,
-    "companyAnalysisRefreshes": 1,
+    "companyAnalysisRefreshes": 2,
     "newIntelligence": 3,
-    "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 5
+    "intelligenceAnalysisRefreshes": 1,
+    "totalChanges": 8
   },
   "affected": {
     "stages": {
-      "ai-infrastructure": 5,
+      "models-platforms": 5,
+      "ai-applications": 2,
+      "ai-infrastructure": 3,
       "design": 3,
+      "eda-ip": 1,
       "memory": 3,
       "packaging": 3,
-      "equipment-materials": 3
+      "equipment-materials": 2,
+      "manufacturing": 1
     },
     "topics": {
-      "AI 算力与芯片": 3,
-      "数据中心与电力": 3,
-      "供应链与地缘政策": 2,
-      "半导体制造": 2,
-      "模型与平台": 2,
-      "企业应用与生产力": 1,
-      "资本市场与金融稳定": 1
+      "数据中心与电力": 1,
+      "模型与平台": 3,
+      "AI 算力与芯片": 1,
+      "半导体制造": 1,
+      "企业应用与生产力": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
+        "company": "alphabet",
+        "stage": "models-platforms",
         "form": "8-K",
-        "filedAt": "2026-07-21",
-        "reportDate": "2026-07-21",
-        "accessionNumber": "0001375365-26-000019",
+        "filedAt": "2026-07-22",
+        "reportDate": "2026-07-22",
+        "accessionNumber": "0001652044-26-000066",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000019/smci-20260721.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/goog-20260722.htm"
+      },
+      {
+        "company": "servicenow",
+        "stage": "ai-applications",
+        "form": "8-K",
+        "filedAt": "2026-07-22",
+        "reportDate": "2026-07-22",
+        "accessionNumber": "0001373715-26-000072",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000072/now-20260722.htm"
       }
     ],
     "metrics": [],
     "statuses": [],
     "analysis": [
       {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
-        "generatedAt": "2026-07-22T05:32:04.425Z",
+        "company": "alphabet",
+        "stage": "models-platforms",
+        "generatedAt": "2026-07-23T05:37:16.011Z",
         "model": "openai/gpt-4.1-mini",
         "confidence": "high",
-        "summary": "超微电脑（Super Micro Computer, Inc.）2026财年第三季度（截至2026年3月31日）实现营业收入约102.43亿美元，同比增长122.68%；净利润约4.83亿美元，同比增长344.38%。资产总额约234.52亿美元，较上一季度下降16.25%；现金及现金等价物约12.9亿美元，较上一季度下降68.46%。同期资本支出约1.34亿美元，同比增长27.96%。近期披露的8-K文件仅含元数据，正文内容未包含在当前证据包中，无法判断具体事项。"
+        "summary": "Alphabet 2026年第一季度财报显示，公司营收同比增长21.79%至1098.96亿美元，净利润同比大幅增长81.18%至625.78亿美元，资产总额较去年底增长18.25%至7039.19亿美元，现金及现金等价物增加23.95%至380.63亿美元。资本支出同比增长107.44%，达到356.74亿美元。近期多份8-K文件披露，当前证据包不含披露正文，无法判断具体事项。"
+      },
+      {
+        "company": "servicenow",
+        "stage": "ai-applications",
+        "generatedAt": "2026-07-23T05:37:31.466Z",
+        "model": "openai/gpt-4.1-mini",
+        "confidence": "high",
+        "summary": "ServiceNow 2026财年第一季度实现收入37.7亿美元，同比增长22.09%；净利润4.69亿美元，同比增长1.96%。资产总额为243.81亿美元，较去年底下降6.36%；现金及现金等价物为27.02亿美元，较去年底下降27.48%；资本支出1.41亿美元，较去年同期下降31.22%。近期披露的8-K文件未包含正文，无法判断具体事项。"
       }
     ]
   },
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-ce1cab87367b",
-        "publishedAt": "2026-07-21T22:35:45.000Z",
+        "id": "nvidia-blog-6479bbc6ab8b",
+        "publishedAt": "2026-07-23T02:00:46.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "纬创在沃斯堡开设先进制造工厂生产NVIDIA AI系统",
-        "summary": "纬创在美国德克萨斯州沃斯堡开设首个制造工厂，专注生产NVIDIA的先进AI超级芯片和系统。该厂占地32.4万平方英尺，现有两条生产线，分别制造NVIDIA GB300 Grace Blackwell Ultra超级芯片和Vera Rubin超级芯片，计划今年扩大产能至每月数万块。工厂建设投资7亿美元，已创造500多个就业岗位，年底目标增至1000个。工厂设计采用NVIDIA数字孪生平台进行全流程虚拟仿真，优化生产和培训。NVIDIA承诺在美国制造高达5000亿美元的先进AI平台，沃斯堡工厂是实现该目标的重要项目。NVIDIA强调AI时代需要从芯片到系统再到制造工厂的全链条竞争力，视AI工厂为未来社会基础设施。",
+        "title": "NVIDIA AI超级计算机在美国海军研究生院上线",
+        "summary": "NVIDIA在美国海军研究生院（NPS）部署了DGX GB300超级计算机，配备Mission Control软件，为1500多名学生和600名教职工提供大规模AI计算能力，支持模型训练和推理，应用于天气预测、网络安全及灾害响应等领域。该系统基于NVIDIA AI技术中心，推动AI教育与实际应用结合。NVIDIA还通过深度学习学院为NPS教师提供教学工具，促进AI课程融入各学科。合作伙伴包括DDN、VAST和Vertiv，分别提供数据基础设施、统一数据平台及机架和冷却电力支持。NPS利用该平台开展海洋模型、数字孪生等高性能计算研究，助力军事和科学决策。",
+        "topics": [
+          "数据中心与电力",
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "vertiv",
+          "cadence"
+        ],
+        "relatedStages": [
+          "ai-infrastructure",
+          "models-platforms",
+          "design",
+          "eda-ip"
+        ],
+        "analysisStatus": "ok",
+        "sourceUrl": "https://blogs.nvidia.com/blog/naval-postgraduate-school-dgx-ai-supercomputer/"
+      },
+      {
+        "id": "nvidia-blog-562676d43cd3",
+        "publishedAt": "2026-07-22T13:00:11.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "NVIDIA开源首个GPU加速医疗物理仿真框架",
+        "summary": "NVIDIA发布了开源的GPU加速医疗物理仿真框架，集成于Isaac for Healthcare平台，帮助医疗机器人开发者模拟解剖结构与设备交互、生成难以捕获的场景、进行虚拟测试和训练机器人策略。该框架结合经典物理仿真与生成式AI物理仿真，支持大规模并行仿真，显著缩短训练时间。多家医疗机器人企业已应用该框架推动手术机器人和内窥镜等设备的研发。开源特性提升了透明度，有助于结果复现、性能评估及监管合规。",
         "topics": [
           "AI 算力与芯片",
-          "数据中心与电力",
-          "供应链与地缘政策"
+          "模型与平台"
         ],
         "relatedCompanies": [
           "nvidia"
@@ -81,27 +125,43 @@
           "memory",
           "packaging",
           "ai-infrastructure",
-          "equipment-materials"
+          "models-platforms"
         ],
         "analysisStatus": "ok",
-        "sourceUrl": "https://blogs.nvidia.com/blog/wistron-manufacturing-texas/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/medical-physics-simulation-open-source/"
       },
       {
-        "id": "nvidia-blog-46165e640060",
-        "publishedAt": "2026-07-21T15:36:43.000Z",
-        "source": "NVIDIA 官方博客",
+        "id": "microsoft-blog-b4e1bf508934",
+        "publishedAt": "2026-07-22T12:00:06.000Z",
+        "source": "Microsoft 官方博客",
         "sourceType": "公司观点",
-        "title": "NVIDIA Vera Rubin：全球合作伙伴最低能耗成本的AI算力平台",
-        "summary": "NVIDIA发布了Vera Rubin NVL72平台，采用极致协同设计，将七颗芯片和五个机架托盘整合为一体，提供业界领先的每瓦性能和最低的token成本。该平台已在CoreWeave、Google Cloud、Microsoft Azure和Oracle Cloud等合作伙伴处规模部署，支持大规模AI训练和推理。Vera Rubin CPU核心性能提升显著，网络采用第六代NVLink和Spectrum-X以满足大规模GPU通信需求。系统设计实现无风扇、无电缆、无软管，支持高温液冷，节水显著。该平台助力欧洲AI基础设施建设，支持主权云和开放模型，满足数据治理和合规需求。多家云服务商和AI企业已开始基于Vera Rubin构建AI工厂，显著提升能效和成本效益。",
+        "title": "微软支持美国Genesis使命：推动科学发现的长期承诺",
+        "summary": "微软宣布向美国能源部的Genesis使命投资6000万美元，旨在通过AI加速科学研究。该投资包括4000万美元的Azure计算和AI资源，以及2000万美元的解决方案工程支持。微软成立SPARK项目办公室，协调与能源部及国家实验室的合作，推动AI在科学过程中的应用。微软还提供Microsoft Discovery平台和量子计算技术，助力材料发现、生物安全、核能许可等领域的科研。此举体现微软将AI和量子计算作为科学研究核心工具的战略，支持美国科学创新和国家安全。",
         "topics": [
-          "AI 算力与芯片",
           "半导体制造",
-          "数据中心与电力",
           "模型与平台",
-          "企业应用与生产力",
-          "资本市场与金融稳定",
-          "供应链与地缘政策"
+          "企业应用与生产力"
         ],
+        "relatedCompanies": [
+          "microsoft",
+          "cadence"
+        ],
+        "relatedStages": [
+          "equipment-materials",
+          "manufacturing",
+          "memory",
+          "packaging",
+          "models-platforms"
+        ],
+        "analysisStatus": "ok",
+        "sourceUrl": "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/"
+      }
+    ],
+    "analysisRefreshed": [
+      {
+        "id": "nvidia-blog-46165e640060",
+        "source": "NVIDIA 官方博客",
+        "title": "NVIDIA Vera Rubin推动全球合作伙伴实现每瓦性能与最低代币成本",
         "relatedCompanies": [
           "nvidia",
           "microsoft",
@@ -115,37 +175,8 @@
           "ai-infrastructure",
           "equipment-materials"
         ],
-        "analysisStatus": "ok",
-        "sourceUrl": "https://blogs.nvidia.com/blog/vera-rubin/"
-      },
-      {
-        "id": "nvidia-blog-a2118bad79e4",
-        "publishedAt": "2026-07-21T15:00:20.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA Spectrum-6助力千亿级AI工厂，开启AI网络新时代",
-        "summary": "NVIDIA发布了基于Vera Rubin平台的Spectrum-6以太网交换机系统，具备102.4Tbps带宽，是前代产品容量的两倍，专为千亿级AI工厂设计。Spectrum-6与ConnectX-9 SuperNIC等组件协同构成Spectrum-X以太网平台，支持液冷和多种光模块形态，优化AI大规模训练和推理中的集体通信和东-西向流量。CoreWeave、Microsoft、Nebius等领先AI基础设施建设者率先部署，提升GPU协同效率和网络弹性，实现更快训练速度和更优经济性。该平台兼容开放网络操作系统和标准协议，体现NVIDIA软硬件协同设计的垂直整合与水平开放策略。",
-        "topics": [
-          "AI 算力与芯片",
-          "半导体制造",
-          "数据中心与电力",
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "microsoft"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "equipment-materials"
-        ],
-        "analysisStatus": "ok",
-        "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-spectrum-six-arrives-in-gigascale-ai-factories/"
+        "generatedAt": "2026-07-23T05:38:17.155Z"
       }
-    ],
-    "analysisRefreshed": []
+    ]
   }
 }

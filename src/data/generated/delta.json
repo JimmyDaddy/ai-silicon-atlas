@@ -1,225 +1,92 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-24T05:33:09.407Z",
+  "generatedAt": "2026-07-25T05:26:59.408Z",
   "period": {
-    "from": "2026-07-23T05:37:32.123Z",
-    "to": "2026-07-24T05:33:09.407Z",
+    "from": "2026-07-24T05:33:09.407Z",
+    "to": "2026-07-25T05:26:59.408Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 2,
-    "metricChanges": 10,
+    "newFilings": 1,
+    "metricChanges": 0,
     "companyStatusChanges": 0,
-    "companyAnalysisRefreshes": 2,
+    "companyAnalysisRefreshes": 1,
     "newIntelligence": 1,
-    "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 15
+    "intelligenceAnalysisRefreshes": 1,
+    "totalChanges": 4
   },
   "affected": {
     "stages": {
-      "models-platforms": 8,
-      "ai-applications": 7,
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1
+      "manufacturing": 2,
+      "design": 2,
+      "memory": 2,
+      "packaging": 2,
+      "ai-infrastructure": 2,
+      "models-platforms": 1
     },
     "topics": {
-      "AI 算力与芯片": 1,
-      "模型与平台": 1
+      "AI 算力与芯片": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "form": "10-Q",
-        "filedAt": "2026-07-23",
+        "company": "tsmc",
+        "stage": "manufacturing",
+        "form": "6-K",
+        "filedAt": "2026-07-24",
         "reportDate": "2026-06-30",
-        "accessionNumber": "0001652044-26-000071",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
-      },
-      {
-        "company": "servicenow",
-        "stage": "ai-applications",
-        "form": "10-Q",
-        "filedAt": "2026-07-23",
-        "reportDate": "2026-06-30",
-        "accessionNumber": "0001373715-26-000076",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm"
+        "accessionNumber": "0001046179-26-000459",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000459/tsm-monthend6kx20260724.htm"
       }
     ],
-    "metrics": [
-      {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "metric": "revenue",
-        "label": "Revenues",
-        "value": 119796000000,
-        "previousValue": 109896000000,
-        "changePercent": 9.01,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 112193000000,
-        "previousValue": 62578000000,
-        "changePercent": 79.29,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 921983000000,
-        "previousValue": 703919000000,
-        "changePercent": 30.98,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 55911000000,
-        "previousValue": 38063000000,
-        "changePercent": 46.89,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "metric": "capex",
-        "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 80598000000,
-        "previousValue": 35674000000,
-        "changePercent": 125.93,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "servicenow",
-        "stage": "ai-applications",
-        "metric": "revenue",
-        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 3987000000,
-        "previousValue": 3770000000,
-        "changePercent": 5.76,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "servicenow",
-        "stage": "ai-applications",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 298000000,
-        "previousValue": 469000000,
-        "changePercent": -36.46,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "servicenow",
-        "stage": "ai-applications",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 31666000000,
-        "previousValue": 24381000000,
-        "changePercent": 29.88,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "servicenow",
-        "stage": "ai-applications",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 2503000000,
-        "previousValue": 2702000000,
-        "changePercent": -7.36,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "servicenow",
-        "stage": "ai-applications",
-        "metric": "capex",
-        "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 255000000,
-        "previousValue": 141000000,
-        "changePercent": 80.85,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      }
-    ],
+    "metrics": [],
     "statuses": [],
     "analysis": [
       {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "generatedAt": "2026-07-24T05:32:55.335Z",
+        "company": "tsmc",
+        "stage": "manufacturing",
+        "generatedAt": "2026-07-25T05:26:58.782Z",
         "model": "openai/gpt-4.1-mini",
         "confidence": "high",
-        "summary": "Alphabet 2026财年第二季度财报显示，公司营收达到1197.96亿美元，同比增长24.23%；归属于母公司的净利润为1121.93亿美元，同比增长297.9%。资产总额为9219.83亿美元，较上一季度增长30.98%。现金及现金等价物为559.11亿美元，较上一季度增长46.89%。资本支出显著增加，达到805.98亿美元，同比增长103.31%。当前证据包不含披露正文，无法判断具体业务细节及战略调整。"
-      },
-      {
-        "company": "servicenow",
-        "stage": "ai-applications",
-        "generatedAt": "2026-07-24T05:33:08.765Z",
-        "model": "openai/gpt-4.1-mini",
-        "confidence": "high",
-        "summary": "ServiceNow 2026财年第二季度实现收入39.87亿美元，同比增长24.01%；净利润2.98亿美元，同比下降22.6%。资产总额达316.66亿美元，较上一季度增长29.88%。现金及现金等价物为25.03亿美元，较上一季度下降7.36%。资本支出为2.55亿美元，同比下降35.44%。当前证据包不含披露正文，无法判断具体业务战略调整或市场环境变化。"
+        "summary": "台积电2024财年业绩显示收入、净利润、资产和现金均实现显著增长，收入达882.68亿美元，同比增长25.03%；净利润353.01亿美元，同比增长27.01%；资产总额2040.79亿美元，同比增长12.96%；现金及现金等价物达648.87亿美元，同比增长45.19%。近期披露的多份6-K文件未包含正文，无法判断具体经营或战略变化。"
       }
     ]
   },
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-7a9ded228ecc",
-        "publishedAt": "2026-07-24T04:34:27.000Z",
-        "source": "NVIDIA 官方博客",
+        "id": "intel-newsroom-3e942cd173e9",
+        "publishedAt": "2026-07-24T16:46:59.000Z",
+        "source": "Intel Newsroom",
         "sourceType": "公司观点",
-        "title": "韩国在AI峰会上与NVIDIA及合作伙伴共绘AI未来蓝图",
-        "summary": "2026年7月，韩国总统李在明与NVIDIA及多家韩国顶尖企业和研究机构在旧金山AI峰会会面，推动韩国AI基础设施和技术能力建设。NVIDIA与韩国科学技术院(KAIST)联合成立首个全球科技公司与韩国高校合作的AI研究实验室，专注于智能代理AI研究。双方将结合NVIDIA的全栈AI技术、开源模型和云计算资源与KAIST的科研实力。NVIDIA与SK集团及其子公司SK hynix、SK Telecom持续深化合作，联合开发面向AI基础设施的存储技术，并推动物理AI和机器人领域的创新。",
+        "title": "英特尔与蓝思科技合作推动面向AI时代的先进半导体封装技术",
+        "summary": "英特尔与蓝思科技宣布战略合作，致力于开发基于玻璃基板的先进半导体封装技术，旨在提升芯片性能、增加互连密度并改善封装质量，以满足AI算力需求。",
         "topics": [
-          "AI 算力与芯片",
-          "模型与平台"
+          "AI 算力与芯片"
         ],
+        "relatedCompanies": [],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure"
+        ],
+        "analysisStatus": "ok",
+        "sourceUrl": "https://newsroom.intel.com/new-technologies/intel-and-lens-technology-collaborate-to-enable-advanced-semiconductor-packaging-for-the-ai-era"
+      }
+    ],
+    "analysisRefreshed": [
+      {
+        "id": "nvidia-blog-7a9ded228ecc",
+        "source": "NVIDIA 官方博客",
+        "title": "韩国总统李在明与英伟达及合作伙伴共绘韩国AI未来蓝图",
         "relatedCompanies": [
           "nvidia",
-          "sk-hynix"
+          "sk-hynix",
+          "samsung-electronics",
+          "broadcom"
         ],
         "relatedStages": [
           "design",
@@ -228,10 +95,8 @@
           "ai-infrastructure",
           "models-platforms"
         ],
-        "analysisStatus": "ok",
-        "sourceUrl": "https://blogs.nvidia.com/blog/ai-summit-korea-partners-and-nvidia/"
+        "generatedAt": "2026-07-25T05:27:12.244Z"
       }
-    ],
-    "analysisRefreshed": []
+    ]
   }
 }

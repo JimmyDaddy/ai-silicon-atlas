@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-24T05:32:38.843Z",
+  "generatedAt": "2026-07-25T05:26:42.423Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -1049,12 +1049,17 @@
     },
     "tsmc": {
       "status": "ok",
-      "inputHash": "22e08f9e53976b28abd5dff6a2816b1ea37f1a3a628782231fe0593dcbae1ea2",
-      "generatedAt": "2026-07-20T14:20:19.263Z",
-      "model": "openai/gpt-4.1",
+      "inputHash": "f6e2ac1cf61360d48579c93e9b1a2885835cea8b1874ac7fd08da5f761947ace",
+      "generatedAt": "2026-07-25T05:26:58.782Z",
+      "model": "openai/gpt-4.1-mini",
       "promptVersion": "company-synthesis-v2",
       "basis": "structured-official-data",
       "evidenceSources": [
+        {
+          "id": "filing:0001046179-26-000459",
+          "label": "6-K · 2026-07-24",
+          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000459/tsm-monthend6kx20260724.htm"
+        },
         {
           "id": "filing:0001046179-26-000451",
           "label": "6-K · 2026-07-16",
@@ -1071,65 +1076,62 @@
           "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000381/a20260702changeofaztreasur.htm"
         },
         {
-          "id": "filing:0001046179-26-000377",
-          "label": "6-K · 2026-06-25",
-          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000377/tsm-monthend6kx20260625.htm"
-        },
-        {
           "id": "company-facts",
           "label": "SEC Company Facts",
           "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001046179.json"
         }
       ],
-      "summary": "台积电2024年度营收、净利润、资产和现金均实现显著增长。当前证据包仅含财务数据和公告元数据，无法判断最新公告具体内容。",
+      "summary": "台积电2024财年业绩显示收入、净利润、资产和现金均实现显著增长，收入达882.68亿美元，同比增长25.03%；净利润353.01亿美元，同比增长27.01%；资产总额2040.79亿美元，同比增长12.96%；现金及现金等价物达648.87亿美元，同比增长45.19%。近期披露的多份6-K文件未包含正文，无法判断具体经营或战略变化。",
       "summaryEvidence": [
-        "company-facts",
+        "filing:0001046179-26-000459",
         "filing:0001046179-26-000451",
         "filing:0001046179-26-000447",
-        "filing:0001046179-26-000381",
-        "filing:0001046179-26-000377"
+        "company-facts"
       ],
       "whatChanged": [
         {
-          "text": "2024年营收同比增长25.03%，净利润同比增长27.01%，资产同比增长12.96%，现金同比增长45.19%。",
+          "text": "2024财年收入较2023财年增长25.03%，达到882.68亿美元。",
           "evidence": [
             "company-facts"
           ]
-        }
-      ],
-      "operatingSignals": [
+        },
         {
-          "text": "财务表现强劲，显示台积电运营能力提升。",
+          "text": "2024财年净利润较2023财年增长27.01%，达到353.01亿美元。",
           "evidence": [
             "company-facts"
           ]
-        }
-      ],
-      "valueChainImpact": [
+        },
         {
-          "text": "台积电业绩增长可能带动上游材料、设备供应商需求增加，并增强下游客户供应保障。",
+          "text": "2024财年资产总额较2023财年增长12.96%，达到2040.79亿美元。",
+          "evidence": [
+            "company-facts"
+          ]
+        },
+        {
+          "text": "2024财年现金及现金等价物较2023财年增长45.19%，达到648.87亿美元。",
           "evidence": [
             "company-facts"
           ]
         }
       ],
+      "operatingSignals": [],
+      "valueChainImpact": [],
       "uncertainties": [
         {
-          "text": "当前证据包不含披露正文，无法判断最新公告具体事项、业务进展、风险或战略调整。",
-          "evidence": [
-            "filing:0001046179-26-000451",
-            "filing:0001046179-26-000447",
-            "filing:0001046179-26-000381",
-            "filing:0001046179-26-000377"
-          ]
+          "text": "近期多份6-K文件仅含元数据，当前证据包不含披露正文，无法判断具体经营策略、产能调整或市场布局等事项。",
+          "evidence": []
+        },
+        {
+          "text": "无法确认是否有新的技术进展、客户结构变化或供应链调整。",
+          "evidence": []
         }
       ],
       "questionsToWatch": [
-        "最新公告是否涉及重大投资、产能扩张或战略调整？",
-        "是否有新技术节点量产或客户结构变化？",
-        "近期是否披露风险因素或行业挑战？"
+        "台积电未来是否会公布详细的经营策略或产能规划？",
+        "是否有新的技术节点或客户合作计划披露？",
+        "市场需求和供应链状况是否会影响未来业绩？"
       ],
-      "confidence": "medium"
+      "confidence": "high"
     },
     "samsung-electronics": {
       "status": "unavailable",

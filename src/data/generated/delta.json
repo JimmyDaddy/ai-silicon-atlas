@@ -1,87 +1,43 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-25T05:26:59.408Z",
+  "generatedAt": "2026-07-26T05:44:12.493Z",
   "period": {
-    "from": "2026-07-24T05:33:09.407Z",
-    "to": "2026-07-25T05:26:59.408Z",
+    "from": "2026-07-25T05:26:59.408Z",
+    "to": "2026-07-26T05:44:12.493Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
+    "newFilings": 0,
     "metricChanges": 0,
     "companyStatusChanges": 0,
-    "companyAnalysisRefreshes": 1,
-    "newIntelligence": 1,
+    "companyAnalysisRefreshes": 0,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 1,
-    "totalChanges": 4
+    "totalChanges": 1
   },
   "affected": {
     "stages": {
-      "manufacturing": 2,
-      "design": 2,
-      "memory": 2,
-      "packaging": 2,
-      "ai-infrastructure": 2,
+      "design": 1,
+      "memory": 1,
+      "packaging": 1,
+      "ai-infrastructure": 1,
       "models-platforms": 1
     },
-    "topics": {
-      "AI 算力与芯片": 1
-    }
+    "topics": {}
   },
   "companies": {
-    "filings": [
-      {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "form": "6-K",
-        "filedAt": "2026-07-24",
-        "reportDate": "2026-06-30",
-        "accessionNumber": "0001046179-26-000459",
-        "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000459/tsm-monthend6kx20260724.htm"
-      }
-    ],
+    "filings": [],
     "metrics": [],
     "statuses": [],
-    "analysis": [
-      {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "generatedAt": "2026-07-25T05:26:58.782Z",
-        "model": "openai/gpt-4.1-mini",
-        "confidence": "high",
-        "summary": "台积电2024财年业绩显示收入、净利润、资产和现金均实现显著增长，收入达882.68亿美元，同比增长25.03%；净利润353.01亿美元，同比增长27.01%；资产总额2040.79亿美元，同比增长12.96%；现金及现金等价物达648.87亿美元，同比增长45.19%。近期披露的多份6-K文件未包含正文，无法判断具体经营或战略变化。"
-      }
-    ]
+    "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "intel-newsroom-3e942cd173e9",
-        "publishedAt": "2026-07-24T16:46:59.000Z",
-        "source": "Intel Newsroom",
-        "sourceType": "公司观点",
-        "title": "英特尔与蓝思科技合作推动面向AI时代的先进半导体封装技术",
-        "summary": "英特尔与蓝思科技宣布战略合作，致力于开发基于玻璃基板的先进半导体封装技术，旨在提升芯片性能、增加互连密度并改善封装质量，以满足AI算力需求。",
-        "topics": [
-          "AI 算力与芯片"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure"
-        ],
-        "analysisStatus": "ok",
-        "sourceUrl": "https://newsroom.intel.com/new-technologies/intel-and-lens-technology-collaborate-to-enable-advanced-semiconductor-packaging-for-the-ai-era"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": [
       {
         "id": "nvidia-blog-7a9ded228ecc",
         "source": "NVIDIA 官方博客",
-        "title": "韩国总统李在明与英伟达及合作伙伴共绘韩国AI未来蓝图",
+        "title": "韩国在NVIDIA及合作伙伴支持下描绘AI未来蓝图",
         "relatedCompanies": [
           "nvidia",
           "sk-hynix",
@@ -95,7 +51,7 @@
           "ai-infrastructure",
           "models-platforms"
         ],
-        "generatedAt": "2026-07-25T05:27:12.244Z"
+        "generatedAt": "2026-07-26T05:44:23.013Z"
       }
     ]
   }

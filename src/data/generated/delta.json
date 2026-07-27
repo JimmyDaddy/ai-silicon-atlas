@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T05:44:12.493Z",
+  "generatedAt": "2026-07-27T06:03:08.811Z",
   "period": {
-    "from": "2026-07-25T05:26:59.408Z",
-    "to": "2026-07-26T05:44:12.493Z",
+    "from": "2026-07-26T05:44:12.493Z",
+    "to": "2026-07-27T06:03:08.811Z",
     "baseRef": "HEAD"
   },
   "summary": {
@@ -11,19 +11,24 @@
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 1,
-    "totalChanges": 1
+    "totalChanges": 2
   },
   "affected": {
     "stages": {
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1,
-      "models-platforms": 1
+      "design": 2,
+      "memory": 2,
+      "packaging": 2,
+      "ai-infrastructure": 2,
+      "equipment-materials": 2
     },
-    "topics": {}
+    "topics": {
+      "AI 算力与芯片": 1,
+      "半导体制造": 1,
+      "数据中心与电力": 1,
+      "企业应用与生产力": 1
+    }
   },
   "companies": {
     "filings": [],
@@ -32,26 +37,55 @@
     "analysis": []
   },
   "intelligence": {
-    "new": [],
-    "analysisRefreshed": [
+    "new": [
       {
-        "id": "nvidia-blog-7a9ded228ecc",
+        "id": "nvidia-blog-974f35f6c57c",
+        "publishedAt": "2026-07-27T00:45:42.000Z",
         "source": "NVIDIA 官方博客",
-        "title": "韩国在NVIDIA及合作伙伴支持下描绘AI未来蓝图",
+        "sourceType": "公司观点",
+        "title": "英伟达利用Vera CPU加速下一代CPU和GPU设计",
+        "summary": "英伟达与Cadence和Synopsys合作，优化关键EDA应用以适配自研Vera CPU，提升芯片设计中计算密集型阶段的性能。初步测试显示，Vera在形式验证和功能验证等关键工作负载上性能提升达1.5倍。Vera结合高效LPDDR5X内存和第二代可扩展一致性互联，支持低延迟和高吞吐，缩短验证周期，提升设计迭代效率。英伟达已将Vera部署于自身EDA流程，未来将推出基于Rigel核心的Rosa CPU，持续优化EDA软件，形成设计与计算架构的良性循环。",
+        "topics": [
+          "AI 算力与芯片",
+          "半导体制造",
+          "数据中心与电力",
+          "企业应用与生产力"
+        ],
         "relatedCompanies": [
           "nvidia",
-          "sk-hynix",
-          "samsung-electronics",
-          "broadcom"
+          "synopsys",
+          "cadence"
         ],
         "relatedStages": [
           "design",
           "memory",
           "packaging",
           "ai-infrastructure",
-          "models-platforms"
+          "equipment-materials"
         ],
-        "generatedAt": "2026-07-26T05:44:23.013Z"
+        "analysisStatus": "ok",
+        "sourceUrl": "https://blogs.nvidia.com/blog/vera-cpu-eda/"
+      }
+    ],
+    "analysisRefreshed": [
+      {
+        "id": "nvidia-blog-46165e640060",
+        "source": "NVIDIA 官方博客",
+        "title": "NVIDIA Vera Rubin：全球合作伙伴最低能耗成本的AI算力平台",
+        "relatedCompanies": [
+          "nvidia",
+          "microsoft",
+          "alphabet",
+          "amazon"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "generatedAt": "2026-07-27T06:03:36.070Z"
       }
     ]
   }

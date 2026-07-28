@@ -1,91 +1,182 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-27T06:03:08.811Z",
+  "generatedAt": "2026-07-28T05:29:39.192Z",
   "period": {
-    "from": "2026-07-26T05:44:12.493Z",
-    "to": "2026-07-27T06:03:08.811Z",
+    "from": "2026-07-27T06:03:08.811Z",
+    "to": "2026-07-28T05:29:39.192Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 2,
     "metricChanges": 0,
     "companyStatusChanges": 0,
-    "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "companyAnalysisRefreshes": 2,
+    "newIntelligence": 3,
     "intelligenceAnalysisRefreshes": 1,
-    "totalChanges": 2
+    "totalChanges": 8
   },
   "affected": {
     "stages": {
-      "design": 2,
+      "packaging": 5,
+      "eda-ip": 2,
+      "models-platforms": 3,
+      "ai-applications": 2,
+      "equipment-materials": 2,
+      "manufacturing": 2,
       "memory": 2,
-      "packaging": 2,
       "ai-infrastructure": 2,
-      "equipment-materials": 2
+      "design": 1
     },
     "topics": {
-      "AI 算力与芯片": 1,
+      "资本市场与金融稳定": 2,
       "半导体制造": 1,
       "数据中心与电力": 1,
-      "企业应用与生产力": 1
+      "模型与平台": 2,
+      "企业应用与生产力": 1,
+      "供应链与地缘政策": 1
     }
   },
   "companies": {
-    "filings": [],
+    "filings": [
+      {
+        "company": "amkor",
+        "stage": "packaging",
+        "form": "8-K",
+        "filedAt": "2026-07-27",
+        "reportDate": "2026-07-27",
+        "accessionNumber": "0001047127-26-000043",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000043/amkr-20260727.htm"
+      },
+      {
+        "company": "cadence",
+        "stage": "eda-ip",
+        "form": "8-K",
+        "filedAt": "2026-07-27",
+        "reportDate": "2026-07-27",
+        "accessionNumber": "0000813672-26-000089",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000089/cdns-20260727.htm"
+      }
+    ],
     "metrics": [],
     "statuses": [],
-    "analysis": []
+    "analysis": [
+      {
+        "company": "amkor",
+        "stage": "packaging",
+        "generatedAt": "2026-07-28T05:29:38.538Z",
+        "model": "openai/gpt-4.1-mini",
+        "confidence": "high",
+        "summary": "安靠科技（Amkor Technology, Inc.）2026年第一季度财务数据显示，公司实现营业收入约16.85亿美元，同比增长27.48%；净利润约8335万美元，同比增长294.5%。资产总额约82.99亿美元，较去年底增长2%。现金及现金等价物约11.21亿美元，较去年底下降18.66%。资本支出显著增加，达到约2.25亿美元，同比增长181.12%。近期多份8-K文件披露，但当前证据包不含正文，无法判断具体事项。"
+      },
+      {
+        "company": "cadence",
+        "stage": "eda-ip",
+        "generatedAt": "2026-07-28T05:29:24.069Z",
+        "model": "openai/gpt-4.1-mini",
+        "confidence": "high",
+        "summary": "铿腾电子（Cadence Design Systems Inc）2026财年第一季度财报显示，公司实现营收约14.74亿美元，同比增长18.66%；净利润约3.36亿美元，同比增长22.69%。资产总额约120.98亿美元，较去年底增长19.16%。现金及现金等价物约14.07亿美元，较去年底下降53.13%。资本支出约4882万美元，较去年同期增长111.7%。近期披露的8-K文件未含正文，无法判断具体事项。"
+      }
+    ]
   },
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-974f35f6c57c",
-        "publishedAt": "2026-07-27T00:45:42.000Z",
-        "source": "NVIDIA 官方博客",
+        "id": "microsoft-blog-bfd854806ca8",
+        "publishedAt": "2026-07-27T16:30:09.000Z",
+        "source": "Microsoft 官方博客",
         "sourceType": "公司观点",
-        "title": "英伟达利用Vera CPU加速下一代CPU和GPU设计",
-        "summary": "英伟达与Cadence和Synopsys合作，优化关键EDA应用以适配自研Vera CPU，提升芯片设计中计算密集型阶段的性能。初步测试显示，Vera在形式验证和功能验证等关键工作负载上性能提升达1.5倍。Vera结合高效LPDDR5X内存和第二代可扩展一致性互联，支持低延迟和高吞吐，缩短验证周期，提升设计迭代效率。英伟达已将Vera部署于自身EDA流程，未来将推出基于Rigel核心的Rosa CPU，持续优化EDA软件，形成设计与计算架构的良性循环。",
+        "title": "微软发布面向AI时代的全新安全架构Project Perception",
+        "summary": "微软在官方博客中介绍了面向AI时代的全新网络安全架构——Project Perception。该系统通过整合信号、上下文、模型和专用智能代理，构建一个持续学习的闭环防御体系，能够以机器速度感知风险、推理并采取行动。Project Perception采用多模型架构，针对不同安全任务动态选择最优模型，兼顾效果与成本，首个应用场景为软件漏洞管理。系统设计强调人机协同，增强安全团队洞察力和响应能力，并基于微软丰富的安全可视化、威胁情报和运营经验构建。该项目将于2026年8月3日公开预览，体现了微软对AI驱动安全防御未来的探索与实践。",
         "topics": [
-          "AI 算力与芯片",
+          "资本市场与金融稳定"
+        ],
+        "relatedCompanies": [
+          "microsoft"
+        ],
+        "relatedStages": [
+          "models-platforms",
+          "ai-applications"
+        ],
+        "analysisStatus": "ok",
+        "sourceUrl": "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/"
+      },
+      {
+        "id": "aws-blog-a30bd71cd914",
+        "publishedAt": "2026-07-27T14:54:41.000Z",
+        "source": "AWS 官方博客",
+        "sourceType": "公司观点",
+        "title": "AWS在雅典开设本地区域，发布Claude Opus 5及多项云服务更新",
+        "summary": "AWS宣布在希腊雅典开设第二个EMEA本地区域，支持多种实例和存储服务，满足本地数据驻留需求并降低延迟。同时，AWS推出Anthropic的Claude Opus 5模型，提供零数据保留功能，支持通过Amazon Bedrock和Claude平台访问。AWS Lambda durable execution SDK for .NET正式发布，简化长时工作流开发。Amazon Bedrock AgentCore实现统一日志追踪，Amazon Connect提升多语言自然语音体验，SageMaker Unified Studio支持OpenSearch数据分析，CloudWatch新增AI编码工具使用洞察。AWS还介绍了多项社区活动和资源，强调技术社区的重要性。",
+        "topics": [
           "半导体制造",
           "数据中心与电力",
+          "模型与平台",
           "企业应用与生产力"
         ],
         "relatedCompanies": [
-          "nvidia",
-          "synopsys",
-          "cadence"
+          "amazon"
         ],
         "relatedStages": [
-          "design",
+          "equipment-materials",
+          "manufacturing",
           "memory",
           "packaging",
-          "ai-infrastructure",
-          "equipment-materials"
+          "ai-infrastructure"
         ],
         "analysisStatus": "ok",
-        "sourceUrl": "https://blogs.nvidia.com/blog/vera-cpu-eda/"
+        "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-july-27-2026/"
+      },
+      {
+        "id": "nvidia-blog-338eb622f724",
+        "publishedAt": "2026-07-27T09:00:07.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "行业领导者联合成立开放安全AI联盟，推动AI安全与防护",
+        "summary": "NVIDIA等多家行业领导企业联合发起开放安全AI联盟，基于Linux基金会Akrites和OpenSSF社区的工作，致力于利用开放技术修复和披露AI系统漏洞。联盟强调开放模型和工具在网络安全中的重要性，认为开放系统能促进防御能力民主化、提高透明度并避免单点故障。联盟成员包括微软、Adobe、Cadence、Palantir等，合作开发从身份认证到安全编码的开放防御堆栈。NVIDIA贡献了开放模型和代理框架NOOA，支持更易测试和治理的AI代理。联盟呼吁政策制定者将开放模型视为防御资产，避免限制开放系统导致防御能力削弱和权力集中。",
+        "topics": [
+          "模型与平台",
+          "资本市场与金融稳定",
+          "供应链与地缘政策"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "microsoft",
+          "synopsys",
+          "cadence",
+          "palantir",
+          "salesforce",
+          "servicenow",
+          "adobe"
+        ],
+        "relatedStages": [
+          "models-platforms",
+          "ai-applications",
+          "equipment-materials",
+          "manufacturing",
+          "packaging"
+        ],
+        "analysisStatus": "ok",
+        "sourceUrl": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/"
       }
     ],
     "analysisRefreshed": [
       {
-        "id": "nvidia-blog-46165e640060",
+        "id": "nvidia-blog-9d5925e11f31",
         "source": "NVIDIA 官方博客",
-        "title": "NVIDIA Vera Rubin：全球合作伙伴最低能耗成本的AI算力平台",
+        "title": "Nemotron Labs：开放模型如何赋能企业和国家构建可信、可控且可定制的AI",
         "relatedCompanies": [
-          "nvidia",
-          "microsoft",
-          "alphabet",
-          "amazon"
+          "nvidia"
         ],
         "relatedStages": [
           "design",
           "memory",
           "packaging",
           "ai-infrastructure",
-          "equipment-materials"
+          "models-platforms"
         ],
-        "generatedAt": "2026-07-27T06:03:36.070Z"
+        "generatedAt": "2026-07-28T05:30:27.610Z"
       }
     ]
   }

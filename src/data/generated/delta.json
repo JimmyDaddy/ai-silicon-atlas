@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T05:29:39.192Z",
+  "generatedAt": "2026-07-29T05:34:53.202Z",
   "period": {
-    "from": "2026-07-27T06:03:08.811Z",
-    "to": "2026-07-28T05:29:39.192Z",
+    "from": "2026-07-28T05:29:39.192Z",
+    "to": "2026-07-29T05:34:53.202Z",
     "baseRef": "HEAD"
   },
   "summary": {
@@ -11,29 +11,27 @@
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 2,
-    "newIntelligence": 3,
+    "newIntelligence": 4,
     "intelligenceAnalysisRefreshes": 1,
-    "totalChanges": 8
+    "totalChanges": 9
   },
   "affected": {
     "stages": {
-      "packaging": 5,
-      "eda-ip": 2,
-      "models-platforms": 3,
+      "packaging": 6,
+      "equipment-materials": 6,
+      "design": 3,
+      "memory": 3,
+      "ai-infrastructure": 3,
       "ai-applications": 2,
-      "equipment-materials": 2,
-      "manufacturing": 2,
-      "memory": 2,
-      "ai-infrastructure": 2,
-      "design": 1
+      "models-platforms": 1,
+      "manufacturing": 1
     },
     "topics": {
-      "资本市场与金融稳定": 2,
-      "半导体制造": 1,
+      "AI 算力与芯片": 3,
+      "半导体制造": 3,
       "数据中心与电力": 1,
       "模型与平台": 2,
-      "企业应用与生产力": 1,
-      "供应链与地缘政策": 1
+      "企业应用与生产力": 2
     }
   },
   "companies": {
@@ -41,22 +39,22 @@
       {
         "company": "amkor",
         "stage": "packaging",
-        "form": "8-K",
-        "filedAt": "2026-07-27",
-        "reportDate": "2026-07-27",
-        "accessionNumber": "0001047127-26-000043",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000043/amkr-20260727.htm"
+        "form": "10-Q",
+        "filedAt": "2026-07-28",
+        "reportDate": "2026-06-30",
+        "accessionNumber": "0001047127-26-000046",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000046/amkr-20260630.htm"
       },
       {
-        "company": "cadence",
-        "stage": "eda-ip",
+        "company": "kla",
+        "stage": "equipment-materials",
         "form": "8-K",
-        "filedAt": "2026-07-27",
-        "reportDate": "2026-07-27",
-        "accessionNumber": "0000813672-26-000089",
+        "filedAt": "2026-07-28",
+        "reportDate": "2026-07-28",
+        "accessionNumber": "0000319201-26-000024",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000089/cdns-20260727.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000024/klac-20260728.htm"
       }
     ],
     "metrics": [],
@@ -65,81 +63,120 @@
       {
         "company": "amkor",
         "stage": "packaging",
-        "generatedAt": "2026-07-28T05:29:38.538Z",
+        "generatedAt": "2026-07-29T05:34:52.543Z",
         "model": "openai/gpt-4.1-mini",
         "confidence": "high",
-        "summary": "安靠科技（Amkor Technology, Inc.）2026年第一季度财务数据显示，公司实现营业收入约16.85亿美元，同比增长27.48%；净利润约8335万美元，同比增长294.5%。资产总额约82.99亿美元，较去年底增长2%。现金及现金等价物约11.21亿美元，较去年底下降18.66%。资本支出显著增加，达到约2.25亿美元，同比增长181.12%。近期多份8-K文件披露，但当前证据包不含正文，无法判断具体事项。"
+        "summary": "安靠科技（Amkor Technology, Inc.）2026财年第一季度（截至2026年3月31日）实现营业收入约16.85亿美元，同比增长27.48%；归属于母公司的净利润约8335万美元，同比增长294.5%。资产总额约82.99亿美元，较上季度末增长2%。现金及现金等价物约11.21亿美元，较上季度末下降18.66%。同期资本支出约2.25亿美元，较去年同期增长181.12%。近期披露的10-Q和8-K文件未包含具体业务变动或战略调整的正文内容，无法判断具体事项。"
       },
       {
-        "company": "cadence",
-        "stage": "eda-ip",
-        "generatedAt": "2026-07-28T05:29:24.069Z",
+        "company": "kla",
+        "stage": "equipment-materials",
+        "generatedAt": "2026-07-29T05:34:27.518Z",
         "model": "openai/gpt-4.1-mini",
-        "confidence": "high",
-        "summary": "铿腾电子（Cadence Design Systems Inc）2026财年第一季度财报显示，公司实现营收约14.74亿美元，同比增长18.66%；净利润约3.36亿美元，同比增长22.69%。资产总额约120.98亿美元，较去年底增长19.16%。现金及现金等价物约14.07亿美元，较去年底下降53.13%。资本支出约4882万美元，较去年同期增长111.7%。近期披露的8-K文件未含正文，无法判断具体事项。"
+        "confidence": "medium",
+        "summary": "科磊（KLA CORP）2026财年第三季度（截至2026年3月31日）财务数据显示，公司实现营收约34.15亿美元，同比增长约11.49%；净利润约12.01亿美元，较上一季度增长约4.83%。资产总额约168.74亿美元，较上一季度增长0.92%。现金及现金等价物约17.87亿美元，较上一季度下降27.12%。资本支出约2.87亿美元，同比增长22.06%。近期有多份8-K报告披露，但当前证据包不含披露正文，无法判断具体事项。"
       }
     ]
   },
   "intelligence": {
     "new": [
       {
-        "id": "microsoft-blog-bfd854806ca8",
-        "publishedAt": "2026-07-27T16:30:09.000Z",
+        "id": "microsoft-blog-3c9104f14a23",
+        "publishedAt": "2026-07-28T16:00:10.000Z",
         "source": "Microsoft 官方博客",
         "sourceType": "公司观点",
-        "title": "微软发布面向AI时代的全新安全架构Project Perception",
-        "summary": "微软在官方博客中介绍了面向AI时代的全新网络安全架构——Project Perception。该系统通过整合信号、上下文、模型和专用智能代理，构建一个持续学习的闭环防御体系，能够以机器速度感知风险、推理并采取行动。Project Perception采用多模型架构，针对不同安全任务动态选择最优模型，兼顾效果与成本，首个应用场景为软件漏洞管理。系统设计强调人机协同，增强安全团队洞察力和响应能力，并基于微软丰富的安全可视化、威胁情报和运营经验构建。该项目将于2026年8月3日公开预览，体现了微软对AI驱动安全防御未来的探索与实践。",
+        "title": "回顾微软2026财年：从AI试验到前沿转型",
+        "summary": "微软2026财年见证了客户从AI试验阶段迈向实际业务应用，推动创新和增长。客户构建智能平台，持续积累独特知识和数据价值，建立全面的信任平台以管理和保障AI应用。微软通过Copilot、Microsoft IQ和Agent 365等产品支持企业实现前沿转型，推动AI系统持续学习和优化。多个行业客户案例展示了AI在提升效率、安全、风险管理、零售体验、研发加速等方面的显著成效，体现了AI民主化和低代码工具赋能业务团队创新的趋势。",
         "topics": [
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [
-          "microsoft"
-        ],
-        "relatedStages": [
-          "models-platforms",
-          "ai-applications"
-        ],
-        "analysisStatus": "ok",
-        "sourceUrl": "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/"
-      },
-      {
-        "id": "aws-blog-a30bd71cd914",
-        "publishedAt": "2026-07-27T14:54:41.000Z",
-        "source": "AWS 官方博客",
-        "sourceType": "公司观点",
-        "title": "AWS在雅典开设本地区域，发布Claude Opus 5及多项云服务更新",
-        "summary": "AWS宣布在希腊雅典开设第二个EMEA本地区域，支持多种实例和存储服务，满足本地数据驻留需求并降低延迟。同时，AWS推出Anthropic的Claude Opus 5模型，提供零数据保留功能，支持通过Amazon Bedrock和Claude平台访问。AWS Lambda durable execution SDK for .NET正式发布，简化长时工作流开发。Amazon Bedrock AgentCore实现统一日志追踪，Amazon Connect提升多语言自然语音体验，SageMaker Unified Studio支持OpenSearch数据分析，CloudWatch新增AI编码工具使用洞察。AWS还介绍了多项社区活动和资源，强调技术社区的重要性。",
-        "topics": [
+          "AI 算力与芯片",
           "半导体制造",
           "数据中心与电力",
           "模型与平台",
           "企业应用与生产力"
         ],
         "relatedCompanies": [
-          "amazon"
+          "microsoft"
         ],
         "relatedStages": [
-          "equipment-materials",
-          "manufacturing",
+          "design",
           "memory",
           "packaging",
-          "ai-infrastructure"
+          "ai-infrastructure",
+          "equipment-materials"
         ],
         "analysisStatus": "ok",
-        "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-july-27-2026/"
+        "sourceUrl": "https://blogs.microsoft.com/blog/2026/07/28/looking-back-on-microsofts-fy26-from-ai-experimentation-to-frontier-transformation/"
       },
       {
-        "id": "nvidia-blog-338eb622f724",
-        "publishedAt": "2026-07-27T09:00:07.000Z",
+        "id": "intel-newsroom-9e539d28e489",
+        "publishedAt": "2026-07-28T15:00:51.000Z",
+        "source": "Intel Newsroom",
+        "sourceType": "公司观点",
+        "title": "英特尔完成RAMP-C项目，加速安全隔区发展势头",
+        "summary": "英特尔代工部门完成了快速保障微电子原型-商业（RAMP-C）项目。该项目自2021年9月启动，支持美国本土领先CMOS技术和制造的发展，奠定了扩大可信赖国内半导体制造的基础。",
+        "topics": [
+          "AI 算力与芯片",
+          "半导体制造"
+        ],
+        "relatedCompanies": [],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "ok",
+        "sourceUrl": "https://newsroom.intel.com/intel-foundry/intel-completes-ramp-c-program-accelerating-momentum-for-secure-enclave"
+      },
+      {
+        "id": "nvidia-blog-543fd515859a",
+        "publishedAt": "2026-07-28T15:00:19.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "行业领导者联合成立开放安全AI联盟，推动AI安全与防护",
-        "summary": "NVIDIA等多家行业领导企业联合发起开放安全AI联盟，基于Linux基金会Akrites和OpenSSF社区的工作，致力于利用开放技术修复和披露AI系统漏洞。联盟强调开放模型和工具在网络安全中的重要性，认为开放系统能促进防御能力民主化、提高透明度并避免单点故障。联盟成员包括微软、Adobe、Cadence、Palantir等，合作开发从身份认证到安全编码的开放防御堆栈。NVIDIA贡献了开放模型和代理框架NOOA，支持更易测试和治理的AI代理。联盟呼吁政策制定者将开放模型视为防御资产，避免限制开放系统导致防御能力削弱和权力集中。",
+        "title": "NVIDIA Jetson：强大算力与便携性的边缘AI平台",
+        "summary": "NVIDIA官方介绍了Jetson平台，特别是Jetson Orin Nano Super模块，强调其将桌面级生成式AI算力浓缩于便携开发套件中，适合机器人、自动化设备及边缘AI项目。该平台支持学生、研究人员和开发者轻松构建、学习和部署智能机器人，具备高达67 TOPS的AI性能，且支持本地运行，无需云端依赖。通过Jetson Device Skills和BSP Skills，用户能更便捷地开发和优化AI代理，实现安全可靠的边缘AI应用。",
         "topics": [
-          "模型与平台",
-          "资本市场与金融稳定",
-          "供应链与地缘政策"
+          "AI 算力与芯片",
+          "半导体制造",
+          "模型与平台"
         ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "ok",
+        "sourceUrl": "https://blogs.nvidia.com/blog/build-ai-with-nvidia-jetson/"
+      },
+      {
+        "id": "bis-c76456149317",
+        "publishedAt": "2026-07-28T09:52:00.000Z",
+        "source": "国际清算银行（BIS）",
+        "sourceType": "国际机构",
+        "title": "人工智能与全球经济：对央行的影响",
+        "summary": "国际清算银行指出，人工智能的快速发展推动了大规模且日益依赖债务融资的投资增长，促进了贸易和股市发展，带来了不同国家间显著的贸易条件和财富效应。尽管人工智能可能带来较大生产力提升，但其效果在行业和国家间存在不确定性和不均衡。人工智能同时影响需求和供给，模糊了经济周期信号，增加了央行评估经济基本面和制定货币政策的难度。",
+        "topics": [
+          "企业应用与生产力"
+        ],
+        "relatedCompanies": [],
+        "relatedStages": [
+          "ai-applications"
+        ],
+        "analysisStatus": "ok",
+        "sourceUrl": "https://www.bis.org/publ/bisbull130.htm"
+      }
+    ],
+    "analysisRefreshed": [
+      {
+        "id": "nvidia-blog-338eb622f724",
+        "source": "NVIDIA 官方博客",
+        "title": "行业领袖联合成立开放安全AI联盟，推动AI安全与防护",
         "relatedCompanies": [
           "nvidia",
           "microsoft",
@@ -157,26 +194,7 @@
           "manufacturing",
           "packaging"
         ],
-        "analysisStatus": "ok",
-        "sourceUrl": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/"
-      }
-    ],
-    "analysisRefreshed": [
-      {
-        "id": "nvidia-blog-9d5925e11f31",
-        "source": "NVIDIA 官方博客",
-        "title": "Nemotron Labs：开放模型如何赋能企业和国家构建可信、可控且可定制的AI",
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "generatedAt": "2026-07-28T05:30:27.610Z"
+        "generatedAt": "2026-07-29T05:35:50.084Z"
       }
     ]
   }

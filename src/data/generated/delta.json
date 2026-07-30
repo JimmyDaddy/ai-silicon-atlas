@@ -1,119 +1,410 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-29T05:34:53.202Z",
+  "generatedAt": "2026-07-30T05:23:19.333Z",
   "period": {
-    "from": "2026-07-28T05:29:39.192Z",
-    "to": "2026-07-29T05:34:53.202Z",
+    "from": "2026-07-29T05:34:53.202Z",
+    "to": "2026-07-30T05:23:19.333Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 2,
-    "metricChanges": 0,
+    "newFilings": 6,
+    "metricChanges": 19,
     "companyStatusChanges": 0,
-    "companyAnalysisRefreshes": 2,
-    "newIntelligence": 4,
-    "intelligenceAnalysisRefreshes": 1,
-    "totalChanges": 9
+    "companyAnalysisRefreshes": 6,
+    "newIntelligence": 1,
+    "intelligenceAnalysisRefreshes": 3,
+    "totalChanges": 35
   },
   "affected": {
     "stages": {
-      "packaging": 6,
-      "equipment-materials": 6,
-      "design": 3,
-      "memory": 3,
-      "ai-infrastructure": 3,
+      "eda-ip": 9,
+      "ai-infrastructure": 15,
+      "models-platforms": 11,
+      "design": 2,
+      "memory": 2,
+      "packaging": 3,
+      "equipment-materials": 3,
       "ai-applications": 2,
-      "models-platforms": 1,
       "manufacturing": 1
     },
     "topics": {
-      "AI 算力与芯片": 3,
-      "半导体制造": 3,
-      "数据中心与电力": 1,
-      "模型与平台": 2,
-      "企业应用与生产力": 2
+      "AI 算力与芯片": 1,
+      "半导体制造": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "amkor",
-        "stage": "packaging",
-        "form": "10-Q",
-        "filedAt": "2026-07-28",
+        "company": "arm",
+        "stage": "eda-ip",
+        "form": "6-K",
+        "filedAt": "2026-07-29",
         "reportDate": "2026-06-30",
-        "accessionNumber": "0001047127-26-000046",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000046/amkr-20260630.htm"
+        "accessionNumber": "0001973239-26-000114",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
       },
       {
-        "company": "kla",
-        "stage": "equipment-materials",
+        "company": "cadence",
+        "stage": "eda-ip",
+        "form": "10-Q",
+        "filedAt": "2026-07-29",
+        "reportDate": "2026-06-30",
+        "accessionNumber": "0000813672-26-000092",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000092/cdns-20260630.htm"
+      },
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
         "form": "8-K",
-        "filedAt": "2026-07-28",
-        "reportDate": "2026-07-28",
-        "accessionNumber": "0000319201-26-000024",
+        "filedAt": "2026-07-29",
+        "reportDate": "2026-07-27",
+        "accessionNumber": "0001101239-26-000148",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000024/klac-20260728.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000148/eqix-20260727.htm"
+      },
+      {
+        "company": "meta-platforms",
+        "stage": "models-platforms",
+        "form": "8-K",
+        "filedAt": "2026-07-29",
+        "reportDate": "2026-07-29",
+        "accessionNumber": "0001628280-26-050596",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-20260729.htm"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "form": "10-K",
+        "filedAt": "2026-07-29",
+        "reportDate": "2026-06-30",
+        "accessionNumber": "0001193125-26-323660",
+        "title": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "form": "10-Q",
+        "filedAt": "2026-07-29",
+        "reportDate": "2026-06-30",
+        "accessionNumber": "0001628280-26-050609",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026050609/vrt-20260630.htm"
       }
     ],
-    "metrics": [],
+    "metrics": [
+      {
+        "company": "arm",
+        "stage": "eda-ip",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 1289000000,
+        "previousValue": 4920000000,
+        "changePercent": -73.8,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "6-K"
+      },
+      {
+        "company": "arm",
+        "stage": "eda-ip",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 270000000,
+        "previousValue": 904000000,
+        "changePercent": -70.13,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "6-K"
+      },
+      {
+        "company": "arm",
+        "stage": "eda-ip",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 11196000000,
+        "previousValue": 10703000000,
+        "changePercent": 4.61,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "6-K"
+      },
+      {
+        "company": "arm",
+        "stage": "eda-ip",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 3058000000,
+        "previousValue": 2751000000,
+        "changePercent": 11.16,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "6-K"
+      },
+      {
+        "company": "arm",
+        "stage": "eda-ip",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 197000000,
+        "previousValue": 545000000,
+        "changePercent": -63.85,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "6-K"
+      },
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 2625000000,
+        "previousValue": 2444000000,
+        "changePercent": 7.41,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 479000000,
+        "previousValue": 415000000,
+        "changePercent": 15.42,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 41076000000,
+        "previousValue": 40898000000,
+        "changePercent": 0.44,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 979000000,
+        "previousValue": 1362000000,
+        "changePercent": -28.12,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 331839000000,
+        "previousValue": 82886000000,
+        "changePercent": 300.36,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-K"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 133749000000,
+        "previousValue": 31778000000,
+        "changePercent": 320.89,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-K"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 758376000000,
+        "previousValue": 694228000000,
+        "changePercent": 9.24,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-K"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 20935000000,
+        "previousValue": 32105000000,
+        "changePercent": -34.79,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-K"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 115948000000,
+        "previousValue": 30876000000,
+        "changePercent": 275.53,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-K"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 3274300000,
+        "previousValue": 2649500000,
+        "changePercent": 23.58,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 497800000,
+        "previousValue": 390100000,
+        "changePercent": 27.61,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 15900900000,
+        "previousValue": 13400100000,
+        "changePercent": 18.66,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 2810600000,
+        "previousValue": 2150600000,
+        "changePercent": 30.69,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 285900000,
+        "previousValue": 112600000,
+        "changePercent": 153.91,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      }
+    ],
     "statuses": [],
     "analysis": [
       {
-        "company": "amkor",
-        "stage": "packaging",
-        "generatedAt": "2026-07-29T05:34:52.543Z",
+        "company": "arm",
+        "stage": "eda-ip",
+        "generatedAt": "2026-07-30T05:22:25.640Z",
         "model": "openai/gpt-4.1-mini",
         "confidence": "high",
-        "summary": "安靠科技（Amkor Technology, Inc.）2026财年第一季度（截至2026年3月31日）实现营业收入约16.85亿美元，同比增长27.48%；归属于母公司的净利润约8335万美元，同比增长294.5%。资产总额约82.99亿美元，较上季度末增长2%。现金及现金等价物约11.21亿美元，较上季度末下降18.66%。同期资本支出约2.25亿美元，较去年同期增长181.12%。近期披露的10-Q和8-K文件未包含具体业务变动或战略调整的正文内容，无法判断具体事项。"
+        "summary": "安谋（ARM HOLDINGS PLC）2027财年第一季度（2026年4月至6月）实现营业收入12.89亿美元，同比增长22.41%；净利润2.7亿美元，同比增长107.69%。资产总额达111.96亿美元，较上一季度增长4.61%；现金及现金等价物为30.58亿美元，较上一季度增长11.16%。同期资本支出为1.97亿美元，同比增长27.92%。当前证据包不含披露正文，无法判断具体业务战略或市场动态。"
       },
       {
-        "company": "kla",
-        "stage": "equipment-materials",
-        "generatedAt": "2026-07-29T05:34:27.518Z",
+        "company": "cadence",
+        "stage": "eda-ip",
+        "generatedAt": "2026-07-30T05:22:11.510Z",
         "model": "openai/gpt-4.1-mini",
         "confidence": "medium",
-        "summary": "科磊（KLA CORP）2026财年第三季度（截至2026年3月31日）财务数据显示，公司实现营收约34.15亿美元，同比增长约11.49%；净利润约12.01亿美元，较上一季度增长约4.83%。资产总额约168.74亿美元，较上一季度增长0.92%。现金及现金等价物约17.87亿美元，较上一季度下降27.12%。资本支出约2.87亿美元，同比增长22.06%。近期有多份8-K报告披露，但当前证据包不含披露正文，无法判断具体事项。"
+        "summary": "铿腾电子（Cadence Design Systems Inc）2026财年第一季度（截至2026年3月31日）财务数据显示，公司实现营业收入约14.74亿美元，同比增长约18.66%；净利润约3.36亿美元，同比增长约22.69%。资产总额约120.98亿美元，较上一季度增长约19.16%。现金及现金等价物约14.07亿美元，较上一季度下降约53.13%。资本支出约4882万美元，较上一季度增长约111.7%。当前证据包不含披露正文，无法判断具体业务变化及未来展望。"
+      },
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
+        "generatedAt": "2026-07-30T05:22:53.826Z",
+        "model": "openai/gpt-4.1-mini",
+        "confidence": "medium",
+        "summary": "Equinix公司2026财年第二季度财报显示，收入为26.25亿美元，同比增长16.36%；归属于母公司的净利润为4.79亿美元，同比增长30.16%。公司资产总额为410.76亿美元，较上一季度小幅增长0.44%；现金及现金等价物为9.79亿美元，较上一季度下降28.12%。当前证据包不含披露正文，无法判断具体经营策略调整或其他事项。"
+      },
+      {
+        "company": "meta-platforms",
+        "stage": "models-platforms",
+        "generatedAt": "2026-07-30T05:23:18.661Z",
+        "model": "openai/gpt-4.1-mini",
+        "confidence": "high",
+        "summary": "Meta Platforms 2026年第一季度财报显示，公司实现营收563.11亿美元，同比增长33.08%；净利润达267.73亿美元，同比增长60.86%。资产总额为3952.5亿美元，较上季度增长7.99%。现金及现金等价物为234.26亿美元，较上季度下降34.7%。资本支出为189.97亿美元，同比增长46.8%。近期有多份8-K报告，但当前证据包不含披露正文，无法判断具体事项。"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "generatedAt": "2026-07-30T05:23:04.830Z",
+        "model": "openai/gpt-4.1-mini",
+        "confidence": "high",
+        "summary": "微软2026财年实现营收3318.39亿美元，同比增长17.79%；净利润1337.49亿美元，同比增长31.34%。资产总额达7583.76亿美元，较上一季度增长9.24%。现金及现金等价物为209.35亿美元，较上一季度下降34.79%。资本支出显著增加至1159.48亿美元，同比增长79.62%。"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "generatedAt": "2026-07-30T05:22:40.035Z",
+        "model": "openai/gpt-4.1-mini",
+        "confidence": "high",
+        "summary": "维谛技术2026财年第二季度财报显示，公司实现营收32.74亿美元，同比增长24.12%；归属于母公司的净利润4.978亿美元，较上一季度增长27.61%。资产总额达到159.01亿美元，较上一季度增长18.66%。现金及现金等价物为28.11亿美元，较上一季度增长30.69%。上半年资本支出为2.859亿美元，较去年同期大幅增加250.8%。当前证据包不含披露正文，无法判断具体业务变化及战略调整细节。"
       }
     ]
   },
   "intelligence": {
     "new": [
       {
-        "id": "microsoft-blog-3c9104f14a23",
-        "publishedAt": "2026-07-28T16:00:10.000Z",
-        "source": "Microsoft 官方博客",
-        "sourceType": "公司观点",
-        "title": "回顾微软2026财年：从AI试验到前沿转型",
-        "summary": "微软2026财年见证了客户从AI试验阶段迈向实际业务应用，推动创新和增长。客户构建智能平台，持续积累独特知识和数据价值，建立全面的信任平台以管理和保障AI应用。微软通过Copilot、Microsoft IQ和Agent 365等产品支持企业实现前沿转型，推动AI系统持续学习和优化。多个行业客户案例展示了AI在提升效率、安全、风险管理、零售体验、研发加速等方面的显著成效，体现了AI民主化和低代码工具赋能业务团队创新的趋势。",
-        "topics": [
-          "AI 算力与芯片",
-          "半导体制造",
-          "数据中心与电力",
-          "模型与平台",
-          "企业应用与生产力"
-        ],
-        "relatedCompanies": [
-          "microsoft"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "equipment-materials"
-        ],
-        "analysisStatus": "ok",
-        "sourceUrl": "https://blogs.microsoft.com/blog/2026/07/28/looking-back-on-microsofts-fy26-from-ai-experimentation-to-frontier-transformation/"
-      },
-      {
-        "id": "intel-newsroom-9e539d28e489",
-        "publishedAt": "2026-07-28T15:00:51.000Z",
+        "id": "intel-newsroom-8ba19442fce0",
+        "publishedAt": "2026-07-29T15:00:03.000Z",
         "source": "Intel Newsroom",
         "sourceType": "公司观点",
-        "title": "英特尔完成RAMP-C项目，加速安全隔区发展势头",
-        "summary": "英特尔代工部门完成了快速保障微电子原型-商业（RAMP-C）项目。该项目自2021年9月启动，支持美国本土领先CMOS技术和制造的发展，奠定了扩大可信赖国内半导体制造的基础。",
+        "title": "英特尔美国先进封装技术助力下一代AI半导体",
+        "summary": "随着AI对算力需求的激增，半导体行业正从依赖单一大型芯片转向多芯片先进封装技术。先进封装通过将多个专用芯片互联，形成一个高速协同工作的整体单元，满足未来大规模工作负载需求。英特尔在美国推动的先进封装技术是实现这一转变的关键。",
         "topics": [
           "AI 算力与芯片",
           "半导体制造"
@@ -127,20 +418,14 @@
           "equipment-materials"
         ],
         "analysisStatus": "ok",
-        "sourceUrl": "https://newsroom.intel.com/intel-foundry/intel-completes-ramp-c-program-accelerating-momentum-for-secure-enclave"
-      },
+        "sourceUrl": "https://newsroom.intel.com/intel-foundry/intels-us-advanced-packaging-enables-next-generation-ai-semiconductors"
+      }
+    ],
+    "analysisRefreshed": [
       {
         "id": "nvidia-blog-543fd515859a",
-        "publishedAt": "2026-07-28T15:00:19.000Z",
         "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
         "title": "NVIDIA Jetson：强大算力与便携性的边缘AI平台",
-        "summary": "NVIDIA官方介绍了Jetson平台，特别是Jetson Orin Nano Super模块，强调其将桌面级生成式AI算力浓缩于便携开发套件中，适合机器人、自动化设备及边缘AI项目。该平台支持学生、研究人员和开发者轻松构建、学习和部署智能机器人，具备高达67 TOPS的AI性能，且支持本地运行，无需云端依赖。通过Jetson Device Skills和BSP Skills，用户能更便捷地开发和优化AI代理，实现安全可靠的边缘AI应用。",
-        "topics": [
-          "AI 算力与芯片",
-          "半导体制造",
-          "模型与平台"
-        ],
         "relatedCompanies": [
           "nvidia"
         ],
@@ -151,28 +436,21 @@
           "ai-infrastructure",
           "equipment-materials"
         ],
-        "analysisStatus": "ok",
-        "sourceUrl": "https://blogs.nvidia.com/blog/build-ai-with-nvidia-jetson/"
+        "generatedAt": "2026-07-30T05:23:39.813Z"
       },
       {
-        "id": "bis-c76456149317",
-        "publishedAt": "2026-07-28T09:52:00.000Z",
-        "source": "国际清算银行（BIS）",
-        "sourceType": "国际机构",
-        "title": "人工智能与全球经济：对央行的影响",
-        "summary": "国际清算银行指出，人工智能的快速发展推动了大规模且日益依赖债务融资的投资增长，促进了贸易和股市发展，带来了不同国家间显著的贸易条件和财富效应。尽管人工智能可能带来较大生产力提升，但其效果在行业和国家间存在不确定性和不均衡。人工智能同时影响需求和供给，模糊了经济周期信号，增加了央行评估经济基本面和制定货币政策的难度。",
-        "topics": [
-          "企业应用与生产力"
+        "id": "microsoft-blog-bfd854806ca8",
+        "source": "Microsoft 官方博客",
+        "title": "微软推出面向AI时代的新型安全体系Project Perception",
+        "relatedCompanies": [
+          "microsoft"
         ],
-        "relatedCompanies": [],
         "relatedStages": [
+          "models-platforms",
           "ai-applications"
         ],
-        "analysisStatus": "ok",
-        "sourceUrl": "https://www.bis.org/publ/bisbull130.htm"
-      }
-    ],
-    "analysisRefreshed": [
+        "generatedAt": "2026-07-30T05:23:51.275Z"
+      },
       {
         "id": "nvidia-blog-338eb622f724",
         "source": "NVIDIA 官方博客",
@@ -194,7 +472,7 @@
           "manufacturing",
           "packaging"
         ],
-        "generatedAt": "2026-07-29T05:35:50.084Z"
+        "generatedAt": "2026-07-30T05:24:02.517Z"
       }
     ]
   }

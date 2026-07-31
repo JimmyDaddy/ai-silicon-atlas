@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-30T05:23:19.333Z",
+  "generatedAt": "2026-07-31T05:48:31.461Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "authority-news-synthesis-v1",
-  "completedCount": 58,
+  "completedCount": 57,
   "sourceCount": 12,
   "sources": [
     {
@@ -15,9 +15,9 @@
       "homepage": "https://www.bis.org/",
       "priority": 100,
       "status": "ok",
-      "checkedAt": "2026-07-30T05:23:19.333Z",
+      "checkedAt": "2026-07-31T05:48:31.461Z",
       "itemCount": 25,
-      "matchedCount": 4
+      "matchedCount": 5
     },
     {
       "id": "ecb",
@@ -27,7 +27,7 @@
       "homepage": "https://www.ecb.europa.eu/",
       "priority": 96,
       "status": "ok",
-      "checkedAt": "2026-07-30T05:23:19.333Z",
+      "checkedAt": "2026-07-31T05:48:31.461Z",
       "itemCount": 15,
       "matchedCount": 0
     },
@@ -39,7 +39,7 @@
       "homepage": "https://www.federalreserve.gov/econres.htm",
       "priority": 95,
       "status": "ok",
-      "checkedAt": "2026-07-30T05:23:19.333Z",
+      "checkedAt": "2026-07-31T05:48:31.461Z",
       "itemCount": 15,
       "matchedCount": 1
     },
@@ -51,7 +51,7 @@
       "homepage": "https://www.federalreserve.gov/econres/notes/feds-notes/default.htm",
       "priority": 94,
       "status": "ok",
-      "checkedAt": "2026-07-30T05:23:19.333Z",
+      "checkedAt": "2026-07-31T05:48:31.461Z",
       "itemCount": 15,
       "matchedCount": 2
     },
@@ -63,7 +63,7 @@
       "homepage": "https://www.nist.gov/artificial-intelligence",
       "priority": 92,
       "status": "ok",
-      "checkedAt": "2026-07-30T05:23:19.333Z",
+      "checkedAt": "2026-07-31T05:48:31.461Z",
       "itemCount": 30,
       "matchedCount": 9
     },
@@ -75,9 +75,9 @@
       "homepage": "https://blogs.nvidia.com/",
       "priority": 86,
       "status": "ok",
-      "checkedAt": "2026-07-30T05:23:19.333Z",
+      "checkedAt": "2026-07-31T05:48:31.461Z",
       "itemCount": 18,
-      "matchedCount": 15
+      "matchedCount": 14
     },
     {
       "id": "microsoft-blog",
@@ -87,7 +87,7 @@
       "homepage": "https://blogs.microsoft.com/",
       "priority": 84,
       "status": "ok",
-      "checkedAt": "2026-07-30T05:23:19.333Z",
+      "checkedAt": "2026-07-31T05:48:31.461Z",
       "itemCount": 10,
       "matchedCount": 8
     },
@@ -99,7 +99,7 @@
       "homepage": "https://aws.amazon.com/blogs/aws/",
       "priority": 82,
       "status": "ok",
-      "checkedAt": "2026-07-30T05:23:19.333Z",
+      "checkedAt": "2026-07-31T05:48:31.461Z",
       "itemCount": 20,
       "matchedCount": 10
     },
@@ -111,12 +111,48 @@
       "homepage": "https://newsroom.intel.com/",
       "priority": 80,
       "status": "ok",
-      "checkedAt": "2026-07-30T05:23:19.333Z",
+      "checkedAt": "2026-07-31T05:48:31.461Z",
       "itemCount": 10,
       "matchedCount": 4
     }
   ],
   "articles": [
+    {
+      "id": "bis-c9aec2e43ac5",
+      "sourceId": "bis",
+      "sourceName": "国际清算银行（BIS）",
+      "sourceType": "国际机构",
+      "sourceHomepage": "https://www.bis.org/",
+      "sourcePriority": 100,
+      "title": "Fabio Panetta: Finance for innovation and artificial intelligence as drivers of development",
+      "titleZh": null,
+      "url": "https://www.bis.org/review/r260730a.htm",
+      "publishedAt": "2026-07-30T09:15:00.000Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
+      "topics": [
+        "半导体制造"
+      ],
+      "relatedCompanies": [],
+      "relatedStages": [
+        "equipment-materials",
+        "manufacturing",
+        "memory",
+        "packaging"
+      ],
+      "entities": [
+        "国际清算银行（BIS）"
+      ],
+      "excerpt": "Opening remarks by Mr Fabio Panetta, Governor of the Bank of Italy, at a conference organised by the Bank of Italy and the European Investment Bank, Rome, 2 July 2026.",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "a7ec7bff4dc2f52baedf07d51c7e07f1fc5f7aefaf83deb428b7da95ecd5a12e",
+        "generatedAt": null,
+        "model": null,
+        "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
+        "lastAttemptAt": "2026-07-31T05:48:37.582Z"
+      }
+    },
     {
       "id": "intel-newsroom-8ba19442fce0",
       "sourceId": "intel-newsroom",
@@ -125,10 +161,10 @@
       "sourceHomepage": "https://newsroom.intel.com/",
       "sourcePriority": 80,
       "title": "Intel’s U.S. Advanced Packaging Enables Next-Generation AI Semiconductors",
-      "titleZh": "英特尔美国先进封装技术助力下一代AI半导体",
+      "titleZh": null,
       "url": "https://newsroom.intel.com/intel-foundry/intels-us-advanced-packaging-enables-next-generation-ai-semiconductors",
       "publishedAt": "2026-07-29T15:00:03.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造"
@@ -181,7 +217,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/07/28/looking-back-on-microsofts-fy26-from-ai-experimentation-to-frontier-transformation/",
       "publishedAt": "2026-07-28T16:00:10.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -239,7 +275,7 @@
       "titleZh": null,
       "url": "https://newsroom.intel.com/intel-foundry/intel-completes-ramp-c-program-accelerating-momentum-for-secure-enclave",
       "publishedAt": "2026-07-28T15:00:51.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造"
@@ -288,10 +324,10 @@
       "sourceHomepage": "https://blogs.nvidia.com/",
       "sourcePriority": 86,
       "title": "Powerful Compute So Compact, It’s Clutch — Build AI Anywhere With NVIDIA Jetson",
-      "titleZh": "NVIDIA Jetson：强大算力与便携性的边缘AI平台",
+      "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/build-ai-with-nvidia-jetson/",
       "publishedAt": "2026-07-28T15:00:19.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -334,7 +370,10 @@
           "Jetson AGX Thor的详细规格和发布时间未明确",
           "实际应用效果和市场接受度需进一步观察"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "stale": true,
+        "lastAttemptAt": "2026-07-31T05:48:42.691Z",
+        "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
       }
     },
     {
@@ -348,7 +387,7 @@
       "titleZh": null,
       "url": "https://www.bis.org/publ/bisbull130.htm",
       "publishedAt": "2026-07-28T09:52:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "企业应用与生产力"
       ],
@@ -392,10 +431,10 @@
       "sourceHomepage": "https://blogs.microsoft.com/",
       "sourcePriority": 84,
       "title": "Rethinking security for the age of AI",
-      "titleZh": "微软推出面向AI时代的新型安全体系Project Perception",
+      "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/",
       "publishedAt": "2026-07-27T16:30:09.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "资本市场与金融稳定"
       ],
@@ -447,7 +486,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-july-27-2026/",
       "publishedAt": "2026-07-27T14:54:41.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "半导体制造",
         "数据中心与电力",
@@ -501,10 +540,10 @@
       "sourceHomepage": "https://blogs.nvidia.com/",
       "sourcePriority": 86,
       "title": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
-      "titleZh": "行业领袖联合成立开放安全AI联盟，推动AI安全与防护",
+      "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
       "publishedAt": "2026-07-27T09:00:07.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台",
         "资本市场与金融稳定",
@@ -515,6 +554,7 @@
         "microsoft",
         "synopsys",
         "cadence",
+        "broadcom",
         "palantir",
         "salesforce",
         "servicenow",
@@ -553,7 +593,10 @@
           "联盟成员间合作的具体实施细节和进展情况未详述",
           "政策制定者对开放AI系统的态度和监管措施存在不确定性"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "stale": true,
+        "lastAttemptAt": "2026-07-31T05:48:47.784Z",
+        "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
       }
     },
     {
@@ -567,7 +610,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/vera-cpu-eda/",
       "publishedAt": "2026-07-27T00:45:42.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -626,7 +669,7 @@
       "titleZh": null,
       "url": "https://newsroom.intel.com/new-technologies/intel-and-lens-technology-collaborate-to-enable-advanced-semiconductor-packaging-for-the-ai-era",
       "publishedAt": "2026-07-24T16:46:59.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片"
       ],
@@ -675,7 +718,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/ai-summit-korea-partners-and-nvidia/",
       "publishedAt": "2026-07-24T04:34:27.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力",
@@ -735,7 +778,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/naval-postgraduate-school-dgx-ai-supercomputer/",
       "publishedAt": "2026-07-23T02:00:46.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "数据中心与电力",
         "模型与平台"
@@ -791,7 +834,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/medical-physics-simulation-open-source/",
       "publishedAt": "2026-07-22T13:00:11.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -846,7 +889,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/07/22/powering-americas-genesis-mission-microsofts-commitment-to-scientific-discovery/",
       "publishedAt": "2026-07-22T12:00:06.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "半导体制造",
         "模型与平台",
@@ -903,7 +946,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/wistron-manufacturing-texas/",
       "publishedAt": "2026-07-21T22:35:45.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力",
@@ -945,7 +988,10 @@
           "未来工厂扩展计划和投资规模可能调整",
           "数字孪生技术实际应用效果和效率提升幅度未量化"
         ],
-        "confidence": "high"
+        "confidence": "high",
+        "stale": true,
+        "lastAttemptAt": "2026-07-31T05:48:52.891Z",
+        "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
       }
     },
     {
@@ -959,7 +1005,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/vera-rubin/",
       "publishedAt": "2026-07-21T15:36:43.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -1022,7 +1068,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/nvidia-spectrum-six-arrives-in-gigascale-ai-factories/",
       "publishedAt": "2026-07-21T15:00:20.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -1080,7 +1126,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/siggraph-news-2026/",
       "publishedAt": "2026-07-20T15:00:53.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -1140,7 +1186,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
       "publishedAt": "2026-07-20T13:00:02.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力",
@@ -1199,7 +1245,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/bristol-myers-squibb-building-life-science-industrys-most-advanced-ai-factory-on-nvidia-vera-rubin/",
       "publishedAt": "2026-07-20T10:59:23.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片"
       ],
@@ -1252,7 +1298,7 @@
       "titleZh": null,
       "url": "https://www.bis.org/publ/bisbull129.htm",
       "publishedAt": "2026-07-20T06:49:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台"
       ],
@@ -1298,7 +1344,7 @@
       "titleZh": null,
       "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
       "publishedAt": "2026-07-17T18:30:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台",
         "企业应用与生产力"
@@ -1346,7 +1392,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/nvidia-vera-rubin-post-training-intelligence-per-dollar/",
       "publishedAt": "2026-07-17T15:00:14.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -1401,7 +1447,7 @@
       "titleZh": null,
       "url": "https://newsroom.intel.com/artificial-intelligence/intel-google-cloud-announce-collaboration-to-accelerate-intel-ai-enabled-enterprise-transformation",
       "publishedAt": "2026-07-16T16:00:53.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台",
         "企业应用与生产力"
@@ -1451,7 +1497,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/",
       "publishedAt": "2026-07-15T23:00:54.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -1508,7 +1554,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/japan-ecosystem-2026/",
       "publishedAt": "2026-07-15T10:51:37.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -1556,63 +1602,6 @@
       }
     },
     {
-      "id": "nvidia-blog-9d5925e11f31",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "Nemotron Labs: How Open Models Give Enterprises and Nations AI They Can Trust, Control and Customize",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/nemotron-open-models-ai-trust-control-customize/",
-      "publishedAt": "2026-07-14T16:45:13.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
-      "topics": [
-        "AI 算力与芯片",
-        "模型与平台",
-        "企业应用与生产力",
-        "资本市场与金融稳定"
-      ],
-      "relatedCompanies": [
-        "nvidia"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "models-platforms"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "Editor’s note: This post is part of the Nemotron Labs blog series, which explores how the latest open models, datasets and training techniques help businesses build specialized AI systems and applications on NVIDIA platforms. Each post highlights practical ways to use an open stack to deliver real value in production — from transparent research copilots to scalable AI agents. Enterprises have plenty of powerful model",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "ok",
-        "inputHash": "0cf20d46525bf3ee5038942fb4fea9253e809c8837ce99c69d8a7196139e750c",
-        "generatedAt": "2026-07-28T05:30:27.610Z",
-        "model": "openai/gpt-4.1-mini",
-        "promptVersion": "authority-news-synthesis-v1",
-        "basis": "official-feed-excerpt",
-        "titleZh": "Nemotron Labs：开放模型如何赋能企业和国家构建可信、可控且可定制的AI",
-        "summary": "NVIDIA Nemotron开放模型支持企业和国家基于开放架构构建专属AI系统，强调模型的可定制性、透明度和业务适配性。开放模型允许企业完全掌控模型，针对特定业务需求进行调优和评估，提升准确性和信任度，尤其适用于医疗、法律等对准确性要求高的行业。Nemotron生态系统促进模型开发者和企业协作，通过共享数据和评估推动模型持续优化。定制化环境和NVIDIA NeMo工具套件加速模型微调和推理成本优化，显著降低运行费用，支持大规模部署和快速迭代。",
-        "whyItMatters": "开放模型打破封闭模型的控制限制，使企业能够根据自身业务需求定制和优化AI，提升AI应用的准确性和可信度，降低运行成本，推动AI从简单采用向自主拥有转变，促进AI技术在关键行业的安全合规应用和广泛落地。",
-        "valueChainImpact": [
-          "设计阶段：开放模型促进模型架构和训练方法的创新与定制",
-          "内存与包装：优化推理效率，降低硬件资源消耗",
-          "AI基础设施：支持定制化训练和推理环境，提升算力利用率",
-          "模型与平台：推动开放模型生态建设，促进模型共享与协同优化"
-        ],
-        "uncertainties": [
-          "具体开放模型Nemotron的技术细节和性能指标未完全披露",
-          "开放模型与封闭模型在不同应用场景下的综合表现差异尚需更多实证数据",
-          "生态系统的规模和参与度对模型持续优化的影响程度尚不明确"
-        ],
-        "confidence": "high"
-      }
-    },
-    {
       "id": "federal-reserve-notes-e16019c2b761",
       "sourceId": "federal-reserve-notes",
       "sourceName": "美国联邦储备委员会 FEDS Notes",
@@ -1623,7 +1612,7 @@
       "titleZh": null,
       "url": "https://www.federalreserve.gov/econres/notes/feds-notes/technology-shocks-the-ai-boomandthe-u-s-current-account-20260714.html",
       "publishedAt": "2026-07-14T14:05:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台"
       ],
@@ -1667,7 +1656,7 @@
       "titleZh": null,
       "url": "https://www.bis.org/publ/work1367.htm",
       "publishedAt": "2026-07-14T09:32:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "资本市场与金融稳定"
       ],
@@ -1715,7 +1704,7 @@
       "titleZh": "AI 冲击下的私募信贷：BDC 对软件公司的风险暴露",
       "url": "https://www.bis.org/publ/bisbull128.htm",
       "publishedAt": "2026-07-14T00:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "资本市场与金融稳定",
         "企业应用与生产力"
@@ -1764,7 +1753,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/",
       "publishedAt": "2026-07-13T16:18:20.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -1822,7 +1811,7 @@
       "titleZh": null,
       "url": "https://www.federalreserve.gov/econres/feds/capturing-heterogeneity-machine-learning-approaches-to-implied-volatility-forecasting.htm",
       "publishedAt": "2026-07-07T13:15:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台"
       ],
@@ -1867,7 +1856,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/",
       "publishedAt": "2026-07-06T15:46:43.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -1922,7 +1911,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/",
       "publishedAt": "2026-07-02T12:59:05.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台"
       ],
@@ -1973,7 +1962,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/amazon-ec2-c9g-and-c9gd-instances-powered-by-aws-graviton5-processors-are-now-available/",
       "publishedAt": "2026-06-30T20:56:44.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力",
@@ -2029,7 +2018,7 @@
       "titleZh": "Blackstone 2026 年中展望：AI 基建资本周期",
       "url": "https://www.blackstone.com/insights/article/2026-mid-year-investment-perspectives/",
       "publishedAt": "2026-06-30T00:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "数据中心与电力",
         "AI 算力与芯片",
@@ -2082,7 +2071,7 @@
       "titleZh": "BIS 年度经济报告：AI 乐观情绪、投资与下行风险",
       "url": "https://www.bis.org/publ/arpdf/ar2026e1.htm",
       "publishedAt": "2026-06-28T00:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "资本市场与金融稳定",
         "企业应用与生产力"
@@ -2132,7 +2121,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/06/24/inside-microsofts-two-decade-push-to-cut-water-intensity-while-scaling-for-growth/",
       "publishedAt": "2026-06-24T12:01:13.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力"
@@ -2187,7 +2176,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/",
       "publishedAt": "2026-06-22T14:46:17.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -2244,7 +2233,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/06/22/powering-the-next-wave-of-ai-expanding-capacity-with-our-new-datacenter-in-pecos/",
       "publishedAt": "2026-06-22T12:06:39.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "数据中心与电力",
         "企业应用与生产力"
@@ -2298,7 +2287,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/",
       "publishedAt": "2026-06-18T21:22:10.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力",
@@ -2355,7 +2344,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/top-announcements-of-the-aws-summit-in-new-york-2026/",
       "publishedAt": "2026-06-17T16:36:08.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -2411,7 +2400,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-managed-knowledge-base-for-faster-more-accurate-enterprise-ai-applications/",
       "publishedAt": "2026-06-17T15:09:20.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台",
         "资本市场与金融稳定"
@@ -2465,7 +2454,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/announcing-web-search-on-amazon-bedrock-agentcore-ground-your-ai-agents-in-current-accurate-web-knowledge/",
       "publishedAt": "2026-06-17T15:00:11.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台"
       ],
@@ -2515,7 +2504,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/proactively-reduce-tech-debt-autonomously-with-aws-transform-continuous-modernization-preview/",
       "publishedAt": "2026-06-17T14:58:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "数据中心与电力"
       ],
@@ -2567,7 +2556,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/06/16/achieving-success-with-ai/",
       "publishedAt": "2026-06-16T15:00:02.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "半导体制造",
         "企业应用与生产力"
@@ -2622,7 +2611,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update",
       "publishedAt": "2026-06-09T12:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台"
       ],
@@ -2667,7 +2656,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/06/new-ai-model-shows-how-evacuate-fires-one-safe-step-time",
       "publishedAt": "2026-06-04T12:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台"
       ],
@@ -2711,7 +2700,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/05/nist-expands-ai-consortiums-scope-calls-new-members",
       "publishedAt": "2026-05-29T12:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "资本市场与金融稳定"
       ],
@@ -2757,7 +2746,7 @@
       "titleZh": "AI 时代的金融稳定：算法架构为何会改变风险形态",
       "url": "https://www.ecb.europa.eu/press/research-publications/resbull/2026/html/ecb.rb260521~4d8b12940b.en.html",
       "publishedAt": "2026-05-21T00:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "资本市场与金融稳定",
         "模型与平台"
@@ -2807,7 +2796,7 @@
       "titleZh": "IEA：数据中心用电激增，电力瓶颈正在成为 AI 扩张约束",
       "url": "https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions",
       "publishedAt": "2026-04-16T00:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "数据中心与电力",
         "AI 算力与芯片"
@@ -2858,7 +2847,7 @@
       "titleZh": "IMF 情景研究：AI 的全球经济与金融影响",
       "url": "https://www.imf.org/en/publications/imf-notes/issues/2026/04/03/global-economic-and-financial-implications-of-artificial-intelligence-lessons-from-a-574924",
       "publishedAt": "2026-04-03T00:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "企业应用与生产力",
         "资本市场与金融稳定",
@@ -2909,7 +2898,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/03/nist-researchers-develop-photonic-chip-packaging-can-withstand-extreme",
       "publishedAt": "2026-03-30T12:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片"
       ],
@@ -2960,7 +2949,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure",
       "publishedAt": "2026-02-17T12:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台"
       ],
@@ -3006,7 +2995,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/02/nist-allocates-over-3-million-small-businesses-advancing-ai-biotechnology",
       "publishedAt": "2026-02-10T12:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "AI 算力与芯片"
       ],
@@ -3057,7 +3046,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/01/caisi-issues-request-information-about-securing-ai-agent-systems",
       "publishedAt": "2026-01-12T12:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台"
       ],
@@ -3103,7 +3092,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2025/12/nist-launches-centers-ai-manufacturing-and-critical-infrastructure",
       "publishedAt": "2025-12-22T12:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台"
       ],
@@ -3147,7 +3136,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2025/12/draft-nist-guidelines-rethink-cybersecurity-ai-era",
       "publishedAt": "2025-12-16T12:00:00.000Z",
-      "discoveredAt": "2026-07-30T05:23:19.333Z",
+      "discoveredAt": "2026-07-31T05:48:31.461Z",
       "topics": [
         "模型与平台"
       ],

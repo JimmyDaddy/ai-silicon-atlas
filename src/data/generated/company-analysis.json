@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-30T05:21:56.164Z",
+  "generatedAt": "2026-07-31T05:48:18.032Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -1370,7 +1370,10 @@
         "公司2026年业绩能否延续增长势头？",
         "封装业务扩张对供应链及客户结构有何影响？"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "stale": true,
+      "lastAttemptAt": "2026-07-31T05:48:22.104Z",
+      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "amkor": {
       "status": "ok",
@@ -2232,7 +2235,10 @@
         "是否有新的战略调整或风险提示？",
         "对AI与半导体产业链有何影响？"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "stale": true,
+      "lastAttemptAt": "2026-07-31T05:48:26.451Z",
+      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "meta-platforms": {
       "status": "ok",
@@ -2340,7 +2346,10 @@
         "现金流下降是否影响公司运营或投资计划？",
         "近期8-K报告是否披露重要战略调整或风险事项？"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "stale": true,
+      "lastAttemptAt": "2026-07-31T05:48:30.800Z",
+      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "palantir": {
       "status": "ok",

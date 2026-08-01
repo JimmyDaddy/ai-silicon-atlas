@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-31T05:48:31.461Z",
+  "generatedAt": "2026-08-01T05:39:11.980Z",
   "overall": "degraded",
   "schedule": {
     "cadence": "daily",
@@ -10,7 +10,7 @@
   },
   "freshness": {
     "secEdgar": {
-      "lastSuccessfulAt": "2026-07-31T05:48:17.870Z",
+      "lastSuccessfulAt": "2026-08-01T05:38:58.440Z",
       "ageHours": 0.01,
       "warningAfterHours": 36,
       "criticalAfterHours": 72
@@ -38,8 +38,8 @@
   },
   "intelligence": {
     "total": 58,
-    "completed": 57,
-    "pending": 1,
+    "completed": 55,
+    "pending": 3,
     "independent": 21,
     "companyViewpoint": 37,
     "independentShare": 0.3621,
@@ -51,7 +51,7 @@
     "secEdgar": {
       "provider": "SEC EDGAR",
       "status": "ok",
-      "completedAt": "2026-07-31T05:48:17.870Z",
+      "completedAt": "2026-08-01T05:38:58.440Z",
       "companyCount": 25,
       "completedCount": 25,
       "failedCount": 0,
@@ -62,7 +62,7 @@
     "openDart": {
       "provider": "OpenDART",
       "status": "ok",
-      "completedAt": "2026-07-31T05:46:39.578Z",
+      "completedAt": "2026-08-01T05:37:34.398Z",
       "companyCount": 2,
       "completedCount": null,
       "failedCount": null,
@@ -73,7 +73,7 @@
     "manual": {
       "provider": "First-party IR",
       "status": "manual",
-      "completedAt": "2026-07-31T05:46:38.005Z",
+      "completedAt": "2026-08-01T05:37:32.771Z",
       "companyCount": 4,
       "completedCount": null,
       "failedCount": null,
@@ -86,7 +86,7 @@
     {
       "severity": "warning",
       "code": "news-analysis-backlog",
-      "title": "1 篇情报等待 AI 处理",
+      "title": "3 篇情报等待 AI 处理",
       "detail": "后续批次会继续处理，页面暂时使用来源摘要或编辑要点。"
     },
     {

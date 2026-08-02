@@ -1,136 +1,32 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-01T05:39:11.980Z",
+  "generatedAt": "2026-08-02T05:39:37.339Z",
   "period": {
-    "from": "2026-07-31T05:48:31.461Z",
-    "to": "2026-08-01T05:39:11.980Z",
+    "from": "2026-08-01T05:39:11.980Z",
+    "to": "2026-08-02T05:39:37.339Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
-    "metricChanges": 4,
+    "newFilings": 0,
+    "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 2,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 7
+    "totalChanges": 0
   },
   "affected": {
-    "stages": {
-      "models-platforms": 6,
-      "ai-applications": 1
-    },
-    "topics": {
-      "模型与平台": 1,
-      "资本市场与金融稳定": 1
-    }
+    "stages": {},
+    "topics": {}
   },
   "companies": {
-    "filings": [
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "form": "10-Q",
-        "filedAt": "2026-07-31",
-        "reportDate": "2026-06-30",
-        "accessionNumber": "0001018724-26-000026",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
-      }
-    ],
-    "metrics": [
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "metric": "revenue",
-        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 200606000000,
-        "previousValue": 181519000000,
-        "changePercent": 10.52,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 62647000000,
-        "previousValue": 30255000000,
-        "changePercent": 107.06,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 1095689000000,
-        "previousValue": 916630000000,
-        "changePercent": 19.53,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 78213000000,
-        "previousValue": 101816000000,
-        "changePercent": -23.18,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      }
-    ],
+    "filings": [],
+    "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "bis-71854132a033",
-        "publishedAt": "2026-07-31T09:01:00.000Z",
-        "source": "国际清算银行（BIS）",
-        "sourceType": "国际机构",
-        "title": "Michael S Barr: Will artificial intelligence broadly raise living standards or drive income and wealth inequality?",
-        "summary": "Speech by Mr Michael S Barr, Member of the Board of Governors of the Federal Reserve System, at \"Next-gen financial inclusion\", the third annual Financial Inclusion Conference hosted by the Federal Reserve Board, Washington DC, 14 July 2026.",
-        "topics": [
-          "模型与平台"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "analysisStatus": "error",
-        "sourceUrl": "https://www.bis.org/review/r260730n.htm"
-      },
-      {
-        "id": "bis-c443b13d8b64",
-        "publishedAt": "2026-07-31T08:47:00.000Z",
-        "source": "国际清算银行（BIS）",
-        "sourceType": "国际机构",
-        "title": "Darryl Chan: Opening remarks - Joint Workshop \"Global interconnections and financial stability\"",
-        "summary": "Opening remarks by Mr Darryl Chan, Deputy Chief Executive of the Hong Kong Monetary Authority, at the Hong Kong Institute for Monetary and Financial Research (HKIMR) – Bank for International Settlements (BIS) – International Monetary Fund (IMF) Joint Workshop \"Global interconnections and financial stability\", Hong Kong, 13 July 2026.",
-        "topics": [
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "models-platforms",
-          "ai-applications"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://www.bis.org/review/r260730k.htm"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

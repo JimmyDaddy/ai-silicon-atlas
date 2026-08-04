@@ -1,32 +1,81 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-03T05:55:15.795Z",
+  "generatedAt": "2026-08-04T05:28:44.173Z",
   "period": {
-    "from": "2026-08-02T05:39:37.339Z",
-    "to": "2026-08-03T05:55:15.795Z",
+    "from": "2026-08-03T05:55:15.795Z",
+    "to": "2026-08-04T05:28:44.173Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 2,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 0
+    "totalChanges": 3
   },
   "affected": {
-    "stages": {},
-    "topics": {}
+    "stages": {
+      "packaging": 1,
+      "ai-applications": 1,
+      "ai-infrastructure": 1,
+      "models-platforms": 1
+    },
+    "topics": {
+      "数据中心与电力": 1
+    }
   },
   "companies": {
-    "filings": [],
+    "filings": [
+      {
+        "company": "ase-technology",
+        "stage": "packaging",
+        "form": "6-K",
+        "filedAt": "2026-08-03",
+        "reportDate": "2026-08-03",
+        "accessionNumber": "0001193125-26-330709",
+        "title": "FORM 6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1122411/000119312526330709/d77314d6k.htm"
+      },
+      {
+        "company": "palantir",
+        "stage": "ai-applications",
+        "form": "8-K",
+        "filedAt": "2026-08-03",
+        "reportDate": "2026-08-03",
+        "accessionNumber": "0001321655-26-000039",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/pltr-20260803.htm"
+      }
+    ],
     "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [],
+    "new": [
+      {
+        "id": "aws-blog-b1645579b8ca",
+        "publishedAt": "2026-08-03T16:12:30.000Z",
+        "source": "AWS 官方博客",
+        "sourceType": "公司观点",
+        "title": "AWS Weekly Roundup: Price reduction of GPT models in Bedrock, CloudWatch managed collectors for Prometheus metrics, and more (August 3, 2026)",
+        "summary": "Last week I had the joy of participating in Amazon’s “Bring Your Kids to Work Day” with my 7 year old son. We commuted together into the New York City office, his first real rush hour train ride, and spent the day exploring how Amazon uses AI, machine learning, and robotics to deliver packages to customers all over the world. Watching his eyes light up as he saw robots navigating a fulfillment center reminded me why ",
+        "topics": [
+          "数据中心与电力"
+        ],
+        "relatedCompanies": [
+          "amazon"
+        ],
+        "relatedStages": [
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-price-reduction-of-gpt-models-in-bedrock-cloudwatch-managed-collectors-for-prometheus-metrics-and-more-august-3-2026/"
+      }
+    ],
     "analysisRefreshed": []
   }
 }

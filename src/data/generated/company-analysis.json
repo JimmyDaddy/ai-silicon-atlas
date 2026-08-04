@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-03T05:55:03.107Z",
+  "generatedAt": "2026-08-04T05:28:26.993Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -1372,7 +1372,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-03T05:55:10.987Z",
+      "lastAttemptAt": "2026-08-04T05:28:30.847Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "amkor": {
@@ -2237,7 +2237,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-03T05:55:06.833Z",
+      "lastAttemptAt": "2026-08-04T05:28:39.316Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "meta-platforms": {
@@ -2348,7 +2348,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-08-03T05:55:15.139Z",
+      "lastAttemptAt": "2026-08-04T05:28:43.511Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "palantir": {
@@ -2457,7 +2457,10 @@
         "业绩增长是否可持续，驱动因素是什么？",
         "AI应用市场变化对公司未来影响如何？"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "stale": true,
+      "lastAttemptAt": "2026-08-04T05:28:35.048Z",
+      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "adobe": {
       "status": "ok",

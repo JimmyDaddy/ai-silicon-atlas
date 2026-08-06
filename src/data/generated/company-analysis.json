@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-05T05:27:54.456Z",
+  "generatedAt": "2026-08-06T05:30:38.151Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -601,7 +601,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-05T05:27:58.444Z",
+      "lastAttemptAt": "2026-08-06T05:30:42.087Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "broadcom": {
@@ -1375,7 +1375,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-05T05:28:11.372Z",
+      "lastAttemptAt": "2026-08-06T05:31:02.859Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "amkor": {
@@ -1601,7 +1601,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-05T05:28:02.757Z",
+      "lastAttemptAt": "2026-08-06T05:30:46.243Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "vertiv": {
@@ -1821,7 +1821,10 @@
         "资本支出增加是否带来产能扩张或新产品推出？",
         "近期8-K公告正文内容是否披露了重要业务变动或风险事项？"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "stale": true,
+      "lastAttemptAt": "2026-08-06T05:30:50.395Z",
+      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "equinix": {
       "status": "ok",
@@ -2243,7 +2246,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-05T05:28:15.664Z",
+      "lastAttemptAt": "2026-08-06T05:31:07.013Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "meta-platforms": {
@@ -2354,7 +2357,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-08-05T05:28:19.971Z",
+      "lastAttemptAt": "2026-08-06T05:31:11.174Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "palantir": {
@@ -2465,7 +2468,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-05T05:28:07.056Z",
+      "lastAttemptAt": "2026-08-06T05:30:58.700Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "adobe": {
@@ -2692,7 +2695,10 @@
         "资产下降是否与资产处置、减值或其他财务调整有关？",
         "资本支出减少是否影响未来产品创新和市场扩展？"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "stale": true,
+      "lastAttemptAt": "2026-08-06T05:30:54.545Z",
+      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "servicenow": {
       "status": "ok",

@@ -1,204 +1,126 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-06T05:31:11.835Z",
+  "generatedAt": "2026-08-07T04:35:33.123Z",
   "period": {
-    "from": "2026-08-05T05:28:20.617Z",
-    "to": "2026-08-06T05:31:11.835Z",
+    "from": "2026-08-06T05:31:11.835Z",
+    "to": "2026-08-07T04:35:33.123Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 4,
-    "metricChanges": 10,
+    "newFilings": 2,
+    "metricChanges": 5,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 3,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 15
+    "totalChanges": 10
   },
   "affected": {
     "stages": {
-      "design": 6,
-      "ai-infrastructure": 7,
-      "ai-applications": 1,
-      "models-platforms": 1
+      "ai-infrastructure": 4,
+      "equipment-materials": 6,
+      "design": 3,
+      "memory": 3,
+      "packaging": 3,
+      "models-platforms": 2,
+      "ai-applications": 1
     },
     "topics": {
-      "模型与平台": 1
+      "AI 算力与芯片": 3,
+      "数据中心与电力": 1,
+      "模型与平台": 2,
+      "企业应用与生产力": 2,
+      "资本市场与金融稳定": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "amd",
-        "stage": "design",
-        "form": "10-Q",
-        "filedAt": "2026-08-05",
-        "reportDate": "2026-06-27",
-        "accessionNumber": "0000002488-26-000123",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm"
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "form": "10-Q",
-        "filedAt": "2026-08-05",
-        "reportDate": "2026-06-30",
-        "accessionNumber": "0001596532-26-000175",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000175/anet-20260630.htm"
-      },
-      {
-        "company": "salesforce",
-        "stage": "ai-applications",
-        "form": "8-K",
-        "filedAt": "2026-08-05",
-        "reportDate": "2026-08-05",
-        "accessionNumber": "0001108524-26-000160",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000160/crm-20260805.htm"
-      },
-      {
-        "company": "supermicro",
+        "company": "equinix",
         "stage": "ai-infrastructure",
         "form": "8-K",
-        "filedAt": "2026-08-05",
-        "reportDate": "2026-08-05",
-        "accessionNumber": "0001375365-26-000020",
+        "filedAt": "2026-08-06",
+        "reportDate": "2026-08-06",
+        "accessionNumber": "0001104659-26-092009",
+        "title": "FORM 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110465926092009/tm2622384d1_8k.htm"
+      },
+      {
+        "company": "kla",
+        "stage": "equipment-materials",
+        "form": "8-K",
+        "filedAt": "2026-08-06",
+        "reportDate": "2026-08-06",
+        "accessionNumber": "0001193125-26-338242",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000020/smci-20260805.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/319201/000119312526338242/d165938d8k.htm"
       }
     ],
     "metrics": [
       {
-        "company": "amd",
-        "stage": "design",
+        "company": "kla",
+        "stage": "equipment-materials",
         "metric": "revenue",
         "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 11536000000,
-        "previousValue": 10253000000,
-        "changePercent": 12.51,
+        "value": 13579476000,
+        "previousValue": 3415078000,
+        "changePercent": 297.63,
         "unit": "USD",
-        "periodEnd": "2026-06-27",
-        "previousPeriodEnd": "2026-03-28",
-        "sourceForm": "10-Q"
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-K"
       },
       {
-        "company": "amd",
-        "stage": "design",
+        "company": "kla",
+        "stage": "equipment-materials",
         "metric": "netIncome",
         "label": "Net Income (Loss) Attributable to Parent",
-        "value": 2297000000,
-        "previousValue": 1383000000,
-        "changePercent": 66.09,
+        "value": 4830771000,
+        "previousValue": 1200990000,
+        "changePercent": 302.23,
         "unit": "USD",
-        "periodEnd": "2026-06-27",
-        "previousPeriodEnd": "2026-03-28",
-        "sourceForm": "10-Q"
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-K"
       },
       {
-        "company": "amd",
-        "stage": "design",
+        "company": "kla",
+        "stage": "equipment-materials",
         "metric": "assets",
         "label": "Assets",
-        "value": 84464000000,
-        "previousValue": 79642000000,
-        "changePercent": 6.05,
+        "value": 17951535000,
+        "previousValue": 16873515000,
+        "changePercent": 6.39,
         "unit": "USD",
-        "periodEnd": "2026-06-27",
-        "previousPeriodEnd": "2026-03-28",
-        "sourceForm": "10-Q"
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-K"
       },
       {
-        "company": "amd",
-        "stage": "design",
+        "company": "kla",
+        "stage": "equipment-materials",
         "metric": "cash",
         "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 5086000000,
-        "previousValue": 5585000000,
-        "changePercent": -8.93,
+        "value": 1649842000,
+        "previousValue": 1787010000,
+        "changePercent": -7.68,
         "unit": "USD",
-        "periodEnd": "2026-06-27",
-        "previousPeriodEnd": "2026-03-28",
-        "sourceForm": "10-Q"
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-K"
       },
       {
-        "company": "amd",
-        "stage": "design",
+        "company": "kla",
+        "stage": "equipment-materials",
         "metric": "capex",
         "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 1197000000,
-        "previousValue": 389000000,
-        "changePercent": 207.71,
-        "unit": "USD",
-        "periodEnd": "2026-06-27",
-        "previousPeriodEnd": "2026-03-28",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "metric": "revenue",
-        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 3035700000,
-        "previousValue": 2709000000,
-        "changePercent": 12.06,
+        "value": 375945000,
+        "previousValue": 286657000,
+        "changePercent": 31.15,
         "unit": "USD",
         "periodEnd": "2026-06-30",
         "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 1212900000,
-        "previousValue": 1022900000,
-        "changePercent": 18.57,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 23720100000,
-        "previousValue": 21656500000,
-        "changePercent": 9.53,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 2290200000,
-        "previousValue": 2789500000,
-        "changePercent": -17.9,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "metric": "capex",
-        "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 84200000,
-        "previousValue": 54500000,
-        "changePercent": 54.5,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-Q"
+        "sourceForm": "10-K"
       }
     ],
     "statuses": [],
@@ -207,23 +129,78 @@
   "intelligence": {
     "new": [
       {
-        "id": "aws-blog-d2c58e81d3fe",
-        "publishedAt": "2026-08-05T14:45:10.000Z",
+        "id": "aws-blog-31deb7baaf80",
+        "publishedAt": "2026-08-06T22:58:00.000Z",
         "source": "AWS 官方博客",
         "sourceType": "公司观点",
-        "title": "Amazon DynamoDB now supports real-time vector search at any scale",
-        "summary": "Today, we’re announcing the general availability of vector search in Amazon DynamoDB . You can now store vector embeddings alongside your operational data in DynamoDB and run similarity searches directly against that data, without replicating it to a separate vector store. DynamoDB supports native vector search with single-digit millisecond latency at 99%+ recall, and is designed for any scale, even trillions of vect",
+        "title": "Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore",
+        "summary": "When you move AI agents from prototype to production, the infrastructure challenges multiply. Your agents need to persist state across multi-step workflows that run for hours or days. They need to coordinate with other agents, share context, and sometimes access GPUs for specialized tasks. Amazon Bedrock AgentCore runtime microVMs provide a fully managed environment for invocations that can run for up to 8 hours and ",
         "topics": [
-          "模型与平台"
+          "AI 算力与芯片",
+          "数据中心与电力",
+          "模型与平台",
+          "企业应用与生产力"
         ],
         "relatedCompanies": [
           "amazon"
         ],
         "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
           "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://aws.amazon.com/blogs/aws/amazon-dynamodb-now-supports-real-time-vector-search-at-any-scale/"
+        "sourceUrl": "https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/"
+      },
+      {
+        "id": "intel-newsroom-2d6a7add68ab",
+        "publishedAt": "2026-08-06T19:30:25.000Z",
+        "source": "Intel Newsroom",
+        "sourceType": "公司观点",
+        "title": "Creating Pathways to Semiconductor Careers: Intel Launches SEPP",
+        "summary": "As the semiconductor industry continues to drive innovation across nearly every aspect of modern life, Intel is investing in the next generation of talent through the launch of the Semiconductor Education Pathways Program (SEPP) — a comprehensive workforce development initiative designed to strengthen education pathways from K-12 through post-secondary education and into semiconductor careers.SEPP is … The post Creat",
+        "topics": [
+          "AI 算力与芯片",
+          "企业应用与生产力"
+        ],
+        "relatedCompanies": [],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "ai-applications"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://newsroom.intel.com/corporate/creating-pathways-to-semiconductor-careers-intel-launches-sepp"
+      },
+      {
+        "id": "nvidia-blog-56145e6440ad",
+        "publishedAt": "2026-08-06T13:00:00.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "Into the Omniverse: How Open World Models Push the Frontier of Physical AI",
+        "summary": "Editor’s note: This post is part of Into the Omniverse , a series focused on how developers, 3D practitioners and enterprises can transform their workflows using the latest advancements in OpenUSD and NVIDIA Omniverse . In July, NVIDIA joined more than 200 companies and organizations in signing “ Open Weights and American AI Leadership ,” an open letter arguing that AI leadership will be measured not by any single fr",
+        "topics": [
+          "AI 算力与芯片",
+          "模型与平台",
+          "资本市场与金融稳定"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "samsung-electronics"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/open-world-models-physical-ai/"
       }
     ],
     "analysisRefreshed": []

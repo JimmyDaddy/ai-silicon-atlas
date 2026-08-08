@@ -1,206 +1,85 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-07T04:35:33.123Z",
+  "generatedAt": "2026-08-08T03:47:46.871Z",
   "period": {
-    "from": "2026-08-06T05:31:11.835Z",
-    "to": "2026-08-07T04:35:33.123Z",
+    "from": "2026-08-07T04:35:33.123Z",
+    "to": "2026-08-08T03:47:46.871Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 2,
-    "metricChanges": 5,
+    "newFilings": 1,
+    "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 3,
+    "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 10
+    "totalChanges": 3
   },
   "affected": {
     "stages": {
-      "ai-infrastructure": 4,
-      "equipment-materials": 6,
-      "design": 3,
-      "memory": 3,
-      "packaging": 3,
-      "models-platforms": 2,
+      "equipment-materials": 1,
+      "ai-infrastructure": 1,
+      "models-platforms": 1,
       "ai-applications": 1
     },
     "topics": {
-      "AI 算力与芯片": 3,
       "数据中心与电力": 1,
-      "模型与平台": 2,
-      "企业应用与生产力": 2,
       "资本市场与金融稳定": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "equinix",
-        "stage": "ai-infrastructure",
-        "form": "8-K",
-        "filedAt": "2026-08-06",
-        "reportDate": "2026-08-06",
-        "accessionNumber": "0001104659-26-092009",
-        "title": "FORM 8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110465926092009/tm2622384d1_8k.htm"
-      },
-      {
         "company": "kla",
         "stage": "equipment-materials",
-        "form": "8-K",
+        "form": "10-K",
         "filedAt": "2026-08-06",
-        "reportDate": "2026-08-06",
-        "accessionNumber": "0001193125-26-338242",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/319201/000119312526338242/d165938d8k.htm"
+        "reportDate": "2026-06-30",
+        "accessionNumber": "0000319201-26-000027",
+        "title": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm"
       }
     ],
-    "metrics": [
-      {
-        "company": "kla",
-        "stage": "equipment-materials",
-        "metric": "revenue",
-        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 13579476000,
-        "previousValue": 3415078000,
-        "changePercent": 297.63,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-K"
-      },
-      {
-        "company": "kla",
-        "stage": "equipment-materials",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 4830771000,
-        "previousValue": 1200990000,
-        "changePercent": 302.23,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-K"
-      },
-      {
-        "company": "kla",
-        "stage": "equipment-materials",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 17951535000,
-        "previousValue": 16873515000,
-        "changePercent": 6.39,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-K"
-      },
-      {
-        "company": "kla",
-        "stage": "equipment-materials",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 1649842000,
-        "previousValue": 1787010000,
-        "changePercent": -7.68,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-K"
-      },
-      {
-        "company": "kla",
-        "stage": "equipment-materials",
-        "metric": "capex",
-        "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 375945000,
-        "previousValue": 286657000,
-        "changePercent": 31.15,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-K"
-      }
-    ],
+    "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
     "new": [
       {
-        "id": "aws-blog-31deb7baaf80",
-        "publishedAt": "2026-08-06T22:58:00.000Z",
-        "source": "AWS 官方博客",
-        "sourceType": "公司观点",
-        "title": "Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore",
-        "summary": "When you move AI agents from prototype to production, the infrastructure challenges multiply. Your agents need to persist state across multi-step workflows that run for hours or days. They need to coordinate with other agents, share context, and sometimes access GPUs for specialized tasks. Amazon Bedrock AgentCore runtime microVMs provide a fully managed environment for invocations that can run for up to 8 hours and ",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "模型与平台",
-          "企业应用与生产力"
-        ],
-        "relatedCompanies": [
-          "amazon"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/"
-      },
-      {
-        "id": "intel-newsroom-2d6a7add68ab",
-        "publishedAt": "2026-08-06T19:30:25.000Z",
+        "id": "intel-newsroom-a1bc4c5695f7",
+        "publishedAt": "2026-08-07T17:30:12.000Z",
         "source": "Intel Newsroom",
         "sourceType": "公司观点",
-        "title": "Creating Pathways to Semiconductor Careers: Intel Launches SEPP",
-        "summary": "As the semiconductor industry continues to drive innovation across nearly every aspect of modern life, Intel is investing in the next generation of talent through the launch of the Semiconductor Education Pathways Program (SEPP) — a comprehensive workforce development initiative designed to strengthen education pathways from K-12 through post-secondary education and into semiconductor careers.SEPP is … The post Creat",
+        "title": "Intel Announces Leadership Appointment to Strengthen Customer Engagement and Accelerate Growth",
+        "summary": "SANTA CLARA, Calif., August 7, 2026 – Intel Corporation today announced the appointment of Dean Jarnac as executive vice president and chief sales officer. Jarnac will lead Intel's global sales organization— strengthening Intel's customer relationships and go-to-market execution across its product portfolio, including client, data center, AI, networking, and ASICs.“Customer focus and execution are central to Intel's ",
         "topics": [
-          "AI 算力与芯片",
-          "企业应用与生产力"
+          "数据中心与电力"
         ],
         "relatedCompanies": [],
         "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
+          "ai-infrastructure"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://newsroom.intel.com/corporate/intel-announces-leadership-appointment-to-strengthen-customer-engagement-and-accelerate-growth"
+      },
+      {
+        "id": "federal-reserve-notes-186965f565fa",
+        "publishedAt": "2026-08-07T16:05:00.000Z",
+        "source": "美国联邦储备委员会 FEDS Notes",
+        "sourceType": "央行研究",
+        "title": "FEDS Note: The Price of Bank Funding Behind Private Credit: Evidence from Business Development Companies",
+        "summary": "Sharjil Haque and Jessie Jiaxu Wang Private credit is often described as credit provided outside the banking system. In many cases, this description is accurate: private credit lenders originate loans directly to firms, hold those loans on their balance sheets, and do not rely on deposits in the way banks do. But private credit is not fully separate from banks.",
+        "topics": [
+          "资本市场与金融稳定"
+        ],
+        "relatedCompanies": [],
+        "relatedStages": [
+          "models-platforms",
           "ai-applications"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://newsroom.intel.com/corporate/creating-pathways-to-semiconductor-careers-intel-launches-sepp"
-      },
-      {
-        "id": "nvidia-blog-56145e6440ad",
-        "publishedAt": "2026-08-06T13:00:00.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Into the Omniverse: How Open World Models Push the Frontier of Physical AI",
-        "summary": "Editor’s note: This post is part of Into the Omniverse , a series focused on how developers, 3D practitioners and enterprises can transform their workflows using the latest advancements in OpenUSD and NVIDIA Omniverse . In July, NVIDIA joined more than 200 companies and organizations in signing “ Open Weights and American AI Leadership ,” an open letter arguing that AI leadership will be measured not by any single fr",
-        "topics": [
-          "AI 算力与芯片",
-          "模型与平台",
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "samsung-electronics"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/open-world-models-physical-ai/"
+        "sourceUrl": "https://www.federalreserve.gov/econres/notes/feds-notes/the-price-of-bank-funding-behind-private-credit-evidence-from-business-development-companies-20260807.html"
       }
     ],
     "analysisRefreshed": []

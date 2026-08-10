@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-09T03:56:22.002Z",
+  "generatedAt": "2026-08-10T04:11:05.225Z",
   "period": {
-    "from": "2026-08-08T03:47:46.871Z",
-    "to": "2026-08-09T03:56:22.002Z",
+    "from": "2026-08-09T03:56:22.002Z",
+    "to": "2026-08-10T04:11:05.225Z",
     "baseRef": "HEAD"
   },
   "summary": {
@@ -11,23 +11,13 @@
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 1
+    "totalChanges": 0
   },
   "affected": {
-    "stages": {
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1,
-      "models-platforms": 1
-    },
-    "topics": {
-      "AI 算力与芯片": 1,
-      "数据中心与电力": 1,
-      "模型与平台": 1
-    }
+    "stages": {},
+    "topics": {}
   },
   "companies": {
     "filings": [],
@@ -36,34 +26,7 @@
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "nvidia-blog-831d74e969cf",
-        "publishedAt": "2026-08-08T10:24:54.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Firebird Launches CIS Region’s Largest AI Factory in Armenia",
-        "summary": "The global buildout of AI infrastructure reached a new milestone today — Firebird, an emerging AI cloud, launched the CIS region’s largest AI factory in Armenia, establishing a new AI computing hub powered by NVIDIA accelerated computing and Dell Technologies high-performance AI infrastructure . Nikol Pashinyan, prime minister of the Republic of Armenia; Zhaslan Madiyev, deputy prime minister of the Republic of Kazak",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "vertiv"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

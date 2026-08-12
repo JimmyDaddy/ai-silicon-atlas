@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T03:57:51.574Z",
+  "generatedAt": "2026-08-12T04:20:38.009Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 20,
+  "completedCount": 19,
   "companies": {
     "synopsys": {
       "status": "ok",
@@ -370,7 +370,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-08-11T03:57:55.588Z",
+      "lastAttemptAt": "2026-08-12T04:20:50.022Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "nvidia": {
@@ -604,7 +604,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-11T03:58:21.542Z",
+      "lastAttemptAt": "2026-08-12T04:21:10.784Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "broadcom": {
@@ -1065,7 +1065,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-11T03:58:12.891Z",
+      "lastAttemptAt": "2026-08-12T04:21:02.446Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "tokyo-electron": {
@@ -1161,7 +1161,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-08-11T03:57:59.911Z",
+      "lastAttemptAt": "2026-08-12T04:20:41.734Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "samsung-electronics": {
@@ -1384,7 +1384,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-11T03:58:04.244Z",
+      "lastAttemptAt": "2026-08-12T04:20:54.160Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "amkor": {
@@ -1500,118 +1500,11 @@
       "reason": "Source status: manual"
     },
     "arista-networks": {
-      "status": "ok",
-      "inputHash": "d5a28c2dfb1db42f65e8bde0b3007489dfe2a976cc737d2c35c686ac4e1fdd25",
-      "generatedAt": "2026-07-20T14:26:48.766Z",
-      "model": "openai/gpt-4.1",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0001596532-26-000118",
-          "label": "8-K · 2026-06-02",
-          "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000118/anet-20260529.htm"
-        },
-        {
-          "id": "filing:0001596532-26-000078",
-          "label": "10-Q · 2026-05-06",
-          "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000078/anet-20260331.htm"
-        },
-        {
-          "id": "filing:0001596532-26-000074",
-          "label": "8-K · 2026-05-05",
-          "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000074/anet-20260505.htm"
-        },
-        {
-          "id": "filing:0001596532-26-000013",
-          "label": "10-K · 2026-02-17",
-          "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001596532.json"
-        }
-      ],
-      "summary": "Arista Networks 2026年Q1财务表现强劲，收入同比增长35.13%，净利润增长25.69%，资产和现金均显著提升，资本开支几乎翻倍。近期有多份8-K和10-Q/10-K文件披露，但当前证据包不含公告正文，无法判断具体运营事件或战略变化。",
-      "summaryEvidence": [
-        "filing:0001596532-26-000078",
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "2026年Q1收入同比增长35.13%，净利润同比增长25.69%。",
-          "evidence": [
-            "filing:0001596532-26-000078",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资产较上一报告期增长11.35%，现金增长42.04%。",
-          "evidence": [
-            "filing:0001596532-26-000078",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资本开支同比增长91.9%。",
-          "evidence": [
-            "filing:0001596532-26-000078",
-            "company-facts"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "公司收入、净利润、资产、现金及资本开支均大幅提升，显示业务扩张和投资力度加大。",
-          "evidence": [
-            "filing:0001596532-26-000078",
-            "company-facts"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "资本开支大幅提升可能带动供应链需求，尤其是AI基础设施相关硬件采购与部署。",
-          "evidence": [
-            "filing:0001596532-26-000078",
-            "company-facts"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "当前证据包不含披露正文，无法判断8-K文件具体内容及其对运营、战略或产业链的影响。",
-          "evidence": [
-            "filing:0001596532-26-000118",
-            "filing:0001596532-26-000074"
-          ]
-        },
-        {
-          "text": "无法确认收入增长是否来自新产品、客户结构变化或市场扩展。",
-          "evidence": [
-            "filing:0001596532-26-000078",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资本开支增长的具体用途和未来持续性不明。",
-          "evidence": [
-            "filing:0001596532-26-000078",
-            "company-facts"
-          ]
-        }
-      ],
-      "questionsToWatch": [
-        "8-K公告正文是否披露重大运营、战略或合作事项？",
-        "收入和利润增长的驱动因素是什么？",
-        "资本开支增长是否与新产品、产能扩展或AI基础设施升级相关？",
-        "未来现金流和资产结构是否持续优化？"
-      ],
-      "confidence": "medium",
-      "stale": true,
-      "lastAttemptAt": "2026-08-11T03:58:25.865Z",
-      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
+      "status": "pending",
+      "inputHash": "564a1480461db85bf8158e0438b3cc94d04d42d716f5bdbf271605eb6bb4550f",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "vertiv": {
       "status": "ok",
@@ -1723,11 +1616,12 @@
       "confidence": "high"
     },
     "supermicro": {
-      "status": "pending",
-      "inputHash": "de9c9f95a6af7b4a44905de05adee723ac282a493863774598b41e165eed0a7d",
+      "status": "error",
+      "inputHash": "baf2cb83e1a10877171e99388b0ce782448c9be8f2508f9a517e9e8fb1506e16",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
+      "lastAttemptAt": "2026-08-12T04:20:45.878Z"
     },
     "equinix": {
       "status": "ok",
@@ -1838,7 +1732,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-11T03:58:17.219Z",
+      "lastAttemptAt": "2026-08-12T04:21:06.595Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "microsoft": {
@@ -2052,7 +1946,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-08-11T03:58:08.569Z",
+      "lastAttemptAt": "2026-08-12T04:20:58.296Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "amazon": {

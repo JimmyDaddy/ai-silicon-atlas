@@ -1,60 +1,37 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T04:21:11.439Z",
+  "generatedAt": "2026-08-13T04:24:04.859Z",
   "period": {
-    "from": "2026-08-11T03:58:26.492Z",
-    "to": "2026-08-12T04:21:11.439Z",
+    "from": "2026-08-12T04:21:11.439Z",
+    "to": "2026-08-13T04:24:04.859Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 2,
+    "newFilings": 1,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 6,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 8
+    "totalChanges": 1
   },
   "affected": {
     "stages": {
-      "ai-infrastructure": 5,
-      "manufacturing": 1,
-      "design": 4,
-      "memory": 4,
-      "packaging": 4,
-      "models-platforms": 4,
-      "ai-applications": 2,
-      "equipment-materials": 1
+      "eda-ip": 1
     },
-    "topics": {
-      "AI 算力与芯片": 4,
-      "数据中心与电力": 4,
-      "资本市场与金融稳定": 4,
-      "供应链与地缘政策": 1,
-      "模型与平台": 2
-    }
+    "topics": {}
   },
   "companies": {
     "filings": [
       {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
+        "company": "synopsys",
+        "stage": "eda-ip",
         "form": "8-K",
-        "filedAt": "2026-08-11",
-        "reportDate": "2026-08-11",
-        "accessionNumber": "0001375365-26-000021",
+        "filedAt": "2026-08-12",
+        "reportDate": "2026-08-09",
+        "accessionNumber": "0001193125-26-345878",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/smci-20260811.htm"
-      },
-      {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "form": "6-K",
-        "filedAt": "2026-08-11",
-        "reportDate": "2026-08-11",
-        "accessionNumber": "0001046179-26-000539",
-        "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000539/sonysemiconductorsolutions.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/883241/000119312526345878/d148701d8k.htm"
       }
     ],
     "metrics": [],
@@ -62,149 +39,7 @@
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "nvidia-blog-b0169fd78a22",
-        "publishedAt": "2026-08-12T00:38:21.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA AI Factory Compute Is Becoming an Investable Asset Class",
-        "summary": "We announced partnerships with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish independent financing platforms designed to mobilize over $500 billion of third-party capital to support the buildout of AI infrastructure over time. This is a major milestone for NVIDIA and the AI industry. We have moved from an era in which companies bought chips and built data centers project by project to ",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-ai-factory-compute/"
-      },
-      {
-        "id": "federal-reserve-notes-7bf287a0ac77",
-        "publishedAt": "2026-08-11T18:30:00.000Z",
-        "source": "美国联邦储备委员会 FEDS Notes",
-        "sourceType": "央行研究",
-        "title": "FEDS Note: Private Credit and Leveraged Loan Markets: Similarities, Differences, and Substitution",
-        "summary": "Ayelen Banegas , Sophia Castelo, Ahmet Degerli , Christine Dobridge , and Will Kennedy",
-        "topics": [
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "models-platforms",
-          "ai-applications"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://www.federalreserve.gov/econres/notes/feds-notes/private-credit-and-leveraged-loan-markets-similarities-differences-and-substitution-20260811.html"
-      },
-      {
-        "id": "nvidia-blog-fda742a5dcd7",
-        "publishedAt": "2026-08-11T15:00:06.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Why Scaling AI Compute Performance Requires a New Power Architecture",
-        "summary": "Every new generation of accelerated computing demands more from the infrastructure underneath it — more compute performance, higher rack density and more efficient, scalable power distribution. The bottleneck isn’t just wattage. It’s how power gets from the grid to the GPU. In traditional power delivery, electricity travels from the grid as an alternating current (AC) and gets converted multiple times, each time addi",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "供应链与地缘政策"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "microsoft",
-          "alphabet"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "equipment-materials"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
-      },
-      {
-        "id": "nvidia-blog-afeff8f47f93",
-        "publishedAt": "2026-08-11T13:00:25.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA and Local AI Community Fuel Open Source Models and Intelligent Agents",
-        "summary": "The open source ecosystem is making it easier for AI enthusiasts and developers to build, customize and run increasingly capable agents locally. Throughout August, NVIDIA is celebrating the partners and open source communities moving local AI forward, along with the models, applications and tools emerging across the ecosystem. That includes NVIDIA’s latest open models, software and developer tools, plus the accelerat",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "模型与平台",
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "alphabet",
-          "supermicro"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-open-source-models-agents-nemotron/"
-      },
-      {
-        "id": "nvidia-blog-d8e27ee66251",
-        "publishedAt": "2026-08-11T13:00:05.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA Nemotron 3.5 Lightning and NeMo Switchyard Deliver Faster, Smarter, More Efficient Agentic AI",
-        "summary": "As AI shifts from chatbots to autonomous agents, open models are serving market demands for full control over where AI runs and how it’s deployed and evolves. Today, NVIDIA is expanding its Nemotron 3 model family with Nemotron 3.5 Lightning, the highest-efficiency model in its class for long-running agentic AI workloads. This release follows Nemotron 3 Nano and reflects NVIDIA’s commitment to continually improving o",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "模型与平台",
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "cadence"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/"
-      },
-      {
-        "id": "bis-847cd6188e5c",
-        "publishedAt": "2026-08-11T10:43:00.000Z",
-        "source": "国际清算银行（BIS）",
-        "sourceType": "国际机构",
-        "title": "Africa's public debt amid global headwinds: balancing resilience and vulnerabilities",
-        "summary": "by Michael Chui, Leonardo Gambacorta The conflict in the Middle East has raised energy and fertiliser prices, weakened growth and intensified fiscal pressures across Africa at a time when public debt and debt service burdens remain elevated. The shift towards domestic currency debt has reduced exchange rate risk for issuers and preserved market access, but higher interest rates and shorter maturities have increased d",
-        "topics": [
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "models-platforms",
-          "ai-applications"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://www.bis.org/publ/bisbull132.htm"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

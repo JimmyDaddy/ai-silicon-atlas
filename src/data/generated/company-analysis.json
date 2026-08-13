@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T04:20:38.009Z",
+  "generatedAt": "2026-08-13T04:23:29.851Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 19,
+  "completedCount": 18,
   "companies": {
     "synopsys": {
       "status": "ok",
@@ -127,7 +127,10 @@
         "收入增长是否可持续？",
         "现金增加是否源于经营活动还是其他途径？"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "stale": true,
+      "lastAttemptAt": "2026-08-13T04:23:33.878Z",
+      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "cadence": {
       "status": "ok",
@@ -370,7 +373,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-08-12T04:20:50.022Z",
+      "lastAttemptAt": "2026-08-13T04:23:46.861Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "nvidia": {
@@ -479,133 +482,11 @@
       "confidence": "medium"
     },
     "amd": {
-      "status": "ok",
-      "inputHash": "d71bafe78fda44c540ac5effe265d2cc7831fa410d2fd6d16357a23fbdddf69c",
-      "generatedAt": "2026-07-20T14:23:54.034Z",
-      "model": "openai/gpt-4.1",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0000002488-26-000115",
-          "label": "8-K · 2026-07-01",
-          "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000115/amd-20260626.htm"
-        },
-        {
-          "id": "filing:0001193125-26-226746",
-          "label": "8-K · 2026-05-15",
-          "url": "https://www.sec.gov/Archives/edgar/data/2488/000119312526226746/d118163d8k.htm"
-        },
-        {
-          "id": "filing:0000002488-26-000076",
-          "label": "10-Q · 2026-05-06",
-          "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000076/amd-20260328.htm"
-        },
-        {
-          "id": "filing:0000002488-26-000072",
-          "label": "8-K · 2026-05-05",
-          "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/amd-20260505.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000002488.json"
-        }
-      ],
-      "summary": "AMD 2026年Q1收入同比增长37.85%，净利润同比增长95.06%，资产和现金小幅提升，资本开支大幅增加。最新8-K公告仅有元数据，无法判断具体事项。",
-      "summaryEvidence": [
-        "filing:0000002488-26-000076",
-        "company-facts",
-        "filing:0000002488-26-000115"
-      ],
-      "whatChanged": [
-        {
-          "text": "2026年Q1收入较去年同期增长37.85%。",
-          "evidence": [
-            "filing:0000002488-26-000076",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "2026年Q1净利润较去年同期增长95.06%。",
-          "evidence": [
-            "filing:0000002488-26-000076",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资产较上一报告期增长3.53%。",
-          "evidence": [
-            "filing:0000002488-26-000076",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "现金及现金等价物较上一报告期增长0.83%。",
-          "evidence": [
-            "filing:0000002488-26-000076",
-            "company-facts"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "收入和净利润大幅增长，显示业务扩张和盈利能力提升。",
-          "evidence": [
-            "filing:0000002488-26-000076",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资本开支大幅增加，可能反映研发或产能扩张。",
-          "evidence": [
-            "filing:0000002488-26-000076",
-            "company-facts"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "设计环节盈利能力增强，或带动下游制造、封测需求。",
-          "evidence": [
-            "filing:0000002488-26-000076",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资本开支增加可能影响供应链设备与材料采购。",
-          "evidence": [
-            "filing:0000002488-26-000076",
-            "company-facts"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "最新8-K公告仅有元数据，无法判断具体事项或事件对公司影响。",
-          "evidence": [
-            "filing:0000002488-26-000115"
-          ]
-        },
-        {
-          "text": "无法获知近期公告是否涉及重大交易、管理层变动或其他运营事件。",
-          "evidence": [
-            "filing:0000002488-26-000115",
-            "filing:0001193125-26-226746",
-            "filing:0000002488-26-000072"
-          ]
-        }
-      ],
-      "questionsToWatch": [
-        "最新8-K公告具体内容是什么？是否涉及重大事项？",
-        "资本开支增加主要用于哪些领域？",
-        "收入和利润增长的驱动因素是什么？",
-        "未来是否有新的产品或市场扩展计划？"
-      ],
-      "confidence": "medium",
-      "stale": true,
-      "lastAttemptAt": "2026-08-12T04:21:10.784Z",
-      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
+      "status": "pending",
+      "inputHash": "0fd3fe8f86624804938fab0c6828a224cfefab229d3362842867cf507f201207",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "broadcom": {
       "status": "ok",
@@ -1065,7 +946,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-12T04:21:02.446Z",
+      "lastAttemptAt": "2026-08-13T04:23:59.851Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "tokyo-electron": {
@@ -1161,7 +1042,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-08-12T04:20:41.734Z",
+      "lastAttemptAt": "2026-08-13T04:23:38.204Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "samsung-electronics": {
@@ -1384,7 +1265,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-12T04:20:54.160Z",
+      "lastAttemptAt": "2026-08-13T04:23:51.187Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "amkor": {
@@ -1621,7 +1502,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-08-12T04:20:45.878Z"
+      "lastAttemptAt": "2026-08-13T04:23:42.538Z"
     },
     "equinix": {
       "status": "ok",
@@ -1732,7 +1613,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-12T04:21:06.595Z",
+      "lastAttemptAt": "2026-08-13T04:24:04.204Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "microsoft": {
@@ -1946,7 +1827,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-08-12T04:20:58.296Z",
+      "lastAttemptAt": "2026-08-13T04:23:55.526Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "amazon": {

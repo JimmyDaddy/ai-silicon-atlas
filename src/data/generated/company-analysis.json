@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-13T04:23:29.851Z",
+  "generatedAt": "2026-08-14T04:21:25.194Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 18,
+  "completedCount": 17,
   "companies": {
     "synopsys": {
       "status": "ok",
@@ -129,7 +129,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-13T04:23:33.878Z",
+      "lastAttemptAt": "2026-08-14T04:21:33.635Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "cadence": {
@@ -373,7 +373,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-08-13T04:23:46.861Z",
+      "lastAttemptAt": "2026-08-14T04:21:46.732Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "nvidia": {
@@ -840,7 +840,10 @@
         "营收和利润增长背后的主要驱动因素是什么？",
         "市场和客户结构有无重大变化？"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "stale": true,
+      "lastAttemptAt": "2026-08-14T04:21:29.275Z",
+      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "kla": {
       "status": "ok",
@@ -946,7 +949,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-13T04:23:59.851Z",
+      "lastAttemptAt": "2026-08-14T04:21:59.807Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "tokyo-electron": {
@@ -1042,7 +1045,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-08-13T04:23:38.204Z",
+      "lastAttemptAt": "2026-08-14T04:21:38.008Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "samsung-electronics": {
@@ -1265,7 +1268,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-13T04:23:51.187Z",
+      "lastAttemptAt": "2026-08-14T04:21:51.091Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "amkor": {
@@ -1502,119 +1505,14 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-08-13T04:23:42.538Z"
+      "lastAttemptAt": "2026-08-14T04:21:42.365Z"
     },
     "equinix": {
-      "status": "ok",
-      "inputHash": "1936415554c1bcb0797490c5214aef90c69d96fc19c4913cf8f3931dfafa1c25",
-      "generatedAt": "2026-07-30T05:22:53.826Z",
-      "model": "openai/gpt-4.1-mini",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0001101239-26-000148",
-          "label": "8-K · 2026-07-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000148/eqix-20260727.htm"
-        },
-        {
-          "id": "filing:0001101239-26-000147",
-          "label": "10-Q · 2026-07-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000147/eqix-20260630.htm"
-        },
-        {
-          "id": "filing:0001101239-26-000145",
-          "label": "8-K · 2026-07-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000145/eqix-20260729.htm"
-        },
-        {
-          "id": "filing:0001101239-26-000131",
-          "label": "8-K · 2026-07-14",
-          "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000131/eqix-20260708.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001101239.json"
-        }
-      ],
-      "summary": "Equinix公司2026财年第二季度财报显示，收入为26.25亿美元，同比增长16.36%；归属于母公司的净利润为4.79亿美元，同比增长30.16%。公司资产总额为410.76亿美元，较上一季度小幅增长0.44%；现金及现金等价物为9.79亿美元，较上一季度下降28.12%。当前证据包不含披露正文，无法判断具体经营策略调整或其他事项。",
-      "summaryEvidence": [
-        "filing:0001101239-26-000147",
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "2026年第二季度收入同比增长16.36%，达到26.25亿美元。",
-          "evidence": [
-            "filing:0001101239-26-000147"
-          ]
-        },
-        {
-          "text": "归属于母公司的净利润同比增长30.16%，达到4.79亿美元。",
-          "evidence": [
-            "filing:0001101239-26-000147"
-          ]
-        },
-        {
-          "text": "资产总额较上一季度增长0.44%，达到410.76亿美元。",
-          "evidence": [
-            "filing:0001101239-26-000147"
-          ]
-        },
-        {
-          "text": "现金及现金等价物较上一季度下降28.12%，降至9.79亿美元。",
-          "evidence": [
-            "filing:0001101239-26-000147"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "收入和净利润的显著增长可能反映公司业务扩展或市场需求增加。",
-          "evidence": [
-            "filing:0001101239-26-000147"
-          ]
-        },
-        {
-          "text": "现金及现金等价物的减少可能提示资金使用增加或投资活动加大。",
-          "evidence": [
-            "filing:0001101239-26-000147"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "收入增长可能带动供应链需求增加，影响上游设备供应商和下游客户。",
-          "evidence": [
-            "filing:0001101239-26-000147"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "当前证据包不含披露正文，无法判断收入和利润增长的具体驱动因素。",
-          "evidence": []
-        },
-        {
-          "text": "无法确定现金减少的具体用途及其对公司运营的长期影响。",
-          "evidence": []
-        },
-        {
-          "text": "缺乏关于未来战略调整、市场环境变化或风险因素的详细信息。",
-          "evidence": []
-        }
-      ],
-      "questionsToWatch": [
-        "收入和净利润增长的主要驱动因素是什么？",
-        "现金及现金等价物减少是否与资本支出或其他投资活动相关？",
-        "公司是否有新的战略计划或市场拓展举措？",
-        "未来季度的业绩趋势及潜在风险有哪些？"
-      ],
-      "confidence": "medium",
-      "stale": true,
-      "lastAttemptAt": "2026-08-13T04:24:04.204Z",
-      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
+      "status": "pending",
+      "inputHash": "a008e56023cf54a75cbf781268b9d8ddc0a4affabfe686c563ef995e31bc3787",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "microsoft": {
       "status": "ok",
@@ -1827,7 +1725,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-08-13T04:23:55.526Z",
+      "lastAttemptAt": "2026-08-14T04:21:55.446Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "amazon": {

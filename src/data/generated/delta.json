@@ -1,78 +1,100 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-15T03:08:54.064Z",
+  "generatedAt": "2026-08-16T03:17:04.203Z",
   "period": {
-    "from": "2026-08-14T04:22:00.468Z",
-    "to": "2026-08-15T03:08:54.064Z",
+    "from": "2026-08-15T03:08:54.064Z",
+    "to": "2026-08-16T03:17:04.203Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
-    "metricChanges": 0,
+    "newFilings": 0,
+    "metricChanges": 5,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 2
+    "totalChanges": 5
   },
   "affected": {
     "stages": {
-      "manufacturing": 1,
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1,
-      "ai-applications": 1
+      "models-platforms": 5
     },
-    "topics": {
-      "AI 算力与芯片": 1,
-      "企业应用与生产力": 1
-    }
+    "topics": {}
   },
   "companies": {
-    "filings": [
+    "filings": [],
+    "metrics": [
       {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "form": "6-K",
-        "filedAt": "2026-08-14",
-        "reportDate": "2026-06-30",
-        "accessionNumber": "0001046179-26-000541",
-        "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000541/tsm-fsx20260814x6k.htm"
+        "company": "meta-platforms",
+        "stage": "models-platforms",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 60801000000,
+        "previousValue": 56311000000,
+        "changePercent": 7.97,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "meta-platforms",
+        "stage": "models-platforms",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 15848000000,
+        "previousValue": 26773000000,
+        "changePercent": -40.81,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "meta-platforms",
+        "stage": "models-platforms",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 449956000000,
+        "previousValue": 395250000000,
+        "changePercent": 13.84,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "meta-platforms",
+        "stage": "models-platforms",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 15462000000,
+        "previousValue": 23426000000,
+        "changePercent": -34,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "meta-platforms",
+        "stage": "models-platforms",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 49113000000,
+        "previousValue": 18997000000,
+        "changePercent": 158.53,
+        "unit": "USD",
+        "periodEnd": "2026-06-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
       }
     ],
-    "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "nvidia-blog-fd1ced386b36",
-        "publishedAt": "2026-08-14T17:13:05.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Universitas Gadjah Mada, Indosat and NVIDIA Open Indonesia’s First University AI Center to Develop Local AI Talent",
-        "summary": "Indonesia is taking charge of its AI future. This week, the Ministry of Communication and Digital Affairs (Komdigi), Indosat Ooredoo Hutchison (Indosat or IOH), NVIDIA and Universitas Gadjah Mada (UGM) launched the UGM Indosat NVIDIA AI Technology Center (NVAITC) in Yogyakarta — the country’s first university-based AI technology center. Established under Indonesia’s AI Center of Excellence initiative, UGM Indosat NVA",
-        "topics": [
-          "AI 算力与芯片",
-          "企业应用与生产力"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "ai-applications"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/ugm-indosat-nvidia-ai-technology-center/"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

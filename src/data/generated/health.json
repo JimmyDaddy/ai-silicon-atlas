@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-16T03:17:04.203Z",
+  "generatedAt": "2026-08-17T03:16:22.125Z",
   "overall": "degraded",
   "schedule": {
     "cadence": "daily",
@@ -10,7 +10,7 @@
   },
   "freshness": {
     "secEdgar": {
-      "lastSuccessfulAt": "2026-08-16T03:16:29.029Z",
+      "lastSuccessfulAt": "2026-08-17T03:15:46.629Z",
       "ageHours": 0.03,
       "warningAfterHours": 36,
       "criticalAfterHours": 72
@@ -53,7 +53,7 @@
     "secEdgar": {
       "provider": "SEC EDGAR",
       "status": "ok",
-      "completedAt": "2026-08-16T03:16:29.029Z",
+      "completedAt": "2026-08-17T03:15:46.629Z",
       "companyCount": 25,
       "completedCount": 25,
       "failedCount": 0,
@@ -64,7 +64,7 @@
     "openDart": {
       "provider": "OpenDART",
       "status": "ok",
-      "completedAt": "2026-08-16T03:14:51.859Z",
+      "completedAt": "2026-08-17T03:14:26.693Z",
       "companyCount": 2,
       "completedCount": null,
       "failedCount": null,
@@ -75,7 +75,7 @@
     "manual": {
       "provider": "First-party IR",
       "status": "manual",
-      "completedAt": "2026-08-16T03:14:50.514Z",
+      "completedAt": "2026-08-17T03:14:25.414Z",
       "companyCount": 4,
       "completedCount": null,
       "failedCount": null,

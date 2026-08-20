@@ -1,60 +1,45 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-19T03:14:26.872Z",
+  "generatedAt": "2026-08-20T03:14:07.709Z",
   "period": {
-    "from": "2026-08-18T03:12:43.054Z",
-    "to": "2026-08-19T03:14:26.872Z",
+    "from": "2026-08-19T03:14:26.872Z",
+    "to": "2026-08-20T03:14:07.709Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 1,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
     "totalChanges": 1
   },
   "affected": {
     "stages": {
-      "ai-infrastructure": 1,
-      "models-platforms": 1
+      "design": 1
     },
-    "topics": {
-      "数据中心与电力": 1,
-      "模型与平台": 1
-    }
+    "topics": {}
   },
   "companies": {
-    "filings": [],
+    "filings": [
+      {
+        "company": "amd",
+        "stage": "design",
+        "form": "8-K",
+        "filedAt": "2026-08-19",
+        "reportDate": "2026-08-17",
+        "accessionNumber": "0000002488-26-000163",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000163/amd-20260817.htm"
+      }
+    ],
     "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "aws-blog-74672ca1988c",
-        "publishedAt": "2026-08-18T13:58:41.000Z",
-        "source": "AWS 官方博客",
-        "sourceType": "公司观点",
-        "title": "In the works: AWS Builder Lofts in Berlin, Hyderabad, and São Paulo",
-        "summary": "In the early days of cloud computing, AWS supported intensive learning for builders in a physical space called the AWS Pop-up Lofts in cities worldwide. These spaces were accessible to startup entrepreneurs, developers, and others interested in learning more about AWS for events, meetings, and co-working. With the recent emergence of generative AI, AWS Gen AI Lofts provided pop-up style collaborative spaces across th",
-        "topics": [
-          "数据中心与电力",
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "amazon"
-        ],
-        "relatedStages": [
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://aws.amazon.com/blogs/aws/in-the-works-aws-builder-lofts-in-berlin-hyderabad-and-sao-paulo/"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-22T03:09:26.860Z",
+  "generatedAt": "2026-08-23T03:17:11.446Z",
   "sources": {
     "secEdgar": {
       "status": "ok",
       "provider": "SEC EDGAR",
       "url": "https://www.sec.gov/edgar/sec-api-documentation",
-      "startedAt": "2026-08-22T03:09:26.860Z",
-      "completedAt": "2026-08-22T03:11:21.485Z",
+      "startedAt": "2026-08-23T03:17:11.447Z",
+      "completedAt": "2026-08-23T03:18:45.277Z",
       "companyCount": 25,
       "completedCount": 25,
       "failedCount": 0,
@@ -19,14 +19,14 @@
       "status": "ok",
       "provider": "OpenDART",
       "url": "https://engopendart.fss.or.kr/",
-      "startedAt": "2026-08-22T03:09:26.865Z",
-      "completedAt": "2026-08-22T03:09:28.997Z",
+      "startedAt": "2026-08-23T03:17:11.451Z",
+      "completedAt": "2026-08-23T03:17:13.570Z",
       "companyCount": 2
     },
     "manual": {
       "status": "manual",
       "provider": "First-party IR",
-      "completedAt": "2026-08-22T03:09:26.860Z",
+      "completedAt": "2026-08-23T03:17:11.446Z",
       "companyCount": 4
     }
   },
@@ -34,7 +34,7 @@
     "adobe": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:11:06.017Z",
+      "checkedAt": "2026-08-23T03:18:28.869Z",
       "identifiers": {
         "ticker": "ADBE",
         "cik": "0000796343"
@@ -602,7 +602,7 @@
     "alphabet": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:10:56.034Z",
+      "checkedAt": "2026-08-23T03:18:11.903Z",
       "identifiers": {
         "ticker": "GOOGL",
         "cik": "0001652044"
@@ -1144,7 +1144,7 @@
     "amazon": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:10:56.697Z",
+      "checkedAt": "2026-08-23T03:18:15.026Z",
       "identifiers": {
         "ticker": "AMZN",
         "cik": "0001018724"
@@ -1634,7 +1634,7 @@
     "amd": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:09:41.361Z",
+      "checkedAt": "2026-08-23T03:17:21.473Z",
       "identifiers": {
         "ticker": "AMD",
         "cik": "0000002488"
@@ -2202,7 +2202,7 @@
     "amkor": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:10:09.346Z",
+      "checkedAt": "2026-08-23T03:17:53.579Z",
       "identifiers": {
         "ticker": "AMKR",
         "cik": "0001047127"
@@ -2770,7 +2770,7 @@
     "applied-materials": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:09:50.654Z",
+      "checkedAt": "2026-08-23T03:17:30.713Z",
       "identifiers": {
         "ticker": "AMAT",
         "cik": "0000006951"
@@ -3338,7 +3338,7 @@
     "arista-networks": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:10:20.074Z",
+      "checkedAt": "2026-08-23T03:17:56.516Z",
       "identifiers": {
         "ticker": "ANET",
         "cik": "0001596532"
@@ -3906,7 +3906,7 @@
     "arm": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:09:37.597Z",
+      "checkedAt": "2026-08-23T03:17:15.375Z",
       "identifiers": {
         "ticker": "ARM",
         "cik": "0001973239"
@@ -4435,7 +4435,7 @@
     "ase-technology": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:10:06.179Z",
+      "checkedAt": "2026-08-23T03:17:50.201Z",
       "identifiers": {
         "ticker": "ASX",
         "cik": "0001122411"
@@ -4845,7 +4845,7 @@
     "asml": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:09:48.086Z",
+      "checkedAt": "2026-08-23T03:17:27.861Z",
       "identifiers": {
         "ticker": "ASML",
         "cik": "0000937966"
@@ -5335,7 +5335,7 @@
     "broadcom": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:09:44.475Z",
+      "checkedAt": "2026-08-23T03:17:24.624Z",
       "identifiers": {
         "ticker": "AVGO",
         "cik": "0001730168"
@@ -5877,7 +5877,7 @@
     "cadence": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:09:27.650Z",
+      "checkedAt": "2026-08-23T03:17:12.297Z",
       "identifiers": {
         "ticker": "CDNS",
         "cik": "0000813672"
@@ -6445,7 +6445,7 @@
     "equinix": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:10:34.101Z",
+      "checkedAt": "2026-08-23T03:18:05.696Z",
       "identifiers": {
         "ticker": "EQIX",
         "cik": "0001101239"
@@ -6961,7 +6961,7 @@
     "jcet": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-08-22T03:09:26.860Z",
+      "checkedAt": "2026-08-23T03:17:11.446Z",
       "identifiers": {},
       "sourceUrl": "https://www.jcetglobal.com/",
       "latestFiling": null,
@@ -6975,7 +6975,7 @@
     "kla": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:09:53.746Z",
+      "checkedAt": "2026-08-23T03:17:34.101Z",
       "identifiers": {
         "ticker": "KLAC",
         "cik": "0000319201"
@@ -7537,13 +7537,13 @@
           }
         ]
       },
-      "metricsCheckedAt": "2026-08-16T03:15:13.004Z",
+      "metricsCheckedAt": "2026-08-23T03:17:34.101Z",
       "warnings": []
     },
     "mediatek": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-08-22T03:09:26.860Z",
+      "checkedAt": "2026-08-23T03:17:11.446Z",
       "identifiers": {},
       "sourceUrl": "https://corp.mediatek.com/investor-relations",
       "latestFiling": null,
@@ -7557,7 +7557,7 @@
     "meta-platforms": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:10:59.801Z",
+      "checkedAt": "2026-08-23T03:18:18.176Z",
       "identifiers": {
         "ticker": "META",
         "cik": "0001326801"
@@ -8119,13 +8119,13 @@
           }
         ]
       },
-      "metricsCheckedAt": "2026-08-16T03:15:57.880Z",
+      "metricsCheckedAt": "2026-08-23T03:18:18.176Z",
       "warnings": []
     },
     "micron": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:10:03.996Z",
+      "checkedAt": "2026-08-23T03:17:47.449Z",
       "identifiers": {
         "ticker": "MU",
         "cik": "0000723125"
@@ -8732,7 +8732,7 @@
     "microsoft": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:10:45.764Z",
+      "checkedAt": "2026-08-23T03:18:08.928Z",
       "identifiers": {
         "ticker": "MSFT",
         "cik": "0000789019"
@@ -9300,7 +9300,7 @@
     "nvidia": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:09:38.080Z",
+      "checkedAt": "2026-08-23T03:17:18.218Z",
       "identifiers": {
         "ticker": "NVDA",
         "cik": "0001045810"
@@ -9790,7 +9790,7 @@
     "palantir": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:11:02.920Z",
+      "checkedAt": "2026-08-23T03:18:27.978Z",
       "identifiers": {
         "ticker": "PLTR",
         "cik": "0001321655"
@@ -10358,7 +10358,7 @@
     "salesforce": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:11:09.126Z",
+      "checkedAt": "2026-08-23T03:18:31.708Z",
       "identifiers": {
         "ticker": "CRM",
         "cik": "0001108524"
@@ -10926,7 +10926,7 @@
     "samsung-electronics": {
       "status": "error",
       "provider": "OpenDART",
-      "checkedAt": "2026-08-22T03:09:26.865Z",
+      "checkedAt": "2026-08-23T03:17:11.452Z",
       "identifiers": {
         "corpCode": "00126380"
       },
@@ -10941,7 +10941,7 @@
     "servicenow": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:11:20.853Z",
+      "checkedAt": "2026-08-23T03:18:34.808Z",
       "identifiers": {
         "ticker": "NOW",
         "cik": "0001373715"
@@ -11503,13 +11503,13 @@
           }
         ]
       },
-      "metricsCheckedAt": "2026-08-16T03:16:15.151Z",
+      "metricsCheckedAt": "2026-08-23T03:18:34.808Z",
       "warnings": []
     },
     "sk-hynix": {
       "status": "error",
       "provider": "OpenDART",
-      "checkedAt": "2026-08-22T03:09:28.349Z",
+      "checkedAt": "2026-08-23T03:17:12.935Z",
       "identifiers": {
         "corpCode": "00164779"
       },
@@ -11524,7 +11524,7 @@
     "smic": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-08-22T03:09:26.860Z",
+      "checkedAt": "2026-08-23T03:17:11.446Z",
       "identifiers": {},
       "sourceUrl": "https://www.smics.com/en/site/company",
       "latestFiling": null,
@@ -11538,7 +11538,7 @@
     "supermicro": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:10:32.793Z",
+      "checkedAt": "2026-08-23T03:18:02.655Z",
       "identifiers": {
         "ticker": "SMCI",
         "cik": "0001375365"
@@ -12106,7 +12106,7 @@
     "synopsys": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:09:26.860Z",
+      "checkedAt": "2026-08-23T03:17:11.447Z",
       "identifiers": {
         "ticker": "SNPS",
         "cik": "0000883241"
@@ -12674,7 +12674,7 @@
     "tokyo-electron": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-08-22T03:09:26.860Z",
+      "checkedAt": "2026-08-23T03:17:11.446Z",
       "identifiers": {},
       "sourceUrl": "https://www.tel.com/ir/",
       "latestFiling": null,
@@ -12688,7 +12688,7 @@
     "tsmc": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:09:57.062Z",
+      "checkedAt": "2026-08-23T03:17:46.466Z",
       "identifiers": {
         "ticker": "TSM",
         "cik": "0001046179"
@@ -13046,7 +13046,7 @@
     "vertiv": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-08-22T03:10:27.224Z",
+      "checkedAt": "2026-08-23T03:17:59.507Z",
       "identifiers": {
         "ticker": "VRT",
         "cik": "0001674101"

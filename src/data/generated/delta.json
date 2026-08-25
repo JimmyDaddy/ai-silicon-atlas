@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-24T03:20:19.702Z",
+  "generatedAt": "2026-08-25T03:16:23.969Z",
   "period": {
-    "from": "2026-08-23T03:19:18.819Z",
-    "to": "2026-08-24T03:20:19.702Z",
+    "from": "2026-08-24T03:20:19.702Z",
+    "to": "2026-08-25T03:16:23.969Z",
     "baseRef": "HEAD"
   },
   "summary": {
@@ -11,13 +11,28 @@
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "newIntelligence": 4,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 0
+    "totalChanges": 4
   },
   "affected": {
-    "stages": {},
-    "topics": {}
+    "stages": {
+      "design": 4,
+      "memory": 4,
+      "packaging": 4,
+      "ai-infrastructure": 4,
+      "equipment-materials": 1,
+      "models-platforms": 3
+    },
+    "topics": {
+      "AI 算力与芯片": 4,
+      "半导体制造": 1,
+      "数据中心与电力": 2,
+      "模型与平台": 4,
+      "企业应用与生产力": 1,
+      "供应链与地缘政策": 2,
+      "资本市场与金融稳定": 1
+    }
   },
   "companies": {
     "filings": [],
@@ -26,7 +41,110 @@
     "analysis": []
   },
   "intelligence": {
-    "new": [],
+    "new": [
+      {
+        "id": "nvidia-blog-351f6de6e45a",
+        "publishedAt": "2026-08-24T15:00:54.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "How XPUs Meet a World-Class AI Factory",
+        "summary": "To generate intelligence at scale, AI factories run continuously, and their economics are defined by delivered output: tokens per second, tokens per watt, cost per token, utilization and uptime. That requires AI infrastructure designed and built as a full factory, not a collection of individual accelerators. Hyperscalers and AI-native companies building custom XPUs must consider not just XPU design, but the design an",
+        "topics": [
+          "AI 算力与芯片",
+          "半导体制造",
+          "数据中心与电力",
+          "模型与平台",
+          "企业应用与生产力",
+          "供应链与地缘政策"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "amazon"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
+      },
+      {
+        "id": "nvidia-blog-f8d700746f2a",
+        "publishedAt": "2026-08-24T15:00:41.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+        "summary": "The next era of AI inference won’t be defined by a single breakthrough chip, network or system. It’ll be defined by how every layer of the AI factory works together. That’s why NVIDIA is extending Vera Rubin NVL72 with fast token generation for agentic systems. Announced today , the NVIDIA Vera Rubin rack-scale system NVIDIA Groq 3 LPX is in full production. In an Artificial Analysis benchmark running Gemma 4 31B, an",
+        "topics": [
+          "AI 算力与芯片",
+          "数据中心与电力",
+          "模型与平台",
+          "供应链与地缘政策"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+      },
+      {
+        "id": "nvidia-blog-8c476d21c2ee",
+        "publishedAt": "2026-08-24T15:00:19.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+        "summary": "According to OpenRouter data , agentic AI workloads consume 15x more tokens than a simple chat request. Why? Consider what happens when an AI agent researches a company for an investment decision. The agent queries financial databases, searches news and filings, invokes a sub-agent to run peer comparisons and model valuations, then synthesizes everything into a recommendation. Agents and sub-agents keep reasoning unt",
+        "topics": [
+          "AI 算力与芯片",
+          "模型与平台",
+          "资本市场与金融稳定"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+      },
+      {
+        "id": "intel-newsroom-fe83d956f1d5",
+        "publishedAt": "2026-08-24T14:00:25.000Z",
+        "source": "Intel Newsroom",
+        "sourceType": "公司观点",
+        "title": "Intel Outlines Architectures for Agentic AI at Hot Chips 2026",
+        "summary": "What’s New: Intel is showcasing three architectures for Agentic AI and Enterprise-scale workloads, combining the Diamond Rapids processor for high-performance orchestration, the Crescent Island GPU for efficient inference and the Wildcat Lake SoC for intelligent client and edge computing.“Agentic AI is fundamentally changing how we design and deliver computing – from the transistor and package … The post Intel Outlin",
+        "topics": [
+          "AI 算力与芯片",
+          "模型与平台"
+        ],
+        "relatedCompanies": [],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://newsroom.intel.com/client-computing/intel-outlines-architectures-for-agentic-ai-at-hot-chips-2026"
+      }
+    ],
     "analysisRefreshed": []
   }
 }

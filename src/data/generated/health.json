@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-24T03:20:19.702Z",
+  "generatedAt": "2026-08-25T03:16:23.969Z",
   "overall": "degraded",
   "schedule": {
     "cadence": "daily",
@@ -10,7 +10,7 @@
   },
   "freshness": {
     "secEdgar": {
-      "lastSuccessfulAt": "2026-08-24T03:19:44.535Z",
+      "lastSuccessfulAt": "2026-08-25T03:15:50.016Z",
       "ageHours": 0.03,
       "warningAfterHours": 36,
       "criticalAfterHours": 72
@@ -39,21 +39,21 @@
     "total": 31
   },
   "intelligence": {
-    "total": 58,
-    "completed": 26,
-    "pending": 32,
-    "independent": 22,
+    "total": 57,
+    "completed": 23,
+    "pending": 34,
+    "independent": 21,
     "companyViewpoint": 36,
-    "independentShare": 0.3793,
+    "independentShare": 0.3684,
     "configuredSources": 12,
     "automaticSources": 9,
-    "failedSources": 1
+    "failedSources": 0
   },
   "providers": {
     "secEdgar": {
       "provider": "SEC EDGAR",
       "status": "ok",
-      "completedAt": "2026-08-24T03:19:44.535Z",
+      "completedAt": "2026-08-25T03:15:50.016Z",
       "companyCount": 25,
       "completedCount": 25,
       "failedCount": 0,
@@ -64,7 +64,7 @@
     "openDart": {
       "provider": "OpenDART",
       "status": "ok",
-      "completedAt": "2026-08-24T03:18:24.651Z",
+      "completedAt": "2026-08-25T03:14:30.029Z",
       "companyCount": 2,
       "completedCount": null,
       "failedCount": null,
@@ -75,7 +75,7 @@
     "manual": {
       "provider": "First-party IR",
       "status": "manual",
-      "completedAt": "2026-08-24T03:18:22.906Z",
+      "completedAt": "2026-08-25T03:14:27.912Z",
       "companyCount": 4,
       "completedCount": null,
       "failedCount": null,
@@ -87,14 +87,8 @@
   "issues": [
     {
       "severity": "warning",
-      "code": "news-source-failures",
-      "title": "1 个新闻源抓取失败",
-      "detail": "Microsoft 官方博客"
-    },
-    {
-      "severity": "warning",
       "code": "news-analysis-backlog",
-      "title": "32 篇情报等待 AI 处理",
+      "title": "34 篇情报等待 AI 处理",
       "detail": "后续批次会继续处理，页面暂时使用来源摘要或编辑要点。"
     },
     {

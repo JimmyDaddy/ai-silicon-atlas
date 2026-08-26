@@ -1,41 +1,47 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-25T03:16:23.969Z",
+  "generatedAt": "2026-08-26T03:29:30.812Z",
   "period": {
-    "from": "2026-08-24T03:20:19.702Z",
-    "to": "2026-08-25T03:16:23.969Z",
+    "from": "2026-08-25T03:16:23.969Z",
+    "to": "2026-08-26T03:29:30.812Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 1,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 4,
+    "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 4
+    "totalChanges": 3
   },
   "affected": {
     "stages": {
-      "design": 4,
-      "memory": 4,
-      "packaging": 4,
-      "ai-infrastructure": 4,
-      "equipment-materials": 1,
-      "models-platforms": 3
+      "manufacturing": 1,
+      "design": 2,
+      "memory": 2,
+      "packaging": 2,
+      "ai-infrastructure": 2,
+      "models-platforms": 2
     },
     "topics": {
-      "AI 算力与芯片": 4,
-      "半导体制造": 1,
-      "数据中心与电力": 2,
-      "模型与平台": 4,
-      "企业应用与生产力": 1,
-      "供应链与地缘政策": 2,
-      "资本市场与金融稳定": 1
+      "AI 算力与芯片": 2,
+      "模型与平台": 2
     }
   },
   "companies": {
-    "filings": [],
+    "filings": [
+      {
+        "company": "tsmc",
+        "stage": "manufacturing",
+        "form": "6-K",
+        "filedAt": "2026-08-25",
+        "reportDate": "2026-07-31",
+        "accessionNumber": "0001046179-26-000545",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000545/tsm-monthend6kx20260825.htm"
+      }
+    ],
     "metrics": [],
     "statuses": [],
     "analysis": []
@@ -43,22 +49,17 @@
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-351f6de6e45a",
-        "publishedAt": "2026-08-24T15:00:54.000Z",
-        "source": "NVIDIA 官方博客",
+        "id": "aws-blog-5e98e473f864",
+        "publishedAt": "2026-08-25T16:11:02.000Z",
+        "source": "AWS 官方博客",
         "sourceType": "公司观点",
-        "title": "How XPUs Meet a World-Class AI Factory",
-        "summary": "To generate intelligence at scale, AI factories run continuously, and their economics are defined by delivered output: tokens per second, tokens per watt, cost per token, utilization and uptime. That requires AI infrastructure designed and built as a full factory, not a collection of individual accelerators. Hyperscalers and AI-native companies building custom XPUs must consider not just XPU design, but the design an",
+        "title": "Happy 20th Birthday, Amazon EC2",
+        "summary": "Twenty years ago today, Jeff Barr wrote a blog post that launched the Amazon EC2 Beta . That single post introduced resizable Linux virtual servers in the cloud, billed by the hour, with one instance type ( m1.small ) in one Region (US East). It was minimal yet useful, and it changed how the world thinks about computing infrastructure. In 2021, Jeff covered the fifteen years of EC2 with the backstory and memorable EC",
         "topics": [
           "AI 算力与芯片",
-          "半导体制造",
-          "数据中心与电力",
-          "模型与平台",
-          "企业应用与生产力",
-          "供应链与地缘政策"
+          "模型与平台"
         ],
         "relatedCompanies": [
-          "nvidia",
           "amazon"
         ],
         "relatedStages": [
@@ -66,74 +67,25 @@
           "memory",
           "packaging",
           "ai-infrastructure",
-          "equipment-materials"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
-      },
-      {
-        "id": "nvidia-blog-f8d700746f2a",
-        "publishedAt": "2026-08-24T15:00:41.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-        "summary": "The next era of AI inference won’t be defined by a single breakthrough chip, network or system. It’ll be defined by how every layer of the AI factory works together. That’s why NVIDIA is extending Vera Rubin NVL72 with fast token generation for agentic systems. Announced today , the NVIDIA Vera Rubin rack-scale system NVIDIA Groq 3 LPX is in full production. In an Artificial Analysis benchmark running Gemma 4 31B, an",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "模型与平台",
-          "供应链与地缘政策"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
           "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+        "sourceUrl": "https://aws.amazon.com/blogs/aws/happy-20th-birthday-amazon-ec2/"
       },
       {
-        "id": "nvidia-blog-8c476d21c2ee",
-        "publishedAt": "2026-08-24T15:00:19.000Z",
+        "id": "nvidia-blog-67c0d574508d",
+        "publishedAt": "2026-08-25T15:30:48.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-        "summary": "According to OpenRouter data , agentic AI workloads consume 15x more tokens than a simple chat request. Why? Consider what happens when an AI agent researches a company for an investment decision. The agent queries financial databases, searches news and filings, invokes a sub-agent to run peer comparisons and model valuations, then synthesizes everything into a recommendation. Agents and sub-agents keep reasoning unt",
-        "topics": [
-          "AI 算力与芯片",
-          "模型与平台",
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
-      },
-      {
-        "id": "intel-newsroom-fe83d956f1d5",
-        "publishedAt": "2026-08-24T14:00:25.000Z",
-        "source": "Intel Newsroom",
-        "sourceType": "公司观点",
-        "title": "Intel Outlines Architectures for Agentic AI at Hot Chips 2026",
-        "summary": "What’s New: Intel is showcasing three architectures for Agentic AI and Enterprise-scale workloads, combining the Diamond Rapids processor for high-performance orchestration, the Crescent Island GPU for efficient inference and the Wildcat Lake SoC for intelligent client and edge computing.“Agentic AI is fundamentally changing how we design and deliver computing – from the transistor and package … The post Intel Outlin",
+        "title": "Leading Publishers Bring Blockbuster PC Games and Technology to NVIDIA RTX Spark",
+        "summary": "NVIDIA is bringing the next wave of RTX gaming to the Gamescom conference running this week in Cologne, Germany, with support for new games, anti-cheat technologies and increased visual quality. Electronic Arts, Embark and Ubisoft are among the latest game publishers and developers bringing their blockbuster titles to NVIDIA RTX Spark ahead of its launch this fall. They join the publishers that announced RTX Spark su",
         "topics": [
           "AI 算力与芯片",
           "模型与平台"
         ],
-        "relatedCompanies": [],
+        "relatedCompanies": [
+          "nvidia"
+        ],
         "relatedStages": [
           "design",
           "memory",
@@ -142,7 +94,7 @@
           "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://newsroom.intel.com/client-computing/intel-outlines-architectures-for-agentic-ai-at-hot-chips-2026"
+        "sourceUrl": "https://blogs.nvidia.com/blog/gamescom-rtx-spark-pc-games-technology/"
       }
     ],
     "analysisRefreshed": []

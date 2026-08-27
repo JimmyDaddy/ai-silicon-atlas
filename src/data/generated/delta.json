@@ -1,65 +1,284 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-26T03:29:30.812Z",
+  "generatedAt": "2026-08-27T12:53:22.903Z",
   "period": {
-    "from": "2026-08-25T03:16:23.969Z",
-    "to": "2026-08-26T03:29:30.812Z",
+    "from": "2026-08-26T03:29:30.812Z",
+    "to": "2026-08-27T12:53:22.903Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
-    "metricChanges": 0,
+    "newFilings": 4,
+    "metricChanges": 14,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
     "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 3
+    "totalChanges": 20
   },
   "affected": {
     "stages": {
-      "manufacturing": 1,
-      "design": 2,
       "memory": 2,
-      "packaging": 2,
-      "ai-infrastructure": 2,
-      "models-platforms": 2
+      "design": 6,
+      "ai-applications": 6,
+      "eda-ip": 6,
+      "packaging": 1,
+      "ai-infrastructure": 1,
+      "equipment-materials": 1
     },
     "topics": {
-      "AI 算力与芯片": 2,
+      "AI 算力与芯片": 1,
+      "半导体制造": 1,
+      "数据中心与电力": 1,
       "模型与平台": 2
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "form": "6-K",
-        "filedAt": "2026-08-25",
+        "company": "micron",
+        "stage": "memory",
+        "form": "8-K",
+        "filedAt": "2026-08-26",
+        "reportDate": "2026-08-24",
+        "accessionNumber": "0001104659-26-101067",
+        "title": "FORM 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926101067/tm2624017d1_8k.htm"
+      },
+      {
+        "company": "nvidia",
+        "stage": "design",
+        "form": "10-Q",
+        "filedAt": "2026-08-26",
+        "reportDate": "2026-07-26",
+        "accessionNumber": "0001045810-26-000075",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
+      },
+      {
+        "company": "salesforce",
+        "stage": "ai-applications",
+        "form": "10-Q",
+        "filedAt": "2026-08-27",
         "reportDate": "2026-07-31",
-        "accessionNumber": "0001046179-26-000545",
-        "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000545/tsm-monthend6kx20260825.htm"
+        "accessionNumber": "0001108524-26-000190",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000190/crm-20260731.htm"
+      },
+      {
+        "company": "synopsys",
+        "stage": "eda-ip",
+        "form": "10-Q",
+        "filedAt": "2026-08-26",
+        "reportDate": "2026-07-31",
+        "accessionNumber": "0000883241-26-000025",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/snps-20260731.htm"
       }
     ],
-    "metrics": [],
+    "metrics": [
+      {
+        "company": "nvidia",
+        "stage": "design",
+        "metric": "revenue",
+        "label": "Revenues",
+        "value": 96221000000,
+        "previousValue": 81615000000,
+        "changePercent": 17.9,
+        "unit": "USD",
+        "periodEnd": "2026-07-26",
+        "previousPeriodEnd": "2026-04-26",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "nvidia",
+        "stage": "design",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 59688000000,
+        "previousValue": 58321000000,
+        "changePercent": 2.34,
+        "unit": "USD",
+        "periodEnd": "2026-07-26",
+        "previousPeriodEnd": "2026-04-26",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "nvidia",
+        "stage": "design",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 320272000000,
+        "previousValue": 259474000000,
+        "changePercent": 23.43,
+        "unit": "USD",
+        "periodEnd": "2026-07-26",
+        "previousPeriodEnd": "2026-04-26",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "nvidia",
+        "stage": "design",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 22443000000,
+        "previousValue": 13237000000,
+        "changePercent": 69.55,
+        "unit": "USD",
+        "periodEnd": "2026-07-26",
+        "previousPeriodEnd": "2026-04-26",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "salesforce",
+        "stage": "ai-applications",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 11345000000,
+        "previousValue": 11133000000,
+        "changePercent": 1.9,
+        "unit": "USD",
+        "periodEnd": "2026-07-31",
+        "previousPeriodEnd": "2026-04-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "salesforce",
+        "stage": "ai-applications",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 3526000000,
+        "previousValue": 2107000000,
+        "changePercent": 67.35,
+        "unit": "USD",
+        "periodEnd": "2026-07-31",
+        "previousPeriodEnd": "2026-04-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "salesforce",
+        "stage": "ai-applications",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 109620000000,
+        "previousValue": 106680000000,
+        "changePercent": 2.76,
+        "unit": "USD",
+        "periodEnd": "2026-07-31",
+        "previousPeriodEnd": "2026-04-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "salesforce",
+        "stage": "ai-applications",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 8310000000,
+        "previousValue": 8935000000,
+        "changePercent": -6.99,
+        "unit": "USD",
+        "periodEnd": "2026-07-31",
+        "previousPeriodEnd": "2026-04-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "salesforce",
+        "stage": "ai-applications",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 171000000,
+        "previousValue": 145000000,
+        "changePercent": 17.93,
+        "unit": "USD",
+        "periodEnd": "2026-07-31",
+        "previousPeriodEnd": "2026-04-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "synopsys",
+        "stage": "eda-ip",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 2476822000,
+        "previousValue": 2275985000,
+        "changePercent": 8.82,
+        "unit": "USD",
+        "periodEnd": "2026-07-31",
+        "previousPeriodEnd": "2026-04-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "synopsys",
+        "stage": "eda-ip",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 545800000,
+        "previousValue": 17105000,
+        "changePercent": 3090.88,
+        "unit": "USD",
+        "periodEnd": "2026-07-31",
+        "previousPeriodEnd": "2026-04-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "synopsys",
+        "stage": "eda-ip",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 47726263000,
+        "previousValue": 46889027000,
+        "changePercent": 1.79,
+        "unit": "USD",
+        "periodEnd": "2026-07-31",
+        "previousPeriodEnd": "2026-04-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "synopsys",
+        "stage": "eda-ip",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 3606286000,
+        "previousValue": 2412472000,
+        "changePercent": 49.49,
+        "unit": "USD",
+        "periodEnd": "2026-07-31",
+        "previousPeriodEnd": "2026-04-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "synopsys",
+        "stage": "eda-ip",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 156089000,
+        "previousValue": 89518000,
+        "changePercent": 74.37,
+        "unit": "USD",
+        "periodEnd": "2026-07-31",
+        "previousPeriodEnd": "2026-04-30",
+        "sourceForm": "10-Q"
+      }
+    ],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
     "new": [
       {
-        "id": "aws-blog-5e98e473f864",
-        "publishedAt": "2026-08-25T16:11:02.000Z",
-        "source": "AWS 官方博客",
+        "id": "nvidia-blog-b32d9ad97343",
+        "publishedAt": "2026-08-26T21:05:30.000Z",
+        "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "Happy 20th Birthday, Amazon EC2",
-        "summary": "Twenty years ago today, Jeff Barr wrote a blog post that launched the Amazon EC2 Beta . That single post introduced resizable Linux virtual servers in the cloud, billed by the hour, with one instance type ( m1.small ) in one Region (US East). It was minimal yet useful, and it changed how the world thinks about computing infrastructure. In 2021, Jeff covered the fifteen years of EC2 with the backstory and memorable EC",
+        "title": "NVIDIA NVLink Fusion Expands With NVHBM Custom High-Bandwidth Memory",
+        "summary": "The next wave of AI is placing new demands on infrastructure. As AI agents and trillion-parameter workloads become mainstream, the performance of AI infrastructure depends not only on compute, but on how compute, memory, storage, networking and software are designed together as a unified system. To help hyperscalers and AI innovators build the next generation of semi-custom AI infrastructure, NVIDIA today expanded NV",
         "topics": [
           "AI 算力与芯片",
+          "半导体制造",
+          "数据中心与电力",
           "模型与平台"
         ],
         "relatedCompanies": [
+          "nvidia",
           "amazon"
         ],
         "relatedStages": [
@@ -67,34 +286,25 @@
           "memory",
           "packaging",
           "ai-infrastructure",
-          "models-platforms"
+          "equipment-materials"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://aws.amazon.com/blogs/aws/happy-20th-birthday-amazon-ec2/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/"
       },
       {
-        "id": "nvidia-blog-67c0d574508d",
-        "publishedAt": "2026-08-25T15:30:48.000Z",
-        "source": "NVIDIA 官方博客",
+        "id": "intel-newsroom-a17c3a828b9c",
+        "publishedAt": "2026-08-26T16:00:55.000Z",
+        "source": "Intel Newsroom",
         "sourceType": "公司观点",
-        "title": "Leading Publishers Bring Blockbuster PC Games and Technology to NVIDIA RTX Spark",
-        "summary": "NVIDIA is bringing the next wave of RTX gaming to the Gamescom conference running this week in Cologne, Germany, with support for new games, anti-cheat technologies and increased visual quality. Electronic Arts, Embark and Ubisoft are among the latest game publishers and developers bringing their blockbuster titles to NVIDIA RTX Spark ahead of its launch this fall. They join the publishers that announced RTX Spark su",
+        "title": "Intel at AI Infra Summit 2026",
+        "summary": "At AI Infra Summit 2026, Intel will showcase its progress executing its vision for AI infrastructure at scale, demonstrating momentum across edge, enterprise, cloud, and physical AI environments. Intel CEO Lip-Bu Tan joins moderator Edmund (Ed) Nelson, co-founder & strategy director of AI Infra Summit, for a fireside chat on September 15 to discuss how … The post Intel at AI Infra Summit 2026 appeared first on Newsro",
         "topics": [
-          "AI 算力与芯片",
           "模型与平台"
         ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
+        "relatedCompanies": [],
+        "relatedStages": [],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/gamescom-rtx-spark-pc-games-technology/"
+        "sourceUrl": "https://newsroom.intel.com/artificial-intelligence/intel-at-ai-infra-summit-2026"
       }
     ],
     "analysisRefreshed": []

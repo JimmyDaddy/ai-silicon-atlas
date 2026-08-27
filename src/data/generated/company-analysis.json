@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-26T03:28:57.353Z",
+  "generatedAt": "2026-08-27T12:52:48.772Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 15,
+  "completedCount": 13,
   "companies": {
     "synopsys": {
       "status": "ok",
@@ -129,7 +129,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-26T03:29:17.692Z",
+      "lastAttemptAt": "2026-08-27T12:52:56.891Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "cadence": {
@@ -259,122 +259,11 @@
       "confidence": "medium"
     },
     "arm": {
-      "status": "ok",
-      "inputHash": "1e67e54abfe8678245b253d6211d6894760857908f72a9d243abb04aa6caf7d3",
-      "generatedAt": "2026-07-30T05:22:25.640Z",
-      "model": "openai/gpt-4.1-mini",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0001973239-26-000114",
-          "label": "6-K · 2026-07-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
-        },
-        {
-          "id": "filing:0001973239-26-000113",
-          "label": "6-K · 2026-07-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000113/arm-20260729.htm"
-        },
-        {
-          "id": "filing:0001973239-26-000097",
-          "label": "20-F · 2026-05-26",
-          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm"
-        },
-        {
-          "id": "filing:0001973239-26-000062",
-          "label": "6-K · 2026-05-06",
-          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/arm-20260506.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001973239.json"
-        }
-      ],
-      "summary": "安谋（ARM HOLDINGS PLC）2027财年第一季度（2026年4月至6月）实现营业收入12.89亿美元，同比增长22.41%；净利润2.7亿美元，同比增长107.69%。资产总额达111.96亿美元，较上一季度增长4.61%；现金及现金等价物为30.58亿美元，较上一季度增长11.16%。同期资本支出为1.97亿美元，同比增长27.92%。当前证据包不含披露正文，无法判断具体业务战略或市场动态。",
-      "summaryEvidence": [
-        "filing:0001973239-26-000114",
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "营业收入同比增长22.41%，达到12.89亿美元。",
-          "evidence": [
-            "filing:0001973239-26-000114"
-          ]
-        },
-        {
-          "text": "净利润同比增长107.69%，达到2.7亿美元。",
-          "evidence": [
-            "filing:0001973239-26-000114"
-          ]
-        },
-        {
-          "text": "资产总额较上一季度增长4.61%，达到111.96亿美元。",
-          "evidence": [
-            "filing:0001973239-26-000114"
-          ]
-        },
-        {
-          "text": "现金及现金等价物较上一季度增长11.16%，达到30.58亿美元。",
-          "evidence": [
-            "filing:0001973239-26-000114"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "收入和净利润的显著增长表明公司经营状况改善。",
-          "evidence": [
-            "filing:0001973239-26-000114"
-          ]
-        },
-        {
-          "text": "资本支出增加可能反映公司对未来业务扩展或技术升级的投资。",
-          "evidence": [
-            "filing:0001973239-26-000114"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "收入和利润增长可能增强公司在EDA-IP领域的市场竞争力。",
-          "evidence": [
-            "filing:0001973239-26-000114"
-          ]
-        },
-        {
-          "text": "资本支出增加可能带动供应链相关设备和服务需求。",
-          "evidence": [
-            "filing:0001973239-26-000114"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "当前证据包不含披露正文，无法判断收入增长的具体驱动因素及市场环境。",
-          "evidence": []
-        },
-        {
-          "text": "缺乏对未来业务战略、风险因素及行业趋势的详细披露。",
-          "evidence": []
-        },
-        {
-          "text": "无法确认资本支出的具体用途及其对未来业绩的影响。",
-          "evidence": []
-        }
-      ],
-      "questionsToWatch": [
-        "收入和利润增长的主要驱动因素是什么？",
-        "公司未来的资本支出计划及重点投资领域有哪些？",
-        "市场竞争格局及技术发展对公司业务的影响如何？",
-        "公司如何应对行业潜在风险和不确定性？"
-      ],
-      "confidence": "high",
-      "stale": true,
-      "lastAttemptAt": "2026-08-26T03:29:25.996Z",
-      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
+      "status": "pending",
+      "inputHash": "28c824a4bb4cc545ed7d76cfc92b7f4a36858fe117d979baf02b2d788db5f35f",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "nvidia": {
       "status": "ok",
@@ -481,7 +370,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-26T03:29:13.537Z",
+      "lastAttemptAt": "2026-08-27T12:53:01.123Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "amd": {
@@ -490,7 +379,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-08-26T03:29:09.391Z"
+      "lastAttemptAt": "2026-08-27T12:53:18.046Z"
     },
     "broadcom": {
       "status": "ok",
@@ -846,7 +735,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-08-26T03:29:05.233Z",
+      "lastAttemptAt": "2026-08-27T12:53:13.816Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "kla": {
@@ -949,7 +838,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-08-26T03:29:01.075Z",
+      "lastAttemptAt": "2026-08-27T12:53:09.578Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "samsung-electronics": {
@@ -1079,7 +968,10 @@
         "是否有重大客户、市场或产品结构变化？",
         "管理层对后续季度有何指引或风险提示？"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "stale": true,
+      "lastAttemptAt": "2026-08-27T12:53:05.353Z",
+      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "sk-hynix": {
       "status": "unavailable",
@@ -1089,91 +981,11 @@
       "reason": "Source status: error"
     },
     "ase-technology": {
-      "status": "ok",
-      "inputHash": "057d7ee276529fbca4d06e2ad39f400e7fcafc4af5f0890ea2674d36a0ec461b",
-      "generatedAt": "2026-07-20T14:21:15.407Z",
-      "model": "openai/gpt-4.1",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0000950103-26-010427",
-          "label": "6-K · 2026-07-09",
-          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326010427/dp249884_6k.htm"
-        },
-        {
-          "id": "filing:0000950103-26-008681",
-          "label": "6-K · 2026-06-09",
-          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326008681/dp248155_6k.htm"
-        },
-        {
-          "id": "filing:0000950103-26-006979",
-          "label": "6-K · 2026-05-08",
-          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326006979/dp246487_6k.htm"
-        },
-        {
-          "id": "filing:0000950103-26-006340",
-          "label": "6-K · 2026-04-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326006340/dp245879_6k.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001122411.json"
-        }
-      ],
-      "summary": "日月光投控2025年度营收、净利润、资产和现金均实现显著增长。最新披露的多份6-K文件仅提供元数据，无法判断具体运营或重大事项。公司在半导体封装领域表现出较强增长势头。",
-      "summaryEvidence": [
-        "company-facts",
-        "filing:0000950103-26-010427",
-        "filing:0000950103-26-008681",
-        "filing:0000950103-26-006979",
-        "filing:0000950103-26-006340"
-      ],
-      "whatChanged": [
-        {
-          "text": "2025年营收同比增长13.3%，净利润同比增长27.34%，资产同比增长25.46%，现金同比增长20.89%。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "公司财务指标持续向好，显示经营状况稳健。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "封装环节业绩提升，可能带动上游材料、设备需求及下游客户供应能力增强。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "当前证据包不含披露正文，无法判断最新6-K文件具体涉及的运营、战略或重大事项。",
-          "evidence": [
-            "filing:0000950103-26-010427",
-            "filing:0000950103-26-008681",
-            "filing:0000950103-26-006979",
-            "filing:0000950103-26-006340"
-          ]
-        }
-      ],
-      "questionsToWatch": [
-        "最新6-K文件是否披露重大投资、并购或业务调整？",
-        "公司2026年业绩能否延续增长势头？",
-        "封装业务扩张对供应链及客户结构有何影响？"
-      ],
-      "confidence": "medium",
-      "stale": true,
-      "lastAttemptAt": "2026-08-26T03:29:30.155Z",
-      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
+      "status": "pending",
+      "inputHash": "9a9457a88e08bc2b85a7afb6a73d7d197a4ab193e7d00f668c26f8e389b98f50",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "amkor": {
       "status": "ok",
@@ -1409,7 +1221,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-08-26T03:29:21.841Z"
+      "lastAttemptAt": "2026-08-27T12:53:22.277Z"
     },
     "equinix": {
       "status": "pending",
@@ -1659,11 +1471,12 @@
       "confidence": "medium"
     },
     "salesforce": {
-      "status": "pending",
-      "inputHash": "f5c5beb875cb981c24336f7b66ed1079408eb53d2ede6e153fcd4c6595c37283",
+      "status": "error",
+      "inputHash": "66c38d559720aee0e20787691171b78d693e0dd9063fcda6e799966559dd3258",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
+      "lastAttemptAt": "2026-08-27T12:52:52.672Z"
     },
     "servicenow": {
       "status": "ok",

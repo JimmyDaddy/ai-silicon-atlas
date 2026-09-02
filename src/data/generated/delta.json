@@ -1,131 +1,101 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T07:53:26.254Z",
+  "generatedAt": "2026-09-02T07:10:28.242Z",
   "period": {
-    "from": "2026-08-31T08:43:47.293Z",
-    "to": "2026-09-01T07:53:26.254Z",
+    "from": "2026-09-01T07:53:26.254Z",
+    "to": "2026-09-02T07:10:28.242Z",
     "baseRef": "HEAD"
   },
   "summary": {
     "newFilings": 1,
-    "metricChanges": 5,
+    "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 7
+    "totalChanges": 3
   },
   "affected": {
     "stages": {
-      "ai-infrastructure": 7,
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
+      "manufacturing": 1,
+      "design": 2,
+      "memory": 2,
+      "packaging": 2,
+      "ai-infrastructure": 2,
+      "equipment-materials": 1,
       "models-platforms": 1
     },
     "topics": {
-      "AI 算力与芯片": 1,
-      "模型与平台": 1
+      "AI 算力与芯片": 2,
+      "半导体制造": 1,
+      "数据中心与电力": 1,
+      "企业应用与生产力": 2,
+      "供应链与地缘政策": 1,
+      "模型与平台": 1,
+      "资本市场与金融稳定": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
-        "form": "10-K",
-        "filedAt": "2026-08-31",
-        "reportDate": "2026-06-30",
-        "accessionNumber": "0001375365-26-000022",
-        "title": "10-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm"
+        "company": "tsmc",
+        "stage": "manufacturing",
+        "form": "6-K",
+        "filedAt": "2026-09-01",
+        "reportDate": "2026-09-01",
+        "accessionNumber": "0001046179-26-000552",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000552/tsm-dividendadjustmentx202.htm"
       }
     ],
-    "metrics": [
-      {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
-        "metric": "revenue",
-        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 39063072000,
-        "previousValue": 10243014000,
-        "changePercent": 281.36,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-K"
-      },
-      {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 2230453000,
-        "previousValue": 483387000,
-        "changePercent": 361.42,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-K"
-      },
-      {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 29945467000,
-        "previousValue": 23452029000,
-        "changePercent": 27.69,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-K"
-      },
-      {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 7521474000,
-        "previousValue": 1290324000,
-        "changePercent": 482.91,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-K"
-      },
-      {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
-        "metric": "capex",
-        "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 161999000,
-        "previousValue": 133769000,
-        "changePercent": 21.1,
-        "unit": "USD",
-        "periodEnd": "2026-06-30",
-        "previousPeriodEnd": "2026-03-31",
-        "sourceForm": "10-K"
-      }
-    ],
+    "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
     "new": [
       {
-        "id": "aws-blog-af09bc3287ab",
-        "publishedAt": "2026-08-31T14:45:25.000Z",
-        "source": "AWS 官方博客",
+        "id": "microsoft-blog-05166c02badc",
+        "publishedAt": "2026-09-02T06:00:02.000Z",
+        "source": "Microsoft 官方博客",
         "sourceType": "公司观点",
-        "title": "AWS Weekly Roundup: Welcome DuckLabs to the team, Agentic Resource Discovery (ARD), and more (August 31, 2026)",
-        "summary": "The news that interested me the most last week was the DuckLabs acquisition. AWS has signed a definitive agreement to acquire DuckLabs , the Amsterdam-based company behind DuckDB, the popular open source analytical database that runs in-process and executes SQL directly against files like Parquet, CSV, and JSON. DuckDB stays open source under its independent foundation and the MIT license, and over time AWS plans to ",
+        "title": "The yield imperative: Turning AI infrastructure into useful intelligence",
+        "summary": "As we enter the next era , what will be the defining measure of our progress? Every industry has a word that shapes how it thinks. For pilots, it’s safety. For insurers, it’s risk. For the semiconductor industry, it’s yield. Yield does not ask how elegant the solution is, how many years it took or what the roadmap promised. Rather, it asks one simple question: What useful output did we produce? For more than 60 years",
         "topics": [
           "AI 算力与芯片",
-          "模型与平台"
+          "半导体制造",
+          "数据中心与电力",
+          "企业应用与生产力",
+          "供应链与地缘政策"
         ],
         "relatedCompanies": [
-          "amazon"
+          "microsoft"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/"
+      },
+      {
+        "id": "nvidia-blog-d235e1f23d69",
+        "publishedAt": "2026-09-01T21:19:20.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "NVIDIA and CrowdStrike Strengthen Agentic Cybersecurity Frontier",
+        "summary": "“We’re at an inflection point in cybersecurity,” Jensen Huang told a sold-out crowd at CrowdStrike’s Fal.Con 2026 in Las Vegas Tuesday. Attacks are now automated. Defense has to be, too. The NVIDIA founder and CEO joined CrowdStrike CEO and founder George Kurtz to announce CrowdStrike SafeMind , its agentic cybersecurity system developed by the CrowdStrike Cyber Superintelligence Lab. “This is the beginning of a new ",
+        "topics": [
+          "AI 算力与芯片",
+          "模型与平台",
+          "企业应用与生产力",
+          "资本市场与金融稳定"
+        ],
+        "relatedCompanies": [
+          "nvidia"
         ],
         "relatedStages": [
           "design",
@@ -135,7 +105,7 @@
           "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-welcome-ducklabs-to-the-team-agentic-resource-discovery-ard-and-more-august-31-2026/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-crowdstrike-fal-con-2026/"
       }
     ],
     "analysisRefreshed": []

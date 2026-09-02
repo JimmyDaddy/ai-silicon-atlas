@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T07:52:51.070Z",
+  "generatedAt": "2026-09-02T07:09:53.397Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -129,7 +129,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-01T07:53:08.271Z",
+      "lastAttemptAt": "2026-09-02T07:10:14.635Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "cadence": {
@@ -370,7 +370,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-01T07:53:12.621Z",
+      "lastAttemptAt": "2026-09-02T07:10:18.937Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "amd": {
@@ -379,7 +379,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-01T07:53:25.649Z"
+      "lastAttemptAt": "2026-09-02T07:10:27.585Z"
     },
     "broadcom": {
       "status": "ok",
@@ -735,7 +735,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-01T07:52:59.593Z",
+      "lastAttemptAt": "2026-09-02T07:10:06.035Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "kla": {
@@ -838,7 +838,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-09-01T07:53:21.309Z",
+      "lastAttemptAt": "2026-09-02T07:09:57.389Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "samsung-electronics": {
@@ -970,7 +970,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-01T07:53:16.957Z",
+      "lastAttemptAt": "2026-09-02T07:10:23.259Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "sk-hynix": {
@@ -1221,7 +1221,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-01T07:52:55.256Z"
+      "lastAttemptAt": "2026-09-02T07:10:01.699Z"
     },
     "equinix": {
       "status": "pending",
@@ -1476,7 +1476,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-01T07:53:03.933Z"
+      "lastAttemptAt": "2026-09-02T07:10:10.332Z"
     },
     "servicenow": {
       "status": "ok",

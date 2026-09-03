@@ -1,51 +1,61 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-02T07:10:28.242Z",
+  "generatedAt": "2026-09-03T07:15:03.230Z",
   "period": {
-    "from": "2026-09-01T07:53:26.254Z",
-    "to": "2026-09-02T07:10:28.242Z",
+    "from": "2026-09-02T07:10:28.242Z",
+    "to": "2026-09-03T07:15:03.230Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
+    "newFilings": 3,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 2,
+    "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 3
+    "totalChanges": 4
   },
   "affected": {
     "stages": {
-      "manufacturing": 1,
-      "design": 2,
-      "memory": 2,
-      "packaging": 2,
-      "ai-infrastructure": 2,
-      "equipment-materials": 1,
-      "models-platforms": 1
+      "design": 1,
+      "models-platforms": 1,
+      "ai-infrastructure": 1
     },
     "topics": {
-      "AI 算力与芯片": 2,
-      "半导体制造": 1,
-      "数据中心与电力": 1,
-      "企业应用与生产力": 2,
-      "供应链与地缘政策": 1,
-      "模型与平台": 1,
-      "资本市场与金融稳定": 1
+      "模型与平台": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "form": "6-K",
-        "filedAt": "2026-09-01",
+        "company": "broadcom",
+        "stage": "design",
+        "form": "8-K",
+        "filedAt": "2026-09-02",
+        "reportDate": "2026-09-02",
+        "accessionNumber": "0001730168-26-000076",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-20260902.htm"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "form": "8-K",
+        "filedAt": "2026-09-02",
+        "reportDate": "2026-09-02",
+        "accessionNumber": "0001193125-26-380280",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "form": "8-K",
+        "filedAt": "2026-09-02",
         "reportDate": "2026-09-01",
-        "accessionNumber": "0001046179-26-000552",
-        "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000552/tsm-dividendadjustmentx202.htm"
+        "accessionNumber": "0001193125-26-379306",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000119312526379306/d472406d8k.htm"
       }
     ],
     "metrics": [],
@@ -55,57 +65,19 @@
   "intelligence": {
     "new": [
       {
-        "id": "microsoft-blog-05166c02badc",
-        "publishedAt": "2026-09-02T06:00:02.000Z",
-        "source": "Microsoft 官方博客",
-        "sourceType": "公司观点",
-        "title": "The yield imperative: Turning AI infrastructure into useful intelligence",
-        "summary": "As we enter the next era , what will be the defining measure of our progress? Every industry has a word that shapes how it thinks. For pilots, it’s safety. For insurers, it’s risk. For the semiconductor industry, it’s yield. Yield does not ask how elegant the solution is, how many years it took or what the roadmap promised. Rather, it asks one simple question: What useful output did we produce? For more than 60 years",
+        "id": "federal-reserve-working-papers-1246fafac4ec",
+        "publishedAt": "2026-09-02T15:30:00.000Z",
+        "source": "美国联邦储备委员会研究",
+        "sourceType": "央行研究",
+        "title": "FEDS Paper: Linear and Nonlinear Econometric Models versus Machine-Learning Models: Evidence from Realized-Volatility Forecasting(Revised)",
+        "summary": "Rehim Kilic This paper examines which representations of persistence and nonlinearity are most useful for forecasting realized volatility and whether machine learning adds value beyond econometric models designed for long memory and regime dependence. We compare HAR, ARFIMA, threshold HAR, smooth-transition HAR, and Markov-switching HAR with XGBoost and several neural-network models for the S&P 500 and 40 U.S. equiti",
         "topics": [
-          "AI 算力与芯片",
-          "半导体制造",
-          "数据中心与电力",
-          "企业应用与生产力",
-          "供应链与地缘政策"
+          "模型与平台"
         ],
-        "relatedCompanies": [
-          "microsoft"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "equipment-materials"
-        ],
+        "relatedCompanies": [],
+        "relatedStages": [],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/"
-      },
-      {
-        "id": "nvidia-blog-d235e1f23d69",
-        "publishedAt": "2026-09-01T21:19:20.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA and CrowdStrike Strengthen Agentic Cybersecurity Frontier",
-        "summary": "“We’re at an inflection point in cybersecurity,” Jensen Huang told a sold-out crowd at CrowdStrike’s Fal.Con 2026 in Las Vegas Tuesday. Attacks are now automated. Defense has to be, too. The NVIDIA founder and CEO joined CrowdStrike CEO and founder George Kurtz to announce CrowdStrike SafeMind , its agentic cybersecurity system developed by the CrowdStrike Cyber Superintelligence Lab. “This is the beginning of a new ",
-        "topics": [
-          "AI 算力与芯片",
-          "模型与平台",
-          "企业应用与生产力",
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-crowdstrike-fal-con-2026/"
+        "sourceUrl": "https://www.federalreserve.gov/econres/feds/linear-and-nonlinear-econometric-models-against-machine-learning-models.htm"
       }
     ],
     "analysisRefreshed": []

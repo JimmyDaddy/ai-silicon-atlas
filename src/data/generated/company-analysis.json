@@ -1,136 +1,17 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-03T07:14:29.233Z",
+  "generatedAt": "2026-09-04T07:19:07.547Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 11,
+  "completedCount": 10,
   "companies": {
     "synopsys": {
-      "status": "ok",
-      "inputHash": "174c965ada94dddb3fcb4e22f0c38dcfbb6d37fc26fb4a289cbfa67a59e22952",
-      "generatedAt": "2026-07-20T14:27:43.783Z",
-      "model": "openai/gpt-4.1",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0000883241-26-000018",
-          "label": "10-Q · 2026-05-27",
-          "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000018/snps-20260430.htm"
-        },
-        {
-          "id": "filing:0001193125-26-241920",
-          "label": "8-K · 2026-05-27",
-          "url": "https://www.sec.gov/Archives/edgar/data/883241/000119312526241920/d96543d8k.htm"
-        },
-        {
-          "id": "filing:0001193125-26-241911",
-          "label": "8-K · 2026-05-27",
-          "url": "https://www.sec.gov/Archives/edgar/data/883241/000119312526241911/d126227d8k.htm"
-        },
-        {
-          "id": "filing:0001193125-26-164085",
-          "label": "8-K · 2026-04-20",
-          "url": "https://www.sec.gov/Archives/edgar/data/883241/000119312526164085/d467081d8k.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000883241.json"
-        }
-      ],
-      "summary": "新思科技2026年Q2收入同比大幅增长，但净利润大幅下降，资产略减，现金增加，资本开支略降。当前证据包未包含公告正文，无法判断净利润大幅下降的具体原因。",
-      "summaryEvidence": [
-        "filing:0000883241-26-000018",
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "收入同比增长41.87%，达到22.76亿美元。",
-          "evidence": [
-            "filing:0000883241-26-000018"
-          ]
-        },
-        {
-          "text": "净利润同比下降95.05%，仅为1710万美元。",
-          "evidence": [
-            "filing:0000883241-26-000018"
-          ]
-        },
-        {
-          "text": "资产环比下降0.74%，至468.89亿美元。",
-          "evidence": [
-            "filing:0000883241-26-000018"
-          ]
-        },
-        {
-          "text": "现金环比增长13.28%，至24.12亿美元。",
-          "evidence": [
-            "filing:0000883241-26-000018"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "收入显著增长，显示业务扩张或市场需求提升。",
-          "evidence": [
-            "filing:0000883241-26-000018"
-          ]
-        },
-        {
-          "text": "净利润大幅下降，可能存在一次性费用、成本上升或其他影响，但具体原因无法判断。",
-          "evidence": [
-            "filing:0000883241-26-000018"
-          ]
-        },
-        {
-          "text": "现金增加，表明流动性改善。",
-          "evidence": [
-            "filing:0000883241-26-000018"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "收入增长可能带动EDA/IP产业链上下游需求。",
-          "evidence": [
-            "filing:0000883241-26-000018"
-          ]
-        },
-        {
-          "text": "净利润大幅下降或影响公司对研发、并购等产业链投资能力。",
-          "evidence": [
-            "filing:0000883241-26-000018"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "当前证据包不含披露正文，无法判断净利润大幅下降的具体原因。",
-          "evidence": [
-            "filing:0000883241-26-000018"
-          ]
-        },
-        {
-          "text": "无法确认是否有重大事件、并购、诉讼或其他影响业绩的事项。",
-          "evidence": [
-            "filing:0001193125-26-241920",
-            "filing:0001193125-26-241911",
-            "filing:0001193125-26-164085"
-          ]
-        }
-      ],
-      "questionsToWatch": [
-        "净利润大幅下降的具体原因是什么？",
-        "是否有一次性费用、重大事件或结构性变化影响业绩？",
-        "收入增长是否可持续？",
-        "现金增加是否源于经营活动还是其他途径？"
-      ],
-      "confidence": "medium",
-      "stale": true,
-      "lastAttemptAt": "2026-09-03T07:15:02.566Z",
-      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
+      "status": "pending",
+      "inputHash": "3ffd8c862968f11555936d04cc4aa92d35df60ccb5a3e288beb342dd6ea78864",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "cadence": {
       "status": "ok",
@@ -266,11 +147,12 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "nvidia": {
-      "status": "pending",
-      "inputHash": "ee07e8db85a0d27b5e087594768fea92d882f8df23a1ea3000bd47aff763d6d9",
+      "status": "error",
+      "inputHash": "95e9f7bc8fdecf81766829e8da1e09af3e4e015a829499cece6fca085509c450",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
+      "lastAttemptAt": "2026-09-04T07:19:11.404Z"
     },
     "amd": {
       "status": "pending",
@@ -402,7 +284,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-03T07:14:33.188Z",
+      "lastAttemptAt": "2026-09-04T07:19:15.616Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "mediatek": {
@@ -636,7 +518,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-03T07:14:54.179Z",
+      "lastAttemptAt": "2026-09-04T07:19:36.698Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "kla": {
@@ -739,7 +621,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-09-03T07:14:45.786Z",
+      "lastAttemptAt": "2026-09-04T07:19:28.255Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "samsung-electronics": {
@@ -1005,7 +887,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-09-03T07:14:37.393Z",
+      "lastAttemptAt": "2026-09-04T07:19:19.828Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "supermicro": {
@@ -1014,7 +896,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-03T07:14:49.985Z"
+      "lastAttemptAt": "2026-09-04T07:19:32.480Z"
     },
     "equinix": {
       "status": "pending",
@@ -1125,7 +1007,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-09-03T07:14:41.591Z",
+      "lastAttemptAt": "2026-09-04T07:19:24.042Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "alphabet": {
@@ -1272,7 +1154,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-03T07:14:58.373Z"
+      "lastAttemptAt": "2026-09-04T07:19:40.910Z"
     },
     "servicenow": {
       "status": "ok",

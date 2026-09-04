@@ -1,61 +1,45 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-03T07:15:03.230Z",
+  "generatedAt": "2026-09-04T07:19:41.525Z",
   "period": {
-    "from": "2026-09-02T07:10:28.242Z",
-    "to": "2026-09-03T07:15:03.230Z",
+    "from": "2026-09-03T07:15:03.230Z",
+    "to": "2026-09-04T07:19:41.525Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 3,
+    "newFilings": 1,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
     "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 4
+    "totalChanges": 2
   },
   "affected": {
     "stages": {
-      "design": 1,
-      "models-platforms": 1,
-      "ai-infrastructure": 1
+      "design": 2,
+      "memory": 1,
+      "packaging": 1,
+      "ai-infrastructure": 1,
+      "models-platforms": 1
     },
     "topics": {
-      "模型与平台": 1
+      "AI 算力与芯片": 1,
+      "模型与平台": 1,
+      "企业应用与生产力": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "broadcom",
+        "company": "nvidia",
         "stage": "design",
         "form": "8-K",
-        "filedAt": "2026-09-02",
+        "filedAt": "2026-09-03",
         "reportDate": "2026-09-02",
-        "accessionNumber": "0001730168-26-000076",
+        "accessionNumber": "0001045810-26-000078",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-20260902.htm"
-      },
-      {
-        "company": "microsoft",
-        "stage": "models-platforms",
-        "form": "8-K",
-        "filedAt": "2026-09-02",
-        "reportDate": "2026-09-02",
-        "accessionNumber": "0001193125-26-380280",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm"
-      },
-      {
-        "company": "vertiv",
-        "stage": "ai-infrastructure",
-        "form": "8-K",
-        "filedAt": "2026-09-02",
-        "reportDate": "2026-09-01",
-        "accessionNumber": "0001193125-26-379306",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000119312526379306/d472406d8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
       }
     ],
     "metrics": [],
@@ -65,19 +49,30 @@
   "intelligence": {
     "new": [
       {
-        "id": "federal-reserve-working-papers-1246fafac4ec",
-        "publishedAt": "2026-09-02T15:30:00.000Z",
-        "source": "美国联邦储备委员会研究",
-        "sourceType": "央行研究",
-        "title": "FEDS Paper: Linear and Nonlinear Econometric Models versus Machine-Learning Models: Evidence from Realized-Volatility Forecasting(Revised)",
-        "summary": "Rehim Kilic This paper examines which representations of persistence and nonlinearity are most useful for forecasting realized volatility and whether machine learning adds value beyond econometric models designed for long memory and regime dependence. We compare HAR, ARFIMA, threshold HAR, smooth-transition HAR, and Markov-switching HAR with XGBoost and several neural-network models for the S&P 500 and 40 U.S. equiti",
+        "id": "nvidia-blog-7765da697e6b",
+        "publishedAt": "2026-09-03T16:00:59.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026",
+        "summary": "Frontier intelligence is going local. At IFA 2026, NVIDIA, Microsoft and its partners are teaming up to provide faster inference and new tools that make agents easier to set up and run locally on NVIDIA hardware. New compact NVIDIA RTX Spark Windows PCs are also coming in October to give AI enthusiasts, developers and creators more ways to run capable agents locally and securely. Today’s announcements include: Simpli",
         "topics": [
-          "模型与平台"
+          "AI 算力与芯片",
+          "模型与平台",
+          "企业应用与生产力"
         ],
-        "relatedCompanies": [],
-        "relatedStages": [],
+        "relatedCompanies": [
+          "nvidia",
+          "microsoft"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
         "analysisStatus": "error",
-        "sourceUrl": "https://www.federalreserve.gov/econres/feds/linear-and-nonlinear-econometric-models-against-machine-learning-models.htm"
+        "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/"
       }
     ],
     "analysisRefreshed": []

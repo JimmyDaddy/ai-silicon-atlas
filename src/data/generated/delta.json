@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-04T07:19:41.525Z",
+  "generatedAt": "2026-09-05T06:59:59.937Z",
   "period": {
-    "from": "2026-09-03T07:15:03.230Z",
-    "to": "2026-09-04T07:19:41.525Z",
+    "from": "2026-09-04T07:19:41.525Z",
+    "to": "2026-09-05T06:59:59.937Z",
     "baseRef": "HEAD"
   },
   "summary": {
@@ -11,35 +11,27 @@
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 2
+    "totalChanges": 1
   },
   "affected": {
     "stages": {
-      "design": 2,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1,
-      "models-platforms": 1
+      "ai-applications": 1
     },
-    "topics": {
-      "AI 算力与芯片": 1,
-      "模型与平台": 1,
-      "企业应用与生产力": 1
-    }
+    "topics": {}
   },
   "companies": {
     "filings": [
       {
-        "company": "nvidia",
-        "stage": "design",
+        "company": "salesforce",
+        "stage": "ai-applications",
         "form": "8-K",
-        "filedAt": "2026-09-03",
+        "filedAt": "2026-09-04",
         "reportDate": "2026-09-02",
-        "accessionNumber": "0001045810-26-000078",
+        "accessionNumber": "0001108524-26-000197",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000197/crm-20260902.htm"
       }
     ],
     "metrics": [],
@@ -47,34 +39,7 @@
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "nvidia-blog-7765da697e6b",
-        "publishedAt": "2026-09-03T16:00:59.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026",
-        "summary": "Frontier intelligence is going local. At IFA 2026, NVIDIA, Microsoft and its partners are teaming up to provide faster inference and new tools that make agents easier to set up and run locally on NVIDIA hardware. New compact NVIDIA RTX Spark Windows PCs are also coming in October to give AI enthusiasts, developers and creators more ways to run capable agents locally and securely. Today’s announcements include: Simpli",
-        "topics": [
-          "AI 算力与芯片",
-          "模型与平台",
-          "企业应用与生产力"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "microsoft"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

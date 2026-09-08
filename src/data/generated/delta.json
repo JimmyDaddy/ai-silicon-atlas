@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-07T07:24:07.533Z",
+  "generatedAt": "2026-09-08T07:18:38.340Z",
   "period": {
-    "from": "2026-09-06T07:11:54.073Z",
-    "to": "2026-09-07T07:24:07.533Z",
+    "from": "2026-09-07T07:24:07.533Z",
+    "to": "2026-09-08T07:18:38.340Z",
     "baseRef": "HEAD"
   },
   "summary": {
@@ -11,13 +11,23 @@
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 0
+    "totalChanges": 1
   },
   "affected": {
-    "stages": {},
-    "topics": {}
+    "stages": {
+      "design": 1,
+      "memory": 1,
+      "packaging": 1,
+      "ai-infrastructure": 1,
+      "equipment-materials": 1
+    },
+    "topics": {
+      "AI 算力与芯片": 1,
+      "半导体制造": 1,
+      "模型与平台": 1
+    }
   },
   "companies": {
     "filings": [],
@@ -26,7 +36,33 @@
     "analysis": []
   },
   "intelligence": {
-    "new": [],
+    "new": [
+      {
+        "id": "aws-blog-eda445f3a187",
+        "publishedAt": "2026-09-07T14:24:08.000Z",
+        "source": "AWS 官方博客",
+        "sourceType": "公司观点",
+        "title": "AWS Weekly Roundup: Claude Fable 5.1 on AWS, Amazon Linux 2027 preview, AWS Certified AI Business Strategist, and more (September 7, 2026)",
+        "summary": "Last week, Claude Fable 5.1 became available on AWS . According to Anthropic, Claude Fable 5.1 delivers frontier intelligence for ambitious tasks across coding, scientific research, and enterprise workflows. Claude Fable 5.1 is built for long-running, high-stakes work that runs for hours and spans many applications. It can own more of a software project on its own, handling features across an entire codebase, code re",
+        "topics": [
+          "AI 算力与芯片",
+          "半导体制造",
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "amazon"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-fable-5-1-on-aws-amazon-linux-2027-preview-aws-certified-ai-business-strategist-and-more-september-7-2026/"
+      }
+    ],
     "analysisRefreshed": []
   }
 }

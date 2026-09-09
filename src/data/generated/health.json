@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T07:18:38.340Z",
+  "generatedAt": "2026-09-09T07:27:32.383Z",
   "overall": "degraded",
   "schedule": {
     "cadence": "daily",
@@ -10,7 +10,7 @@
   },
   "freshness": {
     "secEdgar": {
-      "lastSuccessfulAt": "2026-09-08T07:18:03.121Z",
+      "lastSuccessfulAt": "2026-09-09T07:26:57.094Z",
       "ageHours": 0.03,
       "warningAfterHours": 36,
       "criticalAfterHours": 72
@@ -30,12 +30,12 @@
   },
   "companyAnalysis": {
     "statuses": {
-      "pending": 12,
-      "ok": 10,
+      "pending": 13,
+      "ok": 9,
       "error": 3,
       "unavailable": 6
     },
-    "completed": 10,
+    "completed": 9,
     "total": 31
   },
   "intelligence": {
@@ -53,7 +53,7 @@
     "secEdgar": {
       "provider": "SEC EDGAR",
       "status": "ok",
-      "completedAt": "2026-09-08T07:18:03.121Z",
+      "completedAt": "2026-09-09T07:26:57.094Z",
       "companyCount": 25,
       "completedCount": 25,
       "failedCount": 0,
@@ -64,7 +64,7 @@
     "openDart": {
       "provider": "OpenDART",
       "status": "ok",
-      "completedAt": "2026-09-08T07:16:43.238Z",
+      "completedAt": "2026-09-09T07:25:20.739Z",
       "companyCount": 2,
       "completedCount": null,
       "failedCount": null,
@@ -75,7 +75,7 @@
     "manual": {
       "provider": "First-party IR",
       "status": "manual",
-      "completedAt": "2026-09-08T07:16:41.787Z",
+      "completedAt": "2026-09-09T07:25:19.285Z",
       "companyCount": 4,
       "completedCount": null,
       "failedCount": null,

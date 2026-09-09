@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T07:18:03.287Z",
+  "generatedAt": "2026-09-09T07:26:57.265Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 10,
+  "completedCount": 9,
   "companies": {
     "synopsys": {
       "status": "pending",
@@ -152,7 +152,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-08T07:18:11.670Z"
+      "lastAttemptAt": "2026-09-09T07:27:10.006Z"
     },
     "amd": {
       "status": "pending",
@@ -284,7 +284,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-08T07:18:16.005Z",
+      "lastAttemptAt": "2026-09-09T07:27:14.340Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "mediatek": {
@@ -394,132 +394,11 @@
       "confidence": "medium"
     },
     "applied-materials": {
-      "status": "ok",
-      "inputHash": "f9ba91ff56f3fed1e7a11a15aa053494f894f8a6d1f33c7b7543b6efd5023236",
-      "generatedAt": "2026-07-20T14:28:09.198Z",
-      "model": "openai/gpt-4.1",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0001628280-26-037227",
-          "label": "10-Q · 2026-05-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/amat-20260426.htm"
-        },
-        {
-          "id": "filing:0001628280-26-035071",
-          "label": "8-K · 2026-05-14",
-          "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026035071/amat-20260514.htm"
-        },
-        {
-          "id": "filing:0001193125-26-106339",
-          "label": "8-K · 2026-03-13",
-          "url": "https://www.sec.gov/Archives/edgar/data/6951/000119312526106339/d114932d8k.htm"
-        },
-        {
-          "id": "filing:0001628280-26-009694",
-          "label": "10-Q · 2026-02-19",
-          "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026009694/amat-20260125.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000006951.json"
-        }
-      ],
-      "summary": "应用材料2026年Q2财报显示营收同比增长11.41%，净利润同比增长31.31%，资产环比增长7.02%，现金环比下降12.7%，资本支出同比增长43.77%。公司经营表现强劲，资本投入显著增加，但现金流有所收缩。当前证据包不含披露正文，无法判断具体业务、市场、客户或风险事项。",
-      "summaryEvidence": [
-        "filing:0001628280-26-037227",
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "营收同比增长11.41%，净利润同比增长31.31%。",
-          "evidence": [
-            "filing:0001628280-26-037227",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资产环比增长7.02%，现金环比下降12.7%。",
-          "evidence": [
-            "filing:0001628280-26-037227",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资本支出同比增长43.77%。",
-          "evidence": [
-            "filing:0001628280-26-037227",
-            "company-facts"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "公司营收和净利润持续增长，显示业务扩张和盈利能力提升。",
-          "evidence": [
-            "filing:0001628280-26-037227",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资本支出大幅增加，表明公司加大设备和产能投入。",
-          "evidence": [
-            "filing:0001628280-26-037227",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "现金流减少，需关注资金管理和流动性风险。",
-          "evidence": [
-            "filing:0001628280-26-037227",
-            "company-facts"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "资本支出增加可能推动半导体设备供应链需求上升。",
-          "evidence": [
-            "filing:0001628280-26-037227",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "营收和利润增长有利于行业上下游合作与投资信心。",
-          "evidence": [
-            "filing:0001628280-26-037227",
-            "company-facts"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "当前证据包不含披露正文，无法判断具体业务结构、市场变化、客户动态及风险事项。",
-          "evidence": [
-            "filing:0001628280-26-037227",
-            "company-facts"
-          ]
-        },
-        {
-          "text": "现金流下降的具体原因及后续影响不明。",
-          "evidence": [
-            "filing:0001628280-26-037227",
-            "company-facts"
-          ]
-        }
-      ],
-      "questionsToWatch": [
-        "资本支出增加是否带来产能扩张或新技术布局？",
-        "现金流下降是否影响公司运营和投资计划？",
-        "营收和利润增长背后的主要驱动因素是什么？",
-        "市场和客户结构有无重大变化？"
-      ],
-      "confidence": "medium",
-      "stale": true,
-      "lastAttemptAt": "2026-09-08T07:18:37.687Z",
-      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
+      "status": "pending",
+      "inputHash": "0cf9076a8d8914cc07f59faa74ae0e8f42390aefeecae3ce6a4af9f03a819429",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "kla": {
       "status": "pending",
@@ -621,7 +500,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-09-08T07:18:29.017Z",
+      "lastAttemptAt": "2026-09-09T07:27:27.382Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "samsung-electronics": {
@@ -887,7 +766,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-09-08T07:18:20.345Z",
+      "lastAttemptAt": "2026-09-09T07:27:18.690Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "supermicro": {
@@ -896,7 +775,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-08T07:18:33.351Z"
+      "lastAttemptAt": "2026-09-09T07:27:31.725Z"
     },
     "equinix": {
       "status": "pending",
@@ -1007,7 +886,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-09-08T07:18:24.681Z",
+      "lastAttemptAt": "2026-09-09T07:27:23.031Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "alphabet": {
@@ -1146,7 +1025,10 @@
         "资本支出增加主要用于哪些领域？",
         "收入增长是否可持续？"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "stale": true,
+      "lastAttemptAt": "2026-09-09T07:27:01.305Z",
+      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "salesforce": {
       "status": "error",
@@ -1154,7 +1036,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-08T07:18:07.328Z"
+      "lastAttemptAt": "2026-09-09T07:27:05.649Z"
     },
     "servicenow": {
       "status": "ok",

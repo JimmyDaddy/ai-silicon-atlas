@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-09T07:26:57.265Z",
+  "generatedAt": "2026-09-10T07:22:44.518Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 9,
+  "completedCount": 8,
   "companies": {
     "synopsys": {
       "status": "pending",
@@ -152,7 +152,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-09T07:27:10.006Z"
+      "lastAttemptAt": "2026-09-10T07:23:05.695Z"
     },
     "amd": {
       "status": "pending",
@@ -284,7 +284,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-09T07:27:14.340Z",
+      "lastAttemptAt": "2026-09-10T07:23:09.976Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "mediatek": {
@@ -415,93 +415,11 @@
       "reason": "Source status: manual"
     },
     "tsmc": {
-      "status": "ok",
-      "inputHash": "f6e2ac1cf61360d48579c93e9b1a2885835cea8b1874ac7fd08da5f761947ace",
-      "generatedAt": "2026-07-25T05:26:58.782Z",
-      "model": "openai/gpt-4.1-mini",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0001046179-26-000459",
-          "label": "6-K · 2026-07-24",
-          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000459/tsm-monthend6kx20260724.htm"
-        },
-        {
-          "id": "filing:0001046179-26-000451",
-          "label": "6-K · 2026-07-16",
-          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000451/tsm-20260716x6k.htm"
-        },
-        {
-          "id": "filing:0001046179-26-000447",
-          "label": "6-K · 2026-07-13",
-          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000447/tsm-revenue20260713.htm"
-        },
-        {
-          "id": "filing:0001046179-26-000381",
-          "label": "6-K · 2026-07-02",
-          "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000381/a20260702changeofaztreasur.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001046179.json"
-        }
-      ],
-      "summary": "台积电2024财年业绩显示收入、净利润、资产和现金均实现显著增长，收入达882.68亿美元，同比增长25.03%；净利润353.01亿美元，同比增长27.01%；资产总额2040.79亿美元，同比增长12.96%；现金及现金等价物达648.87亿美元，同比增长45.19%。近期披露的多份6-K文件未包含正文，无法判断具体经营或战略变化。",
-      "summaryEvidence": [
-        "filing:0001046179-26-000459",
-        "filing:0001046179-26-000451",
-        "filing:0001046179-26-000447",
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "2024财年收入较2023财年增长25.03%，达到882.68亿美元。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "2024财年净利润较2023财年增长27.01%，达到353.01亿美元。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "2024财年资产总额较2023财年增长12.96%，达到2040.79亿美元。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "2024财年现金及现金等价物较2023财年增长45.19%，达到648.87亿美元。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "operatingSignals": [],
-      "valueChainImpact": [],
-      "uncertainties": [
-        {
-          "text": "近期多份6-K文件仅含元数据，当前证据包不含披露正文，无法判断具体经营策略、产能调整或市场布局等事项。",
-          "evidence": []
-        },
-        {
-          "text": "无法确认是否有新的技术进展、客户结构变化或供应链调整。",
-          "evidence": []
-        }
-      ],
-      "questionsToWatch": [
-        "台积电未来是否会公布详细的经营策略或产能规划？",
-        "是否有新的技术节点或客户合作计划披露？",
-        "市场需求和供应链状况是否会影响未来业绩？"
-      ],
-      "confidence": "high",
-      "stale": true,
-      "lastAttemptAt": "2026-09-09T07:27:27.382Z",
-      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
+      "status": "pending",
+      "inputHash": "b0584dbd7eaaf1ed0b632a14629e497abfd01476f0d78bd6c5b8fce1039bc98f",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -532,11 +450,12 @@
       "reason": "Source status: error"
     },
     "ase-technology": {
-      "status": "pending",
-      "inputHash": "9a9457a88e08bc2b85a7afb6a73d7d197a4ab193e7d00f668c26f8e389b98f50",
+      "status": "error",
+      "inputHash": "95aeb2243f3e51dcec8ff6339ccebe0948905cf47c870688814ae84b07827433",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
+      "lastAttemptAt": "2026-09-10T07:22:48.524Z"
     },
     "amkor": {
       "status": "ok",
@@ -766,16 +685,15 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-09-09T07:27:18.690Z",
+      "lastAttemptAt": "2026-09-10T07:23:14.284Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "supermicro": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "ef7130b6af912ee6d8413c8ee6a1a55b30a4141b742aa3d65c67fb8e9afb78bb",
       "generatedAt": null,
       "model": null,
-      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-09T07:27:31.725Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "equinix": {
       "status": "pending",
@@ -886,7 +804,7 @@
       ],
       "confidence": "high",
       "stale": true,
-      "lastAttemptAt": "2026-09-09T07:27:23.031Z",
+      "lastAttemptAt": "2026-09-10T07:23:18.577Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "alphabet": {
@@ -897,11 +815,12 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "amazon": {
-      "status": "pending",
-      "inputHash": "cd862e47fc4efc05ffa545148a0eca7041837eb76bf2f5270abb03503d84d65a",
+      "status": "error",
+      "inputHash": "2f69791f3b5d8fe582aa00e9af4b0937d4136a44ddc932768ac88d1e6f770b19",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
+      "lastAttemptAt": "2026-09-10T07:22:52.815Z"
     },
     "meta-platforms": {
       "status": "pending",
@@ -1027,7 +946,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-09T07:27:01.305Z",
+      "lastAttemptAt": "2026-09-10T07:22:57.107Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "salesforce": {
@@ -1036,7 +955,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-09T07:27:05.649Z"
+      "lastAttemptAt": "2026-09-10T07:23:01.399Z"
     },
     "servicenow": {
       "status": "ok",

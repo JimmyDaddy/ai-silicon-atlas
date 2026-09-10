@@ -1,37 +1,56 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-09T07:27:32.383Z",
+  "generatedAt": "2026-09-10T07:23:19.235Z",
   "period": {
-    "from": "2026-09-08T07:18:38.340Z",
-    "to": "2026-09-09T07:27:32.383Z",
+    "from": "2026-09-09T07:27:32.383Z",
+    "to": "2026-09-10T07:23:19.235Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
+    "newFilings": 2,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 1
+    "totalChanges": 3
   },
   "affected": {
     "stages": {
-      "ai-applications": 1
+      "models-platforms": 2,
+      "packaging": 2,
+      "design": 1,
+      "memory": 1,
+      "ai-infrastructure": 1
     },
-    "topics": {}
+    "topics": {
+      "AI 算力与芯片": 1,
+      "模型与平台": 1,
+      "企业应用与生产力": 1,
+      "资本市场与金融稳定": 1
+    }
   },
   "companies": {
     "filings": [
       {
-        "company": "adobe",
-        "stage": "ai-applications",
+        "company": "amazon",
+        "stage": "models-platforms",
         "form": "8-K",
-        "filedAt": "2026-09-08",
-        "reportDate": "2026-09-02",
-        "accessionNumber": "0000796343-26-000144",
+        "filedAt": "2026-09-09",
+        "reportDate": "2026-09-08",
+        "accessionNumber": "0001018724-26-000036",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000144/adbe-20260902.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000036/amzn-20260908.htm"
+      },
+      {
+        "company": "ase-technology",
+        "stage": "packaging",
+        "form": "6-K",
+        "filedAt": "2026-09-09",
+        "reportDate": "2026-09-09",
+        "accessionNumber": "0000950103-26-013682",
+        "title": "FORM 6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326013682/dp253117_6k.htm"
       }
     ],
     "metrics": [],
@@ -39,7 +58,34 @@
     "analysis": []
   },
   "intelligence": {
-    "new": [],
+    "new": [
+      {
+        "id": "nvidia-blog-29c19642921e",
+        "publishedAt": "2026-09-09T16:00:42.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "NVIDIA Brings Real-Time AI to Broadcast, Sports and Global Streaming at IBC",
+        "summary": "At the IBC conference, running Sept. 11-14 in Amsterdam, the creative, technology and business communities are coming together to turn ideas into action and discuss innovations across the media and entertainment industries. More than 44,000 attendees from 170+ countries are gathering to explore 1,300+ exhibitions in 14+ halls and outdoor spaces, with over 600 speakers delivering insights. Read on to learn more about ",
+        "topics": [
+          "AI 算力与芯片",
+          "模型与平台",
+          "企业应用与生产力",
+          "资本市场与金融稳定"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/ibc-news-2026/"
+      }
+    ],
     "analysisRefreshed": []
   }
 }

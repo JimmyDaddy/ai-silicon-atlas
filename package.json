@@ -22,7 +22,7 @@
     "health:validate": "node scripts/validate-health.mjs"
   },
   "dependencies": {
-    "astro": "^7.1.2"
+    "astro": "^7.2.8"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",

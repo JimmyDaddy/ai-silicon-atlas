@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-10T07:22:44.518Z",
+  "generatedAt": "2026-09-11T07:21:20.721Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 8,
+  "completedCount": 6,
   "companies": {
     "synopsys": {
       "status": "pending",
@@ -140,11 +140,12 @@
       "confidence": "medium"
     },
     "arm": {
-      "status": "pending",
-      "inputHash": "28c824a4bb4cc545ed7d76cfc92b7f4a36858fe117d979baf02b2d788db5f35f",
+      "status": "error",
+      "inputHash": "70aa599da511d8bdd0405b2420dc93d823f74ba130e684cb53014e40e9fe2e29",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
+      "lastAttemptAt": "2026-09-11T07:21:24.626Z"
     },
     "nvidia": {
       "status": "error",
@@ -152,7 +153,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-10T07:23:05.695Z"
+      "lastAttemptAt": "2026-09-11T07:21:53.701Z"
     },
     "amd": {
       "status": "pending",
@@ -284,7 +285,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-10T07:23:09.976Z",
+      "lastAttemptAt": "2026-09-11T07:21:28.776Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "mediatek": {
@@ -415,11 +416,12 @@
       "reason": "Source status: manual"
     },
     "tsmc": {
-      "status": "pending",
-      "inputHash": "b0584dbd7eaaf1ed0b632a14629e497abfd01476f0d78bd6c5b8fce1039bc98f",
+      "status": "error",
+      "inputHash": "f9ba20080f33be93dd3b63683828dc785de39d901eeb3478c41f0279efddc5b8",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
+      "lastAttemptAt": "2026-09-11T07:21:32.930Z"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -455,7 +457,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-10T07:22:48.524Z"
+      "lastAttemptAt": "2026-09-11T07:21:41.228Z"
     },
     "amkor": {
       "status": "ok",
@@ -577,116 +579,11 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "vertiv": {
-      "status": "ok",
-      "inputHash": "2a878cb0617b7e610214f772b1a9a4fb5448250a0049731a934438dfe86a95c8",
-      "generatedAt": "2026-07-30T05:22:40.035Z",
-      "model": "openai/gpt-4.1-mini",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0001628280-26-050609",
-          "label": "10-Q · 2026-07-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026050609/vrt-20260630.htm"
-        },
-        {
-          "id": "filing:0001628280-26-050323",
-          "label": "8-K · 2026-07-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026050323/vrt-20260729.htm"
-        },
-        {
-          "id": "filing:0001628280-26-044317",
-          "label": "8-K · 2026-06-18",
-          "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026044317/vrt-20260617.htm"
-        },
-        {
-          "id": "filing:0001628280-26-042641",
-          "label": "8-K · 2026-06-12",
-          "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026042641/vrt-20260612.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001674101.json"
-        }
-      ],
-      "summary": "维谛技术2026财年第二季度财报显示，公司实现营收32.74亿美元，同比增长24.12%；归属于母公司的净利润4.978亿美元，较上一季度增长27.61%。资产总额达到159.01亿美元，较上一季度增长18.66%。现金及现金等价物为28.11亿美元，较上一季度增长30.69%。上半年资本支出为2.859亿美元，较去年同期大幅增加250.8%。当前证据包不含披露正文，无法判断具体业务变化及战略调整细节。",
-      "summaryEvidence": [
-        "filing:0001628280-26-050609",
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "2026年第二季度营收同比增长24.12%，达到32.74亿美元。",
-          "evidence": [
-            "filing:0001628280-26-050609"
-          ]
-        },
-        {
-          "text": "归属于母公司的净利润较上一季度增长27.61%，达到4.978亿美元。",
-          "evidence": [
-            "filing:0001628280-26-050609"
-          ]
-        },
-        {
-          "text": "资产总额较上一季度增长18.66%，达到159.01亿美元。",
-          "evidence": [
-            "filing:0001628280-26-050609"
-          ]
-        },
-        {
-          "text": "现金及现金等价物较上一季度增长30.69%，达到28.11亿美元。",
-          "evidence": [
-            "filing:0001628280-26-050609"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "营收和净利润的显著增长表明公司经营状况改善。",
-          "evidence": [
-            "filing:0001628280-26-050609"
-          ]
-        },
-        {
-          "text": "资本支出大幅增加可能反映公司在基础设施或产能扩张上的投入。",
-          "evidence": [
-            "filing:0001628280-26-050609"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "资本支出增加可能带动供应链相关设备和服务需求。",
-          "evidence": [
-            "filing:0001628280-26-050609"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "当前证据包不含披露正文，无法判断营收增长的具体驱动因素及业务细分表现。",
-          "evidence": []
-        },
-        {
-          "text": "缺乏关于市场环境、竞争态势及未来战略规划的详细信息。",
-          "evidence": []
-        },
-        {
-          "text": "资本支出具体用途及其对未来业绩的影响尚不明确。",
-          "evidence": []
-        }
-      ],
-      "questionsToWatch": [
-        "维谛技术营收增长的主要业务领域和客户群体有哪些？",
-        "资本支出增加的具体项目和预期收益如何？",
-        "公司如何应对行业竞争和市场变化？",
-        "未来几个季度的业绩展望及潜在风险有哪些？"
-      ],
-      "confidence": "high",
-      "stale": true,
-      "lastAttemptAt": "2026-09-10T07:23:14.284Z",
-      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
+      "status": "pending",
+      "inputHash": "1e6d23093a305f789b6bc0f6d72d88e189c6a3d71020c9353d3c41596b30b369",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "supermicro": {
       "status": "pending",
@@ -703,109 +600,11 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "microsoft": {
-      "status": "ok",
-      "inputHash": "598831500d93ef6370f45abda881d0ffdf2916aabf967775f63ec034081f325c",
-      "generatedAt": "2026-07-30T05:23:04.830Z",
-      "model": "openai/gpt-4.1-mini",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0001193125-26-323660",
-          "label": "10-K · 2026-07-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm"
-        },
-        {
-          "id": "filing:0001193125-26-323632",
-          "label": "8-K · 2026-07-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-20260729.htm"
-        },
-        {
-          "id": "filing:0001193125-26-258667",
-          "label": "8-K · 2026-06-05",
-          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526258667/d26760d8k.htm"
-        },
-        {
-          "id": "filing:0001193125-26-224155",
-          "label": "8-K · 2026-05-14",
-          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526224155/d125909d8k.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json"
-        }
-      ],
-      "summary": "微软2026财年实现营收3318.39亿美元，同比增长17.79%；净利润1337.49亿美元，同比增长31.34%。资产总额达7583.76亿美元，较上一季度增长9.24%。现金及现金等价物为209.35亿美元，较上一季度下降34.79%。资本支出显著增加至1159.48亿美元，同比增长79.62%。",
-      "summaryEvidence": [
-        "filing:0001193125-26-323660",
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "营收同比增长17.79%，达到3318.39亿美元。",
-          "evidence": [
-            "filing:0001193125-26-323660"
-          ]
-        },
-        {
-          "text": "净利润同比增长31.34%，达到1337.49亿美元。",
-          "evidence": [
-            "filing:0001193125-26-323660"
-          ]
-        },
-        {
-          "text": "资产总额较上一季度增长9.24%，达到7583.76亿美元。",
-          "evidence": [
-            "filing:0001193125-26-323660"
-          ]
-        },
-        {
-          "text": "现金及现金等价物较上一季度下降34.79%，降至209.35亿美元。",
-          "evidence": [
-            "filing:0001193125-26-323660"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "资本支出大幅增加，可能反映微软在基础设施或技术研发上的加大投入。",
-          "evidence": [
-            "filing:0001193125-26-323660"
-          ]
-        },
-        {
-          "text": "净利润增长快于营收，显示盈利能力提升。",
-          "evidence": [
-            "filing:0001193125-26-323660"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "资本支出的增加可能带动供应链相关的硬件和服务需求增长。",
-          "evidence": [
-            "filing:0001193125-26-323660"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "当前证据包不含披露正文，无法判断具体业务驱动因素及未来战略方向。",
-          "evidence": [
-            "filing:0001193125-26-323660"
-          ]
-        }
-      ],
-      "questionsToWatch": [
-        "资本支出具体投向哪些领域？",
-        "未来营收和利润增长的主要驱动力是什么？",
-        "现金流下降的原因及其对运营的影响？"
-      ],
-      "confidence": "high",
-      "stale": true,
-      "lastAttemptAt": "2026-09-10T07:23:18.577Z",
-      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
+      "status": "pending",
+      "inputHash": "3433c4fe29b34b4a2fb4b292919e4d53c742857d24e8d7478ca26f76f5cc4419",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "alphabet": {
       "status": "pending",
@@ -820,7 +619,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-10T07:22:52.815Z"
+      "lastAttemptAt": "2026-09-11T07:21:45.373Z"
     },
     "meta-platforms": {
       "status": "pending",
@@ -946,7 +745,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-10T07:22:57.107Z",
+      "lastAttemptAt": "2026-09-11T07:21:37.077Z",
       "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
     },
     "salesforce": {
@@ -955,7 +754,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-10T07:23:01.399Z"
+      "lastAttemptAt": "2026-09-11T07:21:49.522Z"
     },
     "servicenow": {
       "status": "ok",

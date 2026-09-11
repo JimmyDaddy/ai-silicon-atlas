@@ -1,75 +1,176 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-10T07:23:19.235Z",
+  "generatedAt": "2026-09-11T07:21:54.354Z",
   "period": {
-    "from": "2026-09-09T07:27:32.383Z",
-    "to": "2026-09-10T07:23:19.235Z",
+    "from": "2026-09-10T07:23:19.235Z",
+    "to": "2026-09-11T07:21:54.354Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 2,
-    "metricChanges": 0,
+    "newFilings": 4,
+    "metricChanges": 4,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 3,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 3
+    "totalChanges": 11
   },
   "affected": {
     "stages": {
+      "ai-applications": 1,
+      "eda-ip": 1,
+      "design": 8,
+      "manufacturing": 1,
+      "memory": 3,
+      "packaging": 3,
+      "ai-infrastructure": 3,
       "models-platforms": 2,
-      "packaging": 2,
-      "design": 1,
-      "memory": 1,
-      "ai-infrastructure": 1
+      "equipment-materials": 1
     },
     "topics": {
-      "AI 算力与芯片": 1,
-      "模型与平台": 1,
-      "企业应用与生产力": 1,
-      "资本市场与金融稳定": 1
+      "AI 算力与芯片": 3,
+      "模型与平台": 2,
+      "资本市场与金融稳定": 1,
+      "数据中心与电力": 1,
+      "供应链与地缘政策": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "amazon",
-        "stage": "models-platforms",
+        "company": "adobe",
+        "stage": "ai-applications",
         "form": "8-K",
-        "filedAt": "2026-09-09",
-        "reportDate": "2026-09-08",
-        "accessionNumber": "0001018724-26-000036",
+        "filedAt": "2026-09-10",
+        "reportDate": "2026-09-10",
+        "accessionNumber": "0000796343-26-000147",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000036/amzn-20260908.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000147/adbe-20260910.htm"
       },
       {
-        "company": "ase-technology",
-        "stage": "packaging",
+        "company": "arm",
+        "stage": "eda-ip",
         "form": "6-K",
-        "filedAt": "2026-09-09",
-        "reportDate": "2026-09-09",
-        "accessionNumber": "0000950103-26-013682",
-        "title": "FORM 6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326013682/dp253117_6k.htm"
+        "filedAt": "2026-09-10",
+        "reportDate": "2026-09-10",
+        "accessionNumber": "0001973239-26-000128",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000128/arm-20260910.htm"
+      },
+      {
+        "company": "broadcom",
+        "stage": "design",
+        "form": "10-Q",
+        "filedAt": "2026-09-10",
+        "reportDate": "2026-08-02",
+        "accessionNumber": "0001730168-26-000080",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm"
+      },
+      {
+        "company": "tsmc",
+        "stage": "manufacturing",
+        "form": "6-K",
+        "filedAt": "2026-09-10",
+        "reportDate": "2026-08-31",
+        "accessionNumber": "0001046179-26-000658",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000658/tsm-revenue20260910.htm"
       }
     ],
-    "metrics": [],
+    "metrics": [
+      {
+        "company": "broadcom",
+        "stage": "design",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 29591000000,
+        "previousValue": 22187000000,
+        "changePercent": 33.37,
+        "unit": "USD",
+        "periodEnd": "2026-08-02",
+        "previousPeriodEnd": "2026-05-03",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "broadcom",
+        "stage": "design",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 188148000000,
+        "previousValue": 179158000000,
+        "changePercent": 5.02,
+        "unit": "USD",
+        "periodEnd": "2026-08-02",
+        "previousPeriodEnd": "2026-05-03",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "broadcom",
+        "stage": "design",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 23975000000,
+        "previousValue": 19628000000,
+        "changePercent": 22.15,
+        "unit": "USD",
+        "periodEnd": "2026-08-02",
+        "previousPeriodEnd": "2026-05-03",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "broadcom",
+        "stage": "design",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 1013000000,
+        "previousValue": 481000000,
+        "changePercent": 110.6,
+        "unit": "USD",
+        "periodEnd": "2026-08-02",
+        "previousPeriodEnd": "2026-05-03",
+        "sourceForm": "10-Q"
+      }
+    ],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-29c19642921e",
-        "publishedAt": "2026-09-09T16:00:42.000Z",
+        "id": "nvidia-blog-683b94332d9b",
+        "publishedAt": "2026-09-10T16:30:35.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "NVIDIA Brings Real-Time AI to Broadcast, Sports and Global Streaming at IBC",
-        "summary": "At the IBC conference, running Sept. 11-14 in Amsterdam, the creative, technology and business communities are coming together to turn ideas into action and discuss innovations across the media and entertainment industries. More than 44,000 attendees from 170+ countries are gathering to explore 1,300+ exhibitions in 14+ halls and outdoor spaces, with over 600 speakers delivering insights. Read on to learn more about ",
+        "title": "Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video",
+        "summary": "Manufacturing floors, warehouses and production lines rarely stay fixed — tasks change, layouts shift and new products arrive, and most robots can’t keep up without significant reprogramming. Skild AI’s new S1 robot foundation model helps address this, designed to learn previously unseen, long-horizon tasks from a single video demonstration. The model, launched last week, uses video as input to understand and execute",
+        "topics": [
+          "AI 算力与芯片",
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/"
+      },
+      {
+        "id": "nvidia-blog-1adb809c884f",
+        "publishedAt": "2026-09-10T16:00:04.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "Physical AI Takes the Wheel: How the World’s Robotaxi Leaders Are Building With NVIDIA Technologies",
+        "summary": "The global robotaxi market — physical AI’s first commercial breakthrough — is projected to reach $400 billion by 2035 , with over 6 million commercial vehicles in operation as driverless fleets are already moving people through some of the world’s busiest and most complex streets. Deploying a driverless vehicle is one challenge. Scaling a fleet is a next-level computing challenge; it means delivering the same safe, r",
         "topics": [
           "AI 算力与芯片",
           "模型与平台",
-          "企业应用与生产力",
           "资本市场与金融稳定"
         ],
         "relatedCompanies": [
@@ -83,7 +184,32 @@
           "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/ibc-news-2026/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/robotaxi-leaders-full-stack-open-platform/"
+      },
+      {
+        "id": "nvidia-blog-ed5ac5e67af5",
+        "publishedAt": "2026-09-10T13:00:21.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "d-Matrix Adopts NVIDIA NVLink Fusion for Rack-Scale XPU Deployment",
+        "summary": "AI inference chipmaker d-Matrix today announced it will use NVLink Fusion to connect its next-generation Raptor XPUs to NVIDIA’s AI infrastructure platform — joining a growing roster of partners building on the NVIDIA AI platform. By connecting Raptor to NVIDIA NVLink scale-up and Spectrum-X scale-out networking, the NVIDIA MGX rack architecture and the broader NVIDIA AI platform, NVLink Fusion gives d-Matrix an acce",
+        "topics": [
+          "AI 算力与芯片",
+          "数据中心与电力",
+          "供应链与地缘政策"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/"
       }
     ],
     "analysisRefreshed": []

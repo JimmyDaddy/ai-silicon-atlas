@@ -1,48 +1,40 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T07:51:01.598Z",
+  "generatedAt": "2026-09-16T07:45:59.063Z",
   "period": {
-    "from": "2026-09-14T07:58:24.525Z",
-    "to": "2026-09-15T07:51:01.598Z",
+    "from": "2026-09-15T07:51:01.598Z",
+    "to": "2026-09-16T07:45:59.063Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
+    "newFilings": 0,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 3,
+    "newIntelligence": 5,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 4
+    "totalChanges": 5
   },
   "affected": {
     "stages": {
-      "models-platforms": 3,
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1,
-      "ai-applications": 1
+      "design": 5,
+      "memory": 3,
+      "packaging": 3,
+      "ai-infrastructure": 4,
+      "ai-applications": 3,
+      "models-platforms": 1,
+      "equipment-materials": 1
     },
     "topics": {
-      "模型与平台": 2,
-      "AI 算力与芯片": 1,
-      "资本市场与金融稳定": 1
+      "AI 算力与芯片": 3,
+      "数据中心与电力": 3,
+      "模型与平台": 3,
+      "企业应用与生产力": 3,
+      "半导体制造": 1
     }
   },
   "companies": {
-    "filings": [
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "form": "8-K",
-        "filedAt": "2026-09-14",
-        "reportDate": "2026-09-14",
-        "accessionNumber": "0001104659-26-107526",
-        "title": "FORM 8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm"
-      }
-    ],
+    "filings": [],
     "metrics": [],
     "statuses": [],
     "analysis": []
@@ -50,63 +42,125 @@
   "intelligence": {
     "new": [
       {
-        "id": "ecb-85f2aef43dea",
-        "publishedAt": "2026-09-14T15:15:00.000Z",
-        "source": "欧洲中央银行（ECB）",
-        "sourceType": "央行研究",
-        "title": "Christine Lagarde: A new age of capital: growth, sovereignty and AI",
-        "summary": "",
-        "topics": [
-          "模型与平台"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "analysisStatus": "error",
-        "sourceUrl": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260914_2~a3f0efbee4.en.html"
-      },
-      {
-        "id": "nvidia-blog-1a974e5655c8",
-        "publishedAt": "2026-09-14T15:00:52.000Z",
+        "id": "nvidia-blog-88fd26958a90",
+        "publishedAt": "2026-09-16T05:00:42.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "Perplexity Portable Computer Is Now Available on Windows, Powered by NVIDIA RTX",
-        "summary": "As local models become more capable, AI agents can handle more work directly on a PC while keeping sensitive information on the device. Portable Computer is a local version of the agent Perplexity Computer that plans and carries out multistep tasks. Accelerated by NVIDIA GPUs, it uses local models to analyze data, bring together information across files and handle recurring work. Sensitive information stays on device",
+        "title": "University of Manchester Uses NVIDIA Earth-2 to Forecast Air Pollution Across the UK",
+        "summary": "Air pollution is a serious public health risk, contributing to an estimated 30,000 deaths in the U.K. alone last year. Data-driven insights can help — but computing air quality with traditional chemistry-based models is expensive, which limits how detailed they can be and how regularly they can be run. David Topping, a professor in the University of Manchester’s department of Earth and environmental science, saw that",
         "topics": [
-          "AI 算力与芯片",
-          "模型与平台"
+          "AI 算力与芯片"
         ],
         "relatedCompanies": [
           "nvidia",
-          "microsoft",
-          "alphabet"
+          "adobe"
         ],
         "relatedStages": [
           "design",
           "memory",
           "packaging",
           "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/"
-      },
-      {
-        "id": "ecb-419f8df75f1f",
-        "publishedAt": "2026-09-14T09:15:00.000Z",
-        "source": "欧洲中央银行（ECB）",
-        "sourceType": "央行研究",
-        "title": "Isabel Schnabel: Macroeconomic, fiscal and financial stability in a shock-prone world",
-        "summary": "",
-        "topics": [
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "models-platforms",
           "ai-applications"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260914~0ffd556bc8.en.pdf"
+        "sourceUrl": "https://blogs.nvidia.com/blog/uk-air-pollution-research-earth-2/"
+      },
+      {
+        "id": "nvidia-blog-1fec8bc66a00",
+        "publishedAt": "2026-09-15T22:24:34.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "‘Now We Can Know Everything and Do Anything,’ Jensen Huang Says at Dreamforce",
+        "summary": "Know everything. Do anything. That was the message NVIDIA founder and CEO Jensen Huang brought to Salesforce Dreamforce Tuesday, joining CEO Marc Benioff onstage in an appearance that coincided with the announcement of Koa — Salesforce’s first CRM reasoning model, built on NVIDIA Nemotron 3 Super. Huang didn’t just take the stage. He walked into the crowd — threading through the audience at Moscone Center, mic in han",
+        "topics": [
+          "数据中心与电力",
+          "模型与平台",
+          "企业应用与生产力"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "salesforce"
+        ],
+        "relatedStages": [
+          "ai-infrastructure",
+          "models-platforms",
+          "ai-applications",
+          "design"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/jensen-huang-dreamforce/"
+      },
+      {
+        "id": "nvidia-blog-4433f378b957",
+        "publishedAt": "2026-09-15T16:55:59.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "From Megawatts to Tokens: How NVIDIA Maximizes AI Factory Production",
+        "summary": "On a sweltering August evening in Silicon Valley, as the sun dropped and air conditioning loads spiked , Silicon Valley Power sent a signal to an AI factory to adjust its power consumption. Varun Sivaram was watching on Zoom with about forty others — his team at Emerald AI in their San Francisco conference room, engineers at the data center and people from the utility itself. Nobody touched anything. Emerald AI’ s Co",
+        "topics": [
+          "AI 算力与芯片",
+          "数据中心与电力",
+          "企业应用与生产力"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "ai-applications"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/"
+      },
+      {
+        "id": "nvidia-blog-9cc025c501e9",
+        "publishedAt": "2026-09-15T16:55:40.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "AI Infra Summit: NVIDIA Vera Rubin and DSX Platform Advancements Showcase Energy Efficiencies of Optimizing Tokens Per Watt for AI Factories",
+        "summary": "Ian Buck, vice president of hyperscale and high-performance computing at NVIDIA, Tuesday spoke on AI factory efficiency at the AI Infra Summit , the Santa Clara Convention Center event that has morphed into a Coachella of infrastructure tech. Before a packed audience — with more than 8,000 attendees this year, up from 3,500 last year — Buck discussed new collaborations across NVIDIA platforms and more. Amazon’s Annap",
+        "topics": [
+          "AI 算力与芯片",
+          "半导体制造",
+          "数据中心与电力",
+          "模型与平台",
+          "企业应用与生产力"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "amazon"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/ai-infra-summit-vera-rubin-dsx-energy-efficiencies-tokens-per-watt-ai-factories/"
+      },
+      {
+        "id": "nvidia-blog-1537042228c9",
+        "publishedAt": "2026-09-15T09:00:42.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "Heart of the Matter: How a Major Children’s Hospital Uses Open Source NVIDIA AI for Cardiac Care",
+        "summary": "",
+        "topics": [
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/childrens-hospital-open-source-ai-cardiac-care/"
       }
     ],
     "analysisRefreshed": []

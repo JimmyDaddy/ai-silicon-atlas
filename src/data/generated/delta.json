@@ -1,37 +1,49 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T07:46:35.241Z",
+  "generatedAt": "2026-09-18T07:29:17.186Z",
   "period": {
-    "from": "2026-09-16T07:45:59.063Z",
-    "to": "2026-09-17T07:46:35.241Z",
+    "from": "2026-09-17T07:46:35.241Z",
+    "to": "2026-09-18T07:29:17.186Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 1,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 3,
+    "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 3
+    "totalChanges": 2
   },
   "affected": {
     "stages": {
-      "design": 3,
-      "memory": 2,
-      "packaging": 2,
-      "ai-infrastructure": 3,
-      "models-platforms": 3
+      "ai-applications": 1,
+      "design": 1,
+      "memory": 1,
+      "packaging": 1,
+      "ai-infrastructure": 1,
+      "models-platforms": 1
     },
     "topics": {
-      "AI 算力与芯片": 2,
-      "模型与平台": 2,
-      "企业应用与生产力": 2,
-      "数据中心与电力": 2
+      "AI 算力与芯片": 1,
+      "模型与平台": 1,
+      "企业应用与生产力": 1,
+      "供应链与地缘政策": 1
     }
   },
   "companies": {
-    "filings": [],
+    "filings": [
+      {
+        "company": "salesforce",
+        "stage": "ai-applications",
+        "form": "8-K",
+        "filedAt": "2026-09-17",
+        "reportDate": "2026-09-16",
+        "accessionNumber": "0001108524-26-000210",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000210/crm-20260916.htm"
+      }
+    ],
     "metrics": [],
     "statuses": [],
     "analysis": []
@@ -39,16 +51,17 @@
   "intelligence": {
     "new": [
       {
-        "id": "microsoft-blog-30ad623dde23",
-        "publishedAt": "2026-09-16T18:59:58.000Z",
+        "id": "microsoft-blog-a6454e57a2b2",
+        "publishedAt": "2026-09-17T14:00:05.000Z",
         "source": "Microsoft 官方博客",
         "sourceType": "公司观点",
-        "title": "Microsoft’s commitment for AI in education; protecting students, strengthening learning",
-        "summary": "Microsoft has been in the business of education for five decades. Since the earliest days of this company, we have worked alongside educators, students, families and educational leaders through each new wave of technology — and we have learned what helps learning and what gets in the way. That commitment continues today, in a technological moment unlike any we have seen. AI can personalize learning, reduce administra",
+        "title": "What we’ve learned from Microsoft’s own AI transformation",
+        "summary": "AI is reshaping work faster than any organization has fully mastered. Across industries, the conversation has shifted from what AI can do to how companies can use AI to create business value and expand what people are able to achieve. At Microsoft, we believe the organizations that succeed will be what we call Frontier Firms: human-led, but increasingly AI-enabled. That responsibility begins with how AI is built and ",
         "topics": [
           "AI 算力与芯片",
           "模型与平台",
-          "企业应用与生产力"
+          "企业应用与生产力",
+          "供应链与地缘政策"
         ],
         "relatedCompanies": [
           "microsoft"
@@ -61,58 +74,7 @@
           "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/16/microsofts-commitment-for-ai-in-education/"
-      },
-      {
-        "id": "nvidia-blog-a425146e5e22",
-        "publishedAt": "2026-09-16T15:00:48.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA Vera Rubin NVL72 Delivers Leading Performance in MLPerf Inference v6.1 Debut",
-        "summary": "System performance, efficient infrastructure scaling and continuous software optimization are key levers that determine AI inference economics. Higher system performance means more tokens generated, resulting in higher revenue. Efficient scaling means throughput grows proportionally as hardware gets added, requiring fewer resources to serve users at scale. Continuous optimization means generating more value from infr",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "模型与平台",
-          "企业应用与生产力"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "microsoft",
-          "supermicro",
-          "cadence"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-mlperf-inference/"
-      },
-      {
-        "id": "nvidia-blog-22653b4ecc69",
-        "publishedAt": "2026-09-16T13:00:33.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Emerald AI, Google and NVIDIA Launch Alliance to Advance Flexible AI Data Centers",
-        "summary": "AI factories are the infrastructure of the intelligence era. Scaling them responsibly will depend as much on innovation across the grid as inside the data center. Today, Emerald AI, Google and NVIDIA announced the launch of the AI Energy Management Alliance (AEMA), a first-of-its-kind coalition advancing data centers that can dynamically manage their electricity use in response to grid conditions. This power flexibil",
-        "topics": [
-          "数据中心与电力"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "alphabet"
-        ],
-        "relatedStages": [
-          "ai-infrastructure",
-          "design",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/ai-energy-management-alliance/"
+        "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/17/what-weve-learned-from-microsofts-own-ai-transformation/"
       }
     ],
     "analysisRefreshed": []

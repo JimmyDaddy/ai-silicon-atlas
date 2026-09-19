@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-18T07:29:17.186Z",
+  "generatedAt": "2026-09-19T07:24:49.924Z",
   "period": {
-    "from": "2026-09-17T07:46:35.241Z",
-    "to": "2026-09-18T07:29:17.186Z",
+    "from": "2026-09-18T07:29:17.186Z",
+    "to": "2026-09-19T07:24:49.924Z",
     "baseRef": "HEAD"
   },
   "summary": {
@@ -11,37 +11,27 @@
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 2
+    "totalChanges": 1
   },
   "affected": {
     "stages": {
-      "ai-applications": 1,
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1,
-      "models-platforms": 1
+      "eda-ip": 1
     },
-    "topics": {
-      "AI 算力与芯片": 1,
-      "模型与平台": 1,
-      "企业应用与生产力": 1,
-      "供应链与地缘政策": 1
-    }
+    "topics": {}
   },
   "companies": {
     "filings": [
       {
-        "company": "salesforce",
-        "stage": "ai-applications",
-        "form": "8-K",
-        "filedAt": "2026-09-17",
-        "reportDate": "2026-09-16",
-        "accessionNumber": "0001108524-26-000210",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000210/crm-20260916.htm"
+        "company": "arm",
+        "stage": "eda-ip",
+        "form": "6-K",
+        "filedAt": "2026-09-18",
+        "reportDate": "2026-09-18",
+        "accessionNumber": "0001973239-26-000135",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000135/arm-20260918.htm"
       }
     ],
     "metrics": [],
@@ -49,34 +39,7 @@
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "microsoft-blog-a6454e57a2b2",
-        "publishedAt": "2026-09-17T14:00:05.000Z",
-        "source": "Microsoft 官方博客",
-        "sourceType": "公司观点",
-        "title": "What we’ve learned from Microsoft’s own AI transformation",
-        "summary": "AI is reshaping work faster than any organization has fully mastered. Across industries, the conversation has shifted from what AI can do to how companies can use AI to create business value and expand what people are able to achieve. At Microsoft, we believe the organizations that succeed will be what we call Frontier Firms: human-led, but increasingly AI-enabled. That responsibility begins with how AI is built and ",
-        "topics": [
-          "AI 算力与芯片",
-          "模型与平台",
-          "企业应用与生产力",
-          "供应链与地缘政策"
-        ],
-        "relatedCompanies": [
-          "microsoft"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/17/what-weve-learned-from-microsofts-own-ai-transformation/"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T08:01:38.846Z",
+  "generatedAt": "2026-09-22T07:46:18.330Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -144,16 +144,16 @@
       "inputHash": "47daf2615e5ba31d89399476683c60cc4127ecea126901426c9a6b7e5438b154",
       "generatedAt": null,
       "model": null,
-      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-21T08:01:42.584Z"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-09-22T07:46:22.079Z"
     },
     "nvidia": {
       "status": "error",
       "inputHash": "95e9f7bc8fdecf81766829e8da1e09af3e4e015a829499cece6fca085509c450",
       "generatedAt": null,
       "model": null,
-      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-21T08:02:11.617Z"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-09-22T07:46:51.251Z"
     },
     "amd": {
       "status": "pending",
@@ -285,8 +285,8 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-21T08:01:55.016Z",
-      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
+      "lastAttemptAt": "2026-09-22T07:46:34.580Z",
+      "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
     },
     "mediatek": {
       "status": "unavailable",
@@ -420,8 +420,8 @@
       "inputHash": "f9ba20080f33be93dd3b63683828dc785de39d901eeb3478c41f0279efddc5b8",
       "generatedAt": null,
       "model": null,
-      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-21T08:01:59.164Z"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-09-22T07:46:38.756Z"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -456,8 +456,8 @@
       "inputHash": "95aeb2243f3e51dcec8ff6339ccebe0948905cf47c870688814ae84b07827433",
       "generatedAt": null,
       "model": null,
-      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-21T08:02:07.478Z"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-09-22T07:46:47.087Z"
     },
     "amkor": {
       "status": "ok",
@@ -618,8 +618,8 @@
       "inputHash": "ff4e8ea34e3674855ed5e6823fc2580665da72f2e948bf82de775fbb88366c4c",
       "generatedAt": null,
       "model": null,
-      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-21T08:01:50.875Z"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-09-22T07:46:30.418Z"
     },
     "meta-platforms": {
       "status": "pending",
@@ -745,16 +745,16 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-21T08:02:03.312Z",
-      "lastAttemptError": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n"
+      "lastAttemptAt": "2026-09-22T07:46:42.916Z",
+      "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
     },
     "salesforce": {
       "status": "error",
       "inputHash": "f38dd438e4a73481783f282afc9c87a90483ba8a6766e607b832e1b01f3f4675",
       "generatedAt": null,
       "model": null,
-      "reason": "AI endpoint returned 410: {\"error\":{\"code\":\"github_models_retirement_brownout\",\"message\":\"GitHub Models is temporarily unavailable as part of a scheduled retirement brownout.\"}}\n",
-      "lastAttemptAt": "2026-09-21T08:01:46.730Z"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-09-22T07:46:26.247Z"
     },
     "servicenow": {
       "status": "ok",

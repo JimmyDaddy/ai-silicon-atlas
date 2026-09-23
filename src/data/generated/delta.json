@@ -1,152 +1,200 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-22T07:46:51.909Z",
+  "generatedAt": "2026-09-23T07:50:20.414Z",
   "period": {
-    "from": "2026-09-21T08:02:12.278Z",
-    "to": "2026-09-22T07:46:51.909Z",
+    "from": "2026-09-22T07:46:51.909Z",
+    "to": "2026-09-23T07:50:20.414Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
-    "metricChanges": 0,
+    "newFilings": 1,
+    "metricChanges": 5,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 5,
+    "newIntelligence": 4,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 5
+    "totalChanges": 10
   },
   "affected": {
     "stages": {
-      "ai-infrastructure": 4,
-      "design": 5,
-      "memory": 3,
-      "packaging": 3,
-      "models-platforms": 3,
-      "ai-applications": 1
+      "ai-applications": 8,
+      "design": 2,
+      "memory": 2,
+      "packaging": 2,
+      "ai-infrastructure": 2,
+      "models-platforms": 4
     },
     "topics": {
-      "数据中心与电力": 3,
-      "AI 算力与芯片": 3,
-      "模型与平台": 3,
-      "企业应用与生产力": 3,
-      "资本市场与金融稳定": 1
+      "AI 算力与芯片": 2,
+      "模型与平台": 4,
+      "企业应用与生产力": 2,
+      "资本市场与金融稳定": 2
     }
   },
   "companies": {
-    "filings": [],
-    "metrics": [],
+    "filings": [
+      {
+        "company": "adobe",
+        "stage": "ai-applications",
+        "form": "10-Q",
+        "filedAt": "2026-09-22",
+        "reportDate": "2026-08-28",
+        "accessionNumber": "0000796343-26-000156",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000156/adbe-20260828.htm"
+      }
+    ],
+    "metrics": [
+      {
+        "company": "adobe",
+        "stage": "ai-applications",
+        "metric": "revenue",
+        "label": "Revenues",
+        "value": 6760000000,
+        "previousValue": 6618000000,
+        "changePercent": 2.15,
+        "unit": "USD",
+        "periodEnd": "2026-08-28",
+        "previousPeriodEnd": "2026-05-29",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "adobe",
+        "stage": "ai-applications",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 1827000000,
+        "previousValue": 1712000000,
+        "changePercent": 6.72,
+        "unit": "USD",
+        "periodEnd": "2026-08-28",
+        "previousPeriodEnd": "2026-05-29",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "adobe",
+        "stage": "ai-applications",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 29981000000,
+        "previousValue": 29933000000,
+        "changePercent": 0.16,
+        "unit": "USD",
+        "periodEnd": "2026-08-28",
+        "previousPeriodEnd": "2026-05-29",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "adobe",
+        "stage": "ai-applications",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 4359000000,
+        "previousValue": 4919000000,
+        "changePercent": -11.38,
+        "unit": "USD",
+        "periodEnd": "2026-08-28",
+        "previousPeriodEnd": "2026-05-29",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "adobe",
+        "stage": "ai-applications",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 180000000,
+        "previousValue": 95000000,
+        "changePercent": 89.47,
+        "unit": "USD",
+        "periodEnd": "2026-08-28",
+        "previousPeriodEnd": "2026-05-29",
+        "sourceForm": "10-Q"
+      }
+    ],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-9ee6cf4f42f1",
-        "publishedAt": "2026-09-21T18:00:07.000Z",
+        "id": "nvidia-blog-301ba2c6df75",
+        "publishedAt": "2026-09-23T02:30:22.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "NVIDIA Launches DSX Ready to Qualify Power and Cooling Products for AI Factories",
-        "summary": "Every AI factory needs power and cooling that fit its computing architecture. As AI infrastructure expands, power, cooling, water, site and grid constraints are shaping what builders can deploy. Choosing products that fit the complete factory design helps builders turn computing capacity into useful AI output. To help builders make those decisions, NVIDIA is introducing NVIDIA DSX Ready, a qualification program for p",
-        "topics": [
-          "数据中心与电力"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "vertiv"
-        ],
-        "relatedStages": [
-          "ai-infrastructure",
-          "design"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/"
-      },
-      {
-        "id": "nvidia-blog-173eb9a2ab25",
-        "publishedAt": "2026-09-21T16:00:46.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Why Deploying Physical AI at Scale Demands Safety at Every Layer",
-        "summary": "Physical AI is moving rapidly from research to large-scale deployment. By 2035, ABI Research projects an installed base of 49 million level 3-5 autonomous vehicles (AVs) , while Omdia estimates that roughly 60 million industrial robots will be deployed between 2026 and 2035 . As these machines enter roads, factories, warehouses and other environments shared with people, safety must scale with them. Physical AI safety",
+        "title": "At AI Day Singapore, NVIDIA and Partners Showcase AI Advancements Across Southeast Asia",
+        "summary": "NVIDIA AI Day Singapore , which takes place Sept. 22-23 at the Raffles City Convention Centre, is offering attendees opportunities to explore the hands-on training, expert-led sessions and advanced tools to accelerate their work in AI and high-performance computing. At the event, NVIDIA and its partners are showcasing breakthrough AI advancements across the Southeast Asia region at large. Read more about these announ",
         "topics": [
           "AI 算力与芯片",
           "模型与平台",
-          "企业应用与生产力",
+          "企业应用与生产力"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/ai-day-singapore/"
+      },
+      {
+        "id": "aws-blog-12574c6c5a5f",
+        "publishedAt": "2026-09-22T22:23:14.000Z",
+        "source": "AWS 官方博客",
+        "sourceType": "公司观点",
+        "title": "Introducing Amazon CloudWatch Omni: collaborative AI-powered observability for your applications",
+        "summary": "Amazon CloudWatch now offers CloudWatch Omni, an AI-powered observability experience for the applications and AI agents you run together. You reach Omni through a dedicated URL for your organization and sign in with the identities you already manage, so working in Omni does not require access to the AWS Management Console. Omni is built on OpenTelemetry: the telemetry you already send to CloudWatch appears in Omni wi",
+        "topics": [
+          "模型与平台",
           "资本市场与金融稳定"
         ],
         "relatedCompanies": [
-          "nvidia",
+          "microsoft",
           "amazon"
         ],
         "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
+          "models-platforms",
+          "ai-applications"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/physical-ai-halos-safety/"
+        "sourceUrl": "https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-collaborative-ai-powered-observability-for-your-applications/"
       },
       {
-        "id": "nvidia-blog-2776c8ddc12b",
-        "publishedAt": "2026-09-21T16:00:10.000Z",
-        "source": "NVIDIA 官方博客",
+        "id": "aws-blog-4f007c6a12dc",
+        "publishedAt": "2026-09-22T22:21:13.000Z",
+        "source": "AWS 官方博客",
         "sourceType": "公司观点",
-        "title": "From Enablement to Execution, Egypt’s AI Ecosystem Reaches Production Scale",
-        "summary": "Today, Egypt’s AI builders gathered in the Grand Egyptian Museum for a reception that highlighted the nation’s rapidly growing AI ecosystem — spanning AI natives, developers, researchers, startups and enterprises — building applications across industries. The event included a keynote from Paolo Guglielmini, vice president of EMEA at NVIDIA. Ahmed Mostafa, regional AI adoption lead for the Middle East and Africa at NV",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "模型与平台",
-          "企业应用与生产力"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "amd"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/egypt-africa-ai-ecosystem/"
-      },
-      {
-        "id": "nvidia-blog-dd63189f99f4",
-        "publishedAt": "2026-09-21T14:51:34.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "AI Security Is an Engineering Problem — How to Solve It at Every Layer of the Agent Stack",
-        "summary": "AI security is an engineering problem. That means defined security requirements, enforceable controls, named owners and evidence that protections work. As AI becomes more capable, the industry must accelerate security engineering, broaden access to defensive tools and share what works faster. Technology Changes, Security Fundamentals Endure The internet and cloud computing changed how software operates, while core se",
+        "title": "Introducing Amazon CloudWatch Omni: AI-powered observability for generative AI and agentic workloads",
+        "summary": "Today, Amazon CloudWatch introduces CloudWatch Omni, a unified observability experience for application and AI workloads that is app-centric, AI-powered, built on open standards, and delivered off-console. CloudWatch Omni is a purpose-built observability, evaluation, and experimentation solution for AI agents. It helps teams design, evaluate, and operate AI agents across any model provider, framework, or runtime, wit",
         "topics": [
           "模型与平台",
-          "企业应用与生产力"
+          "资本市场与金融稳定"
         ],
         "relatedCompanies": [
-          "nvidia"
+          "amazon"
         ],
         "relatedStages": [
           "models-platforms",
-          "ai-applications",
-          "design"
+          "ai-applications"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/ai-security-agent-stack/"
+        "sourceUrl": "https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/"
       },
       {
-        "id": "nvidia-blog-405872456e62",
-        "publishedAt": "2026-09-21T10:00:35.000Z",
+        "id": "nvidia-blog-193bdb306b4d",
+        "publishedAt": "2026-09-22T12:00:41.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "5 Companies Using NVIDIA AI for Clean Energy",
-        "summary": "Clean energy isn’t hard to come by, but the pace of large-scale adoption has historically been slow due to bottlenecks — including out-of-date infrastructure, elongated research and development timelines, and upfront cost barriers. At New York Climate Week, NVIDIA is highlighting five companies pioneering clean energy projects with AI baked into their foundation, accelerating research-to-inception pipelines and ultim",
+        "title": "NVIDIA Isaac ROS 5.0 Advances Agentic, Open Source Robotics Development",
+        "summary": "To build and deploy sophisticated robotics applications that can perceive, reason and act in dynamic environments, developers need new physical AI models and tools. The ROS open framework is a project from Open Robotics that helps humans build robots. NVIDIA Isaac ROS 5.0 — a collection of GPU-accelerated packages built on ROS, released today at the ROSCon conference in Toronto, Canada — helps humans and AI agents bu",
         "topics": [
           "AI 算力与芯片",
-          "数据中心与电力"
+          "模型与平台",
+          "企业应用与生产力"
         ],
         "relatedCompanies": [
           "nvidia"
@@ -155,10 +203,11 @@
           "design",
           "memory",
           "packaging",
-          "ai-infrastructure"
+          "ai-infrastructure",
+          "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/clean-energy-nvidia-ai/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/"
       }
     ],
     "analysisRefreshed": []

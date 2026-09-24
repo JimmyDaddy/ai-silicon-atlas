@@ -1,132 +1,50 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-23T07:50:20.414Z",
+  "generatedAt": "2026-09-24T07:40:16.107Z",
   "period": {
-    "from": "2026-09-22T07:46:51.909Z",
-    "to": "2026-09-23T07:50:20.414Z",
+    "from": "2026-09-23T07:50:20.414Z",
+    "to": "2026-09-24T07:40:16.107Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
-    "metricChanges": 5,
+    "newFilings": 0,
+    "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 4,
+    "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 10
+    "totalChanges": 1
   },
   "affected": {
     "stages": {
-      "ai-applications": 8,
-      "design": 2,
-      "memory": 2,
-      "packaging": 2,
-      "ai-infrastructure": 2,
-      "models-platforms": 4
+      "design": 1,
+      "memory": 1,
+      "packaging": 1,
+      "ai-infrastructure": 1
     },
     "topics": {
-      "AI 算力与芯片": 2,
-      "模型与平台": 4,
-      "企业应用与生产力": 2,
-      "资本市场与金融稳定": 2
+      "AI 算力与芯片": 1,
+      "数据中心与电力": 1
     }
   },
   "companies": {
-    "filings": [
-      {
-        "company": "adobe",
-        "stage": "ai-applications",
-        "form": "10-Q",
-        "filedAt": "2026-09-22",
-        "reportDate": "2026-08-28",
-        "accessionNumber": "0000796343-26-000156",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000156/adbe-20260828.htm"
-      }
-    ],
-    "metrics": [
-      {
-        "company": "adobe",
-        "stage": "ai-applications",
-        "metric": "revenue",
-        "label": "Revenues",
-        "value": 6760000000,
-        "previousValue": 6618000000,
-        "changePercent": 2.15,
-        "unit": "USD",
-        "periodEnd": "2026-08-28",
-        "previousPeriodEnd": "2026-05-29",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "adobe",
-        "stage": "ai-applications",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 1827000000,
-        "previousValue": 1712000000,
-        "changePercent": 6.72,
-        "unit": "USD",
-        "periodEnd": "2026-08-28",
-        "previousPeriodEnd": "2026-05-29",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "adobe",
-        "stage": "ai-applications",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 29981000000,
-        "previousValue": 29933000000,
-        "changePercent": 0.16,
-        "unit": "USD",
-        "periodEnd": "2026-08-28",
-        "previousPeriodEnd": "2026-05-29",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "adobe",
-        "stage": "ai-applications",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 4359000000,
-        "previousValue": 4919000000,
-        "changePercent": -11.38,
-        "unit": "USD",
-        "periodEnd": "2026-08-28",
-        "previousPeriodEnd": "2026-05-29",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "adobe",
-        "stage": "ai-applications",
-        "metric": "capex",
-        "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 180000000,
-        "previousValue": 95000000,
-        "changePercent": 89.47,
-        "unit": "USD",
-        "periodEnd": "2026-08-28",
-        "previousPeriodEnd": "2026-05-29",
-        "sourceForm": "10-Q"
-      }
-    ],
+    "filings": [],
+    "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-301ba2c6df75",
-        "publishedAt": "2026-09-23T02:30:22.000Z",
+        "id": "nvidia-blog-a1700d1f6b37",
+        "publishedAt": "2026-09-23T15:00:32.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "At AI Day Singapore, NVIDIA and Partners Showcase AI Advancements Across Southeast Asia",
-        "summary": "NVIDIA AI Day Singapore , which takes place Sept. 22-23 at the Raffles City Convention Centre, is offering attendees opportunities to explore the hands-on training, expert-led sessions and advanced tools to accelerate their work in AI and high-performance computing. At the event, NVIDIA and its partners are showcasing breakthrough AI advancements across the Southeast Asia region at large. Read more about these announ",
+        "title": "Sakeena Fiza Helps NVIDIA Hardware Succeed at Scale",
+        "summary": "When Sakeena Fiza describes her work as a validation engineer at NVIDIA, she does so in terms more befitting a detective story than a world-class engineering lab. “Validation engineers look in the shadows and shine a light into every corner,” Fiza said. “Every time we get a system, our first thought is: how can it break?” And when it does? “I always like to think of it as a mystery to solve,” she said. At NVIDIA, the",
         "topics": [
           "AI 算力与芯片",
-          "模型与平台",
-          "企业应用与生产力"
+          "数据中心与电力"
         ],
         "relatedCompanies": [
           "nvidia"
@@ -135,79 +53,10 @@
           "design",
           "memory",
           "packaging",
-          "ai-infrastructure",
-          "models-platforms"
+          "ai-infrastructure"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/ai-day-singapore/"
-      },
-      {
-        "id": "aws-blog-12574c6c5a5f",
-        "publishedAt": "2026-09-22T22:23:14.000Z",
-        "source": "AWS 官方博客",
-        "sourceType": "公司观点",
-        "title": "Introducing Amazon CloudWatch Omni: collaborative AI-powered observability for your applications",
-        "summary": "Amazon CloudWatch now offers CloudWatch Omni, an AI-powered observability experience for the applications and AI agents you run together. You reach Omni through a dedicated URL for your organization and sign in with the identities you already manage, so working in Omni does not require access to the AWS Management Console. Omni is built on OpenTelemetry: the telemetry you already send to CloudWatch appears in Omni wi",
-        "topics": [
-          "模型与平台",
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [
-          "microsoft",
-          "amazon"
-        ],
-        "relatedStages": [
-          "models-platforms",
-          "ai-applications"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-collaborative-ai-powered-observability-for-your-applications/"
-      },
-      {
-        "id": "aws-blog-4f007c6a12dc",
-        "publishedAt": "2026-09-22T22:21:13.000Z",
-        "source": "AWS 官方博客",
-        "sourceType": "公司观点",
-        "title": "Introducing Amazon CloudWatch Omni: AI-powered observability for generative AI and agentic workloads",
-        "summary": "Today, Amazon CloudWatch introduces CloudWatch Omni, a unified observability experience for application and AI workloads that is app-centric, AI-powered, built on open standards, and delivered off-console. CloudWatch Omni is a purpose-built observability, evaluation, and experimentation solution for AI agents. It helps teams design, evaluate, and operate AI agents across any model provider, framework, or runtime, wit",
-        "topics": [
-          "模型与平台",
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [
-          "amazon"
-        ],
-        "relatedStages": [
-          "models-platforms",
-          "ai-applications"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/"
-      },
-      {
-        "id": "nvidia-blog-193bdb306b4d",
-        "publishedAt": "2026-09-22T12:00:41.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA Isaac ROS 5.0 Advances Agentic, Open Source Robotics Development",
-        "summary": "To build and deploy sophisticated robotics applications that can perceive, reason and act in dynamic environments, developers need new physical AI models and tools. The ROS open framework is a project from Open Robotics that helps humans build robots. NVIDIA Isaac ROS 5.0 — a collection of GPU-accelerated packages built on ROS, released today at the ROSCon conference in Toronto, Canada — helps humans and AI agents bu",
-        "topics": [
-          "AI 算力与芯片",
-          "模型与平台",
-          "企业应用与生产力"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-life-sakeena-fiza/"
       }
     ],
     "analysisRefreshed": []

@@ -1,34 +1,56 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T07:40:16.107Z",
+  "generatedAt": "2026-09-25T07:56:44.585Z",
   "period": {
-    "from": "2026-09-23T07:50:20.414Z",
-    "to": "2026-09-24T07:40:16.107Z",
+    "from": "2026-09-24T07:40:16.107Z",
+    "to": "2026-09-25T07:56:44.585Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 2,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
     "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 1
+    "totalChanges": 3
   },
   "affected": {
     "stages": {
+      "manufacturing": 1,
+      "ai-infrastructure": 2,
       "design": 1,
       "memory": 1,
       "packaging": 1,
-      "ai-infrastructure": 1
+      "models-platforms": 1
     },
     "topics": {
-      "AI 算力与芯片": 1,
-      "数据中心与电力": 1
+      "AI 算力与芯片": 1
     }
   },
   "companies": {
-    "filings": [],
+    "filings": [
+      {
+        "company": "tsmc",
+        "stage": "manufacturing",
+        "form": "6-K",
+        "filedAt": "2026-09-24",
+        "reportDate": "2026-08-31",
+        "accessionNumber": "0001046179-26-000660",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000660/tsm-monthend6kx20260924.htm"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "form": "8-K",
+        "filedAt": "2026-09-24",
+        "reportDate": "2026-09-24",
+        "accessionNumber": "0001628280-26-063311",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026063311/vrt-20260924.htm"
+      }
+    ],
     "metrics": [],
     "statuses": [],
     "analysis": []
@@ -36,27 +58,28 @@
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-a1700d1f6b37",
-        "publishedAt": "2026-09-23T15:00:32.000Z",
+        "id": "nvidia-blog-85d9d81e1965",
+        "publishedAt": "2026-09-24T14:00:50.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "Sakeena Fiza Helps NVIDIA Hardware Succeed at Scale",
-        "summary": "When Sakeena Fiza describes her work as a validation engineer at NVIDIA, she does so in terms more befitting a detective story than a world-class engineering lab. “Validation engineers look in the shadows and shine a light into every corner,” Fiza said. “Every time we get a system, our first thought is: how can it break?” And when it does? “I always like to think of it as a mystery to solve,” she said. At NVIDIA, the",
+        "title": "How Open Science Can Help Researchers Prepare for the Next Pandemic",
+        "summary": "When COVID-19 emerged, scientists had a crucial advantage: Decades of prior research on coronaviruses meant they understood the virus’ key proteins well enough to design vaccines in record time. The next pandemic may not offer the same head start. To help improve the odds, NVIDIA has joined a coalition of global research organizations, including Google DeepMind and the European Molecular Biology Laboratory’s European",
         "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力"
+          "AI 算力与芯片"
         ],
         "relatedCompanies": [
-          "nvidia"
+          "nvidia",
+          "alphabet"
         ],
         "relatedStages": [
           "design",
           "memory",
           "packaging",
-          "ai-infrastructure"
+          "ai-infrastructure",
+          "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-life-sakeena-fiza/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/open-protein-dataset/"
       }
     ],
     "analysisRefreshed": []

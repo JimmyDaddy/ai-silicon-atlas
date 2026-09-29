@@ -1,32 +1,98 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T08:46:43.303Z",
+  "generatedAt": "2026-09-29T08:38:49.841Z",
   "period": {
-    "from": "2026-09-27T08:18:33.706Z",
-    "to": "2026-09-28T08:46:43.303Z",
+    "from": "2026-09-28T08:46:43.303Z",
+    "to": "2026-09-29T08:38:49.841Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 1,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 0
+    "totalChanges": 3
   },
   "affected": {
-    "stages": {},
-    "topics": {}
+    "stages": {
+      "design": 3,
+      "memory": 2,
+      "packaging": 2,
+      "ai-infrastructure": 2,
+      "models-platforms": 1
+    },
+    "topics": {
+      "AI 算力与芯片": 2,
+      "模型与平台": 1
+    }
   },
   "companies": {
-    "filings": [],
+    "filings": [
+      {
+        "company": "amd",
+        "stage": "design",
+        "form": "8-K",
+        "filedAt": "2026-09-28",
+        "reportDate": "2026-09-26",
+        "accessionNumber": "0000002488-26-000182",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000182/amd-20260926.htm"
+      }
+    ],
     "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [],
+    "new": [
+      {
+        "id": "aws-blog-7bc45090828e",
+        "publishedAt": "2026-09-28T16:14:54.000Z",
+        "source": "AWS 官方博客",
+        "sourceType": "公司观点",
+        "title": "AWS Weekly Roundup: GPT-6 Sol and Luna, Claude Opus 5.5 on Amazon Bedrock, Strands harness, and more (September 28, 2026)",
+        "summary": "If there’s one theme that defined last week, it’s choice. The frontier models keep arriving, and the interesting question is no longer just “how smart is it?” but “which model fits this step, at this cost, at this latency?” That’s exactly what landed on Amazon Bedrock over the past few days: GPT-6 Sol and GPT-6 Luna from OpenAI, giving you two new points on the intelligence-versus-efficiency curve, and Claude Opus 5.",
+        "topics": [
+          "AI 算力与芯片",
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "alphabet",
+          "amazon"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-sol-and-luna-claude-opus-5-5-on-amazon-bedrock-strands-harness-and-more-september-28-2026/"
+      },
+      {
+        "id": "federal-reserve-notes-c181a977a01d",
+        "publishedAt": "2026-09-28T14:38:00.000Z",
+        "source": "美国联邦储备委员会 FEDS Notes",
+        "sourceType": "央行研究",
+        "title": "FEDS Note: When the Chips Went Down: Motor Vehicle Production and the 2021-2022 Semiconductor Shortages",
+        "summary": "Adrian Hamins-Puertolas and Maria D. Tito The motor vehicle industry suffered severe production disruptions during 2021 and 2022, as semiconductor shortages—triggered by pandemic-era plant closures and shifting demand patterns—brought some assembly lines to a standstill. Having recovered to nearly pre-pandemic levels by the fourth quarter of 2020, aggregate U.S. light vehicle production plunged in early 2021, ultimat",
+        "topics": [
+          "AI 算力与芯片"
+        ],
+        "relatedCompanies": [],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://www.federalreserve.gov/econres/notes/feds-notes/when-the-chips-went-down-motor-vehicle-production-and-the-2021-2022-semiconductor-shortages-20260928.html"
+      }
+    ],
     "analysisRefreshed": []
   }
 }

@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-30T08:40:08.904Z",
+  "generatedAt": "2026-10-01T09:02:21.578Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 6,
+  "completedCount": 5,
   "companies": {
     "synopsys": {
       "status": "pending",
@@ -145,7 +145,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-09-30T08:40:30.329Z"
+      "lastAttemptAt": "2026-10-01T09:02:46.537Z"
     },
     "nvidia": {
       "status": "pending",
@@ -160,133 +160,14 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-09-30T08:40:12.879Z"
+      "lastAttemptAt": "2026-10-01T09:02:29.727Z"
     },
     "broadcom": {
-      "status": "ok",
-      "inputHash": "9d9e70f66b9ae52c3ea9dfd2d1cd2ec3a6cceaddaa4cb0d6fa8e25cff36a7a84",
-      "generatedAt": "2026-07-20T14:22:00.921Z",
-      "model": "openai/gpt-4.1",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0001193125-26-295589",
-          "label": "8-K · 2026-07-06",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526295589/d84378d8k.htm"
-        },
-        {
-          "id": "filing:0001193125-26-275077",
-          "label": "8-K · 2026-06-18",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526275077/d149683d8k.htm"
-        },
-        {
-          "id": "filing:0001193125-26-266777",
-          "label": "8-K · 2026-06-11",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526266777/d152717d8k.htm"
-        },
-        {
-          "id": "filing:0001730168-26-000054",
-          "label": "10-Q · 2026-06-09",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001730168.json"
-        }
-      ],
-      "summary": "博通2026年Q2财报显示，公司收入同比大幅增长47.87%，资产和现金均实现环比提升，资本开支大幅增加，但净利润同比大幅下降。近期多份8-K披露，但当前证据包不含披露正文，无法判断具体事项。",
-      "summaryEvidence": [
-        "filing:0001730168-26-000054",
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "2026年Q2收入同比增长47.87%，达到221.87亿美元。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "2026年Q2资产环比增长5.45%，至1791.58亿美元。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "2026年Q2现金及等价物环比增长38.48%，至196.28亿美元。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "2026年Q2资本开支同比增长97.13%，至4.81亿美元。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "收入和现金流大幅提升，显示业务扩张或市场需求增长。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资本开支大幅增加，可能反映产能扩张或新项目投入。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "净利润大幅下滑，需关注成本结构或一次性事项影响。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "资本开支增加可能带动上游设备、材料供应链需求。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "收入增长有望提升下游客户信心及合作意愿。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "近期8-K公告内容不明，无法判断是否涉及重大事项或风险。",
-          "evidence": [
-            "filing:0001193125-26-295589",
-            "filing:0001193125-26-275077",
-            "filing:0001193125-26-266777"
-          ]
-        },
-        {
-          "text": "净利润大幅下滑的具体原因不明，可能涉及成本、费用、一次性事项等。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "questionsToWatch": [
-        "近期8-K公告是否披露重大交易、诉讼或管理层变动？",
-        "净利润下滑的具体原因及后续影响如何？",
-        "资本开支增加对应的产能扩张或新业务进展如何？",
-        "收入增长是否具有可持续性？"
-      ],
-      "confidence": "medium",
-      "stale": true,
-      "lastAttemptAt": "2026-09-30T08:40:43.426Z",
-      "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
+      "status": "pending",
+      "inputHash": "57ee865a9f0c09f4c6245682404dcc8eb6829fe2788ca7ecb4405c4a4b152b4d",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "mediatek": {
       "status": "unavailable",
@@ -421,7 +302,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-09-30T08:40:17.238Z"
+      "lastAttemptAt": "2026-10-01T09:02:33.928Z"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -438,11 +319,12 @@
       "reason": "Source status: manual"
     },
     "micron": {
-      "status": "pending",
-      "inputHash": "e00f96a7176d98c4e68d2956c1b67450e06addde575137e090a89548855291aa",
+      "status": "error",
+      "inputHash": "7d0a02c4746a2523e4dc64a9d4d20f4cfbef1f7add508e5f0928152fdf5893ae",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-10-01T09:02:25.528Z"
     },
     "sk-hynix": {
       "status": "unavailable",
@@ -583,7 +465,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-09-30T08:40:21.606Z"
+      "lastAttemptAt": "2026-10-01T09:02:38.126Z"
     },
     "supermicro": {
       "status": "pending",
@@ -619,7 +501,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-09-30T08:40:39.070Z"
+      "lastAttemptAt": "2026-10-01T09:02:54.956Z"
     },
     "meta-platforms": {
       "status": "pending",
@@ -745,7 +627,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-09-30T08:40:25.919Z",
+      "lastAttemptAt": "2026-10-01T09:02:42.337Z",
       "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
     },
     "salesforce": {
@@ -754,7 +636,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-09-30T08:40:34.699Z"
+      "lastAttemptAt": "2026-10-01T09:02:50.750Z"
     },
     "servicenow": {
       "status": "ok",

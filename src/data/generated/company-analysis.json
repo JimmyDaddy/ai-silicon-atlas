@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T08:38:19.703Z",
+  "generatedAt": "2026-10-03T08:13:32.863Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -145,7 +145,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-02T08:38:44.638Z"
+      "lastAttemptAt": "2026-10-03T08:13:57.424Z"
     },
     "nvidia": {
       "status": "pending",
@@ -160,7 +160,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-02T08:38:27.828Z"
+      "lastAttemptAt": "2026-10-03T08:13:40.763Z"
     },
     "broadcom": {
       "status": "pending",
@@ -302,7 +302,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-02T08:38:32.028Z"
+      "lastAttemptAt": "2026-10-03T08:13:44.940Z"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -324,7 +324,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-02T08:38:23.611Z"
+      "lastAttemptAt": "2026-10-03T08:13:36.593Z"
     },
     "sk-hynix": {
       "status": "unavailable",
@@ -465,7 +465,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-02T08:38:36.234Z"
+      "lastAttemptAt": "2026-10-03T08:13:49.098Z"
     },
     "supermicro": {
       "status": "pending",
@@ -501,7 +501,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-02T08:38:53.018Z"
+      "lastAttemptAt": "2026-10-03T08:14:05.754Z"
     },
     "meta-platforms": {
       "status": "pending",
@@ -627,7 +627,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-10-02T08:38:40.430Z",
+      "lastAttemptAt": "2026-10-03T08:13:53.253Z",
       "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
     },
     "salesforce": {
@@ -636,7 +636,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-02T08:38:48.830Z"
+      "lastAttemptAt": "2026-10-03T08:14:01.593Z"
     },
     "servicenow": {
       "status": "ok",

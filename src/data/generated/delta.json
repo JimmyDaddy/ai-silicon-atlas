@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T08:14:06.422Z",
+  "generatedAt": "2026-10-04T08:32:11.212Z",
   "period": {
-    "from": "2026-10-02T08:38:53.674Z",
-    "to": "2026-10-03T08:14:06.422Z",
+    "from": "2026-10-03T08:14:06.422Z",
+    "to": "2026-10-04T08:32:11.212Z",
     "baseRef": "HEAD"
   },
   "summary": {
@@ -11,24 +11,13 @@
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 1
+    "totalChanges": 0
   },
   "affected": {
-    "stages": {
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1,
-      "equipment-materials": 1
-    },
-    "topics": {
-      "AI 算力与芯片": 1,
-      "半导体制造": 1,
-      "数据中心与电力": 1,
-      "模型与平台": 1
-    }
+    "stages": {},
+    "topics": {}
   },
   "companies": {
     "filings": [],
@@ -37,35 +26,7 @@
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "nvidia-blog-1f284fec3a90",
-        "publishedAt": "2026-10-02T13:00:39.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA DGX Spark 64GB Gives Developers More Ways to Build and Scale Local AI",
-        "summary": "Local AI is becoming more useful by the token. As AI agents move from experiments into everyday development, increasingly capable open models are shrinking to fit on more devices, giving builders more to run locally. Coming this month, NVIDIA DGX Spark will be available with 64GB of unified memory from top manufacturer partners — Acer, ASUS, Dell, Gigabyte, HP and MSI — giving developers, researchers and AI enthusias",
-        "topics": [
-          "AI 算力与芯片",
-          "半导体制造",
-          "数据中心与电力",
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "microsoft"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "equipment-materials"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

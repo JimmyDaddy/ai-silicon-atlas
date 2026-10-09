@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T09:05:11.494Z",
+  "generatedAt": "2026-10-09T09:12:33.367Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -12,7 +12,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-08T09:05:19.331Z"
+      "lastAttemptAt": "2026-10-09T09:12:46.750Z"
     },
     "cadence": {
       "status": "ok",
@@ -146,7 +146,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-08T09:05:50.194Z"
+      "lastAttemptAt": "2026-10-09T09:13:09.766Z"
     },
     "nvidia": {
       "status": "pending",
@@ -161,7 +161,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-08T09:05:32.358Z"
+      "lastAttemptAt": "2026-10-09T09:12:55.965Z"
     },
     "broadcom": {
       "status": "pending",
@@ -299,11 +299,11 @@
     },
     "tsmc": {
       "status": "error",
-      "inputHash": "8f907ce6dd6c0535115b2771a8e16415a62910a74093ccacade899a5e36a8aaa",
+      "inputHash": "b17a5856b8be05554771b6d83f8a1160b98a02ebbfb6eecd8fb0d7a3fe66cc2e",
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-08T09:05:36.819Z"
+      "lastAttemptAt": "2026-10-09T09:12:37.546Z"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -325,7 +325,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-08T09:05:27.903Z"
+      "lastAttemptAt": "2026-10-09T09:12:51.357Z"
     },
     "sk-hynix": {
       "status": "unavailable",
@@ -466,14 +466,15 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-08T09:05:41.262Z"
+      "lastAttemptAt": "2026-10-09T09:13:00.558Z"
     },
     "supermicro": {
-      "status": "pending",
-      "inputHash": "ef7130b6af912ee6d8413c8ee6a1a55b30a4141b742aa3d65c67fb8e9afb78bb",
+      "status": "error",
+      "inputHash": "b2d0561e9054a502cb3ebe38d1f8df9e05629954353b31e07ec4b67f5a20fc5f",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-10-09T09:12:42.147Z"
     },
     "equinix": {
       "status": "pending",
@@ -627,16 +628,15 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-10-08T09:05:45.702Z",
+      "lastAttemptAt": "2026-10-09T09:13:05.166Z",
       "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
     },
     "salesforce": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "f38dd438e4a73481783f282afc9c87a90483ba8a6766e607b832e1b01f3f4675",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-08T09:05:54.740Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "servicenow": {
       "status": "ok",

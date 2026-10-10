@@ -1,90 +1,111 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T09:13:10.420Z",
+  "generatedAt": "2026-10-10T08:36:18.620Z",
   "period": {
-    "from": "2026-10-08T09:05:55.391Z",
-    "to": "2026-10-09T09:13:10.420Z",
+    "from": "2026-10-09T09:13:10.420Z",
+    "to": "2026-10-10T08:36:18.620Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 2,
-    "metricChanges": 0,
+    "newFilings": 1,
+    "metricChanges": 5,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 3
+    "totalChanges": 6
   },
   "affected": {
     "stages": {
-      "ai-infrastructure": 2,
-      "manufacturing": 1,
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "equipment-materials": 1
+      "memory": 6
     },
-    "topics": {
-      "AI 算力与芯片": 1,
-      "半导体制造": 1,
-      "模型与平台": 1
-    }
+    "topics": {}
   },
   "companies": {
     "filings": [
       {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
-        "form": "8-K",
-        "filedAt": "2026-10-08",
-        "reportDate": "2026-10-07",
-        "accessionNumber": "0001375365-26-000023",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000023/smci-20261007.htm"
-      },
-      {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "form": "6-K",
-        "filedAt": "2026-10-08",
-        "reportDate": "2026-09-30",
-        "accessionNumber": "0001046179-26-000680",
-        "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000680/tsm-revenue20261008.htm"
+        "company": "micron",
+        "stage": "memory",
+        "form": "10-K",
+        "filedAt": "2026-10-09",
+        "reportDate": "2026-09-03",
+        "accessionNumber": "0000723125-26-000023",
+        "title": "10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm"
       }
     ],
-    "metrics": [],
+    "metrics": [
+      {
+        "company": "micron",
+        "stage": "memory",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 133188000000,
+        "previousValue": 41456000000,
+        "changePercent": 221.28,
+        "unit": "USD",
+        "periodEnd": "2026-09-03",
+        "previousPeriodEnd": "2026-05-28",
+        "sourceForm": "10-K"
+      },
+      {
+        "company": "micron",
+        "stage": "memory",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 84969000000,
+        "previousValue": 28243000000,
+        "changePercent": 200.85,
+        "unit": "USD",
+        "periodEnd": "2026-09-03",
+        "previousPeriodEnd": "2026-05-28",
+        "sourceForm": "10-K"
+      },
+      {
+        "company": "micron",
+        "stage": "memory",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 195888000000,
+        "previousValue": 134112000000,
+        "changePercent": 46.06,
+        "unit": "USD",
+        "periodEnd": "2026-09-03",
+        "previousPeriodEnd": "2026-05-28",
+        "sourceForm": "10-K"
+      },
+      {
+        "company": "micron",
+        "stage": "memory",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 38364000000,
+        "previousValue": 24995000000,
+        "changePercent": 53.49,
+        "unit": "USD",
+        "periodEnd": "2026-09-03",
+        "previousPeriodEnd": "2026-05-28",
+        "sourceForm": "10-K"
+      },
+      {
+        "company": "micron",
+        "stage": "memory",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 30712000000,
+        "previousValue": 19602000000,
+        "changePercent": 56.68,
+        "unit": "USD",
+        "periodEnd": "2026-09-03",
+        "previousPeriodEnd": "2026-05-28",
+        "sourceForm": "10-K"
+      }
+    ],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "nvidia-blog-baf7193e75c1",
-        "publishedAt": "2026-10-08T21:06:35.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
-        "summary": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work — building applications for exploring scenarios, investigating failures and improving designs. Developers direct AI agents through natural-language instruc",
-        "topics": [
-          "AI 算力与芯片",
-          "半导体制造",
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "equipment-materials"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

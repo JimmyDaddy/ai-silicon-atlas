@@ -1,73 +1,125 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T09:21:08.692Z",
+  "generatedAt": "2026-10-13T09:31:07.034Z",
   "period": {
-    "from": "2026-10-11T09:03:09.725Z",
-    "to": "2026-10-12T09:21:08.692Z",
+    "from": "2026-10-12T09:21:08.692Z",
+    "to": "2026-10-13T09:31:07.034Z",
     "baseRef": "HEAD"
   },
   "summary": {
     "newFilings": 0,
     "metricChanges": 0,
-    "companyStatusChanges": 3,
+    "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "newIntelligence": 3,
     "intelligenceAnalysisRefreshes": 0,
     "totalChanges": 3
   },
   "affected": {
     "stages": {
-      "packaging": 1,
-      "eda-ip": 1,
-      "ai-infrastructure": 1
+      "design": 3,
+      "memory": 3,
+      "packaging": 3,
+      "ai-infrastructure": 3,
+      "equipment-materials": 2
     },
-    "topics": {}
+    "topics": {
+      "AI 算力与芯片": 3,
+      "半导体制造": 2,
+      "数据中心与电力": 2,
+      "模型与平台": 2,
+      "企业应用与生产力": 1
+    }
   },
   "companies": {
     "filings": [],
     "metrics": [],
-    "statuses": [
-      {
-        "company": "amkor",
-        "stage": "packaging",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "cadence",
-        "stage": "eda-ip",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "equinix",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      }
-    ],
+    "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [],
+    "new": [
+      {
+        "id": "nvidia-blog-3fa2d8668eae",
+        "publishedAt": "2026-10-13T05:00:31.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "From Earth to Orbit, France’s Ecosystem Delivers Agentic Computing at Scale With NVIDIA",
+        "summary": "Companies in France are deploying agentic computing across industries spanning space, financial services, the public sector and scientific research, demonstrating how the country’s ecosystem has moved from ambition to application. France’s progress sits on deliberate groundwork. The AI Action Summit in February 2025 and Choose France Summits in 2025 and 2026 anchored major compute commitments on French soil. What the",
+        "topics": [
+          "AI 算力与芯片"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing/"
+      },
+      {
+        "id": "nvidia-blog-9c679f3096ea",
+        "publishedAt": "2026-10-12T15:00:25.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
+        "summary": "As AI factories grow from megawatts to gigawatts, building them takes more than advanced computing. Open standards are helping the industry scale AI infrastructure faster, more efficiently and more reliably. At the Open Compute Project (OCP) Global Summit, taking place in the San Jose McEnery Convention Center, NVIDIA announced new partnerships and contributions aimed at creating a common foundation for next-generati",
+        "topics": [
+          "AI 算力与芯片",
+          "半导体制造",
+          "数据中心与电力",
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "amd",
+          "microsoft",
+          "alphabet",
+          "vertiv"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/"
+      },
+      {
+        "id": "microsoft-blog-cb3a72491cf9",
+        "publishedAt": "2026-10-12T13:01:29.000Z",
+        "source": "Microsoft 官方博客",
+        "sourceType": "公司观点",
+        "title": "Microsoft to expand Azure Maia system to multi-gigawatt deployments",
+        "summary": "Azure Maia 200 now in production; Azure Maia 300 coming in 2027 As we move into the era of Super Intelligence, Microsoft is entering a new phase of infrastructure. We will scale our Azure Maia family to multi-gigawatt deployments starting in 2027, making Maia the primary inference system for Microsoft products and services. The multigenerational Azure Maia program has become a foundational element of Microsoft’s AI i",
+        "topics": [
+          "AI 算力与芯片",
+          "半导体制造",
+          "数据中心与电力",
+          "模型与平台",
+          "企业应用与生产力"
+        ],
+        "relatedCompanies": [
+          "tsmc",
+          "microsoft"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/"
+      }
+    ],
     "analysisRefreshed": []
   }
 }

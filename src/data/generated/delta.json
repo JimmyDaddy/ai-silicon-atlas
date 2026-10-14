@@ -1,38 +1,48 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T09:31:07.034Z",
+  "generatedAt": "2026-10-14T07:44:10.181Z",
   "period": {
-    "from": "2026-10-12T09:21:08.692Z",
-    "to": "2026-10-13T09:31:07.034Z",
+    "from": "2026-10-13T09:31:07.034Z",
+    "to": "2026-10-14T07:44:10.181Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 1,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 3,
+    "newIntelligence": 4,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 3
+    "totalChanges": 5
   },
   "affected": {
     "stages": {
+      "packaging": 4,
       "design": 3,
       "memory": 3,
-      "packaging": 3,
       "ai-infrastructure": 3,
-      "equipment-materials": 2
+      "models-platforms": 3
     },
     "topics": {
       "AI 算力与芯片": 3,
-      "半导体制造": 2,
-      "数据中心与电力": 2,
-      "模型与平台": 2,
-      "企业应用与生产力": 1
+      "模型与平台": 4,
+      "企业应用与生产力": 2,
+      "数据中心与电力": 1
     }
   },
   "companies": {
-    "filings": [],
+    "filings": [
+      {
+        "company": "ase-technology",
+        "stage": "packaging",
+        "form": "6-K",
+        "filedAt": "2026-10-13",
+        "reportDate": "2026-10-13",
+        "accessionNumber": "0000950103-26-015458",
+        "title": "FORM 6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326015458/dp254866_6k.htm"
+      }
+    ],
     "metrics": [],
     "statuses": [],
     "analysis": []
@@ -40,14 +50,16 @@
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-3fa2d8668eae",
-        "publishedAt": "2026-10-13T05:00:31.000Z",
+        "id": "nvidia-blog-641fd03bcae8",
+        "publishedAt": "2026-10-14T06:04:15.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "From Earth to Orbit, France’s Ecosystem Delivers Agentic Computing at Scale With NVIDIA",
-        "summary": "Companies in France are deploying agentic computing across industries spanning space, financial services, the public sector and scientific research, demonstrating how the country’s ecosystem has moved from ambition to application. France’s progress sits on deliberate groundwork. The AI Action Summit in February 2025 and Choose France Summits in 2025 and 2026 anchored major compute commitments on French soil. What the",
+        "title": "From Enterprise to Earthshot: UK’s Ecosystem Moves From Ambition to Application With NVIDIA",
+        "summary": "Across industries, the U.K. is putting the full stack to work — and the scale of deployment is growing fast, from enterprises transforming their businesses to startups solving some of the planet’s hardest problems. NVIDIA is putting that principle into practice, including through a five-year, $250 million compute commitment to strengthen the U.K.’s agentic safety and security research, providing $50 million in accele",
         "topics": [
-          "AI 算力与芯片"
+          "AI 算力与芯片",
+          "模型与平台",
+          "企业应用与生产力"
         ],
         "relatedCompanies": [
           "nvidia"
@@ -56,68 +68,79 @@
           "design",
           "memory",
           "packaging",
-          "ai-infrastructure"
+          "ai-infrastructure",
+          "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/uk-ecosystem-deployment/"
       },
       {
-        "id": "nvidia-blog-9c679f3096ea",
-        "publishedAt": "2026-10-12T15:00:25.000Z",
+        "id": "nvidia-blog-5f7238246fc0",
+        "publishedAt": "2026-10-14T06:00:28.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
-        "summary": "As AI factories grow from megawatts to gigawatts, building them takes more than advanced computing. Open standards are helping the industry scale AI infrastructure faster, more efficiently and more reliably. At the Open Compute Project (OCP) Global Summit, taking place in the San Jose McEnery Convention Center, NVIDIA announced new partnerships and contributions aimed at creating a common foundation for next-generati",
+        "title": "European Cities Deploy NVIDIA-Powered AI Agents to Run Smarter Urban Operations",
+        "summary": "Keeping a city running means making decisions that affect residents every day — from when to repair a road to how to use energy more efficiently. Across the EMEA region, cities and local software, infrastructure and integration partners are using NVIDIA accelerated computing to build physical AI agents and digital twins that help teams make those decisions. These applications can anticipate maintenance needs, guide u",
         "topics": [
           "AI 算力与芯片",
-          "半导体制造",
           "数据中心与电力",
           "模型与平台"
         ],
         "relatedCompanies": [
           "nvidia",
-          "amd",
-          "microsoft",
-          "alphabet",
-          "vertiv"
+          "supermicro"
         ],
         "relatedStages": [
           "design",
           "memory",
           "packaging",
           "ai-infrastructure",
-          "equipment-materials"
+          "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/european-cities-agents-urban-operations/"
       },
       {
-        "id": "microsoft-blog-cb3a72491cf9",
-        "publishedAt": "2026-10-12T13:01:29.000Z",
-        "source": "Microsoft 官方博客",
+        "id": "ecb-31a2bbd9d03d",
+        "publishedAt": "2026-10-13T18:30:00.000Z",
+        "source": "欧洲中央银行（ECB）",
+        "sourceType": "央行研究",
+        "title": "Philip R. Lane: The AI opportunity for Europe",
+        "summary": "",
+        "topics": [
+          "模型与平台"
+        ],
+        "relatedCompanies": [],
+        "relatedStages": [],
+        "analysisStatus": "error",
+        "sourceUrl": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261013~9db9bf4fd6.en.html"
+      },
+      {
+        "id": "nvidia-blog-1001bd550953",
+        "publishedAt": "2026-10-13T12:00:49.000Z",
+        "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "Microsoft to expand Azure Maia system to multi-gigawatt deployments",
-        "summary": "Azure Maia 200 now in production; Azure Maia 300 coming in 2027 As we move into the era of Super Intelligence, Microsoft is entering a new phase of infrastructure. We will scale our Azure Maia family to multi-gigawatt deployments starting in 2027, making Maia the primary inference system for Microsoft products and services. The multigenerational Azure Maia program has become a foundational element of Microsoft’s AI i",
+        "title": "All Systems Go: Global PC App Ecosystem Ready for NVIDIA RTX Spark",
+        "summary": "NVIDIA RTX Spark is a new beginning for the PC — a reinvention combining the capabilities of a gaming PC, a creative studio and a personal AI supercomputer into a single superchip. With up to 128GB of unified memory and 1 petaflop of AI compute, RTX Spark delivers the full stack of NVIDIA RTX and CUDA technologies for creators, developers and gamers, while unlocking a new paradigm in personal computing via powerful l",
         "topics": [
           "AI 算力与芯片",
-          "半导体制造",
-          "数据中心与电力",
           "模型与平台",
           "企业应用与生产力"
         ],
         "relatedCompanies": [
-          "tsmc",
-          "microsoft"
+          "nvidia",
+          "microsoft",
+          "adobe"
         ],
         "relatedStages": [
           "design",
           "memory",
           "packaging",
           "ai-infrastructure",
-          "equipment-materials"
+          "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/"
       }
     ],
     "analysisRefreshed": []

@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T07:43:32.082Z",
+  "generatedAt": "2026-10-15T07:32:00.909Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 5,
+  "completedCount": 4,
   "companies": {
     "synopsys": {
       "status": "error",
@@ -12,7 +12,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-14T07:43:55.314Z"
+      "lastAttemptAt": "2026-10-15T07:32:26.931Z"
     },
     "cadence": {
       "status": "ok",
@@ -160,7 +160,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-14T07:44:00.045Z"
+      "lastAttemptAt": "2026-10-15T07:32:31.317Z"
     },
     "broadcom": {
       "status": "pending",
@@ -273,7 +273,10 @@
         "下游客户需求是否持续强劲？",
         "地缘政治因素对阿斯麦业务有无新影响？"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "stale": true,
+      "lastAttemptAt": "2026-10-15T07:32:04.936Z",
+      "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
     },
     "applied-materials": {
       "status": "pending",
@@ -302,7 +305,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-14T07:43:45.858Z"
+      "lastAttemptAt": "2026-10-15T07:32:18.174Z"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -324,7 +327,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-14T07:43:41.132Z"
+      "lastAttemptAt": "2026-10-15T07:32:13.759Z"
     },
     "sk-hynix": {
       "status": "unavailable",
@@ -339,7 +342,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-14T07:43:36.400Z"
+      "lastAttemptAt": "2026-10-15T07:32:09.351Z"
     },
     "amkor": {
       "status": "ok",
@@ -466,7 +469,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-14T07:44:04.780Z"
+      "lastAttemptAt": "2026-10-15T07:32:35.703Z"
     },
     "supermicro": {
       "status": "error",
@@ -474,7 +477,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-14T07:43:50.580Z"
+      "lastAttemptAt": "2026-10-15T07:32:22.545Z"
     },
     "equinix": {
       "status": "pending",
@@ -519,117 +522,11 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "adobe": {
-      "status": "ok",
-      "inputHash": "bcca94ee9d60d91d9225e29004753be7bb68bf5223f45a00216248f076c984c0",
-      "generatedAt": "2026-07-20T14:20:09.235Z",
-      "model": "openai/gpt-4.1",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0000796343-26-000120",
-          "label": "8-K · 2026-07-17",
-          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000120/adbe-20260714.htm"
-        },
-        {
-          "id": "filing:0000796343-26-000112",
-          "label": "10-Q · 2026-06-15",
-          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000112/adbe-20260529.htm"
-        },
-        {
-          "id": "filing:0000796343-26-000109",
-          "label": "8-K · 2026-06-11",
-          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000109/adbe-20260608.htm"
-        },
-        {
-          "id": "filing:0000796343-26-000101",
-          "label": "8-K · 2026-04-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000101/adbe-20260415.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000796343.json"
-        }
-      ],
-      "summary": "奥多比2026年Q2收入同比增长12.69%，净利润同比增长1.24%，资产小幅提升，现金储备下降22.32%，资本支出同比增加30.14%。最新8-K公告已披露，但当前证据包不含公告正文，无法判断具体事项。",
-      "summaryEvidence": [
-        "company-facts",
-        "filing:0000796343-26-000112",
-        "filing:0000796343-26-000120"
-      ],
-      "whatChanged": [
-        {
-          "text": "2026年Q2收入同比增长12.69%，显示业务扩张。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "净利润同比增长1.24%，盈利能力略有提升。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "现金储备较上一季度下降22.32%，可能反映投资或运营支出增加。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资本支出同比增加30.14%，表明公司加大投资力度。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "收入和资本支出增长，显示公司积极扩展业务和投资。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "现金储备下降，需关注资金流动性和未来投资能力。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "资本支出增加可能带动IT基础设施、云服务及相关半导体需求增长。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "最新8-K公告内容不明，无法判断是否有重大事件或战略调整。",
-          "evidence": [
-            "filing:0000796343-26-000120"
-          ]
-        },
-        {
-          "text": "现金储备下降的具体原因及后续影响未披露。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "questionsToWatch": [
-        "最新8-K公告是否涉及重大业务变动或战略调整？",
-        "现金储备下降是否影响公司未来投资与运营？",
-        "资本支出增加主要用于哪些领域？",
-        "收入增长是否可持续？"
-      ],
-      "confidence": "medium",
-      "stale": true,
-      "lastAttemptAt": "2026-10-14T07:44:09.516Z",
-      "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
+      "status": "pending",
+      "inputHash": "ee312328a00ff3b00c4d135415dcd9f9cb2a9245945a2728ce6e477656dc7a22",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "salesforce": {
       "status": "pending",

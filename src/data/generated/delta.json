@@ -1,44 +1,56 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-15T07:32:36.364Z",
+  "generatedAt": "2026-10-16T07:17:22.190Z",
   "period": {
-    "from": "2026-10-14T07:44:10.181Z",
-    "to": "2026-10-15T07:32:36.364Z",
+    "from": "2026-10-15T07:32:36.364Z",
+    "to": "2026-10-16T07:17:22.190Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
+    "newFilings": 2,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 2
+    "totalChanges": 4
   },
   "affected": {
     "stages": {
-      "equipment-materials": 1,
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1
+      "ai-infrastructure": 3,
+      "manufacturing": 1,
+      "design": 2,
+      "memory": 2,
+      "packaging": 2,
+      "models-platforms": 2
     },
     "topics": {
-      "AI 算力与芯片": 1,
-      "数据中心与电力": 1
+      "AI 算力与芯片": 2,
+      "数据中心与电力": 1,
+      "模型与平台": 2
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "asml",
-        "stage": "equipment-materials",
+        "company": "supermicro",
+        "stage": "ai-infrastructure",
+        "form": "8-K",
+        "filedAt": "2026-10-15",
+        "reportDate": "2026-10-14",
+        "accessionNumber": "0001375365-26-000024",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000024/smci-20261014.htm"
+      },
+      {
+        "company": "tsmc",
+        "stage": "manufacturing",
         "form": "6-K",
-        "filedAt": "2026-10-14",
-        "reportDate": "2026-09-27",
-        "accessionNumber": "0001628280-26-065813",
+        "filedAt": "2026-10-15",
+        "reportDate": "2026-09-30",
+        "accessionNumber": "0001046179-26-000726",
         "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/form6-kquarterlyfilings.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000726/tsm-20261015x6k.htm"
       }
     ],
     "metrics": [],
@@ -48,15 +60,42 @@
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-68f85c5a70ff",
-        "publishedAt": "2026-10-15T05:00:12.000Z",
+        "id": "nvidia-blog-902189e10f1e",
+        "publishedAt": "2026-10-15T15:00:24.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "The Nordics and NVIDIA Show What’s Possible When a Region Commits to Advanced Computing",
-        "summary": "The Nordic countries have become the European leader in unicorn startup density, producing the most emerging companies valued at $1 billion or more per capita on the continent. Now, a new chapter for the region is unfolding as countries race to build one of Europe’s most consequential technology ecosystems. The many computing advancements already underway in the Nordics, combined with the opportunity that lies ahead,",
+        "title": "Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models",
+        "summary": "NVIDIA today released Nemotron 3.5 Super VL, an open 120-billion-parameter model that delivers the fastest task completion and highest accuracy for specialized always-on agents. Joining it are two new edge models: Nemotron 3.5 Bolt 74B-A9B 24GB, optimized to balance intelligence and speed per GB for local agentic workloads, and Nemotron 3.5 Bolt E4B 4GB, optimized for intelligence per GB for fast conversational agent",
         "topics": [
           "AI 算力与芯片",
-          "数据中心与电力"
+          "数据中心与电力",
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "synopsys",
+          "salesforce"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/"
+      },
+      {
+        "id": "nvidia-blog-0aa71d1f1cfd",
+        "publishedAt": "2026-10-15T10:00:12.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "NVIDIA Expands Advanced Technology Access for Europe’s Scientific Community Through Open Learning Resources, Collaborations and Compute",
+        "summary": "Much of today’s scientific progress begins with computation. But turning accelerated computing’s potential into scientific progress — modeling climate systems, designing molecules, simulating materials and more — depends on more than breakthrough technology. Especially for smaller labs, early-career scientists or science-based startups, the hardest part of research can be everything that comes before the science: ass",
+        "topics": [
+          "AI 算力与芯片",
+          "模型与平台"
         ],
         "relatedCompanies": [
           "nvidia"
@@ -65,10 +104,11 @@
           "design",
           "memory",
           "packaging",
-          "ai-infrastructure"
+          "ai-infrastructure",
+          "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/nordics-technology-ecosystem/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/ec-scientific-computing-pledge/"
       }
     ],
     "analysisRefreshed": []

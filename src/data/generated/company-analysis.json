@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-15T07:32:00.909Z",
+  "generatedAt": "2026-10-16T07:16:41.451Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -12,7 +12,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-15T07:32:26.931Z"
+      "lastAttemptAt": "2026-10-16T07:17:12.723Z"
     },
     "cadence": {
       "status": "ok",
@@ -160,7 +160,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-15T07:32:31.317Z"
+      "lastAttemptAt": "2026-10-16T07:17:17.139Z"
     },
     "broadcom": {
       "status": "pending",
@@ -275,7 +275,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-10-15T07:32:04.936Z",
+      "lastAttemptAt": "2026-10-16T07:16:54.358Z",
       "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
     },
     "applied-materials": {
@@ -301,11 +301,11 @@
     },
     "tsmc": {
       "status": "error",
-      "inputHash": "b17a5856b8be05554771b6d83f8a1160b98a02ebbfb6eecd8fb0d7a3fe66cc2e",
+      "inputHash": "22fc9055c673c4359640d9ff473bd986a0542537090dc32f34b8d171eb5d2d7c",
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-15T07:32:18.174Z"
+      "lastAttemptAt": "2026-10-16T07:16:45.497Z"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -327,7 +327,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-15T07:32:13.759Z"
+      "lastAttemptAt": "2026-10-16T07:17:08.280Z"
     },
     "sk-hynix": {
       "status": "unavailable",
@@ -342,7 +342,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-15T07:32:09.351Z"
+      "lastAttemptAt": "2026-10-16T07:16:58.836Z"
     },
     "amkor": {
       "status": "ok",
@@ -469,15 +469,15 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-15T07:32:35.703Z"
+      "lastAttemptAt": "2026-10-16T07:17:21.559Z"
     },
     "supermicro": {
       "status": "error",
-      "inputHash": "b2d0561e9054a502cb3ebe38d1f8df9e05629954353b31e07ec4b67f5a20fc5f",
+      "inputHash": "5fcf9a128c33b8daace23a8cf6f569ebc75f60e553eeaf8d8404b5caad3e2977",
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-15T07:32:22.545Z"
+      "lastAttemptAt": "2026-10-16T07:16:49.919Z"
     },
     "equinix": {
       "status": "pending",

@@ -1,58 +1,36 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-16T07:17:22.190Z",
+  "generatedAt": "2026-10-17T07:02:20.856Z",
   "period": {
-    "from": "2026-10-15T07:32:36.364Z",
-    "to": "2026-10-16T07:17:22.190Z",
+    "from": "2026-10-16T07:17:22.190Z",
+    "to": "2026-10-17T07:02:20.856Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 2,
+    "newFilings": 0,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
     "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 4
+    "totalChanges": 2
   },
   "affected": {
     "stages": {
-      "ai-infrastructure": 3,
-      "manufacturing": 1,
-      "design": 2,
-      "memory": 2,
-      "packaging": 2,
-      "models-platforms": 2
+      "models-platforms": 1,
+      "ai-applications": 1,
+      "design": 1,
+      "memory": 1,
+      "packaging": 1,
+      "ai-infrastructure": 1
     },
     "topics": {
-      "AI 算力与芯片": 2,
-      "数据中心与电力": 1,
-      "模型与平台": 2
+      "资本市场与金融稳定": 1,
+      "AI 算力与芯片": 1
     }
   },
   "companies": {
-    "filings": [
-      {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
-        "form": "8-K",
-        "filedAt": "2026-10-15",
-        "reportDate": "2026-10-14",
-        "accessionNumber": "0001375365-26-000024",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000024/smci-20261014.htm"
-      },
-      {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "form": "6-K",
-        "filedAt": "2026-10-15",
-        "reportDate": "2026-09-30",
-        "accessionNumber": "0001046179-26-000726",
-        "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000726/tsm-20261015x6k.htm"
-      }
-    ],
+    "filings": [],
     "metrics": [],
     "statuses": [],
     "analysis": []
@@ -60,55 +38,42 @@
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-902189e10f1e",
-        "publishedAt": "2026-10-15T15:00:24.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models",
-        "summary": "NVIDIA today released Nemotron 3.5 Super VL, an open 120-billion-parameter model that delivers the fastest task completion and highest accuracy for specialized always-on agents. Joining it are two new edge models: Nemotron 3.5 Bolt 74B-A9B 24GB, optimized to balance intelligence and speed per GB for local agentic workloads, and Nemotron 3.5 Bolt E4B 4GB, optimized for intelligence per GB for fast conversational agent",
+        "id": "federal-reserve-notes-1e40bf033a77",
+        "publishedAt": "2026-10-16T14:25:00.000Z",
+        "source": "美国联邦储备委员会 FEDS Notes",
+        "sourceType": "央行研究",
+        "title": "FEDS Note: Introducing Private Credit into the Financial Accounts of the United States",
+        "summary": "Katie Brinkman, Christine Dobridge , Tim Dore , Simon Glossner , Elizabeth Holmquist , Nam Nguyen, Maria Perozek , and Irina Stefanescu Over the past decade, private credit has played an increasingly important role in providing funding to middle-market businesses. While there are several definitions of private credit, here we define it as privately negotiated loans to businesses that are originated by nonbank investm",
         "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "模型与平台"
+          "资本市场与金融稳定"
         ],
-        "relatedCompanies": [
-          "nvidia",
-          "synopsys",
-          "salesforce"
-        ],
+        "relatedCompanies": [],
         "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
+          "models-platforms",
+          "ai-applications"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/"
+        "sourceUrl": "https://www.federalreserve.gov/econres/notes/feds-notes/introducing-private-credit-into-the-financial-accounts-of-the-united-states-20261016.html"
       },
       {
-        "id": "nvidia-blog-0aa71d1f1cfd",
-        "publishedAt": "2026-10-15T10:00:12.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA Expands Advanced Technology Access for Europe’s Scientific Community Through Open Learning Resources, Collaborations and Compute",
-        "summary": "Much of today’s scientific progress begins with computation. But turning accelerated computing’s potential into scientific progress — modeling climate systems, designing molecules, simulating materials and more — depends on more than breakthrough technology. Especially for smaller labs, early-career scientists or science-based startups, the hardest part of research can be everything that comes before the science: ass",
+        "id": "nist-news-2221263d96a4",
+        "publishedAt": "2026-10-16T12:00:00.000Z",
+        "source": "美国国家标准与技术研究院（NIST）",
+        "sourceType": "政府研究",
+        "title": "New Chip-Based ‘Tape Measure’ for Light Could Revolutionize Mobile Timekeeping and Enhance National Security",
+        "summary": "The new device could help provide vital navigation signals when GPS is either unavailable or has been jammed.",
         "topics": [
-          "AI 算力与芯片",
-          "模型与平台"
+          "AI 算力与芯片"
         ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
+        "relatedCompanies": [],
         "relatedStages": [
           "design",
           "memory",
           "packaging",
-          "ai-infrastructure",
-          "models-platforms"
+          "ai-infrastructure"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/ec-scientific-computing-pledge/"
+        "sourceUrl": "https://www.nist.gov/news-events/news/2026/10/new-chip-based-tape-measure-light-could-revolutionize-mobile-timekeeping"
       }
     ],
     "analysisRefreshed": []

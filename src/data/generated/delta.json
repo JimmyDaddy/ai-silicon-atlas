@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-17T07:02:20.856Z",
+  "generatedAt": "2026-10-18T07:18:00.757Z",
   "period": {
-    "from": "2026-10-16T07:17:22.190Z",
-    "to": "2026-10-17T07:02:20.856Z",
+    "from": "2026-10-17T07:02:20.856Z",
+    "to": "2026-10-18T07:18:00.757Z",
     "baseRef": "HEAD"
   },
   "summary": {
@@ -11,21 +11,19 @@
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 2,
+    "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 2
+    "totalChanges": 1
   },
   "affected": {
     "stages": {
-      "models-platforms": 1,
-      "ai-applications": 1,
       "design": 1,
       "memory": 1,
       "packaging": 1,
-      "ai-infrastructure": 1
+      "ai-infrastructure": 1,
+      "models-platforms": 1
     },
     "topics": {
-      "资本市场与金融稳定": 1,
       "AI 算力与芯片": 1
     }
   },
@@ -38,42 +36,28 @@
   "intelligence": {
     "new": [
       {
-        "id": "federal-reserve-notes-1e40bf033a77",
-        "publishedAt": "2026-10-16T14:25:00.000Z",
-        "source": "美国联邦储备委员会 FEDS Notes",
-        "sourceType": "央行研究",
-        "title": "FEDS Note: Introducing Private Credit into the Financial Accounts of the United States",
-        "summary": "Katie Brinkman, Christine Dobridge , Tim Dore , Simon Glossner , Elizabeth Holmquist , Nam Nguyen, Maria Perozek , and Irina Stefanescu Over the past decade, private credit has played an increasingly important role in providing funding to middle-market businesses. While there are several definitions of private credit, here we define it as privately negotiated loans to businesses that are originated by nonbank investm",
-        "topics": [
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "models-platforms",
-          "ai-applications"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://www.federalreserve.gov/econres/notes/feds-notes/introducing-private-credit-into-the-financial-accounts-of-the-united-states-20261016.html"
-      },
-      {
-        "id": "nist-news-2221263d96a4",
-        "publishedAt": "2026-10-16T12:00:00.000Z",
-        "source": "美国国家标准与技术研究院（NIST）",
-        "sourceType": "政府研究",
-        "title": "New Chip-Based ‘Tape Measure’ for Light Could Revolutionize Mobile Timekeeping and Enhance National Security",
-        "summary": "The new device could help provide vital navigation signals when GPS is either unavailable or has been jammed.",
+        "id": "nvidia-blog-c850cbc28643",
+        "publishedAt": "2026-10-17T21:00:13.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "RTX Spark Ignites Global Celebration as New Windows PCs Arrive",
+        "summary": "NVIDIA RTX Spark laptops are now available, bringing NVIDIA Blackwell RTX graphics, up to 128GB of unified memory and the full NVIDIA AI platform to slim, premium Windows PCs. Starting at $2,399, laptops from ASUS, Dell, HP, Lenovo, Microsoft and MSI bring powerful local AI, content creation and gaming capabilities to a portable device, with additional systems on the way. NVIDIA celebrated the launch with events arou",
         "topics": [
           "AI 算力与芯片"
         ],
-        "relatedCompanies": [],
+        "relatedCompanies": [
+          "nvidia",
+          "microsoft"
+        ],
         "relatedStages": [
           "design",
           "memory",
           "packaging",
-          "ai-infrastructure"
+          "ai-infrastructure",
+          "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://www.nist.gov/news-events/news/2026/10/new-chip-based-tape-measure-light-could-revolutionize-mobile-timekeeping"
+        "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-windows-laptops-celebration/"
       }
     ],
     "analysisRefreshed": []

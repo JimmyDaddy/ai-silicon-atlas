@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T07:18:00.757Z",
+  "generatedAt": "2026-10-19T07:53:42.537Z",
   "period": {
-    "from": "2026-10-17T07:02:20.856Z",
-    "to": "2026-10-18T07:18:00.757Z",
+    "from": "2026-10-18T07:18:00.757Z",
+    "to": "2026-10-19T07:53:42.537Z",
     "baseRef": "HEAD"
   },
   "summary": {
@@ -11,21 +11,13 @@
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 1
+    "totalChanges": 0
   },
   "affected": {
-    "stages": {
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1,
-      "models-platforms": 1
-    },
-    "topics": {
-      "AI 算力与芯片": 1
-    }
+    "stages": {},
+    "topics": {}
   },
   "companies": {
     "filings": [],
@@ -34,32 +26,7 @@
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "nvidia-blog-c850cbc28643",
-        "publishedAt": "2026-10-17T21:00:13.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "RTX Spark Ignites Global Celebration as New Windows PCs Arrive",
-        "summary": "NVIDIA RTX Spark laptops are now available, bringing NVIDIA Blackwell RTX graphics, up to 128GB of unified memory and the full NVIDIA AI platform to slim, premium Windows PCs. Starting at $2,399, laptops from ASUS, Dell, HP, Lenovo, Microsoft and MSI bring powerful local AI, content creation and gaming capabilities to a portable device, with additional systems on the way. NVIDIA celebrated the launch with events arou",
-        "topics": [
-          "AI 算力与芯片"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "microsoft"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-windows-laptops-celebration/"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

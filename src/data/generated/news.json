@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T07:45:50.859Z",
+  "generatedAt": "2026-10-22T07:41:29.872Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "authority-news-synthesis-v1",
@@ -15,7 +15,7 @@
       "homepage": "https://www.bis.org/",
       "priority": 100,
       "status": "error",
-      "checkedAt": "2026-10-21T07:45:50.859Z",
+      "checkedAt": "2026-10-22T07:41:29.872Z",
       "itemCount": 0,
       "matchedCount": 0,
       "error": "HTTP 404"
@@ -28,7 +28,7 @@
       "homepage": "https://www.ecb.europa.eu/",
       "priority": 96,
       "status": "ok",
-      "checkedAt": "2026-10-21T07:45:50.859Z",
+      "checkedAt": "2026-10-22T07:41:29.872Z",
       "itemCount": 15,
       "matchedCount": 1
     },
@@ -40,7 +40,7 @@
       "homepage": "https://www.federalreserve.gov/econres.htm",
       "priority": 95,
       "status": "ok",
-      "checkedAt": "2026-10-21T07:45:50.859Z",
+      "checkedAt": "2026-10-22T07:41:29.872Z",
       "itemCount": 15,
       "matchedCount": 2
     },
@@ -52,7 +52,7 @@
       "homepage": "https://www.federalreserve.gov/econres/notes/feds-notes/default.htm",
       "priority": 94,
       "status": "ok",
-      "checkedAt": "2026-10-21T07:45:50.859Z",
+      "checkedAt": "2026-10-22T07:41:29.872Z",
       "itemCount": 15,
       "matchedCount": 3
     },
@@ -64,7 +64,7 @@
       "homepage": "https://www.nist.gov/artificial-intelligence",
       "priority": 92,
       "status": "ok",
-      "checkedAt": "2026-10-21T07:45:50.859Z",
+      "checkedAt": "2026-10-22T07:41:29.872Z",
       "itemCount": 30,
       "matchedCount": 6
     },
@@ -76,9 +76,9 @@
       "homepage": "https://blogs.nvidia.com/",
       "priority": 86,
       "status": "ok",
-      "checkedAt": "2026-10-21T07:45:50.859Z",
+      "checkedAt": "2026-10-22T07:41:29.872Z",
       "itemCount": 18,
-      "matchedCount": 14
+      "matchedCount": 16
     },
     {
       "id": "microsoft-blog",
@@ -88,7 +88,7 @@
       "homepage": "https://blogs.microsoft.com/",
       "priority": 84,
       "status": "ok",
-      "checkedAt": "2026-10-21T07:45:50.859Z",
+      "checkedAt": "2026-10-22T07:41:29.872Z",
       "itemCount": 10,
       "matchedCount": 5
     },
@@ -100,7 +100,7 @@
       "homepage": "https://aws.amazon.com/blogs/aws/",
       "priority": 82,
       "status": "ok",
-      "checkedAt": "2026-10-21T07:45:50.859Z",
+      "checkedAt": "2026-10-22T07:41:29.872Z",
       "itemCount": 20,
       "matchedCount": 4
     },
@@ -112,12 +112,647 @@
       "homepage": "https://newsroom.intel.com/",
       "priority": 80,
       "status": "ok",
-      "checkedAt": "2026-10-21T07:45:50.859Z",
+      "checkedAt": "2026-10-22T07:41:29.872Z",
       "itemCount": 0,
       "matchedCount": 0
     }
   ],
   "articles": [
+    {
+      "id": "nvidia-blog-8eb5c126f8cf",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "Leading European Financial Services Organizations Embrace Open Models to Build Proprietary Intelligence",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/european-financial-services-organizations-open-models-proprietary-intelligence/",
+      "publishedAt": "2026-10-22T05:00:56.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "At GTC Berlin, banks, payment companies and financial data providers are showing what production-scale intelligence looks like — built on NVIDIA accelerated computing, powered by open weight models and running on their own infrastructure. Revolut is rebuilding its technology stack on a single foundation model PRAGMA , powered by NVIDIA accelerated computing. Using the NVIDIA cuDF toolkit and Dynamo-Triton software on",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "d870164bec62271266473df3cbf900d219b8a828bd84ad9e1cdae37f33f916fc",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:41:36.493Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-381130e24d54",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA Cosmos Opens New Tools to Train, Evaluate and Deploy World Models",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models/",
+      "publishedAt": "2026-10-22T05:00:27.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "microsoft"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "To help developers rapidly build world models , which help physical AI systems understand and simulate the real world, NVIDIA has expanded the Cosmos platform with new training tools, simulation checkpoints and Cosmos Data Factory blueprints. Ranking top five on six different open models leaderboards, the NVIDIA Cosmos platform gives world model builders the frontier open models — as well as data, training and optimi",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "37cca5c119879b3dc9084c0270024f99306406c24cd14bfda9c6c72f7c2b7037",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:41:41.639Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-761a1716cf64",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "How Companies Are Using NVIDIA DSX to Break the Power Bottleneck",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/dsx-power/",
+      "publishedAt": "2026-10-22T05:00:25.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "数据中心与电力"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "ai-infrastructure",
+        "design"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Companies around the world are building on the NVIDIA DSX AI Factory Platform to plan, simulate and run the grid and the AI factory as one system, from the substation to the rack. Their adoption of the platform responds to an acute problem. Power is now the biggest bottleneck in infrastructure. More than $300 billion in equipment is backlogged, and over 200 gigawatts of projects are waiting in U.S. interconnection qu",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "92d2a0da1fde719cf081661ea3f35a7ff62d018e031d75491e7f2b472914d893",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:41:46.779Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-231615289514",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA Transforms European Retail, From Digital Discovery to Physical Operations",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/european-retail-open-models-robotics/",
+      "publishedAt": "2026-10-22T05:00:23.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "alphabet",
+        "amazon"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "ai-applications"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "European retailers are using open models and physical intelligence across use cases — from a commerce platform cutting inference costs by 90% to to a fulfillment center where collaboration of different robotic fleets is simulated inside a digital twin. Frontier Results With Open Models Retail leaders and technology companies across Europe are using NVIDIA-accelerated open and frontier models to advance agentic commer",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "183ac75a4dd709138366bc6325be71dada22cff14bf301217a5e776f589b35d4",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:41:51.959Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-2d9cc8be346c",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA Open Models Power a New Wave of European Public Sector Projects",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/european-public-sector-open-models/",
+      "publishedAt": "2026-10-22T05:00:02.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "模型与平台",
+        "资本市场与金融稳定"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Governments need modern solutions to serve the public while keeping sensitive information under their control. Open models provide a path forward, letting governments evaluate them, adapt them to local languages and public services, run them on infrastructure they control, apply their own safeguards and keep sensitive data within controlled environments. Some open models go further, with the datasets they were traine",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "902f031aa6fbbad7ac810613f205f781ff58d021a7b0a5f58a4886c262718e8e",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:41:57.152Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-0b1d731f907e",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "Bringing the Spark to Europe: Local Intelligence Powers Next Wave of Agents",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/local-ai-gtc-rtx-dgx-spark-station-sync/",
+      "publishedAt": "2026-10-21T10:50:37.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "模型与平台",
+        "企业应用与生产力",
+        "资本市场与金融稳定"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "microsoft",
+        "supermicro",
+        "synopsys"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "At GTC Berlin, NVIDIA is showcasing its full lineup of local AI hardware. RTX Spark , which launched last week , powers personal agents on Windows PCs; DGX Spark supports developers building and scaling applications on Linux; and DGX Station serves enterprise teams running frontier workloads on Linux, with a Windows version arriving in December. Announcements include: Underdog Desktop Agent now available for RTX Spar",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "b767c15b1a75f0db36d515f923cb5bb21fc0ae249505aed51b3236d5a349fc79",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:42:02.351Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-7dbdc8f6d3c5",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "Google Cloud and NVIDIA Announce General Availability of NVIDIA Vera Rubin Infrastructure",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure/",
+      "publishedAt": "2026-10-21T10:45:17.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "半导体制造",
+        "数据中心与电力",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "alphabet"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "equipment-materials"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "General availability of the instances is coming next month, with planned expansion of availability to Europe — bringing an integrated platform for training, inference and large-scale reinforcement learning to cloud customers. A5X instances bring together NVIDIA Vera Rubin NVL72, NVIDIA ConnectX-9 SuperNICs, Google Cloud Virgo Network and Google Cloud’s fourth-generation advanced liquid-cooling technology for demandin",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "3f5ae7b53dd75648689c50df39357be453b798485d6b4d871d3a0d58f925cb17",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:42:07.555Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-f47072a36f45",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA Cloud Partners Scale Across Europe — Sovereign, Open and Built for Safe AI Agents",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/cloud-partners-europe-sovereign-safety-open-agents/",
+      "publishedAt": "2026-10-21T10:30:41.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Demand from AI-natives is pulling the European AI cloud ecosystem forward faster than ever. Developers need compute closer to their data, open models they can customize and serve at scale, and full-stack infrastructure that is secure by design. NVIDIA Cloud Partners across Europe, the Nordics, Africa, and Central Asia are expanding regional compute capacity for model training and inference, helping developers build a",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "e2de8c22e966565d832e26d2235edf8ad1fee34721b7e5107e7b52bfae548495",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:42:12.754Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-0c405e6fd045",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "Europe’s Industrial Leaders Reinvent Engineering and Manufacturing With NVIDIA",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/europe-industrial-leaders-engineering-manufacturing/",
+      "publishedAt": "2026-10-21T10:30:40.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "模型与平台",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "microsoft",
+        "synopsys",
+        "cadence"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "To increase productivity, accelerate innovation and create new opportunities for economic growth, Europe’s industrial leaders are tapping NVIDIA CUDA-X and Omniverse libraries , as well as NVIDIA Cosmos and Nemotron open models, across the engineering and manufacturing lifecycle. Bringing those capabilities together on the factory floor, the NVIDIA Factory Operations Blueprint (FOX) is now available in early access o",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "5e76599d7c710a0ea49f45d116075ea759e2adf54a7e445187fde03b9cf4ce4c",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:42:17.922Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-64ae1d1ebee7",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA cuDSS Now Generally Available to Accelerate Engineering and Scientific Simulations",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/cudss-generally-available-engineering-scientific-simulation/",
+      "publishedAt": "2026-10-21T10:30:25.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "半导体制造"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "synopsys",
+        "cadence"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "equipment-materials"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "NVIDIA cuDSS, launched today in general availability, is an NVIDIA CUDA-X library that shifts a critical part of engineering and scientific simulations onto GPUs. Complex engineering feats — from advanced chips to aircraft to industrial systems —– depend on simulation to predict how designs will perform before they’re built. As designs become more complex, simulations take longer to run, increasing computing demands ",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "bf47b43d1f7c9e0373708fb79829badcd861f678e5a974caa714d87e34471f63",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:42:23.128Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-9e8b8c2e1479",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA Confidential Computing Expands, Enabling Frontier Model Builders to Securely Scale Across Global Infrastructure",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/confidential-computing-model-builders-infrastructure/",
+      "publishedAt": "2026-10-21T10:30:02.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "microsoft",
+        "alphabet",
+        "supermicro"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "NVIDIA builds tools to enable safe agents across the stack . The NVIDIA OpenShell Reference Architecture, announced today , is part of NVIDIA’s growing portfolio of technologies that enables organizations to safely deploy agents at scale. NVIDIA Confidential Computing is the infrastructure layer that protects the models and data those agents depend on while running. Today, NVIDIA is expanding that layer with Confiden",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "32b256c886d21b6239817b15976f873379bc79cc6df23e8507675828720d896c",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:42:28.300Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-7d59293497ac",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA Agent Toolkit Expands, Grounding Enterprise Agents in Company Data",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/enterprise-platforms-agent-toolkit/",
+      "publishedAt": "2026-10-21T10:10:01.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "半导体制造",
+        "供应链与地缘政策"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "amazon",
+        "palantir",
+        "servicenow"
+      ],
+      "relatedStages": [
+        "equipment-materials",
+        "manufacturing",
+        "memory",
+        "packaging",
+        "design"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Agents are only as useful as what they know, and only as trustworthy as the boundaries they run within. Leading enterprises are using the open source NVIDIA Agent Toolkit — now expanded with new tools — to customize and control agents, use company data to inform their answers and actions, monitor what they do and govern how they operate. NVIDIA Agent Toolkit comprises: The new NVIDIA Agent Knowledge Foundation with N",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "4fcecc571653bcd4f0f7592cf326bb0773ff1b64fd250119c2b96cd84cc3e328",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:42:33.464Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-be11c18d48ff",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA Open Models Advance Europe’s Sovereign Intelligence Across Industries",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/open-models-europe-industry/",
+      "publishedAt": "2026-10-21T10:00:07.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "alphabet",
+        "amazon",
+        "synopsys",
+        "palantir",
+        "salesforce"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "NVIDIA is expanding its family of open models across language, robotics, biology, and quantum computing, giving developers, researchers and enterprises what they need to build applications tailored to local languages and industries The portfolio includes the new NVIDIA Nemotron 3.5 Super VL and Nemotron 3.5 Bolt models; new NVIDIA Nemotron Retriever models for embedding, reranking and document parsing; the new NVIDIA",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "0417ce9d2f8545a5a612e2af336c9233054486b7493394dd6557ff2fda4e38c0",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:42:38.626Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-d8fecd9b69c9",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "GTC Berlin 2026: Live Updates From NVIDIA CEO Jensen Huang’s Keynote",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/",
+      "publishedAt": "2026-10-21T09:30:16.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "模型与平台",
+        "资本市场与金融稳定",
+        "供应链与地缘政策"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Founded in a tent near the Berlin Wall in 1980, the Tempodrom moved several times before settling near Anhalter Bahnhof in 2001. Its permanent home has since hosted concerts, galas and political events. Today, it hosts a different kind of spectacle. GTC Berlin runs three days, with more than 100 sessions on agentic AI, robotics, physical AI, open models and accelerated computing underway at STATION-Berlin down the ro",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "f1f10663608a120af1262ad12f43f98d62d5a04b62f725caac048791212204b1",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:42:43.847Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-6aab4d7a6d6a",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "European Leaders Turn to NVIDIA Vera CPUs to Build Local Infrastructure",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/european-leaders-vera-cpu-infrastructure/",
+      "publishedAt": "2026-10-20T10:30:11.000Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
+      "topics": [
+        "AI 算力与芯片",
+        "半导体制造",
+        "数据中心与电力",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "supermicro"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "equipment-materials"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Nebius and Nscale are among global technology partners looking to NVIDIA Vera CPUs to build the next wave of infrastructure. Their momentum reflects rapid advancements in agentic computing. Agents do more than generate answers: they retrieve information, run software tools, execute code and evaluate results. Each step depends on fast CPU processing. Vera accelerates that work, helping agents respond faster and enabli",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "7a8762014cc556f2dc42e854a730dbedcfd07b0101fd3aa7b1d7c894207c631a",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-10-22T07:42:48.978Z"
+      }
+    },
     {
       "id": "nvidia-blog-81b55b50044b",
       "sourceId": "nvidia-blog",
@@ -129,7 +764,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/germany-wants-to-lead-the-world-in-industrial-ai-how-nvidia-will-help/",
       "publishedAt": "2026-10-19T19:27:08.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "AI 算力与芯片"
       ],
@@ -153,89 +788,7 @@
         "generatedAt": null,
         "model": null,
         "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:45:57.367Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-405e039bdc7e",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "NVIDIA Advances Agentic Security for Media, From European Public Service Broadcasting to Global Content Production",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/media-agentic-security-european-public-service-broadcasting-global-content-production/",
-      "publishedAt": "2026-10-19T15:00:31.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "AI 算力与芯片",
-        "半导体制造"
-      ],
-      "relatedCompanies": [
-        "nvidia",
-        "microsoft",
-        "adobe"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "equipment-materials"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "At a creative industry event that took place today in Berlin — hosted in collaboration with Adobe , Bertelsmann , NVIDIA and UFA — the latest advancements in intelligent media were on display. Key to the news: the European Broadcasting Union (EBU) is collaborating with NVIDIA to expand its sovereign framework with cloud, open models and integration partners, while Adobe Frame.io is accelerating video agent search cap",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "45eba1ffe65098568aebd1c5f449bd2698baaff8f3c1485fc153837841834824",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:46:02.575Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-c850cbc28643",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "RTX Spark Ignites Global Celebration as New Windows PCs Arrive",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-windows-laptops-celebration/",
-      "publishedAt": "2026-10-17T21:00:13.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "AI 算力与芯片"
-      ],
-      "relatedCompanies": [
-        "nvidia",
-        "microsoft"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "models-platforms"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "NVIDIA RTX Spark laptops are now available, bringing NVIDIA Blackwell RTX graphics, up to 128GB of unified memory and the full NVIDIA AI platform to slim, premium Windows PCs. Starting at $2,399, laptops from ASUS, Dell, HP, Lenovo, Microsoft and MSI bring powerful local AI, content creation and gaming capabilities to a portable device, with additional systems on the way. NVIDIA celebrated the launch with events arou",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "efc04f0cdc4b74f9f3bfcf166ba7a8af044435f585f8c6a9fce73e5815c2ebef",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:46:07.775Z"
+        "lastAttemptAt": "2026-10-22T07:42:54.169Z"
       }
     },
     {
@@ -249,7 +802,7 @@
       "titleZh": null,
       "url": "https://www.federalreserve.gov/econres/notes/feds-notes/introducing-private-credit-into-the-financial-accounts-of-the-united-states-20261016.html",
       "publishedAt": "2026-10-16T14:25:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "资本市场与金融稳定"
       ],
@@ -264,12 +817,11 @@
       "excerpt": "Katie Brinkman, Christine Dobridge , Tim Dore , Simon Glossner , Elizabeth Holmquist , Nam Nguyen, Maria Perozek , and Irina Stefanescu Over the past decade, private credit has played an increasingly important role in providing funding to middle-market businesses. While there are several definitions of private credit, here we define it as privately negotiated loans to businesses that are originated by nonbank investm",
       "editorialSummary": null,
       "analysis": {
-        "status": "error",
+        "status": "pending",
         "inputHash": "0ffcd2da78b2364381b3e1b4d2987992828983b149c16f08df60042e5ab6d11e",
         "generatedAt": null,
         "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:46:12.915Z"
+        "reason": "Waiting for the next AI news batch"
       }
     },
     {
@@ -283,7 +835,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/10/new-chip-based-tape-measure-light-could-revolutionize-mobile-timekeeping",
       "publishedAt": "2026-10-16T12:00:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "AI 算力与芯片"
       ],
@@ -300,220 +852,11 @@
       "excerpt": "The new device could help provide vital navigation signals when GPS is either unavailable or has been jammed.",
       "editorialSummary": null,
       "analysis": {
-        "status": "error",
+        "status": "pending",
         "inputHash": "f3b8d0a5897741771e64ea891af53a302e9a6ad27166bff8b3148c230d5f49ba",
         "generatedAt": null,
         "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:46:18.072Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-902189e10f1e",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
-      "publishedAt": "2026-10-15T15:00:24.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "AI 算力与芯片",
-        "数据中心与电力",
-        "模型与平台"
-      ],
-      "relatedCompanies": [
-        "nvidia",
-        "synopsys",
-        "salesforce"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "models-platforms"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "NVIDIA today released Nemotron 3.5 Super VL, an open 120-billion-parameter model that delivers the fastest task completion and highest accuracy for specialized always-on agents. Joining it are two new edge models: Nemotron 3.5 Bolt 74B-A9B 24GB, optimized to balance intelligence and speed per GB for local agentic workloads, and Nemotron 3.5 Bolt E4B 4GB, optimized for intelligence per GB for fast conversational agent",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "dc87499fc7f4a74c210d6436e79edb8f23d1af90e2d3d03bbe8b4f326952c0b2",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:46:23.241Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-0aa71d1f1cfd",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "NVIDIA Expands Advanced Technology Access for Europe’s Scientific Community Through Open Learning Resources, Collaborations and Compute",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/ec-scientific-computing-pledge/",
-      "publishedAt": "2026-10-15T10:00:12.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "AI 算力与芯片",
-        "模型与平台"
-      ],
-      "relatedCompanies": [
-        "nvidia"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "models-platforms"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "Much of today’s scientific progress begins with computation. But turning accelerated computing’s potential into scientific progress — modeling climate systems, designing molecules, simulating materials and more — depends on more than breakthrough technology. Especially for smaller labs, early-career scientists or science-based startups, the hardest part of research can be everything that comes before the science: ass",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "f67ad7f5deea491208c1698676c4c857326c23d4848b9263c07d02c632a327bc",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:46:28.410Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-68f85c5a70ff",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "The Nordics and NVIDIA Show What’s Possible When a Region Commits to Advanced Computing",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/nordics-technology-ecosystem/",
-      "publishedAt": "2026-10-15T05:00:12.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "AI 算力与芯片",
-        "数据中心与电力"
-      ],
-      "relatedCompanies": [
-        "nvidia"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "The Nordic countries have become the European leader in unicorn startup density, producing the most emerging companies valued at $1 billion or more per capita on the continent. Now, a new chapter for the region is unfolding as countries race to build one of Europe’s most consequential technology ecosystems. The many computing advancements already underway in the Nordics, combined with the opportunity that lies ahead,",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "5a3d4ad0e21985f54625534a5ffa6350ac468b6405384789f0094c40537b0d06",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:46:33.587Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-641fd03bcae8",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "NVIDIA Announces New Investments in the UK Startup Ecosystem",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/uk-ecosystem-deployment/",
-      "publishedAt": "2026-10-14T06:04:15.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "AI 算力与芯片",
-        "半导体制造",
-        "数据中心与电力",
-        "模型与平台",
-        "企业应用与生产力"
-      ],
-      "relatedCompanies": [
-        "nvidia",
-        "alphabet"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "equipment-materials"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "Across industries, the U.K. is putting the full stack to work. T he scale of deployment is growing fast, from enterprises transforming their businesses to startups solving some of the planet’s hardest problems. NVIDIA is putting that principle into practice, including through a five-year, $250 million compute commitment to strengthen the U.K.’s agentic safety and security research. NVIDIA’s Investments in the UK NVID",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "e62ca66b7714caea4214201829cf83fa04ccd51cc4ba7159caf6668682fd0f08",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:46:38.746Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-5f7238246fc0",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "European Cities Deploy NVIDIA-Powered AI Agents to Run Smarter Urban Operations",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/european-cities-agents-urban-operations/",
-      "publishedAt": "2026-10-14T06:00:28.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "AI 算力与芯片",
-        "数据中心与电力",
-        "模型与平台"
-      ],
-      "relatedCompanies": [
-        "nvidia",
-        "supermicro"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "models-platforms"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "Keeping a city running means making decisions that affect residents every day — from when to repair a road to how to use energy more efficiently. Across the EMEA region, cities and local software, infrastructure and integration partners are using NVIDIA accelerated computing to build physical AI agents and digital twins that help teams make those decisions. These applications can anticipate maintenance needs, guide u",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "d6ca3a85976dbd55f80d178449bacce1bf3bb11f5b3c7f21a4025e264ff24a0f",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:46:43.891Z"
+        "reason": "Waiting for the next AI news batch"
       }
     },
     {
@@ -527,7 +870,7 @@
       "titleZh": null,
       "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261013~9db9bf4fd6.en.html",
       "publishedAt": "2026-10-13T18:30:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "模型与平台"
       ],
@@ -539,142 +882,11 @@
       "excerpt": "",
       "editorialSummary": null,
       "analysis": {
-        "status": "error",
+        "status": "pending",
         "inputHash": "f051fed868ab0d59faa3c38d1c9d14e0dbd6be6a01072fde01185f8847eebe75",
         "generatedAt": null,
         "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:46:49.039Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-1001bd550953",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "All Systems Go: Global PC App Ecosystem Ready for NVIDIA RTX Spark",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/",
-      "publishedAt": "2026-10-13T12:00:49.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "AI 算力与芯片",
-        "模型与平台",
-        "企业应用与生产力"
-      ],
-      "relatedCompanies": [
-        "nvidia",
-        "microsoft",
-        "adobe"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "models-platforms"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "NVIDIA RTX Spark is a new beginning for the PC — a reinvention combining the capabilities of a gaming PC, a creative studio and a personal AI supercomputer into a single superchip. With up to 128GB of unified memory and 1 petaflop of AI compute, RTX Spark delivers the full stack of NVIDIA RTX and CUDA technologies for creators, developers and gamers, while unlocking a new paradigm in personal computing via powerful l",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "b4222728ed4580ca91eb480e28ea5131c7f0daedec4ed4251df5a4840b6fae4d",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:46:54.209Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-3fa2d8668eae",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "NVIDIA Announces New Investments in France’s Startups",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing/",
-      "publishedAt": "2026-10-13T05:00:31.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "AI 算力与芯片",
-        "模型与平台",
-        "企业应用与生产力"
-      ],
-      "relatedCompanies": [
-        "nvidia"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "models-platforms"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "Companies in France are deploying agentic computing across industries spanning space, financial services, the public sector and scientific research, demonstrating how the country’s ecosystem has moved from ambition to application. France’s progress sits on deliberate groundwork. The AI Action Summit in February 2025 and Choose France Summits in 2025 and 2026 anchored major compute commitments on French soil. What the",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "06f56a2398e224c4a31df09226d3a7896572152cdddf656011ff267f34807ee1",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:46:59.389Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-9c679f3096ea",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "OCP Global Summit: Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
-      "publishedAt": "2026-10-12T15:00:25.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "AI 算力与芯片",
-        "半导体制造",
-        "数据中心与电力",
-        "模型与平台"
-      ],
-      "relatedCompanies": [
-        "nvidia",
-        "amd",
-        "microsoft",
-        "alphabet",
-        "vertiv"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "equipment-materials"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "As AI factories grow from megawatts to gigawatts, building them takes more than advanced computing. Open standards are helping the industry scale AI infrastructure faster, more efficiently and more reliably. At the Open Compute Project (OCP) Global Summit, taking place in the San Jose McEnery Convention Center, NVIDIA announced new partnerships and contributions aimed at creating a common foundation for next-generati",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "e2d813e0aa8918a424284b2cd3469ff5f48852e29ebe8fd43e6428058f83a49d",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:47:04.507Z"
+        "reason": "Waiting for the next AI news batch"
       }
     },
     {
@@ -688,7 +900,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/",
       "publishedAt": "2026-10-12T13:01:29.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -713,126 +925,8 @@
       "excerpt": "Azure Maia 200 now in production; Azure Maia 300 coming in 2027 As we move into the era of Super Intelligence, Microsoft is entering a new phase of infrastructure. We will scale our Azure Maia family to multi-gigawatt deployments starting in 2027, making Maia the primary inference system for Microsoft products and services. The multigenerational Azure Maia program has become a foundational element of Microsoft’s AI i",
       "editorialSummary": null,
       "analysis": {
-        "status": "error",
+        "status": "pending",
         "inputHash": "c52a6bfb3481569ca5be7663be819b68956461c5603fb3a7ff7200299bb90682",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:47:09.699Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-baf7193e75c1",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
-      "publishedAt": "2026-10-09T16:00:35.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "AI 算力与芯片",
-        "半导体制造",
-        "模型与平台"
-      ],
-      "relatedCompanies": [
-        "nvidia"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "equipment-materials"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work — building applications for exploring scenarios, investigating failures and improving designs. Developers direct AI agents through natural-language instruc",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "7e4c6966179b9c6b6d6bf3e895dff0f547393efff80b534b4a2cb431848099f0",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-10-21T07:47:14.878Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-327e963986a0",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "NVIDIA, Microsoft Kick Off a New Beginning for Windows PCs With RTX Spark and AI Agents",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
-      "publishedAt": "2026-10-07T18:45:28.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "AI 算力与芯片",
-        "模型与平台",
-        "企业应用与生产力"
-      ],
-      "relatedCompanies": [
-        "nvidia",
-        "microsoft"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "models-platforms"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "At a Microsoft event in San Francisco on Wednesday, NVIDIA founder and CEO Jensen Huang and Microsoft CEO Satya Nadella outlined how NVIDIA and Microsoft are co-engineering hardware and software for AI agents to run on Windows PCs. NVIDIA was founded because of Windows, Huang said. Now AI agents are coming to Windows. “If you look at the entire journey of our company, Windows was at the core of it,” Huang said, traci",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "pending",
-        "inputHash": "77ef1b3ab2afa1df6ba7931ef2394e434ac2d5ba72c2c11e1e9a66ce9f2d4154",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Waiting for the next AI news batch"
-      }
-    },
-    {
-      "id": "nvidia-blog-c84805ae92ec",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "Why Telecom Operators Are Building Their AI Strategy on Open Models",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/telecom-operators-open-models/",
-      "publishedAt": "2026-10-06T13:00:19.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
-      "topics": [
-        "模型与平台"
-      ],
-      "relatedCompanies": [
-        "nvidia"
-      ],
-      "relatedStages": [
-        "models-platforms",
-        "design"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "Telecom operators are increasingly building their AI strategies on open models — and the reasons go beyond mere cost. Open models give telcos the ability to trust, control and customize AI across their most critical workloads — from autonomous networks to customer care. NVIDIA’s latest State of AI in Telecommunications report reflects this shift, with 89% of respondents reporting that open source models and software ",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "pending",
-        "inputHash": "6ee69bf297412b0b7dd9675bf19cdaa7ecfc3f1d6673ac5679fe1c70c82b8f2f",
         "generatedAt": null,
         "model": null,
         "reason": "Waiting for the next AI news batch"
@@ -849,7 +943,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/announcing-aws-well-architected-agent-an-ai-powered-intelligence-to-optimize-your-cloud-environment-preview/",
       "publishedAt": "2026-10-01T20:04:04.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "模型与平台",
         "企业应用与生产力",
@@ -886,7 +980,7 @@
       "titleZh": null,
       "url": "https://www.federalreserve.gov/econres/notes/feds-notes/ai-on-the-factory-floor-evidence-from-manufacturing-job-postings-20260930.html",
       "publishedAt": "2026-09-30T18:13:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "企业应用与生产力"
       ],
@@ -918,7 +1012,7 @@
       "titleZh": null,
       "url": "https://www.federalreserve.gov/econres/feds/measuring-and-projecting-us-investment-in-semiconductor-manufacturing-capacity.htm",
       "publishedAt": "2026-09-29T13:35:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造"
@@ -955,7 +1049,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-sol-and-luna-claude-opus-5-5-on-amazon-bedrock-strands-harness-and-more-september-28-2026/",
       "publishedAt": "2026-09-28T16:14:54.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -995,7 +1089,7 @@
       "titleZh": null,
       "url": "https://www.federalreserve.gov/econres/notes/feds-notes/when-the-chips-went-down-motor-vehicle-production-and-the-2021-2022-semiconductor-shortages-20260928.html",
       "publishedAt": "2026-09-28T14:38:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "AI 算力与芯片"
       ],
@@ -1030,7 +1124,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-collaborative-ai-powered-observability-for-your-applications/",
       "publishedAt": "2026-09-22T22:23:14.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "模型与平台",
         "资本市场与金融稳定"
@@ -1067,7 +1161,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/",
       "publishedAt": "2026-09-22T22:21:13.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "模型与平台",
         "资本市场与金融稳定"
@@ -1103,7 +1197,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/09/17/what-weve-learned-from-microsofts-own-ai-transformation/",
       "publishedAt": "2026-09-17T14:00:05.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -1144,7 +1238,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/09/16/microsofts-commitment-for-ai-in-education/",
       "publishedAt": "2026-09-16T18:59:58.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -1184,7 +1278,7 @@
       "titleZh": null,
       "url": "https://www.federalreserve.gov/econres/feds/linear-and-nonlinear-econometric-models-against-machine-learning-models.htm",
       "publishedAt": "2026-09-02T15:30:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "模型与平台"
       ],
@@ -1214,7 +1308,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
       "publishedAt": "2026-09-02T06:00:02.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -1352,7 +1446,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation",
       "publishedAt": "2026-08-04T12:00:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "模型与平台"
       ],
@@ -1382,7 +1476,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/07/28/looking-back-on-microsofts-fy26-from-ai-experimentation-to-frontier-transformation/",
       "publishedAt": "2026-07-28T16:00:10.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -1424,7 +1518,7 @@
       "titleZh": "AI 冲击下的私募信贷：BDC 对软件公司的风险暴露",
       "url": "https://www.bis.org/publ/bisbull128.htm",
       "publishedAt": "2026-07-14T00:00:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "资本市场与金融稳定",
         "企业应用与生产力"
@@ -1473,7 +1567,7 @@
       "titleZh": "Blackstone 2026 年中展望：AI 基建资本周期",
       "url": "https://www.blackstone.com/insights/article/2026-mid-year-investment-perspectives/",
       "publishedAt": "2026-06-30T00:00:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "数据中心与电力",
         "AI 算力与芯片",
@@ -1526,7 +1620,7 @@
       "titleZh": "BIS 年度经济报告：AI 乐观情绪、投资与下行风险",
       "url": "https://www.bis.org/publ/arpdf/ar2026e1.htm",
       "publishedAt": "2026-06-28T00:00:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "资本市场与金融稳定",
         "企业应用与生产力"
@@ -1576,7 +1670,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update",
       "publishedAt": "2026-06-09T12:00:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "模型与平台"
       ],
@@ -1621,7 +1715,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/06/new-ai-model-shows-how-evacuate-fires-one-safe-step-time",
       "publishedAt": "2026-06-04T12:00:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "模型与平台"
       ],
@@ -1665,7 +1759,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/05/nist-expands-ai-consortiums-scope-calls-new-members",
       "publishedAt": "2026-05-29T12:00:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "资本市场与金融稳定"
       ],
@@ -1711,7 +1805,7 @@
       "titleZh": "AI 时代的金融稳定：算法架构为何会改变风险形态",
       "url": "https://www.ecb.europa.eu/press/research-publications/resbull/2026/html/ecb.rb260521~4d8b12940b.en.html",
       "publishedAt": "2026-05-21T00:00:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "资本市场与金融稳定",
         "模型与平台"
@@ -1761,7 +1855,7 @@
       "titleZh": "IEA：数据中心用电激增，电力瓶颈正在成为 AI 扩张约束",
       "url": "https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions",
       "publishedAt": "2026-04-16T00:00:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "数据中心与电力",
         "AI 算力与芯片"
@@ -1812,7 +1906,7 @@
       "titleZh": "IMF 情景研究：AI 的全球经济与金融影响",
       "url": "https://www.imf.org/en/publications/imf-notes/issues/2026/04/03/global-economic-and-financial-implications-of-artificial-intelligence-lessons-from-a-574924",
       "publishedAt": "2026-04-03T00:00:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "企业应用与生产力",
         "资本市场与金融稳定",
@@ -1863,7 +1957,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/03/nist-researchers-develop-photonic-chip-packaging-can-withstand-extreme",
       "publishedAt": "2026-03-30T12:00:00.000Z",
-      "discoveredAt": "2026-10-21T07:45:50.859Z",
+      "discoveredAt": "2026-10-22T07:41:29.872Z",
       "topics": [
         "AI 算力与芯片"
       ],

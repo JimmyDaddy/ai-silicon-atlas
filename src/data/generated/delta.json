@@ -1,206 +1,32 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T07:38:28.058Z",
+  "generatedAt": "2026-10-24T07:23:49.770Z",
   "period": {
-    "from": "2026-10-22T07:41:29.872Z",
-    "to": "2026-10-23T07:38:28.058Z",
+    "from": "2026-10-23T07:38:28.058Z",
+    "to": "2026-10-24T07:23:49.770Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 2,
-    "metricChanges": 5,
+    "newFilings": 0,
+    "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 3,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 10
+    "totalChanges": 0
   },
   "affected": {
-    "stages": {
-      "models-platforms": 9,
-      "manufacturing": 1,
-      "design": 2,
-      "memory": 2,
-      "packaging": 2,
-      "ai-infrastructure": 2,
-      "eda-ip": 1
-    },
-    "topics": {
-      "AI 算力与芯片": 2,
-      "数据中心与电力": 2,
-      "模型与平台": 3,
-      "企业应用与生产力": 1
-    }
+    "stages": {},
+    "topics": {}
   },
   "companies": {
-    "filings": [
-      {
-        "company": "meta-platforms",
-        "stage": "models-platforms",
-        "form": "10-Q",
-        "filedAt": "2026-10-22",
-        "reportDate": "2026-09-30",
-        "accessionNumber": "0001628280-26-066773",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm"
-      },
-      {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "form": "6-K",
-        "filedAt": "2026-10-22",
-        "reportDate": "2026-09-30",
-        "accessionNumber": "0001046179-26-000728",
-        "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000728/tsm-monthend6kx20261022.htm"
-      }
-    ],
-    "metrics": [
-      {
-        "company": "meta-platforms",
-        "stage": "models-platforms",
-        "metric": "revenue",
-        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 64601000000,
-        "previousValue": 60801000000,
-        "changePercent": 6.25,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "meta-platforms",
-        "stage": "models-platforms",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 9860000000,
-        "previousValue": 15848000000,
-        "changePercent": -37.78,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "meta-platforms",
-        "stage": "models-platforms",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 478836000000,
-        "previousValue": 449956000000,
-        "changePercent": 6.42,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "meta-platforms",
-        "stage": "models-platforms",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 11222000000,
-        "previousValue": 15462000000,
-        "changePercent": -27.42,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "meta-platforms",
-        "stage": "models-platforms",
-        "metric": "capex",
-        "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 83055000000,
-        "previousValue": 49113000000,
-        "changePercent": 69.11,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      }
-    ],
+    "filings": [],
+    "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "nvidia-blog-b21a97b1b273",
-        "publishedAt": "2026-10-23T02:00:13.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Kazakhstan Expands Compute for Its AI Future",
-        "summary": "Kazakhstan’s AI ecosystem is moving from infrastructure plans to deployment. The shift is visible across the full AI stack — from infrastructure to models to applications. Together, the ecosystem announcements below point to the nation’s increasing supply of accelerated computing — along with its growing demand for what comes next. On Friday, Oct. 23, NVIDIA founder and CEO Jensen Huang visited Astana, meeting with P",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/kazakhstan-ai-compute-ecosystem/"
-      },
-      {
-        "id": "aws-blog-f45aa9c83d4e",
-        "publishedAt": "2026-10-22T20:33:10.000Z",
-        "source": "AWS 官方博客",
-        "sourceType": "公司观点",
-        "title": "AWS Continuum for code vulnerabilities is now generally available",
-        "summary": "Today, we’re announcing the general availability of AWS Continuum for code vulnerabilities . AWS Continuum is a security service that finds and validates code vulnerabilities, then delivers fixes as patches you can automate or as pull requests in your repositories. AWS Continuum for code vulnerabilities confirms which findings are exploitable in your environment, ranks the resulting issues by business impact, and pro",
-        "topics": [
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "amazon",
-          "cadence"
-        ],
-        "relatedStages": [
-          "models-platforms",
-          "eda-ip"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-continuum-for-code-vulnerabilities-is-now-generally-available/"
-      },
-      {
-        "id": "nvidia-blog-06769efcf6f4",
-        "publishedAt": "2026-10-22T15:00:02.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA Unveils Minerva to Bring End-to-End Observability for AI Factories",
-        "summary": "Launched today, NVIDIA Minerva is an AIOps platform built to help teams find problems earlier and keep AI factories productive. It brings together telemetry from infrastructure and AI workloads, then applies purpose-built AI models to turn that data into timely, actionable insight. AI factories are among the most complex operations in the world, with vast numbers of GPUs working across high-speed networks to train mo",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "模型与平台",
-          "企业应用与生产力"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "supermicro"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/minerva-platform-infrastructure/"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

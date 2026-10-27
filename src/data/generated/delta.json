@@ -1,32 +1,109 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T07:53:21.638Z",
+  "generatedAt": "2026-10-27T07:59:12.968Z",
   "period": {
-    "from": "2026-10-25T07:40:10.900Z",
-    "to": "2026-10-26T07:53:21.638Z",
+    "from": "2026-10-26T07:53:21.638Z",
+    "to": "2026-10-27T07:59:12.968Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 4,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 0
+    "totalChanges": 5
   },
   "affected": {
-    "stages": {},
-    "topics": {}
+    "stages": {
+      "packaging": 2,
+      "equipment-materials": 1,
+      "eda-ip": 1,
+      "ai-infrastructure": 2,
+      "design": 1,
+      "memory": 1,
+      "models-platforms": 1
+    },
+    "topics": {
+      "AI 算力与芯片": 1,
+      "模型与平台": 1
+    }
   },
   "companies": {
-    "filings": [],
+    "filings": [
+      {
+        "company": "amkor",
+        "stage": "packaging",
+        "form": "8-K",
+        "filedAt": "2026-10-26",
+        "reportDate": "2026-10-26",
+        "accessionNumber": "0001047127-26-000049",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000049/amkr-20261026.htm"
+      },
+      {
+        "company": "applied-materials",
+        "stage": "equipment-materials",
+        "form": "8-K",
+        "filedAt": "2026-10-26",
+        "reportDate": "2026-10-26",
+        "accessionNumber": "0001628280-26-067303",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026067303/amat-20261026.htm"
+      },
+      {
+        "company": "cadence",
+        "stage": "eda-ip",
+        "form": "8-K",
+        "filedAt": "2026-10-26",
+        "reportDate": "2026-10-23",
+        "accessionNumber": "0000813672-26-000116",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000116/cdns-20261023.htm"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "form": "8-K",
+        "filedAt": "2026-10-26",
+        "reportDate": "2026-10-26",
+        "accessionNumber": "0001628280-26-067127",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067127/vrt-20261026.htm"
+      }
+    ],
     "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [],
+    "new": [
+      {
+        "id": "aws-blog-743b592063fc",
+        "publishedAt": "2026-10-26T15:02:24.000Z",
+        "source": "AWS 官方博客",
+        "sourceType": "公司观点",
+        "title": "AWS Weekly Roundup: Amazon Polly Generative engine, TorchNeuron for Trainium, and more (October 26, 2026)",
+        "summary": "A few weeks ago I presented to a small group of commercial and technology leaders from Brazilian agribusiness at the AWS office in São Paulo. My talk ran through where generative AI fits across the different stages of an agribusiness operation, and the point I kept returning to is that the markets we call traditional are exactly the ones where keeping up with this technology decides who ends up ahead of the curve. No",
+        "topics": [
+          "AI 算力与芯片",
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "amazon"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-polly-generative-engine-torchneuron-for-trainium-and-more-october-26-2026/"
+      }
+    ],
     "analysisRefreshed": []
   }
 }

@@ -1,18 +1,17 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T07:52:45.883Z",
+  "generatedAt": "2026-10-27T07:58:37.504Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 4,
+  "completedCount": 3,
   "companies": {
     "synopsys": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "f08ad604784f88868d6849f69958c00df8bb915fcfdc6fb391b0c238031c5c1d",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-26T07:53:21.020Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "cadence": {
       "status": "ok",
@@ -138,7 +137,10 @@
         "现金流状况是否改善，流动性风险是否存在？",
         "公司是否发布新的战略调整或重大合作？"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "stale": true,
+      "lastAttemptAt": "2026-10-27T07:58:41.620Z",
+      "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
     },
     "arm": {
       "status": "pending",
@@ -176,113 +178,19 @@
       "reason": "Source status: manual"
     },
     "asml": {
-      "status": "ok",
-      "inputHash": "22b8c0edf60d86f8bb0e4c959130ee5c19bddb92ba16923d52d9ff4b63812da7",
-      "generatedAt": "2026-07-20T14:20:27.373Z",
-      "model": "openai/gpt-4.1",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0001628280-26-048235",
-          "label": "6-K · 2026-07-15",
-          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026048235/form6-kquarterlyfilings.htm"
-        },
-        {
-          "id": "filing:0001628280-26-026703",
-          "label": "6-K · 2026-04-23",
-          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026026703/form6-kagmdisclosureofagmr.htm"
-        },
-        {
-          "id": "filing:0001628280-26-025147",
-          "label": "6-K · 2026-04-15",
-          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026025147/form6-kquarterlyfilings.htm"
-        },
-        {
-          "id": "filing:0001628280-26-016671",
-          "label": "6-K · 2026-03-11",
-          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026016671/form6-kagm.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000937966.json"
-        }
-      ],
-      "summary": "阿斯麦2025年财务表现显著提升，收入和净利润均实现两位数增长，资产规模扩大，现金流稳定，但资本支出同比下降。近期公告仅有元数据，无法判断具体运营或战略事项。",
-      "summaryEvidence": [
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "2025年收入同比增长15.58%，净利润同比增长26.91%，资产同比增长4.07%，现金同比增长1.41%，资本支出同比下降23.88%。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "收入和净利润大幅提升，显示核心业务需求强劲。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资本支出减少，可能反映扩产节奏调整或投资结构变化。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "阿斯麦业绩增长有望带动下游晶圆厂扩产及上游材料、零部件需求提升。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资本支出下降或影响供应链设备订单节奏。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "近期公告仅有元数据，无法判断具体运营、订单、技术进展或地缘政策影响。",
-          "evidence": [
-            "filing:0001628280-26-048235",
-            "filing:0001628280-26-026703",
-            "filing:0001628280-26-025147",
-            "filing:0001628280-26-016671"
-          ]
-        },
-        {
-          "text": "资本支出下降背后原因及对未来产能和技术布局影响不明。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "questionsToWatch": [
-        "资本支出下降是否影响未来产能扩张和技术升级？",
-        "近期公告中是否有重大运营、订单或政策变化？",
-        "下游客户需求是否持续强劲？",
-        "地缘政治因素对阿斯麦业务有无新影响？"
-      ],
-      "confidence": "medium",
-      "stale": true,
-      "lastAttemptAt": "2026-10-26T07:53:07.713Z",
-      "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
-    },
-    "applied-materials": {
       "status": "pending",
-      "inputHash": "0cf9076a8d8914cc07f59faa74ae0e8f42390aefeecae3ce6a4af9f03a819429",
+      "inputHash": "7e194d7b73fcb98129226c7f46b1af4afb7de6795fbf4c5a1099741d4d5d348d",
       "generatedAt": null,
       "model": null,
       "reason": "Waiting for the next AI analysis batch"
+    },
+    "applied-materials": {
+      "status": "error",
+      "inputHash": "dfdb07a2dff5d701e3f99a7f072e1a0831e97c92c55a039d5d1a0292e9fe06be",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-10-27T07:58:46.005Z"
     },
     "kla": {
       "status": "pending",
@@ -304,7 +212,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-26T07:52:50.018Z"
+      "lastAttemptAt": "2026-10-27T07:58:59.150Z"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -321,12 +229,11 @@
       "reason": "Source status: manual"
     },
     "micron": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "0bf81be838c2e4ad1b9f1a14d705144ca43947f905299eb2377ba6f812510333",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-26T07:53:16.571Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "sk-hynix": {
       "status": "unavailable",
@@ -336,12 +243,11 @@
       "reason": "Source status: error"
     },
     "ase-technology": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "63a295509b261e0b0deadd62af8f02028db781d702a0bcbd8ca9868485ac81b9",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-26T07:53:12.143Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "amkor": {
       "status": "ok",
@@ -446,7 +352,10 @@
         "市场需求增长是否可持续？",
         "现金流下降是否影响运营或投资能力？"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "stale": true,
+      "lastAttemptAt": "2026-10-27T07:58:50.388Z",
+      "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
     },
     "jcet": {
       "status": "unavailable",
@@ -463,11 +372,12 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "vertiv": {
-      "status": "pending",
-      "inputHash": "58d29f91d7848e06256b3e68109042f33434d39172a037ec9f0212141ee5b8d0",
+      "status": "error",
+      "inputHash": "4282ae5d39ed43a319b5e6059c975f5d0169b7bf5f4de43095934201ff874f6c",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-10-27T07:58:54.775Z"
     },
     "supermicro": {
       "status": "error",
@@ -475,7 +385,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-26T07:52:58.913Z"
+      "lastAttemptAt": "2026-10-27T07:59:07.920Z"
     },
     "equinix": {
       "status": "pending",
@@ -511,7 +421,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-26T07:52:54.460Z"
+      "lastAttemptAt": "2026-10-27T07:59:03.532Z"
     },
     "palantir": {
       "status": "pending",
@@ -533,7 +443,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-26T07:53:03.276Z"
+      "lastAttemptAt": "2026-10-27T07:59:12.363Z"
     },
     "servicenow": {
       "status": "ok",

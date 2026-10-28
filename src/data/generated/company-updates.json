@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T07:56:35.955Z",
+  "generatedAt": "2026-10-28T08:38:31.440Z",
   "sources": {
     "secEdgar": {
       "status": "ok",
       "provider": "SEC EDGAR",
       "url": "https://www.sec.gov/edgar/sec-api-documentation",
-      "startedAt": "2026-10-27T07:56:35.955Z",
-      "completedAt": "2026-10-27T07:58:37.373Z",
+      "startedAt": "2026-10-28T08:38:31.440Z",
+      "completedAt": "2026-10-28T08:40:21.824Z",
       "companyCount": 25,
       "completedCount": 25,
       "failedCount": 0,
@@ -19,14 +19,14 @@
       "status": "ok",
       "provider": "OpenDART",
       "url": "https://engopendart.fss.or.kr/",
-      "startedAt": "2026-10-27T07:56:35.958Z",
-      "completedAt": "2026-10-27T07:56:37.743Z",
+      "startedAt": "2026-10-28T08:38:31.446Z",
+      "completedAt": "2026-10-28T08:38:32.844Z",
       "companyCount": 2
     },
     "manual": {
       "status": "manual",
       "provider": "First-party IR",
-      "completedAt": "2026-10-27T07:56:35.955Z",
+      "completedAt": "2026-10-28T08:38:31.440Z",
       "companyCount": 4
     }
   },
@@ -34,7 +34,7 @@
     "adobe": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:58:21.174Z",
+      "checkedAt": "2026-10-28T08:40:05.827Z",
       "identifiers": {
         "ticker": "ADBE",
         "cik": "0000796343"
@@ -602,7 +602,7 @@
     "alphabet": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:58:08.822Z",
+      "checkedAt": "2026-10-28T08:39:53.530Z",
       "identifiers": {
         "ticker": "GOOGL",
         "cik": "0001652044"
@@ -1144,7 +1144,7 @@
     "amazon": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:58:11.917Z",
+      "checkedAt": "2026-10-28T08:39:56.511Z",
       "identifiers": {
         "ticker": "AMZN",
         "cik": "0001018724"
@@ -1634,7 +1634,7 @@
     "amd": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:56:51.138Z",
+      "checkedAt": "2026-10-28T08:38:45.177Z",
       "identifiers": {
         "ticker": "AMD",
         "cik": "0000002488"
@@ -2196,27 +2196,35 @@
           }
         ]
       },
-      "metricsCheckedAt": "2026-10-21T07:43:49.658Z",
+      "metricsCheckedAt": "2026-10-28T08:38:45.177Z",
       "warnings": []
     },
     "amkor": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:57:31.290Z",
+      "checkedAt": "2026-10-28T08:39:22.511Z",
       "identifiers": {
         "ticker": "AMKR",
         "cik": "0001047127"
       },
       "entityName": "AMKOR TECHNOLOGY, INC.",
       "latestFiling": {
-        "form": "8-K",
-        "filedAt": "2026-10-26",
-        "reportDate": "2026-10-26",
-        "accessionNumber": "0001047127-26-000049",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000049/amkr-20261026.htm"
+        "form": "10-Q",
+        "filedAt": "2026-10-27",
+        "reportDate": "2026-09-30",
+        "accessionNumber": "0001047127-26-000052",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000052/amkr-20260930.htm"
       },
       "recentFilings": [
+        {
+          "form": "10-Q",
+          "filedAt": "2026-10-27",
+          "reportDate": "2026-09-30",
+          "accessionNumber": "0001047127-26-000052",
+          "title": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000052/amkr-20260930.htm"
+        },
         {
           "form": "8-K",
           "filedAt": "2026-10-26",
@@ -2272,79 +2280,71 @@
           "accessionNumber": "0001047127-26-000026",
           "title": "8-K",
           "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000026/amkr-20260430.htm"
-        },
-        {
-          "form": "8-K",
-          "filedAt": "2026-04-30",
-          "reportDate": "2026-04-30",
-          "accessionNumber": "0001047127-26-000023",
-          "title": "8-K",
-          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000023/amkr-20260430.htm"
         }
       ],
       "metrics": {
         "revenue": {
           "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-          "value": 1684701000,
+          "value": 1990557000,
           "unit": "USD",
-          "periodStart": "2026-01-01",
-          "periodEnd": "2026-03-31",
-          "filedAt": "2026-04-28",
+          "periodStart": "2026-07-01",
+          "periodEnd": "2026-09-30",
+          "filedAt": "2026-10-27",
           "form": "10-Q",
           "fiscalYear": 2026,
-          "fiscalPeriod": "Q1",
+          "fiscalPeriod": "Q3",
           "taxonomy": "us-gaap",
           "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "netIncome": {
           "label": "Net Income (Loss) Attributable to Parent",
-          "value": 83351000,
+          "value": 190613000,
           "unit": "USD",
-          "periodStart": "2026-01-01",
-          "periodEnd": "2026-03-31",
-          "filedAt": "2026-04-28",
+          "periodStart": "2026-07-01",
+          "periodEnd": "2026-09-30",
+          "filedAt": "2026-10-27",
           "form": "10-Q",
           "fiscalYear": 2026,
-          "fiscalPeriod": "Q1",
+          "fiscalPeriod": "Q3",
           "taxonomy": "us-gaap",
           "tag": "NetIncomeLoss"
         },
         "assets": {
           "label": "Assets",
-          "value": 8298634000,
+          "value": 10042224000,
           "unit": "USD",
           "periodStart": null,
-          "periodEnd": "2026-03-31",
-          "filedAt": "2026-04-28",
+          "periodEnd": "2026-09-30",
+          "filedAt": "2026-10-27",
           "form": "10-Q",
           "fiscalYear": 2026,
-          "fiscalPeriod": "Q1",
+          "fiscalPeriod": "Q3",
           "taxonomy": "us-gaap",
           "tag": "Assets"
         },
         "cash": {
           "label": "Cash and Cash Equivalents, at Carrying Value",
-          "value": 1121183000,
+          "value": 1603015000,
           "unit": "USD",
           "periodStart": null,
-          "periodEnd": "2026-03-31",
-          "filedAt": "2026-04-28",
+          "periodEnd": "2026-09-30",
+          "filedAt": "2026-10-27",
           "form": "10-Q",
           "fiscalYear": 2026,
-          "fiscalPeriod": "Q1",
+          "fiscalPeriod": "Q3",
           "taxonomy": "us-gaap",
           "tag": "CashAndCashEquivalentsAtCarryingValue"
         },
         "capex": {
           "label": "Payments to Acquire Property, Plant, and Equipment",
-          "value": 224605000,
+          "value": 1236806000,
           "unit": "USD",
           "periodStart": "2026-01-01",
-          "periodEnd": "2026-03-31",
-          "filedAt": "2026-04-28",
+          "periodEnd": "2026-09-30",
+          "filedAt": "2026-10-27",
           "form": "10-Q",
           "fiscalYear": 2026,
-          "fiscalPeriod": "Q1",
+          "fiscalPeriod": "Q3",
           "taxonomy": "us-gaap",
           "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
         }
@@ -2353,66 +2353,66 @@
         "revenue": [
           {
             "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-            "value": 1684701000,
+            "value": 1990557000,
             "unit": "USD",
-            "periodStart": "2026-01-01",
-            "periodEnd": "2026-03-31",
-            "filedAt": "2026-04-28",
+            "periodStart": "2026-07-01",
+            "periodEnd": "2026-09-30",
+            "filedAt": "2026-10-27",
             "form": "10-Q",
             "fiscalYear": 2026,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
           },
           {
             "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-            "value": 1321575000,
+            "value": 1986968000,
             "unit": "USD",
-            "periodStart": "2025-01-01",
-            "periodEnd": "2025-03-31",
-            "filedAt": "2026-04-28",
+            "periodStart": "2025-07-01",
+            "periodEnd": "2025-09-30",
+            "filedAt": "2026-10-27",
             "form": "10-Q",
             "fiscalYear": 2026,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
           },
           {
             "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-            "value": 1365511000,
+            "value": 1861589000,
             "unit": "USD",
-            "periodStart": "2024-01-01",
-            "periodEnd": "2024-03-31",
-            "filedAt": "2025-04-29",
+            "periodStart": "2024-07-01",
+            "periodEnd": "2024-09-30",
+            "filedAt": "2025-10-28",
             "form": "10-Q",
             "fiscalYear": 2025,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
           },
           {
             "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-            "value": 1471539000,
+            "value": 1821793000,
             "unit": "USD",
-            "periodStart": "2023-01-01",
-            "periodEnd": "2023-03-31",
-            "filedAt": "2024-05-01",
+            "periodStart": "2023-07-01",
+            "periodEnd": "2023-09-30",
+            "filedAt": "2024-10-29",
             "form": "10-Q",
             "fiscalYear": 2024,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
           },
           {
             "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-            "value": 1596816000,
+            "value": 2083691000,
             "unit": "USD",
-            "periodStart": "2022-01-01",
-            "periodEnd": "2022-03-31",
-            "filedAt": "2023-05-03",
+            "periodStart": "2022-07-01",
+            "periodEnd": "2022-09-30",
+            "filedAt": "2023-11-01",
             "form": "10-Q",
             "fiscalYear": 2023,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
           }
@@ -2420,71 +2420,97 @@
         "netIncome": [
           {
             "label": "Net Income (Loss) Attributable to Parent",
-            "value": 83351000,
+            "value": 190613000,
             "unit": "USD",
-            "periodStart": "2026-01-01",
-            "periodEnd": "2026-03-31",
-            "filedAt": "2026-04-28",
+            "periodStart": "2026-07-01",
+            "periodEnd": "2026-09-30",
+            "filedAt": "2026-10-27",
             "form": "10-Q",
             "fiscalYear": 2026,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "NetIncomeLoss"
           },
           {
             "label": "Net Income (Loss) Attributable to Parent",
-            "value": 21128000,
+            "value": 126589000,
             "unit": "USD",
-            "periodStart": "2025-01-01",
-            "periodEnd": "2025-03-31",
-            "filedAt": "2026-04-28",
+            "periodStart": "2025-07-01",
+            "periodEnd": "2025-09-30",
+            "filedAt": "2026-10-27",
             "form": "10-Q",
             "fiscalYear": 2026,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "NetIncomeLoss"
           },
           {
             "label": "Net Income (Loss) Attributable to Parent",
-            "value": 58897000,
+            "value": 122569000,
             "unit": "USD",
-            "periodStart": "2024-01-01",
-            "periodEnd": "2024-03-31",
-            "filedAt": "2025-04-29",
+            "periodStart": "2024-07-01",
+            "periodEnd": "2024-09-30",
+            "filedAt": "2025-10-28",
             "form": "10-Q",
             "fiscalYear": 2025,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "NetIncomeLoss"
           },
           {
             "label": "Net Income (Loss) Attributable to Parent",
-            "value": 45351000,
+            "value": 132614000,
             "unit": "USD",
-            "periodStart": "2023-01-01",
-            "periodEnd": "2023-03-31",
-            "filedAt": "2024-05-01",
+            "periodStart": "2023-07-01",
+            "periodEnd": "2023-09-30",
+            "filedAt": "2024-10-29",
             "form": "10-Q",
             "fiscalYear": 2024,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "NetIncomeLoss"
           },
           {
             "label": "Net Income (Loss) Attributable to Parent",
-            "value": 170663000,
+            "value": 306081000,
             "unit": "USD",
-            "periodStart": "2022-01-01",
-            "periodEnd": "2022-03-31",
-            "filedAt": "2023-05-03",
+            "periodStart": "2022-07-01",
+            "periodEnd": "2022-09-30",
+            "filedAt": "2023-11-01",
             "form": "10-Q",
             "fiscalYear": 2023,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "NetIncomeLoss"
           }
         ],
         "assets": [
+          {
+            "label": "Assets",
+            "value": 10042224000,
+            "unit": "USD",
+            "periodStart": null,
+            "periodEnd": "2026-09-30",
+            "filedAt": "2026-10-27",
+            "form": "10-Q",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "taxonomy": "us-gaap",
+            "tag": "Assets"
+          },
+          {
+            "label": "Assets",
+            "value": 9716114000,
+            "unit": "USD",
+            "periodStart": null,
+            "periodEnd": "2026-06-30",
+            "filedAt": "2026-07-28",
+            "form": "10-Q",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q2",
+            "taxonomy": "us-gaap",
+            "tag": "Assets"
+          },
           {
             "label": "Assets",
             "value": 8298634000,
@@ -2504,10 +2530,10 @@
             "unit": "USD",
             "periodStart": null,
             "periodEnd": "2025-12-31",
-            "filedAt": "2026-04-28",
+            "filedAt": "2026-10-27",
             "form": "10-Q",
             "fiscalYear": 2026,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "Assets"
           },
@@ -2562,35 +2588,35 @@
             "fiscalPeriod": "FY",
             "taxonomy": "us-gaap",
             "tag": "Assets"
-          },
-          {
-            "label": "Assets",
-            "value": 7029086000,
-            "unit": "USD",
-            "periodStart": null,
-            "periodEnd": "2024-09-30",
-            "filedAt": "2024-10-29",
-            "form": "10-Q",
-            "fiscalYear": 2024,
-            "fiscalPeriod": "Q3",
-            "taxonomy": "us-gaap",
-            "tag": "Assets"
-          },
-          {
-            "label": "Assets",
-            "value": 6865550000,
-            "unit": "USD",
-            "periodStart": null,
-            "periodEnd": "2024-06-30",
-            "filedAt": "2024-07-30",
-            "form": "10-Q",
-            "fiscalYear": 2024,
-            "fiscalPeriod": "Q2",
-            "taxonomy": "us-gaap",
-            "tag": "Assets"
           }
         ],
         "cash": [
+          {
+            "label": "Cash and Cash Equivalents, at Carrying Value",
+            "value": 1603015000,
+            "unit": "USD",
+            "periodStart": null,
+            "periodEnd": "2026-09-30",
+            "filedAt": "2026-10-27",
+            "form": "10-Q",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "taxonomy": "us-gaap",
+            "tag": "CashAndCashEquivalentsAtCarryingValue"
+          },
+          {
+            "label": "Cash and Cash Equivalents, at Carrying Value",
+            "value": 1551890000,
+            "unit": "USD",
+            "periodStart": null,
+            "periodEnd": "2026-06-30",
+            "filedAt": "2026-07-28",
+            "form": "10-Q",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q2",
+            "taxonomy": "us-gaap",
+            "tag": "CashAndCashEquivalentsAtCarryingValue"
+          },
           {
             "label": "Cash and Cash Equivalents, at Carrying Value",
             "value": 1121183000,
@@ -2610,10 +2636,10 @@
             "unit": "USD",
             "periodStart": null,
             "periodEnd": "2025-12-31",
-            "filedAt": "2026-04-28",
+            "filedAt": "2026-10-27",
             "form": "10-Q",
             "fiscalYear": 2026,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "CashAndCashEquivalentsAtCarryingValue"
           },
@@ -2668,109 +2694,83 @@
             "fiscalPeriod": "FY",
             "taxonomy": "us-gaap",
             "tag": "CashAndCashEquivalentsAtCarryingValue"
-          },
-          {
-            "label": "Cash and Cash Equivalents, at Carrying Value",
-            "value": 959140000,
-            "unit": "USD",
-            "periodStart": null,
-            "periodEnd": "2024-09-30",
-            "filedAt": "2024-10-29",
-            "form": "10-Q",
-            "fiscalYear": 2024,
-            "fiscalPeriod": "Q3",
-            "taxonomy": "us-gaap",
-            "tag": "CashAndCashEquivalentsAtCarryingValue"
-          },
-          {
-            "label": "Cash and Cash Equivalents, at Carrying Value",
-            "value": 1079663000,
-            "unit": "USD",
-            "periodStart": null,
-            "periodEnd": "2024-06-30",
-            "filedAt": "2024-07-30",
-            "form": "10-Q",
-            "fiscalYear": 2024,
-            "fiscalPeriod": "Q2",
-            "taxonomy": "us-gaap",
-            "tag": "CashAndCashEquivalentsAtCarryingValue"
           }
         ],
         "capex": [
           {
             "label": "Payments to Acquire Property, Plant, and Equipment",
-            "value": 224605000,
+            "value": 1236806000,
             "unit": "USD",
             "periodStart": "2026-01-01",
-            "periodEnd": "2026-03-31",
-            "filedAt": "2026-04-28",
+            "periodEnd": "2026-09-30",
+            "filedAt": "2026-10-27",
             "form": "10-Q",
             "fiscalYear": 2026,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
           },
           {
             "label": "Payments to Acquire Property, Plant, and Equipment",
-            "value": 79897000,
+            "value": 472531000,
             "unit": "USD",
             "periodStart": "2025-01-01",
-            "periodEnd": "2025-03-31",
-            "filedAt": "2026-04-28",
+            "periodEnd": "2025-09-30",
+            "filedAt": "2026-10-27",
             "form": "10-Q",
             "fiscalYear": 2026,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
           },
           {
             "label": "Payments to Acquire Property, Plant, and Equipment",
-            "value": 96169000,
+            "value": 458067000,
             "unit": "USD",
             "periodStart": "2024-01-01",
-            "periodEnd": "2024-03-31",
-            "filedAt": "2025-04-29",
+            "periodEnd": "2024-09-30",
+            "filedAt": "2025-10-28",
             "form": "10-Q",
             "fiscalYear": 2025,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
           },
           {
             "label": "Payments to Acquire Property, Plant, and Equipment",
-            "value": 98224000,
+            "value": 511654000,
             "unit": "USD",
             "periodStart": "2023-01-01",
-            "periodEnd": "2023-03-31",
-            "filedAt": "2024-05-01",
+            "periodEnd": "2023-09-30",
+            "filedAt": "2024-10-29",
             "form": "10-Q",
             "fiscalYear": 2024,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
           },
           {
             "label": "Payments to Acquire Property, Plant, and Equipment",
-            "value": 158154000,
+            "value": 575502000,
             "unit": "USD",
             "periodStart": "2022-01-01",
-            "periodEnd": "2022-03-31",
-            "filedAt": "2023-05-03",
+            "periodEnd": "2022-09-30",
+            "filedAt": "2023-11-01",
             "form": "10-Q",
             "fiscalYear": 2023,
-            "fiscalPeriod": "Q1",
+            "fiscalPeriod": "Q3",
             "taxonomy": "us-gaap",
             "tag": "PaymentsToAcquirePropertyPlantAndEquipment"
           }
         ]
       },
-      "metricsCheckedAt": "2026-10-27T07:57:31.290Z",
+      "metricsCheckedAt": "2026-10-28T08:39:22.511Z",
       "warnings": []
     },
     "applied-materials": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:57:02.398Z",
+      "checkedAt": "2026-10-28T08:39:02.473Z",
       "identifiers": {
         "ticker": "AMAT",
         "cik": "0000006951"
@@ -3338,7 +3338,7 @@
     "arista-networks": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:57:42.200Z",
+      "checkedAt": "2026-10-28T08:39:32.054Z",
       "identifiers": {
         "ticker": "ANET",
         "cik": "0001596532"
@@ -3906,7 +3906,7 @@
     "arm": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:56:47.319Z",
+      "checkedAt": "2026-10-28T08:38:38.879Z",
       "identifiers": {
         "ticker": "ARM",
         "cik": "0001973239"
@@ -4435,7 +4435,7 @@
     "ase-technology": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:57:28.227Z",
+      "checkedAt": "2026-10-28T08:39:14.934Z",
       "identifiers": {
         "ticker": "ASX",
         "cik": "0001122411"
@@ -4839,13 +4839,13 @@
           }
         ]
       },
-      "metricsCheckedAt": "2026-10-21T07:44:17.029Z",
+      "metricsCheckedAt": "2026-10-28T08:39:14.934Z",
       "warnings": []
     },
     "asml": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:56:57.414Z",
+      "checkedAt": "2026-10-28T08:39:01.006Z",
       "identifiers": {
         "ticker": "ASML",
         "cik": "0000937966"
@@ -5335,21 +5335,29 @@
     "broadcom": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:56:54.163Z",
+      "checkedAt": "2026-10-28T08:38:55.646Z",
       "identifiers": {
         "ticker": "AVGO",
         "cik": "0001730168"
       },
       "entityName": "Broadcom Inc.",
       "latestFiling": {
-        "form": "10-Q",
-        "filedAt": "2026-09-10",
-        "reportDate": "2026-08-02",
-        "accessionNumber": "0001730168-26-000080",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm"
+        "form": "8-K",
+        "filedAt": "2026-10-27",
+        "reportDate": "2026-10-26",
+        "accessionNumber": "0001193125-26-434271",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/d148323d8k.htm"
       },
       "recentFilings": [
+        {
+          "form": "8-K",
+          "filedAt": "2026-10-27",
+          "reportDate": "2026-10-26",
+          "accessionNumber": "0001193125-26-434271",
+          "title": "8-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/d148323d8k.htm"
+        },
         {
           "form": "10-Q",
           "filedAt": "2026-09-10",
@@ -5405,14 +5413,6 @@
           "accessionNumber": "0001730168-26-000051",
           "title": "8-K",
           "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000051/avgo-20260603.htm"
-        },
-        {
-          "form": "8-K",
-          "filedAt": "2026-04-21",
-          "reportDate": "2026-04-20",
-          "accessionNumber": "0001730168-26-000039",
-          "title": "8-K",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000039/avgo-20260420.htm"
         }
       ],
       "metrics": {
@@ -5871,13 +5871,13 @@
           }
         ]
       },
-      "metricsCheckedAt": "2026-10-24T07:21:58.768Z",
+      "metricsCheckedAt": "2026-10-28T08:38:55.646Z",
       "warnings": []
     },
     "cadence": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:56:36.997Z",
+      "checkedAt": "2026-10-28T08:38:38.266Z",
       "identifiers": {
         "ticker": "CDNS",
         "cik": "0000813672"
@@ -6445,7 +6445,7 @@
     "equinix": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:57:56.193Z",
+      "checkedAt": "2026-10-28T08:39:49.638Z",
       "identifiers": {
         "ticker": "EQIX",
         "cik": "0001101239"
@@ -6961,7 +6961,7 @@
     "jcet": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-10-27T07:56:35.955Z",
+      "checkedAt": "2026-10-28T08:38:31.440Z",
       "identifiers": {},
       "sourceUrl": "https://www.jcetglobal.com/",
       "latestFiling": null,
@@ -6975,7 +6975,7 @@
     "kla": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:57:13.231Z",
+      "checkedAt": "2026-10-28T08:39:05.667Z",
       "identifiers": {
         "ticker": "KLAC",
         "cik": "0000319201"
@@ -7543,7 +7543,7 @@
     "mediatek": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-10-27T07:56:35.955Z",
+      "checkedAt": "2026-10-28T08:38:31.440Z",
       "identifiers": {},
       "sourceUrl": "https://corp.mediatek.com/investor-relations",
       "latestFiling": null,
@@ -7557,7 +7557,7 @@
     "meta-platforms": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:58:14.962Z",
+      "checkedAt": "2026-10-28T08:39:59.638Z",
       "identifiers": {
         "ticker": "META",
         "cik": "0001326801"
@@ -8125,7 +8125,7 @@
     "micron": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:57:25.111Z",
+      "checkedAt": "2026-10-28T08:39:11.821Z",
       "identifiers": {
         "ticker": "MU",
         "cik": "0000723125"
@@ -8693,7 +8693,7 @@
     "microsoft": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:58:08.075Z",
+      "checkedAt": "2026-10-28T08:39:50.303Z",
       "identifiers": {
         "ticker": "MSFT",
         "cik": "0000789019"
@@ -9261,7 +9261,7 @@
     "nvidia": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:56:47.787Z",
+      "checkedAt": "2026-10-28T08:38:41.887Z",
       "identifiers": {
         "ticker": "NVDA",
         "cik": "0001045810"
@@ -9751,7 +9751,7 @@
     "palantir": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:58:18.116Z",
+      "checkedAt": "2026-10-28T08:40:02.671Z",
       "identifiers": {
         "ticker": "PLTR",
         "cik": "0001321655"
@@ -10319,7 +10319,7 @@
     "salesforce": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:58:24.273Z",
+      "checkedAt": "2026-10-28T08:40:08.973Z",
       "identifiers": {
         "ticker": "CRM",
         "cik": "0001108524"
@@ -10920,13 +10920,13 @@
           }
         ]
       },
-      "metricsCheckedAt": "2026-10-21T07:45:02.463Z",
+      "metricsCheckedAt": "2026-10-28T08:40:08.973Z",
       "warnings": []
     },
     "samsung-electronics": {
       "status": "error",
       "provider": "OpenDART",
-      "checkedAt": "2026-10-27T07:56:35.958Z",
+      "checkedAt": "2026-10-28T08:38:31.446Z",
       "identifiers": {
         "corpCode": "00126380"
       },
@@ -10941,7 +10941,7 @@
     "servicenow": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:58:27.493Z",
+      "checkedAt": "2026-10-28T08:40:21.269Z",
       "identifiers": {
         "ticker": "NOW",
         "cik": "0001373715"
@@ -11509,7 +11509,7 @@
     "sk-hynix": {
       "status": "error",
       "provider": "OpenDART",
-      "checkedAt": "2026-10-27T07:56:37.148Z",
+      "checkedAt": "2026-10-28T08:38:32.465Z",
       "identifiers": {
         "corpCode": "00164779"
       },
@@ -11524,7 +11524,7 @@
     "smic": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-10-27T07:56:35.955Z",
+      "checkedAt": "2026-10-28T08:38:31.440Z",
       "identifiers": {},
       "sourceUrl": "https://www.smics.com/en/site/company",
       "latestFiling": null,
@@ -11538,7 +11538,7 @@
     "supermicro": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:57:55.476Z",
+      "checkedAt": "2026-10-28T08:39:40.978Z",
       "identifiers": {
         "ticker": "SMCI",
         "cik": "0001375365"
@@ -12100,13 +12100,13 @@
           }
         ]
       },
-      "metricsCheckedAt": "2026-10-21T07:44:32.327Z",
+      "metricsCheckedAt": "2026-10-28T08:39:40.978Z",
       "warnings": []
     },
     "synopsys": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:56:35.955Z",
+      "checkedAt": "2026-10-28T08:38:31.440Z",
       "identifiers": {
         "ticker": "SNPS",
         "cik": "0000883241"
@@ -12668,13 +12668,13 @@
           }
         ]
       },
-      "metricsCheckedAt": "2026-10-21T07:43:33.382Z",
+      "metricsCheckedAt": "2026-10-28T08:38:31.440Z",
       "warnings": []
     },
     "tokyo-electron": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-10-27T07:56:35.955Z",
+      "checkedAt": "2026-10-28T08:38:31.440Z",
       "identifiers": {},
       "sourceUrl": "https://www.tel.com/ir/",
       "latestFiling": null,
@@ -12688,7 +12688,7 @@
     "tsmc": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:57:24.392Z",
+      "checkedAt": "2026-10-28T08:39:08.800Z",
       "identifiers": {
         "ticker": "TSM",
         "cik": "0001046179"
@@ -13046,7 +13046,7 @@
     "vertiv": {
       "status": "ok",
       "provider": "SEC EDGAR",
-      "checkedAt": "2026-10-27T07:57:49.312Z",
+      "checkedAt": "2026-10-28T08:39:32.682Z",
       "identifiers": {
         "ticker": "VRT",
         "cik": "0001674101"
@@ -13054,13 +13054,21 @@
       "entityName": "Vertiv Holdings Co",
       "latestFiling": {
         "form": "8-K",
-        "filedAt": "2026-10-26",
-        "reportDate": "2026-10-26",
-        "accessionNumber": "0001628280-26-067127",
+        "filedAt": "2026-10-27",
+        "reportDate": "2026-10-27",
+        "accessionNumber": "0001628280-26-067393",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067127/vrt-20261026.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067393/vrt-20261027.htm"
       },
       "recentFilings": [
+        {
+          "form": "8-K",
+          "filedAt": "2026-10-27",
+          "reportDate": "2026-10-27",
+          "accessionNumber": "0001628280-26-067393",
+          "title": "8-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067393/vrt-20261027.htm"
+        },
         {
           "form": "8-K",
           "filedAt": "2026-10-26",
@@ -13116,14 +13124,6 @@
           "accessionNumber": "0001628280-26-044317",
           "title": "8-K",
           "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026044317/vrt-20260617.htm"
-        },
-        {
-          "form": "8-K",
-          "filedAt": "2026-06-12",
-          "reportDate": "2026-06-12",
-          "accessionNumber": "0001628280-26-042641",
-          "title": "8-K",
-          "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026042641/vrt-20260612.htm"
         }
       ],
       "metrics": {
@@ -13647,7 +13647,7 @@
           }
         ]
       },
-      "metricsCheckedAt": "2026-10-27T07:57:49.312Z",
+      "metricsCheckedAt": "2026-10-28T08:39:32.682Z",
       "warnings": []
     }
   }

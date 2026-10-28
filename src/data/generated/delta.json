@@ -1,33 +1,37 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T07:59:12.968Z",
+  "generatedAt": "2026-10-28T08:41:00.273Z",
   "period": {
-    "from": "2026-10-26T07:53:21.638Z",
-    "to": "2026-10-27T07:59:12.968Z",
+    "from": "2026-10-27T07:59:12.968Z",
+    "to": "2026-10-28T08:41:00.273Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 4,
-    "metricChanges": 0,
+    "newFilings": 3,
+    "metricChanges": 5,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 5
+    "totalChanges": 10
   },
   "affected": {
     "stages": {
-      "packaging": 2,
-      "equipment-materials": 1,
-      "eda-ip": 1,
+      "packaging": 8,
+      "design": 2,
       "ai-infrastructure": 2,
-      "design": 1,
-      "memory": 1,
-      "models-platforms": 1
+      "equipment-materials": 1,
+      "manufacturing": 1,
+      "memory": 2,
+      "models-platforms": 2
     },
     "topics": {
+      "半导体制造": 1,
+      "模型与平台": 2,
+      "企业应用与生产力": 1,
+      "供应链与地缘政策": 1,
       "AI 算力与芯片": 1,
-      "模型与平台": 1
+      "数据中心与电力": 1
     }
   },
   "companies": {
@@ -35,63 +39,147 @@
       {
         "company": "amkor",
         "stage": "packaging",
-        "form": "8-K",
-        "filedAt": "2026-10-26",
-        "reportDate": "2026-10-26",
-        "accessionNumber": "0001047127-26-000049",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000049/amkr-20261026.htm"
+        "form": "10-Q",
+        "filedAt": "2026-10-27",
+        "reportDate": "2026-09-30",
+        "accessionNumber": "0001047127-26-000052",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000052/amkr-20260930.htm"
       },
       {
-        "company": "applied-materials",
-        "stage": "equipment-materials",
+        "company": "broadcom",
+        "stage": "design",
         "form": "8-K",
-        "filedAt": "2026-10-26",
+        "filedAt": "2026-10-27",
         "reportDate": "2026-10-26",
-        "accessionNumber": "0001628280-26-067303",
+        "accessionNumber": "0001193125-26-434271",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026067303/amat-20261026.htm"
-      },
-      {
-        "company": "cadence",
-        "stage": "eda-ip",
-        "form": "8-K",
-        "filedAt": "2026-10-26",
-        "reportDate": "2026-10-23",
-        "accessionNumber": "0000813672-26-000116",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000116/cdns-20261023.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/d148323d8k.htm"
       },
       {
         "company": "vertiv",
         "stage": "ai-infrastructure",
         "form": "8-K",
-        "filedAt": "2026-10-26",
-        "reportDate": "2026-10-26",
-        "accessionNumber": "0001628280-26-067127",
+        "filedAt": "2026-10-27",
+        "reportDate": "2026-10-27",
+        "accessionNumber": "0001628280-26-067393",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067127/vrt-20261026.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067393/vrt-20261027.htm"
       }
     ],
-    "metrics": [],
+    "metrics": [
+      {
+        "company": "amkor",
+        "stage": "packaging",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 1990557000,
+        "previousValue": 1684701000,
+        "changePercent": 18.15,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "amkor",
+        "stage": "packaging",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 190613000,
+        "previousValue": 83351000,
+        "changePercent": 128.69,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "amkor",
+        "stage": "packaging",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 10042224000,
+        "previousValue": 8298634000,
+        "changePercent": 21.01,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "amkor",
+        "stage": "packaging",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 1603015000,
+        "previousValue": 1121183000,
+        "changePercent": 42.98,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "amkor",
+        "stage": "packaging",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 1236806000,
+        "previousValue": 224605000,
+        "changePercent": 450.66,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      }
+    ],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
     "new": [
       {
-        "id": "aws-blog-743b592063fc",
-        "publishedAt": "2026-10-26T15:02:24.000Z",
-        "source": "AWS 官方博客",
+        "id": "microsoft-blog-7dc0d3b45dc7",
+        "publishedAt": "2026-10-27T16:01:38.000Z",
+        "source": "Microsoft 官方博客",
         "sourceType": "公司观点",
-        "title": "AWS Weekly Roundup: Amazon Polly Generative engine, TorchNeuron for Trainium, and more (October 26, 2026)",
-        "summary": "A few weeks ago I presented to a small group of commercial and technology leaders from Brazilian agribusiness at the AWS office in São Paulo. My talk ran through where generative AI fits across the different stages of an agribusiness operation, and the point I kept returning to is that the markets we call traditional are exactly the ones where keeping up with this technology decides who ends up ahead of the curve. No",
+        "title": "The platform approach to becoming Frontier",
+        "summary": "Last year at Ignite, we introduced the concept of Frontier Transformation and how it is different from any technology-led pursuit, because it requires us to focus on business outcomes first. It starts with a simple idea: technology was invented to serve humanity, not the other way around. There is no path where this notion of infinite cognitive compute replaces human purpose. Frontier Transformation is an opportunity",
+        "topics": [
+          "半导体制造",
+          "模型与平台",
+          "企业应用与生产力",
+          "供应链与地缘政策"
+        ],
+        "relatedCompanies": [
+          "microsoft"
+        ],
+        "relatedStages": [
+          "equipment-materials",
+          "manufacturing",
+          "memory",
+          "packaging",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/27/the-platform-approach-to-becoming-frontier/"
+      },
+      {
+        "id": "nvidia-blog-df8156dd7062",
+        "publishedAt": "2026-10-27T15:00:20.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "How AI Is Changing the Pace of Discovery for Millions Living With Dementia",
+        "summary": "There are 57 million people worldwide living with dementia today. For the researchers working to help them, the obstacle isn’t a lack of effort — it’s too much data, too few experts to synthesize it and a pace of discovery that can’t keep up with the disease. The Consortium for Biomedical Research and AI in Neurodegeneration (C-BRAIN), working with NVIDIA, is using AI to change that. Alzheimer’s disease is one of tod",
         "topics": [
           "AI 算力与芯片",
+          "数据中心与电力",
           "模型与平台"
         ],
         "relatedCompanies": [
-          "amazon"
+          "nvidia",
+          "microsoft"
         ],
         "relatedStages": [
           "design",
@@ -101,7 +189,7 @@
           "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-polly-generative-engine-torchneuron-for-trainium-and-more-october-26-2026/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/open-source-ai-tools-cbrain-dementia/"
       }
     ],
     "analysisRefreshed": []

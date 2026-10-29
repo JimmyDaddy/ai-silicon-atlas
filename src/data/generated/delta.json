@@ -1,136 +1,424 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T08:41:00.273Z",
+  "generatedAt": "2026-10-29T08:38:05.435Z",
   "period": {
-    "from": "2026-10-27T07:59:12.968Z",
-    "to": "2026-10-28T08:41:00.273Z",
+    "from": "2026-10-28T08:41:00.273Z",
+    "to": "2026-10-29T08:38:05.435Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 3,
-    "metricChanges": 5,
+    "newFilings": 7,
+    "metricChanges": 24,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
     "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 10
+    "totalChanges": 33
   },
   "affected": {
     "stages": {
-      "packaging": 8,
-      "design": 2,
-      "ai-infrastructure": 2,
-      "equipment-materials": 1,
+      "models-platforms": 8,
+      "eda-ip": 6,
+      "ai-infrastructure": 12,
+      "equipment-materials": 2,
+      "ai-applications": 7,
       "manufacturing": 1,
       "memory": 2,
-      "models-platforms": 2
+      "packaging": 2,
+      "design": 1
     },
     "topics": {
       "半导体制造": 1,
-      "模型与平台": 2,
       "企业应用与生产力": 1,
-      "供应链与地缘政策": 1,
       "AI 算力与芯片": 1,
-      "数据中心与电力": 1
+      "数据中心与电力": 1,
+      "模型与平台": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "amkor",
-        "stage": "packaging",
-        "form": "10-Q",
-        "filedAt": "2026-10-27",
-        "reportDate": "2026-09-30",
-        "accessionNumber": "0001047127-26-000052",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000052/amkr-20260930.htm"
+        "company": "alphabet",
+        "stage": "models-platforms",
+        "form": "8-K",
+        "filedAt": "2026-10-28",
+        "reportDate": "2026-10-28",
+        "accessionNumber": "0001652044-26-000080",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/goog-20261028.htm"
       },
       {
-        "company": "broadcom",
-        "stage": "design",
+        "company": "cadence",
+        "stage": "eda-ip",
+        "form": "10-Q",
+        "filedAt": "2026-10-28",
+        "reportDate": "2026-09-30",
+        "accessionNumber": "0000813672-26-000121",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000121/cdns-20260930.htm"
+      },
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
+        "form": "10-Q",
+        "filedAt": "2026-10-28",
+        "reportDate": "2026-09-30",
+        "accessionNumber": "0001101239-26-000180",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000180/eqix-20260930.htm"
+      },
+      {
+        "company": "kla",
+        "stage": "equipment-materials",
         "form": "8-K",
-        "filedAt": "2026-10-27",
-        "reportDate": "2026-10-26",
-        "accessionNumber": "0001193125-26-434271",
+        "filedAt": "2026-10-28",
+        "reportDate": "2026-10-28",
+        "accessionNumber": "0000319201-26-000032",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/d148323d8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000032/klac-20261028.htm"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "form": "8-K",
+        "filedAt": "2026-10-28",
+        "reportDate": "2026-10-28",
+        "accessionNumber": "0001193125-26-436149",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436149/msft-20261028.htm"
+      },
+      {
+        "company": "servicenow",
+        "stage": "ai-applications",
+        "form": "10-Q",
+        "filedAt": "2026-10-28",
+        "reportDate": "2026-09-30",
+        "accessionNumber": "0001373715-26-000096",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000096/now-20260930.htm"
       },
       {
         "company": "vertiv",
         "stage": "ai-infrastructure",
-        "form": "8-K",
-        "filedAt": "2026-10-27",
-        "reportDate": "2026-10-27",
-        "accessionNumber": "0001628280-26-067393",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067393/vrt-20261027.htm"
+        "form": "10-Q",
+        "filedAt": "2026-10-28",
+        "reportDate": "2026-09-30",
+        "accessionNumber": "0001628280-26-067893",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067893/vrt-20260930.htm"
       }
     ],
     "metrics": [
       {
-        "company": "amkor",
-        "stage": "packaging",
+        "company": "cadence",
+        "stage": "eda-ip",
         "metric": "revenue",
         "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 1990557000,
-        "previousValue": 1684701000,
-        "changePercent": 18.15,
+        "value": 1633311000,
+        "previousValue": 1474220000,
+        "changePercent": 10.79,
         "unit": "USD",
         "periodEnd": "2026-09-30",
         "previousPeriodEnd": "2026-03-31",
         "sourceForm": "10-Q"
       },
       {
-        "company": "amkor",
-        "stage": "packaging",
+        "company": "cadence",
+        "stage": "eda-ip",
         "metric": "netIncome",
         "label": "Net Income (Loss) Attributable to Parent",
-        "value": 190613000,
-        "previousValue": 83351000,
-        "changePercent": 128.69,
+        "value": 289747000,
+        "previousValue": 335660000,
+        "changePercent": -13.68,
         "unit": "USD",
         "periodEnd": "2026-09-30",
         "previousPeriodEnd": "2026-03-31",
         "sourceForm": "10-Q"
       },
       {
-        "company": "amkor",
-        "stage": "packaging",
+        "company": "cadence",
+        "stage": "eda-ip",
         "metric": "assets",
         "label": "Assets",
-        "value": 10042224000,
-        "previousValue": 8298634000,
-        "changePercent": 21.01,
+        "value": 12224774000,
+        "previousValue": 12098354000,
+        "changePercent": 1.04,
         "unit": "USD",
         "periodEnd": "2026-09-30",
         "previousPeriodEnd": "2026-03-31",
         "sourceForm": "10-Q"
       },
       {
-        "company": "amkor",
-        "stage": "packaging",
+        "company": "cadence",
+        "stage": "eda-ip",
         "metric": "cash",
         "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 1603015000,
-        "previousValue": 1121183000,
-        "changePercent": 42.98,
+        "value": 1452020000,
+        "previousValue": 1406668000,
+        "changePercent": 3.22,
         "unit": "USD",
         "periodEnd": "2026-09-30",
         "previousPeriodEnd": "2026-03-31",
         "sourceForm": "10-Q"
       },
       {
-        "company": "amkor",
-        "stage": "packaging",
+        "company": "cadence",
+        "stage": "eda-ip",
         "metric": "capex",
         "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 1236806000,
-        "previousValue": 224605000,
-        "changePercent": 450.66,
+        "value": 163254000,
+        "previousValue": 48820000,
+        "changePercent": 234.4,
         "unit": "USD",
         "periodEnd": "2026-09-30",
         "previousPeriodEnd": "2026-03-31",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 2571000000,
+        "previousValue": 2625000000,
+        "changePercent": -2.06,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 489000000,
+        "previousValue": 479000000,
+        "changePercent": 2.09,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 44445000000,
+        "previousValue": 41076000000,
+        "changePercent": 8.2,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 2362000000,
+        "previousValue": 979000000,
+        "changePercent": 141.27,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 92279000000,
+        "previousValue": 331839000000,
+        "changePercent": -72.19,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 36629000000,
+        "previousValue": 133749000000,
+        "changePercent": -72.61,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 779403000000,
+        "previousValue": 758376000000,
+        "changePercent": 2.77,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 20281000000,
+        "previousValue": 20935000000,
+        "changePercent": -3.12,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "microsoft",
+        "stage": "models-platforms",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 39367000000,
+        "previousValue": 115948000000,
+        "changePercent": -66.05,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "servicenow",
+        "stage": "ai-applications",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 4106000000,
+        "previousValue": 3987000000,
+        "changePercent": 2.98,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "servicenow",
+        "stage": "ai-applications",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 277000000,
+        "previousValue": 298000000,
+        "changePercent": -7.05,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "servicenow",
+        "stage": "ai-applications",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 31830000000,
+        "previousValue": 31666000000,
+        "changePercent": 0.52,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "servicenow",
+        "stage": "ai-applications",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 2393000000,
+        "previousValue": 2503000000,
+        "changePercent": -4.39,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "servicenow",
+        "stage": "ai-applications",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 346000000,
+        "previousValue": 255000000,
+        "changePercent": 35.69,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 4312800000,
+        "previousValue": 3274300000,
+        "changePercent": 31.72,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 764500000,
+        "previousValue": 497800000,
+        "changePercent": 53.58,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 18174500000,
+        "previousValue": 15900900000,
+        "changePercent": 14.3,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 3512900000,
+        "previousValue": 2810600000,
+        "changePercent": 24.99,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "vertiv",
+        "stage": "ai-infrastructure",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 425000000,
+        "previousValue": 285900000,
+        "changePercent": 48.65,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
         "sourceForm": "10-Q"
       }
     ],
@@ -140,17 +428,15 @@
   "intelligence": {
     "new": [
       {
-        "id": "microsoft-blog-7dc0d3b45dc7",
-        "publishedAt": "2026-10-27T16:01:38.000Z",
+        "id": "microsoft-blog-2ce02f1028ea",
+        "publishedAt": "2026-10-28T16:51:35.000Z",
         "source": "Microsoft 官方博客",
         "sourceType": "公司观点",
-        "title": "The platform approach to becoming Frontier",
-        "summary": "Last year at Ignite, we introduced the concept of Frontier Transformation and how it is different from any technology-led pursuit, because it requires us to focus on business outcomes first. It starts with a simple idea: technology was invented to serve humanity, not the other way around. There is no path where this notion of infinite cognitive compute replaces human purpose. Frontier Transformation is an opportunity",
+        "title": "Introducing the Microsoft Copilot harness: Unlocking the potential of truly multi-model agentic work",
+        "summary": "If you want to compete, you need to be multi-model. And if you want to take advantage of everything that different AI models have to offer, you need a great harness. But building one that works seamlessly across multiple models and surfaces is incredibly hard. You need to solve for performance, quality, and cost. And then you have to maintain it, which is even harder. Luckily, the GitHub engineering team built a best",
         "topics": [
           "半导体制造",
-          "模型与平台",
-          "企业应用与生产力",
-          "供应链与地缘政策"
+          "企业应用与生产力"
         ],
         "relatedCompanies": [
           "microsoft"
@@ -160,18 +446,18 @@
           "manufacturing",
           "memory",
           "packaging",
-          "models-platforms"
+          "ai-applications"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/27/the-platform-approach-to-becoming-frontier/"
+        "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/28/introducing-the-microsoft-copilot-harness-unlocking-the-potential-of-truly-multi-model-agentic-work/"
       },
       {
-        "id": "nvidia-blog-df8156dd7062",
-        "publishedAt": "2026-10-27T15:00:20.000Z",
+        "id": "nvidia-blog-2952348be6c4",
+        "publishedAt": "2026-10-28T15:00:46.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "How AI Is Changing the Pace of Discovery for Millions Living With Dementia",
-        "summary": "There are 57 million people worldwide living with dementia today. For the researchers working to help them, the obstacle isn’t a lack of effort — it’s too much data, too few experts to synthesize it and a pace of discovery that can’t keep up with the disease. The Consortium for Biomedical Research and AI in Neurodegeneration (C-BRAIN), working with NVIDIA, is using AI to change that. Alzheimer’s disease is one of tod",
+        "title": "Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
+        "summary": "NVIDIA RTX Spark powers thin and light laptops built for everything that developers, creators and gamers do. RTX Spark laptops are now available from ASUS, Dell, HP, Lenovo, Microsoft and MSI. These powerful systems combine an NVIDIA Blackwell RTX GPU and an NVIDIA Grace CPU in a single superchip with up to 128GB of unified memory and up to 1 petaflop of FP4 AI performance. That puts the NVIDIA CUDA platform, RTX gra",
         "topics": [
           "AI 算力与芯片",
           "数据中心与电力",
@@ -179,7 +465,8 @@
         ],
         "relatedCompanies": [
           "nvidia",
-          "microsoft"
+          "microsoft",
+          "adobe"
         ],
         "relatedStages": [
           "design",
@@ -189,7 +476,7 @@
           "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/open-source-ai-tools-cbrain-dementia/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/"
       }
     ],
     "analysisRefreshed": []

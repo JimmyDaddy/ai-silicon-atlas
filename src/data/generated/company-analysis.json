@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T08:40:21.997Z",
+  "generatedAt": "2026-10-29T08:37:28.209Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 3,
+  "completedCount": 2,
   "companies": {
     "synopsys": {
       "status": "pending",
@@ -139,7 +139,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-10-28T08:40:40.606Z",
+      "lastAttemptAt": "2026-10-29T08:37:32.574Z",
       "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
     },
     "arm": {
@@ -169,7 +169,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-28T08:40:26.309Z"
+      "lastAttemptAt": "2026-10-29T08:38:04.810Z"
     },
     "mediatek": {
       "status": "unavailable",
@@ -186,19 +186,19 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "applied-materials": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "dfdb07a2dff5d701e3f99a7f072e1a0831e97c92c55a039d5d1a0292e9fe06be",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-28T08:40:45.366Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "kla": {
-      "status": "pending",
-      "inputHash": "13fa76bc96d74282117b5b2f663098520d929743abc8d3020b5b4f1ad38aa814",
+      "status": "error",
+      "inputHash": "285ba162562d157d2297c794b91ef394ca1c8932dc35b37457f95a7b7d09e80e",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-10-29T08:37:37.169Z"
     },
     "tokyo-electron": {
       "status": "unavailable",
@@ -208,12 +208,11 @@
       "reason": "Source status: manual"
     },
     "tsmc": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "7f3b5966feb679b8d2e49fff3722b7b5f23a9dc4123b057414d5831c8c6209bb",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-28T08:40:50.115Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -251,112 +250,11 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "amkor": {
-      "status": "ok",
-      "inputHash": "e873a116b6d2d7f241341ca40e6e1341ea0ef7dc7c9c0c2be799b2e831dbfe5b",
-      "generatedAt": "2026-07-29T05:34:52.543Z",
-      "model": "openai/gpt-4.1-mini",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0001047127-26-000046",
-          "label": "10-Q · 2026-07-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000046/amkr-20260630.htm"
-        },
-        {
-          "id": "filing:0001047127-26-000043",
-          "label": "8-K · 2026-07-27",
-          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000043/amkr-20260727.htm"
-        },
-        {
-          "id": "filing:0001047127-26-000036",
-          "label": "8-K · 2026-05-21",
-          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000036/amkr-20260521.htm"
-        },
-        {
-          "id": "filing:0001047127-26-000033",
-          "label": "8-K · 2026-05-19",
-          "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000033/amkr-20260513.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001047127.json"
-        }
-      ],
-      "summary": "安靠科技（Amkor Technology, Inc.）2026财年第一季度（截至2026年3月31日）实现营业收入约16.85亿美元，同比增长27.48%；归属于母公司的净利润约8335万美元，同比增长294.5%。资产总额约82.99亿美元，较上季度末增长2%。现金及现金等价物约11.21亿美元，较上季度末下降18.66%。同期资本支出约2.25亿美元，较去年同期增长181.12%。近期披露的10-Q和8-K文件未包含具体业务变动或战略调整的正文内容，无法判断具体事项。",
-      "summaryEvidence": [
-        "filing:0001047127-26-000046",
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "2026年第一季度营业收入同比增长27.48%，净利润同比增长294.5%。",
-          "evidence": [
-            "filing:0001047127-26-000046"
-          ]
-        },
-        {
-          "text": "资本支出大幅增加，同比增长181.12%。",
-          "evidence": [
-            "filing:0001047127-26-000046"
-          ]
-        },
-        {
-          "text": "现金及现金等价物较上季度末下降18.66%。",
-          "evidence": [
-            "filing:0001047127-26-000046"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "收入和净利润大幅增长，显示公司经营状况改善。",
-          "evidence": [
-            "filing:0001047127-26-000046"
-          ]
-        },
-        {
-          "text": "资本支出显著增加，可能反映扩产或技术升级投资。",
-          "evidence": [
-            "filing:0001047127-26-000046"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "作为封装环节企业，收入和利润增长可能带动供应链相关环节需求提升。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "近期8-K文件仅含元数据，缺乏正文，无法判断是否有重大事项披露。",
-          "evidence": [
-            "filing:0001047127-26-000043",
-            "filing:0001047127-26-000036",
-            "filing:0001047127-26-000033"
-          ]
-        },
-        {
-          "text": "资本支出增加具体用途及未来影响未披露，存在不确定性。",
-          "evidence": [
-            "filing:0001047127-26-000046"
-          ]
-        }
-      ],
-      "questionsToWatch": [
-        "未来季度资本支出是否持续增加？",
-        "是否有新的业务战略或重大投资计划披露？",
-        "市场需求增长是否可持续？",
-        "现金流下降是否影响运营或投资能力？"
-      ],
-      "confidence": "high",
-      "stale": true,
-      "lastAttemptAt": "2026-10-28T08:40:31.069Z",
-      "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
+      "status": "pending",
+      "inputHash": "debc9f3abb3409a1199736e3029b89734b5850267e6fde22c3c99f4a32198d13",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "jcet": {
       "status": "unavailable",
@@ -374,40 +272,42 @@
     },
     "vertiv": {
       "status": "error",
-      "inputHash": "e7eca80e9973faa4f6838d938538ec88faeea8b2633ef66845b167b0e0570665",
+      "inputHash": "2a9bf2872d1915505381c1a3a1cd251fb7518d6f9d6082b96e255cb372c1720f",
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-28T08:40:35.833Z"
+      "lastAttemptAt": "2026-10-29T08:37:41.812Z"
     },
     "supermicro": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "15d4ffd59fee327b97669d6e1bf84fd365f244007c8de5d76acc303758756ef8",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-28T08:40:59.606Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "equinix": {
-      "status": "pending",
-      "inputHash": "a008e56023cf54a75cbf781268b9d8ddc0a4affabfe686c563ef995e31bc3787",
+      "status": "error",
+      "inputHash": "a43a287ff66665f2238f08dff818147ffd4395509d1f7ed9562d80c17a442e3a",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-10-29T08:37:46.418Z"
     },
     "microsoft": {
-      "status": "pending",
-      "inputHash": "3433c4fe29b34b4a2fb4b292919e4d53c742857d24e8d7478ca26f76f5cc4419",
+      "status": "error",
+      "inputHash": "be030349a7f3dc1aa16ec45861a50662a82def21ed0f33a512ae522390d16cbf",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-10-29T08:37:51.011Z"
     },
     "alphabet": {
-      "status": "pending",
-      "inputHash": "bf14454684080e98be15e640fc9649b83fbeb1541b19f120bd88519c7d1e24b6",
+      "status": "error",
+      "inputHash": "26a015d37ea6c18f8ec84a4e7d18d1e6de5431434574586ec83c09a8ccafe920",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-10-29T08:37:55.603Z"
     },
     "amazon": {
       "status": "pending",
@@ -417,12 +317,11 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "meta-platforms": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "f2148f241fd87b81498df613d7c542edc4a0356b343e0cfb3659e8bd42270482",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-28T08:40:54.869Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "palantir": {
       "status": "pending",
@@ -564,7 +463,10 @@
         "收入增长主要来自哪些产品或服务？",
         "公司如何应对可能的成本压力？"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "stale": true,
+      "lastAttemptAt": "2026-10-29T08:38:00.221Z",
+      "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
     }
   }
 }

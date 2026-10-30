@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T08:37:28.209Z",
+  "generatedAt": "2026-10-30T08:44:02.890Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 2,
+  "completedCount": 1,
   "companies": {
     "synopsys": {
       "status": "pending",
@@ -139,7 +139,7 @@
       ],
       "confidence": "medium",
       "stale": true,
-      "lastAttemptAt": "2026-10-29T08:37:32.574Z",
+      "lastAttemptAt": "2026-10-30T08:44:29.020Z",
       "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
     },
     "arm": {
@@ -164,12 +164,11 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "broadcom": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "e0a67b02f93025e81671538d5ae68ef87c67a02916ecc3fe2a0c4c1ca8b0746f",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-29T08:38:04.810Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "mediatek": {
       "status": "unavailable",
@@ -194,11 +193,11 @@
     },
     "kla": {
       "status": "error",
-      "inputHash": "285ba162562d157d2297c794b91ef394ca1c8932dc35b37457f95a7b7d09e80e",
+      "inputHash": "29985d1c0a37587ef640885fddf2a0b1977cd9f2f0d79c59b9c784126efcaafb",
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-29T08:37:37.169Z"
+      "lastAttemptAt": "2026-10-30T08:44:06.898Z"
     },
     "tokyo-electron": {
       "status": "unavailable",
@@ -243,11 +242,12 @@
       "reason": "Source status: error"
     },
     "ase-technology": {
-      "status": "pending",
-      "inputHash": "63a295509b261e0b0deadd62af8f02028db781d702a0bcbd8ca9868485ac81b9",
+      "status": "error",
+      "inputHash": "02210b5b99e860ef449940ea034b81a0bb8eaed67dde93c5cc83373df9f4ef1a",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-10-30T08:44:11.318Z"
     },
     "amkor": {
       "status": "pending",
@@ -276,7 +276,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-29T08:37:41.812Z"
+      "lastAttemptAt": "2026-10-30T08:44:33.447Z"
     },
     "supermicro": {
       "status": "pending",
@@ -291,37 +291,38 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-29T08:37:46.418Z"
+      "lastAttemptAt": "2026-10-30T08:44:37.878Z"
     },
     "microsoft": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "be030349a7f3dc1aa16ec45861a50662a82def21ed0f33a512ae522390d16cbf",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-29T08:37:51.011Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "alphabet": {
       "status": "error",
-      "inputHash": "26a015d37ea6c18f8ec84a4e7d18d1e6de5431434574586ec83c09a8ccafe920",
+      "inputHash": "46e9b53713b62024baf14e6eaa4036c3482093c779bcfbd6f4de49b644ba0060",
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-10-29T08:37:55.603Z"
+      "lastAttemptAt": "2026-10-30T08:44:15.766Z"
     },
     "amazon": {
-      "status": "pending",
-      "inputHash": "ff4e8ea34e3674855ed5e6823fc2580665da72f2e948bf82de775fbb88366c4c",
+      "status": "error",
+      "inputHash": "f54576d8d1bf1fc30e324f2fb69a13ad259ed0fc1d4e4ba3e6d3165caafadba6",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-10-30T08:44:20.207Z"
     },
     "meta-platforms": {
-      "status": "pending",
-      "inputHash": "f2148f241fd87b81498df613d7c542edc4a0356b343e0cfb3659e8bd42270482",
+      "status": "error",
+      "inputHash": "ba69a96561991dc71762a243ffc1b4d3d3a288c4891936a35700087d6bce3dac",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-10-30T08:44:24.619Z"
     },
     "palantir": {
       "status": "pending",
@@ -345,128 +346,11 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "servicenow": {
-      "status": "ok",
-      "inputHash": "6ceb17949fa11f4569866aa796c5721d0e7d332c7b89e76aabf9a5088a05fa19",
-      "generatedAt": "2026-07-24T05:33:08.765Z",
-      "model": "openai/gpt-4.1-mini",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0001373715-26-000076",
-          "label": "10-Q · 2026-07-23",
-          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000076/now-20260630.htm"
-        },
-        {
-          "id": "filing:0001373715-26-000072",
-          "label": "8-K · 2026-07-22",
-          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000072/now-20260722.htm"
-        },
-        {
-          "id": "filing:0001373715-26-000065",
-          "label": "8-K · 2026-05-22",
-          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000065/now-20260521.htm"
-        },
-        {
-          "id": "filing:0001193125-26-226644",
-          "label": "8-K · 2026-05-15",
-          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000119312526226644/d60522d8k.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001373715.json"
-        }
-      ],
-      "summary": "ServiceNow 2026财年第二季度实现收入39.87亿美元，同比增长24.01%；净利润2.98亿美元，同比下降22.6%。资产总额达316.66亿美元，较上一季度增长29.88%。现金及现金等价物为25.03亿美元，较上一季度下降7.36%。资本支出为2.55亿美元，同比下降35.44%。当前证据包不含披露正文，无法判断具体业务战略调整或市场环境变化。",
-      "summaryEvidence": [
-        "filing:0001373715-26-000076",
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "2026财年第二季度收入同比增长24.01%，达到39.87亿美元。",
-          "evidence": [
-            "filing:0001373715-26-000076"
-          ]
-        },
-        {
-          "text": "净利润同比下降22.6%，为2.98亿美元。",
-          "evidence": [
-            "filing:0001373715-26-000076"
-          ]
-        },
-        {
-          "text": "资产总额较上一季度增长29.88%，达到316.66亿美元。",
-          "evidence": [
-            "filing:0001373715-26-000076"
-          ]
-        },
-        {
-          "text": "现金及现金等价物较上一季度下降7.36%，为25.03亿美元。",
-          "evidence": [
-            "filing:0001373715-26-000076"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "收入大幅增长显示业务扩展或客户需求增加。",
-          "evidence": [
-            "filing:0001373715-26-000076"
-          ]
-        },
-        {
-          "text": "净利润下降可能反映成本上升或利润率压力。",
-          "evidence": [
-            "filing:0001373715-26-000076"
-          ]
-        },
-        {
-          "text": "资本支出减少可能表明投资节奏放缓。",
-          "evidence": [
-            "filing:0001373715-26-000076"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "收入增长可能带动供应链需求增加，尤其是软件和云服务相关环节。",
-          "evidence": [
-            "filing:0001373715-26-000076"
-          ]
-        },
-        {
-          "text": "资本支出减少可能影响硬件采购和基础设施建设环节。",
-          "evidence": [
-            "filing:0001373715-26-000076"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "当前证据包不含披露正文，无法判断净利润下降的具体原因。",
-          "evidence": []
-        },
-        {
-          "text": "缺乏详细业务分部和市场区域表现数据，无法分析增长驱动力。",
-          "evidence": []
-        },
-        {
-          "text": "未披露未来战略规划及风险因素，难以评估长期发展趋势。",
-          "evidence": []
-        }
-      ],
-      "questionsToWatch": [
-        "净利润下降的具体原因是什么？",
-        "未来资本支出计划是否会调整？",
-        "收入增长主要来自哪些产品或服务？",
-        "公司如何应对可能的成本压力？"
-      ],
-      "confidence": "high",
-      "stale": true,
-      "lastAttemptAt": "2026-10-29T08:38:00.221Z",
-      "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
+      "status": "pending",
+      "inputHash": "3f84bdcf7e9036275e48b5b3dd8c826a77efe825c55ca797f74e8a9d98a02765",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     }
   }
 }

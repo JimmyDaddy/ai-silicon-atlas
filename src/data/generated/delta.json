@@ -1,215 +1,94 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T08:44:38.499Z",
+  "generatedAt": "2026-10-31T08:30:44.130Z",
   "period": {
-    "from": "2026-10-29T08:38:05.435Z",
-    "to": "2026-10-30T08:44:38.499Z",
+    "from": "2026-10-30T08:44:38.499Z",
+    "to": "2026-10-31T08:30:44.130Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 5,
-    "metricChanges": 10,
+    "newFilings": 1,
+    "metricChanges": 4,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 16
+    "totalChanges": 7
   },
   "affected": {
     "stages": {
-      "models-platforms": 8,
-      "packaging": 2,
-      "equipment-materials": 7,
+      "models-platforms": 6,
       "design": 1,
       "memory": 1,
+      "packaging": 1,
       "ai-infrastructure": 1
     },
     "topics": {
-      "AI 算力与芯片": 1,
-      "半导体制造": 1,
-      "模型与平台": 1,
-      "企业应用与生产力": 1
+      "模型与平台": 2,
+      "AI 算力与芯片": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "form": "10-Q",
-        "filedAt": "2026-10-29",
-        "reportDate": "2026-09-30",
-        "accessionNumber": "0001652044-26-000084",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm"
-      },
-      {
         "company": "amazon",
         "stage": "models-platforms",
-        "form": "8-K",
-        "filedAt": "2026-10-29",
-        "reportDate": "2026-10-29",
-        "accessionNumber": "0001018724-26-000038",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20261029.htm"
-      },
-      {
-        "company": "ase-technology",
-        "stage": "packaging",
-        "form": "6-K",
-        "filedAt": "2026-10-29",
-        "reportDate": "2026-10-29",
-        "accessionNumber": "0000950103-26-016324",
-        "title": "FORM 6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326016324/dp255760_6k.htm"
-      },
-      {
-        "company": "kla",
-        "stage": "equipment-materials",
         "form": "10-Q",
-        "filedAt": "2026-10-29",
+        "filedAt": "2026-10-30",
         "reportDate": "2026-09-30",
-        "accessionNumber": "0000319201-26-000034",
+        "accessionNumber": "0001018724-26-000040",
         "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000034/klac-20260930.htm"
-      },
-      {
-        "company": "meta-platforms",
-        "stage": "models-platforms",
-        "form": "8-K",
-        "filedAt": "2026-10-29",
-        "reportDate": "2026-10-26",
-        "accessionNumber": "0001193125-26-438017",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm"
       }
     ],
     "metrics": [
       {
-        "company": "alphabet",
+        "company": "amazon",
         "stage": "models-platforms",
-        "metric": "revenue",
-        "label": "Revenues",
-        "value": 127577000000,
-        "previousValue": 119796000000,
-        "changePercent": 6.5,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 26468000000,
-        "previousValue": 112193000000,
-        "changePercent": -76.41,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 1003312000000,
-        "previousValue": 921983000000,
-        "changePercent": 8.82,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 56334000000,
-        "previousValue": 55911000000,
-        "changePercent": 0.76,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "metric": "capex",
-        "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 131953000000,
-        "previousValue": 80598000000,
-        "changePercent": 63.72,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "kla",
-        "stage": "equipment-materials",
         "metric": "revenue",
         "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 4136015000,
-        "previousValue": 13579476000,
-        "changePercent": -69.54,
+        "value": 201944000000,
+        "previousValue": 200606000000,
+        "changePercent": 0.67,
         "unit": "USD",
         "periodEnd": "2026-09-30",
         "previousPeriodEnd": "2026-06-30",
         "sourceForm": "10-Q"
       },
       {
-        "company": "kla",
-        "stage": "equipment-materials",
+        "company": "amazon",
+        "stage": "models-platforms",
         "metric": "netIncome",
         "label": "Net Income (Loss) Attributable to Parent",
-        "value": 1548588000,
-        "previousValue": 4830771000,
-        "changePercent": -67.94,
+        "value": 20685000000,
+        "previousValue": 62647000000,
+        "changePercent": -66.98,
         "unit": "USD",
         "periodEnd": "2026-09-30",
         "previousPeriodEnd": "2026-06-30",
         "sourceForm": "10-Q"
       },
       {
-        "company": "kla",
-        "stage": "equipment-materials",
+        "company": "amazon",
+        "stage": "models-platforms",
         "metric": "assets",
         "label": "Assets",
-        "value": 18404735000,
-        "previousValue": 17951535000,
-        "changePercent": 2.52,
+        "value": 1243390000000,
+        "previousValue": 1095689000000,
+        "changePercent": 13.48,
         "unit": "USD",
         "periodEnd": "2026-09-30",
         "previousPeriodEnd": "2026-06-30",
         "sourceForm": "10-Q"
       },
       {
-        "company": "kla",
-        "stage": "equipment-materials",
+        "company": "amazon",
+        "stage": "models-platforms",
         "metric": "cash",
         "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 1531950000,
-        "previousValue": 1649842000,
-        "changePercent": -7.15,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "kla",
-        "stage": "equipment-materials",
-        "metric": "capex",
-        "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 194756000,
-        "previousValue": 375945000,
-        "changePercent": -48.2,
+        "value": 55783000000,
+        "previousValue": 78213000000,
+        "changePercent": -28.68,
         "unit": "USD",
         "periodEnd": "2026-09-30",
         "previousPeriodEnd": "2026-06-30",
@@ -222,17 +101,30 @@
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-baf7193e75c1",
-        "publishedAt": "2026-10-29T16:00:35.000Z",
+        "id": "ecb-fb4eeae5b207",
+        "publishedAt": "2026-10-30T16:10:00.000Z",
+        "source": "欧洲中央银行（ECB）",
+        "sourceType": "央行研究",
+        "title": "Philip R. Lane: AI adoption in Europe",
+        "summary": "",
+        "topics": [
+          "模型与平台"
+        ],
+        "relatedCompanies": [],
+        "relatedStages": [],
+        "analysisStatus": "error",
+        "sourceUrl": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261030~08d9d540f0.en.html"
+      },
+      {
+        "id": "nvidia-blog-4a4bcbde667c",
+        "publishedAt": "2026-10-30T15:00:10.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
-        "summary": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work — building applications for exploring scenarios, investigating failures and improving designs. Developers direct AI agents through natural-language instruc",
+        "title": "Things That Go Beep in the Night: Agentic AI Joins the Search for Extraterrestrial Signals",
+        "summary": "While science fiction lore tells us that humans will meet extraterrestrial life in the form of little green men, the detail that should raise hairs this Halloween is this: the search for extraterrestrial intelligence took a major leap forward with AI, and it increasingly focuses on AI agents built by humans listening for AI agents built by aliens. Some scientists have suggested that extraterrestrial civilizations, if",
         "topics": [
           "AI 算力与芯片",
-          "半导体制造",
-          "模型与平台",
-          "企业应用与生产力"
+          "模型与平台"
         ],
         "relatedCompanies": [
           "nvidia"
@@ -242,10 +134,10 @@
           "memory",
           "packaging",
           "ai-infrastructure",
-          "equipment-materials"
+          "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/ai-joins-the-search-for-extraterrestrial-signals/"
       }
     ],
     "analysisRefreshed": []

@@ -1,145 +1,32 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T08:30:44.130Z",
+  "generatedAt": "2026-11-01T09:21:58.890Z",
   "period": {
-    "from": "2026-10-30T08:44:38.499Z",
-    "to": "2026-10-31T08:30:44.130Z",
+    "from": "2026-10-31T08:30:44.130Z",
+    "to": "2026-11-01T09:21:58.890Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
-    "metricChanges": 4,
+    "newFilings": 0,
+    "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 2,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 7
+    "totalChanges": 0
   },
   "affected": {
-    "stages": {
-      "models-platforms": 6,
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1
-    },
-    "topics": {
-      "模型与平台": 2,
-      "AI 算力与芯片": 1
-    }
+    "stages": {},
+    "topics": {}
   },
   "companies": {
-    "filings": [
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "form": "10-Q",
-        "filedAt": "2026-10-30",
-        "reportDate": "2026-09-30",
-        "accessionNumber": "0001018724-26-000040",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm"
-      }
-    ],
-    "metrics": [
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "metric": "revenue",
-        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 201944000000,
-        "previousValue": 200606000000,
-        "changePercent": 0.67,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 20685000000,
-        "previousValue": 62647000000,
-        "changePercent": -66.98,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 1243390000000,
-        "previousValue": 1095689000000,
-        "changePercent": 13.48,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 55783000000,
-        "previousValue": 78213000000,
-        "changePercent": -28.68,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      }
-    ],
+    "filings": [],
+    "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "ecb-fb4eeae5b207",
-        "publishedAt": "2026-10-30T16:10:00.000Z",
-        "source": "欧洲中央银行（ECB）",
-        "sourceType": "央行研究",
-        "title": "Philip R. Lane: AI adoption in Europe",
-        "summary": "",
-        "topics": [
-          "模型与平台"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "analysisStatus": "error",
-        "sourceUrl": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261030~08d9d540f0.en.html"
-      },
-      {
-        "id": "nvidia-blog-4a4bcbde667c",
-        "publishedAt": "2026-10-30T15:00:10.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Things That Go Beep in the Night: Agentic AI Joins the Search for Extraterrestrial Signals",
-        "summary": "While science fiction lore tells us that humans will meet extraterrestrial life in the form of little green men, the detail that should raise hairs this Halloween is this: the search for extraterrestrial intelligence took a major leap forward with AI, and it increasingly focuses on AI agents built by humans listening for AI agents built by aliens. Some scientists have suggested that extraterrestrial civilizations, if",
-        "topics": [
-          "AI 算力与芯片",
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/ai-joins-the-search-for-extraterrestrial-signals/"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

@@ -1,32 +1,105 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T09:37:03.629Z",
+  "generatedAt": "2026-11-03T09:40:00.356Z",
   "period": {
-    "from": "2026-11-01T09:21:58.890Z",
-    "to": "2026-11-02T09:37:03.629Z",
+    "from": "2026-11-02T09:37:03.629Z",
+    "to": "2026-11-03T09:40:00.356Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 1,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 0
+    "totalChanges": 3
   },
   "affected": {
-    "stages": {},
-    "topics": {}
+    "stages": {
+      "ai-applications": 1,
+      "design": 2,
+      "memory": 2,
+      "packaging": 2,
+      "ai-infrastructure": 2,
+      "models-platforms": 2
+    },
+    "topics": {
+      "AI 算力与芯片": 2,
+      "模型与平台": 2,
+      "资本市场与金融稳定": 1
+    }
   },
   "companies": {
-    "filings": [],
+    "filings": [
+      {
+        "company": "palantir",
+        "stage": "ai-applications",
+        "form": "8-K",
+        "filedAt": "2026-11-02",
+        "reportDate": "2026-11-02",
+        "accessionNumber": "0001321655-26-000045",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/pltr-20261102.htm"
+      }
+    ],
     "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [],
+    "new": [
+      {
+        "id": "nvidia-blog-928e7584e6cd",
+        "publishedAt": "2026-11-03T07:00:12.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "Cities Worldwide Build and Scale AI Services With NVIDIA Physical and Agentic AI",
+        "summary": "Cities generate enormous amounts of data from cameras, sensors and operational systems, but turning it into useful action — for planning, maintenance and public services — remains a challenge. Physical and agentic AI offer new ways to close that gap, from digital twins for infrastructure planning to vision and service agents, while keeping local governments in control of how sensitive data is processed and used. Buil",
+        "topics": [
+          "AI 算力与芯片",
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/"
+      },
+      {
+        "id": "aws-blog-01d19205bbea",
+        "publishedAt": "2026-11-02T16:45:48.000Z",
+        "source": "AWS 官方博客",
+        "sourceType": "公司观点",
+        "title": "AWS Weekly Roundup: GPT-6.1 Terra on Bedrock, Step Functions as agent tools, and more (November 2, 2026)",
+        "summary": "The agentic launches that stayed with me last week had nothing to do with how capable a model is. They were about reach. AWS Step Functions , which already orchestrates over 220 AWS services, can now be handed to an agent as a tool, so workflows teams already trust became callable without a rewrite. In the same week, the AI blog published how one engagement platform exposed roughly 400 internal API operations the sam",
+        "topics": [
+          "AI 算力与芯片",
+          "模型与平台",
+          "资本市场与金融稳定"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "amazon"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-1-terra-on-bedrock-step-functions-as-agent-tools-and-more-november-2-2026/"
+      }
+    ],
     "analysisRefreshed": []
   }
 }

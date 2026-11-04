@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T09:39:23.382Z",
+  "generatedAt": "2026-11-04T09:24:54.284Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
-  "completedCount": 1,
+  "completedCount": 0,
   "companies": {
     "synopsys": {
       "status": "pending",
@@ -14,133 +14,11 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "cadence": {
-      "status": "ok",
-      "inputHash": "144a8a08f89d59dd507a011d5625c608a1a6a451fab9d184c93d561eb542fe0d",
-      "generatedAt": "2026-07-30T05:22:11.510Z",
-      "model": "openai/gpt-4.1-mini",
-      "promptVersion": "company-synthesis-v2",
-      "basis": "structured-official-data",
-      "evidenceSources": [
-        {
-          "id": "filing:0000813672-26-000092",
-          "label": "10-Q · 2026-07-29",
-          "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000092/cdns-20260630.htm"
-        },
-        {
-          "id": "filing:0000813672-26-000089",
-          "label": "8-K · 2026-07-27",
-          "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000089/cdns-20260727.htm"
-        },
-        {
-          "id": "filing:0000813672-26-000067",
-          "label": "8-K · 2026-05-12",
-          "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000067/cdns-20260507.htm"
-        },
-        {
-          "id": "filing:0000813672-26-000047",
-          "label": "10-Q · 2026-05-01",
-          "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000047/cdns-20260331.htm"
-        },
-        {
-          "id": "company-facts",
-          "label": "SEC Company Facts",
-          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000813672.json"
-        }
-      ],
-      "summary": "铿腾电子（Cadence Design Systems Inc）2026财年第一季度（截至2026年3月31日）财务数据显示，公司实现营业收入约14.74亿美元，同比增长约18.66%；净利润约3.36亿美元，同比增长约22.69%。资产总额约120.98亿美元，较上一季度增长约19.16%。现金及现金等价物约14.07亿美元，较上一季度下降约53.13%。资本支出约4882万美元，较上一季度增长约111.7%。当前证据包不含披露正文，无法判断具体业务变化及未来展望。",
-      "summaryEvidence": [
-        "filing:0000813672-26-000092",
-        "filing:0000813672-26-000047",
-        "company-facts"
-      ],
-      "whatChanged": [
-        {
-          "text": "2026年第一季度营业收入同比增长18.66%，达到约14.74亿美元。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "净利润同比增长22.69%，达到约3.36亿美元。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资产总额较上一季度增长19.16%，达到约120.98亿美元。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "现金及现金等价物较上一季度下降53.13%，降至约14.07亿美元。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "operatingSignals": [
-        {
-          "text": "营业收入和净利润的显著增长表明公司业务保持良好增长态势。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资本支出大幅增加，可能反映公司在研发或固定资产方面的投入加大。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "现金及现金等价物大幅减少，可能与资本支出增加或其他资金使用有关。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "valueChainImpact": [
-        {
-          "text": "公司作为EDA和IP领域的主要企业，收入和利润增长可能带动上游设计工具及IP供应商需求增加。",
-          "evidence": [
-            "company-facts"
-          ]
-        },
-        {
-          "text": "资本支出增加可能促进技术升级和产品创新，影响下游芯片设计和制造环节。",
-          "evidence": [
-            "company-facts"
-          ]
-        }
-      ],
-      "uncertainties": [
-        {
-          "text": "当前证据包不含披露正文，无法判断收入和利润增长的具体驱动因素及业务细分表现。",
-          "evidence": []
-        },
-        {
-          "text": "现金及现金等价物大幅下降的具体原因及对公司流动性影响不明。",
-          "evidence": []
-        },
-        {
-          "text": "资本支出增加的具体用途及其对未来业绩的影响尚不明确。",
-          "evidence": []
-        },
-        {
-          "text": "近期8-K文件内容未包含正文，无法判断是否存在重大事项或风险变化。",
-          "evidence": []
-        }
-      ],
-      "questionsToWatch": [
-        "未来季度公司收入和利润增长是否持续？",
-        "资本支出增加是否带来技术或产品竞争力提升？",
-        "现金流状况是否改善，流动性风险是否存在？",
-        "公司是否发布新的战略调整或重大合作？"
-      ],
-      "confidence": "medium",
-      "stale": true,
-      "lastAttemptAt": "2026-11-03T09:39:55.137Z",
-      "lastAttemptError": "Unexpected token 'O', \"OK\r\n\" is not valid JSON"
+      "status": "pending",
+      "inputHash": "b08747f5cffb5478184a48f356dde0e0e4066a4e5cd9dc4a47c9d44e0a4c1eaf",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Waiting for the next AI analysis batch"
     },
     "arm": {
       "status": "pending",
@@ -157,15 +35,16 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "amd": {
-      "status": "pending",
-      "inputHash": "84da2fadd324710fcae4989f542a1800494dc3cfb21a6b051bff4677561535d6",
+      "status": "error",
+      "inputHash": "a6d4235cce937e2a01006eafbfd7e46e0107abeeeb69c4033e40e833a1f1aa71",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-11-04T09:24:58.431Z"
     },
     "broadcom": {
       "status": "pending",
-      "inputHash": "e0a67b02f93025e81671538d5ae68ef87c67a02916ecc3fe2a0c4c1ca8b0746f",
+      "inputHash": "0f63a47668ada852fd5e015f534a0a71797d6da9bd20e4836d1a357f7d878b8d",
       "generatedAt": null,
       "model": null,
       "reason": "Waiting for the next AI analysis batch"
@@ -197,7 +76,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-03T09:39:36.750Z"
+      "lastAttemptAt": "2026-11-04T09:25:21.098Z"
     },
     "tokyo-electron": {
       "status": "unavailable",
@@ -247,7 +126,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-03T09:39:41.356Z"
+      "lastAttemptAt": "2026-11-04T09:25:25.626Z"
     },
     "amkor": {
       "status": "pending",
@@ -264,26 +143,27 @@
       "reason": "Source status: manual"
     },
     "arista-networks": {
-      "status": "pending",
-      "inputHash": "564a1480461db85bf8158e0438b3cc94d04d42d716f5bdbf271605eb6bb4550f",
-      "generatedAt": null,
-      "model": null,
-      "reason": "Waiting for the next AI analysis batch"
-    },
-    "vertiv": {
       "status": "error",
-      "inputHash": "2a9bf2872d1915505381c1a3a1cd251fb7518d6f9d6082b96e255cb372c1720f",
+      "inputHash": "987185f8677824f94712471a926a1a7c700e7c94a25e7fab491ce577267c63a2",
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-03T09:39:59.724Z"
+      "lastAttemptAt": "2026-11-04T09:25:02.946Z"
     },
-    "supermicro": {
+    "vertiv": {
       "status": "pending",
-      "inputHash": "15d4ffd59fee327b97669d6e1bf84fd365f244007c8de5d76acc303758756ef8",
+      "inputHash": "2a9bf2872d1915505381c1a3a1cd251fb7518d6f9d6082b96e255cb372c1720f",
       "generatedAt": null,
       "model": null,
       "reason": "Waiting for the next AI analysis batch"
+    },
+    "supermicro": {
+      "status": "error",
+      "inputHash": "8d28e3d6f96a5402ad1af5aed3d3dc321b158e83bdf53e87c06b8f02df96e28a",
+      "generatedAt": null,
+      "model": null,
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-11-04T09:25:07.482Z"
     },
     "equinix": {
       "status": "pending",
@@ -305,7 +185,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-03T09:39:45.947Z"
+      "lastAttemptAt": "2026-11-04T09:25:30.134Z"
     },
     "amazon": {
       "status": "error",
@@ -313,23 +193,22 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-03T09:39:32.154Z"
+      "lastAttemptAt": "2026-11-04T09:25:16.570Z"
     },
     "meta-platforms": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "ba69a96561991dc71762a243ffc1b4d3d3a288c4891936a35700087d6bce3dac",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-03T09:39:50.550Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "palantir": {
       "status": "error",
-      "inputHash": "4e74d9e79f5a88e44319afd97aa082a5c7dfe1713869dc93c0becd6cc7c948ec",
+      "inputHash": "a92d11dbd42287f78e58ae7310720a5f0a51bf938ba987bd963a49e643c0241b",
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-03T09:39:27.562Z"
+      "lastAttemptAt": "2026-11-04T09:25:12.016Z"
     },
     "adobe": {
       "status": "pending",

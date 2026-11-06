@@ -1,274 +1,161 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T09:36:11.458Z",
+  "generatedAt": "2026-11-06T09:30:28.630Z",
   "period": {
-    "from": "2026-11-04T09:25:30.795Z",
-    "to": "2026-11-05T09:36:11.458Z",
+    "from": "2026-11-05T09:36:11.458Z",
+    "to": "2026-11-06T09:30:28.630Z",
     "baseRef": "HEAD"
   },
   "summary": {
     "newFilings": 4,
-    "metricChanges": 15,
+    "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "newIntelligence": 3,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 19
+    "totalChanges": 7
   },
   "affected": {
     "stages": {
-      "design": 6,
-      "ai-infrastructure": 6,
-      "eda-ip": 6,
-      "models-platforms": 1
+      "models-platforms": 5,
+      "memory": 4,
+      "design": 3,
+      "packaging": 3,
+      "ai-infrastructure": 3,
+      "equipment-materials": 1
     },
-    "topics": {}
+    "topics": {
+      "AI 算力与芯片": 3,
+      "数据中心与电力": 2,
+      "模型与平台": 2,
+      "半导体制造": 1
+    }
   },
   "companies": {
     "filings": [
       {
-        "company": "amd",
-        "stage": "design",
-        "form": "10-Q",
-        "filedAt": "2026-11-04",
-        "reportDate": "2026-09-26",
-        "accessionNumber": "0000002488-26-000191",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000191/amd-20260926.htm"
+        "company": "alphabet",
+        "stage": "models-platforms",
+        "form": "8-K",
+        "filedAt": "2026-11-05",
+        "reportDate": "2026-11-05",
+        "accessionNumber": "0001193125-26-449835",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526449835/d174184d8k.htm"
       },
       {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "form": "10-Q",
-        "filedAt": "2026-11-04",
-        "reportDate": "2026-09-30",
-        "accessionNumber": "0001596532-26-000254",
-        "title": "10-Q",
-        "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000254/anet-20260930.htm"
+        "company": "meta-platforms",
+        "stage": "models-platforms",
+        "form": "8-K",
+        "filedAt": "2026-11-05",
+        "reportDate": "2026-11-03",
+        "accessionNumber": "0001193125-26-450074",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/d166273d8k.htm"
       },
       {
-        "company": "arm",
-        "stage": "eda-ip",
-        "form": "6-K",
-        "filedAt": "2026-11-04",
-        "reportDate": "2026-09-30",
-        "accessionNumber": "0001973239-26-000142",
-        "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000142/arm-20260930.htm"
+        "company": "micron",
+        "stage": "memory",
+        "form": "8-K",
+        "filedAt": "2026-11-05",
+        "reportDate": "2026-11-02",
+        "accessionNumber": "0001104659-26-123389",
+        "title": "FORM 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926123389/tm2629062d1_8k.htm"
       },
       {
         "company": "microsoft",
         "stage": "models-platforms",
         "form": "8-K",
-        "filedAt": "2026-11-04",
-        "reportDate": "2026-10-29",
-        "accessionNumber": "0001193125-26-447173",
+        "filedAt": "2026-11-05",
+        "reportDate": "2026-11-04",
+        "accessionNumber": "0001193125-26-448357",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526447173/d178557d8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526448357/d177209d8k.htm"
       }
     ],
-    "metrics": [
-      {
-        "company": "amd",
-        "stage": "design",
-        "metric": "revenue",
-        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 13377000000,
-        "previousValue": 11536000000,
-        "changePercent": 15.96,
-        "unit": "USD",
-        "periodEnd": "2026-09-26",
-        "previousPeriodEnd": "2026-06-27",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "amd",
-        "stage": "design",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 2428000000,
-        "previousValue": 2297000000,
-        "changePercent": 5.7,
-        "unit": "USD",
-        "periodEnd": "2026-09-26",
-        "previousPeriodEnd": "2026-06-27",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "amd",
-        "stage": "design",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 94812000000,
-        "previousValue": 84464000000,
-        "changePercent": 12.25,
-        "unit": "USD",
-        "periodEnd": "2026-09-26",
-        "previousPeriodEnd": "2026-06-27",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "amd",
-        "stage": "design",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 7404000000,
-        "previousValue": 5086000000,
-        "changePercent": 45.58,
-        "unit": "USD",
-        "periodEnd": "2026-09-26",
-        "previousPeriodEnd": "2026-06-27",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "amd",
-        "stage": "design",
-        "metric": "capex",
-        "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 1845000000,
-        "previousValue": 1197000000,
-        "changePercent": 54.14,
-        "unit": "USD",
-        "periodEnd": "2026-09-26",
-        "previousPeriodEnd": "2026-06-27",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "metric": "revenue",
-        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 3657600000,
-        "previousValue": 3035700000,
-        "changePercent": 20.49,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 1560400000,
-        "previousValue": 1212900000,
-        "changePercent": 28.65,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 25264100000,
-        "previousValue": 23720100000,
-        "changePercent": 6.51,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 2288100000,
-        "previousValue": 2290200000,
-        "changePercent": -0.09,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "metric": "capex",
-        "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 184900000,
-        "previousValue": 84200000,
-        "changePercent": 119.6,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "10-Q"
-      },
-      {
-        "company": "arm",
-        "stage": "eda-ip",
-        "metric": "revenue",
-        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
-        "value": 1443000000,
-        "previousValue": 1289000000,
-        "changePercent": 11.95,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "6-K"
-      },
-      {
-        "company": "arm",
-        "stage": "eda-ip",
-        "metric": "netIncome",
-        "label": "Net Income (Loss) Attributable to Parent",
-        "value": 130000000,
-        "previousValue": 270000000,
-        "changePercent": -51.85,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "6-K"
-      },
-      {
-        "company": "arm",
-        "stage": "eda-ip",
-        "metric": "assets",
-        "label": "Assets",
-        "value": 11414000000,
-        "previousValue": 11196000000,
-        "changePercent": 1.95,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "6-K"
-      },
-      {
-        "company": "arm",
-        "stage": "eda-ip",
-        "metric": "cash",
-        "label": "Cash and Cash Equivalents, at Carrying Value",
-        "value": 3251000000,
-        "previousValue": 3058000000,
-        "changePercent": 6.31,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "6-K"
-      },
-      {
-        "company": "arm",
-        "stage": "eda-ip",
-        "metric": "capex",
-        "label": "Payments to Acquire Property, Plant, and Equipment",
-        "value": 269000000,
-        "previousValue": 197000000,
-        "changePercent": 36.55,
-        "unit": "USD",
-        "periodEnd": "2026-09-30",
-        "previousPeriodEnd": "2026-06-30",
-        "sourceForm": "6-K"
-      }
-    ],
+    "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [],
+    "new": [
+      {
+        "id": "nvidia-blog-e8438a23dbcf",
+        "publishedAt": "2026-11-05T20:00:41.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "Vera Delivers the Best of Both Worlds: Highest Throughput and Fastest Agents",
+        "summary": "AI agents do more than generate answers. They search for information, query databases, write and test code and take action. Each of those steps relies on a CPU, with agents moving between GPU reasoning and CPU execution throughout a task. As businesses put more agents to work, AI factories need CPUs that can execute those steps quickly and support many agents at once, all within the limits of available power. What th",
+        "topics": [
+          "AI 算力与芯片",
+          "数据中心与电力",
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents/"
+      },
+      {
+        "id": "nvidia-blog-9b11b10a55dd",
+        "publishedAt": "2026-11-05T16:00:05.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "The Wizard of Open Weights: Chris Alexiuk Makes AI Easy With Open Models",
+        "summary": "Chris Alexiuk has a simple rule about open source AI: If you believe in it, be loud about it. “We should be shouting about this technology from the rooftops,” said Alexiuk, a Toronto-based senior product research engineer in deep learning at NVIDIA who specializes in making open large language models (LLMs) practical for working developers. Alexiuk’s preferred “rooftop” is YouTube , where he’s built a following teach",
+        "topics": [
+          "AI 算力与芯片",
+          "半导体制造",
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "equipment-materials"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/"
+      },
+      {
+        "id": "nvidia-blog-abce147212c4",
+        "publishedAt": "2026-11-05T16:00:00.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge",
+        "summary": "Larger models, longer contexts and agentic applications are increasing GPU memory pressure while supply tightens and prices rise — a trend expected to continue through the near term. NVIDIA works closely with memory partners to rapidly adopt the latest memory technologies. NVIDIA was first to adopt HBM3e and HBM4 technologies into an accelerated computing stack. But the approach isn’t to simply pack more memory onto ",
+        "topics": [
+          "AI 算力与芯片",
+          "数据中心与电力"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "amazon"
+        ],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/"
+      }
+    ],
     "analysisRefreshed": []
   }
 }

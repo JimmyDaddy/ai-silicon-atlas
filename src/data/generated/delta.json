@@ -1,96 +1,141 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T09:30:28.630Z",
+  "generatedAt": "2026-11-07T08:53:34.419Z",
   "period": {
-    "from": "2026-11-05T09:36:11.458Z",
-    "to": "2026-11-06T09:30:28.630Z",
+    "from": "2026-11-06T09:30:28.630Z",
+    "to": "2026-11-07T08:53:34.419Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 4,
-    "metricChanges": 0,
+    "newFilings": 2,
+    "metricChanges": 5,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 3,
+    "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 7
+    "totalChanges": 8
   },
   "affected": {
     "stages": {
-      "models-platforms": 5,
-      "memory": 4,
-      "design": 3,
-      "packaging": 3,
-      "ai-infrastructure": 3,
-      "equipment-materials": 1
+      "equipment-materials": 1,
+      "ai-infrastructure": 7,
+      "design": 1,
+      "memory": 1,
+      "packaging": 1,
+      "models-platforms": 1
     },
     "topics": {
-      "AI 算力与芯片": 3,
-      "数据中心与电力": 2,
-      "模型与平台": 2,
-      "半导体制造": 1
+      "AI 算力与芯片": 1,
+      "数据中心与电力": 1,
+      "资本市场与金融稳定": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "alphabet",
-        "stage": "models-platforms",
+        "company": "kla",
+        "stage": "equipment-materials",
         "form": "8-K",
-        "filedAt": "2026-11-05",
-        "reportDate": "2026-11-05",
-        "accessionNumber": "0001193125-26-449835",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526449835/d174184d8k.htm"
-      },
-      {
-        "company": "meta-platforms",
-        "stage": "models-platforms",
-        "form": "8-K",
-        "filedAt": "2026-11-05",
-        "reportDate": "2026-11-03",
-        "accessionNumber": "0001193125-26-450074",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/d166273d8k.htm"
-      },
-      {
-        "company": "micron",
-        "stage": "memory",
-        "form": "8-K",
-        "filedAt": "2026-11-05",
-        "reportDate": "2026-11-02",
-        "accessionNumber": "0001104659-26-123389",
-        "title": "FORM 8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926123389/tm2629062d1_8k.htm"
-      },
-      {
-        "company": "microsoft",
-        "stage": "models-platforms",
-        "form": "8-K",
-        "filedAt": "2026-11-05",
+        "filedAt": "2026-11-06",
         "reportDate": "2026-11-04",
-        "accessionNumber": "0001193125-26-448357",
+        "accessionNumber": "0001193125-26-451824",
         "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526448357/d177209d8k.htm"
+        "url": "https://www.sec.gov/Archives/edgar/data/319201/000119312526451824/d76372d8k.htm"
+      },
+      {
+        "company": "supermicro",
+        "stage": "ai-infrastructure",
+        "form": "10-Q",
+        "filedAt": "2026-11-06",
+        "reportDate": "2026-09-30",
+        "accessionNumber": "0001375365-26-000027",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000027/smci-20260930.htm"
       }
     ],
-    "metrics": [],
+    "metrics": [
+      {
+        "company": "supermicro",
+        "stage": "ai-infrastructure",
+        "metric": "revenue",
+        "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+        "value": 19945832000,
+        "previousValue": 39063072000,
+        "changePercent": -48.94,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "supermicro",
+        "stage": "ai-infrastructure",
+        "metric": "netIncome",
+        "label": "Net Income (Loss) Attributable to Parent",
+        "value": 1594205000,
+        "previousValue": 2230453000,
+        "changePercent": -28.53,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "supermicro",
+        "stage": "ai-infrastructure",
+        "metric": "assets",
+        "label": "Assets",
+        "value": 35727127000,
+        "previousValue": 29945467000,
+        "changePercent": 19.31,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "supermicro",
+        "stage": "ai-infrastructure",
+        "metric": "cash",
+        "label": "Cash and Cash Equivalents, at Carrying Value",
+        "value": 6897497000,
+        "previousValue": 7521474000,
+        "changePercent": -8.3,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      },
+      {
+        "company": "supermicro",
+        "stage": "ai-infrastructure",
+        "metric": "capex",
+        "label": "Payments to Acquire Property, Plant, and Equipment",
+        "value": 41588000,
+        "previousValue": 161999000,
+        "changePercent": -74.33,
+        "unit": "USD",
+        "periodEnd": "2026-09-30",
+        "previousPeriodEnd": "2026-06-30",
+        "sourceForm": "10-Q"
+      }
+    ],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-e8438a23dbcf",
-        "publishedAt": "2026-11-05T20:00:41.000Z",
+        "id": "nvidia-blog-215687ca939d",
+        "publishedAt": "2026-11-06T16:00:35.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "Vera Delivers the Best of Both Worlds: Highest Throughput and Fastest Agents",
-        "summary": "AI agents do more than generate answers. They search for information, query databases, write and test code and take action. Each of those steps relies on a CPU, with agents moving between GPU reasoning and CPU execution throughout a task. As businesses put more agents to work, AI factories need CPUs that can execute those steps quickly and support many agents at once, all within the limits of available power. What th",
+        "title": "How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks",
+        "summary": "A year ago, NVIDIA open sourced its Aerial wireless software , joining Sionna and a broader suite of open source tools for accelerating next-generation 6G network development. Together, they give researchers a foundation for testing ideas, comparing results and building on each other’s work — connecting simulation and AI training with experiments on real over-the-air wireless systems. Today, researchers and developer",
         "topics": [
           "AI 算力与芯片",
           "数据中心与电力",
-          "模型与平台"
+          "资本市场与金融稳定"
         ],
         "relatedCompanies": [
           "nvidia"
@@ -103,57 +148,7 @@
           "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents/"
-      },
-      {
-        "id": "nvidia-blog-9b11b10a55dd",
-        "publishedAt": "2026-11-05T16:00:05.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "The Wizard of Open Weights: Chris Alexiuk Makes AI Easy With Open Models",
-        "summary": "Chris Alexiuk has a simple rule about open source AI: If you believe in it, be loud about it. “We should be shouting about this technology from the rooftops,” said Alexiuk, a Toronto-based senior product research engineer in deep learning at NVIDIA who specializes in making open large language models (LLMs) practical for working developers. Alexiuk’s preferred “rooftop” is YouTube , where he’s built a following teach",
-        "topics": [
-          "AI 算力与芯片",
-          "半导体制造",
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "equipment-materials"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/"
-      },
-      {
-        "id": "nvidia-blog-abce147212c4",
-        "publishedAt": "2026-11-05T16:00:00.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge",
-        "summary": "Larger models, longer contexts and agentic applications are increasing GPU memory pressure while supply tightens and prices rise — a trend expected to continue through the near term. NVIDIA works closely with memory partners to rapidly adopt the latest memory technologies. NVIDIA was first to adopt HBM3e and HBM4 technologies into an accelerated computing stack. But the approach isn’t to simply pack more memory onto ",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "amazon"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/telco-open-source-tools-research-6g-networks/"
       }
     ],
     "analysisRefreshed": []

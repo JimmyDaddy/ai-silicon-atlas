@@ -1,39 +1,49 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T09:54:53.502Z",
+  "generatedAt": "2026-11-10T09:58:47.038Z",
   "period": {
-    "from": "2026-11-08T09:06:03.144Z",
-    "to": "2026-11-09T09:54:53.502Z",
+    "from": "2026-11-09T09:54:53.502Z",
+    "to": "2026-11-10T09:58:47.038Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 1,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 5,
+    "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 5
+    "totalChanges": 3
   },
   "affected": {
     "stages": {
-      "design": 5,
-      "memory": 4,
-      "packaging": 4,
-      "ai-infrastructure": 4,
-      "models-platforms": 4,
-      "ai-applications": 1
+      "ai-infrastructure": 2,
+      "models-platforms": 2,
+      "ai-applications": 1,
+      "design": 1,
+      "memory": 1,
+      "packaging": 1
     },
     "topics": {
-      "AI 算力与芯片": 4,
-      "模型与平台": 4,
       "资本市场与金融稳定": 2,
-      "企业应用与生产力": 1,
-      "数据中心与电力": 2
+      "AI 算力与芯片": 1,
+      "模型与平台": 1,
+      "企业应用与生产力": 1
     }
   },
   "companies": {
-    "filings": [],
+    "filings": [
+      {
+        "company": "equinix",
+        "stage": "ai-infrastructure",
+        "form": "8-K",
+        "filedAt": "2026-11-09",
+        "reportDate": "2026-11-09",
+        "accessionNumber": "0001104659-26-124509",
+        "title": "FORM 8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110465926124509/tm2628000d9_8k.htm"
+      }
+    ],
     "metrics": [],
     "statuses": [],
     "analysis": []
@@ -41,63 +51,32 @@
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-57a8ba0d5522",
-        "publishedAt": "2026-11-09T08:00:53.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA Announces New Planned Investments in Korean Startups at the MSIT-NVIDIA AI Startup Partnership Forum",
-        "summary": "Korea’s Ministry of Science and ICT and NVIDIA hosted the MSIT -NVIDIA AI Startup Partnership Forum at COEX. Ryu Je-myung, vice minister of science and ICT , joined NVIDIA leaders to meet with over 20 Korean startups across foundation models, physical AI, AI infrastructure and AI semiconductors. NVIDIA also announced an investment in Korean startup Point2 , with additional investments planned in Motif Technologies , ",
+        "id": "federal-reserve-notes-14dfb344a2b8",
+        "publishedAt": "2026-11-09T17:30:00.000Z",
+        "source": "美国联邦储备委员会 FEDS Notes",
+        "sourceType": "央行研究",
+        "title": "FEDS Note: U.S. Private Credit Vehicles: Institutional Structure and Aggregate Balance Sheets",
+        "summary": "Katie Brinkman, Christine Dobridge , Tim Dore , Simon Glossner , Elizabeth Holmquist , Nam Nguyen, Maria Perozek , and Irina Stefanescu The expansion of private credit has become one of the most significant developments in financial markets over the past decade. Yet, estimates of the size of the market vary considerably, in part because the term private credit is used to describe different instruments, investment str",
         "topics": [
-          "AI 算力与芯片",
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/"
-      },
-      {
-        "id": "nvidia-blog-dc742b2cbd8f",
-        "publishedAt": "2026-11-09T05:00:40.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Korea Advances Physical AI Across Industries With NVIDIA",
-        "summary": "Tapping into the country’s strengths in manufacturing and engineering, NVIDIA is helping advance Korea’s physical AI ecosystem. The country’s industry leaders are applying accelerated computing, AI and simulation to everything from semiconductor manufacturing to robotics and autonomous vehicles. These efforts are helping bring physical AI from development into real-world production. Samsung Advances Semiconductor Eng",
-        "topics": [
-          "AI 算力与芯片",
-          "模型与平台",
           "资本市场与金融稳定"
         ],
-        "relatedCompanies": [
-          "nvidia",
-          "samsung-electronics"
-        ],
+        "relatedCompanies": [],
         "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
+          "models-platforms",
+          "ai-applications"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/"
+        "sourceUrl": "https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html"
       },
       {
-        "id": "nvidia-blog-741e635ddb78",
-        "publishedAt": "2026-11-09T05:00:39.000Z",
+        "id": "nvidia-blog-97be7dad625b",
+        "publishedAt": "2026-11-09T14:00:01.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "Korea’s AI Ecosystem Advances and Secures Agentic AI With NVIDIA",
-        "summary": "As AI agents take on more work, they need capable open models and security that advances alongside them. Hyundai Motor Group is exploring NVIDIA NemoClaw blueprints and the NVIDIA OpenShell runtime, while AIM Intelligence is integrating its Starfort platform with NVIDIA OpenShell to support secure AI agents for employee productivity and enterprise workflows . A key component of the NVIDIA Open Agent Safety Platform, ",
+        "title": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation",
+        "summary": "Simulation, which has long been the proving ground for robots learning to walk, roll and hop, is now helping researchers teach robots tasks that require a finer touch: aligning gears, connecting cables and assembling small components. The shift from locomotion to manipulation is taking center stage at this week’s Conference on Robot Learning (CoRL) in Austin, Texas, alongside the rise of agentic robotics — a new para",
         "topics": [
+          "AI 算力与芯片",
           "模型与平台",
           "企业应用与生产力",
           "资本市场与金融稳定"
@@ -106,29 +85,6 @@
           "nvidia"
         ],
         "relatedStages": [
-          "models-platforms",
-          "ai-applications",
-          "design"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/korea-secure-agentic-ai/"
-      },
-      {
-        "id": "nvidia-blog-22dc4f77b8e2",
-        "publishedAt": "2026-11-09T05:00:04.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "From Chips to Skills, NVIDIA and Korea Expand Sovereign AI Collaboration",
-        "summary": "NVIDIA and Korea’s Ministry of Science and ICT (MSIT) are expanding their collaboration across the country’s sovereign AI ecosystem, from AI semiconductors and data center infrastructure to talent, startups, models, agents and security. The collaboration lays the groundwork for Korean NPU and XPU companies to explore participation in the NVIDIA NVLink Fusion ecosystem, and includes NVIDIA training and certification p",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
           "design",
           "memory",
           "packaging",
@@ -136,30 +92,7 @@
           "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/korea-sovereign-ai-collaboration/"
-      },
-      {
-        "id": "nvidia-blog-e18a5f64b586",
-        "publishedAt": "2026-11-09T05:00:00.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA Dynamo Recipes Bring Korea’s Leading Open Models to Production",
-        "summary": "NVIDIA is releasing Dynamo-optimized deployment recipes for Korea’s leading open models: A.X K2 from SK Telecom , K-EXAONE 2.0 from LG AI Research , Solar Open 2 from Upstage and Motif-3 from Motif Technologies . As models grow beyond the capacity of a single GPU, they must be split across multiple GPUs, requiring careful coordination of request routing and communication to maintain performance. NVIDIA Dynamo is an o",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力"
-        ],
-        "relatedCompanies": [
-          "nvidia"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-dynamo-korea-open-models/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
       }
     ],
     "analysisRefreshed": []

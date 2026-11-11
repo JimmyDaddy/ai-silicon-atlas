@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T09:58:11.204Z",
+  "generatedAt": "2026-11-11T09:31:52.303Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -21,12 +21,11 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "arm": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "03b42356453756695576f5b2533241db4498c15da0e6d51adbe000632fe37f0f",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-10T09:58:46.440Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "nvidia": {
       "status": "pending",
@@ -76,7 +75,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-10T09:58:19.649Z"
+      "lastAttemptAt": "2026-11-11T09:32:09.519Z"
     },
     "tokyo-electron": {
       "status": "unavailable",
@@ -86,11 +85,12 @@
       "reason": "Source status: manual"
     },
     "tsmc": {
-      "status": "pending",
-      "inputHash": "7f3b5966feb679b8d2e49fff3722b7b5f23a9dc4123b057414d5831c8c6209bb",
+      "status": "error",
+      "inputHash": "7119b4bb1245f5f4b74da6fbd48b1a798a4e3eac4f1210f23ce49a803bab35fb",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-11-11T09:31:56.326Z"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -112,7 +112,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-10T09:58:28.595Z"
+      "lastAttemptAt": "2026-11-11T09:32:18.256Z"
     },
     "sk-hynix": {
       "status": "unavailable",
@@ -122,11 +122,12 @@
       "reason": "Source status: error"
     },
     "ase-technology": {
-      "status": "pending",
-      "inputHash": "02210b5b99e860ef449940ea034b81a0bb8eaed67dde93c5cc83373df9f4ef1a",
+      "status": "error",
+      "inputHash": "dcaf78db02598f8ad0760f711ef661541959cc34a0127113e1a9f3e6e959e93d",
       "generatedAt": null,
       "model": null,
-      "reason": "Waiting for the next AI analysis batch"
+      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+      "lastAttemptAt": "2026-11-11T09:32:00.757Z"
     },
     "amkor": {
       "status": "pending",
@@ -162,7 +163,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-10T09:58:24.099Z"
+      "lastAttemptAt": "2026-11-11T09:32:13.889Z"
     },
     "equinix": {
       "status": "error",
@@ -170,7 +171,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-10T09:58:15.219Z"
+      "lastAttemptAt": "2026-11-11T09:32:05.160Z"
     },
     "microsoft": {
       "status": "error",
@@ -178,7 +179,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-10T09:58:33.068Z"
+      "lastAttemptAt": "2026-11-11T09:32:22.659Z"
     },
     "alphabet": {
       "status": "error",
@@ -186,7 +187,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-10T09:58:37.514Z"
+      "lastAttemptAt": "2026-11-11T09:32:27.068Z"
     },
     "amazon": {
       "status": "pending",
@@ -196,12 +197,11 @@
       "reason": "Waiting for the next AI analysis batch"
     },
     "meta-platforms": {
-      "status": "error",
+      "status": "pending",
       "inputHash": "19b5510aec00f493ea937a511cc2ad4013a8828feaa44c29d7da0f0f24133735",
       "generatedAt": null,
       "model": null,
-      "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-10T09:58:41.975Z"
+      "reason": "Waiting for the next AI analysis batch"
     },
     "palantir": {
       "status": "pending",

@@ -1,47 +1,55 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T09:58:47.038Z",
+  "generatedAt": "2026-11-11T09:32:27.711Z",
   "period": {
-    "from": "2026-11-09T09:54:53.502Z",
-    "to": "2026-11-10T09:58:47.038Z",
+    "from": "2026-11-10T09:58:47.038Z",
+    "to": "2026-11-11T09:32:27.711Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
+    "newFilings": 2,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
     "newIntelligence": 2,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 3
+    "totalChanges": 4
   },
   "affected": {
     "stages": {
-      "ai-infrastructure": 2,
-      "models-platforms": 2,
-      "ai-applications": 1,
+      "packaging": 2,
+      "manufacturing": 1,
       "design": 1,
       "memory": 1,
-      "packaging": 1
+      "ai-infrastructure": 1,
+      "models-platforms": 1
     },
     "topics": {
-      "资本市场与金融稳定": 2,
-      "AI 算力与芯片": 1,
-      "模型与平台": 1,
-      "企业应用与生产力": 1
+      "模型与平台": 2,
+      "AI 算力与芯片": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "equinix",
-        "stage": "ai-infrastructure",
-        "form": "8-K",
-        "filedAt": "2026-11-09",
-        "reportDate": "2026-11-09",
-        "accessionNumber": "0001104659-26-124509",
-        "title": "FORM 8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110465926124509/tm2628000d9_8k.htm"
+        "company": "ase-technology",
+        "stage": "packaging",
+        "form": "6-K",
+        "filedAt": "2026-11-10",
+        "reportDate": "2026-11-10",
+        "accessionNumber": "0000950103-26-017186",
+        "title": "FORM 6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326017186/dp256592_6k.htm"
+      },
+      {
+        "company": "tsmc",
+        "stage": "manufacturing",
+        "form": "6-K",
+        "filedAt": "2026-11-10",
+        "reportDate": "2026-11-10",
+        "accessionNumber": "0001046179-26-000797",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000797/tsm-boardx202611xx.htm"
       }
     ],
     "metrics": [],
@@ -51,38 +59,34 @@
   "intelligence": {
     "new": [
       {
-        "id": "federal-reserve-notes-14dfb344a2b8",
-        "publishedAt": "2026-11-09T17:30:00.000Z",
-        "source": "美国联邦储备委员会 FEDS Notes",
-        "sourceType": "央行研究",
-        "title": "FEDS Note: U.S. Private Credit Vehicles: Institutional Structure and Aggregate Balance Sheets",
-        "summary": "Katie Brinkman, Christine Dobridge , Tim Dore , Simon Glossner , Elizabeth Holmquist , Nam Nguyen, Maria Perozek , and Irina Stefanescu The expansion of private credit has become one of the most significant developments in financial markets over the past decade. Yet, estimates of the size of the market vary considerably, in part because the term private credit is used to describe different instruments, investment str",
-        "topics": [
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "models-platforms",
-          "ai-applications"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html"
-      },
-      {
-        "id": "nvidia-blog-97be7dad625b",
-        "publishedAt": "2026-11-09T14:00:01.000Z",
+        "id": "nvidia-blog-34dcc0e759ee",
+        "publishedAt": "2026-11-11T03:00:20.000Z",
         "source": "NVIDIA 官方博客",
         "sourceType": "公司观点",
-        "title": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation",
-        "summary": "Simulation, which has long been the proving ground for robots learning to walk, roll and hop, is now helping researchers teach robots tasks that require a finer touch: aligning gears, connecting cables and assembling small components. The shift from locomotion to manipulation is taking center stage at this week’s Conference on Robot Learning (CoRL) in Austin, Texas, alongside the rise of agentic robotics — a new para",
+        "title": "How AI Helps Recyclers Turn Mixed Waste Into Reusable Material",
+        "summary": "",
+        "topics": [
+          "模型与平台"
+        ],
+        "relatedCompanies": [],
+        "relatedStages": [],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/ai-recycling-startups/"
+      },
+      {
+        "id": "nvidia-blog-b4eac762a15a",
+        "publishedAt": "2026-11-10T16:00:03.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "NVIDIA Expands Open Source Commitment With OpenShell Donation and New AI Infrastructure",
+        "summary": "Kubernetes, the open source system that manages how applications run across thousands of AI factories, has become the foundation for AI, and the demands on it are only growing. To help meet them, NVIDIA is deepening its commitment to open source at KubeCon + CloudNativeCon , the flagship conference for the Kubernetes and cloud-native communities. NVIDIA is contributing NVIDIA OpenShell , an open source runtime for se",
         "topics": [
           "AI 算力与芯片",
-          "模型与平台",
-          "企业应用与生产力",
-          "资本市场与金融稳定"
+          "模型与平台"
         ],
         "relatedCompanies": [
-          "nvidia"
+          "nvidia",
+          "alphabet"
         ],
         "relatedStages": [
           "design",
@@ -92,7 +96,7 @@
           "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
+        "sourceUrl": "https://blogs.nvidia.com/blog/open-source-openshell-infrastructure/"
       }
     ],
     "analysisRefreshed": []

@@ -1,104 +1,32 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T09:32:27.711Z",
+  "generatedAt": "2026-11-12T09:56:18.874Z",
   "period": {
-    "from": "2026-11-10T09:58:47.038Z",
-    "to": "2026-11-11T09:32:27.711Z",
+    "from": "2026-11-11T09:32:27.711Z",
+    "to": "2026-11-12T09:56:18.874Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 2,
+    "newFilings": 0,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 2,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 4
+    "totalChanges": 0
   },
   "affected": {
-    "stages": {
-      "packaging": 2,
-      "manufacturing": 1,
-      "design": 1,
-      "memory": 1,
-      "ai-infrastructure": 1,
-      "models-platforms": 1
-    },
-    "topics": {
-      "模型与平台": 2,
-      "AI 算力与芯片": 1
-    }
+    "stages": {},
+    "topics": {}
   },
   "companies": {
-    "filings": [
-      {
-        "company": "ase-technology",
-        "stage": "packaging",
-        "form": "6-K",
-        "filedAt": "2026-11-10",
-        "reportDate": "2026-11-10",
-        "accessionNumber": "0000950103-26-017186",
-        "title": "FORM 6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1122411/000095010326017186/dp256592_6k.htm"
-      },
-      {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "form": "6-K",
-        "filedAt": "2026-11-10",
-        "reportDate": "2026-11-10",
-        "accessionNumber": "0001046179-26-000797",
-        "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000797/tsm-boardx202611xx.htm"
-      }
-    ],
+    "filings": [],
     "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "nvidia-blog-34dcc0e759ee",
-        "publishedAt": "2026-11-11T03:00:20.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "How AI Helps Recyclers Turn Mixed Waste Into Reusable Material",
-        "summary": "",
-        "topics": [
-          "模型与平台"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/ai-recycling-startups/"
-      },
-      {
-        "id": "nvidia-blog-b4eac762a15a",
-        "publishedAt": "2026-11-10T16:00:03.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA Expands Open Source Commitment With OpenShell Donation and New AI Infrastructure",
-        "summary": "Kubernetes, the open source system that manages how applications run across thousands of AI factories, has become the foundation for AI, and the demands on it are only growing. To help meet them, NVIDIA is deepening its commitment to open source at KubeCon + CloudNativeCon , the flagship conference for the Kubernetes and cloud-native communities. NVIDIA is contributing NVIDIA OpenShell , an open source runtime for se",
-        "topics": [
-          "AI 算力与芯片",
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "alphabet"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/open-source-openshell-infrastructure/"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

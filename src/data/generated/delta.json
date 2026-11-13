@@ -1,32 +1,155 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T09:56:18.874Z",
+  "generatedAt": "2026-11-13T09:40:12.807Z",
   "period": {
-    "from": "2026-11-11T09:32:27.711Z",
-    "to": "2026-11-12T09:56:18.874Z",
+    "from": "2026-11-12T09:56:18.874Z",
+    "to": "2026-11-13T09:40:12.807Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 4,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "newIntelligence": 3,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 0
+    "totalChanges": 7
   },
   "affected": {
-    "stages": {},
-    "topics": {}
+    "stages": {
+      "equipment-materials": 1,
+      "models-platforms": 4,
+      "design": 3,
+      "manufacturing": 1,
+      "ai-applications": 2,
+      "memory": 1,
+      "packaging": 1,
+      "ai-infrastructure": 1
+    },
+    "topics": {
+      "模型与平台": 2,
+      "企业应用与生产力": 3,
+      "AI 算力与芯片": 1,
+      "数据中心与电力": 1
+    }
   },
   "companies": {
-    "filings": [],
+    "filings": [
+      {
+        "company": "applied-materials",
+        "stage": "equipment-materials",
+        "form": "8-K",
+        "filedAt": "2026-11-12",
+        "reportDate": "2026-11-12",
+        "accessionNumber": "0001628280-26-073360",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026073360/amat-20261112.htm"
+      },
+      {
+        "company": "meta-platforms",
+        "stage": "models-platforms",
+        "form": "8-K",
+        "filedAt": "2026-11-12",
+        "reportDate": "2026-11-12",
+        "accessionNumber": "0001193125-26-458525",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526458525/d177728d8k.htm"
+      },
+      {
+        "company": "nvidia",
+        "stage": "design",
+        "form": "8-K",
+        "filedAt": "2026-11-12",
+        "reportDate": "2026-11-11",
+        "accessionNumber": "0001045810-26-000082",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm"
+      },
+      {
+        "company": "tsmc",
+        "stage": "manufacturing",
+        "form": "6-K",
+        "filedAt": "2026-11-12",
+        "reportDate": "2026-11-12",
+        "accessionNumber": "0001046179-26-000800",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000800/a20261112statementregardin.htm"
+      }
+    ],
     "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [],
+    "new": [
+      {
+        "id": "microsoft-blog-8defbacffd87",
+        "publishedAt": "2026-11-12T17:00:03.000Z",
+        "source": "Microsoft 官方博客",
+        "sourceType": "公司观点",
+        "title": "From AI ambition to business impact",
+        "summary": "Most business leaders I meet no longer need to be convinced that AI works. They’ve seen the pilots, the demos and the copilots. The question I hear in boardrooms now is different: How do we move from AI that impresses to AI that changes how the business actually runs? That is the question Microsoft Frontier Company was built to answer, and to date, we have engaged on nearly 500 projects with over 200 customers across",
+        "topics": [
+          "模型与平台",
+          "企业应用与生产力"
+        ],
+        "relatedCompanies": [
+          "nvidia",
+          "microsoft"
+        ],
+        "relatedStages": [
+          "models-platforms",
+          "ai-applications",
+          "design"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.microsoft.com/blog/2026/11/12/from-ai-ambition-to-business-impact/"
+      },
+      {
+        "id": "microsoft-blog-e14c223c89af",
+        "publishedAt": "2026-11-12T16:00:02.000Z",
+        "source": "Microsoft 官方博客",
+        "sourceType": "公司观点",
+        "title": "Scaling AI value without losing control: Lessons from Frontier Firms",
+        "summary": "Results are widespread. Value at scale is not, and that gap is what this year’s research from IDC , commissioned by Microsoft, set out to explain. In our fourth year commissioning IDC, more than 5,200 senior IT and business leaders across 28 industries shared what it takes to maximize value as AI scales. The clearest lessons come from Frontier Firms, the group last year’s research introduced: the top 10% of organizat",
+        "topics": [
+          "企业应用与生产力"
+        ],
+        "relatedCompanies": [
+          "microsoft"
+        ],
+        "relatedStages": [
+          "ai-applications",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.microsoft.com/blog/2026/11/12/scaling-ai-value-without-losing-control-lessons-from-frontier-firms/"
+      },
+      {
+        "id": "federal-reserve-working-papers-bfb3f2fc3816",
+        "publishedAt": "2026-11-12T15:20:00.000Z",
+        "source": "美国联邦储备委员会研究",
+        "sourceType": "央行研究",
+        "title": "FEDS Paper: Artificial Intelligence and the U.S. Economy: Current Evidence",
+        "summary": "Nick Carollo , Leland D. Crane , Daniel Garcia Molina , and Joseph Nichols We assess the current evidence on how AI-related investment and the use of AI are affecting the U.S. macroeconomy. Specifically, we document the boom in data center capital investment, the current rate of adoption of AI tools in the economy, the impact of the AI-related investment surge on prices, and discuss whether AI tools have affected the",
+        "topics": [
+          "AI 算力与芯片",
+          "数据中心与电力",
+          "模型与平台",
+          "企业应用与生产力"
+        ],
+        "relatedCompanies": [],
+        "relatedStages": [
+          "design",
+          "memory",
+          "packaging",
+          "ai-infrastructure",
+          "models-platforms"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://www.federalreserve.gov/econres/feds/artificial-intelligence-and-the-us-economy-current-evidence.htm"
+      }
+    ],
     "analysisRefreshed": []
   }
 }

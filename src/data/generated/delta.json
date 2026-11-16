@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T09:33:12.162Z",
+  "generatedAt": "2026-11-16T09:52:01.771Z",
   "period": {
-    "from": "2026-11-14T09:03:40.083Z",
-    "to": "2026-11-15T09:33:12.162Z",
+    "from": "2026-11-15T09:33:12.162Z",
+    "to": "2026-11-16T09:52:01.771Z",
     "baseRef": "HEAD"
   },
   "summary": {
@@ -11,13 +11,18 @@
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 0,
+    "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 0
+    "totalChanges": 1
   },
   "affected": {
-    "stages": {},
-    "topics": {}
+    "stages": {
+      "models-platforms": 1,
+      "design": 1
+    },
+    "topics": {
+      "模型与平台": 1
+    }
   },
   "companies": {
     "filings": [],
@@ -26,7 +31,28 @@
     "analysis": []
   },
   "intelligence": {
-    "new": [],
+    "new": [
+      {
+        "id": "nvidia-blog-0ea5fbe79c2f",
+        "publishedAt": "2026-11-16T00:00:28.000Z",
+        "source": "NVIDIA 官方博客",
+        "sourceType": "公司观点",
+        "title": "AI Day Seoul Brings Together Korea’s Industry Leaders, Startups and Developer Communities",
+        "summary": "Over two days at COEX, more than 2,000 attendees converged for AI Day Seoul, bringing together Korea’s industry leaders, startups and developer communities advancing physical AI and AI agents. At the plenary sessions, Deepu Talla, vice president of robotics and edge AI at NVIDIA, said Korea is “punching above its weight,” with Doosan Robotics, Hyundai Motor Group, LG Electronics and SK Group — as well as startups lik",
+        "topics": [
+          "模型与平台"
+        ],
+        "relatedCompanies": [
+          "nvidia"
+        ],
+        "relatedStages": [
+          "models-platforms",
+          "design"
+        ],
+        "analysisStatus": "error",
+        "sourceUrl": "https://blogs.nvidia.com/blog/ai-day-seoul-wrapup/"
+      }
+    ],
     "analysisRefreshed": []
   }
 }

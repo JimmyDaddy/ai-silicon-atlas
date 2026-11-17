@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T09:52:01.771Z",
+  "generatedAt": "2026-11-17T10:49:32.245Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "authority-news-synthesis-v1",
@@ -15,7 +15,7 @@
       "homepage": "https://www.bis.org/",
       "priority": 100,
       "status": "error",
-      "checkedAt": "2026-11-16T09:52:01.771Z",
+      "checkedAt": "2026-11-17T10:49:32.245Z",
       "itemCount": 0,
       "matchedCount": 0,
       "error": "HTTP 404"
@@ -28,7 +28,7 @@
       "homepage": "https://www.ecb.europa.eu/",
       "priority": 96,
       "status": "ok",
-      "checkedAt": "2026-11-16T09:52:01.771Z",
+      "checkedAt": "2026-11-17T10:49:32.245Z",
       "itemCount": 15,
       "matchedCount": 1
     },
@@ -40,7 +40,7 @@
       "homepage": "https://www.federalreserve.gov/econres.htm",
       "priority": 95,
       "status": "ok",
-      "checkedAt": "2026-11-16T09:52:01.771Z",
+      "checkedAt": "2026-11-17T10:49:32.245Z",
       "itemCount": 15,
       "matchedCount": 2
     },
@@ -52,7 +52,7 @@
       "homepage": "https://www.federalreserve.gov/econres/notes/feds-notes/default.htm",
       "priority": 94,
       "status": "ok",
-      "checkedAt": "2026-11-16T09:52:01.771Z",
+      "checkedAt": "2026-11-17T10:49:32.245Z",
       "itemCount": 15,
       "matchedCount": 2
     },
@@ -64,7 +64,7 @@
       "homepage": "https://www.nist.gov/artificial-intelligence",
       "priority": 92,
       "status": "ok",
-      "checkedAt": "2026-11-16T09:52:01.771Z",
+      "checkedAt": "2026-11-17T10:49:32.245Z",
       "itemCount": 30,
       "matchedCount": 5
     },
@@ -76,7 +76,7 @@
       "homepage": "https://blogs.nvidia.com/",
       "priority": 86,
       "status": "ok",
-      "checkedAt": "2026-11-16T09:52:01.771Z",
+      "checkedAt": "2026-11-17T10:49:32.245Z",
       "itemCount": 18,
       "matchedCount": 16
     },
@@ -88,7 +88,7 @@
       "homepage": "https://blogs.microsoft.com/",
       "priority": 84,
       "status": "ok",
-      "checkedAt": "2026-11-16T09:52:01.771Z",
+      "checkedAt": "2026-11-17T10:49:32.245Z",
       "itemCount": 10,
       "matchedCount": 5
     },
@@ -100,7 +100,7 @@
       "homepage": "https://aws.amazon.com/blogs/aws/",
       "priority": 82,
       "status": "ok",
-      "checkedAt": "2026-11-16T09:52:01.771Z",
+      "checkedAt": "2026-11-17T10:49:32.245Z",
       "itemCount": 20,
       "matchedCount": 5
     },
@@ -112,12 +112,301 @@
       "homepage": "https://newsroom.intel.com/",
       "priority": 80,
       "status": "ok",
-      "checkedAt": "2026-11-16T09:52:01.771Z",
+      "checkedAt": "2026-11-17T10:49:32.245Z",
       "itemCount": 0,
       "matchedCount": 0
     }
   ],
   "articles": [
+    {
+      "id": "nvidia-blog-23e0c35a1797",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/",
+      "publishedAt": "2026-11-16T23:00:05.000Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "amd"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "At SC26, an annual supercomputing conference taking place this week in Chicago, NVIDIA is introducing the DGX Spark HPC Developer Kit for researchers, academics and developers. The kit is a four-node cluster of NVIDIA DGX Spark systems , each connected directly to its two neighbors in a ring, with an NVIDIA HPC SDK installation playbook coming soon. Researchers get a place at their desk to run multi-node scientific w",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "55b241d8d524a57f3dd670d26aea279762f14fda16c645d9d702d50855058885",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-11-17T10:49:38.319Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-66395cf5113b",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/ai-infrastructure-supply-chain/",
+      "publishedAt": "2026-11-16T20:00:37.000Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
+      "topics": [
+        "AI 算力与芯片",
+        "半导体制造",
+        "数据中心与电力",
+        "企业应用与生产力",
+        "供应链与地缘政策"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "tsmc",
+        "micron"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "equipment-materials"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Deb Shoquist leads operations at NVIDIA, overseeing the supply chain and manufacturing behind its AI platforms. That description sums up the job, but it doesn’t begin to encompass what Shoquist has made possible over decades. Shoquist, her team and their global network of manufacturing partners enable NVIDIA to introduce world-leading technologies year-round. Much of the team’s success comes down to her deep relation",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "482620a7bac97735d9017c2c469e27d8bd52f6dd011bba04050d980fb4605b86",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-11-17T10:49:43.755Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-f149dc1a48ff",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "Lambda Boosts AI Factory Resiliency and Efficiency With NVIDIA Photonics",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/lambda-photonics/",
+      "publishedAt": "2026-11-16T16:00:51.000Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "企业应用与生产力"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "ai-applications"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "To train an AI model, thousands of GPUs have to work together, requiring a network that’s fast, efficient and resilient. Lambda is tackling the network piece of the puzzle with NVIDIA Photonics co-packaged optics (CPO) switches. The cloud provider is using the switches to connect NVIDIA GB300 NVL72 racks with more than 10,000 GPUs, delivering lower power, higher resiliency and longer mean time between interruptions (",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "e689ffd8f65aa8388d73a6bc94f527ffeea11b618864e9d213b24f38fa29f112",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-11-17T10:49:49.188Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-3197bf91500d",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA Sweeps MLPerf Training and Endpoints as Vera Rubin Debuts With Leading Performance",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin/",
+      "publishedAt": "2026-11-16T16:00:25.000Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "microsoft",
+        "alphabet",
+        "supermicro"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "In its MLPerf benchmarks debut, with results released today, the NVIDIA Vera Rubin platform delivers leading performance across training, post-training and agentic inference. NVIDIA swept every MLPerf Training v6.1 benchmark and, in its first MLPerf Endpoints submission, delivered more than 10x generational gains in throughput per watt for agentic AI — measuring how much agentic work a system delivers with each watt ",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "84fc26b4671c98eaaccfc854b7c49ba2374ec198230847c57779bc64a838a049",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-11-17T10:49:54.632Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-7ffe4f27310f",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA CUDA-X Libraries Give Agents the Tools to Accelerate Scientific Discovery",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/cuda-x-libraries-agents-accelerate-scientific-discovery/",
+      "publishedAt": "2026-11-16T16:00:16.000Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
+      "topics": [
+        "AI 算力与芯片",
+        "数据中心与电力",
+        "模型与平台"
+      ],
+      "relatedCompanies": [
+        "nvidia",
+        "amd",
+        "cadence"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure",
+        "models-platforms"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "With expanded NVIDIA CUDA-X libraries, including cuPhoton, cuPotential and cuSpa, researchers can sift through vast amounts of data to accelerate research, from astrophysics and materials science to single-cell biology. The speedups are helping scientists analyze larger datasets and model more complex systems. The new libraries give AI agents the tools to help researchers make discoveries faster than ever. Read All N",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "ee440f37b546ac8982a64776e63962afaf00b6e6ecbd83eb4deb338fe4872380",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-11-17T10:50:00.075Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-ed06a68081ab",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "CUDA at 20: How the Platform Transformed Scientific Computing",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/20-years-cuda/",
+      "publishedAt": "2026-11-16T16:00:11.000Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
+      "topics": [
+        "AI 算力与芯片"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "This week at SC26, NVIDIA is marking two decades of CUDA by honoring the researchers, developers and engineers who helped make GPU computing a foundation for modern science and AI. CUDA’s 20th anniversary presents an occasion to reflect across computing eras, from the people who wrote the very first CUDA programs to the AI developers building on their work today. At the platform’s core is this developer community who",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "4fe6e594c89f422aed42adcf441161bef50aa45f24bdcdcdaec83168bc8d43b2",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-11-17T10:50:05.505Z"
+      }
+    },
+    {
+      "id": "nvidia-blog-13aacf9f27d8",
+      "sourceId": "nvidia-blog",
+      "sourceName": "NVIDIA 官方博客",
+      "sourceType": "公司观点",
+      "sourceHomepage": "https://blogs.nvidia.com/",
+      "sourcePriority": 86,
+      "title": "NVIDIA Announces Rubin HPC — A New GPU to Accelerate Agents for Science, Engineering and Analytics",
+      "titleZh": null,
+      "url": "https://blogs.nvidia.com/blog/rubin-hpc/",
+      "publishedAt": "2026-11-16T16:00:01.000Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
+      "topics": [
+        "AI 算力与芯片"
+      ],
+      "relatedCompanies": [
+        "nvidia"
+      ],
+      "relatedStages": [
+        "design",
+        "memory",
+        "packaging",
+        "ai-infrastructure"
+      ],
+      "entities": [
+        "NVIDIA 官方博客"
+      ],
+      "excerpt": "Announced today at SC26, NVIDIA Rubin HPC is a new GPU in the NVIDIA Vera Rubin platform designed to accelerate simulation and data processing for science, engineering and analytics workflows. As agents help scientists and engineers explore more candidate materials, molecules and designs, they rely on simulations to test those ideas and guide their next steps. Rubin HPC will accelerate those simulations, shortening t",
+      "editorialSummary": null,
+      "analysis": {
+        "status": "error",
+        "inputHash": "a4bcd1ccfaf5edce463987b97539bbfffc0312e9651f7be8da386db41aa266b3",
+        "generatedAt": null,
+        "model": null,
+        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
+        "lastAttemptAt": "2026-11-17T10:50:10.990Z"
+      }
+    },
     {
       "id": "nvidia-blog-0ea5fbe79c2f",
       "sourceId": "nvidia-blog",
@@ -129,7 +418,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/ai-day-seoul-wrapup/",
       "publishedAt": "2026-11-16T00:00:28.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "模型与平台"
       ],
@@ -151,7 +440,7 @@
         "generatedAt": null,
         "model": null,
         "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:52:07.664Z"
+        "lastAttemptAt": "2026-11-17T10:50:16.422Z"
       }
     },
     {
@@ -161,11 +450,11 @@
       "sourceType": "公司观点",
       "sourceHomepage": "https://blogs.nvidia.com/",
       "sourcePriority": 86,
-      "title": "How AI Is Helping Care Teams Get Patients the Right Care, Sooner",
+      "title": "AI Is Helping Care Teams Get Patients the Right Care, Sooner",
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/how-ai-is-helping-care-teams/",
       "publishedAt": "2026-11-13T13:00:42.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片"
       ],
@@ -185,11 +474,11 @@
       "editorialSummary": null,
       "analysis": {
         "status": "error",
-        "inputHash": "d3f355a00578dc5242fbe3c57c0b9d2d99e8e16c78deb9a05c8cd2ce6f78b4b5",
+        "inputHash": "8580c8ba95d031f4b2e7df69aeb330dd99c3cd160081f52a8e7a31a14e02074c",
         "generatedAt": null,
         "model": null,
         "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:52:12.644Z"
+        "lastAttemptAt": "2026-11-17T10:50:21.881Z"
       }
     },
     {
@@ -203,7 +492,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/11/12/from-ai-ambition-to-business-impact/",
       "publishedAt": "2026-11-12T17:00:03.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "模型与平台",
         "企业应用与生产力"
@@ -224,11 +513,11 @@
       "editorialSummary": null,
       "analysis": {
         "status": "error",
-        "inputHash": "694e4378b0ae0f7ee8574a029c814a67b929ddec05271fc767bf6ced1e9155a7",
+        "inputHash": "e3e42f15c605d097df9fc48e74e96443937888d8488bac35602ef53522381c80",
         "generatedAt": null,
         "model": null,
         "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:52:17.603Z"
+        "lastAttemptAt": "2026-11-17T10:50:27.318Z"
       }
     },
     {
@@ -242,7 +531,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/11/12/scaling-ai-value-without-losing-control-lessons-from-frontier-firms/",
       "publishedAt": "2026-11-12T16:00:02.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "企业应用与生产力"
       ],
@@ -264,7 +553,7 @@
         "generatedAt": null,
         "model": null,
         "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:52:22.585Z"
+        "lastAttemptAt": "2026-11-17T10:50:32.756Z"
       }
     },
     {
@@ -278,7 +567,7 @@
       "titleZh": null,
       "url": "https://www.federalreserve.gov/econres/feds/artificial-intelligence-and-the-us-economy-current-evidence.htm",
       "publishedAt": "2026-11-12T15:20:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力",
@@ -304,7 +593,7 @@
         "generatedAt": null,
         "model": null,
         "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:52:27.563Z"
+        "lastAttemptAt": "2026-11-17T10:50:38.217Z"
       }
     },
     {
@@ -314,11 +603,11 @@
       "sourceType": "公司观点",
       "sourceHomepage": "https://blogs.nvidia.com/",
       "sourcePriority": 86,
-      "title": "How AI Helps Recyclers Turn Mixed Waste Into Reusable Material",
+      "title": "AI Helps Recyclers Turn Mixed Waste Into Reusable Material",
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/ai-recycling-startups/",
       "publishedAt": "2026-11-11T03:00:20.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "模型与平台"
       ],
@@ -331,11 +620,11 @@
       "editorialSummary": null,
       "analysis": {
         "status": "error",
-        "inputHash": "b9b3e5541515dd5d7a6909ad35ae36183823aad53d4fa5db0e5b5c881f9ef48c",
+        "inputHash": "f5e748da9a0262023db35d0a29bf0f6de86067d927b436eb8f2c73ecc95edffd",
         "generatedAt": null,
         "model": null,
         "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:52:32.530Z"
+        "lastAttemptAt": "2026-11-17T10:50:43.646Z"
       }
     },
     {
@@ -349,7 +638,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/open-source-openshell-infrastructure/",
       "publishedAt": "2026-11-10T16:00:03.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -376,7 +665,7 @@
         "generatedAt": null,
         "model": null,
         "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:52:37.576Z"
+        "lastAttemptAt": "2026-11-17T10:50:49.085Z"
       }
     },
     {
@@ -390,7 +679,7 @@
       "titleZh": null,
       "url": "https://www.federalreserve.gov/econres/notes/feds-notes/u-s-private-credit-vehicles-institutional-structure-and-aggregate-balance-sheets-20261109.html",
       "publishedAt": "2026-11-09T17:30:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "资本市场与金融稳定"
       ],
@@ -410,7 +699,7 @@
         "generatedAt": null,
         "model": null,
         "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:52:42.535Z"
+        "lastAttemptAt": "2026-11-17T10:50:54.524Z"
       }
     },
     {
@@ -424,7 +713,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
       "publishedAt": "2026-11-09T14:00:01.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -452,7 +741,7 @@
         "generatedAt": null,
         "model": null,
         "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:52:47.505Z"
+        "lastAttemptAt": "2026-11-17T10:50:59.977Z"
       }
     },
     {
@@ -466,7 +755,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/",
       "publishedAt": "2026-11-09T08:00:53.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -487,12 +776,11 @@
       "excerpt": "Korea’s Ministry of Science and ICT and NVIDIA hosted the MSIT -NVIDIA AI Startup Partnership Forum at COEX. Representatives from the Ministry of Science and ICT and NVIDIA met with over 20 Korean startups across foundation models, physical AI, AI infrastructure and AI semiconductors. NVIDIA also announced an investment in Korean startup Point2 , with additional investments planned in Motif Technologies , RLWRLD and ",
       "editorialSummary": null,
       "analysis": {
-        "status": "error",
+        "status": "pending",
         "inputHash": "b6b0cbf6b5d33d830e2d56cc0602d6bbeda3dfdc3722039dab22f5bc9122332a",
         "generatedAt": null,
         "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:52:52.464Z"
+        "reason": "Waiting for the next AI news batch"
       }
     },
     {
@@ -506,7 +794,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/",
       "publishedAt": "2026-11-09T05:00:40.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -529,12 +817,11 @@
       "excerpt": "Tapping into the country’s strengths in manufacturing and engineering, NVIDIA is helping advance Korea’s physical AI ecosystem. The country’s industry leaders are applying accelerated computing, AI and simulation to everything from semiconductor manufacturing to robotics and autonomous vehicles. These efforts are helping bring physical AI from development into real-world production. Samsung Advances Semiconductor Eng",
       "editorialSummary": null,
       "analysis": {
-        "status": "error",
+        "status": "pending",
         "inputHash": "c5a3b9d2f25fdc8d4ea89a3550fbe5ae901aa4c273d766c62e2f351d3bd31fe7",
         "generatedAt": null,
         "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:52:57.455Z"
+        "reason": "Waiting for the next AI news batch"
       }
     },
     {
@@ -548,7 +835,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/korea-secure-agentic-ai/",
       "publishedAt": "2026-11-09T05:00:39.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "模型与平台",
         "企业应用与生产力",
@@ -568,12 +855,11 @@
       "excerpt": "As AI agents take on more work, they need capable open models and security that advances alongside them. Hyundai Motor Group is exploring NVIDIA NemoClaw blueprints and the NVIDIA OpenShell runtime, while AIM Intelligence is integrating its Starfort platform with NVIDIA OpenShell to support secure AI agents for employee productivity and enterprise workflows . A key component of the NVIDIA Open Agent Safety Platform, ",
       "editorialSummary": null,
       "analysis": {
-        "status": "error",
+        "status": "pending",
         "inputHash": "a02e9995b51ebef1851966b78889c764fe2b31ea607cddd541629d7c1a5c84de",
         "generatedAt": null,
         "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:53:02.410Z"
+        "reason": "Waiting for the next AI news batch"
       }
     },
     {
@@ -587,7 +873,7 @@
       "titleZh": null,
       "url": "https://blogs.nvidia.com/blog/korea-sovereign-ai-collaboration/",
       "publishedAt": "2026-11-09T05:00:04.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片",
         "数据中心与电力",
@@ -609,291 +895,8 @@
       "excerpt": "NVIDIA and Korea’s Ministry of Science and ICT (MSIT) are expanding their collaboration across the country’s sovereign AI ecosystem, from AI semiconductors and data center infrastructure to talent, startups, models, agents and security. The collaboration lays the groundwork for Korean NPU and XPU companies to explore participation in the NVIDIA NVLink Fusion ecosystem, and includes NVIDIA training and certification p",
       "editorialSummary": null,
       "analysis": {
-        "status": "error",
+        "status": "pending",
         "inputHash": "839a40a6da934a16e074329872b135098f2a37533b6db0934dfad55f9bc18f05",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:53:07.379Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-e18a5f64b586",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "NVIDIA Dynamo Recipes Bring Korea’s Leading Open Models to Production",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/nvidia-dynamo-korea-open-models/",
-      "publishedAt": "2026-11-09T05:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
-      "topics": [
-        "AI 算力与芯片",
-        "数据中心与电力"
-      ],
-      "relatedCompanies": [
-        "nvidia"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "NVIDIA is releasing Dynamo-optimized deployment recipes for Korea’s leading open models: A.X K2 from SK Telecom , K-EXAONE 2.0 from LG AI Research , Solar Open 2 from Upstage and Motif-3 from Motif Technologies . As models grow beyond the capacity of a single GPU, they must be split across multiple GPUs, requiring careful coordination of request routing and communication to maintain performance. NVIDIA Dynamo is an o",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "0a0f9dfd8a221ea954d843bfe8cf89dd877207fe6eb8748d6d2b5154f89a935d",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:53:12.336Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-215687ca939d",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/telco-open-source-tools-research-6g-networks/",
-      "publishedAt": "2026-11-06T16:00:35.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
-      "topics": [
-        "AI 算力与芯片",
-        "数据中心与电力",
-        "资本市场与金融稳定"
-      ],
-      "relatedCompanies": [
-        "nvidia"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "models-platforms"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "A year ago, NVIDIA open sourced its Aerial wireless software , joining Sionna and a broader suite of open source tools for accelerating next-generation 6G network development. Together, they give researchers a foundation for testing ideas, comparing results and building on each other’s work — connecting simulation and AI training with experiments on real over-the-air wireless systems. Today, researchers and developer",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "7f3d37416f480f6a9afff086194a002855590d73f206a52513968fedba85df69",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:53:17.323Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-e8438a23dbcf",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "Vera Delivers the Best of Both Worlds: Highest Throughput and Fastest Agents",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents/",
-      "publishedAt": "2026-11-05T20:00:41.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
-      "topics": [
-        "AI 算力与芯片",
-        "数据中心与电力",
-        "模型与平台"
-      ],
-      "relatedCompanies": [
-        "nvidia"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "models-platforms"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "AI agents do more than generate answers. They search for information, query databases, write and test code and take action. Each of those steps relies on a CPU, with agents moving between GPU reasoning and CPU execution throughout a task. As businesses put more agents to work, AI factories need CPUs that can execute those steps quickly and support many agents at once, all within the limits of available power. What th",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "error",
-        "inputHash": "b21d6f823b64e09e00483dfe67c783c9606a9609be902215774b8d91f6e2d579",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-        "lastAttemptAt": "2026-11-16T09:53:22.302Z"
-      }
-    },
-    {
-      "id": "nvidia-blog-baf7193e75c1",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
-      "publishedAt": "2026-11-05T17:00:35.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
-      "topics": [
-        "AI 算力与芯片",
-        "半导体制造",
-        "模型与平台",
-        "企业应用与生产力"
-      ],
-      "relatedCompanies": [
-        "nvidia"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "equipment-materials"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work — building applications for exploring scenarios, investigating failures and improving designs. Developers direct AI agents through natural-language instruc",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "pending",
-        "inputHash": "fecd2ccd8e40b8616b0812237190def5b36bd2cd9a20b3c64bbd7e7ce164f8e9",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Waiting for the next AI news batch"
-      }
-    },
-    {
-      "id": "nvidia-blog-9b11b10a55dd",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "The Wizard of Open Weights: Chris Alexiuk Makes AI Easy With Open Models",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/",
-      "publishedAt": "2026-11-05T16:00:05.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
-      "topics": [
-        "AI 算力与芯片",
-        "半导体制造",
-        "模型与平台"
-      ],
-      "relatedCompanies": [
-        "nvidia"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "equipment-materials"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "Chris Alexiuk has a simple rule about open source AI: If you believe in it, be loud about it. “We should be shouting about this technology from the rooftops,” said Alexiuk, a Toronto-based senior product research engineer in deep learning at NVIDIA who specializes in making open large language models (LLMs) practical for working developers. Alexiuk’s preferred “rooftop” is YouTube , where he’s built a following teach",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "pending",
-        "inputHash": "c58f844b5c0e2844e40bcb0e7a101493c85d2aed1c61b58dd12c47762998c58c",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Waiting for the next AI news batch"
-      }
-    },
-    {
-      "id": "nvidia-blog-abce147212c4",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/",
-      "publishedAt": "2026-11-05T16:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
-      "topics": [
-        "AI 算力与芯片",
-        "数据中心与电力"
-      ],
-      "relatedCompanies": [
-        "nvidia",
-        "amazon"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "models-platforms"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "Larger models, longer contexts and agentic applications are increasing GPU memory pressure while supply tightens and prices rise — a trend expected to continue through the near term. NVIDIA works closely with memory partners to rapidly adopt the latest memory technologies. NVIDIA was first to adopt HBM3e and HBM4 technologies into an accelerated computing stack. But the approach isn’t to simply pack more memory onto ",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "pending",
-        "inputHash": "1d19c602d560f690adffb7cca8e2e999b6ab0f66d7b873469e74a44eff7d2566",
-        "generatedAt": null,
-        "model": null,
-        "reason": "Waiting for the next AI news batch"
-      }
-    },
-    {
-      "id": "nvidia-blog-c90cd6cc0c02",
-      "sourceId": "nvidia-blog",
-      "sourceName": "NVIDIA 官方博客",
-      "sourceType": "公司观点",
-      "sourceHomepage": "https://blogs.nvidia.com/",
-      "sourcePriority": 86,
-      "title": "AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It",
-      "titleZh": null,
-      "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs/",
-      "publishedAt": "2026-11-03T16:00:45.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
-      "topics": [
-        "AI 算力与芯片",
-        "半导体制造",
-        "模型与平台"
-      ],
-      "relatedCompanies": [
-        "nvidia"
-      ],
-      "relatedStages": [
-        "design",
-        "memory",
-        "packaging",
-        "ai-infrastructure",
-        "equipment-materials"
-      ],
-      "entities": [
-        "NVIDIA 官方博客"
-      ],
-      "excerpt": "Demand for advanced chips is rising. The processes to build them are getting more complex. And the margin for error is shrinking. For engineers, understanding how a process change will behave, how a material will interact with a new step, how a defect maps back to a root cause are critical, challenging steps in semiconductor manufacturing — and these analyses can take days. Physical experiments on a fab line are slow",
-      "editorialSummary": null,
-      "analysis": {
-        "status": "pending",
-        "inputHash": "a6e24ecc896c83afc01b0280883824e37b0588f53116c0b697fdd085aa2843aa",
         "generatedAt": null,
         "model": null,
         "reason": "Waiting for the next AI news batch"
@@ -910,7 +913,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-1-terra-on-bedrock-step-functions-as-agent-tools-and-more-november-2-2026/",
       "publishedAt": "2026-11-02T16:45:48.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台",
@@ -951,7 +954,7 @@
       "titleZh": null,
       "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261030~08d9d540f0.en.html",
       "publishedAt": "2026-10-30T16:10:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "模型与平台"
       ],
@@ -981,7 +984,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/10/28/introducing-the-microsoft-copilot-harness-unlocking-the-potential-of-truly-multi-model-agentic-work/",
       "publishedAt": "2026-10-28T16:51:35.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "半导体制造",
         "企业应用与生产力"
@@ -1020,7 +1023,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/10/27/the-platform-approach-to-becoming-frontier/",
       "publishedAt": "2026-10-27T16:01:38.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "半导体制造",
         "模型与平台",
@@ -1061,7 +1064,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-polly-generative-engine-torchneuron-for-trainium-and-more-october-26-2026/",
       "publishedAt": "2026-10-26T15:02:24.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -1100,7 +1103,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/aws-continuum-for-code-vulnerabilities-is-now-generally-available/",
       "publishedAt": "2026-10-22T20:33:10.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "模型与平台"
       ],
@@ -1136,7 +1139,7 @@
       "titleZh": null,
       "url": "https://www.federalreserve.gov/econres/notes/feds-notes/introducing-private-credit-into-the-financial-accounts-of-the-united-states-20261016.html",
       "publishedAt": "2026-10-16T14:25:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "资本市场与金融稳定"
       ],
@@ -1169,7 +1172,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/10/new-chip-based-tape-measure-light-could-revolutionize-mobile-timekeeping",
       "publishedAt": "2026-10-16T12:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片"
       ],
@@ -1204,7 +1207,7 @@
       "titleZh": null,
       "url": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/",
       "publishedAt": "2026-10-12T13:01:29.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造",
@@ -1247,7 +1250,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/announcing-aws-well-architected-agent-an-ai-powered-intelligence-to-optimize-your-cloud-environment-preview/",
       "publishedAt": "2026-10-01T20:04:04.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "模型与平台",
         "企业应用与生产力",
@@ -1284,7 +1287,7 @@
       "titleZh": null,
       "url": "https://www.federalreserve.gov/econres/feds/measuring-and-projecting-us-investment-in-semiconductor-manufacturing-capacity.htm",
       "publishedAt": "2026-09-29T13:35:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片",
         "半导体制造"
@@ -1321,7 +1324,7 @@
       "titleZh": null,
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-sol-and-luna-claude-opus-5-5-on-amazon-bedrock-strands-harness-and-more-september-28-2026/",
       "publishedAt": "2026-09-28T16:14:54.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "AI 算力与芯片",
         "模型与平台"
@@ -1457,7 +1460,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation",
       "publishedAt": "2026-08-04T12:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "模型与平台"
       ],
@@ -1487,7 +1490,7 @@
       "titleZh": "AI 冲击下的私募信贷：BDC 对软件公司的风险暴露",
       "url": "https://www.bis.org/publ/bisbull128.htm",
       "publishedAt": "2026-07-14T00:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "资本市场与金融稳定",
         "企业应用与生产力"
@@ -1536,7 +1539,7 @@
       "titleZh": "Blackstone 2026 年中展望：AI 基建资本周期",
       "url": "https://www.blackstone.com/insights/article/2026-mid-year-investment-perspectives/",
       "publishedAt": "2026-06-30T00:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "数据中心与电力",
         "AI 算力与芯片",
@@ -1589,7 +1592,7 @@
       "titleZh": "BIS 年度经济报告：AI 乐观情绪、投资与下行风险",
       "url": "https://www.bis.org/publ/arpdf/ar2026e1.htm",
       "publishedAt": "2026-06-28T00:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "资本市场与金融稳定",
         "企业应用与生产力"
@@ -1639,7 +1642,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update",
       "publishedAt": "2026-06-09T12:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "模型与平台"
       ],
@@ -1684,7 +1687,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/06/new-ai-model-shows-how-evacuate-fires-one-safe-step-time",
       "publishedAt": "2026-06-04T12:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "模型与平台"
       ],
@@ -1728,7 +1731,7 @@
       "titleZh": null,
       "url": "https://www.nist.gov/news-events/news/2026/05/nist-expands-ai-consortiums-scope-calls-new-members",
       "publishedAt": "2026-05-29T12:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "资本市场与金融稳定"
       ],
@@ -1774,7 +1777,7 @@
       "titleZh": "AI 时代的金融稳定：算法架构为何会改变风险形态",
       "url": "https://www.ecb.europa.eu/press/research-publications/resbull/2026/html/ecb.rb260521~4d8b12940b.en.html",
       "publishedAt": "2026-05-21T00:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "资本市场与金融稳定",
         "模型与平台"
@@ -1824,7 +1827,7 @@
       "titleZh": "IEA：数据中心用电激增，电力瓶颈正在成为 AI 扩张约束",
       "url": "https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions",
       "publishedAt": "2026-04-16T00:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "数据中心与电力",
         "AI 算力与芯片"
@@ -1875,7 +1878,7 @@
       "titleZh": "IMF 情景研究：AI 的全球经济与金融影响",
       "url": "https://www.imf.org/en/publications/imf-notes/issues/2026/04/03/global-economic-and-financial-implications-of-artificial-intelligence-lessons-from-a-574924",
       "publishedAt": "2026-04-03T00:00:00.000Z",
-      "discoveredAt": "2026-11-16T09:52:01.771Z",
+      "discoveredAt": "2026-11-17T10:49:32.245Z",
       "topics": [
         "企业应用与生产力",
         "资本市场与金融稳定",

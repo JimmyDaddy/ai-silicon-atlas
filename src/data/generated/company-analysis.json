@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T10:48:54.495Z",
+  "generatedAt": "2026-11-18T10:17:04.013Z",
   "provider": "github-models",
   "model": "openai/gpt-4.1-mini",
   "promptVersion": "company-synthesis-v2",
@@ -29,11 +29,11 @@
     },
     "nvidia": {
       "status": "error",
-      "inputHash": "dc4525f2f9fb68f6bb9f96b62e6e66dca06d80f04f533c86b224c30c490cce91",
+      "inputHash": "5a03d375f63262b2fe592f9cd8a10fe246da52372ff3beb6f6a6fc89afb227f1",
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-17T10:49:08.127Z"
+      "lastAttemptAt": "2026-11-18T10:17:08.106Z"
     },
     "amd": {
       "status": "pending",
@@ -69,7 +69,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-17T10:49:12.844Z"
+      "lastAttemptAt": "2026-11-18T10:17:21.359Z"
     },
     "kla": {
       "status": "error",
@@ -77,7 +77,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-17T10:49:31.590Z"
+      "lastAttemptAt": "2026-11-18T10:17:39.002Z"
     },
     "tokyo-electron": {
       "status": "unavailable",
@@ -92,7 +92,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-17T10:48:58.757Z"
+      "lastAttemptAt": "2026-11-18T10:17:12.511Z"
     },
     "samsung-electronics": {
       "status": "unavailable",
@@ -128,7 +128,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-17T10:49:22.211Z"
+      "lastAttemptAt": "2026-11-18T10:17:30.189Z"
     },
     "amkor": {
       "status": "pending",
@@ -157,7 +157,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-17T10:49:03.441Z"
+      "lastAttemptAt": "2026-11-18T10:17:16.931Z"
     },
     "supermicro": {
       "status": "pending",
@@ -172,7 +172,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-17T10:49:26.910Z"
+      "lastAttemptAt": "2026-11-18T10:17:34.614Z"
     },
     "microsoft": {
       "status": "pending",
@@ -201,7 +201,7 @@
       "generatedAt": null,
       "model": null,
       "reason": "Unexpected token 'O', \"OK\r\n\" is not valid JSON",
-      "lastAttemptAt": "2026-11-17T10:49:17.529Z"
+      "lastAttemptAt": "2026-11-18T10:17:25.772Z"
     },
     "palantir": {
       "status": "pending",

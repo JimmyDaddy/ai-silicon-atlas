@@ -1,404 +1,64 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T10:08:44.639Z",
+  "generatedAt": "2026-11-21T09:56:58.046Z",
   "period": {
-    "from": "2026-11-19T10:27:29.819Z",
-    "to": "2026-11-20T10:08:44.639Z",
+    "from": "2026-11-20T10:08:44.639Z",
+    "to": "2026-11-21T09:56:58.046Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 0,
+    "newFilings": 1,
     "metricChanges": 0,
-    "companyStatusChanges": 25,
+    "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 2,
+    "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 27
+    "totalChanges": 2
   },
   "affected": {
     "stages": {
-      "ai-applications": 4,
-      "models-platforms": 4,
-      "design": 5,
-      "packaging": 4,
-      "equipment-materials": 5,
-      "ai-infrastructure": 6,
-      "eda-ip": 3,
-      "memory": 3,
-      "manufacturing": 1
+      "design": 1,
+      "ai-applications": 1
     },
     "topics": {
-      "AI 算力与芯片": 2,
-      "半导体制造": 2,
-      "数据中心与电力": 1,
-      "模型与平台": 2,
-      "资本市场与金融稳定": 1,
       "企业应用与生产力": 1
     }
   },
   "companies": {
-    "filings": [],
-    "metrics": [],
-    "statuses": [
-      {
-        "company": "adobe",
-        "stage": "ai-applications",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
+    "filings": [
       {
         "company": "amd",
         "stage": "design",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "amkor",
-        "stage": "packaging",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "applied-materials",
-        "stage": "equipment-materials",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "arm",
-        "stage": "eda-ip",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "ase-technology",
-        "stage": "packaging",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "asml",
-        "stage": "equipment-materials",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "broadcom",
-        "stage": "design",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "cadence",
-        "stage": "eda-ip",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "equinix",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "kla",
-        "stage": "equipment-materials",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "meta-platforms",
-        "stage": "models-platforms",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "micron",
-        "stage": "memory",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "microsoft",
-        "stage": "models-platforms",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "nvidia",
-        "stage": "design",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "palantir",
-        "stage": "ai-applications",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "salesforce",
-        "stage": "ai-applications",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "servicenow",
-        "stage": "ai-applications",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "synopsys",
-        "stage": "eda-ip",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "vertiv",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
+        "form": "8-K",
+        "filedAt": "2026-11-20",
+        "reportDate": "2026-11-18",
+        "accessionNumber": "0000002488-26-000218",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000218/amd-20261118.htm"
       }
     ],
+    "metrics": [],
+    "statuses": [],
     "analysis": []
   },
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-fe6303fbf7c4",
-        "publishedAt": "2026-11-19T20:00:15.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "NVIDIA and Microsoft Expand Accelerated Computing From Azure to Windows PCs",
-        "summary": "NVIDIA and Microsoft are extending their full-stack collaboration to help organizations build, customize and deploy intelligent applications — from next-generation infrastructure on Azure to industrial systems and Windows PCs. At Microsoft Ignite , the companies are expanding access to Azure virtual machines powered by NVIDIA Vera Rubin NVL72 systems, as well as adding customer availability to NVIDIA open models and ",
+        "id": "federal-reserve-notes-b3585d90ac7f",
+        "publishedAt": "2026-11-20T19:30:00.000Z",
+        "source": "美国联邦储备委员会 FEDS Notes",
+        "sourceType": "央行研究",
+        "title": "FEDS Note: When productivity booms, do interest rates rise?",
+        "summary": "Antoine Lepetit , and David Miller Long-term interest rates have risen sharply since the COVID period. Concurrently, advances in artificial intelligence (AI) have raised the prospect of a sustained increase in productivity growth. As many observers have noted, standard macroeconomic theory predicts that expectations of faster productivity growth should push interest rates higher.",
         "topics": [
-          "AI 算力与芯片",
-          "半导体制造",
-          "数据中心与电力",
-          "模型与平台",
-          "资本市场与金融稳定"
-        ],
-        "relatedCompanies": [
-          "nvidia",
-          "microsoft"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "equipment-materials"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/microsoft-ignite-accelerated-computing-azure-windows-pcs/"
-      },
-      {
-        "id": "nvidia-blog-baf7193e75c1",
-        "publishedAt": "2026-11-19T17:00:35.000Z",
-        "source": "NVIDIA 官方博客",
-        "sourceType": "公司观点",
-        "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
-        "summary": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work — building applications for exploring scenarios, investigating failures and improving designs. Developers direct AI agents through natural-language instruc",
-        "topics": [
-          "AI 算力与芯片",
-          "半导体制造",
-          "模型与平台",
           "企业应用与生产力"
         ],
-        "relatedCompanies": [
-          "nvidia",
-          "microsoft"
-        ],
+        "relatedCompanies": [],
         "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "equipment-materials"
+          "ai-applications"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/"
+        "sourceUrl": "https://www.federalreserve.gov/econres/notes/feds-notes/when-productivity-booms-do-interest-rates-rise-20261120.html"
       }
     ],
     "analysisRefreshed": []

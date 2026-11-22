@@ -1,66 +1,32 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T09:56:58.046Z",
+  "generatedAt": "2026-11-22T09:53:19.343Z",
   "period": {
-    "from": "2026-11-20T10:08:44.639Z",
-    "to": "2026-11-21T09:56:58.046Z",
+    "from": "2026-11-21T09:56:58.046Z",
+    "to": "2026-11-22T09:53:19.343Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 1,
+    "newFilings": 0,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 2
+    "totalChanges": 0
   },
   "affected": {
-    "stages": {
-      "design": 1,
-      "ai-applications": 1
-    },
-    "topics": {
-      "企业应用与生产力": 1
-    }
+    "stages": {},
+    "topics": {}
   },
   "companies": {
-    "filings": [
-      {
-        "company": "amd",
-        "stage": "design",
-        "form": "8-K",
-        "filedAt": "2026-11-20",
-        "reportDate": "2026-11-18",
-        "accessionNumber": "0000002488-26-000218",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000218/amd-20261118.htm"
-      }
-    ],
+    "filings": [],
     "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "federal-reserve-notes-b3585d90ac7f",
-        "publishedAt": "2026-11-20T19:30:00.000Z",
-        "source": "美国联邦储备委员会 FEDS Notes",
-        "sourceType": "央行研究",
-        "title": "FEDS Note: When productivity booms, do interest rates rise?",
-        "summary": "Antoine Lepetit , and David Miller Long-term interest rates have risen sharply since the COVID period. Concurrently, advances in artificial intelligence (AI) have raised the prospect of a sustained increase in productivity growth. As many observers have noted, standard macroeconomic theory predicts that expectations of faster productivity growth should push interest rates higher.",
-        "topics": [
-          "企业应用与生产力"
-        ],
-        "relatedCompanies": [],
-        "relatedStages": [
-          "ai-applications"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://www.federalreserve.gov/econres/notes/feds-notes/when-productivity-booms-do-interest-rates-rise-20261120.html"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }

@@ -1,32 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-22T09:51:30.179Z",
+  "generatedAt": "2026-11-23T10:51:15.589Z",
   "sources": {
     "secEdgar": {
-      "status": "ok",
+      "status": "error",
       "provider": "SEC EDGAR",
       "url": "https://www.sec.gov/edgar/sec-api-documentation",
-      "startedAt": "2026-11-22T09:51:30.180Z",
-      "completedAt": "2026-11-22T09:52:45.325Z",
+      "startedAt": "2026-11-23T10:51:15.589Z",
+      "completedAt": "2026-11-23T10:51:27.478Z",
       "companyCount": 25,
-      "completedCount": 25,
-      "failedCount": 0,
+      "completedCount": 0,
+      "failedCount": 25,
       "identifierMode": "local-cik",
       "transport": "Jina Reader relay",
-      "relayUrl": "https://r.jina.ai"
+      "relayUrl": "https://r.jina.ai",
+      "error": "SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
     },
     "openDart": {
       "status": "ok",
       "provider": "OpenDART",
       "url": "https://engopendart.fss.or.kr/",
-      "startedAt": "2026-11-22T09:51:30.183Z",
-      "completedAt": "2026-11-22T09:51:32.043Z",
+      "startedAt": "2026-11-23T10:51:15.593Z",
+      "completedAt": "2026-11-23T10:51:17.746Z",
       "companyCount": 2
     },
     "manual": {
       "status": "manual",
       "provider": "First-party IR",
-      "completedAt": "2026-11-22T09:51:30.179Z",
+      "completedAt": "2026-11-23T10:51:15.589Z",
       "companyCount": 4
     }
   },
@@ -597,7 +598,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-20T10:07:48.631Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "alphabet": {
       "status": "ok",
@@ -1139,7 +1144,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-20T10:07:28.189Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "amazon": {
       "status": "ok",
@@ -1628,8 +1637,11 @@
       },
       "metricsCheckedAt": "2026-11-21T09:55:56.882Z",
       "warnings": [
-        "Ignored stale capex metric ending 2017-03-31"
-      ]
+        "Ignored stale capex metric ending 2017-03-31",
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "amd": {
       "status": "ok",
@@ -2197,7 +2209,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-21T09:54:47.364Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "amkor": {
       "status": "ok",
@@ -2765,7 +2781,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-18T10:16:09.956Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "applied-materials": {
       "status": "ok",
@@ -3333,7 +3353,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-20T10:06:27.061Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "arista-networks": {
       "status": "ok",
@@ -3901,7 +3925,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-20T10:06:58.621Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "arm": {
       "status": "ok",
@@ -4469,7 +4497,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-20T10:06:00.180Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 401 for https://r.jina.ai/https://data.sec.gov/submissions/CIK0001973239.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:23.555Z"
     },
     "ase-technology": {
       "status": "ok",
@@ -4879,7 +4911,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-18T10:16:02.597Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "asml": {
       "status": "ok",
@@ -5369,7 +5405,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-20T10:06:19.039Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "broadcom": {
       "status": "ok",
@@ -5858,8 +5898,11 @@
       },
       "metricsCheckedAt": "2026-11-18T10:15:40.624Z",
       "warnings": [
-        "Ignored stale netIncome metric ending 2024-11-03"
-      ]
+        "Ignored stale netIncome metric ending 2024-11-03",
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "cadence": {
       "status": "ok",
@@ -6427,7 +6470,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-20T10:05:47.333Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 401 for https://r.jina.ai/https://data.sec.gov/submissions/CIK0000813672.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:19.604Z"
     },
     "equinix": {
       "status": "ok",
@@ -6916,13 +6963,16 @@
       },
       "metricsCheckedAt": "2026-11-17T10:48:22.462Z",
       "warnings": [
-        "Ignored stale capex metric ending 2018-09-30"
-      ]
+        "Ignored stale capex metric ending 2018-09-30",
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "jcet": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-11-22T09:51:30.179Z",
+      "checkedAt": "2026-11-23T10:51:15.589Z",
       "identifiers": {},
       "sourceUrl": "https://www.jcetglobal.com/",
       "latestFiling": null,
@@ -7499,12 +7549,16 @@
         ]
       },
       "metricsCheckedAt": "2026-11-21T09:55:04.701Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "mediatek": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-11-22T09:51:30.179Z",
+      "checkedAt": "2026-11-23T10:51:15.589Z",
       "identifiers": {},
       "sourceUrl": "https://corp.mediatek.com/investor-relations",
       "latestFiling": null,
@@ -8081,7 +8135,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-20T10:07:38.742Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "micron": {
       "status": "ok",
@@ -8649,7 +8707,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-20T10:06:42.084Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "microsoft": {
       "status": "ok",
@@ -9217,7 +9279,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-20T10:07:15.666Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "nvidia": {
       "status": "ok",
@@ -9706,8 +9772,11 @@
       },
       "metricsCheckedAt": "2026-11-18T10:15:27.043Z",
       "warnings": [
-        "Ignored stale capex metric ending 2020-07-26"
-      ]
+        "Ignored stale capex metric ending 2020-07-26",
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "palantir": {
       "status": "ok",
@@ -10275,7 +10344,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-18T10:16:41.507Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "salesforce": {
       "status": "ok",
@@ -10882,12 +10955,16 @@
         ]
       },
       "metricsCheckedAt": "2026-11-18T10:16:50.793Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "samsung-electronics": {
       "status": "error",
       "provider": "OpenDART",
-      "checkedAt": "2026-11-22T09:51:30.183Z",
+      "checkedAt": "2026-11-23T10:51:15.593Z",
       "identifiers": {
         "corpCode": "00126380"
       },
@@ -11465,12 +11542,16 @@
         ]
       },
       "metricsCheckedAt": "2026-11-20T10:08:00.714Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "sk-hynix": {
       "status": "error",
       "provider": "OpenDART",
-      "checkedAt": "2026-11-22T09:51:31.478Z",
+      "checkedAt": "2026-11-23T10:51:17.117Z",
       "identifiers": {
         "corpCode": "00164779"
       },
@@ -11485,7 +11566,7 @@
     "smic": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-11-22T09:51:30.179Z",
+      "checkedAt": "2026-11-23T10:51:15.589Z",
       "identifiers": {},
       "sourceUrl": "https://www.smics.com/en/site/company",
       "latestFiling": null,
@@ -12062,7 +12143,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-21T09:55:41.370Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "synopsys": {
       "status": "ok",
@@ -12630,12 +12715,16 @@
         ]
       },
       "metricsCheckedAt": "2026-11-18T10:15:14.138Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: HTTP 401 for https://r.jina.ai/https://data.sec.gov/submissions/CIK0000883241.json"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:15.589Z"
     },
     "tokyo-electron": {
       "status": "manual",
       "provider": "First-party IR",
-      "checkedAt": "2026-11-22T09:51:30.179Z",
+      "checkedAt": "2026-11-23T10:51:15.589Z",
       "identifiers": {},
       "sourceUrl": "https://www.tel.com/ir/",
       "latestFiling": null,
@@ -13002,7 +13091,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-21T09:55:16.980Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     },
     "vertiv": {
       "status": "ok",
@@ -13609,7 +13702,11 @@
         ]
       },
       "metricsCheckedAt": "2026-11-21T09:55:33.382Z",
-      "warnings": []
+      "warnings": [
+        "Latest refresh failed; preserved last good snapshot: SEC relay circuit opened after three consecutive failures; remaining companies kept their last good snapshot"
+      ],
+      "stale": true,
+      "lastAttemptAt": "2026-11-23T10:51:27.478Z"
     }
   }
 }

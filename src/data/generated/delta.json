@@ -1,390 +1,78 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T12:36:46.592Z",
+  "generatedAt": "2026-11-25T11:25:52.112Z",
   "period": {
-    "from": "2026-11-23T10:52:01.203Z",
-    "to": "2026-11-24T12:36:46.592Z",
+    "from": "2026-11-24T12:36:46.592Z",
+    "to": "2026-11-25T11:25:52.112Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 3,
+    "newFilings": 2,
     "metricChanges": 0,
-    "companyStatusChanges": 25,
+    "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
     "newIntelligence": 1,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 29
+    "totalChanges": 3
   },
   "affected": {
     "stages": {
-      "eda-ip": 4,
-      "models-platforms": 6,
-      "design": 5,
-      "ai-applications": 4,
-      "packaging": 3,
-      "equipment-materials": 3,
-      "ai-infrastructure": 5,
-      "memory": 2,
-      "manufacturing": 1
+      "models-platforms": 2,
+      "manufacturing": 1,
+      "design": 1,
+      "memory": 1,
+      "packaging": 1,
+      "ai-infrastructure": 1
     },
     "topics": {
       "AI 算力与芯片": 1,
+      "数据中心与电力": 1,
       "模型与平台": 1
     }
   },
   "companies": {
     "filings": [
       {
-        "company": "arm",
-        "stage": "eda-ip",
-        "form": "6-K",
-        "filedAt": "2026-11-23",
-        "reportDate": "2026-11-23",
-        "accessionNumber": "0001973239-26-000155",
-        "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000155/arm-20261123.htm"
-      },
-      {
-        "company": "meta-platforms",
-        "stage": "models-platforms",
-        "form": "8-K",
-        "filedAt": "2026-11-23",
-        "reportDate": "2026-11-18",
-        "accessionNumber": "0001628280-26-075541",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026075541/meta-20261118.htm"
-      },
-      {
-        "company": "nvidia",
-        "stage": "design",
-        "form": "8-K",
-        "filedAt": "2026-11-23",
-        "reportDate": "2026-11-22",
-        "accessionNumber": "0001045810-26-000090",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm"
-      }
-    ],
-    "metrics": [],
-    "statuses": [
-      {
-        "company": "adobe",
-        "stage": "ai-applications",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
         "company": "alphabet",
         "stage": "models-platforms",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "amazon",
-        "stage": "models-platforms",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "amd",
-        "stage": "design",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "amkor",
-        "stage": "packaging",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "applied-materials",
-        "stage": "equipment-materials",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "arista-networks",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "arm",
-        "stage": "eda-ip",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "ase-technology",
-        "stage": "packaging",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "asml",
-        "stage": "equipment-materials",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "broadcom",
-        "stage": "design",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "cadence",
-        "stage": "eda-ip",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "equinix",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "kla",
-        "stage": "equipment-materials",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "meta-platforms",
-        "stage": "models-platforms",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "micron",
-        "stage": "memory",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "microsoft",
-        "stage": "models-platforms",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "nvidia",
-        "stage": "design",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "palantir",
-        "stage": "ai-applications",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "salesforce",
-        "stage": "ai-applications",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "servicenow",
-        "stage": "ai-applications",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "supermicro",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "synopsys",
-        "stage": "eda-ip",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
+        "form": "8-K",
+        "filedAt": "2026-11-24",
+        "reportDate": "2026-11-24",
+        "accessionNumber": "0001193125-26-475973",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526475973/d91615d8k.htm"
       },
       {
         "company": "tsmc",
         "stage": "manufacturing",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
-      },
-      {
-        "company": "vertiv",
-        "stage": "ai-infrastructure",
-        "from": {
-          "status": "ok",
-          "stale": true
-        },
-        "to": {
-          "status": "ok",
-          "stale": false
-        }
+        "form": "6-K",
+        "filedAt": "2026-11-25",
+        "reportDate": "2026-11-25",
+        "accessionNumber": "0001046179-26-000807",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000807/tsm-dividendadjustmentx202.htm"
       }
     ],
+    "metrics": [],
+    "statuses": [],
     "analysis": []
   },
   "intelligence": {
     "new": [
       {
-        "id": "nvidia-blog-5080a13c0be9",
-        "publishedAt": "2026-11-23T17:00:08.000Z",
-        "source": "NVIDIA 官方博客",
+        "id": "aws-blog-35284fc19263",
+        "publishedAt": "2026-11-24T15:39:59.000Z",
+        "source": "AWS 官方博客",
         "sourceType": "公司观点",
-        "title": "Merry Making: Play, Build and Create With NVIDIA Technologies This Holiday Season",
-        "summary": "The elves don’t have to be the only ones busy in the workshop this holiday season. With the lights twinkling and the gift wrap out, it’s the perfect time to give someone — or yourself — a spark to take a hobby to the next level. For some, that means diving into a new game. For others, it’s video editing or even building a robot. NVIDIA technologies offer something for everyone on Santa’s list. Read on to unwrap the d",
+        "title": "AWS Weekly Roundup: Local Zone in Bogotá, 30-minute Lambda timeout, and more (November 24, 2026)",
+        "summary": "Some limits shape architecture more than any feature does. AWS Lambda launched in 2014 with a 60-second timeout, moved to 5 minutes in 2015 and to 15 minutes in 2018, and then stayed there for eight years. Last week the limit doubled, and in the same week Lambda learned to run on GPUs and gave platform teams their own runtimes. That is a lot of Lambda for one week. Two other threads ran through the week. A new AWS Lo",
         "topics": [
           "AI 算力与芯片",
+          "数据中心与电力",
           "模型与平台"
         ],
         "relatedCompanies": [
-          "nvidia"
+          "amazon"
         ],
         "relatedStages": [
           "design",
@@ -394,7 +82,7 @@
           "models-platforms"
         ],
         "analysisStatus": "error",
-        "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-technologies-holidays-2026/"
+        "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-local-zone-in-bogota-30-minute-lambda-timeout-and-more-november-24-2026/"
       }
     ],
     "analysisRefreshed": []

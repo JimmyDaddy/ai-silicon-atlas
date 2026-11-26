@@ -1,90 +1,32 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T11:25:52.112Z",
+  "generatedAt": "2026-11-26T11:00:29.442Z",
   "period": {
-    "from": "2026-11-24T12:36:46.592Z",
-    "to": "2026-11-25T11:25:52.112Z",
+    "from": "2026-11-25T11:25:52.112Z",
+    "to": "2026-11-26T11:00:29.442Z",
     "baseRef": "HEAD"
   },
   "summary": {
-    "newFilings": 2,
+    "newFilings": 0,
     "metricChanges": 0,
     "companyStatusChanges": 0,
     "companyAnalysisRefreshes": 0,
-    "newIntelligence": 1,
+    "newIntelligence": 0,
     "intelligenceAnalysisRefreshes": 0,
-    "totalChanges": 3
+    "totalChanges": 0
   },
   "affected": {
-    "stages": {
-      "models-platforms": 2,
-      "manufacturing": 1,
-      "design": 1,
-      "memory": 1,
-      "packaging": 1,
-      "ai-infrastructure": 1
-    },
-    "topics": {
-      "AI 算力与芯片": 1,
-      "数据中心与电力": 1,
-      "模型与平台": 1
-    }
+    "stages": {},
+    "topics": {}
   },
   "companies": {
-    "filings": [
-      {
-        "company": "alphabet",
-        "stage": "models-platforms",
-        "form": "8-K",
-        "filedAt": "2026-11-24",
-        "reportDate": "2026-11-24",
-        "accessionNumber": "0001193125-26-475973",
-        "title": "8-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526475973/d91615d8k.htm"
-      },
-      {
-        "company": "tsmc",
-        "stage": "manufacturing",
-        "form": "6-K",
-        "filedAt": "2026-11-25",
-        "reportDate": "2026-11-25",
-        "accessionNumber": "0001046179-26-000807",
-        "title": "6-K",
-        "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000807/tsm-dividendadjustmentx202.htm"
-      }
-    ],
+    "filings": [],
     "metrics": [],
     "statuses": [],
     "analysis": []
   },
   "intelligence": {
-    "new": [
-      {
-        "id": "aws-blog-35284fc19263",
-        "publishedAt": "2026-11-24T15:39:59.000Z",
-        "source": "AWS 官方博客",
-        "sourceType": "公司观点",
-        "title": "AWS Weekly Roundup: Local Zone in Bogotá, 30-minute Lambda timeout, and more (November 24, 2026)",
-        "summary": "Some limits shape architecture more than any feature does. AWS Lambda launched in 2014 with a 60-second timeout, moved to 5 minutes in 2015 and to 15 minutes in 2018, and then stayed there for eight years. Last week the limit doubled, and in the same week Lambda learned to run on GPUs and gave platform teams their own runtimes. That is a lot of Lambda for one week. Two other threads ran through the week. A new AWS Lo",
-        "topics": [
-          "AI 算力与芯片",
-          "数据中心与电力",
-          "模型与平台"
-        ],
-        "relatedCompanies": [
-          "amazon"
-        ],
-        "relatedStages": [
-          "design",
-          "memory",
-          "packaging",
-          "ai-infrastructure",
-          "models-platforms"
-        ],
-        "analysisStatus": "error",
-        "sourceUrl": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-local-zone-in-bogota-30-minute-lambda-timeout-and-more-november-24-2026/"
-      }
-    ],
+    "new": [],
     "analysisRefreshed": []
   }
 }
